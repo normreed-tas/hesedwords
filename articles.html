@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles — Hesed Words</title>
+<meta name="description" content="Pastoral and theological articles by Norm Reed. Scripture, justice, and the formation of the church.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --parchment:#f4ecd8;
+    --parchment-deep:#ece1c7;
+    --parchment-mid:#f0e6ce;
+    --ink:#1f1b16;
+    --ink-soft:#3a332a;
+    --ink-light:#4a3218;
+    --gold:#b08d3f;
+    --gold-deep:#8a6d2b;
+    --border:#c8a96e;
+    --border-light:#ddc48a;
+    --rule:#d8c9a3;
+    --shadow:rgba(30,21,8,0.18);
+    --maxw:52rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:radial-gradient(ellipse at top,#f7f0de 0%,var(--parchment) 55%,var(--parchment-deep) 100%) fixed;
+    color:var(--ink);
+    font-family:"Cormorant Garamond",Georgia,serif;
+    font-size:1.15rem;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ── Nav ── */
+  nav.hw-nav{
+    background:var(--ink);
+    font-family:"Cinzel",serif;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    display:flex;
+    justify-content:center;
+    gap:2.2rem;
+    padding:1.05rem 1rem;
+    flex-wrap:wrap;
+  }
+  nav.hw-nav a{color:var(--parchment);text-decoration:none;opacity:.82;transition:opacity .2s;}
+  nav.hw-nav a:hover{opacity:1;color:#fff;}
+  nav.hw-nav a.current{opacity:1;border-bottom:1px solid var(--gold);padding-bottom:.15rem;}
+
+  /* ── Header ── */
+  .section-header{
+    text-align:center;
+    padding:4rem 1.5rem 2.8rem;
+    max-width:var(--maxw);
+    margin:0 auto;
+  }
+  .section-eyebrow{
+    font-family:"Cinzel",serif;
+    font-size:.72rem;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-bottom:1rem;
+  }
+  .section-title{
+    font-family:"Cinzel",serif;
+    font-weight:500;
+    font-size:clamp(1.8rem,4vw,2.8rem);
+    color:var(--ink);
+    margin-bottom:1.2rem;
+    letter-spacing:.04em;
+  }
+  .section-rule{
+    width:3rem;
+    height:1px;
+    background:var(--gold);
+    margin:.8rem auto 1.6rem;
+  }
+  .section-desc{
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:1.1rem;
+    max-width:36rem;
+    margin:0 auto;
+  }
+
+  hr.rule-line{
+    border:0;
+    border-top:1px solid var(--rule);
+    max-width:var(--maxw);
+    margin:0 auto 2.4rem;
+  }
+
+  /* ── Article listing ── */
+  .listing{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 1.5rem 5rem;
+  }
+  .article-card{
+    display:grid;
+    grid-template-columns:7rem 1fr;
+    gap:0 2rem;
+    border-top:1px solid var(--rule);
+    padding:2rem 0;
+    text-decoration:none;
+    color:var(--ink);
+    transition:background .2s;
+  }
+  .article-card:last-of-type{border-bottom:1px solid var(--rule);}
+  .card-date{
+    font-family:"Cinzel",serif;
+    font-size:.68rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    padding-top:.35rem;
+    line-height:1.5;
+  }
+  .card-title{
+    font-family:"Cinzel",serif;
+    font-weight:500;
+    font-size:1.25rem;
+    line-height:1.25;
+    margin:0 0 .6rem;
+    transition:color .2s;
+  }
+  .article-card:hover .card-title{color:var(--gold-deep);}
+  .card-summary{
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0 0 .7rem;
+    font-size:1rem;
+  }
+  .card-ref{
+    font-family:"Cinzel",serif;
+    font-size:.64rem;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+  .card-ref::before{content:"✦ ";opacity:.6;}
+
+  /* Coming soon card */
+  .article-card.soon{opacity:.5;cursor:default;pointer-events:none;}
+
+  /* PDF link */
+  .card-pdf{
+    display:block;
+    font-family:"Cinzel",serif;
+    font-size:.65rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    text-decoration:none;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:2px;
+    margin-top:.5rem;
+    width:fit-content;
+    transition:color .2s,border-color .2s;
+  }
+  .card-pdf:hover{color:var(--gold);border-bottom-color:var(--gold);}
+
+  footer.hw-foot{
+    text-align:center;
+    font-family:"Cinzel",serif;
+    font-size:.7rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    padding:2.5rem 1rem 3.5rem;
+    opacity:.8;
+  }
+
+  @media(max-width:600px){
+    .article-card{grid-template-columns:1fr;gap:.4rem;}
+    .card-date{padding-top:0;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/index.html">Home</a>
+  <a href="/reflections.html">Reflections</a>
+  <a href="/articles.html" class="current">Articles</a>
+  <a href="/books.html">Books</a>
+  <a href="/glossary.html">Glossary</a>
+</nav>
+
+<header class="section-header">
+  <p class="section-eyebrow">Hesed Words</p>
+  <h1 class="section-title">Articles</h1>
+  <div class="section-rule"></div>
+  <p class="section-desc">Longer pastoral and theological writing — the questions that take more than a morning to work through.</p>
+</header>
+
+<hr class="rule-line">
+
+<div class="listing">
+
+  <a href="/articles/jesus-as-leader.html" class="article-card">
+    <div class="card-date">June 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">Jesus as Leader</h2>
+      <p class="card-summary">If we take the gospels seriously as the description of how Jesus actually conducted his ministry, does the leadership he modelled map onto the formation the contemporary church offers its pastors? Five movements, two weekly calendars, and the questions that don't go away.</p>
+      <span class="card-ref">A Hesedwords Reflection &nbsp;·&nbsp; Norman Reed</span>
+      <a href="/articles/pdf/jesus-as-leader.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <div class="article-card soon">
+    <div class="card-date">Coming Soon</div>
+    <div class="card-body">
+      <h2 class="card-title">I Will Carry You</h2>
+      <p class="card-summary">On nasa and sabal — the difference between the idols we must carry and the God who carries us.</p>
+      <span class="card-ref">Isaiah 46:4</span>
+    </div>
+  </div>
+
+  <div class="article-card soon">
+    <div class="card-date">Coming Soon</div>
+    <div class="card-body">
+      <h2 class="card-title">When Mercy and Truth Met</h2>
+      <p class="card-summary">On the simultaneous satisfaction of the divine attributes — not negotiated tension, but glory.</p>
+      <span class="card-ref">Psalm 85:10</span>
+    </div>
+  </div>
+
+</div>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>

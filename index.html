@@ -875,6 +875,74 @@
     border-top: 1px solid rgba(184,146,44,0.1);
   }
 
+  /* ─── Hub ────────────────────────────────────────────────── */
+  .hub {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 64px 5vw 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .hub-tile {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--ink);
+    padding: 40px 36px 32px;
+    border: 1px solid var(--border-light);
+    background: var(--parchment-mid);
+    transition: all 0.25s;
+  }
+  .hub-tile:hover {
+    border-color: var(--gold);
+    box-shadow: 0 6px 28px var(--shadow);
+    transform: translateY(-3px);
+  }
+  .hub-tile-num {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  .hub-tile-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: clamp(17px, 2vw, 22px);
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    margin: 0 0 14px;
+    line-height: 1.2;
+  }
+  .hub-tile-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.75;
+    color: var(--ink-light);
+    flex: 1;
+    margin: 0 0 28px;
+  }
+  .hub-tile-enter {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border-top: 1px solid var(--border-light);
+    padding-top: 14px;
+    display: block;
+    transition: color 0.2s;
+  }
+  .hub-tile:hover .hub-tile-enter { color: var(--accent); }
+
+  @media (max-width: 680px) {
+    .hub { grid-template-columns: 1fr; gap: 16px; padding: 40px 5vw 60px; }
+    .hub-tile { padding: 28px 24px 24px; }
+  }
+
   /* ─── Animations ─────────────────────────────────────────── */
   @keyframes slideUp {
     from { opacity: 0; transform: translateY(18px); }
@@ -924,10 +992,10 @@
 <nav>
   <a href="#" class="nav-logo">Hesed<span>Words</span></a>
   <ul class="nav-links">
-    <li><a href="#reflections">Reflections</a></li>
-    <li><a href="#articles">Articles</a></li>
-    <li><a href="#books">Books</a></li>
-    <li><a href="#glossary">Glossary</a></li>
+    <li><a href="/reflections.html">Reflections</a></li>
+    <li><a href="/articles.html">Articles</a></li>
+    <li><a href="/books.html">Books</a></li>
+    <li><a href="/glossary.html">Glossary</a></li>
     <li><a href="#about">About</a></li>
   </ul>
 </nav>
@@ -946,10 +1014,6 @@
       justice ministry, and the long walk with the God.
     </p>
     <a href="#about" class="hero-author-link">About the author →</a>
-    <div class="hero-cta">
-      <a href="#reflections" class="btn-primary">Reflections</a>
-      <a href="#books" class="btn-secondary">Books</a>
-    </div>
   </div>
   <div class="hero-scroll">
     <span>Scroll</span>
@@ -957,171 +1021,33 @@
   </div>
 </section>
 
-<!-- Reflections -->
-<section class="articles" id="reflections">
-  <div class="articles-inner">
-    <div class="section-header reveal">
-      <div class="section-label">הָגָה</div>
-      <h2 class="section-title">Reflections</h2>
-      <div class="section-rule"></div>
-    </div>
-    <div class="articles-intro reveal">
-      <p>
-        Short reflections drawn from an early morning practice of
-        scripture reading — the kind of writing that happens when
-        a single verse refuses to let you go until you've written
-        your way through it. One word. One psalm. One long murmur.
-      </p>
-    </div>
-    <div class="articles-cta reveal">
-      <a href="/reflections.html" class="btn-primary">Read Reflections →</a>
-    </div>
-  </div>
-</section>
-
-<!-- Articles -->
-<section class="articles" id="articles">
-  <div class="articles-inner">
-    <div class="section-header reveal">
-      <div class="section-label">Devotional Reflections</div>
-      <h2 class="section-title">Articles</h2>
-      <div class="section-rule"></div>
-    </div>
-    <div class="articles-intro reveal">
-      <p>
-        Short reflections drawn from an early morning practice of
-        scripture reading — the kind of writing that happens when
-        a single verse refuses to let you go until you've written
-        your way through it. One word. One psalm. One long murmur.
-      </p>
-    </div>
-    <div class="articles-placeholder">
-      <a href="/articles/jesus-as-leader.html" class="article-card reveal">
-        <div class="article-card-ref">A Hesedwords Reflection</div>
-        <h3 class="article-card-title">Jesus as Leader</h3>
-        <p class="article-card-excerpt">If we take the gospels seriously as the description of how Jesus actually conducted his ministry, does the leadership he modelled map onto the formation the contemporary church offers its pastors?</p>
-        <div class="article-card-date">Norman Reed &middot; June 2026</div>
-      </a>
-      <p class="card-pdf-link"><a href="/articles/pdf/jesus-as-leader.pdf" target="_blank" rel="noopener">Download PDF</a></p>
-      <div class="article-card reveal">
-        <div class="article-card-ref">Isaiah 46:4</div>
-        <h3 class="article-card-title">I Will Carry You</h3>
-        <p class="article-card-excerpt">On nasa and sabal — the difference between the idols we must carry and the God who carries us.</p>
-        <div class="article-card-date">Coming Soon</div>
-      </div>
-      <div class="article-card reveal">
-        <div class="article-card-ref">Psalm 85:10</div>
-        <h3 class="article-card-title">When Mercy and Truth Met</h3>
-        <p class="article-card-excerpt">On the simultaneous satisfaction of the divine attributes — not negotiated tension, but glory.</p>
-        <div class="article-card-date">Coming Soon</div>
-      </div>
-    </div>
-    <div class="articles-cta reveal">
-      <a href="#" class="btn-secondary">All Articles</a>
-    </div>
-  </div>
-</section>
-
-<!-- Books -->
-<section class="books" id="books">
-  <div class="books-inner">
-    <div class="section-header reveal">
-      <div class="section-label">Further Works</div>
-      <h2 class="section-title">The Library</h2>
-      <div class="section-rule"></div>
-    </div>
-    <div class="books-grid">
-      <div class="book-card reveal">
-        <div class="book-card-label">Psalms of Ascent</div>
-        <h3 class="book-card-title">Songs for the Road</h3>
-        <p class="book-card-subtitle">Reflections on the Psalms of Ascent</p>
-        <div class="book-card-rule"></div>
-        <p class="book-card-desc">
-          A travel journal walked in the company of the God who made heaven
-          and earth. Fifteen psalms, one pilgrim road, and the love that
-          meets you on the way up.
-        </p>
-        <a href="/books/songs-for-the-road.html" class="book-card-link">Read online →</a>
-        <a href="/books/songs-for-the-road.pdf" class="book-card-link" style="margin-left:1.4em;" target="_blank" rel="noopener">Download PDF →</a>
-      </div>
-      <div class="book-card reveal">
-        <div class="book-card-label">Biblical Theology</div>
-        <h3 class="book-card-title">Job 43</h3>
-        <p class="book-card-subtitle">The Unwritten Last Chapter</p>
-        <div class="book-card-rule"></div>
-        <p class="book-card-desc">
-          A literary-theological reading that confronts the profound unfairness of Job's suffering.
-          Unaware of the heavenly council and denied a rational explanation, Job is left in the
-          dark—until an unwritten final chapter returns us to the divine courtroom, transforming
-          cosmic silence into an ultimate, explanatory encounter.
-        </p>
-        <a href="/books/job-43.pdf" class="book-card-link" target="_blank" rel="noopener">Download PDF →</a>
-      </div>
-      <div class="book-card reveal">
-        <div class="book-card-label">Canonical Study</div>
-        <h3 class="book-card-title">He Has Told You</h3>
-        <p class="book-card-subtitle">Micah 6:8 — A Three-Part Study</p>
-        <div class="book-card-rule"></div>
-        <p class="book-card-desc">
-          A sustained canonical exploration of Micah 6:8 across three
-          movements: the prior testimony of the whole canon, the
-          Christological embodiment of its three terms, and the
-          ecclesial charter it gives the church. This. Only this. Always this.
-        </p>
-        <a href="#" class="book-card-link">Read more →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Glossary -->
-<section class="glossary" id="glossary">
-  <div class="glossary-inner">
-    <div class="reveal">
-      <div class="glossary-label">Reference</div>
-      <h2 class="glossary-title">Hebrew Devotional Glossary</h2>
-      <p class="glossary-desc">
-        Twenty-two seed terms from the biblical vocabulary — covenant,
-        justice, mercy, wisdom, presence, trust — traced across
-        Torah, Prophets, Writings, and the New Testament.
-        Words worth keeping in your mouth.
-      </p>
-      <a href="glossary.html" class="btn-primary">Open the Glossary</a>
-    </div>
-    <div class="glossary-terms reveal">
-      <div class="gterm">
-        <span class="gterm-heb">חֶסֶד</span>
-        <span class="gterm-tr">hesed</span>
-        <span class="gterm-gloss">covenant love, steadfast loyalty</span>
-      </div>
-      <div class="gterm">
-        <span class="gterm-heb">מִשְׁפָּט</span>
-        <span class="gterm-tr">mishpat</span>
-        <span class="gterm-gloss">justice, right order</span>
-      </div>
-      <div class="gterm">
-        <span class="gterm-heb">צְדָקָה</span>
-        <span class="gterm-tr">tzedakah</span>
-        <span class="gterm-gloss">righteousness, relational restoration</span>
-      </div>
-      <div class="gterm">
-        <span class="gterm-heb">דַּעַת</span>
-        <span class="gterm-tr">da'at</span>
-        <span class="gterm-gloss">intimate knowing</span>
-      </div>
-      <div class="gterm">
-        <span class="gterm-heb">מְנוּחָה</span>
-        <span class="gterm-tr">menuha</span>
-        <span class="gterm-gloss">rest, settled peace</span>
-      </div>
-      <div class="gterm">
-        <span class="gterm-heb">בָּטַח</span>
-        <span class="gterm-tr">batach</span>
-        <span class="gterm-gloss">to lean weight upon, to trust</span>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Hub -->
+<div class="hub">
+  <a href="/reflections.html" class="hub-tile reveal">
+    <div class="hub-tile-num">I &nbsp;·&nbsp; Daily Reflections</div>
+    <h2 class="hub-tile-title">Reflections</h2>
+    <p class="hub-tile-desc">Short reflections drawn from an early morning practice of scripture reading — the kind of writing that happens when a single verse refuses to let you go until you've written your way through it. One word. One psalm. One long murmur.</p>
+    <span class="hub-tile-enter">Enter →</span>
+  </a>
+  <a href="/articles.html" class="hub-tile reveal">
+    <div class="hub-tile-num">II &nbsp;·&nbsp; Articles</div>
+    <h2 class="hub-tile-title">Articles</h2>
+    <p class="hub-tile-desc">Longer pastoral and theological writing — the questions that take more than a morning to work through. Scripture, justice, and the formation of the church.</p>
+    <span class="hub-tile-enter">Enter →</span>
+  </a>
+  <a href="/books.html" class="hub-tile reveal">
+    <div class="hub-tile-num">III &nbsp;·&nbsp; Books</div>
+    <h2 class="hub-tile-title">Books</h2>
+    <p class="hub-tile-desc">Published works available to read online or download — biblical theology, canonical study, and devotional writing for the road.</p>
+    <span class="hub-tile-enter">Enter →</span>
+  </a>
+  <a href="/glossary.html" class="hub-tile reveal">
+    <div class="hub-tile-num">IV &nbsp;·&nbsp; Glossary</div>
+    <h2 class="hub-tile-title">Glossary</h2>
+    <p class="hub-tile-desc">Twenty-two seed terms from the biblical vocabulary — covenant, justice, mercy, wisdom, presence, trust — traced across Torah, Prophets, Writings, and the New Testament. Words worth keeping in your mouth.</p>
+    <span class="hub-tile-enter">Enter →</span>
+  </a>
+</div>
 
 <!-- About -->
 <section class="about" id="about">
