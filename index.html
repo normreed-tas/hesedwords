@@ -576,6 +576,9 @@
   }
 
   .article-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
     padding: 28px;
     border: 1px solid var(--border-light);
     background: var(--parchment-mid);
@@ -586,6 +589,25 @@
     border-color: var(--border);
     box-shadow: 0 4px 20px var(--shadow);
     transform: translateY(-2px);
+  }
+  .card-pdf-link {
+    text-align: center;
+    margin: -16px 0 8px;
+  }
+  .card-pdf-link a {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .card-pdf-link a:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
   }
 
   .article-card-ref {
@@ -1010,12 +1032,13 @@
       </p>
     </div>
     <div class="articles-placeholder">
-      <div class="article-card reveal">
-        <div class="article-card-ref">Psalm 1:2</div>
-        <h3 class="article-card-title">The Murmuring Practice</h3>
-        <p class="article-card-excerpt">On hagah — the word that turns meditation into something the whole body does, not just the mind.</p>
-        <div class="article-card-date">Coming Soon</div>
-      </div>
+      <a href="/articles/jesus-as-leader.html" class="article-card reveal">
+        <div class="article-card-ref">A Hesedwords Reflection</div>
+        <h3 class="article-card-title">Jesus as Leader</h3>
+        <p class="article-card-excerpt">If we take the gospels seriously as the description of how Jesus actually conducted his ministry, does the leadership he modelled map onto the formation the contemporary church offers its pastors?</p>
+        <div class="article-card-date">Norman Reed &middot; June 2026</div>
+      </a>
+      <p class="card-pdf-link"><a href="/articles/pdf/jesus-as-leader.pdf" target="_blank" rel="noopener">Download PDF</a></p>
       <div class="article-card reveal">
         <div class="article-card-ref">Isaiah 46:4</div>
         <h3 class="article-card-title">I Will Carry You</h3>
