@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jonah 2:8 — Poster</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .poster {
+    width: 210mm;
+    height: 297mm;
+    background: #e8dfc8;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14mm 14mm 12mm;
+  }
+
+  /* Deep water texture background */
+  .poster::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 110%, rgba(12, 40, 75, 0.18) 0%, transparent 65%),
+      radial-gradient(ellipse at 20% 85%, rgba(20, 55, 90, 0.10) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 90%, rgba(8, 30, 60, 0.10) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* Aged paper texture overlay */
+  .poster::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  /* Decorative border */
+  .border-outer {
+    position: absolute;
+    inset: 8mm;
+    border: 0.4mm solid #8b6e45;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .border-inner {
+    position: absolute;
+    inset: 10mm;
+    border: 0.15mm solid #8b6e45;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  /* Corner ornaments */
+  .corner {
+    position: absolute;
+    width: 18mm;
+    height: 18mm;
+    pointer-events: none;
+  }
+  .corner svg { width: 100%; height: 100%; }
+  .corner-tl { top: 8mm; left: 8mm; }
+  .corner-tr { top: 8mm; right: 8mm; transform: scaleX(-1); }
+  .corner-bl { bottom: 8mm; left: 8mm; transform: scaleY(-1); }
+  .corner-br { bottom: 8mm; right: 8mm; transform: scale(-1); }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  /* Header */
+  .reference-top {
+    font-family: 'Cinzel', serif;
+    font-size: 8.5pt;
+    letter-spacing: 0.35em;
+    color: #6b4f28;
+    text-align: center;
+    margin-top: 4mm;
+    opacity: 0.8;
+  }
+
+  /* Hebrew text */
+  .hebrew-block {
+    text-align: center;
+    margin-top: 2mm;
+  }
+
+  .hebrew-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19pt;
+    color: #0d0d0d;
+    letter-spacing: 0.12em;
+    line-height: 1.7;
+    direction: rtl;
+    opacity: 1;
+  }
+
+  .hebrew-transliteration {
+    font-family: 'EB Garamond', serif;
+    font-size: 7.5pt;
+    color: #4a3318;
+    letter-spacing: 0.2em;
+    margin-top: 2mm;
+    font-style: italic;
+    opacity: 1;
+  }
+
+  /* Thin rule */
+  .rule {
+    width: 60mm;
+    height: 0.3mm;
+    background: linear-gradient(to right, transparent, #8b6e45, transparent);
+    margin: 0 auto;
+    opacity: 0.5;
+  }
+
+  /* Main verse — English */
+  .verse-block {
+    text-align: center;
+    padding: 0 8mm;
+  }
+
+  .verse-english {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27pt;
+    font-weight: 300;
+    color: #1a1008;
+    line-height: 1.55;
+    letter-spacing: 0.01em;
+  }
+
+  .verse-english em {
+    font-style: italic;
+    color: #3d2a0a;
+  }
+
+  .verse-english strong {
+    font-weight: 600;
+    font-style: italic;
+    color: #0c2850;
+  }
+
+  /* Central ornamental divider */
+  .ornament {
+    text-align: center;
+    color: #8b6e45;
+    font-size: 13pt;
+    letter-spacing: 0.5em;
+    opacity: 0.6;
+    margin: 0mm 0;
+  }
+
+  /* Key word exposition */
+  .exposition {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.3mm 1fr 0.3mm 1fr;
+    gap: 0;
+    padding: 0 6mm;
+  }
+
+  .expo-divider {
+    background: linear-gradient(to bottom, transparent, #8b6e45, transparent);
+    opacity: 0.3;
+    margin: 2mm 0;
+  }
+
+  .expo-item {
+    text-align: center;
+    padding: 0 4mm;
+  }
+
+  .expo-hebrew {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14pt;
+    color: #0d0d0d;
+    letter-spacing: 0.08em;
+    direction: rtl;
+    line-height: 1.4;
+  }
+
+  .expo-word {
+    font-family: 'Cinzel', serif;
+    font-size: 6pt;
+    letter-spacing: 0.3em;
+    color: #6b4f28;
+    margin: 1mm 0 1.5mm;
+    text-transform: uppercase;
+  }
+
+  .expo-meaning {
+    font-family: 'EB Garamond', serif;
+    font-size: 8pt;
+    color: #2a1e0a;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  /* Personal diagnostic section */
+  .diagnostic-block {
+    width: 100%;
+    padding: 4mm 8mm;
+    border-top: 0.3mm solid rgba(139, 110, 69, 0.35);
+    border-bottom: 0.3mm solid rgba(139, 110, 69, 0.35);
+    text-align: center;
+  }
+
+  .diagnostic-label {
+    font-family: 'Cinzel', serif;
+    font-size: 6pt;
+    letter-spacing: 0.45em;
+    color: #6b4f28;
+    margin-bottom: 2.5mm;
+    opacity: 0.8;
+  }
+
+  .diagnostic-question {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11.5pt;
+    font-style: italic;
+    color: #1a1008;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+  }
+
+  .diagnostic-question span {
+    color: #0c2850;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  /* Footer */
+  .footer-block {
+    text-align: center;
+    margin-bottom: 4mm;
+  }
+
+  .footer-text {
+    font-family: 'EB Garamond', serif;
+    font-size: 7.5pt;
+    color: #3a2510;
+    letter-spacing: 0.2em;
+    font-style: italic;
+    opacity: 1;
+    line-height: 1.8;
+  }
+
+  .reference-bottom {
+    font-family: 'Cinzel', serif;
+    font-size: 7pt;
+    letter-spacing: 0.4em;
+    color: #4a3318;
+    opacity: 1;
+    margin-top: 1.5mm;
+  }
+
+  /* Deep water wave motif at bottom */
+  .wave-motif {
+    position: absolute;
+    bottom: 16mm;
+    left: 0;
+    right: 0;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0.07;
+    z-index: 1;
+  }
+
+  .wave-motif svg {
+    width: 180mm;
+  }
+
+  @media print {
+    body {
+      background: white;
+      margin: 0;
+    }
+    .poster {
+      box-shadow: none;
+      margin: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="poster">
+
+  <!-- Decorative borders -->
+  <div class="border-outer"></div>
+  <div class="border-inner"></div>
+
+  <!-- Corner ornaments -->
+  <div class="corner corner-tl">
+    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 4 L4 28 M4 4 L28 4" stroke="#8b6e45" stroke-width="1" opacity="0.6"/>
+      <path d="M4 4 Q20 4 20 20" stroke="#8b6e45" stroke-width="0.5" opacity="0.4" fill="none"/>
+      <circle cx="4" cy="4" r="1.5" fill="#8b6e45" opacity="0.5"/>
+      <path d="M10 10 Q22 10 22 22" stroke="#8b6e45" stroke-width="0.3" opacity="0.3" fill="none"/>
+    </svg>
+  </div>
+  <div class="corner corner-tr">
+    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 4 L4 28 M4 4 L28 4" stroke="#8b6e45" stroke-width="1" opacity="0.6"/>
+      <path d="M4 4 Q20 4 20 20" stroke="#8b6e45" stroke-width="0.5" opacity="0.4" fill="none"/>
+      <circle cx="4" cy="4" r="1.5" fill="#8b6e45" opacity="0.5"/>
+    </svg>
+  </div>
+  <div class="corner corner-bl">
+    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 4 L4 28 M4 4 L28 4" stroke="#8b6e45" stroke-width="1" opacity="0.6"/>
+      <path d="M4 4 Q20 4 20 20" stroke="#8b6e45" stroke-width="0.5" opacity="0.4" fill="none"/>
+      <circle cx="4" cy="4" r="1.5" fill="#8b6e45" opacity="0.5"/>
+    </svg>
+  </div>
+  <div class="corner corner-br">
+    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 4 L4 28 M4 4 L28 4" stroke="#8b6e45" stroke-width="1" opacity="0.6"/>
+      <path d="M4 4 Q20 4 20 20" stroke="#8b6e45" stroke-width="0.5" opacity="0.4" fill="none"/>
+      <circle cx="4" cy="4" r="1.5" fill="#8b6e45" opacity="0.5"/>
+    </svg>
+  </div>
+
+  <!-- Wave motif background -->
+  <div class="wave-motif">
+    <svg viewBox="0 0 500 80" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 40 Q62.5 10 125 40 Q187.5 70 250 40 Q312.5 10 375 40 Q437.5 70 500 40" stroke="#0c2850" stroke-width="1.5" fill="none"/>
+      <path d="M0 50 Q62.5 20 125 50 Q187.5 80 250 50 Q312.5 20 375 50 Q437.5 80 500 50" stroke="#0c2850" stroke-width="1" fill="none"/>
+      <path d="M0 30 Q62.5 0 125 30 Q187.5 60 250 30 Q312.5 0 375 30 Q437.5 60 500 30" stroke="#0c2850" stroke-width="0.5" fill="none"/>
+    </svg>
+  </div>
+
+  <div class="content">
+
+    <!-- Top reference -->
+    <div class="reference-top">JONAH &nbsp;·&nbsp; CHAPTER TWO &nbsp;·&nbsp; VERSE EIGHT</div>
+
+    <!-- Hebrew text -->
+    <div class="hebrew-block">
+      <div class="hebrew-text">מְשַׁמְּרִים הַבְלֵי־שָׁוְא חַסְדָּם יַעֲזֹבוּ</div>
+      <div class="hebrew-transliteration">meshamerim &nbsp;·&nbsp; havlei-shav &nbsp;·&nbsp; chasdam &nbsp;·&nbsp; ya'azovu</div>
+    </div>
+
+    <div class="rule"></div>
+
+    <!-- English verse — main -->
+    <div class="verse-block">
+      <div class="verse-english">
+        Those who cling to <em>worthless idols</em><br>
+        forfeit the <strong>hesed</strong> that is<br>
+        already <em>theirs.</em>
+      </div>
+    </div>
+
+    <!-- Ornament -->
+    <div class="ornament">· · ·</div>
+
+    <!-- Three-word exposition -->
+    <div class="exposition">
+      <div class="expo-item">
+        <div class="expo-hebrew">הֶבֶל</div>
+        <div class="expo-word">Hevel</div>
+        <div class="expo-meaning">Breath. Vapour.<br>What looks solid<br>but dissolves when grasped.</div>
+      </div>
+      <div class="expo-divider"></div>
+      <div class="expo-item">
+        <div class="expo-hebrew">חֶסֶד</div>
+        <div class="expo-word">Hesed</div>
+        <div class="expo-meaning">Covenant faithfulness.<br>Loyal love. Not given<br>from outside — already yours.</div>
+      </div>
+      <div class="expo-divider"></div>
+      <div class="expo-item">
+        <div class="expo-hebrew">יַעֲזֹבוּ</div>
+        <div class="expo-word">Ya'azovu</div>
+        <div class="expo-meaning">To forsake. Desert.<br>Not stolen from you —<br>walked away from yourself.</div>
+      </div>
+    </div>
+
+    <!-- Diagnostic block -->
+    <div class="diagnostic-block">
+      <div class="diagnostic-label">A DIAGNOSTIC FOR THE SECOND PHASE</div>
+      <div class="diagnostic-question">
+        Is this flowing from <span>being</span> — or has the <span>doing</span> begun to consume the being again?<br>
+        Am I sent into this work, or pulled by the weight of <span>significance</span>?<br>
+        Can I hold this loosely enough to walk away without grief<br>disproportionate to the plant?
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-block">
+      <div class="footer-text">
+        The grace you hold but refuse to extend — you eventually can no longer hold at all.<br>
+        <em>Not to do, but to be.</em>
+      </div>
+      <div class="reference-bottom">JONAH 2 : 8</div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

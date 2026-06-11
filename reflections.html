@@ -199,6 +199,21 @@
     opacity:.6;
   }
 
+  .card-poster-link{
+    display:inline-block;
+    margin-top:.7rem;
+    font-family:"Cinzel",serif;
+    font-size:.65rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    text-decoration:none;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:2px;
+    transition:color .2s,border-color .2s;
+  }
+  .card-poster-link:hover{color:var(--gold);border-bottom-color:var(--gold);}
+
   /* ── Empty state ── */
   .empty{
     text-align:center;
@@ -282,6 +297,15 @@ const ARTICLES = [
     summary:  "The deepest problem is not injustice done but justice unperceived. A thread from Proverbs through Isaiah's Servant to the Spirit's work in John.",
     scripture: ["Proverbs 28:5", "Isaiah 42:1-4", "Matthew 12:18-21", "John 16:8-11", "John 17:3"],
     themes:   ["mishpat", "tzedakah", "da'at", "justice", "perception", "the Spirit", "the Servant"]
+  },
+  {
+    title:    "What Is Already Yours",
+    date:     "2026-05-18",
+    url:      "/reflections/what-is-already-yours.html",
+    poster:   "/reflections/jonah-2-8-poster.html",
+    summary:  "Jonah speaks the truth about idolaters from the belly of the fish — without recognising that the description fits him precisely. He has identified the mechanism exactly: the clinging to vapour, the abandoning of hesed.",
+    scripture: ["Jonah 2:8"],
+    themes:   ["hesed", "idolatry", "self-deception", "Jonah"]
   }
   /* ── add new articles above this line ── */
 ];
@@ -343,6 +367,7 @@ function render(){
         <div class="card-meta">
           <span>${a.scripture.join(" · ")}</span>
         </div>
+        ${a.poster ? `<a class="card-poster-link" href="${a.poster}" target="_blank" rel="noopener">View Poster →</a>` : ""}
       </div>`;
     listing.appendChild(card);
   });

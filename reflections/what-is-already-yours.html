@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is Already Yours — Jonah 2:8 | hesedwords.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+
+/* ======================================================
+   RESET & ROOT
+   ====================================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --parchment:     #FAF5E8;
+  --parchment-mid: #F0E8D2;
+  --gold:          #A67C2E;
+  --gold-light:    #C8A84B;
+  --gold-rule:     #D9C49A;
+  --ink:           #2A2218;
+  --ink-mid:       #4A3E2C;
+  --ink-light:     #6B5C45;
+  --blue-deep:     #0c2850;
+}
+
+body {
+  background: #D6CCB4;
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', 'Garamond', Georgia, serif;
+  font-size: 19px;
+  line-height: 1.78;
+}
+
+/* ======================================================
+   PAGE WRAPPER
+   ====================================================== */
+.hw-page {
+  max-width: 740px;
+  margin: 0 auto;
+  background: var(--parchment);
+}
+
+/* ======================================================
+   TITLE BLOCK
+   ====================================================== */
+.hw-title-block {
+  text-align: center;
+  padding: 72px 60px 52px;
+  border-bottom: 1px solid var(--gold-rule);
+}
+
+.hw-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 10.5px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.hw-eyebrow::before,
+.hw-eyebrow::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: var(--gold-rule);
+}
+
+.hw-title {
+  font-family: 'Cinzel', serif;
+  font-size: 44px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.hw-subtitle {
+  font-style: italic;
+  font-size: 20px;
+  color: var(--ink-mid);
+  line-height: 1.5;
+  margin-bottom: 34px;
+}
+
+.hw-ornament-title {
+  color: var(--gold);
+  letter-spacing: 0.55em;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.hw-byline {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+
+/* ======================================================
+   ARTICLE BODY
+   ====================================================== */
+.hw-body {
+  padding: 56px 62px 72px;
+}
+
+/* ======================================================
+   PROLOGUE
+   ====================================================== */
+.hw-prologue {
+  font-style: italic;
+  font-size: 18.5px;
+  color: var(--ink-mid);
+  line-height: 1.82;
+  margin-bottom: 52px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid var(--gold-rule);
+}
+
+.hw-prologue p + p { margin-top: 22px; }
+
+/* ======================================================
+   SECTION HEADINGS
+   ====================================================== */
+.hw-section {
+  font-family: 'Cinzel', serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 60px 0 0;
+  padding-bottom: 13px;
+  border-bottom: 1px solid var(--gold);
+}
+
+.hw-subheading {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  font-variant: small-caps;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  margin: 38px 0 4px;
+}
+
+/* ======================================================
+   BODY PARAGRAPHS
+   ====================================================== */
+.hw-body p {
+  margin-top: 26px;
+  font-size: 19px;
+  line-height: 1.78;
+}
+
+.hw-body em { font-style: italic; }
+.hw-body strong { font-weight: 600; }
+
+/* ======================================================
+   DROP CAP
+   ====================================================== */
+.hw-drop::first-letter {
+  font-family: 'Cinzel', serif;
+  font-size: 4.3em;
+  font-weight: 600;
+  color: var(--gold);
+  float: left;
+  line-height: 0.76;
+  margin-right: 7px;
+  margin-top: 8px;
+}
+
+/* ======================================================
+   SCRIPTURE BLOCK
+   ====================================================== */
+.hw-scripture {
+  margin: 38px 0;
+  padding: 20px 30px;
+  border-left: 2.5px solid var(--gold);
+  background: rgba(166,124,46,0.04);
+}
+
+.hw-scripture p {
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink-mid);
+  line-height: 1.72;
+  margin: 0;
+}
+
+.hw-scripture .hw-ref {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 11px;
+  font-style: normal;
+  display: block;
+}
+
+/* ======================================================
+   PULL QUOTE
+   ====================================================== */
+.hw-pull {
+  margin: 46px 0;
+  padding: 28px 8px;
+  border-top: 1px solid var(--gold-rule);
+  border-bottom: 1px solid var(--gold-rule);
+  text-align: center;
+}
+
+.hw-pull p {
+  font-style: italic;
+  font-size: 22px;
+  color: var(--ink-mid);
+  line-height: 1.55;
+  margin: 0 !important;
+  letter-spacing: 0.01em;
+}
+
+/* ======================================================
+   CALLOUT BOX
+   ====================================================== */
+.hw-callout {
+  margin: 38px 0;
+  padding: 24px 30px;
+  background: var(--parchment-mid);
+  border-left: 2.5px solid var(--gold-rule);
+}
+
+.hw-callout p {
+  font-style: italic;
+  font-size: 17.5px;
+  color: var(--ink-mid);
+  line-height: 1.76;
+  margin: 0 !important;
+}
+
+/* ======================================================
+   HEBREW INLINE
+   ====================================================== */
+.hw-heb {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1em;
+  direction: rtl;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 3px;
+  color: var(--ink);
+}
+
+.hw-key {
+  font-style: italic;
+  color: var(--blue-deep);
+  font-weight: 500;
+}
+
+/* ======================================================
+   DIAGNOSTIC QUESTIONS
+   ====================================================== */
+.hw-diagnostic {
+  margin: 38px 0;
+  padding: 28px 32px;
+  border: 1px solid var(--gold-rule);
+  background: rgba(166,124,46,0.025);
+}
+
+.hw-diagnostic-label {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.hw-diagnostic ol {
+  list-style: none;
+  padding: 0;
+  counter-reset: diag;
+}
+
+.hw-diagnostic ol li {
+  counter-increment: diag;
+  position: relative;
+  padding: 11px 0 11px 30px;
+  font-style: italic;
+  font-size: 17.5px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+  border-bottom: 1px solid rgba(166,124,46,0.13);
+}
+
+.hw-diagnostic ol li:last-child { border-bottom: none; }
+
+.hw-diagnostic ol li::before {
+  content: counter(diag);
+  position: absolute;
+  left: 0;
+  top: 14px;
+  font-family: 'Cinzel', serif;
+  font-size: 10.5px;
+  color: var(--gold);
+}
+
+.hw-diagnostic ol li strong {
+  color: var(--blue-deep);
+  font-style: normal;
+}
+
+/* ======================================================
+   SECTION DIVIDER (three dots)
+   ====================================================== */
+.hw-dots {
+  text-align: center;
+  color: var(--gold);
+  letter-spacing: 0.55em;
+  margin: 50px 0;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* ======================================================
+   GRAND DIVIDER
+   ====================================================== */
+.hw-grand-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 64px 0;
+}
+
+.hw-grand-divider::before,
+.hw-grand-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+}
+
+.hw-grand-divider::before { background: linear-gradient(to right, transparent, var(--gold-rule)); }
+.hw-grand-divider::after  { background: linear-gradient(to left,  transparent, var(--gold-rule)); }
+
+.hw-grand-divider span {
+  font-family: 'Cinzel', serif;
+  font-size: 9.5px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ======================================================
+   POSTER EMBED SECTION
+   ====================================================== */
+.hw-poster-section {
+  margin: 56px -2px;
+}
+
+.hw-poster-label {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* Outer clipping wrapper — sized to match scaled poster */
+.hw-poster-clip {
+  width: 616px;
+  height: 871px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.18);
+}
+
+/* The actual poster, scaled down from 793.7×1122.5 px to 616×871 px */
+/* scale = 616 / 793.7 = 0.7762 */
+#poster-embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0.7762);
+  transform-origin: top left;
+  width: 210mm;
+  height: 297mm;
+}
+
+.hw-poster-download {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.hw-poster-download a {
+  font-family: 'Cinzel', serif;
+  font-size: 9.5px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-rule);
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+
+.hw-poster-download a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+/* ======================================================
+   AI ACKNOWLEDGMENT
+   ====================================================== */
+.hw-ai {
+  margin-top: 64px;
+  padding: 26px 30px;
+  border-top: 1px solid var(--gold-rule);
+  border-bottom: 1px solid var(--gold-rule);
+}
+
+.hw-ai p {
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-light);
+  line-height: 1.76;
+  margin: 0 !important;
+}
+
+.hw-ai p + p { margin-top: 11px !important; }
+
+/* ======================================================
+   SITE FOOTER
+   ====================================================== */
+.hw-footer {
+  text-align: center;
+  padding: 38px 60px 44px;
+  border-top: 1px solid var(--gold-rule);
+}
+
+.hw-tagline {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-variant: small-caps;
+}
+
+/* ======================================================
+   RESPONSIVE
+   ====================================================== */
+@media (max-width: 720px) {
+  .hw-title-block { padding: 48px 28px 40px; }
+  .hw-title       { font-size: 30px; }
+  .hw-subtitle    { font-size: 17px; }
+  .hw-body        { padding: 40px 26px 56px; }
+  .hw-poster-clip { width: 100%; height: auto; min-height: 400px; }
+  #poster-embed   { transform: scale(0.44); }
+  .hw-footer      { padding: 30px 28px 36px; }
+}
+
+@media print {
+  body       { background: white; }
+  .hw-page   { max-width: 100%; }
+  .hw-poster-section { display: none; }
+}
+
+/* ======================================================
+   POSTER EMBED — SCOPED STYLES
+   All poster CSS is prefixed #poster-embed to prevent
+   any collision with article styles above.
+   ====================================================== */
+
+#poster-embed {
+  background: #e8dfc8;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14mm 14mm 12mm;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+#poster-embed::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 110%, rgba(12,40,75,0.18) 0%, transparent 65%),
+    radial-gradient(ellipse at 20% 85%,  rgba(20,55,90,0.10) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 90%,  rgba(8,30,60,0.10)  0%, transparent 50%);
+  pointer-events: none;
+}
+
+#poster-embed::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#poster-embed .p-border-outer {
+  position: absolute;
+  inset: 8mm;
+  border: 0.4mm solid #8b6e45;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#poster-embed .p-border-inner {
+  position: absolute;
+  inset: 10mm;
+  border: 0.15mm solid #8b6e45;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+#poster-embed .p-corner {
+  position: absolute;
+  width: 18mm;
+  height: 18mm;
+  pointer-events: none;
+}
+
+#poster-embed .p-corner svg { width: 100%; height: 100%; }
+#poster-embed .p-corner.tl  { top: 8mm;    left: 8mm;  }
+#poster-embed .p-corner.tr  { top: 8mm;    right: 8mm; transform: scaleX(-1); }
+#poster-embed .p-corner.bl  { bottom: 8mm; left: 8mm;  transform: scaleY(-1); }
+#poster-embed .p-corner.br  { bottom: 8mm; right: 8mm; transform: scale(-1); }
+
+#poster-embed .p-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+#poster-embed .p-ref-top {
+  font-family: 'Cinzel', serif;
+  font-size: 8.5pt;
+  letter-spacing: 0.35em;
+  color: #6b4f28;
+  text-align: center;
+  margin-top: 4mm;
+  opacity: 0.8;
+}
+
+#poster-embed .p-heb-block { text-align: center; margin-top: 2mm; }
+
+#poster-embed .p-heb-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19pt;
+  color: #0d0d0d;
+  letter-spacing: 0.12em;
+  line-height: 1.7;
+  direction: rtl;
+}
+
+#poster-embed .p-heb-trans {
+  font-family: 'EB Garamond', serif;
+  font-size: 7.5pt;
+  color: #4a3318;
+  letter-spacing: 0.2em;
+  margin-top: 2mm;
+  font-style: italic;
+}
+
+#poster-embed .p-rule {
+  width: 60mm;
+  height: 0.3mm;
+  background: linear-gradient(to right, transparent, #8b6e45, transparent);
+  margin: 0 auto;
+  opacity: 0.5;
+}
+
+#poster-embed .p-verse-block {
+  text-align: center;
+  padding: 0 8mm;
+}
+
+#poster-embed .p-verse-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 27pt;
+  font-weight: 300;
+  color: #1a1008;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+#poster-embed .p-verse-en em     { font-style: italic; color: #3d2a0a; }
+#poster-embed .p-verse-en strong { font-weight: 600; font-style: italic; color: #0c2850; }
+
+#poster-embed .p-ornament {
+  text-align: center;
+  color: #8b6e45;
+  font-size: 13pt;
+  letter-spacing: 0.5em;
+  opacity: 0.6;
+}
+
+#poster-embed .p-expo {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.3mm 1fr 0.3mm 1fr;
+  gap: 0;
+  padding: 0 6mm;
+}
+
+#poster-embed .p-expo-div {
+  background: linear-gradient(to bottom, transparent, #8b6e45, transparent);
+  opacity: 0.3;
+  margin: 2mm 0;
+}
+
+#poster-embed .p-expo-item { text-align: center; padding: 0 4mm; }
+
+#poster-embed .p-expo-heb {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14pt;
+  color: #0d0d0d;
+  letter-spacing: 0.08em;
+  direction: rtl;
+  line-height: 1.4;
+}
+
+#poster-embed .p-expo-word {
+  font-family: 'Cinzel', serif;
+  font-size: 6pt;
+  letter-spacing: 0.3em;
+  color: #6b4f28;
+  margin: 1mm 0 1.5mm;
+  text-transform: uppercase;
+}
+
+#poster-embed .p-expo-meaning {
+  font-family: 'EB Garamond', serif;
+  font-size: 8pt;
+  color: #2a1e0a;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+#poster-embed .p-diag {
+  width: 100%;
+  padding: 4mm 8mm;
+  border-top: 0.3mm solid rgba(139,110,69,0.35);
+  border-bottom: 0.3mm solid rgba(139,110,69,0.35);
+  text-align: center;
+}
+
+#poster-embed .p-diag-label {
+  font-family: 'Cinzel', serif;
+  font-size: 6pt;
+  letter-spacing: 0.45em;
+  color: #6b4f28;
+  margin-bottom: 2.5mm;
+  opacity: 0.8;
+}
+
+#poster-embed .p-diag-q {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11.5pt;
+  font-style: italic;
+  color: #1a1008;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+#poster-embed .p-diag-q span {
+  color: #0c2850;
+  font-weight: 600;
+  font-style: italic;
+}
+
+#poster-embed .p-footer { text-align: center; margin-bottom: 4mm; }
+
+#poster-embed .p-footer-text {
+  font-family: 'EB Garamond', serif;
+  font-size: 7.5pt;
+  color: #3a2510;
+  letter-spacing: 0.2em;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+#poster-embed .p-ref-bottom {
+  font-family: 'Cinzel', serif;
+  font-size: 7pt;
+  letter-spacing: 0.4em;
+  color: #4a3318;
+  margin-top: 1.5mm;
+}
+
+#poster-embed .p-wave {
+  position: absolute;
+  bottom: 16mm;
+  left: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0.07;
+  z-index: 1;
+}
+
+#poster-embed .p-wave svg { width: 180mm; }
+
+</style>
+</head>
+<body>
+<div class="hw-page">
+
+  <!-- ===================== TITLE BLOCK ===================== -->
+  <div class="hw-title-block">
+    <div class="hw-eyebrow">A Hesedwords Reflection</div>
+    <h1 class="hw-title">What Is Already Yours</h1>
+    <p class="hw-subtitle">A reading of Jonah 2:8 — from the belly of the fish</p>
+    <div class="hw-ornament-title">· · ·</div>
+    <div class="hw-byline">Norman Reed &nbsp;&middot;&nbsp; 18 May 2026</div>
+  </div>
+
+  <!-- ===================== BODY ===================== -->
+  <div class="hw-body">
+
+    <!-- PROLOGUE -->
+    <div class="hw-prologue">
+      <p>There are moments when a text reads you rather than the other way around. This reflection began as a study of Jonah 2:8 — one verse in a prayer prayed from inside the great fish. It ended somewhere more personal.</p>
+      <p>I came to this verse in the weeks following a cardiac event. My own <em>tehom</em>. My own time in the belly of the fish. From that place I had made a confession: <em>it is all of God.</em> And I had made a determination: perhaps this second phase of life is given not to do, but to be.</p>
+      <p>And then the doors began to open. And I felt the pull.</p>
+      <p>What follows is the record of what the verse said when I finally paid attention to it.</p>
+    </div>
+
+    <!-- SECTION 1 -->
+    <h2 class="hw-section">The Prayer From the Deep</h2>
+
+    <p class="hw-drop">Jonah 2 is a thanksgiving psalm &mdash; a <em>todah</em> &mdash; and this is already remarkable. Jonah is inside the fish. He has not yet been delivered. Yet the prayer is written in the past tense, as though salvation has already been accomplished. The form itself is a theological statement: faith operating ahead of evidence, confession reaching toward a deliverance not yet seen.</p>
+
+    <p>The prayer is also a mosaic of Psalmic language. Almost every phrase echoes the Psalter. This is almost certainly deliberate. The man who refused to speak God&rsquo;s word to Nineveh now speaks only in the accumulated voice of Israel&rsquo;s worship. He prays borrowed prayers. The prophet who fled his calling finds his voice again through the tradition he abandoned.</p>
+
+    <div class="hw-scripture">
+      <p>From the belly of Sheol I cried, and you heard my voice.</p>
+      <span class="hw-ref">Jonah 2:2</span>
+    </div>
+
+    <p><em>Sheol</em> is not simply a location. It is the realm of the dead &mdash; the cosmological underworld. And the deep, the <span class="hw-key">tehom</span> of verse 5, carries its own freight: it is the word Genesis uses for the formless chaos over which the Spirit hovered before creation. Jonah is not merely drowning. He is in pre-creation disorder. His deliverance will be a new creation act. The fish &mdash; God&rsquo;s ordered creature &mdash; is the instrument of rescue from formlessness.</p>
+
+    <!-- SECTION 2 -->
+    <h2 class="hw-section">What the Hebrew Holds</h2>
+
+    <p class="hw-drop">Verse 8 is the theological spine of the prayer. In English it reads &mdash; depending on your translation &mdash; something like: <em>&ldquo;Those who cling to worthless idols forfeit the grace that could be theirs.&rdquo;</em> These are faithful renderings. But three words in the Hebrew carry weight that English cannot easily convey.</p>
+
+    <div class="hw-subheading">Hevel &mdash; the vapour you cannot hold</div>
+
+    <p>The word translated &ldquo;worthless idols&rdquo; is <span class="hw-key">hevel</span> <span class="hw-heb">הֶבֶל</span> &mdash; the same word Qohelet uses relentlessly in Ecclesiastes. Breath. Vapour. Something that appears substantial but dissolves in your hand the moment you close your fist around it. The idol looks solid &mdash; it has a temple and a name and history. But when the crisis arrives, as Isaiah 46 makes vivid, someone has to load it onto a donkey. It is dead weight. It cannot carry; it can only be carried.</p>
+
+    <div class="hw-subheading">ChasdaM &mdash; their hesed</div>
+
+    <p>Here the English translations lose something critical. The Hebrew does not say the idolater forfeits <em>God&rsquo;s hesed</em> toward them. It says they forfeit their own &mdash; <span class="hw-key">chasdam</span>, the suffix making it possessive. <em>Their hesed.</em> Already theirs.</p>
+
+    <p><span class="hw-key">Hesed</span> <span class="hw-heb">חֶסֶד</span> &mdash; covenant faithfulness, loyal love &mdash; is not something held in reserve by God to be dispensed or withheld depending on conduct. It is the person&rsquo;s inheritance. Their portion. It belongs to them as surely as a name belongs to a child. The tragedy of idolatry is not that God withholds <em>hesed</em> as punishment. It is that the person walks away from what is already in their hands.</p>
+
+    <div class="hw-subheading">Ya&rsquo;azovu &mdash; to forsake</div>
+
+    <p>The verb <span class="hw-heb">יַעֲזֹבוּ</span> means to desert, to abandon. It is used for covenant-breaking &mdash; the same root the prophets use when Israel forsakes the Lord. The idolater is not robbed of <em>hesed</em>. They desert it themselves. Nobody takes it from them. They put it down, turn toward the <em>hevel</em>, and walk away from what was already theirs.</p>
+
+    <div class="hw-pull">
+      <p>The grace you hold but refuse to extend &mdash; you eventually can no longer hold at all.</p>
+    </div>
+
+    <!-- SECTION 3 -->
+    <h2 class="hw-section">The Verse That Diagnoses Its Author</h2>
+
+    <p class="hw-drop">Verse 8 is Jonah&rsquo;s most precise theological statement &mdash; and possibly his most self-unaware. He speaks the truth about idolaters. He has identified the mechanism exactly: the clinging to vapour, the abandoning of <em>hesed</em>. But he speaks in the third person. <em>Those who cling&hellip; they forsake.</em> He is describing others without recognising that the description fits him precisely.</p>
+
+    <p>This is the oldest defence mechanism: moral clarity about the failures of others, moral blindness about one&rsquo;s own. And Jonah&rsquo;s particular blindness runs deep, because his <em>hevel</em> is not a wooden statue. It is a theological conviction &mdash; the belief that God&rsquo;s <em>hesed</em> properly belongs to Israel, and that extending it to Nineveh is a category error. His vapour wears the clothing of orthodoxy. That is the hardest kind to release, because it doesn&rsquo;t feel empty. It feels righteous.</p>
+
+    <p>By chapter 4, the irony has become almost unbearable. Jonah quotes back to God the great covenant formula &mdash; <em>I knew you were gracious and compassionate, slow to anger and abounding in hesed</em> &mdash; and he is furious about it. He has perfect theological knowledge of <em>hesed</em>. He has become its opponent.</p>
+
+    <p>The book closes without his answer. God asks the final question &mdash; <em>should I not be concerned about Nineveh?</em> &mdash; and Jonah does not respond. We do not know if he ever releases his <em>hevel</em>. The open ending is not an accident. It is an invitation &mdash; almost a diagnostic &mdash; directed at every reader who has ever known the right theology and found it impossible to live.</p>
+
+    <p>Jonah may be the most psychologically honest portrait in Scripture of the gap between knowing grace and receiving it &mdash; and between receiving it and extending it to those we would rather it didn&rsquo;t reach.</p>
+
+    <!-- SECTION 4 -->
+    <h2 class="hw-section">A Second Phase</h2>
+
+    <p class="hw-drop">I came to this verse in a particular season. A cardiac event &mdash; my own <em>tehom</em> &mdash; had forced a reckoning. From that place the confession came clearly: <em>it is all of God.</em> The work, the ministry, the decades of building &mdash; none of it was mine to carry. Salvation belongs to the Lord.</p>
+
+    <p>From that place I made a determination: perhaps this second phase of life is given not to do, but to be.</p>
+
+    <p>And then, almost immediately, the doors began to open. Significant invitations. Influential tables. Opportunities that looked unmistakably like kingdom work &mdash; justice work, <em>mishpat</em> work, the kind of thing Isaiah 58 describes as true fasting. You cannot easily dismiss it as worldly. It looks like obedience.</p>
+
+    <p>And I felt the pull.</p>
+
+    <p>This is what made verse 8 turn around and read me. Because the <em>hevel</em> presenting itself was not a wooden statue. It wore the clothing of genuine good work. The enemy of the best is rarely the worst. It is almost always the very good.</p>
+
+    <div class="hw-callout">
+      <p>There is a crucial difference between two things that can look identical from the outside: being <em>sent</em> into work from a place of <em>hesed</em>, and being <em>pulled</em> into work by the weight of significance. Both produce meetings. Both produce activity. The difference is entirely interior &mdash; and entirely consequential.</p>
+    </div>
+
+    <p>The question the open doors are now asking is not whether to walk through them. Nineveh needed Jonah to show up. The question is the orientation of the self that walks in. Can you enter those rooms as a <em>being</em> rather than a <em>doing</em>? Can you hold them loosely enough to walk away without grief disproportionate to the plant?</p>
+
+    <!-- SECTION 5 -->
+    <h2 class="hw-section">The Two Weights &mdash; Isaiah 46</h2>
+
+    <p class="hw-drop">Isaiah 46 illuminates Jonah&rsquo;s verse from another direction, and the contrast it sets up is devastating. Bel and Nebo &mdash; the great gods of Babylon &mdash; are being loaded onto animals. The verb is <span class="hw-key">nasa</span>: to lift, to carry, to bear as a burden. The gods that were supposed to carry Babylon must themselves be carried. They cannot save themselves. They go into captivity as cargo.</p>
+
+    <p>Then the complete inversion:</p>
+
+    <div class="hw-scripture">
+      <p>Even to your old age I am he, even when your hair is grey I will carry you. I have made you and I will carry you; I will sustain you and I will save you.</p>
+      <span class="hw-ref">Isaiah 46:4</span>
+    </div>
+
+    <p>The same verb &mdash; <em>nasa</em> &mdash; now runs in the opposite direction. The idols: <em>nasa&rsquo;d</em> by panicking humans onto stumbling animals. Israel: <em>nasa&rsquo;d</em> by God from before they drew breath.</p>
+
+    <p>The diagnostic question the passage poses is the one Jonah 2:8 poses from the other direction: <em>what are you carrying &mdash; and what is carrying you?</em></p>
+
+    <p>The idol always increases the load. You acquire it, maintain it, defend it, haul it when circumstances shift. Work held wrongly, significance held tightly, platform tended anxiously &mdash; these become <em>nasa</em> in the wrong direction. You end up bearing them.</p>
+
+    <p>What Isaiah 46:4 declares is not a general promise of divine assistance. It is a promise made in direct contrast to the <em>hevel</em> of idols. <em>I have been carrying you. Before you were useful, before the ministry, before the work &mdash; I carried you. And I will carry you still, when the work is over.</em></p>
+
+    <p>Bel and Nebo had impressive temples right up until the moment they became cargo.</p>
+
+    <!-- SECTION 6 -->
+    <h2 class="hw-section">A Diagnostic for the Road</h2>
+
+    <p class="hw-drop">The verse that began as a translation question has become a plumb line. Not a rule &mdash; a plumb line. You hold it against each new invitation and ask: is this flowing from the <em>being</em>, or has the <em>doing</em> begun to consume the being again?</p>
+
+    <p>Three questions have emerged from sitting with this text. They are not for reading decoratively. They are a mirror for the second phase.</p>
+
+    <div class="hw-diagnostic">
+      <div class="hw-diagnostic-label">Three Questions for the Second Phase</div>
+      <ol>
+        <li>Is this flowing from <strong>being</strong> &mdash; or has the <strong>doing</strong> begun to consume the being again?</li>
+        <li>Am I <strong>sent</strong> into this work &mdash; or pulled by the weight of <strong>significance</strong>?</li>
+        <li>Can I hold this loosely enough to walk away without grief disproportionate to the plant?</li>
+      </ol>
+    </div>
+
+    <p>The work sustained by <em>hesed</em> feels like participation in something larger than yourself. The work that has become <em>hevel</em> begins, quietly, to hollow you. You will know the difference. The question is whether you are willing to ask it.</p>
+
+    <p>Jonah knew the right theology. He prayed it with precision from the belly of the fish. The book&rsquo;s final question &mdash; left unanswered in the text &mdash; is whether knowing it was ever going to be enough.</p>
+
+    <div class="hw-dots">· &nbsp; · &nbsp; ·</div>
+
+    <p>The poster below holds the Hebrew, the English, and the three diagnostic questions in a single image &mdash; designed to be printed and placed where it will be seen. Not decoration. A mirror for the days when the doors are opening and the pull is real.</p>
+
+    <!-- ===================== POSTER EMBED ===================== -->
+    <div class="hw-poster-section">
+      <div class="hw-poster-label">Jonah 2:8 &mdash; Diagnostic Poster</div>
+
+      <div class="hw-poster-clip">
+        <div id="poster-embed">
+
+          <div class="p-border-outer"></div>
+          <div class="p-border-inner"></div>
+
+          <div class="p-corner tl">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4 L4 28 M4 4 L28 4" stroke="#8b6e45" stroke-width="1" opacity="0.6"/>
+              <path d="M4 4 Q20 4 20 20" stroke="#8b6e45" stroke-width="0.5" opacity="0.4" fill="none"/>
+              <circle cx="4" cy="4" r="1.5" fill="#8b6e45" opacity="0.5"/>
+              <path d="M10 10 Q22 10 22 22" stroke="#8b6e45" stroke-width="0.3" opacity="0.3" fill="none"/>
+            </svg>
+          </div>
+          <div class="p-corner tr">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4 L4 28 M4 4 L28 4" stroke="#8b6e45" stroke-width="1" opacity="0.6"/>
+              <path d="M4 4 Q20 4 20 20" stroke="#8b6e45" stroke-width="0.5" opacity="0.4" fill="none"/>
+              <circle cx="4" cy="4" r="1.5" fill="#8b6e45" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="p-corner bl">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4 L4 28 M4 4 L28 4" stroke="#8b6e45" stroke-width="1" opacity="0.6"/>
+              <path d="M4 4 Q20 4 20 20" stroke="#8b6e45" stroke-width="0.5" opacity="0.4" fill="none"/>
+              <circle cx="4" cy="4" r="1.5" fill="#8b6e45" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="p-corner br">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4 L4 28 M4 4 L28 4" stroke="#8b6e45" stroke-width="1" opacity="0.6"/>
+              <path d="M4 4 Q20 4 20 20" stroke="#8b6e45" stroke-width="0.5" opacity="0.4" fill="none"/>
+              <circle cx="4" cy="4" r="1.5" fill="#8b6e45" opacity="0.5"/>
+            </svg>
+          </div>
+
+          <div class="p-wave">
+            <svg viewBox="0 0 500 80" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 40 Q62.5 10 125 40 Q187.5 70 250 40 Q312.5 10 375 40 Q437.5 70 500 40" stroke="#0c2850" stroke-width="1.5" fill="none"/>
+              <path d="M0 50 Q62.5 20 125 50 Q187.5 80 250 50 Q312.5 20 375 50 Q437.5 80 500 50" stroke="#0c2850" stroke-width="1" fill="none"/>
+              <path d="M0 30 Q62.5 0 125 30 Q187.5 60 250 30 Q312.5 0 375 30 Q437.5 60 500 30" stroke="#0c2850" stroke-width="0.5" fill="none"/>
+            </svg>
+          </div>
+
+          <div class="p-content">
+
+            <div class="p-ref-top">JONAH &nbsp;&middot;&nbsp; CHAPTER TWO &nbsp;&middot;&nbsp; VERSE EIGHT</div>
+
+            <div class="p-heb-block">
+              <div class="p-heb-text">מְשַׁמְּרִים הַבְלֵי־שָׁוְא חַסְדָּם יַעֲזֹבוּ</div>
+              <div class="p-heb-trans">meshamerim &nbsp;&middot;&nbsp; havlei-shav &nbsp;&middot;&nbsp; chasdam &nbsp;&middot;&nbsp; ya&rsquo;azovu</div>
+            </div>
+
+            <div class="p-rule"></div>
+
+            <div class="p-verse-block">
+              <div class="p-verse-en">
+                Those who cling to <em>worthless idols</em><br>
+                forfeit the <strong>hesed</strong> that is<br>
+                already <em>theirs.</em>
+              </div>
+            </div>
+
+            <div class="p-ornament">· &nbsp; · &nbsp; ·</div>
+
+            <div class="p-expo">
+              <div class="p-expo-item">
+                <div class="p-expo-heb">הֶבֶל</div>
+                <div class="p-expo-word">Hevel</div>
+                <div class="p-expo-meaning">Breath. Vapour.<br>What looks solid<br>but dissolves when grasped.</div>
+              </div>
+              <div class="p-expo-div"></div>
+              <div class="p-expo-item">
+                <div class="p-expo-heb">חֶסֶד</div>
+                <div class="p-expo-word">Hesed</div>
+                <div class="p-expo-meaning">Covenant faithfulness.<br>Loyal love. Not given<br>from outside &mdash; already yours.</div>
+              </div>
+              <div class="p-expo-div"></div>
+              <div class="p-expo-item">
+                <div class="p-expo-heb">יַעֲזֹבוּ</div>
+                <div class="p-expo-word">Ya&rsquo;azovu</div>
+                <div class="p-expo-meaning">To forsake. Desert.<br>Not stolen from you &mdash;<br>walked away from yourself.</div>
+              </div>
+            </div>
+
+            <div class="p-diag">
+              <div class="p-diag-label">A DIAGNOSTIC FOR THE SECOND PHASE</div>
+              <div class="p-diag-q">
+                Is this flowing from <span>being</span> &mdash; or has the <span>doing</span> begun to consume the being again?<br>
+                Am I sent into this work, or pulled by the weight of <span>significance</span>?<br>
+                Can I hold this loosely enough to walk away without grief<br>disproportionate to the plant?
+              </div>
+            </div>
+
+            <div class="p-footer">
+              <div class="p-footer-text">
+                The grace you hold but refuse to extend &mdash; you eventually can no longer hold at all.<br>
+                <em>Not to do, but to be.</em>
+              </div>
+              <div class="p-ref-bottom">JONAH 2 : 8</div>
+            </div>
+
+          </div><!-- p-content -->
+        </div><!-- poster-embed -->
+      </div><!-- poster-clip -->
+
+      <div class="hw-poster-download">
+        <a href="/articles/pdf/jonah-2-8-poster.html" target="_blank">Download full-size poster for printing &rarr;</a>
+      </div>
+    </div><!-- poster-section -->
+
+    <!-- ===================== AI ACKNOWLEDGMENT ===================== -->
+    <div class="hw-grand-divider"><span>Note</span></div>
+
+    <div class="hw-ai">
+      <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+      <p>During the development of this piece, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+      <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+    </div>
+
+  </div><!-- hw-body -->
+
+  <!-- ===================== FOOTER ===================== -->
+  <div class="hw-footer">
+    <div class="hw-tagline">Hesed words &nbsp;&middot;&nbsp; Written for the road</div>
+  </div>
+
+</div><!-- hw-page -->
+</body>
+</html>
