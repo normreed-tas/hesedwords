@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Listening for the Score in Job — Hesedwords</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --parchment:      #FAF5E8;
+      --parchment-mid:  #F2E8CC;
+      --gold:           #A67C2E;
+      --gold-light:     #D9C49A;
+      --ink:            #2A2218;
+      --ink-mid:        #4A3E2C;
+      --ink-light:      #6B5C45;
+      --rule:           #C8B58F;
+    }
+
+    html { font-size: 18px; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 400;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Navigation ─────────────────────────────────────────── */
+    nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+    nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+    nav.hw-nav a:hover{opacity:1;color:#fff;}
+    nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+
+    /* ── Page wrapper ───────────────────────────────────────── */
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 40px 100px;
+    }
+
+    /* ── Title block ────────────────────────────────────────── */
+    .title-block {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .title-eyebrow {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .title-rule {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 24px;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-weight: 500;
+      font-size: 38px;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      font-style: italic;
+      font-size: 20px;
+      color: var(--ink-mid);
+      margin-bottom: 24px;
+    }
+
+    .ornament {
+      font-size: 18px;
+      color: var(--gold);
+      letter-spacing: 0.4em;
+      margin-bottom: 20px;
+    }
+
+    .byline {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+
+    /* ── Body ───────────────────────────────────────────────── */
+    .body-text p {
+      font-size: 19px;
+      line-height: 1.8;
+      color: var(--ink);
+      margin-bottom: 1.5em;
+    }
+
+    .body-text p:first-of-type::first-letter {
+      font-family: 'Cinzel', serif;
+      font-size: 4em;
+      font-weight: 600;
+      color: var(--gold);
+      float: left;
+      line-height: 0.78;
+      margin: 0.08em 0.08em 0 0;
+    }
+
+    em { font-style: italic; }
+
+    /* ── Scripture block ─────────────────────────────────────── */
+    .scripture {
+      border-left: 3px solid var(--gold);
+      margin: 2em 0 2em 1em;
+      padding: 0.6em 0 0.6em 1.4em;
+    }
+
+    .scripture p {
+      font-style: italic;
+      font-size: 19px;
+      color: var(--ink-mid);
+      margin-bottom: 0.4em !important;
+    }
+
+    .scripture .ref {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-style: normal;
+      display: block;
+      margin-top: 0.6em;
+    }
+
+    /* ── Grand divider ──────────────────────────────────────── */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 56px 0;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    .divider-ornament {
+      font-size: 14px;
+      color: var(--gold);
+      letter-spacing: 0.3em;
+    }
+
+    /* ── AI footnote ────────────────────────────────────────── */
+    .ai-note {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+    }
+
+    .ai-note p {
+      font-size: 13px;
+      font-style: italic;
+      color: var(--ink-light);
+      line-height: 1.7;
+      margin-bottom: 0.6em;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────── */
+    footer {
+      background: var(--ink);
+      text-align: center;
+      padding: 28px 40px;
+    }
+
+    .footer-tagline {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      opacity: 0.7;
+    }
+
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .page { padding: 48px 24px 72px; }
+      h1 { font-size: 28px; }
+      .subtitle { font-size: 18px; }
+      .body-text p { font-size: 17px; }
+      .scripture p { font-size: 17px; }
+    }
+
+    /* ── Print ──────────────────────────────────────────────── */
+    @media print {
+      nav, footer { display: none; }
+      body { background: white; }
+      .page { padding: 0; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="hw-nav">
+    <a href="/index.html">Home</a>
+    <a href="/reflections.html" class="current">Reflections</a>
+    <a href="/articles.html">Articles</a>
+    <a href="/books.html">Books</a>
+    <a href="/glossary.html">Glossary</a>
+  </nav>
+
+  <!-- Article -->
+  <main class="page">
+
+    <div class="title-block">
+      <p class="title-eyebrow">A Journal Entry &middot; Job 38&ndash;39</p>
+      <div class="title-rule"></div>
+      <h1>Listening for the Score in Job</h1>
+      <p class="subtitle">On hearing the voice in the whirlwind</p>
+      <p class="ornament">&#10022; &nbsp; &#10022; &nbsp; &#10022;</p>
+      <p class="byline">Norman Reed &middot; 29 May 2026</p>
+    </div>
+
+    <div class="body-text">
+
+      <p>I arrived at Job 38 this morning with a question I hadn&rsquo;t quite formed yet.</p>
+
+      <p>Something about tone. We read scripture for what it says. Rarely for how it sounds. But tone carries meaning the words alone cannot. Watching a film without its score is faithful to the script but missing something irreplaceable &mdash; an entire dimension of what the story is doing to you. I wanted to hear the whirlwind before I interpreted it.</p>
+
+      <p>I had always assumed &mdash; without quite examining the assumption &mdash; that this was an angry God. That Job had pushed too far, said too much, and now the answer was coming. That <em>&ldquo;Who is this that darkens counsel by words without knowledge?&rdquo;</em> was the voice of a judge who had heard enough.</p>
+
+      <p>I sat with that assumption and found I didn&rsquo;t trust it.</p>
+
+      <p>What follows in chapters 38 and 39 is not what anger sounds like. God does not explain. He does not justify what happened to Job. He does not mention it. Instead he turns Job toward the wild donkey, the war horse, the mountain goats giving birth on the crags, the ostrich abandoning her eggs with magnificent indifference. He asks: have you entered the storehouses of snow? Can you bind the Pleiades?</p>
+
+      <p>These are not the questions of a prosecutor. They carry something else. Something closer to &mdash; I kept reaching for the word &mdash; <em>delight</em>.</p>
+
+      <p>If this were music, what would it sound like? Not Beethoven&rsquo;s Fifth. Not that. The whirlwind is not aggressive. It doesn&rsquo;t drive toward you. It&rsquo;s more like the opening of the Ninth &mdash; that vast emergence from near-silence into something immense. You are inside it before you realise you have entered. Or Sibelius&rsquo;s Seventh: a single sustained movement, cold and majestic, indifferent to whether you find it comfortable. The wild horse passage in chapter 39 has a different quality altogether &mdash; almost joyful, almost playful. God describing a creature no one has tamed, and seeming to enjoy the fact.</p>
+
+      <p>If it were colour: not red. Not the hot colour of anger. The particular green-gold of light just before a great storm. Or deep ultramarine &mdash; the colour of water where light still reaches but you cannot see the bottom.</p>
+
+      <p>If it were a painting: Turner&rsquo;s late seascapes. Overwhelming, enveloping. You are inside the thing and cannot find its edges. No position of safety from which to observe.</p>
+
+      <p>William Blake understood this. His 21 engravings of Job, published in 1826, are the work of a man who read the whole book as a story about the enlargement of perception. Plate 13 &mdash; the whirlwind &mdash; shows Job not crushed but opened. Arms wide. Face upward. The whirlwind is not a tornado. It is a spiral of divine energy, and Job is inside it.</p>
+
+      <p>Then I came to Job&rsquo;s answer. Not his argument. His answer.</p>
+
+      <div class="scripture">
+        <p>I had heard of you by the hearing of the ear,<br>but now my eye sees you.</p>
+        <span class="ref">Job 42:5 &nbsp;&middot;&nbsp; ESV</span>
+      </div>
+
+      <p>There is no explanation in that verse. No &ldquo;now I understand.&rdquo; The suffering is not accounted for. What has happened is something different. Something has shifted from hearing to seeing. From information to &mdash; I don&rsquo;t have a better word &mdash; <em>encounter</em>.</p>
+
+      <p>I was expecting a verdict and God gave something else entirely. Not answers. Himself.</p>
+
+      <p>I went looking for music afterward. Vaughan Williams wrote a score for Job in 1930, inspired by Blake&rsquo;s engravings. I found a recording, put it on, and read the passages again while it played. Something opened that hadn&rsquo;t before. The music did what music does &mdash; it told me how to receive the words, not just how to read them.</p>
+
+      <p>I have spent much of my reading life attending to what the text says. Less often to how it sounds. Tone is not decoration. It is meaning. And I suspect there are passages I think I know that I have only ever read in silence.</p>
+
+      <p>This might be the beginning of changing that.</p>
+
+    </div>
+
+    <div class="divider">
+      <span class="divider-ornament">&#10022; &nbsp; &#10022; &nbsp; &#10022;</span>
+    </div>
+
+    <div class="ai-note">
+      <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+      <p>During the development of this piece, AI became a conversation partner &mdash; helping to explore the text, test the tone question, and refine expression. The experiences, convictions, and conclusions remain my own.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p class="footer-tagline">Hesedwords &nbsp;&middot;&nbsp; Norman Reed</p>
+  </footer>
+
+</body>
+</html>
