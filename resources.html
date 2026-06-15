@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources — Hesed Words</title>
+<meta name="description" content="Devotional and theological resources curated for serious readers — classical texts, reference tools, and study aids.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --parchment:#f4ecd8;
+    --parchment-deep:#ece1c7;
+    --parchment-mid:#f0e6ce;
+    --ink:#1f1b16;
+    --ink-soft:#3a332a;
+    --ink-light:#4a3218;
+    --gold:#b08d3f;
+    --gold-deep:#8a6d2b;
+    --border:#c8a96e;
+    --border-light:#ddc48a;
+    --rule:#d8c9a3;
+    --shadow:rgba(30,21,8,0.18);
+    --accent:#8b3a0f;
+    --accent-light:#b05230;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:radial-gradient(ellipse at top,#f7f0de 0%,var(--parchment) 55%,var(--parchment-deep) 100%) fixed;
+    color:var(--ink);
+    font-family:"Cormorant Garamond",Georgia,serif;
+    font-size:1.15rem;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ── Nav ── */
+  nav.hw-nav{
+    background:var(--ink);
+    font-family:"Cinzel",serif;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    display:flex;
+    justify-content:center;
+    gap:2.2rem;
+    padding:1.05rem 1rem;
+    flex-wrap:wrap;
+  }
+  nav.hw-nav a{color:var(--parchment);text-decoration:none;opacity:.82;transition:opacity .2s;}
+  nav.hw-nav a:hover{opacity:1;color:#fff;}
+  nav.hw-nav a.current{opacity:1;border-bottom:1px solid var(--gold);padding-bottom:.15rem;}
+
+  /* ── Header ── */
+  .section-header{
+    text-align:center;
+    padding:4rem 1.5rem 2.8rem;
+    max-width:68rem;
+    margin:0 auto;
+  }
+  .section-eyebrow{
+    font-family:"Cinzel",serif;
+    font-size:.72rem;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-bottom:1rem;
+  }
+  .section-title{
+    font-family:"Cinzel",serif;
+    font-weight:500;
+    font-size:clamp(1.8rem,4vw,2.8rem);
+    color:var(--ink);
+    margin-bottom:1.2rem;
+    letter-spacing:.04em;
+  }
+  .section-rule{
+    width:3rem;
+    height:1px;
+    background:var(--gold);
+    margin:.8rem auto 1.6rem;
+  }
+  .section-desc{
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:1.1rem;
+    max-width:36rem;
+    margin:0 auto;
+  }
+
+  hr.rule-line{
+    border:0;
+    border-top:1px solid var(--rule);
+    max-width:68rem;
+    margin:0 auto 3rem;
+  }
+
+  /* ── Resource grid ── */
+  .resources-grid{
+    max-width:68rem;
+    margin:0 auto;
+    padding:0 5vw 5rem;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+  }
+  .resource-card{
+    padding:32px 28px;
+    border:1px solid var(--border-light);
+    background:var(--parchment-mid);
+    display:flex;
+    flex-direction:column;
+    transition:all .22s;
+  }
+  .resource-card:hover{
+    border-color:var(--border);
+    box-shadow:0 4px 20px var(--shadow);
+    transform:translateY(-3px);
+  }
+  .resource-card-label{
+    font-family:"Cinzel",serif;
+    font-size:.68rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:12px;
+  }
+  .resource-card-title{
+    font-family:"Cinzel",serif;
+    font-weight:500;
+    font-size:1.2rem;
+    letter-spacing:.03em;
+    color:var(--ink);
+    line-height:1.25;
+    margin-bottom:6px;
+  }
+  .resource-card-author{
+    font-style:italic;
+    font-size:.95rem;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+  }
+  .resource-card-rule{
+    width:2rem;
+    height:1px;
+    background:var(--gold);
+    margin-bottom:18px;
+  }
+  .resource-card-desc{
+    font-size:.98rem;
+    line-height:1.75;
+    color:var(--ink-light);
+    flex:1;
+    margin-bottom:24px;
+  }
+  .resource-card-link{
+    font-family:"Cinzel",serif;
+    font-size:.68rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--accent);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    padding-bottom:2px;
+    transition:color .2s,border-color .2s;
+    width:fit-content;
+  }
+  .resource-card-link:hover{color:var(--accent-light);border-bottom-color:var(--accent-light);}
+
+  footer.hw-foot{
+    text-align:center;
+    font-family:"Cinzel",serif;
+    font-size:.7rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    padding:2.5rem 1rem 3.5rem;
+    opacity:.8;
+  }
+
+  @media(max-width:900px){
+    .resources-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:580px){
+    .resources-grid{grid-template-columns:1fr;gap:16px;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/index.html">Home</a>
+  <a href="/reflections.html">Reflections</a>
+  <a href="/articles.html">Articles</a>
+  <a href="/books.html">Books</a>
+  <a href="/glossary.html">Glossary</a>
+  <a href="/resources.html" class="current">Resources</a>
+</nav>
+
+<header class="section-header">
+  <p class="section-eyebrow">Hesed Words</p>
+  <h1 class="section-title">Resources</h1>
+  <div class="section-rule"></div>
+  <p class="section-desc">Devotional and theological resources for serious readers — classical texts, reference tools, and study aids worth returning to.</p>
+</header>
+
+<hr class="rule-line">
+
+<div class="resources-grid">
+
+  <div class="resource-card">
+    <div class="resource-card-label">Classical Devotional</div>
+    <h2 class="resource-card-title">Sermons on the Song of Songs</h2>
+    <p class="resource-card-author">Bernard of Clairvaux</p>
+    <div class="resource-card-rule"></div>
+    <p class="resource-card-desc">Eighty-six sermons preached to the monks of Clairvaux across more than twenty years. The most sustained meditation on divine love in the Western tradition — tender, rigorous, and luminous throughout. Bernard never reaches chapter 3.</p>
+    <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="resource-card-link" target="_blank" rel="noopener">Download PDF →</a>
+  </div>
+
+</div>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>

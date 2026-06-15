@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     EDIT THESE FOUR LINES FOR EACH NEW ARTICLE
+     ============================================================ -->
+<title>{{ARTICLE_TITLE}} &mdash; Hesedwords</title>
+<meta name="description" content="{{ARTICLE_DESCRIPTION}}">
+<meta name="author" content="Norman Reed">
+<meta name="article-date" content="{{ARTICLE_DATE_ISO}}">
+<!-- ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment:        #FAF5E8;
+    --parchment-deep:   #F2EBD8;
+    --parchment-darker: #EDE3CB;
+    --ink:              #2A2218;
+    --ink-soft:         #4A3E2C;
+    --ink-muted:        #6B5C45;
+    --gold:             #A67C2E;
+    --gold-soft:        #B8923E;
+    --gold-pale:        #D9C49A;
+    --rule:             #C8B58F;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', 'Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .article {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 90px 40px 80px;
+  }
+
+  /* ---------- title block ---------- */
+
+  .title-block {
+    text-align: center;
+    margin-bottom: 70px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .title-block .eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+  }
+
+  .title-block h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 44px;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    margin: 0 0 18px;
+    line-height: 1.2;
+  }
+
+  .title-block .subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 23px;
+    color: var(--ink-soft);
+    margin: 0 0 36px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .title-block .ornament {
+    color: var(--gold);
+    font-size: 18px;
+    letter-spacing: 0.6em;
+    margin-bottom: 28px;
+    user-select: none;
+  }
+
+  .title-block .byline {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0;
+    text-align: center;
+  }
+
+  .title-block .place {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-muted);
+    margin: 8px 0 0;
+    text-align: center;
+  }
+
+  /* ---------- prologue ---------- */
+
+  .prologue {
+    font-style: italic;
+    font-size: 19px;
+    color: var(--ink-soft);
+    margin-bottom: 60px;
+    padding: 0 20px;
+  }
+  .prologue p { margin: 0 0 18px; }
+  .prologue p:last-child { margin-bottom: 0; }
+
+  /* ---------- section headings ---------- */
+
+  h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 26px;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+    margin: 70px 0 8px;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  h2 .section-number {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 0.32em;
+    color: var(--gold);
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 24px auto 36px;
+  }
+
+  h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 0.12em;
+    color: var(--ink);
+    margin: 48px 0 16px;
+    line-height: 1.35;
+  }
+
+  /* ---------- body text ---------- */
+
+  p {
+    margin: 0 0 22px;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  em, i { font-style: italic; }
+
+  /* drop cap on first paragraph of each major section */
+  .section > p:first-of-type::first-letter {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 56px;
+    float: left;
+    line-height: 0.9;
+    margin: 8px 8px 0 0;
+    color: var(--gold);
+  }
+
+  /* ---------- scripture blocks ---------- */
+
+  .scripture {
+    margin: 28px 0 32px;
+    padding: 4px 0 4px 28px;
+    border-left: 2px solid var(--gold);
+    font-style: italic;
+    font-size: 19px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  .scripture p {
+    margin: 0 0 10px;
+    text-align: left;
+  }
+
+  .scripture .ref {
+    display: block;
+    font-style: normal;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 8px;
+    text-align: right;
+  }
+
+  /* ---------- pull quotes ---------- */
+
+  .pull-quote {
+    margin: 40px 20px;
+    padding: 20px 0;
+    border-top: 1px solid var(--gold-pale);
+    border-bottom: 1px solid var(--gold-pale);
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+    text-align: center;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+  }
+
+  /* ---------- lists ---------- */
+
+  ul {
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul li {
+    margin: 0 0 12px;
+    padding-left: 24px;
+    position: relative;
+    line-height: 1.55;
+  }
+
+  ul li::before {
+    content: '\2022';
+    color: var(--gold);
+    position: absolute;
+    left: 6px;
+    top: -1px;
+    font-size: 16px;
+  }
+
+  /* ---------- block-quotes for emphasis ---------- */
+
+  blockquote.callout {
+    margin: 32px 0;
+    padding: 20px 28px;
+    background: var(--parchment-deep);
+    border-radius: 2px;
+    font-style: italic;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+  blockquote.callout p { margin: 0 0 12px; text-align: left; }
+  blockquote.callout p:last-child { margin-bottom: 0; }
+
+  /* ---------- ornamental divider ---------- */
+
+  .grand-divider {
+    text-align: center;
+    margin: 90px 0 50px;
+    color: var(--gold);
+    font-size: 18px;
+    letter-spacing: 0.6em;
+    user-select: none;
+  }
+
+  /* ---------- closing reflection / question blocks ---------- */
+
+  .questions { margin: 32px 0 0; }
+
+  .question {
+    margin: 0 0 28px;
+    padding: 0 0 0 24px;
+    border-left: 1px solid var(--gold-pale);
+    font-size: 19px;
+    color: var(--ink);
+  }
+  .question p { margin: 0; }
+
+  /* ---------- footer / AI note ---------- */
+
+  .article-footer {
+    margin-top: 100px;
+    padding-top: 30px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .ai-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-muted);
+    line-height: 1.6;
+    text-align: left;
+  }
+  .ai-note p { margin: 0 0 8px; text-align: left; }
+  .ai-note p:last-child { margin-bottom: 0; }
+
+  .site-footer {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ---------- responsive ---------- */
+
+  @media (max-width: 640px) {
+    body { font-size: 17px; }
+    .article { padding: 60px 24px 60px; }
+    .title-block h1 { font-size: 32px; }
+    .title-block .subtitle { font-size: 19px; }
+    h2 { font-size: 22px; }
+    h3 { font-size: 15px; }
+    .scripture { padding-left: 18px; font-size: 17px; }
+    .pull-quote { font-size: 17px; margin: 30px 8px; }
+  }
+
+  /* ---------- print ---------- */
+
+  @page { size: A4; margin: 22mm 20mm 22mm 20mm; }
+
+  @media print {
+    html, body { background: white; font-size: 11pt; }
+    .article { max-width: none; margin: 0; padding: 0; }
+    .title-block { margin-bottom: 40px; padding-bottom: 30px; }
+    .title-block h1 { font-size: 32pt; }
+    .title-block .subtitle { font-size: 16pt; }
+    h2 { font-size: 18pt; margin-top: 40px; page-break-after: avoid; }
+    h3 { font-size: 12pt; page-break-after: avoid; }
+    .section { page-break-before: always; }
+    .section:first-of-type { page-break-before: avoid; }
+    .scripture { page-break-inside: avoid; }
+    .article-footer { page-break-before: always; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<article class="article">
+
+  <!-- =====================================================
+       TITLE BLOCK
+       Edit the fields below
+       ===================================================== -->
+
+  <header class="title-block">
+    <div class="eyebrow">A Hesedwords Reflection</div>
+    <h1>{{ARTICLE_TITLE}}</h1>
+    <p class="subtitle">{{ARTICLE_SUBTITLE}}</p>
+    <div class="ornament">&#10086; &#10086; &#10086;</div>
+    <p class="byline">Norman Reed</p>
+    <p class="place">The Onesimus Foundation &middot; Hobart, Tasmania</p>
+  </header>
+
+  <!-- =====================================================
+       PROLOGUE
+       The italic framing passage. Optional - remove if not needed.
+       ===================================================== -->
+
+  <div class="prologue">
+    <p>{{PROLOGUE_PARAGRAPH_1}}</p>
+    <p>{{PROLOGUE_PARAGRAPH_2}}</p>
+  </div>
+
+  <!-- =====================================================
+       SECTIONS
+       Each <section class="section"> gets a gold-rule heading,
+       drop cap on the first paragraph, and a page break in print.
+       ===================================================== -->
+
+  <section class="section">
+    <h2><span class="section-number">Section One</span>{{SECTION_1_HEADING}}</h2>
+
+    <p>{{First paragraph - the first letter will become a gold drop cap}}</p>
+
+    <p>{{Further paragraphs}}</p>
+
+    <h3>{{Subheading - optional}}</h3>
+
+    <p>{{Paragraph under subheading}}</p>
+
+    <!-- Scripture block example -->
+    <blockquote class="scripture">
+      <p>{{Scripture text in italic}}</p>
+      <span class="ref">{{Book chapter:verse}} &middot; ESV</span>
+    </blockquote>
+
+    <p>{{Continue with body text}}</p>
+
+    <!-- Bullet list example -->
+    <ul>
+      <li>{{First item}}</li>
+      <li>{{Second item}}</li>
+      <li>{{Third item}}</li>
+    </ul>
+
+    <!-- Pull quote example - use sparingly -->
+    <p class="pull-quote">{{A short, weighty line to set apart visually}}</p>
+
+  </section>
+
+  <section class="section">
+    <h2><span class="section-number">Section Two</span>{{SECTION_2_HEADING}}</h2>
+    <p>{{Section 2 content}}</p>
+  </section>
+
+  <!-- Add more <section class="section"> blocks as needed -->
+
+  <!-- =====================================================
+       CLOSING REFLECTION (optional)
+       Use the .question blocks to set up reflective questions.
+       ===================================================== -->
+
+  <section class="section">
+    <h2>{{Closing section heading}}</h2>
+
+    <p>{{Lead-in paragraph}}</p>
+
+    <div class="questions">
+      <div class="question"><p>{{First question}}</p></div>
+      <div class="question"><p>{{Second question}}</p></div>
+      <div class="question"><p>{{Third question}}</p></div>
+    </div>
+
+    <p style="margin-top: 32px;">{{Closing reflection paragraph}}</p>
+  </section>
+
+  <!-- =====================================================
+       ARTICLE FOOTER
+       AI acknowledgment + site tagline. Leave this in place.
+       ===================================================== -->
+
+  <footer class="article-footer">
+    <div class="ai-note">
+      <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+      <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+      <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+    </div>
+
+    <div class="site-footer">
+      hesedwords.com &middot; The Onesimus Foundation &middot; {{YEAR}}
+    </div>
+  </footer>
+
+</article>
+
+</body>
+</html>
