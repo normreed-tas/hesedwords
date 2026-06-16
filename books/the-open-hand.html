@@ -103,6 +103,25 @@
       opacity: 0.70;
     }
 
+    .btn-download {
+      display: inline-block;
+      margin-top: 24px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: var(--gold-light);
+      border: 1px solid var(--gold);
+      padding: 10px 22px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-download:hover {
+      background: var(--gold);
+      color: var(--parchment);
+    }
+
     /* =====================
        ARTICLE BODY
        ===================== */
@@ -235,6 +254,7 @@
     <p class="article-subtitle">The Story of Job</p>
     <div class="article-rule"></div>
     <p class="article-meta">Job 42 &nbsp;·&nbsp; 10</p>
+    <a href="/books/the-open-hand.pdf" class="btn-download" target="_blank" rel="noopener">&#8595;&nbsp; Download PDF</a>
   </section>
 
 
