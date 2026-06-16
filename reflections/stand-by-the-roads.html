@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stand by the Roads — Hesedwords</title>
+  <meta name="description" content="A reflection on Jeremiah 6:16 — the invitation to stand before walking.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --parchment:     #FAF5E8;
+      --parchment-mid: #F2EAD4;
+      --gold:          #A67C2E;
+      --gold-border:   #C8B58F;
+      --gold-rule:     #D9C49A;
+      --ink:           #2A2218;
+      --ink-mid:       #4A3E2C;
+      --ink-light:     #6B5C45;
+      --cinzel:        'Cinzel', 'Palatino Linotype', Georgia, serif;
+      --cormorant:     'Cormorant Garamond', 'Garamond', Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: var(--cormorant);
+      font-size: 20px;
+      line-height: 1.78;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Site nav ── */
+    nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+    nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+    nav.hw-nav a:hover{opacity:1;color:#fff;}
+    nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+
+    /* ── Reflection wrapper ── */
+    .reflection-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 64px 40px 90px;
+    }
+
+    /* ── Title block ── */
+    .reflection-eyebrow {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 22px;
+    }
+    .reflection-title {
+      font-family: var(--cinzel);
+      font-size: 36px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+    .reflection-subtitle {
+      font-family: var(--cormorant);
+      font-style: italic;
+      font-size: 19px;
+      color: var(--ink-mid);
+      text-align: center;
+      line-height: 1.45;
+      margin-bottom: 28px;
+    }
+    .reflection-ornament {
+      text-align: center;
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 0.7em;
+      margin: 0 0 20px;
+    }
+    .reflection-byline {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    /* ── Body ── */
+    .reflection-body p {
+      margin-bottom: 1.45em;
+      font-size: 20px;
+      line-height: 1.78;
+      color: var(--ink);
+    }
+
+    /* ── Drop cap ── */
+    .drop-cap::first-letter {
+      font-family: var(--cinzel);
+      font-size: 4.4em;
+      font-weight: 400;
+      float: left;
+      line-height: 0.76;
+      margin: 0.1em 0.12em 0 0;
+      color: var(--gold);
+    }
+
+    /* ── Scripture block ── */
+    .scripture-block {
+      border-left: 3px solid var(--gold);
+      padding: 14px 20px 14px 28px;
+      margin: 30px 0;
+      background: rgba(166, 124, 46, 0.04);
+      border-radius: 0 2px 2px 0;
+    }
+    .scripture-block p {
+      font-style: italic;
+      font-size: 19px !important;
+      color: var(--ink-mid) !important;
+      margin-bottom: 0 !important;
+      line-height: 1.65 !important;
+    }
+    .scripture-ref {
+      display: block;
+      font-family: var(--cinzel);
+      font-size: 9.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 12px;
+      text-align: right;
+    }
+
+    /* ── Article link ── */
+    .article-link {
+      border-top: 1px solid var(--gold-rule);
+      margin-top: 52px;
+      padding-top: 36px;
+      text-align: center;
+    }
+    .article-link p {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 12px !important;
+    }
+    .article-link a {
+      font-family: var(--cormorant);
+      font-style: italic;
+      font-size: 19px;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-rule);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .article-link a:hover {
+      color: var(--ink-mid);
+      border-bottom-color: var(--ink-mid);
+    }
+
+    /* ── Footer ── */
+    footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+    /* ── Mobile ── */
+    @media (max-width: 640px) {
+      .reflection-wrap { padding: 44px 24px 64px; }
+      .reflection-title { font-size: 26px; }
+      .reflection-subtitle { font-size: 17px; }
+      .reflection-body p { font-size: 18px; }
+      .scripture-block p { font-size: 17px !important; }
+      .drop-cap::first-letter { font-size: 3.8em; }
+    }
+
+    /* ── Print ── */
+    @media print {
+      .site-nav, .site-footer { display: none; }
+      body { background: white; }
+      .reflection-wrap { padding: 0; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/index.html">Home</a>
+  <a href="/reflections.html" class="current">Reflections</a>
+  <a href="/articles.html">Articles</a>
+  <a href="/books.html">Books</a>
+  <a href="/glossary.html">Glossary</a>
+  <a href="/resources.html">Resources</a>
+</nav>
+
+  <main class="reflection-wrap">
+
+    <header>
+      <p class="reflection-eyebrow">A Hesedwords Reflection</p>
+      <h1 class="reflection-title">Stand by the Roads</h1>
+      <p class="reflection-subtitle">A reflection on Jeremiah 6:16</p>
+      <p class="reflection-ornament">✦ &nbsp; ✦ &nbsp; ✦</p>
+      <p class="reflection-byline">Norman Reed &middot; June 2026</p>
+    </header>
+
+    <article class="reflection-body">
+
+      <p class="drop-cap">Somewhere in the middle of a judgment speech, God interrupts himself.</p>
+
+      <p>The charges against Jerusalem have been building for chapters. The indictment is specific. The consequences named. And then &mdash; without warning, inserted into the oracle &mdash; a single verse:</p>
+
+      <div class="scripture-block">
+        <p>Stand by the roads. Look. Ask for the ancient paths, where the good way is. Walk in them. And you will find rest for your souls.</p>
+        <span class="scripture-ref">Jeremiah 6:16</span>
+      </div>
+
+      <p>One verse. Then the judgment speech continues.</p>
+
+      <p>Most readers pass over it. I find I cannot.</p>
+
+      <p>The invitation begins not with walking but with standing. The crossroads &mdash; the place where paths diverge, where the pressure to choose is greatest &mdash; and the word is: <em>stop</em>. Not yet. Look first.</p>
+
+      <p>There is something countercultural in that instruction. We bring urgency to our crossroads. The demand to decide, to act, to move in some direction, is relentless. But the ancient word offered here is different. Stillness before movement. Looking before walking. The asking precedes the going.</p>
+
+      <p>And what you are looking for, the verse says, are paths that have been worn by generations of faithful walking. Not novelty. Not the latest direction. The ancient paths &mdash; <em>netivot olam</em> &mdash; roads proven across time because they are grounded in what is timelessly true.</p>
+
+      <p>What is promised to those who find them is not certainty. Not safety. It is rest for your souls. The rest not of exhaustion but of arrival &mdash; of finding yourself, at last, where you were made to be.</p>
+
+      <p>The crossroads is not the problem. The crossroads is the invitation. Stand here. Look. Ask which way the faithful have walked before you.</p>
+
+      <p>Something in this stopped me. Not the judgment &mdash; I have read Jeremiah&rsquo;s judgment speeches before. The standing. The instruction to stand before walking. I am not sure I do that as well as I once thought I did.</p>
+
+      <p>That question, taken seriously, opens into something larger &mdash; into the heart of what the prophets are most deeply doing, and into the God whose grief is visible even in the act of judgment.</p>
+
+      <div class="article-link">
+        <p>There is more &mdash; if you want to follow it further</p>
+        <a href="/articles/he-does-not-afflict-from-his-heart.html">
+          He Does Not Afflict From His Heart &nbsp;&rarr;
+        </a>
+      </div>
+
+    </article>
+
+  </main>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>
