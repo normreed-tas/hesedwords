@@ -41,47 +41,10 @@
     }
 
     /* ─── Navigation ────────────────────────────────────────── */
-    .site-nav {
-      background: var(--ink);
-      padding: 0 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 56px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .site-nav__logo {
-      font-family: var(--font-display);
-      font-size: 14px;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold-light);
-      text-decoration: none;
-    }
-
-    .site-nav__links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .site-nav__links a {
-      font-family: var(--font-display);
-      font-size: 10px;
-      font-weight: 400;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #B8A88A;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .site-nav__links a:hover,
-    .site-nav__links a.active { color: var(--gold-light); }
+    nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+    nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+    nav.hw-nav a:hover{opacity:1;color:#fff;}
+    nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
 
     /* ─── Article Layout ────────────────────────────────────── */
     .article-wrap {
@@ -322,10 +285,6 @@
 
     /* ─── Mobile ────────────────────────────────────────────── */
     @media (max-width: 640px) {
-      .site-nav { padding: 0 20px; }
-      .site-nav__links { gap: 18px; }
-      .site-nav__links a { font-size: 9px; letter-spacing: 0.14em; }
-
       .article-wrap { padding: 48px 24px 72px; }
 
       .title-block__title { font-size: 30px; }
@@ -344,7 +303,7 @@
 
     /* ─── Print ─────────────────────────────────────────────── */
     @media print {
-      .site-nav, .site-footer, .breadcrumb { display: none; }
+      nav.hw-nav, .site-footer, .breadcrumb { display: none; }
 
       body { background: white; font-size: 11pt; }
 
@@ -387,15 +346,14 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="site-nav" role="navigation" aria-label="Site navigation">
-    <a href="/" class="site-nav__logo">Hesed Words</a>
-    <ul class="site-nav__links">
-      <li><a href="/songs-for-the-road.html">Songs for the Road</a></li>
-      <li><a href="/books.html">Books</a></li>
-      <li><a href="/reflections.html" class="active">Reflections</a></li>
-      <li><a href="/glossary.html">Glossary</a></li>
-      <li><a href="/about.html">About</a></li>
-    </ul>
+  <nav class="hw-nav">
+    <a href="/index.html">Home</a>
+    <a href="/reflections.html" class="current">Reflections</a>
+    <a href="/articles.html">Articles</a>
+    <a href="/books.html">Books</a>
+    <a href="/glossary.html">Glossary</a>
+    <a href="/resources.html">Resources</a>
+    <a href="/contact.html">Contact</a>
   </nav>
 
   <!-- Article -->

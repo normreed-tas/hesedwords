@@ -31,33 +31,10 @@ body {
 }
 
 /* ── Site nav ── */
-.site-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 20px 32px;
-    border-bottom: 1px solid #E0D4B8;
-}
-.nav-home {
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 0.1em;
-    color: #2A1D08;
-    text-decoration: none;
-}
-.nav-links { display: flex; gap: 2em; }
-.nav-links a {
-    font-family: 'Cinzel', serif;
-    font-size: 9.5px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #4A3010;
-    text-decoration: none;
-}
-.nav-links a:hover { color: #B8943A; }
+nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+nav.hw-nav a:hover{opacity:1;color:#fff;}
+nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
 
 /* ── Book page container ── */
 .book-page {
@@ -240,13 +217,14 @@ body {
 </head>
 <body>
 
-<nav class="site-nav">
-  <a href="https://hesedwords.com" class="nav-home">HesedWords</a>
-  <div class="nav-links">
-    <a href="https://hesedwords.com#books">Books</a>
-    <a href="https://hesedwords.com/reflections.html">Reflections</a>
-    <a href="https://hesedwords.com/glossary.html">Glossary</a>
-  </div>
+<nav class="hw-nav">
+  <a href="/index.html">Home</a>
+  <a href="/reflections.html">Reflections</a>
+  <a href="/articles.html">Articles</a>
+  <a href="/books.html" class="current">Books</a>
+  <a href="/glossary.html">Glossary</a>
+  <a href="/resources.html">Resources</a>
+  <a href="/contact.html">Contact</a>
 </nav>
 
 <div class="book-page">
