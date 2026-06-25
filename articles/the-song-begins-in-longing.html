@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Song Begins in Longing — Hesedwords</title>
+  <meta name="description" content="Song of Songs 1:1 opens the greatest of songs not with the kiss but with the wanting of it — and that is the tuning of the whole book.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --parchment:     #FAF5E8;
+      --parchment-mid: #F2EAD4;
+      --gold:          #A67C2E;
+      --gold-light:    #C8A84B;
+      --gold-border:   #C8B58F;
+      --gold-rule:     #D9C49A;
+      --ink:           #2A2218;
+      --ink-mid:       #4A3E2C;
+      --ink-light:     #6B5C45;
+      --cinzel:        'Cinzel', 'Palatino Linotype', Georgia, serif;
+      --cormorant:     'Cormorant Garamond', 'Garamond', Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: var(--cormorant);
+      font-size: 20px;
+      line-height: 1.78;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Site nav ── */
+    nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+    nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+    nav.hw-nav a:hover{opacity:1;color:#fff;}
+    nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+
+    /* ── Article wrapper ── */
+    .article-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 40px 90px;
+    }
+
+    /* ── Title block ── */
+    .article-eyebrow {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 22px;
+    }
+    .article-title {
+      font-family: var(--cinzel);
+      font-size: 38px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+    .article-subtitle {
+      font-family: var(--cormorant);
+      font-style: italic;
+      font-size: 21px;
+      color: var(--ink-mid);
+      text-align: center;
+      line-height: 1.45;
+      margin-bottom: 28px;
+    }
+    .article-ornament {
+      text-align: center;
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 0.7em;
+      margin: 0 0 20px;
+    }
+    .article-byline {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    /* ── Body ── */
+    .article-body p {
+      margin-bottom: 1.45em;
+      font-size: 20px;
+      line-height: 1.78;
+      color: var(--ink);
+    }
+
+    /* ── Drop cap ── */
+    .drop-cap::first-letter {
+      font-family: var(--cinzel);
+      font-size: 4.4em;
+      font-weight: 400;
+      float: left;
+      line-height: 0.76;
+      margin: 0.1em 0.12em 0 0;
+      color: var(--gold);
+    }
+
+    /* ── Section headings ── */
+    .article-body h2 {
+      font-family: var(--cinzel);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin: 56px 0 22px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--gold-rule);
+    }
+
+    /* ── Scripture blocks ── */
+    .scripture-block {
+      border-left: 3px solid var(--gold);
+      padding: 14px 20px 14px 28px;
+      margin: 30px 0;
+      background: rgba(166, 124, 46, 0.04);
+      border-radius: 0 2px 2px 0;
+    }
+    .scripture-block p {
+      font-style: italic;
+      font-size: 19px !important;
+      color: var(--ink-mid) !important;
+      margin-bottom: 0 !important;
+      line-height: 1.65 !important;
+    }
+    .scripture-ref {
+      display: block;
+      font-family: var(--cinzel);
+      font-size: 9.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 12px;
+      text-align: right;
+    }
+
+    /* ── Hebrew inline ── */
+    .heb { font-style: normal; color: var(--ink-mid); }
+
+    /* ── Warrant note ── */
+    .warrant {
+      font-size: 16px;
+      color: var(--ink-light);
+      background: rgba(166, 124, 46, 0.05);
+      border-left: 2px solid var(--gold-border);
+      padding: 12px 18px;
+      margin: 26px 0;
+      line-height: 1.6;
+    }
+    .warrant span {
+      font-family: var(--cinzel);
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ── Scene break ── */
+    .scene-break {
+      text-align: center;
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: 0.7em;
+      margin: 34px 0 30px;
+    }
+
+    /* ── Closing questions ── */
+    .closing-questions {
+      border-top: 1px solid var(--gold-rule);
+      margin-top: 48px;
+      padding-top: 34px;
+    }
+    .closing-questions p {
+      font-style: italic;
+      font-size: 20px;
+      color: var(--ink-mid);
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 1.1em;
+    }
+
+    /* ── AI acknowledgment ── */
+    .ai-acknowledgment {
+      border-top: 1px solid var(--gold-rule);
+      margin-top: 64px;
+      padding-top: 32px;
+    }
+    .ai-acknowledgment p {
+      font-style: italic;
+      font-size: 15px !important;
+      color: var(--ink-light) !important;
+      line-height: 1.65 !important;
+      margin-bottom: 0.9em !important;
+    }
+    .ai-acknowledgment p:last-child { margin-bottom: 0 !important; }
+
+    /* ── PDF download ── */
+    .pdf-download {
+      text-align: center;
+      margin-top: 44px;
+    }
+    .pdf-download a {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-rule);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .pdf-download a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+    /* ── Footer ── */
+    footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+    /* ── Mobile ── */
+    @media (max-width: 640px) {
+      .article-wrap { padding: 44px 24px 64px; }
+      .article-title { font-size: 27px; }
+      .article-subtitle { font-size: 18px; }
+      .article-body p { font-size: 18px; }
+      .scripture-block p { font-size: 17px !important; }
+      .warrant { font-size: 15px; }
+      .drop-cap::first-letter { font-size: 3.8em; }
+    }
+
+    /* ── Print ── */
+    @media print {
+      .hw-nav, .hw-foot, .pdf-download { display: none; }
+      body { background: white; }
+      .article-wrap { padding: 0; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/index.html">Home</a>
+  <a href="/reflections.html">Reflections</a>
+  <a href="/articles.html" class="current">Articles</a>
+  <a href="/books.html">Books</a>
+  <a href="/glossary.html">Glossary</a>
+  <a href="/resources.html">Resources</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+
+  <main class="article-wrap">
+
+    <header>
+      <p class="article-eyebrow">A Hesedwords Article</p>
+      <h1 class="article-title">The Song Begins in Longing</h1>
+      <p class="article-subtitle">Why the greatest of all songs opens not with the kiss, but with the wanting of it &mdash; a reading of Song of Songs 1:1</p>
+      <p class="article-ornament">✦ &nbsp; ✦ &nbsp; ✦</p>
+      <p class="article-byline">Norman Reed &middot; June 2026</p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="scripture-block">
+        <p>Let him kiss me with the kisses of his mouth! For your love is better than wine.</p>
+        <span class="scripture-ref">Song of Songs 1:1 &middot; ESV</span>
+      </div>
+
+      <p class="drop-cap">The greatest of all songs opens on a woman wanting. Not a story, not a setting, not even her name. Before we are given anything safe to hold, we are given her longing &mdash; and the longing comes first because the longing is the whole point.</p>
+
+      <p>We should let that land before we explain it away. A book this deliberate could have opened anywhere. It could have begun with the lovers together, the kiss already given, joy already in hand. It begins instead with a reach &mdash; <em>let him kiss me</em> &mdash; which is the grammar of someone whose beloved is not in the room. The first note of the Song is struck in the key of seeking, and everything that follows is already inside that opening reach.</p>
+
+      <h2>The lurch</h2>
+
+      <p>Read the single verse slowly and you will feel it move beneath you. It begins in the third person: <em>let him kiss me.</em> She is speaking <em>about</em> him, the way you speak of someone who is absent. And then, before the sentence is even finished, it breaks: <em>for your love is better than wine.</em> Third person to second person, mid-thought. <em>Him</em> becomes <em>you.</em></p>
+
+      <p>That swerve is not a mistake, and it is not careless poetry. It is the sound of a longing that cannot hold its object at arm&rsquo;s length. She starts at a distance and the wanting will not let her stay there; by the time the line ends she has turned to face him, as though the very act of longing had summoned him close enough to address. The gap between speaking-<em>about</em> and speaking-<em>to</em> is the gap the whole book will spend itself trying to close. And it closes here, in the first verse, in a single breath &mdash; not because he has arrived, but because love reaches across distance faster than feet can walk it.</p>
+
+      <p>Most English translations quietly smooth this. They tidy the persons so the line reads cleanly. But the Hebrew keeps the lurch, and the lurch is the feeling. Tidy it and you have lost the thing the poet most wanted you to feel.</p>
+
+      <h2>The doubled kiss</h2>
+
+      <p>There is a second thing the Hebrew does that no English version can quite carry. She does not ask for <em>a</em> kiss. The line is <span class="heb">yi&scaron;&scaron;&#257;q&#275;n&#238; minn&#601;&scaron;&#238;q&ocirc;t p&#238;h&ucirc;</span> &mdash; and the word for kiss is said <em>twice</em>, a verb and then its own noun piled on top of it: <em>let him kiss me with the kissings of his mouth.</em> The line is already crowded with kissing before a single kiss has happened.</p>
+
+      <p>That repetition is not redundancy. It is wanting that has to say the thing twice because once will not carry it. She is not describing a kiss; she is inside the wanting of it, and the language itself overflows. You hear this in people, not in textbooks &mdash; the way a name gets said twice when once would do, the way longing doubles its own words. The grammar is doing what the heart is doing.</p>
+
+      <h2>The time the song refuses to fix</h2>
+
+      <p>Now the tender thing, and the heart of the whole reading. We are never told <em>when</em> this is.</p>
+
+      <p>Is she a girl who has never been kissed, aching toward a first kiss she can only imagine? Or a woman who has been kissed, and cannot stop reaching back toward the one that undid her? The poem does not say. It gives us the wanting and withholds the placement &mdash; and a poet this careful withheld it on purpose.</p>
+
+      <p>Because here is what longing knows that grammar forgets: the reach toward a first kiss and the reach back toward one already given <em>feel the same from the inside.</em> The girl who has never been kissed and the woman remembering the kiss that changed her are, in the moment of wanting, in the same posture &mdash; eyes closed, the beloved summoned, the mouth imagined. Anticipation and memory are the two faces of one ache, and the only thing that separates them is a fact the poem declines to give us. Strip that fact away and what remains is longing itself, belonging to both at once.</p>
+
+      <p>This is the difference between a song and a story. A story has to know when it is; it lives on sequence, on what-happened-next. A song only has to know what it <em>feels.</em> And by refusing the timeline, the Song of Songs lets its opening longing belong to everyone who has ever stood in it &mdash; the one who has not yet had, the one who has had and lost the nearness, and the reader in the room who recognises the ache because she has stood in both places herself. The ambiguity is not a gap better scholarship would close. It is the craft. It is the tuning of the instrument.</p>
+
+      <h2>Better than wine</h2>
+
+      <p>And yet the verse does tell us one thing for certain about her. <em>Your love is better than wine.</em></p>
+
+      <p>That is not a girl wondering what love might be like. That is the verdict of someone who has tasted. You cannot rank a thing you have never known against the best you have; the comparison requires experience on both sides. Wine was the ancient world&rsquo;s word for the joy that loosens and gladdens and overflows &mdash; the height of ordinary delight &mdash; and she takes that height and says his love runs past it. She knows, because she has drunk both.</p>
+
+      <p>This rules out a whole sentimental reading. This is not infatuation &mdash; not the ache for a stranger across a gap that has never been crossed, the longing of someone in love with an image. That is a thinner ache, built entirely of projection. Hers is built on memory. And so it is the <em>deeper</em> loneliness, not the shallower one: not the wanting of what you have never had, but the wanting of more of what you have already held. You can ache for the unknown, but it is a lighter thing than aching for the known and presently absent.</p>
+
+      <p>Notice what this does to the map of the scene. She is somewhere alone &mdash; a room, the edge of evening. He is elsewhere. The nearness between them is entirely interior; she has closed her eyes and brought him as near as imagining allows. This is the first of many such scenes, and worth marking, because the Song is choreographed by distance. Later she will be on her bed and he at the door; later she will be out in the night streets and the watchmen will find her and the distance will <em>not</em> collapse. Here, safe and alone, it folds at will. In the mind the beloved is only ever as far away as the next thought.</p>
+
+      <h2>The one thing</h2>
+
+      <p>It is here that the Song meets two other voices, and the meeting changes how we hear all three.</p>
+
+      <p>David, hunted and exhausted, reduces his whole desire to a single line: <em>One thing have I asked of the Lord&hellip; that I may dwell in the house of the Lord all the days of my life, to behold the beauty of the Lord.</em> Not rescue. Not vindication. One thing &mdash; to behold his beauty. And Paul, writing from a prison cell with his death no longer abstract, narrows everything he has ever counted as gain down to the same point: <em>that I may know him</em> &mdash; and counts all the rest as loss, as refuse, beside it. Not release from the cell. To know him.</p>
+
+      <div class="warrant">
+        <span>Warrant &mdash; established</span><br>
+        The pairing of David&rsquo;s &ldquo;one thing&rdquo; (Psalm 27:4) and Paul&rsquo;s &ldquo;one thing&rdquo; (Philippians 3:8&ndash;10) is a long-recognised thread; the single-hearted longing to know God runs through both independent of any one interpreter&rsquo;s framework.
+      </div>
+
+      <div class="warrant">
+        <span>Warrant &mdash; reading within frame</span><br>
+        Hearing the Shulammite&rsquo;s reach as the same &ldquo;one thing&rdquo; holds within a particular architecture &mdash; that intimate knowing (<span class="heb">da&rsquo;at</span>) runs continuously from the mutual knowing of the lovers up into the knowing of God, without the lower being cancelled by the higher. The Song invites this; it does not compel it. Read here as illumination, not as proof.
+      </div>
+
+      <p>This is also where the oldest readers of the Song stand &mdash; and where they must be handled with care. For a thousand years the church read this kiss allegorically. Bernard of Clairvaux, preaching to his monks in the twelfth century, built his whole opening on this verse. And Bernard is worth hearing, because for all his allegory he was a close reader. He noticed exactly the grammatical oddity we noticed: that the bride says <em>of his mouth</em> when simply asking to be kissed would have been enough, and he asked why she specifies it so precisely, beyond the ordinary way of speaking. He read the surplus as marking that the grace she asks for is not merely <em>a</em> grace but the highest one.</p>
+
+      <p>Bernard&rsquo;s scheme, put plainly, was this: to kiss the feet of the Lord is the posture of the forgiven; to kiss the hand, the posture of those growing in holiness; but to kiss the mouth is the rarest thing &mdash; whole and consuming love, communion with God himself &mdash; and he confessed it was given to few, and that he himself was still down at the feet. And his finest line is the one that earns him his place at this verse. The kiss of the mouth, he said, is a hidden manna: no one can understand it except the one who has tasted it, and the one who tastes it hungers for it again. It is a sealed fountain &mdash; and the one who drinks from it still thirsts to drink again.</p>
+
+      <p>That is <em>better than wine</em> in Bernard&rsquo;s own idiom. The taste that does not satisfy the thirst but deepens it. The known love that makes you ache for more of the very thing you already have.</p>
+
+      <p>But here the Song asks us to resist Bernard even while we honour him &mdash; and the <span class="heb">da&rsquo;at</span> reading is what lets us do it without violence. The long allegorical tradition tends, at its worst, to treat the body as a husk: the physical love of the poem a mere shell around the spiritual kernel, to be cracked and discarded once the &ldquo;real&rdquo; meaning is extracted. The Song will not allow it. It is frankly, unembarrassedly about desire and the love of two people, and that plain sense is not a problem to be solved. Intimate knowing does not begin in heaven and condescend to earth; it runs the other way and the whole way, continuous, from the lovers&rsquo; mouths up into the knowledge of God, with nothing along the line cancelled. The kiss is not <em>only</em> a symbol of communion with God. It is a real kiss that is <em>also</em>, in the architecture of this book, a window onto the deepest knowing there is.</p>
+
+      <h2>What the trailer asks of you</h2>
+
+      <p>So what does this opening verse &mdash; this trailer for the whole Song &mdash; actually do to the one who reads it?</p>
+
+      <p>It refuses to let you watch from outside. The first words are the most private thing about her, the wanting, handed to you before you have been given anything safe to hold. The invitation is daring: come this close, or do not come at all. And what keeps you reading is not curiosity about plot. It is recognition. You know this. You brought this ache to the page without realising you were carrying it. The Song promises that the thing you have felt and perhaps could never say, it will say &mdash; and say without embarrassment.</p>
+
+      <p>And then, underneath, it makes a promise larger than recognition. <em>Better than wine</em> tells you the longing is pointed at something real enough to answer it. You do not keep reading only because you recognise the ache; you keep reading because the trailer has quietly sworn the ache <em>resolves</em> &mdash; that this seeking finds. You want to know if it is true.</p>
+
+      <p>Here is what I have come to believe it means, for the one holding the book. The Song begins in longing because that is where you begin too. It does not open with the kiss fulfilled. It opens with the reach &mdash; because a love that ever mattered to you was almost never one you possessed neatly from the start. It was wanted first. Ached for before it was held. And the Song says: <em>your wanting is not the embarrassing prelude to the real thing. The wanting is where the song starts. It is holy ground.</em> You are allowed to long. The greatest of all songs thought your longing worth its first note.</p>
+
+      <p>I have known him a long time. A life has been shaped by that knowing &mdash; and still, like Paul, the reach. There is a song I play, and I find the words on my lips before I have chosen them: <em>deep within my heart, I want to know him.</em> Not know <em>about</em> him. To know him. I do not stand where Paul stood; I cannot yet say <em>everything else is loss</em> and mean it all the way down. But I can say the smaller, truer thing: I want to want that. And it may be that this is the same song the Shulammite is singing &mdash; that her reach and David&rsquo;s one thing and Paul&rsquo;s one thing and the song on my lips are all the single longing, wearing different garments, set to music because the heart cannot say it plainly. My prayer is that the Song of all songs would not satisfy that longing so much as deepen it.</p>
+
+      <div class="closing-questions">
+        <p>Where are you still standing at the window &mdash; reaching for a nearness you have known, but do not presently hold?</p>
+        <p>And what would it mean to believe that the longing itself, before anything is resolved, is already the song &mdash; and not the absence of it?</p>
+      </div>
+
+      <div class="ai-acknowledgment">
+        <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+        <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+        <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+      </div>
+
+    </article>
+
+    <div class="pdf-download">
+      <a href="/articles/pdf/the-song-begins-in-longing.pdf" target="_blank" rel="noopener">Download as PDF</a>
+    </div>
+
+  </main>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>
