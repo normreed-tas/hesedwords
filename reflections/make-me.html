@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Make Me — Hesed Words</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment:      #e8dfc8;
+    --parchment-page: #f3ecda;
+    --ink:            #2A2218;
+    --ink-soft:       #4a4030;
+    --gold:           #c9a84c;
+    --gold-deep:      #A67C2E;
+    --gold-soft:      #D9C49A;
+    --muted:          #6B5C45;
+    --rule:           #C8B58F;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', 'Garamond', Georgia, serif;
+    font-size: 21px;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 72px 32px 96px;
+    background: var(--parchment-page);
+    min-height: 100vh;
+    box-shadow: 0 0 60px rgba(42, 34, 24, 0.06);
+  }
+
+  .eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.30em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 40px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    line-height: 1.15;
+    margin: 0 0 18px;
+    color: var(--ink);
+  }
+
+  .subtitle {
+    font-style: italic;
+    font-size: 21px;
+    text-align: center;
+    color: var(--ink-soft);
+    margin: 0 0 28px;
+  }
+
+  .byline {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .rule-ornament {
+    text-align: center;
+    margin: 44px 0;
+    color: var(--gold);
+    font-size: 18px;
+    letter-spacing: 0.4em;
+  }
+
+  p { margin: 0 0 24px; }
+
+  .lead::first-letter {
+    font-family: 'Cinzel', serif;
+    font-size: 64px;
+    float: left;
+    line-height: 0.86;
+    padding: 6px 12px 0 0;
+    color: var(--gold-deep);
+  }
+
+  .scripture {
+    border-left: 3px solid var(--gold);
+    padding: 4px 0 4px 28px;
+    margin: 36px 0 36px 4px;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  .scripture .ref {
+    display: block;
+    font-style: normal;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 14px;
+  }
+
+  .hebrew { font-style: italic; }
+
+  .break-line {
+    text-align: center;
+    margin: 28px 0;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--ink-soft);
+  }
+
+  .selah {
+    border-left: 3px solid var(--gold);
+    padding: 8px 0 8px 28px;
+    margin: 48px 0 40px 4px;
+  }
+
+  .selah .selah-head {
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    color: var(--gold-deep);
+    margin: 0 0 18px;
+  }
+
+  .selah p {
+    font-style: italic;
+    font-size: 21px;
+    color: var(--ink-soft);
+    margin: 0 0 18px;
+  }
+
+  .questions {
+    margin: 44px 0 12px;
+    text-align: center;
+  }
+
+  .questions p {
+    font-style: italic;
+    font-size: 22px;
+    color: var(--ink-soft);
+    margin: 0 0 18px;
+    line-height: 1.5;
+  }
+
+  .footer {
+    margin-top: 72px;
+    padding-top: 28px;
+    border-top: 1px solid var(--gold-soft);
+    text-align: center;
+  }
+
+  .footer .tag {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  @media (max-width: 640px) {
+    .page { padding: 48px 22px 64px; }
+    h1 { font-size: 30px; }
+    body { font-size: 20px; }
+    .scripture, .selah p, .questions p { font-size: 20px; }
+  }
+
+  /* ── Site nav ── */
+  nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+  nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+  nav.hw-nav a:hover{opacity:1;color:#fff;}
+  nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+  /* ── Footer ── */
+  footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+</style>
+</head>
+<body>
+<nav class="hw-nav">
+  <a href="/index.html">Home</a>
+  <a href="/reflections.html" class="current">Reflections</a>
+  <a href="/articles.html">Articles</a>
+  <a href="/books.html">Books</a>
+  <a href="/glossary.html">Glossary</a>
+  <a href="/resources.html">Resources</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+  <div class="page">
+
+    <div class="eyebrow">A Reflection for Curious Minds</div>
+
+    <h1>Make Me</h1>
+    <p class="subtitle">On Psalm 25:4&ndash;5, and a grandson learning to walk</p>
+    <p class="byline">Norm Reed &middot; June 2026</p>
+
+    <p class="lead">The video call connected and he was already standing.</p>
+
+    <p>One hand on the edge of the lounge, the other arm out for ballast, the way they do &mdash; that wobble that isn&rsquo;t balance yet but wants to be. We&rsquo;d held those fingers ourselves a week earlier in Cairns. He&rsquo;d grip them and lean his weight forward and we&rsquo;d cross the room together, four feet for two steps. Then we&rsquo;d flown home, and now there was a screen between us, and his mother&rsquo;s voice somewhere off-frame: <em>Go Henley, go Henley.</em></p>
+
+    <p>He let go of the lounge. He reached. His foot lifted.</p>
+
+    <p class="break-line">Then he said <em>down</em> &mdash; and crawled.</p>
+
+    <p>He wants to walk. You can see it. He motions toward it, leans out over the edge of it, reaches for the room. But the wanting gets him only to the threshold. At the last second the floor wins. Crawling is faster anyway, and surer, and his weight is already down where it&rsquo;s safe. He has a perfectly good way of getting across the room. Walking is the harder road he doesn&rsquo;t need.</p>
+
+    <p>For his first birthday we gave him a tricycle, and for weeks he pushed it round the house backwards &mdash; facing it, leaning on it, walking toward the thing that held him up. The support out in front, where he could see it. That worked too. But a tricycle pushed backwards is still a kind of crawling. It carries the weight he hasn&rsquo;t yet learned to carry himself.</p>
+
+    <p>What changed it, in Cairns, was fingers. Not the cheering &mdash; he&rsquo;d heard <em>go Henley</em> and still got down. Two fingers held out at the right height. He&rsquo;d grip them, and the weight that wouldn&rsquo;t commit to the floor would commit to a hand, and the steps would come. Borrowed steps. But steps.</p>
+
+    <div class="rule-ornament">&#10086; &#10087; &#10086;</div>
+
+    <p>There is a prayer in the Psalms that asks for exactly this.</p>
+
+    <div class="scripture">
+      Make me to know your ways, O <span style="font-variant: small-caps;">Lord</span>; teach me your paths. Lead me in your truth, and teach me.
+      <span class="ref">Psalm 25:4&ndash;5 &middot; ESV</span>
+    </div>
+
+    <p>Underneath the English, David is doing something the translation hides. In verse 4 he asks God to make known his <span class="hebrew">derek</span> &mdash; his way, his road. In verse 5 the word for <em>lead</em> is <span class="hebrew">hadrikheni</span>, and it comes from <span class="hebrew">darak</span>, to tread, to set foot down, to put your weight on the path. The road and the treading are one word-family. A road, in Hebrew, is the thing feet make by walking it. <span class="hebrew">Derek</span> is <span class="hebrew">darak</span>, accumulated.</p>
+
+    <p>So the two verses are not asking twice for the same thing. <em>Show me the road</em> &mdash; then <em>set my foot on it.</em> And the second verb is not gentle. <span class="hebrew">Hadrikheni</span> is causative. Not <em>guide me</em> in some advisory sense, but <em>make me tread.</em> It is the prayer of someone who knows he will not do it on his own.</p>
+
+    <p>Which is the honest part. David has the wanting. That is why he is praying at all &mdash; you do not beg for a road you have no desire to walk. He can see the room. He reaches for it. What he lacks is not the longing but the nerve to put his weight down, and he knows himself well enough to know that left to himself he will reach, and then say <em>down</em>, and crawl. The desire was never the missing thing. The treading was.</p>
+
+    <p>So he does not pray <em>give me the will to walk your way.</em> He has that. He prays <em>make me tread it</em> &mdash; because I am the kind of creature who wants the road and chooses the floor, unless a hand takes the weight my nerve won&rsquo;t commit.</p>
+
+    <p>The courage in the verse, then, is not summoned. It is received. It comes down the held finger. <em>Go Henley</em> was never going to be enough on its own. The cheer wants the walk. The hand makes it.</p>
+
+    <div class="selah">
+      <div class="selah-head">Selah</div>
+      <p>David gives my need its voice. <span style="font-style: normal;">Make me.</span> I can pray no honest prayer but that one.</p>
+      <p>I watched Henley reach and say down, and I knew I was watching myself. But I am not Henley, and it would be too soft to pretend I am. His legs are still forming. He reaches and cannot. I reach and will not. He lacks the strength. I lack only the choosing.</p>
+      <p>James says that whoever knows the right thing and does not do it &mdash; for him it is sin. Henley does not yet know. That is his mercy. I know, and still say down. That is my sin.</p>
+      <p>So I pray the whole of David&rsquo;s prayer, and lean hardest on its weight. Teach me &mdash; yes, keep teaching me. But more than that: <span style="font-style: normal;">make me.</span> Make me know. Make me tread. Take the weight my nerve will not commit. Hold out the finger. And walk me down the road I can already see and will not, on my own, tread.</p>
+    </div>
+
+    <div class="questions">
+      <p>Have I grown too comfortable on the floor, playing with plastic toys, to want to walk at all?</p>
+      <p>Can I pray <span style="font-style: normal;">make me</span> and mean it &mdash; or have I decided I would rather sit?</p>
+    </div>
+
+    <div class="footer">
+      <div class="tag">Hesed Words &middot; The Onesimus Foundation</div>
+    </div>
+
+  </div>
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+</body>
+</html>
