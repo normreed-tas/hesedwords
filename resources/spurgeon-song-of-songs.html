@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spurgeon on the Song of Songs — Hesed Words</title>
+<meta name="description" content="The complete collection of Charles Spurgeon's sermons on the Song of Songs — sixty-three sermons gathered by chapter, each freely available to download.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --parchment:#f4ecd8;
+    --parchment-deep:#ece1c7;
+    --parchment-mid:#f0e6ce;
+    --ink:#1f1b16;
+    --ink-soft:#3a332a;
+    --ink-light:#4a3218;
+    --gold:#b08d3f;
+    --gold-deep:#8a6d2b;
+    --border:#c8a96e;
+    --border-light:#ddc48a;
+    --rule:#d8c9a3;
+    --shadow:rgba(30,21,8,0.18);
+    --accent:#8b3a0f;
+    --accent-light:#b05230;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:radial-gradient(ellipse at top,#f7f0de 0%,var(--parchment) 55%,var(--parchment-deep) 100%) fixed;
+    color:var(--ink);
+    font-family:"Cormorant Garamond",Georgia,serif;
+    font-size:1.15rem;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ── Nav ── */
+  nav.hw-nav{background:var(--ink);font-family:"Cinzel",serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+  nav.hw-nav a{color:var(--parchment);text-decoration:none;opacity:.82;transition:opacity .2s;}
+  nav.hw-nav a:hover{opacity:1;color:#fff;}
+  nav.hw-nav a.current{opacity:1;border-bottom:1px solid var(--gold);padding-bottom:.15rem;}
+
+  /* ── Page header ── */
+  .page-header{
+    text-align:center;
+    padding:4rem 1.5rem 2.8rem;
+    max-width:52rem;
+    margin:0 auto;
+  }
+  .page-eyebrow{
+    font-family:"Cinzel",serif;
+    font-size:.72rem;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-bottom:1rem;
+  }
+  .page-title{
+    font-family:"Cinzel",serif;
+    font-weight:500;
+    font-size:clamp(1.6rem,3.5vw,2.4rem);
+    color:var(--ink);
+    margin-bottom:1.2rem;
+    letter-spacing:.04em;
+    line-height:1.2;
+  }
+  .page-rule{
+    width:3rem;
+    height:1px;
+    background:var(--gold);
+    margin:.8rem auto 1.6rem;
+  }
+  .page-intro{
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:1.1rem;
+    max-width:44rem;
+    margin:0 auto;
+    line-height:1.8;
+  }
+
+  hr.rule-line{
+    border:0;
+    border-top:1px solid var(--rule);
+    max-width:52rem;
+    margin:0 auto 3rem;
+  }
+
+  /* ── Collection ── */
+  .collection{
+    max-width:52rem;
+    margin:0 auto;
+    padding:0 5vw 5rem;
+  }
+
+  .chapter-section{
+    margin-bottom:3rem;
+  }
+
+  .chapter-heading{
+    font-family:"Cinzel",serif;
+    font-size:.78rem;
+    font-weight:500;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--gold);
+    border-bottom:1px solid var(--rule);
+    padding-bottom:.7rem;
+    margin-bottom:2.4rem;
+  }
+
+  .sermon{
+    padding-bottom:2rem;
+    margin-bottom:2rem;
+    border-bottom:1px solid var(--rule);
+  }
+  .sermon:last-child{
+    border-bottom:none;
+    padding-bottom:0;
+    margin-bottom:0;
+  }
+
+  .sermon-title{
+    font-family:"Cinzel",serif;
+    font-weight:500;
+    font-size:1.1rem;
+    letter-spacing:.03em;
+    color:var(--ink);
+    line-height:1.3;
+    margin-bottom:.3rem;
+  }
+
+  .sermon-ref{
+    font-family:"Cinzel",serif;
+    font-size:.65rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:.9rem;
+  }
+
+  .sermon-desc{
+    font-size:1rem;
+    line-height:1.78;
+    color:var(--ink-soft);
+    margin-bottom:1rem;
+  }
+
+  .sermon-link{
+    font-family:"Cinzel",serif;
+    font-size:.68rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--accent);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    padding-bottom:2px;
+    transition:color .2s,border-color .2s;
+  }
+  .sermon-link:hover{color:var(--accent-light);border-bottom-color:var(--accent-light);}
+
+  footer.hw-foot{
+    text-align:center;
+    font-family:"Cinzel",serif;
+    font-size:.7rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    padding:2.5rem 1rem 3.5rem;
+    opacity:.8;
+  }
+
+  @media(max-width:640px){
+    .collection{padding:0 5vw 4rem;}
+    .sermon-desc{font-size:.98rem;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/index.html">Home</a>
+  <a href="/reflections.html">Reflections</a>
+  <a href="/articles.html">Articles</a>
+  <a href="/books.html">Books</a>
+  <a href="/glossary.html">Glossary</a>
+  <a href="/resources.html" class="current">Resources</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+
+<header class="page-header">
+  <p class="page-eyebrow">Hesed Words &middot; Resources</p>
+  <h1 class="page-title">Spurgeon on the Song of Songs</h1>
+  <div class="page-rule"></div>
+  <p class="page-intro">Charles Spurgeon returned to the Song of Songs more often, and more tenderly, than to almost any other book. He read it as most of the Church once did &mdash; as a love-song between Christ and his people &mdash; and across some sixty sermons he traced that love through every season the soul knows: nearness and absence, longing and rest, the dark night and the breaking day. What follows is the complete collection, gathered by chapter. Each may be read on its own; together they form one of the most sustained meditations on the love of Christ in the English pulpit. All are freely available to download.</p>
+</header>
+
+<hr class="rule-line">
+
+<main class="collection">
+
+  <!-- ── Chapter 1 ── -->
+  <section class="chapter-section">
+    <h2 class="chapter-heading">Song of Songs &mdash; Chapter 1</h2>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Better Than Wine</h3>
+      <p class="sermon-ref">Song of Songs 1:2 &middot; Sermon 2459</p>
+      <p class="sermon-desc">Spurgeon takes a single clause and finds the whole gospel folded inside it &mdash; the love of Christ as something costlier, more exhilarating, and more lasting than any joy the world can pour. He lingers over why it is <em>better</em>: better in its source, its effect, and its permanence, a draught that gladdens without ever cloying. A warm, expansive opening to the collection, and a fair taste of how much he can draw from a few words.</p>
+      <a href="/resources/spurgeon/sos/2459_better-than-wine.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Memory of Christ&rsquo;s Love</h3>
+      <p class="sermon-ref">Song of Songs 1:4 &middot; Sermon 2294</p>
+      <p class="sermon-desc">Preached when Spurgeon was worn down and unwell, and he does not hide it &mdash; the sermon opens almost as a confession of weakness. What follows is the more moving for it: a man with little strength left choosing to do the one thing still open to him, which is to remember a love he can no longer match in vigour. For anyone reading in a season of diminishment &mdash; illness, age, tiredness of soul &mdash; this one knows the territory from the inside.</p>
+      <a href="/resources/spurgeon/sos/2294_the-memory-of-christs-love.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">A Refreshing Canticle</h3>
+      <p class="sermon-ref">Song of Songs 1:4 &middot; Sermon 2794</p>
+      <p class="sermon-desc"><em>Draw me, we will run after thee.</em> Spurgeon notices how one soul&rsquo;s longing for Christ becomes contagious &mdash; the bride is drawn, and others find themselves running too. It is a sermon about the social pull of grace: that desire for Christ, when it is real, rarely stays private but kindles the same desire in those nearby. Refreshing is the right word for it; the whole thing moves at the pace of glad pursuit.</p>
+      <a href="/resources/spurgeon/sos/2794_a-refreshing-canticle.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Rejoicing and Remembering</h3>
+      <p class="sermon-ref">Song of Songs 1:4 &middot; Sermon 2461</p>
+      <p class="sermon-desc">On the same verse, Spurgeon holds two things together that easily come apart &mdash; present joy and the memory that feeds it. The gladness he commends is not a mood that floats free but one rooted in what Christ has already done, recalled and savoured until it warms the heart again. A steadying sermon on the discipline of remembering well.</p>
+      <a href="/resources/spurgeon/sos/2461_rejoicing-and-remembering.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Self-Humbling and Self-Searching</h3>
+      <p class="sermon-ref">Song of Songs 1:6 &middot; Sermon 990</p>
+      <p class="sermon-desc"><em>Look not upon me, because I am black.</em> The bride&rsquo;s frank confession of her own unworthiness becomes, in Spurgeon&rsquo;s hands, an invitation to honest self-examination that does not tip into despair. He holds the two together with great care: a clear sight of one&rsquo;s own failure, and an equally clear sight of the love that does not depend on one&rsquo;s worthiness. Searching, but never crushing.</p>
+      <a href="/resources/spurgeon/sos/0990_self-humbling-and-self-searching.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Unkept Vineyard; or, Personal Work Neglected</h3>
+      <p class="sermon-ref">Song of Songs 1:6 &middot; Sermon 1936</p>
+      <p class="sermon-desc">A practitioner&rsquo;s sermon, and an uncomfortable one. <em>They made me keeper of the vineyards; but mine own vineyard have I not kept.</em> Spurgeon turns the verse on those who tend everyone&rsquo;s ground but their own &mdash; the minister, the carer, the worker so spent on others that the inner life goes to seed. He is not gentle about it, but he is not crushing either; the aim is recall, not reproach. Read it if the work has been eating the soul that does it.</p>
+      <a href="/resources/spurgeon/sos/1936_the-unkept-vineyard.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Church&rsquo;s Love to Her Loving Lord</h3>
+      <p class="sermon-ref">Song of Songs 1:7 &middot; Sermon 636</p>
+      <p class="sermon-desc"><em>Tell me, O thou whom my soul loveth, where thou feedest.</em> One of the better-known of these &mdash; the soul, restless without Christ, asking plainly where he may be found. Spurgeon makes the question itself a mark of love: the heart that cannot be content with anything less than his actual presence. A clear, ardent treatment of seeking.</p>
+      <a href="/resources/spurgeon/sos/0636_the-churchs-love-to-her-loving-lord.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Love to Jesus</h3>
+      <p class="sermon-ref">Song of Songs 1:7 &middot; Sermon 338</p>
+      <p class="sermon-desc">An early sermon, plain and direct, on the same longing to find the One the soul loves. There is little ornament here &mdash; the young Spurgeon simply pressing the question of whether we love Christ, and what it looks like when we do. Its plainness is part of its strength.</p>
+      <a href="/resources/spurgeon/sos/0338_love-to-jesus.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Good Shepherdess</h3>
+      <p class="sermon-ref">Song of Songs 1:7&ndash;8 &middot; Sermon 1115</p>
+      <p class="sermon-desc"><em>Go thy way forth by the footsteps of the flock.</em> For the soul that has lost sight of Christ, Spurgeon offers a homely instruction: follow the tracks the faithful have already worn &mdash; the means of grace, the company of God&rsquo;s people, the paths others have walked to find him. Guidance for the disoriented, gently given.</p>
+      <a href="/resources/spurgeon/sos/1115_the-good-shepherdess.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Fragrant Graces</h3>
+      <p class="sermon-ref">Song of Songs 1:12 &middot; Sermon 3480</p>
+      <p class="sermon-desc"><em>While the king sitteth at his table, my spikenard sendeth forth the smell thereof.</em> Spurgeon reflects on the graces that rise like perfume in Christ&rsquo;s presence &mdash; how nearness to the King draws out of his people a sweetness they did not know they had. A short, fragrant meditation on what communion produces in us almost without our noticing.</p>
+      <a href="/resources/spurgeon/sos/3480_fragrant-graces.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">A Bundle of Myrrh</h3>
+      <p class="sermon-ref">Song of Songs 1:13 &middot; Sermon 558</p>
+      <p class="sermon-desc">One of the most loved of all these sermons, and a good place to begin. Spurgeon takes the bride&rsquo;s image &mdash; a sachet of myrrh worn against the heart through the night &mdash; and makes it the whole posture of faith: Christ kept close, carried in the most private place, his bitterness turning sweet by sheer nearness. There is nothing abstract here. It is a sermon about where you keep Christ when no-one is watching, and what happens to grief when he is kept there.</p>
+      <a href="/resources/spurgeon/sos/0558_a-bundle-of-myrrh.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+  </section>
+
+  <!-- ── Chapter 2 ── -->
+  <section class="chapter-section">
+    <h2 class="chapter-heading">Song of Songs &mdash; Chapter 2</h2>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Best of the Best</h3>
+      <p class="sermon-ref">Song of Songs 2:1 &middot; Sermon 2472</p>
+      <p class="sermon-desc"><em>I am the rose of Sharon.</em> Christ names himself by the loveliest things the land could offer, and Spurgeon will not let the superlative pass quietly &mdash; he piles excellence on excellence, delighting that there is no comparison Christ does not exceed. An exuberant sermon, almost extravagant, on the sheer surpassing beauty of the One the Song is about.</p>
+      <a href="/resources/spurgeon/sos/2472_the-best-of-the-best.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Rose and the Lily</h3>
+      <p class="sermon-ref">Song of Songs 2:1 &middot; Sermon 784</p>
+      <p class="sermon-desc">Perhaps the most loved of all these, and rightly. Spurgeon holds the two emblems of Christ&rsquo;s beauty up to the light in turn &mdash; the rose for its glory, the lily for its purity &mdash; and finds in each a different facet of the same surpassing loveliness. Tender and unhurried, it is a sermon to read slowly, the way one would look long at something beautiful.</p>
+      <a href="/resources/spurgeon/sos/0784_the-rose-and-the-lily.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Lily Among Thorns</h3>
+      <p class="sermon-ref">Song of Songs 2:2 &middot; Sermon 1525</p>
+      <p class="sermon-desc"><em>As the lily among thorns, so is my love among the daughters.</em> Spurgeon draws out the church&rsquo;s distinctness &mdash; the lily known at once from what surrounds it, even when it grows among cruel and piercing thorns. A word of recognition for believers in hard or graceless settings: Christ knows his own wherever they are found, and is not deceived by the soil they grew in.</p>
+      <a href="/resources/spurgeon/sos/1525_the-lily-among-thorns.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Apple Tree in the Wood</h3>
+      <p class="sermon-ref">Song of Songs 2:3 &middot; Sermon 1120</p>
+      <p class="sermon-desc"><em>As the apple tree among the trees of the wood, so is my beloved among the sons.</em> Christ singled out from the common ranks of the forest &mdash; shade for the weary, fruit for the hungry. Spurgeon dwells on both the shelter and the sweetness, the rest and the nourishment, that the soul finds in sitting down beneath him. An earlier treatment of a verse he clearly loved.</p>
+      <a href="/resources/spurgeon/sos/1120_the-apple-tree-in-the-wood.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Under the Apple Tree</h3>
+      <p class="sermon-ref">Song of Songs 2:3 &middot; Sermon 3249</p>
+      <p class="sermon-desc">The same verse, returned to years later, and now the emphasis falls on the <em>sitting down</em> &mdash; the deliberate choosing of Christ&rsquo;s shade, the rest and delight of staying there. <em>I sat down under his shadow with great delight, and his fruit was sweet to my taste.</em> A sermon to be read slowly, in no hurry to get up.</p>
+      <a href="/resources/spurgeon/sos/3249_under-the-apple-tree.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Roes and the Hinds</h3>
+      <p class="sermon-ref">Song of Songs 2:7 &middot; Sermon 1463</p>
+      <p class="sermon-desc"><em>I charge you&hellip; that ye stir not up, nor awake my love, till he please.</em> Spurgeon takes the bride&rsquo;s strange oath as a lesson in the holy carefulness of love &mdash; the wisdom of not disturbing the soul&rsquo;s fellowship with Christ, of guarding the quiet hours of communion rather than crowding them out. A sermon about reverence, and about the things love refuses to rush.</p>
+      <a href="/resources/spurgeon/sos/1463_the-roes-and-the-hinds.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">A Sermon for Spring</h3>
+      <p class="sermon-ref">Song of Songs 2:10&ndash;13 &middot; Sermon 436</p>
+      <p class="sermon-desc"><em>Rise up, my love, my fair one, and come away&hellip; for, lo, the winter is past.</em> Spurgeon reads the Song&rsquo;s spring passage as the call of grace breaking over a soul &mdash; the cold gone, the flowers appearing, the season of life arriving. One of his more lyrical efforts, alert to the turn of the year and the turn it pictures in the heart.</p>
+      <a href="/resources/spurgeon/sos/0436_a-sermon-for-spring.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Tender Grapes</h3>
+      <p class="sermon-ref">Song of Songs 2:13 &middot; Sermon 2480</p>
+      <p class="sermon-desc"><em>The vines with the tender grape give a good smell.</em> On the small, early beginnings of grace &mdash; fragile, easily bruised, not yet fruit but full of promise &mdash; and the care with which Christ watches over them. A gentle sermon for those whose faith feels slight and unfinished; Spurgeon would have them know that the tender grape is precious to him precisely as it is.</p>
+      <a href="/resources/spurgeon/sos/2480_the-tender-grapes.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Interest of Christ and His People in Each Other</h3>
+      <p class="sermon-ref">Song of Songs 2:16 &middot; Sermon 374</p>
+      <p class="sermon-desc"><em>My beloved is mine, and I am his.</em> Spurgeon turns the verse over to show the mutual belonging at the heart of the whole Song &mdash; not only that we have Christ, but that Christ has us, each party glad in the other. An early, warm treatment of the exchange he will return to again and again.</p>
+      <a href="/resources/spurgeon/sos/0374_the-interest-of-christ-and-his-people.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Loved and Loving</h3>
+      <p class="sermon-ref">Song of Songs 2:16 &middot; Sermon 1634</p>
+      <p class="sermon-desc">Sent to his church from France while Spurgeon recovered from illness, to remind them of Christ&rsquo;s love during his absence &mdash; and the more poignant for the circumstance. On the same verse of mutual belonging, written by a man parted from the people he loved, pointing them past himself to the Love that never leaves. There is a tenderness here that the situation sharpens.</p>
+      <a href="/resources/spurgeon/sos/1634_loved-and-loving.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">My Beloved Is Mine</h3>
+      <p class="sermon-ref">Song of Songs 2:16 &middot; Sermon 2442</p>
+      <p class="sermon-desc">Spurgeon calls this versicle the very soul and heart of the Song, and preaches it as such &mdash; possession answered by possession, the believer&rsquo;s <em>mine</em> met by Christ&rsquo;s own. He handles it as the central jewel of the book, the plainest statement of a belonging that runs both ways. If one sermon distils the whole, he thought it was this verse.</p>
+      <a href="/resources/spurgeon/sos/2442_my-beloved-is-mine.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">A Song Among the Lilies</h3>
+      <p class="sermon-ref">Song of Songs 2:16 &middot; Sermon 1190</p>
+      <p class="sermon-desc"><em>He feedeth among the lilies.</em> On communion enjoyed in the place of beauty &mdash; the soul feeding where Christ feeds, finding him among the pure and lovely things rather than the coarse. A sermon about the company Christ keeps and the table he spreads, and about wanting to be found where he is.</p>
+      <a href="/resources/spurgeon/sos/1190_a-song-among-the-lilies.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Over the Mountains</h3>
+      <p class="sermon-ref">Song of Songs 2:16&ndash;17 &middot; Sermon 3307</p>
+      <p class="sermon-desc"><em>Behold, he cometh leaping upon the mountains.</em> Spurgeon delights that nothing is too high for Christ&rsquo;s love to cross &mdash; no barrier of sin, distance, or difficulty that he will not leap to reach his own. A buoyant sermon on the eagerness of Christ toward us, all the obstacles notwithstanding.</p>
+      <a href="/resources/spurgeon/sos/3307_over-the-mountains.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">A Song of My Beloved</h3>
+      <p class="sermon-ref">Song of Songs 2:16&ndash;17 &middot; Sermon 3185</p>
+      <p class="sermon-desc">The same mountains and barriers, set to a slightly different key &mdash; Christ&rsquo;s swift, barrier-crossing love toward his people, and the answering song it draws from them. A companion piece to <em>Over the Mountains</em>, worth having for the variation in emphasis.</p>
+      <a href="/resources/spurgeon/sos/3185_a-song-of-my-beloved.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Believer&rsquo;s Glad Prospects</h3>
+      <p class="sermon-ref">Song of Songs 2:17 &middot; Sermon 3323</p>
+      <p class="sermon-desc"><em>Until the day break, and the shadows flee away.</em> Spurgeon turns the verse toward hope &mdash; the certainty of the coming morning, and the prospects that steady a believer who must wait through the dark for it. A forward-looking sermon, set on the dawn.</p>
+      <a href="/resources/spurgeon/sos/3323_the-believers-glad-prospects.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Darkness Before the Dawn</h3>
+      <p class="sermon-ref">Song of Songs 2:17 &middot; Sermon 2477</p>
+      <p class="sermon-desc"><em>Until the day break, and the shadows flee away.</em> This is a sermon for the waiting stretch &mdash; the long night when Christ feels absent and the morning is only promised, not yet seen. Spurgeon refuses both easy comfort and despair: the shadows are real, but they are <em>fleeing</em>, and they flee precisely because the day is certain. A steadying word for anyone holding on in the dark on the strength of a dawn they cannot yet make out.</p>
+      <a href="/resources/spurgeon/sos/2477_darkness-before-the-dawn.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+  </section>
+
+  <!-- ── Chapter 3 ── -->
+  <section class="chapter-section">
+    <h2 class="chapter-heading">Song of Songs &mdash; Chapter 3</h2>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Disconsolate Lover</h3>
+      <p class="sermon-ref">Song of Songs 3:1&ndash;4 &middot; Sermon 3485</p>
+      <p class="sermon-desc"><em>By night on my bed I sought him whom my soul loveth: I sought him, but I found him not.</em> Spurgeon follows the bride through the dark streets, refusing rest until Christ is found again. A sermon about the restlessness of love in his absence, and the persistence that will not be put off &mdash; and about the joy of the holding fast when he is found at last.</p>
+      <a href="/resources/spurgeon/sos/3485_the-disconsolate-lover.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Love&rsquo;s Vigilance Rewarded</h3>
+      <p class="sermon-ref">Song of Songs 3:4 &middot; Sermon 2485</p>
+      <p class="sermon-desc"><em>I held him, and would not let him go.</em> On the seeking soul that finally lays hold of Christ and refuses to release him. Spurgeon honours the tenacity of love &mdash; the watchfulness that keeps looking through the night and is, in the end, answered. Persistence rewarded, and the reward held tightly.</p>
+      <a href="/resources/spurgeon/sos/2485_loves-vigilance-rewarded.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Real Presence, the Great Want of the Church</h3>
+      <p class="sermon-ref">Song of Songs 3:4&ndash;5 &middot; Sermon 1035</p>
+      <p class="sermon-desc">A sermon with an edge to it. Spurgeon argues that the church&rsquo;s deepest need is not better method, organisation, or eloquence, but the actual presence of Christ himself &mdash; and that everything else is hollow without it. Pointed and bracing, it reads as a corrective to any age, his or ours, tempted to substitute machinery for the living Lord.</p>
+      <a href="/resources/spurgeon/sos/1035_the-real-presence.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Royal Pair in Their Glorious Chariot</h3>
+      <p class="sermon-ref">Song of Songs 3:6&ndash;11 &middot; Sermon 482</p>
+      <p class="sermon-desc"><em>Who is this that cometh out of the wilderness&hellip;?</em> Spurgeon reads the bridal procession of the Song as the King and his people borne together in glory &mdash; and the cross-as-enthronement note, the suffering that becomes coronation, sounds clearly through it. A richer, more ceremonial sermon than most here, alive to the splendour of the picture.</p>
+      <a href="/resources/spurgeon/sos/0482_the-royal-pair-in-their-glorious-chariot.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Paved with Love</h3>
+      <p class="sermon-ref">Song of Songs 3:10 &middot; Sermon 1134</p>
+      <p class="sermon-desc"><em>The midst thereof being paved with love, for the daughters of Jerusalem.</em> Spurgeon fixes on a single phrase &mdash; the very interior of the King&rsquo;s chariot laid with love &mdash; and makes it an image of grace woven into the fabric of everything Christ does for his people. A small detail, opened into a large comfort.</p>
+      <a href="/resources/spurgeon/sos/1134_paved-with-love.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+  </section>
+
+  <!-- ── Chapter 4 ── -->
+  <section class="chapter-section">
+    <h2 class="chapter-heading">Song of Songs &mdash; Chapter 4</h2>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Christ&rsquo;s Estimate of His People</h3>
+      <p class="sermon-ref">Song of Songs 4:10&ndash;11 &middot; Sermon 282</p>
+      <p class="sermon-desc"><em>How fair is thy love, my sister, my spouse!</em> Spurgeon dwells on the astonishing value Christ places on his church &mdash; far above any estimate she would dare make of herself. An early sermon, and a heartening one: the gap between how we see ourselves and how Christ sees us, with all the weight thrown onto his side of the scale.</p>
+      <a href="/resources/spurgeon/sos/0282_christs-estimate-of-his-people.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Lord&rsquo;s Own View of His Church and People</h3>
+      <p class="sermon-ref">Song of Songs 4:12 &middot; Sermon 1957</p>
+      <p class="sermon-desc"><em>A garden inclosed is my sister, my spouse; a spring shut up, a fountain sealed.</em> On the church set apart for Christ alone &mdash; enclosed, reserved, kept for his pleasure and no other&rsquo;s. Spurgeon draws out both the privilege and the obligation of belonging wholly to him, the sweetness of being his exclusively.</p>
+      <a href="/resources/spurgeon/sos/1957_the-lords-own-view-of-his-church.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">A Secret and Yet No Secret</h3>
+      <p class="sermon-ref">Song of Songs 4:12, 15 &middot; Sermon 431</p>
+      <p class="sermon-desc">Spurgeon enjoys the paradox in these verses &mdash; the enclosed garden that is also a fountain whose streams flow out; the hidden life of grace that cannot, finally, stay hidden. The believer&rsquo;s inward communion with Christ is private, and yet it makes itself known in what flows from it. A sermon on the secret that keeps showing.</p>
+      <a href="/resources/spurgeon/sos/0431_a-secret-and-yet-no-secret.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Grace for Communion</h3>
+      <p class="sermon-ref">Song of Songs 4:16 &middot; Sermon 1941</p>
+      <p class="sermon-desc"><em>Awake, O north wind; and come, thou south; blow upon my garden, that the spices thereof may flow out.</em> The bride prays for whatever winds will draw out her fragrance for Christ &mdash; even the cold north wind of affliction. Spurgeon reads it as the soul inviting whatever God sends, pleasant or hard, if it will only make the heart fit for communion. A costly, mature prayer, carefully unfolded.</p>
+      <a href="/resources/spurgeon/sos/1941_grace-for-communion.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">&ldquo;My Garden&rdquo; &mdash; &ldquo;His Garden&rdquo;</h3>
+      <p class="sermon-ref">Song of Songs 4:16 &middot; Sermon 2475</p>
+      <p class="sermon-desc">Spurgeon traces a small, lovely shift across the verse &mdash; the garden the bride calls <em>my</em> becomes, in the next breath, <em>his</em>. On the glad exchange of belonging: what is ours given over to Christ, and in the giving made more truly a delight. A short sermon turning on a single change of pronoun.</p>
+      <a href="/resources/spurgeon/sos/2475_my-garden-his-garden.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+  </section>
+
+  <!-- ── Chapter 5 ── -->
+  <section class="chapter-section">
+    <h2 class="chapter-heading">Song of Songs &mdash; Chapter 5</h2>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The King Feasting in His Garden</h3>
+      <p class="sermon-ref">Song of Songs 5:1 &middot; Sermon 919</p>
+      <p class="sermon-desc"><em>I am come into my garden&hellip; I have eaten my honeycomb; I have drunk my wine.</em> Christ comes down to take pleasure in his own &mdash; and Spurgeon makes much of the mutuality of the feast, that our communion is his joy as well as ours. A warm sermon on the surprising thought that Christ delights to be with us as much as we long to be with him.</p>
+      <a href="/resources/spurgeon/sos/0919_the-king-feasting-in-his-garden.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Love Joying in Love</h3>
+      <p class="sermon-ref">Song of Songs 5:1 &middot; Sermon 1943</p>
+      <p class="sermon-desc">On the same verse, Spurgeon presses the circle closed &mdash; love delighting in being loved in return, Christ glad in his people&rsquo;s gladness. A sermon about reciprocity at its fullest, where the joy runs both directions and neither party is the mere recipient. Among the most purely happy in the collection.</p>
+      <a href="/resources/spurgeon/sos/1943_love-joying-in-love.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Asleep and Yet Awake &mdash; a Riddle</h3>
+      <p class="sermon-ref">Song of Songs 5:2 &middot; Sermon 1561</p>
+      <p class="sermon-desc"><em>I sleep, but my heart waketh.</em> Spurgeon takes the bride&rsquo;s riddle as a portrait of the half-hearted believer &mdash; drowsy, slow to rise, and yet not wholly dead to Christ, the heart still stirring at his voice. He handles the divided soul honestly, neither excusing the slumber nor despairing of the heart that still hears the knock. A searching sermon about lukewarm love and the patience that knocks anyway.</p>
+      <a href="/resources/spurgeon/sos/1561_asleep-and-yet-awake.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Warning and Encouragement</h3>
+      <p class="sermon-ref">Song of Songs 5:2 &middot; Sermon 3013</p>
+      <p class="sermon-desc">The same knocking at the door, now weighted toward warning &mdash; the cost of keeping Christ waiting, the loss that follows when we are too comfortable to rise and let him in. Spurgeon balances the caution with encouragement, but the caution is real: love left unanswered has consequences the heart later feels.</p>
+      <a href="/resources/spurgeon/sos/3013_warning-and-encouragement.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Nearer and Dearer</h3>
+      <p class="sermon-ref">Song of Songs 5:2&ndash;8 &middot; Sermon 793</p>
+      <p class="sermon-desc">Spurgeon follows the whole sorry sequence &mdash; the bride&rsquo;s delay, Christ&rsquo;s withdrawal, her frantic seeking through the streets &mdash; and finds in it a strange grace: that the loss drives her to seek him more earnestly, until she holds him nearer and dearer than before. A sermon on how even our failures of love can be turned toward a deeper communion.</p>
+      <a href="/resources/spurgeon/sos/0793_nearer-and-dearer.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Soul&rsquo;s Desertion</h3>
+      <p class="sermon-ref">Song of Songs 5:6 &middot; Sermon 3552</p>
+      <p class="sermon-desc"><em>I opened to my beloved; but my beloved had withdrawn himself&hellip; I sought him, but I could not find him.</em> On the felt absence of Christ &mdash; the dark stretch every serious believer knows, when he seems to have gone and the soul cannot reach him. Spurgeon treats the desertion with great pastoral care, neither minimising the pain nor leaving the soul without hope of return.</p>
+      <a href="/resources/spurgeon/sos/3552_the-souls-desertion.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Heavenly Love-Sickness!</h3>
+      <p class="sermon-ref">Song of Songs 5:8 &middot; Sermon 539</p>
+      <p class="sermon-desc"><em>I am sick of love.</em> Spurgeon takes the bride&rsquo;s words plainly &mdash; the soul made genuinely ill with longing for an absent Christ &mdash; and preaches a kind of holy ardour that may startle cooler temperaments. It is one of the most passionate sermons in the collection, unembarrassed by the intensity of desire it commends.</p>
+      <a href="/resources/spurgeon/sos/0539_heavenly-love-sickness.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Incomparable Bridegroom and His Bride</h3>
+      <p class="sermon-ref">Song of Songs 5:9 &middot; Sermon 2469</p>
+      <p class="sermon-desc"><em>What is thy beloved more than another beloved?</em> The daughters of Jerusalem put the question, and Spurgeon spends the sermon answering it &mdash; cataloguing, at length and with evident joy, what makes Christ surpass every rival for the heart&rsquo;s affection. An expansive sermon built around a single challenge, met in full.</p>
+      <a href="/resources/spurgeon/sos/2469_the-incomparable-bridegroom.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Christ&rsquo;s Perfection and Precedence</h3>
+      <p class="sermon-ref">Song of Songs 5:10 &middot; Sermon 2478</p>
+      <p class="sermon-desc"><em>My beloved is&hellip; the chiefest among ten thousand.</em> On Christ first and best in every comparison &mdash; Spurgeon ranges across his excellencies to show why he takes precedence over all, and why the soul that has seen him can be satisfied with no other. A sermon of comparison in which Christ always stands at the head.</p>
+      <a href="/resources/spurgeon/sos/2478_christs-perfection-and-precedence.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Spices, Flowers, Lilies and Myrrh</h3>
+      <p class="sermon-ref">Song of Songs 5:13 &middot; Sermon 2479</p>
+      <p class="sermon-desc">The bride describes her Beloved feature by feature, and Spurgeon follows her &mdash; the beauties of Christ catalogued like a garden in full bloom, each detail an occasion for praise. A sermon that simply lingers over loveliness, content to admire at length what it cannot exhaust.</p>
+      <a href="/resources/spurgeon/sos/2479_spices-flowers-lilies-and-myrrh.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Altogether Lovely</h3>
+      <p class="sermon-ref">Song of Songs 5:16 &middot; Sermon 1001</p>
+      <p class="sermon-desc"><em>Yea, he is altogether lovely.</em> One of the great sermons of the collection. Spurgeon takes the bride&rsquo;s summary verdict and makes it his theme &mdash; every excellence meeting in Christ, with nothing lacking and nothing out of proportion. He moves through facet after facet and arrives, each time, at the same conclusion: there is no part of him that is not lovely. A sermon to send the reader back to Christ himself.</p>
+      <a href="/resources/spurgeon/sos/1001_altogether-lovely.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Best Beloved</h3>
+      <p class="sermon-ref">Song of Songs 5:16 &middot; Sermon 1446</p>
+      <p class="sermon-desc">On the same verse, Spurgeon presses past admiration toward decision &mdash; Christ not merely lovely in the abstract but chosen, settled upon, the heart&rsquo;s deliberate best. A sermon about turning the verdict <em>altogether lovely</em> into the personal <em>and therefore mine</em>.</p>
+      <a href="/resources/spurgeon/sos/1446_the-best-beloved.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+  </section>
+
+  <!-- ── Chapter 6 ── -->
+  <section class="chapter-section">
+    <h2 class="chapter-heading">Song of Songs &mdash; Chapter 6</h2>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Church as She Should Be</h3>
+      <p class="sermon-ref">Song of Songs 6:4 &middot; Sermon 984</p>
+      <p class="sermon-desc"><em>Thou art beautiful, O my love, as Tirzah, comely as Jerusalem, terrible as an army with banners.</em> Spurgeon paints his vision of the church at her best &mdash; fair, ordered, and formidable, lovely to her Lord and a force her enemies must reckon with. A stirring sermon on what the people of God are meant to be, and what Christ already sees them as.</p>
+      <a href="/resources/spurgeon/sos/0984_the-church-as-she-should-be.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Overcoming Christ</h3>
+      <p class="sermon-ref">Song of Songs 6:5 &middot; Sermon 2486</p>
+      <p class="sermon-desc"><em>Turn away thine eyes from me, for they have overcome me.</em> Spurgeon marvels at the astonishing thought the verse contains &mdash; that the love of the church should move Christ himself, that the Almighty would speak as one overcome by his people&rsquo;s gaze. A sermon on the strange power love has over the One who first loved us.</p>
+      <a href="/resources/spurgeon/sos/2486_overcoming-christ.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Chariots of Amminadib</h3>
+      <p class="sermon-ref">Song of Songs 6:12 &middot; Sermon 1155</p>
+      <p class="sermon-desc"><em>Or ever I was aware, my soul made me like the chariots of Amminadib.</em> Spurgeon reads the obscure verse as the soul swept suddenly along &mdash; grace gathering an unexpected momentum, the heart carried faster toward Christ than it knew it could go. A sermon about being caught up, almost in spite of oneself, in a holy speed.</p>
+      <a href="/resources/spurgeon/sos/1155_the-chariots-of-amminadib.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Inward Conflicts</h3>
+      <p class="sermon-ref">Song of Songs 6:13 &middot; Sermon 593</p>
+      <p class="sermon-desc"><em>What will ye see in the Shulamite? As it were the company of two armies.</em> Spurgeon takes the image of two armies as the divided heart &mdash; the believer&rsquo;s inward warfare between flesh and spirit &mdash; and speaks to the peace Christ brings to that conflict. A sermon honest about the war within, and where its resolution is found.</p>
+      <a href="/resources/spurgeon/sos/0593_inward-conflicts.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">&ldquo;Return, Return, O Shulamite&rdquo;</h3>
+      <p class="sermon-ref">Song of Songs 6:13 &middot; Sermon 1794</p>
+      <p class="sermon-desc"><em>Return, return, O Shulamite; return, return.</em> The fourfold call gives Spurgeon his theme: Christ recalling the wanderer with patient, repeated insistence, unwilling to let the straying soul go. A sermon on the persistence of the One who keeps calling us back, however far we have drifted.</p>
+      <a href="/resources/spurgeon/sos/1794_return-return-o-shulamite.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+  </section>
+
+  <!-- ── Chapter 7 ── -->
+  <section class="chapter-section">
+    <h2 class="chapter-heading">Song of Songs &mdash; Chapter 7</h2>
+
+    <div class="sermon">
+      <h3 class="sermon-title">A Call for Revival</h3>
+      <p class="sermon-ref">Song of Songs 7:11&ndash;13 &middot; Sermon 1066</p>
+      <p class="sermon-desc"><em>Come, my beloved, let us go forth into the field.</em> Spurgeon reads the verse as love turning outward &mdash; the soul, content in Christ, now eager to go out with him into active service and fruit-bearing. A sermon for a church grown comfortable, summoning it back to the field. Bracing and energetic.</p>
+      <a href="/resources/spurgeon/sos/1066_a-call-for-revival.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Good Works in Good Company</h3>
+      <p class="sermon-ref">Song of Songs 7:11&ndash;13 &middot; Sermon 605</p>
+      <p class="sermon-desc">On the same going-forth, with the accent on company &mdash; fruit borne <em>with</em> Christ rather than alone, work done in his presence and for his pleasure. Spurgeon makes service itself a form of communion, the field another place to walk with the Beloved.</p>
+      <a href="/resources/spurgeon/sos/0605_good-works-in-good-company.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+  </section>
+
+  <!-- ── Chapter 8 ── -->
+  <section class="chapter-section">
+    <h2 class="chapter-heading">Song of Songs &mdash; Chapter 8</h2>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Leaning on Our Beloved</h3>
+      <p class="sermon-ref">Song of Songs 8:5 &middot; Sermon 877</p>
+      <p class="sermon-desc"><em>Who is this that cometh up from the wilderness, leaning upon her beloved?</em> Spurgeon makes the leaning the whole point &mdash; dependence as the proper posture of faith, the soul coming up out of the wilderness not on its own strength but resting wholly on Christ. A sermon that commends weakness rightly placed, and the safety of having something stronger than oneself to lean on.</p>
+      <a href="/resources/spurgeon/sos/0877_leaning-on-our-beloved.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Love and Jealousy</h3>
+      <p class="sermon-ref">Song of Songs 8:6 &middot; Sermon 3516</p>
+      <p class="sermon-desc"><em>Love is strong as death; jealousy is cruel as the grave.</em> Spurgeon takes the Song&rsquo;s most famous lines and preaches the seal upon the heart &mdash; a love fierce, exclusive, and unyielding, set against everything that would loosen it. A sermon equal to the intensity of its text.</p>
+      <a href="/resources/spurgeon/sos/3516_love-and-jealousy.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Shulamite&rsquo;s Choice Prayer</h3>
+      <p class="sermon-ref">Song of Songs 8:6&ndash;7 &middot; Sermon 364</p>
+      <p class="sermon-desc"><em>Set me as a seal upon thine heart, as a seal upon thine arm.</em> The bride&rsquo;s request to be bound inseparably to Christ &mdash; pressed upon his heart, fastened to his strength &mdash; becomes, for Spurgeon, the soul&rsquo;s choicest prayer. An early sermon on the longing to be made one with Christ past all possibility of parting.</p>
+      <a href="/resources/spurgeon/sos/0364_the-shulamites-choice-prayer.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Unpurchasable Love</h3>
+      <p class="sermon-ref">Song of Songs 8:7 &middot; Sermon 2466</p>
+      <p class="sermon-desc"><em>Many waters cannot quench love, neither can the floods drown it&hellip; it would utterly be contemned.</em> Spurgeon preaches a love that no wealth could buy and no flood could drown &mdash; freely given, impossible to earn, impossible to extinguish. A sermon on the sheer gratuity of Christ&rsquo;s love, beyond all bargaining.</p>
+      <a href="/resources/spurgeon/sos/2466_unpurchasable-love.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Christ&rsquo;s Love for His Vineyard</h3>
+      <p class="sermon-ref">Song of Songs 8:12 &middot; Sermon 2785</p>
+      <p class="sermon-desc"><em>My vineyard, which is mine, is before me.</em> On Christ&rsquo;s settled claim upon what is his &mdash; the vineyard let out, the fruit rendered, the owner&rsquo;s right honoured. Spurgeon dwells on the security of belonging to a Lord who knows his own and will have his portion. A later sermon, quietly assured.</p>
+      <a href="/resources/spurgeon/sos/2785_christs-love-for-his-vineyard.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">The Bridegroom&rsquo;s Parting Word</h3>
+      <p class="sermon-ref">Song of Songs 8:13 &middot; Sermon 1716</p>
+      <p class="sermon-desc"><em>Thou that dwellest in the gardens&hellip; cause me to hear thy voice.</em> Spurgeon takes Christ&rsquo;s request before parting and makes it a sermon on prayer &mdash; that the voice of his people is the thing the Bridegroom longs to hear, and that our asking is a delight to him, not a burden. A tender treatment of why Christ wants us to speak to him at all.</p>
+      <a href="/resources/spurgeon/sos/1716_the-bridegrooms-parting-word.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+    <div class="sermon">
+      <h3 class="sermon-title">Come, My Beloved!</h3>
+      <p class="sermon-ref">Song of Songs 8:14 &middot; Sermon 2360</p>
+      <p class="sermon-desc">The closing cry of the whole Song, and a fitting end to the collection. <em>Make haste, my beloved.</em> Spurgeon reads the Song&rsquo;s last verse as the church&rsquo;s longing for Christ&rsquo;s return &mdash; the bride, having known his love through every chapter, now asking only that he come quickly. After sixty-odd sermons on presence, nearness, and communion, the book ends not in possession but in yearning, and Spurgeon lets that yearning stand as the truest note of love.</p>
+      <a href="/resources/spurgeon/sos/2360_come-my-beloved.pdf" class="sermon-link" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>
