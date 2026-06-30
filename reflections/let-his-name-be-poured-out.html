@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>His Name Is Oil Poured Out — Hesedwords</title>
+  <meta name="description" content="A reflection on Song of Songs 1:3 — the name that reaches us as fragrance, and the longing to be drawn in.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --parchment:     #FAF5E8;
+      --parchment-mid: #F2EAD4;
+      --gold:          #A67C2E;
+      --gold-border:   #C8B58F;
+      --gold-rule:     #D9C49A;
+      --ink:           #2A2218;
+      --ink-mid:       #4A3E2C;
+      --ink-light:     #6B5C45;
+      --cinzel:        'Cinzel', 'Palatino Linotype', Georgia, serif;
+      --cormorant:     'Cormorant Garamond', 'Garamond', Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: var(--cormorant);
+      font-size: 20px;
+      line-height: 1.78;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Site nav ── */
+    nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+    nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+    nav.hw-nav a:hover{opacity:1;color:#fff;}
+    nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+
+    /* ── Reflection wrapper ── */
+    .reflection-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 64px 40px 90px;
+    }
+
+    /* ── Title block ── */
+    .reflection-eyebrow {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 22px;
+    }
+    .reflection-title {
+      font-family: var(--cinzel);
+      font-size: 36px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+    .reflection-subtitle {
+      font-family: var(--cormorant);
+      font-style: italic;
+      font-size: 19px;
+      color: var(--ink-mid);
+      text-align: center;
+      line-height: 1.45;
+      margin-bottom: 28px;
+    }
+    .reflection-ornament {
+      text-align: center;
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 0.7em;
+      margin: 0 0 20px;
+    }
+    .reflection-byline {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    /* ── Body ── */
+    .reflection-body p {
+      margin-bottom: 1.45em;
+      font-size: 20px;
+      line-height: 1.78;
+      color: var(--ink);
+    }
+
+    /* ── Drop cap ── */
+    .drop-cap::first-letter {
+      font-family: var(--cinzel);
+      font-size: 4.4em;
+      font-weight: 400;
+      float: left;
+      line-height: 0.76;
+      margin: 0.1em 0.12em 0 0;
+      color: var(--gold);
+    }
+
+    /* ── Scene break ── */
+    .scene-break {
+      text-align: center;
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: 0.7em;
+      margin: 34px 0 30px;
+    }
+
+    /* ── Section heading ── */
+    .section-head {
+      font-family: var(--cinzel);
+      font-size: 11px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin: 0 0 26px;
+    }
+
+    /* ── Scripture block ── */
+    .scripture-block {
+      border-left: 3px solid var(--gold);
+      padding: 14px 20px 14px 28px;
+      margin: 30px 0;
+      background: rgba(166, 124, 46, 0.04);
+      border-radius: 0 2px 2px 0;
+    }
+    .scripture-block p {
+      font-style: italic;
+      font-size: 19px !important;
+      color: var(--ink-mid) !important;
+      margin-bottom: 0 !important;
+      line-height: 1.65 !important;
+    }
+    .scripture-ref {
+      display: block;
+      font-family: var(--cinzel);
+      font-size: 9.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 12px;
+      text-align: right;
+    }
+
+    /* ── Article link ── */
+    .article-link {
+      border-top: 1px solid var(--gold-rule);
+      margin-top: 44px;
+      padding-top: 36px;
+      text-align: center;
+    }
+    .article-link p {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 12px !important;
+    }
+    .article-link a {
+      font-family: var(--cormorant);
+      font-style: italic;
+      font-size: 19px;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-rule);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .article-link a:hover {
+      color: var(--ink-mid);
+      border-bottom-color: var(--ink-mid);
+    }
+
+    /* ── Closing prayer ── */
+    .closing-prayer {
+      border-top: 1px solid var(--gold-rule);
+      margin-top: 44px;
+      padding-top: 38px;
+    }
+    .closing-prayer .section-head {
+      margin-bottom: 22px;
+    }
+    .closing-prayer p {
+      font-style: italic;
+      font-size: 20px;
+      color: var(--ink-mid);
+      text-align: center;
+      line-height: 1.7;
+      margin-bottom: 0.5em;
+    }
+
+    /* ── Footer ── */
+    footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+    /* ── Mobile ── */
+    @media (max-width: 640px) {
+      .reflection-wrap { padding: 44px 24px 64px; }
+      .reflection-title { font-size: 26px; }
+      .reflection-subtitle { font-size: 17px; }
+      .reflection-body p { font-size: 18px; }
+      .scripture-block p { font-size: 17px !important; }
+      .drop-cap::first-letter { font-size: 3.8em; }
+    }
+
+    /* ── Print ── */
+    @media print {
+      .hw-nav, .hw-foot { display: none; }
+      body { background: white; }
+      .reflection-wrap { padding: 0; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/index.html">Home</a>
+  <a href="/reflections.html" class="current">Reflections</a>
+  <a href="/articles.html">Articles</a>
+  <a href="/books.html">Books</a>
+  <a href="/glossary.html">Glossary</a>
+  <a href="/resources.html">Resources</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+
+  <main class="reflection-wrap">
+
+    <header>
+      <p class="reflection-eyebrow">A Hesedwords Reflection</p>
+      <h1 class="reflection-title">His Name Is Oil Poured Out</h1>
+      <p class="reflection-subtitle">A reflection on Song of Songs 1:3</p>
+      <p class="reflection-ornament">✦ &nbsp; ✦ &nbsp; ✦</p>
+      <p class="reflection-byline">Norman Reed &middot; June 2026</p>
+    </header>
+
+    <article class="reflection-body">
+
+      <p class="section-head">A Scent Goes Before Him</p>
+
+      <div class="scripture-block">
+        <p>Your anointing oils are fragrant; your name is oil poured out; therefore virgins love you.</p>
+        <span class="scripture-ref">Song of Songs 1:3 &middot; ESV</span>
+      </div>
+
+      <p class="drop-cap">There is a scent that goes with him. Before he is seen, he is smelled.</p>
+
+      <p>The verse does not begin with his face or his voice but with fragrance &mdash; the oils that go before a person and announce him, the way you know who has entered a room before you turn around. The Hebrew leans the two words against each other so they almost rhyme: <em>shem</em>, name, and <em>shemen</em>, oil. His name and his fragrance are nearly the same word. To say his name is already to release the scent.</p>
+
+      <p>And smell is the sense I cannot close. I can shut my eyes. I can stop my ears. I cannot decide not to smell what is in the air. It reaches me before I have agreed to anything. So when the verse says <em>therefore</em> the young women love him &mdash; <em>therefore</em>, because of the fragrance &mdash; it is describing a response that arrives ahead of the will. The name is poured out, and love comes back. Not chosen. Drawn.</p>
+
+      <p class="scene-break">✦ &nbsp; ✦ &nbsp; ✦</p>
+
+      <p class="section-head">The Jar</p>
+
+      <p>But oil does not pour itself.</p>
+
+      <p><em>Your name is oil poured out</em> &mdash; the word means decanted, emptied from the jar. An unopened flask holds its fragrance perfectly and gives nothing. The scent only fills the room once the vessel is broken open. When Mary broke the alabaster jar over Jesus, John says the house was filled with the fragrance of the perfume. The whole house. But the jar had to be shattered first. The keeping-whole would have been the withholding.</p>
+
+      <p>You cannot have the fragrance and keep the jar.</p>
+
+      <p class="scene-break">✦ &nbsp; ✦ &nbsp; ✦</p>
+
+      <p class="section-head">The Threshold and the Chamber</p>
+
+      <p>So the young women love him. The verse says so plainly, and it does not sneer at them &mdash; their love is real, and the fragrance really is lovely. They are drawn by what goes out from him into the air. They love the <em>name</em>, the reputation, the scent that reaches everyone.</p>
+
+      <p>But read on one line and the voices change. <em>Draw me after you; the king has brought me into his chambers.</em> The crowd is still there at the edges &mdash; but now there is a <em>me</em>, and there is an <em>inside</em>. The maidens love the fragrance. The Shulammite is brought into the room. They are at the threshold; she is within. Same oil, two distances from the jar. The scent gets you to the door. What is on the other side of it is not fragrance but belonging &mdash; <em>my beloved is mine, and I am his.</em></p>
+
+      <p class="scene-break">✦ &nbsp; ✦ &nbsp; ✦</p>
+
+      <p class="section-head">Selah</p>
+
+      <p>I know this book is deeper than I can presently see.</p>
+
+      <p>I know people for whom it is a lit room &mdash; who love it the way the Shulammite loves him, who ache where I only admire. I have stood at that door and seen the light under it and known I was outside.</p>
+
+      <p>I love him. But I think I love him the way the maidens do. I love the fragrance. I am drawn by what goes out from him into the air, and that drawing is real &mdash; but it is the love of the threshold, not the love of the chamber.</p>
+
+      <p>What I want is not more of the fragrance. It is <em>her</em> longing. I want to want him the way she does. I want the desire those others have.</p>
+
+      <p>I do not know how to manufacture it. I only know I am not content for things to remain as they are. I want to go deeper.</p>
+
+      <p class="scene-break">✦ &nbsp; ✦ &nbsp; ✦</p>
+
+      <p>And the verse that comes next is already the prayer for it.</p>
+
+      <p><em>Draw me after you.</em> She does not say <em>I have found you</em>, or <em>I run</em>. She says <em>draw me</em> &mdash; pull me; the longing begins as a request to be pulled. She brings no desire of her own to the door except the desire to be drawn through it. Which means I do not have to arrive at her longing before I am allowed to want it. <em>Draw me</em> is the whole of what she brings.</p>
+
+      <p>That is where I want to go next. Not to satisfy this &mdash; to follow it. To stand at <em>draw me</em> and find out what it is to be brought in.</p>
+
+      <div class="closing-prayer">
+        <p class="section-head">A Prayer</p>
+        <p>Lord, I have loved your fragrance from the threshold.</p>
+        <p>I have stood at the door and smelled the room and called it nearness.</p>
+        <p>But I do not want the scent only. I want you.</p>
+        <p>While I want the privilege of the one you brought inside,</p>
+        <p>here, now, what I ask for is the longing.</p>
+        <p>I want this book to change me.</p>
+        <p>So this is all I bring: draw me after you.</p>
+        <p>Pull me through the door I have only stood at.</p>
+        <p>Give me the desire I cannot make in myself,</p>
+        <p>and let it be the desire to know you.</p>
+        <p>Draw me, and I will run.</p>
+      </div>
+
+      <div class="article-link">
+        <p>For those who love this book &mdash; and could show me the room</p>
+        <a href="/resources.html">
+          Resources &nbsp;&rarr;
+        </a>
+      </div>
+
+    </article>
+
+  </main>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>
