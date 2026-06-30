@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bernard of Clairvaux on the Song of Songs — Hesed Words</title>
+<meta name="description" content="The complete collection of Bernard of Clairvaux's eighty-six sermons on the Song of Songs — read online by chapter, or download the complete PDF.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --parchment:#f4ecd8;
+    --parchment-deep:#ece1c7;
+    --parchment-mid:#f0e6ce;
+    --ink:#1f1b16;
+    --ink-soft:#3a332a;
+    --ink-light:#4a3218;
+    --gold:#b08d3f;
+    --gold-deep:#8a6d2b;
+    --border:#c8a96e;
+    --border-light:#ddc48a;
+    --rule:#d8c9a3;
+    --shadow:rgba(30,21,8,0.18);
+    --accent:#8b3a0f;
+    --accent-light:#b05230;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:radial-gradient(ellipse at top,#f7f0de 0%,var(--parchment) 55%,var(--parchment-deep) 100%) fixed;
+    color:var(--ink);
+    font-family:"Cormorant Garamond",Georgia,serif;
+    font-size:1.15rem;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  nav.hw-nav{background:var(--ink);font-family:"Cinzel",serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+  nav.hw-nav a{color:var(--parchment);text-decoration:none;opacity:.82;transition:opacity .2s;}
+  nav.hw-nav a:hover{opacity:1;color:#fff;}
+  nav.hw-nav a.current{opacity:1;border-bottom:1px solid var(--gold);padding-bottom:.15rem;}
+
+  /* ── Page header ── */
+  .page-header{
+    text-align:center;
+    padding:4rem 1.5rem 2.4rem;
+    max-width:52rem;
+    margin:0 auto;
+  }
+  .page-eyebrow{
+    font-family:"Cinzel",serif;
+    font-size:.72rem;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-bottom:1rem;
+  }
+  .page-title{
+    font-family:"Cinzel",serif;
+    font-weight:500;
+    font-size:clamp(1.6rem,3.5vw,2.4rem);
+    color:var(--ink);
+    margin-bottom:1.2rem;
+    letter-spacing:.04em;
+    line-height:1.2;
+  }
+  .page-rule{
+    width:3rem;
+    height:1px;
+    background:var(--gold);
+    margin:.8rem auto 1.6rem;
+  }
+  .page-intro{
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:1.1rem;
+    max-width:44rem;
+    margin:0 auto;
+    line-height:1.8;
+  }
+
+  .pdf-button{
+    display:inline-flex;
+    align-items:center;
+    gap:.6rem;
+    font-family:"Cinzel",serif;
+    font-size:.72rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--parchment);
+    background:var(--ink);
+    border:1px solid var(--ink);
+    padding:.85rem 1.6rem;
+    text-decoration:none;
+    transition:background .2s,color .2s;
+    margin-top:2rem;
+  }
+  .pdf-button:hover{background:var(--accent);border-color:var(--accent);}
+
+  /* ── Chapter filter ── */
+  .chapter-filter{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:1.4rem;
+    flex-wrap:wrap;
+    padding:2rem 0 0;
+  }
+  .filter-label{
+    font-family:"Cinzel",serif;
+    font-size:.7rem;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    white-space:nowrap;
+  }
+  .select-wrap{
+    position:relative;
+    display:inline-block;
+  }
+  .select-wrap select{
+    font-family:"Cinzel",serif;
+    font-size:.75rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink);
+    background:var(--parchment-mid);
+    border:1px solid var(--border-light);
+    padding:.55rem 2.8rem .55rem 1.1rem;
+    appearance:none;
+    -webkit-appearance:none;
+    cursor:pointer;
+    outline:none;
+    transition:border-color .2s;
+    min-width:18rem;
+  }
+  .select-wrap select:focus{border-color:var(--border);}
+  .select-wrap::after{
+    content:"▾";
+    position:absolute;
+    right:.9rem;
+    top:50%;
+    transform:translateY(-50%);
+    color:var(--gold);
+    pointer-events:none;
+    font-size:.9rem;
+  }
+  .filter-count{
+    font-family:"Cinzel",serif;
+    font-size:.65rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+
+  hr.rule-line{
+    border:0;
+    border-top:1px solid var(--rule);
+    max-width:52rem;
+    margin:0 auto 2.4rem;
+  }
+
+  /* ── Collection ── */
+  .collection{
+    max-width:52rem;
+    margin:0 auto;
+    padding:0 5vw 3rem;
+  }
+
+  .chapter-section{
+    margin-bottom:2.8rem;
+  }
+
+  .chapter-heading{
+    font-family:"Cinzel",serif;
+    font-size:.78rem;
+    font-weight:500;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--gold);
+    border-bottom:1px solid var(--rule);
+    padding-bottom:.7rem;
+    margin-bottom:2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+  }
+  .chapter-count{
+    font-size:.62rem;
+    letter-spacing:.16em;
+    color:var(--gold-deep);
+    opacity:.8;
+  }
+
+  /* ── Sermon entry ── */
+  .sermon{
+    display:grid;
+    grid-template-columns:3.2rem 1fr;
+    gap:0 1.2rem;
+    padding-bottom:1.8rem;
+    margin-bottom:1.8rem;
+    border-bottom:1px solid var(--rule);
+    align-items:start;
+  }
+  .sermon:last-child{
+    border-bottom:none;
+    padding-bottom:0;
+    margin-bottom:0;
+  }
+
+  .sermon-verse{
+    font-family:"Cinzel",serif;
+    font-size:.9rem;
+    font-weight:500;
+    color:var(--gold);
+    letter-spacing:.04em;
+    padding-top:.18rem;
+    line-height:1.3;
+    text-align:right;
+  }
+
+  .sermon-body{}
+
+  .sermon-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:1rem;
+    flex-wrap:wrap;
+    margin-bottom:.2rem;
+  }
+
+  .sermon-title{
+    font-family:"Cinzel",serif;
+    font-weight:500;
+    font-size:1.05rem;
+    letter-spacing:.03em;
+    color:var(--ink);
+    line-height:1.3;
+  }
+
+  .sermon-link{
+    font-family:"Cinzel",serif;
+    font-size:.65rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--accent);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    padding-bottom:1px;
+    white-space:nowrap;
+    transition:color .2s,border-color .2s;
+    flex-shrink:0;
+  }
+  .sermon-link:hover{color:var(--accent-light);border-bottom-color:var(--accent-light);}
+
+  .sermon-num{
+    font-family:"Cinzel",serif;
+    font-size:.62rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    opacity:.75;
+    margin-bottom:.5rem;
+  }
+  .sermon-pdf-link{
+    color:var(--gold-deep);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    transition:color .2s,border-color .2s;
+  }
+  .sermon-pdf-link:hover{color:var(--accent);border-bottom-color:var(--accent);}
+
+  .sermon-desc{
+    font-size:.98rem;
+    line-height:1.75;
+    color:var(--ink-soft);
+  }
+  .sermon-desc em{color:var(--ink);}
+
+  /* ── "More chapters" stub cards for chapters not yet fully listed ── */
+  .stub-section{
+    max-width:52rem;
+    margin:0 auto;
+    padding:0 5vw 5rem;
+  }
+  .stub-heading{
+    font-family:"Cinzel",serif;
+    font-size:.78rem;
+    font-weight:500;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--gold);
+    border-bottom:1px solid var(--rule);
+    padding-bottom:.7rem;
+    margin-bottom:1.6rem;
+  }
+  .stub-note{
+    font-size:.92rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin-bottom:1.6rem;
+  }
+  .stub-card{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:.6rem 1.4rem;
+    align-items:center;
+    padding:1.4rem 1.6rem;
+    border:1px solid var(--rule);
+    margin-bottom:1rem;
+    background:rgba(255,252,242,0.4);
+  }
+  .stub-card-title{
+    font-family:"Cinzel",serif;
+    font-weight:500;
+    font-size:1rem;
+    color:var(--ink);
+  }
+  .stub-card-meta{
+    font-size:.85rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    grid-column:1;
+  }
+  .stub-card-link{
+    font-family:"Cinzel",serif;
+    font-size:.68rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--parchment);
+    background:var(--ink);
+    border:1px solid var(--ink);
+    padding:.6rem 1.2rem;
+    text-decoration:none;
+    white-space:nowrap;
+    transition:background .2s;
+  }
+  .stub-card-link:hover{background:var(--accent);border-color:var(--accent);}
+
+  footer.hw-foot{
+    text-align:center;
+    font-family:"Cinzel",serif;
+    font-size:.7rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    padding:2.5rem 1rem 3.5rem;
+    opacity:.8;
+  }
+
+  @media(max-width:640px){
+    .sermon{grid-template-columns:2.6rem 1fr;gap:0 .8rem;}
+    .sermon-verse{font-size:.78rem;}
+    .chapter-filter{flex-direction:column;align-items:flex-start;gap:.8rem;padding-left:1.2rem;}
+    .stub-card{grid-template-columns:1fr;text-align:left;}
+    .stub-card-link{justify-self:start;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/index.html">Home</a>
+  <a href="/reflections.html">Reflections</a>
+  <a href="/articles.html">Articles</a>
+  <a href="/books.html">Books</a>
+  <a href="/glossary.html">Glossary</a>
+  <a href="/resources.html" class="current">Resources</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+
+<header class="page-header">
+  <p class="page-eyebrow">Hesed Words &middot; Resources</p>
+  <h1 class="page-title">Bernard of Clairvaux on the Song of Songs</h1>
+  <div class="page-rule"></div>
+  <p class="page-intro">Bernard preached these eighty-six sermons to the monks of Clairvaux across more than two decades, returning again and again to a single book as though it could never be exhausted. He read the Song neither as history nor as allegory in the loose sense, but as the record of an experience available, in some measure, to anyone who has tasted what he calls the kiss of Christ. He never reached beyond the third chapter; he died before he could finish. What survives is the longest sustained meditation on divine intimacy in Western monastic literature.</p>
+
+  <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="pdf-button" target="_blank" rel="noopener">&#10515; Download Complete PDF</a>
+
+  <div class="chapter-filter">
+    <span class="filter-label">Select chapter</span>
+    <div class="select-wrap">
+      <select id="chapter-select" onchange="filterChapter(this.value)" aria-label="Select a chapter">
+        <option value="all">All chapters (46 sermons listed)</option>
+        <option value="1">Chapter 1 &mdash; Canticles 1:1&ndash;1:16 &middot; 46 sermons</option>
+      </select>
+    </div>
+    <span class="filter-count" id="filter-count">46 sermons</span>
+  </div>
+</header>
+
+<hr class="rule-line">
+
+<main class="collection">
+
+  <!-- ── Chapter 1 ── -->
+  <section class="chapter-section" data-chapter="1">
+    <h2 class="chapter-heading">
+      <span>Song of Songs &mdash; Chapter 1</span>
+      <span class="chapter-count">46 sermons</span>
+    </h2>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:1</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">The Title of the Book</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-1" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon I &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Before he opens the text at all, Bernard opens the question of who is ready to read it. This book is bread, he says, not milk &mdash; meant for those already trained by long meditation on the things of heaven. A short sermon, almost entirely about the kind of reader the Song demands, before a single verse has been touched.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:1</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">The Incarnation of Christ, Expected</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-2" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon II &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc"><em>Let Him kiss me with the kisses of His mouth.</em> Bernard hears this as the patriarchs&rsquo; own impatience &mdash; weary of a God who comes only through stammering prophets, and asking instead for the thing itself, unmediated. He admits the sermon costs him some shame: he doubts his own age feels that longing half as keenly.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:1</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">What It Is to Kiss the Feet, the Hand, and the Lips of the Lord</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-3" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon III &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">The sermon that gives Bernard&rsquo;s whole commentary its shape: a threefold kiss &mdash; the feet, marking conversion; the hand, the grace that follows; the mouth, a rare encounter almost no one reaches. He calls it hidden manna: whoever tastes it still hungers for more.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:1</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">The Threefold Progress of the Soul</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-4" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon IV &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Bernard returns to yesterday&rsquo;s threefold kiss and presses on one detail: why the Bride asked, precisely, for the kiss of the <em>mouth</em> &mdash; not the more modest requests of foot or hand. The whole sermon turns on that single word.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:1</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Four Orders of Spirits</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-5" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon V &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">A pause for taxonomy before the kiss is taken up again: animal, human, angelic, and the one Spirit who needs no body at all. Methodical and almost scholastic in tone, it lays groundwork Bernard will lean on for several sermons to come.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:1</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Supreme and Infinite Spirit, Who Is God</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-6" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon VI &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Continuing directly from the previous day, Bernard asks why God alone is truly incorporeal &mdash; needing no body, no organ, no instrument to act. A close, careful argument, more philosophical than most of what surrounds it.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:1</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Ardent Love of the Soul for God</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-7" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon VII &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Bernard says he has invited his own questions this time, moving from the kiss of the foot to the kiss of the hand &mdash; from penitence to the grace that meets it. The tone is warmer here, more clearly devotional than the two taxonomic sermons just before it.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:1</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">That the Kiss of God Is the Holy Spirit</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-8" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon VIII &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">The third and highest kiss, named directly: the kiss of the mouth is the Holy Spirit Himself. Bernard calls it a hallowed secret, of consummate sweetness, rarely experienced and understood only with difficulty &mdash; the climax of the whole three-sermon sequence on the kiss.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:2</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Breasts of the Bridegroom</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-9" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon IX &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Having spent eight sermons on a single opening image, Bernard finally turns to the verse itself and begins the commentary proper. A hinge sermon, marking the shift from prologue to exposition.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:2</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Three Spiritual Perfumes</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-10" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon X &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Penitence, devotion, and piety &mdash; three fragrances Bernard reads out of the Bride&rsquo;s perfumed name, structuring the soul&rsquo;s progress as a movement through scent rather than argument.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:2</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of Two Principal Facts in Human Redemption</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-11" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XI &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Continuing the perfume of devotion from the previous day, Bernard wants his hearers to share in a holy unction &mdash; a devotion that acknowledges what God has done with joy rather than mere duty.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:2</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Perfume of Piety</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-12" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XII &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Bernard distinguishes the sting of penitence from the comfort of piety: one wounds before it heals, the other simply heals. A short, gentle sermon, quieter than most of what surrounds it.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:2</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">That Praise and Glory Is Always to Be Rendered unto God</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-13" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XIII &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">The sea is the source of every river, Bernard says, and Christ is the source of every virtue. Whatever good is found in a soul, none of it originates there &mdash; it is owed back to the one true source.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:2</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Church of Faithful Christians, and of the Synagogue</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-14" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XIV &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Reading Judah and Israel as figures of Synagogue and Church, Bernard traces how those who once were not a people became one people, joined at a single cornerstone. A more theological, less personal register than the sermons around it.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:2</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">In What Manner the Name of Jesus Is a Salutary Medicine</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-15" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XV &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">One of Bernard&rsquo;s most quoted passages: the Name of Jesus as honey in the mouth, music in the ear, medicine for every wound of the soul. Sweetness, here, is not decoration but the actual mechanism of healing.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:2</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of Contrition of Heart, and of the Three Kinds of True Confession</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-16" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XVI &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Bernard reaches for an odd Old Testament image &mdash; Elisha stretching himself over a dead child, mouth to mouth, eyes to eyes &mdash; as a figure for the work contrition does in a soul that has gone cold.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:2</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">That It Is Needful to Observe the Approach and Departure of the Holy Spirit</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-17" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XVII &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Do we dare follow the Spirit into His deeper recesses, Bernard asks, or only watch from a distance? A sermon about spiritual attentiveness &mdash; learning to notice when grace arrives, and when it quietly withdraws.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:3</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Two Operations of the Holy Spirit: Effusion and Infusion</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-18" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XVIII &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">The Spirit works in two directions at once, Bernard argues: inwardly, strengthening the virtues that lead to salvation, and outwardly, equipping a person with gifts that serve others. <em>Editorial note: the opening sentences of this sermon were disrupted in the OCR source and have been reconstructed from context &mdash; worth checking against a print copy.</em></p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:3</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Nature, Manner, and Properties of the Angelical Love Towards God</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-19" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XIX &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">&ldquo;Therefore do the virgins love Thee&rdquo; &mdash; Bernard reads the fragrance poured out on the Bride as something that doesn&rsquo;t stop with her, drawing other souls, virgin and untested, into the same love by simple attraction.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:3</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Three Ways in Which We Love God</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-20" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XX &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Bernard opens with Paul&rsquo;s anathema against anyone who does not love Christ, then spends the rest of the sermon softening that severity into something closer to gratitude &mdash; structuring degrees of love rather than simply demanding it.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:3</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">In What Manner the Bride Asks to Be Drawn to Follow Her Spouse</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-21" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXI &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc"><em>Draw me after Thee.</em> Bernard lingers on the oddity of a willing soul asking to be pulled along &mdash; the difference, he argues, between being dragged and being carried by someone stronger than yourself toward something you already want.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:3</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Four Perfumes of the Bridegroom and the Four Cardinal Virtues</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-22" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXII &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Having spent several sermons on the Bride&rsquo;s perfumes, Bernard turns to the Bridegroom&rsquo;s own, mapping them onto justice, prudence, temperance, and fortitude &mdash; the classical virtues read as a fragrance Christ Himself wears.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:4</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of Three Ways of Contemplating God, under the Figure of Three Storerooms</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-23" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXIII &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc"><em>The King hath brought me into His storerooms.</em> Bernard structures contemplative life as a series of rooms entered in sequence, each deeper than the last &mdash; an architecture of access rather than a single threshold crossed once.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:4</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Principally Against the Detestable Vice of Detraction</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-24" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXIV &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">A rare moment where Bernard&rsquo;s own circumstances surface directly: he has just returned from Rome, a long schism finally over, peace restored to the Church. From that relief he pivots hard into a warning against the much smaller, much pettier sin of backbiting among his own monks.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:5</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">The Bride Is Black, Yet Comely</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-25" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXV &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Answering those who mock her as &ldquo;black,&rdquo; the Bride does not return scorn for scorn &mdash; she calls her critics daughters of Jerusalem rather than the harsher names they have earned. Bernard turns this into a model for anyone set over others: the good pastor meets resistance with healing rather than punishment.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:5</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">St. Bernard Laments the Death of His Brother Gerard</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-26" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXVI &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Bernard begins, as scheduled, continuing his exposition of &ldquo;the tents of Kedar&rdquo; &mdash; but partway through, the lecture breaks open. His brother Gerard has just died, and Bernard turns from the text altogether to speak his grief directly, in some of the most personal prose in the entire collection.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:5</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Adornment of the Bride, and in What Sense the Holy Soul Is Called Heaven</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-27" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXVII &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Bernard resumes teaching the day after Gerard&rsquo;s funeral, naming the difficulty plainly: it feels wrong to keep mourning someone who is now, by his own conviction, in joy. A quiet, deliberate return to ordinary exposition, written in the shadow of the sermon just before it.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:5</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Blackness, Yet Beauty, of the Bride</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-28" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXVIII &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Returning to the curtains of Solomon and the tents of Kedar, Bernard works through what it means for the same Bride to be called both black and beautiful &mdash; not a contradiction to resolve, but two things equally true of her at once.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:6</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Complaint of the Church Against Her Persecutors</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-29" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXIX &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc"><em>My mother&rsquo;s children were angry with me.</em> Bernard names Annas, Caiaphas, and Judas as the Synagogue&rsquo;s own sons turning against the Church &mdash; family violence, in effect, since the Church is herself a daughter of the same household.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:6</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">That the Faithful People Are Signified by the Vineyards</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-30" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXX &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc"><em>They made me the keeper of the vineyards.</em> Bernard notices the strange detail that the very people who attacked the Bride are also the ones who gave her this charge &mdash; correction and commission, he suggests, can come from the same hand.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:7</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">The Excellency of the Vision of God</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-31" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXXI &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc"><em>Tell me where Thou feedest, where Thou makest Thy flock to rest at noon.</em> Bernard surveys the different ways Christ makes Himself visible to seeking souls &mdash; never in exactly the same form twice, because no soul is yet able to see Him as He fully is.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:7</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Christ Communicates Himself to the Holy Soul as Bridegroom and as Physician</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-32" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXXII &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Picking up the same verse as the previous day, Bernard pauses to recap the modes of vision already covered before pressing further &mdash; framing Christ&rsquo;s two distinct roles toward the soul: the one who heals, and the one who is loved.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:7</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of Those Things Which a Devout Soul Ought to Seek Without Ceasing</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-33" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXXIII &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Bernard pairs the Bride&rsquo;s question with Job&rsquo;s &mdash; <em>tell me why Thou judgest me thus</em> &mdash; reading both not as accusations but as a soul asking to understand its own affliction rather than simply endure it blindly.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:8</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of Humility and of Patience</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-34" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXXIV &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc"><em>If thou know not&hellip; go thy way forth.</em> Bernard reaches back to Moses, who presumed to ask for a vision of God&rsquo;s glory, as a parallel to the Bride&rsquo;s own reproof &mdash; humility, here, as the precondition for any vision at all.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:8</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Sharp Reproof Which the Bridegroom Gives to the Bride</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-35" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXXV &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Bernard lingers on just how harsh this rebuke actually is &mdash; the language a master uses to dismiss a servant who has deeply offended. A sermon willing to sit in the discomfort of the text rather than soften it.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:8</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">That the Knowledge of Literature Is Good, but Self-Knowledge More Useful</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-36" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXXVI &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Bernard admits he is preaching today more from duty than desire &mdash; a promise made, a charity owed. What follows is one of his clearest statements that no learning matters if it isn&rsquo;t accompanied by honest self-knowledge.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:8</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Two Kinds of Knowledge and the Two Kinds of Ignorance</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-37" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXXVII &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Continuing yesterday&rsquo;s theme, Bernard structures two kinds of not-knowing &mdash; ignorance of oneself, and ignorance of others &mdash; as two distinct failures with two distinct remedies.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:8</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">How from Ignorance of God Comes Despair</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-38" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXXVIII &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">A soul can reform its conduct and still fall into despair, Bernard argues, if it doesn&rsquo;t also come to know God rightly. Conduct corrected without that knowledge leaves the deeper problem untouched.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:9</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Chariots of Pharaoh, That Is, the Devil</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-39" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XXXIX &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc"><em>I have compared thee to my company of horsemen among Pharaoh&rsquo;s chariots.</em> Bernard reads the Exodus &mdash; the Church prefigured fleeing Egypt through the Red Sea &mdash; as the deep background to this otherwise strange image of comparison.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:10</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">What Is Meant by the Face of the Soul</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-40" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XL &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc"><em>Thy cheeks are beautiful as the turtle-dove&rsquo;s.</em> Bernard reads this as the Bride&rsquo;s blush after correction &mdash; modesty, not vanity, as the beauty being praised, and a sign that the reproof of the previous sermons has actually landed.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:10</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Great Consolation Which the Bride Feels from Contemplation of the Divine Glory</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-41" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XLI &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc"><em>Thy neck is as chains of gold.</em> Necklaces are usually worn to supply a beauty someone lacks; Bernard notices that here the comparison runs the other way &mdash; the Bride&rsquo;s own beauty is what would give the gold its worth.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:12</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of Two Kinds of Humility: Born of Truth, and Warmed by Charity</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-42" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XLII &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc"><em>When the King sitteth at His table, my spikenard sendeth forth the smell thereof.</em> Bernard notices the Bride answers her reproof indirectly &mdash; not to the King Himself, but to His companions &mdash; and reads real humility into that very reluctance to address Him directly.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:13</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">How Meditation on the Passion of Jesus Christ Enables the Soul to Pass Through Adversity</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-43" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XLIII &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc"><em>A bundle of myrrh is my well-beloved unto me.</em> The title shifts from King to well-beloved, the setting from banquet-room to closeness &mdash; and Bernard reads the change as the whole point: majesty drawing nearer rather than staying at a distance.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:14</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">That Correction Ought to Be Adapted to the Character of Offenders</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-44" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XLIV &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc">Myrrh for the bitterness of Christ&rsquo;s death, the grape-cluster for the sweetness of His resurrection &mdash; from this pairing Bernard draws a pastoral principle: correction itself should carry both notes, suited to who is actually receiving it.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:15</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the Twofold Beauty of the Soul</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-45" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XLV &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc"><em>Behold, thou art fair&hellip; thou hast doves&rsquo; eyes.</em> Bernard traces a sequence &mdash; presumption, reproof, amendment, recompense &mdash; and reads the praise of her eyes as part of what&rsquo;s restored only after the relationship has been mended, not before.</p>
+      </div>
+    </div>
+
+    <div class="sermon">
+      <span class="sermon-verse">1:16</span>
+      <div class="sermon-body">
+        <div class="sermon-top">
+          <h3 class="sermon-title">Of the State and Composition of the Whole Church</h3>
+          <a href="/resources/bernard/chapter-1.html#sermon-46" class="sermon-link" target="_blank" rel="noopener">Read this sermon &rarr;</a>
+        </div>
+        <p class="sermon-num">Sermon XLVI &middot; <a href="/resources/Bernard_Sermons_on_the_Song_of_Songs.pdf" class="sermon-pdf-link" target="_blank" rel="noopener">Download all sermons as PDF &rarr;</a></p>
+        <p class="sermon-desc"><em>Our bed is flourishing; the beams of our houses are of cedar.</em> Bernard reads the whole verse as nuptial-chamber imagery &mdash; the furnishing of a shared dwelling &mdash; closing out the long traverse of Canticles 1 that began, forty-five sermons earlier, with a single kiss.</p>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<section class="stub-section">
+  <h2 class="stub-heading">Chapters 2 and 3</h2>
+  <p class="stub-note">Sermon-by-sermon descriptions for Chapters 2 and 3 are still being added. Both chapters are complete and readable now &mdash; the full collection sits in the PDF above, or read each chapter online below.</p>
+
+  <div class="stub-card">
+    <div>
+      <p class="stub-card-title">Chapter 2 &middot; Sermons XLVII&ndash;LXXIV</p>
+      <p class="stub-card-meta">Canticles 2:1&ndash;2:17 &middot; 28 sermons</p>
+    </div>
+    <a href="/resources/bernard/chapter-2.html" class="stub-card-link">Read online &rarr;</a>
+  </div>
+
+  <div class="stub-card">
+    <div>
+      <p class="stub-card-title">Chapter 3 &middot; Sermons LXXV&ndash;LXXXVI</p>
+      <p class="stub-card-meta">Canticles 3:1&ndash;3:3 &middot; 12 sermons</p>
+    </div>
+    <a href="/resources/bernard/chapter-3.html" class="stub-card-link">Read online &rarr;</a>
+  </div>
+</section>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+<script>
+  var counts = {all: 46, "1": 46};
+  function filterChapter(val) {
+    document.querySelectorAll('.chapter-section').forEach(function(s) {
+      s.style.display = (val === 'all' || s.dataset.chapter === val) ? '' : 'none';
+    });
+    var n = counts[val] || 46;
+    document.getElementById('filter-count').textContent = n + (n === 1 ? ' sermon' : ' sermons');
+  }
+</script>
+
+</body>
+</html>
