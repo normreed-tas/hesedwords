@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Stomach Churns — Hesed Words</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment: #e8dfc8;
+    --parchment-page: #f3ecda;
+    --gold: #c9a84c;
+    --gold-deep: #A67C2E;
+    --gold-soft: #D9C49A;
+    --muted: #6B5C45;
+    --rule: #C8B58F;
+    --ink: #2A2218;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--parchment);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: var(--ink);
+  }
+
+  /* ── Site nav ── */
+  nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+  nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+  nav.hw-nav a:hover{opacity:1;color:#fff;}
+  nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+
+  .page {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--parchment-page);
+    padding: 4rem 2.5rem 2rem;
+  }
+
+  /* ── Title block ── */
+  .eyebrow {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 1.4rem;
+  }
+
+  h1.title {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 2.4rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    margin: 0 0 0.6rem;
+    line-height: 1.25;
+  }
+
+  .ornament {
+    text-align: center;
+    color: var(--gold);
+    letter-spacing: 0.6em;
+    font-size: 0.9rem;
+    margin: 1.6rem 0;
+  }
+
+  .byline {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 3rem;
+  }
+
+  /* ── Body ── */
+  .body p {
+    font-size: 1.22rem;
+    line-height: 1.75;
+    margin: 0 0 1.4rem;
+  }
+
+  .body p::first-letter {
+    font-family: 'Cinzel', serif;
+    font-size: 3.4rem;
+    font-weight: 500;
+    color: var(--gold-deep);
+    float: left;
+    line-height: 0.78;
+    padding-right: 0.12em;
+    padding-top: 0.05em;
+  }
+
+  .body p.no-dropcap::first-letter {
+    all: unset;
+  }
+
+  em {
+    font-style: italic;
+    color: var(--ink);
+  }
+
+  /* ── Selah ── */
+  .selah-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    letter-spacing: 0.18em;
+    color: var(--gold-deep);
+    text-align: center;
+    margin: 3rem 0 1.6rem;
+  }
+
+  .selah {
+    border-left: 2px solid var(--gold);
+    padding-left: 1.6rem;
+    margin: 0 0 1.4rem;
+  }
+
+  .selah p {
+    font-size: 1.22rem;
+    line-height: 1.75;
+    margin: 0 0 1.4rem;
+  }
+
+  .selah p::first-letter {
+    all: unset;
+  }
+
+  /* ── Closing line ── */
+  .closing-line {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--ink);
+    margin: 2.6rem 0 1rem;
+    line-height: 1.6;
+  }
+
+  .grand-divider {
+    text-align: center;
+    color: var(--gold);
+    letter-spacing: 0.8em;
+    font-size: 0.8rem;
+    margin: 3rem 0 1rem;
+  }
+
+  /* ── Footer ── */
+  footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+  @media (max-width: 640px) {
+    .page { padding: 2.5rem 1.5rem 1.5rem; }
+    h1.title { font-size: 1.9rem; }
+    .body p, .selah p { font-size: 1.12rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/index.html">Home</a>
+  <a href="/reflections.html" class="current">Reflections</a>
+  <a href="/articles.html">Articles</a>
+  <a href="/books.html">Books</a>
+  <a href="/glossary.html">Glossary</a>
+  <a href="/resources.html">Resources</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+
+<div class="page">
+
+  <div class="eyebrow">A Reflection for Curious Minds</div>
+  <h1 class="title">My Stomach Churns</h1>
+  <div class="ornament">&bull; &bull; &bull;</div>
+  <div class="byline">Norm Reed</div>
+
+  <div class="body">
+
+    <p>I read Lamentations 1 and 2 this morning, the way the schedule asked &mdash; three or four chapters and a psalm, nothing more deliberate than that. But the book had its own plans for the morning.</p>
+
+    <p class="no-dropcap">It's an unusual book to sit inside. Acrostic, twenty-two verses per chapter, one for each letter of the Hebrew alphabet &mdash; a poet taking the worst thing that ever happened to his city and giving it a shape, A to Z, so the grief wouldn't simply spill everywhere and drown the page. Most of it reads like a report: the Lord has done this, the elders sit in silence, the gates are desolate. And then, without warning, the report breaks open and a body speaks. <em>My eyes are spent with weeping, my stomach churns, my bile is poured out on the ground.</em></p>
+
+    <p class="no-dropcap">That line caught me before I had decided anything about it. Not an argument. A gut.</p>
+
+    <p class="no-dropcap">I know why. I carry stories from men I've sat across from in visiting rooms, and one in particular came up under that verse this morning, the way these things do. A boy raised by two parents lost to addiction, left to look after his little sister because no one else was looking after either of them. Foster care after that &mdash; and not the kind that heals anything. Moved on. Moved on again. Harmed in some of the places that were supposed to be safe. By the time he was old enough to be called a man, prison was close to the only road left open to him.</p>
+
+    <p class="no-dropcap">The community wanted justice when he finally did the thing that put him there. It got it. A sentence, a number, a file. But where was the justice for the boy &mdash; for the years nobody intervened, nobody noticed, nobody stood between him and what was being done to him? Justice arrived exactly once, at the end, aimed at the one moment he became dangerous rather than at all the years he was endangered. That's not justice doing its job late. That's justice that never came at all, wearing the name.</p>
+
+    <p class="no-dropcap">Lamentations doesn't resolve this kind of thing &mdash; and that's exactly what I needed it to show me this morning, not solve. The book names Jerusalem's own guilt plainly. It also shows children fainting in the streets from hunger, paying for ruin they had no hand in causing. Both sit on the same page. Neither cancels the other. Guilty, and grievously wronged &mdash; true at once, with no formula that nets one against the other and calls it settled.</p>
+
+  </div>
+
+  <div class="selah-label">Selah</div>
+  <div class="selah">
+    <p>I think of the men I've known who carry both of those at the same time, the way the book does &mdash; what they did, and what was done to them long before they had the strength or the choice to stop it. I've heard their version of Lamentations 5:20 said and said: <em>why have you forgotten me, why have you forsaken me for so long.</em> It isn't answered in the cell any more than it's answered on the page. The cry just stands there, mid-sentence, and nothing replies.</p>
+
+    <p>But the book exists. Someone, under God's own hand, sat down and built a shape strong enough to hold a complaint that direct, that unresolved, and let it stand in Scripture for three thousand years without softening it into something tidier.</p>
+  </div>
+
+  <p class="closing-line">The cry was never the failure. The silence would have been.</p>
+
+  <div class="grand-divider">&bull;</div>
+
+</div>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>
