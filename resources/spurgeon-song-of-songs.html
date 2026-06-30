@@ -90,13 +90,12 @@
 
   /* ── Chapter filter ── */
   .chapter-filter{
-    max-width:52rem;
-    margin:0 auto;
-    padding:0 5vw 2.8rem;
     display:flex;
+    justify-content:center;
     align-items:center;
     gap:1.4rem;
     flex-wrap:wrap;
+    padding:2rem 0 0;
   }
   .filter-label{
     font-family:"Cinzel",serif;
@@ -292,27 +291,27 @@
   <h1 class="page-title">Spurgeon on the Song of Songs</h1>
   <div class="page-rule"></div>
   <p class="page-intro">Charles Spurgeon returned to the Song of Songs more often, and more tenderly, than to almost any other book. He read it as most of the Church once did &mdash; as a love-song between Christ and his people &mdash; and across some sixty sermons he traced that love through every season the soul knows: nearness and absence, longing and rest, the dark night and the breaking day. What follows is the complete collection, gathered by chapter. Each may be read on its own; together they form one of the most sustained meditations on the love of Christ in the English pulpit. All are freely available to download.</p>
+
+  <div class="chapter-filter">
+    <span class="filter-label">Select chapter</span>
+    <div class="select-wrap">
+      <select id="chapter-select" onchange="filterChapter(this.value)" aria-label="Select a chapter">
+        <option value="all">All chapters (63 sermons)</option>
+        <option value="1">Chapter 1 &mdash; 11 sermons</option>
+        <option value="2">Chapter 2 &mdash; 16 sermons</option>
+        <option value="3">Chapter 3 &mdash; 5 sermons</option>
+        <option value="4">Chapter 4 &mdash; 5 sermons</option>
+        <option value="5">Chapter 5 &mdash; 12 sermons</option>
+        <option value="6">Chapter 6 &mdash; 5 sermons</option>
+        <option value="7">Chapter 7 &mdash; 2 sermons</option>
+        <option value="8">Chapter 8 &mdash; 7 sermons</option>
+      </select>
+    </div>
+    <span class="filter-count" id="filter-count">63 sermons</span>
+  </div>
 </header>
 
 <hr class="rule-line">
-
-<div class="chapter-filter">
-  <span class="filter-label">Select chapter</span>
-  <div class="select-wrap">
-    <select id="chapter-select" onchange="filterChapter(this.value)" aria-label="Select a chapter">
-      <option value="all">All chapters (63 sermons)</option>
-      <option value="1">Chapter 1 &mdash; 11 sermons</option>
-      <option value="2">Chapter 2 &mdash; 16 sermons</option>
-      <option value="3">Chapter 3 &mdash; 5 sermons</option>
-      <option value="4">Chapter 4 &mdash; 5 sermons</option>
-      <option value="5">Chapter 5 &mdash; 12 sermons</option>
-      <option value="6">Chapter 6 &mdash; 5 sermons</option>
-      <option value="7">Chapter 7 &mdash; 2 sermons</option>
-      <option value="8">Chapter 8 &mdash; 7 sermons</option>
-    </select>
-  </div>
-  <span class="filter-count" id="filter-count">63 sermons</span>
-</div>
 
 <main class="collection">
 
