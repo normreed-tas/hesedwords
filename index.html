@@ -877,6 +877,67 @@
     border-top: 1px solid rgba(184,146,44,0.1);
   }
 
+  /* ─── Daily Reflection strip ────────────────────────────── */
+  .daily-reflection {
+    background: var(--parchment-mid);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+    padding: 52px 5vw;
+  }
+  .daily-reflection-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .dr-label {
+    font-family: 'Cinzel', serif;
+    font-size: 8.5px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .dr-ref {
+    font-family: 'Cormorant SC', serif;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .dr-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: clamp(18px, 2.5vw, 26px);
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    margin: 0 0 20px;
+    line-height: 1.2;
+  }
+  .dr-excerpt {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--ink-light);
+    margin: 0 0 28px;
+  }
+  .dr-link {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(139,58,15,0.3);
+    padding-bottom: 2px;
+    transition: all 0.2s;
+  }
+  .dr-link:hover {
+    color: var(--accent-light);
+    border-bottom-color: var(--accent-light);
+  }
+
   /* ─── Hub ────────────────────────────────────────────────── */
   .hub {
     max-width: 920px;
@@ -1024,6 +1085,17 @@
     <div class="hero-scroll-line"></div>
   </div>
 </section>
+
+<!-- Daily Reflection -->
+<div class="daily-reflection reveal">
+  <div class="daily-reflection-inner">
+    <div class="dr-label">Latest Reflection &nbsp;&middot;&nbsp; 1 July 2026</div>
+    <div class="dr-ref">Psalm 27 &middot; 13&ndash;14</div>
+    <h2 class="dr-title">Unless I Had Believed</h2>
+    <p class="dr-excerpt">At the hinge of Psalm 27 David reaches for a word he uses nowhere else &mdash; <em>he&rsquo;emanti</em>, the root behind <em>amen</em>. Not strategy. Not resolve. One word kept him from fainting: believed.</p>
+    <a href="/reflections/unless-i-had-believed.html" class="dr-link">Read this reflection &rarr;</a>
+  </div>
+</div>
 
 <!-- Hub -->
 <div class="hub">
