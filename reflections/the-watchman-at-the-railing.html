@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Watchman at the Railing — Hesed Words</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parchment:#e8dfc8;
+  --parchment-page:#f3ecda;
+  --gold:#c9a84c;
+  --gold-deep:#A67C2E;
+  --gold-soft:#D9C49A;
+  --muted:#6B5C45;
+  --rule:#C8B58F;
+  --ink:#2A2218;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--parchment);
+  color:var(--ink);
+  font-family:'Cormorant Garamond','Garamond',Georgia,serif;
+  font-size:1.25rem;
+  line-height:1.72;
+}
+
+/* ── Site nav ── */
+nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+nav.hw-nav a:hover{opacity:1;color:#fff;}
+nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+
+/* ── Page frame ── */
+.page{
+  max-width:720px;
+  margin:0 auto;
+  background:var(--parchment-page);
+  padding:4rem 3.4rem 3rem;
+  box-shadow:0 1px 40px rgba(60,45,20,.12);
+}
+
+/* ── Title block ── */
+.eyebrow{
+  font-family:'Cinzel',serif;
+  font-size:.72rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  text-align:center;
+  margin-bottom:2.2rem;
+}
+h1{
+  font-family:'Cinzel',serif;
+  font-weight:600;
+  font-size:2.5rem;
+  line-height:1.15;
+  letter-spacing:.02em;
+  text-align:center;
+  color:var(--ink);
+  margin:0 0 1.6rem;
+}
+.scripture-open{
+  text-align:center;
+  font-style:italic;
+  font-size:1.3rem;
+  color:var(--muted);
+  max-width:30rem;
+  margin:0 auto 1rem;
+  line-height:1.5;
+}
+.scripture-ref{
+  font-family:'Cinzel',serif;
+  font-size:.72rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  text-align:center;
+  margin-bottom:2.6rem;
+}
+.byline{
+  font-family:'Cinzel',serif;
+  font-size:.74rem;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--muted);
+  text-align:center;
+}
+.byline .org{
+  display:block;
+  font-size:.66rem;
+  color:var(--gold-deep);
+  margin-top:.5rem;
+  letter-spacing:.2em;
+}
+
+/* ── Opening ornament ── */
+.rule-orn{
+  text-align:center;
+  color:var(--gold);
+  font-size:1rem;
+  letter-spacing:.6em;
+  margin:2.8rem 0;
+}
+
+/* ── Body ── */
+.body p{margin:0 0 1.3rem;}
+.body p.first::first-letter{
+  font-family:'Cinzel',serif;
+  font-weight:600;
+  font-size:3.4rem;
+  line-height:.8;
+  float:left;
+  margin:.35rem .5rem 0 0;
+  color:var(--gold-deep);
+}
+.divider{
+  text-align:center;
+  color:var(--gold);
+  letter-spacing:.9em;
+  font-size:.9rem;
+  margin:2.1rem 0;
+}
+
+/* ── Scripture block inside body ── */
+.scripture{
+  border-left:2px solid var(--gold);
+  padding:.2rem 0 .2rem 1.4rem;
+  margin:1.8rem 0;
+  font-style:italic;
+  color:var(--muted);
+}
+.scripture .ref{
+  display:block;
+  font-style:normal;
+  font-family:'Cinzel',serif;
+  font-size:.68rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  margin-top:.5rem;
+}
+
+/* ── Selah ── */
+.selah{
+  border-left:3px solid var(--gold);
+  background:rgba(201,168,76,.06);
+  padding:1.6rem 1.8rem 1.2rem;
+  margin:2.8rem 0 1.5rem;
+}
+.selah .selah-mark{
+  font-family:'Cinzel',serif;
+  font-size:.74rem;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  margin-bottom:1rem;
+}
+.selah p{margin:0 0 1.1rem;}
+.selah p:last-child{margin-bottom:0;}
+
+/* ── Colophon ── */
+.colophon{
+  text-align:center;
+  font-family:'Cinzel',serif;
+  font-size:.7rem;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-top:3rem;
+  padding-top:2rem;
+  border-top:1px solid var(--rule);
+  line-height:2;
+}
+.colophon .gold{color:var(--gold-deep);}
+
+/* ── Footer ── */
+footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+@media (max-width:640px){
+  body{font-size:1.15rem;}
+  .page{padding:2.6rem 1.5rem 2rem;}
+  h1{font-size:1.9rem;}
+  nav.hw-nav{gap:1.1rem;font-size:.68rem;}
+}
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/index.html">Home</a>
+  <a href="/reflections.html" class="current">Reflections</a>
+  <a href="/articles.html">Articles</a>
+  <a href="/books.html">Books</a>
+  <a href="/glossary.html">Glossary</a>
+  <a href="/resources.html">Resources</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+
+<div class="page">
+
+  <div class="eyebrow">Hesed Words · A Reflection for Curious Minds</div>
+  <h1>The Watchman<br>at the Railing</h1>
+
+  <p class="scripture-open">"Whether they hear or refuse to hear&hellip; they will know that a prophet has been among them."</p>
+  <div class="scripture-ref">Ezekiel 2 · 5</div>
+
+  <div class="byline">Norm Reed<span class="org">Onesimus Foundation — Theological Reflections</span></div>
+
+  <div class="rule-orn">✦ ✦ ✦</div>
+
+  <div class="body">
+
+    <p class="first">Years ago I stood at Niagara Falls. It is one of those places that empties your head of words. But standing at one of the lookouts, watching the water fall away into all that noise, I noticed something I have never quite forgotten. The fence was waist high. It would have held back a child, or a person who leaned too far for a photograph. It would not have held back anyone who had come there meaning to go over. Between a person and the edge there was almost nothing at all.</p>
+
+    <p>I have thought since that some of those lookouts could do with a watchman. Not a guard exactly. Someone who simply stays there, at the railing, day and night, because he cannot bear the thought of a person going over in silence. Someone whose whole job is to be present at the place of danger and to say, to anyone near the edge, <em>wait — your life is worth more than this.</em></p>
+
+    <p>I did not know it at the time, but I was looking at the book of Ezekiel.</p>
+
+    <div class="divider">· · ·</div>
+
+    <p>Ezekiel is sent to a people who will not listen. God tells him so plainly, and more than once. Speak to them, he says, and <em>whether they hear or refuse to hear</em> — say it anyway. Three times that phrase comes. It is not a warning that Ezekiel might fail. It is a description of the assignment. He is not being sent to succeed. He is being sent to be there.</p>
+
+    <p>And notice what God actually secures by it. Not their repentance. Not even their attention. Something stranger and smaller and, when you sit with it, far larger:</p>
+
+    <div class="scripture">
+      &hellip;they will know that a prophet has been among them.
+      <span class="ref">Ezekiel 2 · 5</span>
+    </div>
+
+    <p>That is the thing God will not do without. He will not let this rebellious people arrive at their ruin able to say that no one came, that no one spoke, that heaven had gone quiet and left them to it. He refuses to be an absent God. He would rather be a rejected presence than no presence at all.</p>
+
+    <p>It is easy to read the prophets as men of doom and gloom, standing at a safe distance shouting about judgement. But that misses it entirely. The warning is not the opposite of the care. The warning <em>is</em> the care. The one voice at the railing that says <em>you are near the edge</em> is not the enemy of the person at the edge. It is the only one who thinks that person is worth camping out for.</p>
+
+    <div class="divider">· · ·</div>
+
+    <p>The word God gives Ezekiel for this is <em>watchman</em>. And the watchman's accounting is a hard and freeing thing. He is answerable for the warning. He is not answerable for the outcome. If he speaks, and the person turns, good. If he speaks, and the person goes over anyway, the watchman has still done the one thing asked of him. His faithfulness is measured at his own lips, not at the edge.</p>
+
+    <p>That is the freeing part. It is also the part that costs everything. Because it means the watchman stands at the fence knowing that some will go over regardless. He does not save everyone. He was never told he would. He is told to stay. And the staying is the whole of it.</p>
+
+    <div class="divider">· · ·</div>
+
+    <p>The prophets are the beginning of a line, not the end of it. The same God who would not go silent kept sending — servants, messengers, prophet after prophet into a refusal he could see coming. And then, over Jerusalem, one of them said something no prophet had standing to say: <em>how often would I have gathered you, and you were not willing.</em> That is not the voice of the watchman. That is the voice of the one who sent the watchmen.</p>
+
+    <p>And here the line runs forward and then past itself. The watchman warns from the edge. The Son goes over it. Ezekiel keeps his own life by speaking; Jesus does the opposite — he does not keep his life at all, he spends it. The presence that had always been a voice at the fence became, at last, the one who goes in after the person who jumped.</p>
+
+    <p>Everything the prophets were, he carried forward. And then he exceeded it. He is not only the watchman who will not go quiet. He is the rescuer at the bottom of the falls.</p>
+
+    <div class="selah">
+      <div class="selah-mark">Selah</div>
+      <p>I have married people and buried people in prison. I have sat with those saying their last words to a loved one down a video call. I have helped absent fathers be present at their daughters' weddings, and enabled mothers who could not hold their children to reach out through a screen and love them anyway. I have watched grown men and women weep.</p>
+      <p>Not that any of them always stopped offending. Some carried on in their rebellious ways and went over the edge anyway.</p>
+      <p>But I was there. And in the end I have come to think that is all Jesus was ever looking for. He asked only one thing of me — that I visited those in prison.</p>
+      <p>He saw the sheep and the goats. But he saw because he was there.</p>
+    </div>
+
+  </div>
+
+  <div class="colophon">
+    A Reflection on Ezekiel 2 &amp; 3<br>
+    <span class="gold">Norm Reed · Hesed Words</span>
+  </div>
+
+</div>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>
