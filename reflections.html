@@ -137,6 +137,7 @@
     transition:border-color .2s,color .2s;
   }
   .filter-reset:hover{border-color:var(--gold);color:var(--gold);}
+  .filter-break{width:100%;height:0;}
 
   /* ── Article listing ── */
   .listing{
@@ -268,6 +269,28 @@
 
   <label for="filter-theme">Theme</label>
   <select id="filter-theme"><option value="">All</option></select>
+
+  <div class="filter-break"></div>
+
+  <label for="filter-year">Year</label>
+  <select id="filter-year"><option value="">All</option></select>
+
+  <label for="filter-month">Month</label>
+  <select id="filter-month">
+    <option value="">All</option>
+    <option value="1">January</option>
+    <option value="2">February</option>
+    <option value="3">March</option>
+    <option value="4">April</option>
+    <option value="5">May</option>
+    <option value="6">June</option>
+    <option value="7">July</option>
+    <option value="8">August</option>
+    <option value="9">September</option>
+    <option value="10">October</option>
+    <option value="11">November</option>
+    <option value="12">December</option>
+  </select>
 
   <button class="filter-reset" onclick="resetFilters()">Clear</button>
 </div>
@@ -500,12 +523,15 @@ const ARTICLES = [
 function buildFilters(){
   const scriptureSet = new Set();
   const themeSet     = new Set();
+  const yearSet      = new Set();
   ARTICLES.forEach(a => {
-    a.scripture.forEach(s => scriptureSet.add(s.split(":")[0].trim())); // book name only
+    a.scripture.forEach(s => scriptureSet.add(s.split(":")[0].trim()));
     a.themes.forEach(t => themeSet.add(t));
+    yearSet.add(a.date.substring(0, 4));
   });
   populate("filter-scripture", [...scriptureSet].sort());
   populate("filter-theme",     [...themeSet].sort());
+  populate("filter-year",      [...yearSet].sort().reverse());
 }
 
 function populate(id, values){
@@ -521,11 +547,15 @@ function populate(id, values){
 function render(){
   const scriptureFilter = document.getElementById("filter-scripture").value;
   const themeFilter     = document.getElementById("filter-theme").value;
+  const yearFilter      = document.getElementById("filter-year").value;
+  const monthFilter     = document.getElementById("filter-month").value;
 
   const filtered = ARTICLES
     .filter(a => {
       if(scriptureFilter && !a.scripture.some(s => s.startsWith(scriptureFilter))) return false;
       if(themeFilter     && !a.themes.includes(themeFilter)) return false;
+      if(yearFilter      && a.date.substring(0,4) !== yearFilter) return false;
+      if(monthFilter     && parseInt(a.date.substring(5,7)) !== parseInt(monthFilter)) return false;
       return true;
     })
     .sort((a,b) => b.date.localeCompare(a.date));
@@ -562,11 +592,15 @@ function render(){
 function resetFilters(){
   document.getElementById("filter-scripture").value = "";
   document.getElementById("filter-theme").value     = "";
+  document.getElementById("filter-year").value      = "";
+  document.getElementById("filter-month").value     = "";
   render();
 }
 
 document.getElementById("filter-scripture").addEventListener("change", render);
 document.getElementById("filter-theme").addEventListener("change",     render);
+document.getElementById("filter-year").addEventListener("change",      render);
+document.getElementById("filter-month").addEventListener("change",     render);
 
 buildFilters();
 render();
