@@ -882,9 +882,31 @@
     padding: 8px 5vw 32px;
     text-align: center;
   }
-  .daily-reflection-inner {
-    max-width: 520px;
+  .dr-section-heading {
+    font-family: 'Cinzel', serif;
+    font-size: 7.5px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 auto 28px;
+  }
+  .dr-panels {
+    display: flex;
+    align-items: flex-start;
+    max-width: 860px;
     margin: 0 auto;
+  }
+  .dr-panel {
+    flex: 1;
+    padding: 0 3vw;
+  }
+  .dr-vdivider {
+    width: 1px;
+    background: var(--gold);
+    opacity: 0.25;
+    align-self: stretch;
+    flex-shrink: 0;
+    min-height: 120px;
   }
   .dr-rule {
     width: 36px; height: 1px;
@@ -1045,6 +1067,9 @@
     section, .featured, .glossary, .about { padding: 64px 5vw; }
     .hero { padding: 80px 5vw 60px; min-height: 85vh; }
     .hero-heb-bg { font-size: 160px; }
+    .dr-panels { flex-direction: column; }
+    .dr-vdivider { width: 36px; height: 1px; min-height: 0; align-self: center; margin: 28px 0; }
+    .dr-panel { padding: 0; }
   }
 </style>
 </head>
@@ -1080,15 +1105,33 @@
 </div>
 </section>
 
-<!-- Daily Reflection -->
+<!-- Daily Reflections -->
 <div class="daily-reflection reveal">
-  <div class="daily-reflection-inner">
-    <div class="dr-rule"></div>
-    <div class="dr-label">Latest Reflection &nbsp;&middot;&nbsp; 5 July 2026</div>
-    <h2 class="dr-headline">Into Your Hand</h2>
-    <div class="dr-ref">Psalm 31 &middot; 5</div>
-    <p class="dr-excerpt">He did not have much breath left. What a man spends his last air on tells you, more than anything else could, what he was holding onto at the end. He spent it on a line from a psalm.</p>
-    <a href="/reflections/into-your-hand.html" class="dr-link">Read this reflection &rarr;</a>
+  <div class="dr-section-heading">Daily Reflections</div>
+  <div class="dr-panels">
+
+    <!-- Current Reading -->
+    <div class="dr-panel">
+      <div class="dr-rule"></div>
+      <div class="dr-label">Current Reading &nbsp;&middot;&nbsp; 5 July 2026</div>
+      <h2 class="dr-headline">Into Your Hand</h2>
+      <div class="dr-ref">Psalm 31 &middot; 5</div>
+      <p class="dr-excerpt">He did not have much breath left. What a man spends his last air on tells you, more than anything else could, what he was holding onto at the end. He spent it on a line from a psalm.</p>
+      <a href="/reflections/into-your-hand.html" class="dr-link">Read this reflection &rarr;</a>
+    </div>
+
+    <div class="dr-vdivider"></div>
+
+    <!-- Psalms -->
+    <div class="dr-panel">
+      <div class="dr-rule"></div>
+      <div class="dr-label">Psalms &nbsp;&middot;&nbsp; 5 July 2026</div>
+      <h2 class="dr-headline">Into Your Hand</h2>
+      <div class="dr-ref">Psalm 31 &middot; 5</div>
+      <p class="dr-excerpt">He did not have much breath left. What a man spends his last air on tells you, more than anything else could, what he was holding onto at the end. He spent it on a line from a psalm.</p>
+      <a href="/reflections/into-your-hand.html" class="dr-link">Read this reflection &rarr;</a>
+    </div>
+
   </div>
 </div>
 
