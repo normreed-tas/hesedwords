@@ -990,19 +990,19 @@
 
   /* ─── Hub ────────────────────────────────────────────────── */
   .hub {
-    max-width: 920px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 64px 5vw 80px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
   .hub-tile {
     display: flex;
     flex-direction: column;
     text-decoration: none;
     color: var(--ink);
-    padding: 40px 36px 32px;
+    padding: 34px 28px 28px;
     border: 1px solid var(--border-light);
     background: var(--parchment-mid);
     transition: all 0.25s;
@@ -1083,6 +1083,7 @@
     .glossary-inner { grid-template-columns: 1fr; gap: 48px; }
     .books-grid { grid-template-columns: 1fr; }
     .articles-placeholder { grid-template-columns: 1fr; }
+    .hub { grid-template-columns: 1fr 1fr; max-width: 680px; }
     .nav-links { gap: 20px; }
     .book-spine-wrap { display: none; }
     .footer-inner { flex-direction: column; text-align: center; }
