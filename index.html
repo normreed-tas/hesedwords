@@ -808,6 +808,25 @@
   }
   .about-link:hover { color: var(--accent-light); }
 
+  /* ─── Personal links (home only) ─────────────────────────── */
+  .personal-links {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    padding: 28px 5vw 4px;
+    background: var(--ink);
+  }
+  .personal-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: rgba(246,237,214,0.4);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .personal-links a:hover { color: var(--gold-light); }
+
   /* ─── Footer ─────────────────────────────────────────────── */
   footer {
     background: var(--ink);
@@ -1002,10 +1021,10 @@
   }
   .hub-tile-desc {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 16px;
-    font-style: italic;
-    line-height: 1.75;
-    color: var(--ink-light);
+    font-size: 13px;
+    font-style: normal;
+    line-height: 1.6;
+    color: var(--ink-faint);
     flex: 1;
     margin: 0 0 28px;
   }
@@ -1081,11 +1100,10 @@
   <ul class="nav-links">
     <li><a href="/reflections.html">Reflections</a></li>
     <li><a href="/articles.html">Articles</a></li>
+    <li><a href="/word-studies.html">Word Studies</a></li>
     <li><a href="/books.html">Books</a></li>
     <li><a href="/glossary.html">Glossary</a></li>
     <li><a href="/resources.html">Resources</a></li>
-    <li><a href="/contact.html">Contact</a></li>
-    <li><a href="#about">About</a></li>
   </ul>
 </nav>
 
@@ -1138,33 +1156,39 @@
 <!-- Hub -->
 <div class="hub">
   <a href="/reflections.html" class="hub-tile reveal">
-    <div class="hub-tile-num">I &nbsp;·&nbsp; Daily Reflections</div>
+    <div class="hub-tile-num">I &nbsp;·&nbsp; Reflections</div>
     <h2 class="hub-tile-title">Reflections</h2>
-    <p class="hub-tile-desc">Short reflections drawn from an early morning practice of scripture reading — the kind of writing that happens when a single verse refuses to let you go until you've written your way through it. One word. One psalm. One long murmur.</p>
+    <p class="hub-tile-desc">The verse that stopped me this morning.</p>
     <span class="hub-tile-enter">Enter →</span>
   </a>
   <a href="/articles.html" class="hub-tile reveal">
     <div class="hub-tile-num">II &nbsp;·&nbsp; Articles</div>
     <h2 class="hub-tile-title">Articles</h2>
-    <p class="hub-tile-desc">Longer pastoral and theological writing — the questions that take more than a morning to work through. Scripture, justice, and the formation of the church.</p>
+    <p class="hub-tile-desc">The questions that take longer than a morning.</p>
+    <span class="hub-tile-enter">Enter →</span>
+  </a>
+  <a href="/word-studies.html" class="hub-tile reveal">
+    <div class="hub-tile-num">III &nbsp;·&nbsp; Word Studies</div>
+    <h2 class="hub-tile-title">Word Studies</h2>
+    <p class="hub-tile-desc">One word, and what the English lost.</p>
     <span class="hub-tile-enter">Enter →</span>
   </a>
   <a href="/books.html" class="hub-tile reveal">
-    <div class="hub-tile-num">III &nbsp;·&nbsp; Books</div>
+    <div class="hub-tile-num">IV &nbsp;·&nbsp; Books</div>
     <h2 class="hub-tile-title">Books</h2>
-    <p class="hub-tile-desc">Published works available to read online or download — biblical theology, canonical study, and devotional writing for the road.</p>
+    <p class="hub-tile-desc">The long works, to read or carry.</p>
     <span class="hub-tile-enter">Enter →</span>
   </a>
   <a href="/glossary.html" class="hub-tile reveal">
-    <div class="hub-tile-num">IV &nbsp;·&nbsp; Glossary</div>
+    <div class="hub-tile-num">V &nbsp;·&nbsp; Glossary</div>
     <h2 class="hub-tile-title">Glossary</h2>
-    <p class="hub-tile-desc">Twenty-two seed terms from the biblical vocabulary — covenant, justice, mercy, wisdom, presence, trust — traced across Torah, Prophets, Writings, and the New Testament. Words worth keeping in your mouth.</p>
+    <p class="hub-tile-desc">The vocabulary, kept in the mouth.</p>
     <span class="hub-tile-enter">Enter →</span>
   </a>
-  <a href="/resources.html" class="hub-tile reveal" style="grid-column: 1 / -1;">
-    <div class="hub-tile-num">V &nbsp;·&nbsp; Resources</div>
+  <a href="/resources.html" class="hub-tile reveal">
+    <div class="hub-tile-num">VI &nbsp;·&nbsp; Resources</div>
     <h2 class="hub-tile-title">Resources</h2>
-    <p class="hub-tile-desc">Devotional and theological resources worth returning to — classical texts, study aids, and reference tools curated from the tradition. Beginning with Bernard of Clairvaux on the Song of Songs.</p>
+    <p class="hub-tile-desc">Texts worth returning to.</p>
     <span class="hub-tile-enter">Enter →</span>
   </a>
 </div>
@@ -1185,6 +1209,12 @@
     <a href="#" class="about-link reveal">More about Norm and the Foundation →</a>
   </div>
 </section>
+
+<!-- Personal links -->
+<div class="personal-links">
+  <a href="#about">About</a>
+  <a href="/contact.html">Contact</a>
+</div>
 
 <!-- Footer -->
 <footer>
