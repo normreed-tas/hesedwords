@@ -96,6 +96,46 @@
     margin:0 auto 2.4rem;
   }
 
+  /* ── Index ── */
+  .study-index{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 1.5rem 2.6rem;
+  }
+  .index-eyebrow{
+    font-family:"Cinzel",serif;
+    font-size:.7rem;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    text-align:center;
+    margin-bottom:1.4rem;
+  }
+  .study-index ul{
+    list-style:none;
+    margin:0;padding:0;
+    column-width:16rem;
+    column-gap:2.4rem;
+  }
+  .study-index li{
+    margin:0 0 .7rem;
+    break-inside:avoid;
+  }
+  .study-index a{
+    font-family:"Cormorant Garamond",serif;
+    font-size:1.08rem;
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    transition:color .2s,border-color .2s;
+  }
+  .study-index a:hover{color:var(--gold-deep);border-bottom-color:var(--gold);}
+  .idx-word{
+    font-style:italic;
+    color:var(--gold-deep);
+    font-size:.9rem;
+  }
+
   /* ── Word-study listing ── */
   .listing{
     max-width:var(--maxw);
@@ -109,6 +149,7 @@
     align-items:center;
     border-top:1px solid var(--rule);
     padding:2.4rem 0;
+    scroll-margin-top:1.5rem;
     text-decoration:none;
     color:var(--ink);
     transition:background .2s;
@@ -188,11 +229,19 @@
   <p class="section-desc">One word at a time — a single Hebrew or Greek word read slowly enough to see what the English lost, and where it leads.</p>
 </header>
 
+<nav class="study-index" aria-label="Index of word studies">
+  <p class="index-eyebrow">Index</p>
+  <ul>
+    <li><a href="#ws-idle">What Is an Idle Word? &nbsp;<span class="idx-word">argos</span></a></li>
+    <li><a href="#ws-paga">Is Jesus an Intercessor? &nbsp;<span class="idx-word">paga</span></a></li>
+  </ul>
+</nav>
+
 <hr class="rule-line">
 
 <div class="listing">
 
-  <a href="/word-studies/idle.html" class="study-card">
+  <a href="/word-studies/idle.html" class="study-card" id="ws-idle">
     <div class="card-heb is-greek">&#7936;&rho;&gamma;&#972;&sigmaf;</div>
     <div class="card-body">
       <p class="card-word">argos</p>
@@ -201,7 +250,7 @@
     </div>
   </a>
 
-  <a href="/word-studies/jesus-intercessor.html" class="study-card">
+  <a href="/word-studies/jesus-intercessor.html" class="study-card" id="ws-paga">
     <div class="card-heb">פָּגַע</div>
     <div class="card-body">
       <p class="card-word">paga</p>
