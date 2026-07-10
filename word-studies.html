@@ -231,37 +231,77 @@
 
 <nav class="study-index" aria-label="Index of word studies">
   <p class="index-eyebrow">Index</p>
-  <ul>
-    <li><a href="#ws-idle">What Is an Idle Word? &nbsp;<span class="idx-word">argos</span></a></li>
-    <li><a href="#ws-paga">Is Jesus an Intercessor? &nbsp;<span class="idx-word">paga</span></a></li>
-  </ul>
+  <ul id="ws-index"></ul>
 </nav>
 
 <hr class="rule-line">
 
-<div class="listing">
-
-  <a href="/word-studies/idle.html" class="study-card" id="ws-idle">
-    <div class="card-heb is-greek">&#7936;&rho;&gamma;&#972;&sigmaf;</div>
-    <div class="card-body">
-      <p class="card-word">argos</p>
-      <h2 class="card-title">What Is an Idle Word?</h2>
-      <p class="card-summary">Not merely careless &mdash; workless. Argos is a-ergon, without work: a field unsown, a word that carries nothing, does nothing, employs nothing.</p>
-    </div>
-  </a>
-
-  <a href="/word-studies/jesus-intercessor.html" class="study-card" id="ws-paga">
-    <div class="card-heb">פָּגַע</div>
-    <div class="card-body">
-      <p class="card-word">paga</p>
-      <h2 class="card-title">Is Jesus an Intercessor?</h2>
-      <p class="card-summary">Before it ever means to intercede, it means to fall upon — to strike, to meet with force. The word for intercession has a body in it.</p>
-    </div>
-  </a>
-
-</div>
+<div class="listing" id="ws-listing"></div>
 
 <footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+<script>
+/* ================================================================
+   WORD STUDIES MANIFEST
+   To add a study: copy one object to the TOP of the array (newest
+   first). Give it a unique id ("ws-slug"), set lang to "hebrew" or
+   "greek" (this sets the reading direction of the display word),
+   and the page builds the index entry and the card automatically.
+   ================================================================ */
+const STUDIES = [
+  {
+    id:       "ws-idle",
+    word:     "ἀργός",
+    lang:     "greek",
+    translit: "argos",
+    title:    "What Is an Idle Word?",
+    url:      "/word-studies/idle.html",
+    summary:  "Not merely careless — workless. Argos is a-ergon, without work: a field unsown, a word that carries nothing, does nothing, employs nothing."
+  },
+  {
+    id:       "ws-paga",
+    word:     "פָּגַע",
+    lang:     "hebrew",
+    translit: "paga",
+    title:    "Is Jesus an Intercessor?",
+    url:      "/word-studies/jesus-intercessor.html",
+    summary:  "Before it ever means to intercede, it means to fall upon — to strike, to meet with force. The word for intercession has a body in it."
+  }
+  /* ── add new studies above this line ── */
+];
+
+(function () {
+  const idx = document.getElementById("ws-index");
+  const listing = document.getElementById("ws-listing");
+
+  STUDIES.forEach(function (s) {
+    const li = document.createElement("li");
+    li.innerHTML =
+      '<a href="#' + s.id + '">' + s.title +
+      ' &nbsp;<span class="idx-word">' + s.translit + '</span></a>';
+    idx.appendChild(li);
+
+    const card = document.createElement("a");
+    card.className = "study-card";
+    card.id = s.id;
+    card.href = s.url;
+    card.innerHTML =
+      '<div class="card-heb' + (s.lang === "greek" ? " is-greek" : "") + '">' + s.word + '</div>' +
+      '<div class="card-body">' +
+        '<p class="card-word">' + s.translit + '</p>' +
+        '<h2 class="card-title">' + s.title + '</h2>' +
+        '<p class="card-summary">' + s.summary + '</p>' +
+      '</div>';
+    listing.appendChild(card);
+  });
+
+  /* Support deep-links to a specific card (#ws-slug) on first load */
+  if (location.hash) {
+    const target = document.querySelector(location.hash);
+    if (target) target.scrollIntoView();
+  }
+})();
+</script>
 
 </body>
 </html>
