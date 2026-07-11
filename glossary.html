@@ -816,7 +816,26 @@ let stTimer;
 function showStatus(msg) { const bar=document.getElementById('status-bar'); bar.textContent=msg; bar.classList.add('show'); clearTimeout(stTimer); stTimer=setTimeout(()=>bar.classList.remove('show'),2400); }
 function esc(s) { if(!s)return''; return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
-(async()=>{ await loadFromStorage(); renderAll(); })();
+/* Deep-link support: /glossary.html#hesed opens that term.
+   Matches the hash (letters only) against a term id (seed_<slug>)
+   or any transliteration token. No match = no-op (lands at top). */
+function openFromHash() {
+  const raw = decodeURIComponent((location.hash || '').replace(/^#/, ''));
+  const slug = raw.toLowerCase().replace(/[^a-z]/g, '');
+  if (!slug) return;
+  const norm = s => (s || '').toLowerCase().replace(/[^a-z]/g, '');
+  const match =
+    entries.find(e => e.id === 'seed_' + slug) ||
+    entries.find(e => norm(e.transliteration) === slug) ||
+    entries.find(e => String(e.transliteration || '').split('/').some(t => norm(t) === slug));
+  if (match) {
+    searchQuery = ''; document.getElementById('search-input').value = '';
+    selectTerm(match.id);
+  }
+}
+window.addEventListener('hashchange', openFromHash);
+
+(async()=>{ await loadFromStorage(); renderAll(); openFromHash(); })();
 </script>
 </body>
 </html>
