@@ -541,6 +541,22 @@
   nav.hw-nav a { color: #f5edd6; text-decoration: none; opacity: .82; transition: opacity .2s; }
   nav.hw-nav a:hover { opacity: 1; color: #fff; }
   nav.hw-nav a.current { opacity: 1; border-bottom: 1px solid #b8922c; padding-bottom: .15rem; }
+
+  /* ─── Mobile: stack the list above the definition, let the page scroll ─── */
+  @media (max-width: 700px) {
+    body { height: auto; overflow: auto; }
+    .app { flex-direction: column; height: auto; }
+    .sidebar {
+      width: 100%; min-width: 0;
+      border-right: none;
+      border-bottom: 2px solid var(--border);
+      box-shadow: 0 4px 18px var(--shadow);
+    }
+    .term-list { flex: none; max-height: 40vh; overflow-y: auto; }
+    .main { flex: none; width: 100%; overflow: visible; }
+    .term-detail { padding: 26px 18px 44px; max-width: none; }
+    .empty-state { padding: 40px 24px; }
+  }
 </style>
 </head>
 <body>
@@ -779,7 +795,13 @@ function renderAll() {
   else { selectedId=null; showEmpty(); }
 }
 function showEmpty() { document.getElementById('empty-state').style.display='flex'; document.getElementById('term-detail').style.display='none'; }
-function selectTerm(id) { selectedId=id; renderTermList(); renderDetail(id); document.getElementById('main-panel').scrollTop=0; }
+function selectTerm(id) {
+  selectedId=id; renderTermList(); renderDetail(id);
+  document.getElementById('main-panel').scrollTop=0;
+  if (window.matchMedia('(max-width:700px)').matches) {
+    document.getElementById('term-detail').scrollIntoView({ behavior:'smooth', block:'start' });
+  }
+}
 
 document.getElementById('cat-filters').addEventListener('click',e=>{ const btn=e.target.closest('.cat-btn'); if(!btn)return; activeCategory=btn.dataset.cat; document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); renderAll(); });
 document.getElementById('search-input').addEventListener('input',e=>{ searchQuery=e.target.value; renderAll(); });
