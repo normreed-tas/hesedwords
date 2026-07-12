@@ -38,8 +38,10 @@ FOOTER — content pages use this single-line benediction footer, last thing bef
 FOOTER CSS:
 footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
 
-GLOSSARY LINKS — link only the FIRST mention of each Hebrew word; leave later
-mentions as plain <em>. The glossary supports deep links:
+GLOSSARY LINKS (standing practice) — whenever the piece uses a Hebrew OR Greek word
+that has a glossary entry, make its FIRST mention a link to the glossary; leave every
+later mention as plain <em>. Only link words that actually exist in the glossary.
+Deep-link form:
   <a href="/glossary.html#hesed"><em>hesed</em></a>
 The fragment is the word's transliteration, letters only. Confirmed slugs include:
 hesed, emunah, mishpat, tzedakah (NOTE: spelled with a k, not q), rahamim, tuv,
