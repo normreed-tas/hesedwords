@@ -47,7 +47,8 @@ The fragment is the word's transliteration, letters only. Confirmed slugs includ
 hesed, emunah, mishpat, tzedakah (NOTE: spelled with a k, not q), rahamim, tuv,
 shem, derek, torah, lev, chanan, shalom, shuvah, zakar, sod, selichah, shamar,
 selah, hevel (note: some pieces spell hevel "hebel" — the glossary slug is #hevel),
-yada, da'at (paired entry, slug #yada), emet, paga, argos, ta'am, nashaq, sava, sakal.
+yada, da'at (paired entry, slug #yada), emet, paga, argos, ta'am, nashaq, sava, sakal,
+chokmah.
 If unsure of a slug, still use the natural transliteration — the glossary matches
 on the transliteration, so close spellings resolve.
 
