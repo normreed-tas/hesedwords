@@ -41,9 +41,14 @@ footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;lett
 GLOSSARY LINKS (standing practice) — whenever the piece uses a Hebrew OR Greek word
 that has a glossary entry, make its FIRST mention a link to the glossary; leave every
 later mention as plain <em>. Only link words that actually exist in the glossary.
-Deep-link form:
-  <a href="/glossary.html#hesed"><em>hesed</em></a>
-The fragment is the word's transliteration, letters only. Confirmed slugs include:
+Deep-link form (use class="gloss"):
+  <a class="gloss" href="/glossary.html#hesed"><em>hesed</em></a>
+Established link style — include in the page's <style>:
+  a.gloss{color:inherit;text-decoration:none;border-bottom:1px dotted var(--gold-deep);}
+  a.gloss:hover{color:var(--gold-deep);}
+The href fragment is the word's transliteration, letters only; the glossary's
+hash-matcher resolves it against the term id (seed_<slug>) or transliteration, so
+#mishpat opens seed_mishpat. Confirmed slugs include:
 hesed, emunah, mishpat, tzedakah (NOTE: spelled with a k, not q), rahamim, tuv,
 shem, derek, torah, lev, chanan, shalom, shuvah, zakar, sod, selichah, shamar,
 selah, hevel (note: some pieces spell hevel "hebel" — the glossary slug is #hevel),
