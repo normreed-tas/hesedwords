@@ -138,6 +138,8 @@
   }
   .filter-reset:hover{border-color:var(--gold);color:var(--gold);}
   .filter-break{width:100%;height:0;}
+  .filters select:disabled{opacity:.45;cursor:default;}
+  .fg{display:inline-flex;align-items:center;gap:.55rem;}
 
   /* ── Article listing ── */
   .listing{
@@ -264,33 +266,39 @@
 <hr class="rule-line">
 
 <div class="filters">
-  <label for="filter-scripture">Scripture</label>
-  <select id="filter-scripture"><option value="">All</option></select>
+  <span class="fg"><label for="filter-book">Book</label>
+    <select id="filter-book"><option value="">All</option></select></span>
 
-  <label for="filter-theme">Theme</label>
-  <select id="filter-theme"><option value="">All</option></select>
+  <span class="fg"><label for="filter-chapter">Chapter</label>
+    <select id="filter-chapter" disabled><option value="">All</option></select></span>
+
+  <span class="fg"><label for="filter-verse">Verse</label>
+    <select id="filter-verse" disabled><option value="">All</option></select></span>
+
+  <span class="fg"><label for="filter-theme">Theme</label>
+    <select id="filter-theme"><option value="">All</option></select></span>
 
   <div class="filter-break"></div>
 
-  <label for="filter-year">Year</label>
-  <select id="filter-year"><option value="">All</option></select>
+  <span class="fg"><label for="filter-year">Year</label>
+    <select id="filter-year"><option value="">All</option></select></span>
 
-  <label for="filter-month">Month</label>
-  <select id="filter-month">
-    <option value="">All</option>
-    <option value="1">January</option>
-    <option value="2">February</option>
-    <option value="3">March</option>
-    <option value="4">April</option>
-    <option value="5">May</option>
-    <option value="6">June</option>
-    <option value="7">July</option>
-    <option value="8">August</option>
-    <option value="9">September</option>
-    <option value="10">October</option>
-    <option value="11">November</option>
-    <option value="12">December</option>
-  </select>
+  <span class="fg"><label for="filter-month">Month</label>
+    <select id="filter-month">
+      <option value="">All</option>
+      <option value="1">January</option>
+      <option value="2">February</option>
+      <option value="3">March</option>
+      <option value="4">April</option>
+      <option value="5">May</option>
+      <option value="6">June</option>
+      <option value="7">July</option>
+      <option value="8">August</option>
+      <option value="9">September</option>
+      <option value="10">October</option>
+      <option value="11">November</option>
+      <option value="12">December</option>
+    </select></span>
 
   <button class="filter-reset" onclick="resetFilters()">Clear</button>
 </div>
@@ -591,19 +599,41 @@ const ARTICLES = [
   /* ── add new articles above this line ── */
 ];
 
+/* ── Scripture reference parsing ── */
+/* "Psalm 41" -> {book:"Psalm", chapter:"41", verse:""}
+   "Ecclesiastes 1:15" -> {book:"Ecclesiastes", chapter:"1", verse:"15"}
+   "1 Corinthians 11" -> {book:"1 Corinthians", chapter:"11", verse:""}
+   "Jeremiah" -> {book:"Jeremiah", chapter:"", verse:""} */
+function parseRef(s){
+  const m = String(s).trim().match(/^(.+?)\s+(\d+)(?::(.+))?$/);
+  if(m){ return { book:m[1].trim(), chapter:m[2], verse:(m[3]||"").trim() }; }
+  return { book:String(s).trim(), chapter:"", verse:"" };
+}
+
+/* index: book -> { chapter -> Set(verses) } */
+const SCRIPTURE_INDEX = {};
+ARTICLES.forEach(a => a.scripture.forEach(s => {
+  const r = parseRef(s);
+  const book = (SCRIPTURE_INDEX[r.book] = SCRIPTURE_INDEX[r.book] || {});
+  if(r.chapter){
+    const ch = (book[r.chapter] = book[r.chapter] || new Set());
+    if(r.verse) ch.add(r.verse);
+  }
+}));
+
+function byNum(a,b){ return parseInt(a,10) - parseInt(b,10); }
+
 /* ── Build filter dropdowns ── */
 function buildFilters(){
-  const scriptureSet = new Set();
-  const themeSet     = new Set();
-  const yearSet      = new Set();
+  const themeSet = new Set();
+  const yearSet  = new Set();
   ARTICLES.forEach(a => {
-    a.scripture.forEach(s => scriptureSet.add(s.split(":")[0].trim()));
     a.themes.forEach(t => themeSet.add(t));
     yearSet.add(a.date.substring(0, 4));
   });
-  populate("filter-scripture", [...scriptureSet].sort());
-  populate("filter-theme",     [...themeSet].sort());
-  populate("filter-year",      [...yearSet].sort().reverse());
+  populate("filter-book",  Object.keys(SCRIPTURE_INDEX).sort());
+  populate("filter-theme", [...themeSet].sort());
+  populate("filter-year",  [...yearSet].sort().reverse());
 }
 
 function populate(id, values){
@@ -615,19 +645,62 @@ function populate(id, values){
   });
 }
 
+/* reset a select back to just "All"; optionally disable it */
+function resetSelect(id, disabled){
+  const sel = document.getElementById(id);
+  sel.innerHTML = '<option value="">All</option>';
+  sel.value = "";
+  sel.disabled = !!disabled;
+}
+
+/* Book chosen → repopulate Chapter, but only if that book has chapters */
+function onBookChange(){
+  const book = document.getElementById("filter-book").value;
+  resetSelect("filter-chapter", true);
+  resetSelect("filter-verse", true);
+  const chapters = book && SCRIPTURE_INDEX[book] ? Object.keys(SCRIPTURE_INDEX[book]) : [];
+  if(chapters.length){
+    populate("filter-chapter", chapters.sort(byNum));
+    document.getElementById("filter-chapter").disabled = false;
+  }
+  render();
+}
+
+/* Chapter chosen → repopulate Verse, but only if that chapter has verses */
+function onChapterChange(){
+  const book = document.getElementById("filter-book").value;
+  const chapter = document.getElementById("filter-chapter").value;
+  resetSelect("filter-verse", true);
+  const verses = (book && chapter && SCRIPTURE_INDEX[book] && SCRIPTURE_INDEX[book][chapter])
+    ? [...SCRIPTURE_INDEX[book][chapter]] : [];
+  if(verses.length){
+    populate("filter-verse", verses.sort(byNum));
+    document.getElementById("filter-verse").disabled = false;
+  }
+  render();
+}
+
 /* ── Render listing ── */
 function render(){
-  const scriptureFilter = document.getElementById("filter-scripture").value;
-  const themeFilter     = document.getElementById("filter-theme").value;
-  const yearFilter      = document.getElementById("filter-year").value;
-  const monthFilter     = document.getElementById("filter-month").value;
+  const bookF        = document.getElementById("filter-book").value;
+  const chapterF     = document.getElementById("filter-chapter").value;
+  const verseF       = document.getElementById("filter-verse").value;
+  const themeFilter  = document.getElementById("filter-theme").value;
+  const yearFilter   = document.getElementById("filter-year").value;
+  const monthFilter  = document.getElementById("filter-month").value;
 
   const filtered = ARTICLES
     .filter(a => {
-      if(scriptureFilter && !a.scripture.some(s => s.startsWith(scriptureFilter))) return false;
-      if(themeFilter     && !a.themes.includes(themeFilter)) return false;
-      if(yearFilter      && a.date.substring(0,4) !== yearFilter) return false;
-      if(monthFilter     && parseInt(a.date.substring(5,7)) !== parseInt(monthFilter)) return false;
+      if(bookF && !a.scripture.some(s => {
+        const r = parseRef(s);
+        if(r.book !== bookF) return false;
+        if(chapterF && r.chapter !== chapterF) return false;
+        if(verseF && r.verse !== verseF) return false;
+        return true;
+      })) return false;
+      if(themeFilter && !a.themes.includes(themeFilter)) return false;
+      if(yearFilter  && a.date.substring(0,4) !== yearFilter) return false;
+      if(monthFilter && parseInt(a.date.substring(5,7)) !== parseInt(monthFilter)) return false;
       return true;
     })
     .sort((a,b) => b.date.localeCompare(a.date));
@@ -662,17 +735,21 @@ function render(){
 }
 
 function resetFilters(){
-  document.getElementById("filter-scripture").value = "";
-  document.getElementById("filter-theme").value     = "";
-  document.getElementById("filter-year").value      = "";
-  document.getElementById("filter-month").value     = "";
+  document.getElementById("filter-book").value  = "";
+  resetSelect("filter-chapter", true);
+  resetSelect("filter-verse", true);
+  document.getElementById("filter-theme").value = "";
+  document.getElementById("filter-year").value  = "";
+  document.getElementById("filter-month").value = "";
   render();
 }
 
-document.getElementById("filter-scripture").addEventListener("change", render);
-document.getElementById("filter-theme").addEventListener("change",     render);
-document.getElementById("filter-year").addEventListener("change",      render);
-document.getElementById("filter-month").addEventListener("change",     render);
+document.getElementById("filter-book").addEventListener("change",    onBookChange);
+document.getElementById("filter-chapter").addEventListener("change", onChapterChange);
+document.getElementById("filter-verse").addEventListener("change",   render);
+document.getElementById("filter-theme").addEventListener("change",   render);
+document.getElementById("filter-year").addEventListener("change",    render);
+document.getElementById("filter-month").addEventListener("change",   render);
 
 buildFilters();
 render();
