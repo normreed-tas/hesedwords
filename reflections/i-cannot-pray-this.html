@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I Cannot Pray This &middot; Hesed Words</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parchment:#e8dfc8;
+  --parchment-page:#f3ecda;
+  --gold:#c9a84c;
+  --gold-deep:#A67C2E;
+  --gold-soft:#D9C49A;
+  --ink:#2A2218;
+  --ink-soft:#4A3E2C;
+  --muted:#6B5C45;
+  --rule:#C8B58F;
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--parchment);
+  color:var(--ink);
+  font-family:'Cormorant Garamond','Garamond',Georgia,serif;
+  font-size:1.22rem;
+  line-height:1.72;
+}
+
+/* ── Site nav ── */
+nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+nav.hw-nav a:hover{opacity:1;color:#fff;}
+nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+/* ── Footer ── */
+footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+.page{
+  max-width:720px;
+  margin:0 auto;
+  background:var(--parchment-page);
+  padding:4.5rem 3.2rem 2rem;
+  border-left:1px solid var(--rule);
+  border-right:1px solid var(--rule);
+}
+
+.eyebrow{
+  font-family:'Cinzel',serif;
+  font-size:.68rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  text-align:center;
+  margin-bottom:1.6rem;
+}
+
+h1{
+  font-family:'Cinzel',serif;
+  font-weight:500;
+  font-size:2.9rem;
+  letter-spacing:.06em;
+  text-align:center;
+  margin:0 0 .4rem;
+  line-height:1.15;
+}
+
+.subtitle{
+  text-align:center;
+  font-style:italic;
+  font-size:1.28rem;
+  color:var(--ink-soft);
+  margin:0 0 1.8rem;
+}
+
+.motif{
+  text-align:center;
+  color:var(--gold);
+  letter-spacing:.9em;
+  font-size:.8rem;
+  margin:0 0 1.6rem;
+  padding-left:.9em;
+}
+
+.byline{
+  text-align:center;
+  font-family:'Cinzel',serif;
+  font-size:.7rem;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:3.4rem;
+}
+
+h2{
+  font-family:'Cinzel',serif;
+  font-weight:500;
+  font-size:1.32rem;
+  letter-spacing:.08em;
+  color:var(--ink);
+  margin:3.4rem 0 .5rem;
+  padding-bottom:.55rem;
+  border-bottom:1px solid var(--gold-soft);
+}
+
+p{margin:0 0 1.25rem;}
+
+.lede{
+  font-size:1.5rem;
+  line-height:1.55;
+  color:var(--ink);
+  margin-bottom:1.8rem;
+}
+
+.scripture{
+  border-left:2px solid var(--gold);
+  padding:.2rem 0 .2rem 1.5rem;
+  margin:1.9rem 0;
+  font-style:italic;
+  color:var(--ink-soft);
+  font-size:1.24rem;
+}
+.scripture .ref{
+  display:block;
+  margin-top:.5rem;
+  font-style:normal;
+  font-family:'Cinzel',serif;
+  font-size:.65rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+}
+
+.warrant{
+  border-left:2px solid var(--gold-soft);
+  background:rgba(201,168,76,.06);
+  padding:.9rem 1.3rem;
+  margin:2rem 0;
+  font-size:1.02rem;
+  font-style:italic;
+  color:var(--muted);
+  line-height:1.6;
+}
+.warrant .tag{
+  display:block;
+  font-family:'Cinzel',serif;
+  font-style:normal;
+  font-size:.6rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  margin-bottom:.4rem;
+}
+
+.divider{
+  text-align:center;
+  color:var(--gold);
+  letter-spacing:.9em;
+  font-size:.75rem;
+  margin:3rem 0;
+  padding-left:.9em;
+}
+
+.coda{
+  margin-top:3.6rem;
+  padding-top:2.4rem;
+  border-top:1px solid var(--gold-soft);
+  text-align:center;
+}
+.coda p{
+  font-style:italic;
+  font-size:1.34rem;
+  color:var(--ink-soft);
+  margin-bottom:.9rem;
+}
+
+.sign{
+  text-align:center;
+  font-family:'Cinzel',serif;
+  font-size:.7rem;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-top:3rem;
+}
+
+em.heb{font-style:italic;}
+a.gloss{color:inherit;text-decoration:none;border-bottom:1px dotted var(--gold-deep);}
+a.gloss:hover{color:var(--gold-deep);}
+
+@media(max-width:640px){
+  body{font-size:1.12rem;}
+  .page{padding:2.6rem 1.5rem 1.5rem;border-left:none;border-right:none;}
+  h1{font-size:2.1rem;}
+  .lede{font-size:1.3rem;}
+  h2{font-size:1.14rem;}
+}
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/index.html">Home</a>
+  <a href="/reflections.html" class="current">Reflections</a>
+  <a href="/articles.html">Articles</a>
+  <a href="/word-studies.html">Word Studies</a>
+  <a href="/books.html">Books</a>
+  <a href="/glossary.html">Glossary</a>
+  <a href="/resources.html">Resources</a>
+</nav>
+
+<main class="page">
+
+  <div class="eyebrow">A Reflection</div>
+  <h1>I Cannot Pray This</h1>
+  <p class="subtitle">Psalm 41</p>
+  <div class="motif">&bull;&bull;&bull;</div>
+  <div class="byline">Norm Reed</div>
+
+  <p class="lede">There are psalms I find hard to pray.</p>
+
+  <p>I come to them in the morning expecting to be taught &mdash; and often I am, but not the way I planned. They challenge me. Some of them I cannot honestly say aloud. And yet even the ones that stop me are teaching me how to pray, and what to pray, by making me ask why I&rsquo;ve stopped.</p>
+
+  <p>Psalm 41 stops me at verse twelve.</p>
+
+  <div class="scripture">
+    As for me, you uphold me in my integrity, and set me in your presence forever.
+    <span class="ref">Psalm 41:12, ESV</span>
+  </div>
+
+  <p>I read that and I cannot pray it. It sounds like a man standing before God on the strength of his own wholeness &mdash; presenting his integrity as the reason he&rsquo;s allowed to be there. And I know better than that. I know what I am. So the words grate. They go against the grain.</p>
+
+  <p>And I think I know why. I&rsquo;ve been reading verse twelve in the light of verse one. The psalm opens with a blessing &mdash; <em>blessed is the one who considers the poor</em> &mdash; and I carry that forward as I read, like a lens. So by the time I reach the end I&rsquo;m braced for David to claim it: <em>I cared for the weak; now make good on the blessing.</em> Deed, then reward. And when I hear it that way, I can&rsquo;t say it, because I know the ground of standing before God was never the deed.</p>
+
+  <p>So what am I missing?</p>
+
+  <h2>Sitting with the grating</h2>
+
+  <p>I could make the difficulty go away by softening the verse. Read <em>integrity</em> loosely enough and it stops troubling me. But that feels like managing the text rather than praying it, and the grating is trying to tell me something.</p>
+
+  <p>Because it isn&rsquo;t only verse twelve. Verse one grates the same way once I notice it. <em>Blessed is the one who considers the poor</em> &mdash; and then the psalm turns almost at once to a sickbed, to enemies counting the days until he dies, to a friend who ate his bread and lifted his heel against him. The blessing and the woe sit side by side and won&rsquo;t be reconciled. It reads like two psalms forced together.</p>
+
+  <p>And I begin to wonder if the forcing is the point. A man does not declare himself blessed from a bed like that because he feels it. He declares it because he is reaching for something the bed has taken from him. It is the lack of blessing that craves it. Which means verse one was never David resting in a reward. It was David reaching. And if verse one is a reach, then verse twelve is the same reach &mdash; not a claim being cashed, but a man asserting a wholeness he cannot presently feel, because it is the only ground he has left to stand on.</p>
+
+  <p>That should have loosened it. It didn&rsquo;t, not yet. Because a reach for integrity is still a reach for <em>my own</em> integrity. The grating hadn&rsquo;t moved. It had only gone deeper.</p>
+
+  <h2>Reading it backwards</h2>
+
+  <p>The release, when it came, was not in verse twelve at all. It was one verse earlier, and I had been reading past it.</p>
+
+  <div class="scripture">
+    By this I know that you delight in me: that my enemy does not shout in triumph over me.
+    <span class="ref">Psalm 41:11, ESV</span>
+  </div>
+
+  <p><em>Delight.</em> Not payment. Not a reward released because a deed was done. Before David ever reaches the word <em>integrity</em>, he has already named the ground he actually stands on, and the ground is God&rsquo;s delight in him. The order is everything. Delight comes first. Integrity comes second. And once delight has gone first, integrity cannot mean what I feared it meant &mdash; because the standing has already been settled, and settled by God, before David says a word about his own wholeness.</p>
+
+  <p>So I went back to verse one and read it again without the ledger. <em>Blessed is the one who considers the poor.</em> I had been hearing an invoice &mdash; care given, blessing owed. But it isn&rsquo;t an invoice. It&rsquo;s a direction. A description of a life turned toward the low, its face set that way. And that is what <em>integrity</em> means in verse twelve. Not a spotless record presented as payment. The same turned face. Wholeness as singleness of direction &mdash; a life still facing God from the bed, undivided, when everything else has been stripped away.</p>
+
+  <p>That is a thing I can pray. Not <em>I am clean enough to stand here</em>, but <em>the ground was yours all along</em>. The grating stopped. Not because the verse got easier, but because I had been reading it backwards.</p>
+
+  <div class="warrant">
+    <span class="tag">Reading within frame</span>
+    That the psalm sets delight before integrity on purpose &mdash; verse eleven before verse twelve &mdash; is how I have come to read it. The text does not argue it. A reader who takes verse twelve as plain self-defence will not be forced out of it. It is defensible, and it is mine.
+  </div>
+
+  <h2>The One in whom He delighted</h2>
+
+  <p>But there is something under the word <em>delight</em> that I could not leave alone.</p>
+
+  <p>David reaches for it, and reaches honestly, but he reaches as a man who three verses earlier had said <em>heal me, for I have sinned against you.</em> The delight he wants is a delight he cannot quite believe he has earned, because he knows what he is. And he was right not to believe he had earned it. It was never his to earn.</p>
+
+  <p>Long after David, a prophet described a servant God would raise up, and put God&rsquo;s own words over him: <em>my chosen, in whom my soul delights.</em> And when that servant came, and stood in the river, the delight was not written on a page but spoken from an opened heaven: <em>this is my beloved Son, in whom I am well pleased.</em> The word David had been reaching for from the bed was said aloud, freely and truly, over One who did not have to reach for it at all. It was simply true of him.</p>
+
+  <p>That is the ground. Not that I have considered the poor well enough to be blessed. Not that my integrity is whole enough to stand. But that the Father&rsquo;s delight rested fully on the Son, and in him it is spoken over me. The verse I could not pray, I can pray now &mdash; not because I have found my own wholeness, but because the delight I was reaching for was already declared over Another, and given to me in him.</p>
+
+  <div class="coda">
+    <p>As for me &mdash; it is You who delight in me, and You who uphold me in my integrity, and You who set me in Your presence forever.</p>
+    <p>I can say it now.</p>
+  </div>
+
+  <div class="sign">Norm Reed</div>
+
+</main>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>
