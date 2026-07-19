@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Union and Communion — Hudson Taylor — Hesed Words</title>
+<meta name="description" content="James Hudson Taylor's Union and Communion — thoughts on the Song of Solomon relating to personal fellowship with Christ. The complete text, with Taylor's own arrangement of speakers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --parchment:     #FAF5E8;
+    --parchment-mid: #F2EAD4;
+    --gold:          #A67C2E;
+    --gold-light:    #C8A84B;
+    --gold-border:   #C8B58F;
+    --gold-rule:     #D9C49A;
+    --ink:           #2A2218;
+    --ink-mid:       #4A3E2C;
+    --ink-light:     #6B5C45;
+    --cinzel:        'Cinzel', 'Palatino Linotype', Georgia, serif;
+    --cormorant:     'Cormorant Garamond', 'Garamond', Georgia, serif;
+    --measure:       720px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: var(--cormorant);
+    font-size: 20px;
+    line-height: 1.78;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Site nav ── */
+  nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+  nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+  nav.hw-nav a:hover{opacity:1;color:#fff;}
+  nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+  /* ── Footer ── */
+  footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+  .wrap { max-width: var(--measure); margin: 0 auto; padding: 0 40px; }
+
+  /* ── Page header ── */
+  .book-header { text-align: center; padding: 56px 0 34px; }
+  .breadcrumb {
+    font-family: var(--cinzel);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 20px;
+  }
+  .breadcrumb a { color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; }
+  .breadcrumb a:hover { border-bottom-color: var(--gold); }
+  .book-title {
+    font-family: var(--cinzel);
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+  .book-subtitle {
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink-mid);
+    max-width: 30rem;
+    margin: 0 auto 18px;
+    line-height: 1.5;
+  }
+  .book-author {
+    font-family: var(--cinzel);
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .book-rule { width: 48px; height: 1px; background: var(--gold); margin: 26px auto 0; }
+
+  .epigraph {
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink-mid);
+    max-width: 32rem;
+    margin: 34px auto 0;
+    line-height: 1.6;
+  }
+  .epigraph cite { display: block; font-style: normal; font-family: var(--cinzel); font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-top: 12px; }
+
+  /* ── Norm's framing ── */
+  .framing { padding: 12px 0 0; }
+  .framing p { margin-bottom: 1.45em; }
+
+  /* ── Download ── */
+  .download-row {
+    text-align: center;
+    margin: 40px 0;
+    padding: 24px 20px;
+    border-top: 1px solid var(--gold-rule);
+    border-bottom: 1px solid var(--gold-rule);
+  }
+  .download-row a {
+    font-family: var(--cinzel);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold-rule);
+    padding-bottom: 3px;
+    transition: color .2s, border-color .2s;
+  }
+  .download-row a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+  .download-row .meta { display: block; font-style: italic; font-size: 15px; color: var(--ink-light); margin-top: 12px; }
+
+  /* ── Contents ── */
+  .contents { margin: 46px 0; text-align: center; }
+  .contents h2 {
+    font-family: var(--cinzel);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .contents ul { list-style: none; }
+  .contents li { margin-bottom: 10px; line-height: 1.4; }
+  .contents a { font-size: 18px; color: var(--ink); text-decoration: none; border-bottom: 1px solid transparent; }
+  .contents a:hover { border-bottom-color: var(--gold); }
+  .contents .ct-num { font-family: var(--cinzel); font-size: 12px; letter-spacing: 0.12em; color: var(--gold); margin-right: 8px; }
+
+  /* ── Callout (legend, source note) ── */
+  .callout {
+    margin: 40px 0;
+    padding: 20px 26px;
+    background: rgba(166,124,46,0.05);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 2px 2px 0;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink-mid);
+  }
+  .callout p { margin-bottom: 0.8em; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout .lead {
+    font-family: var(--cinzel);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  /* ── Section ── */
+  .section { padding-top: 54px; margin-top: 54px; border-top: 1px solid var(--gold-rule); }
+  .section-eyebrow {
+    font-family: var(--cinzel);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  .section-title {
+    font-family: var(--cinzel);
+    font-weight: 500;
+    font-size: 27px;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    text-align: center;
+    line-height: 1.28;
+    margin-bottom: 10px;
+  }
+  .section-ref { text-align: center; font-style: italic; font-size: 15px; color: var(--ink-light); margin-bottom: 30px; }
+
+  /* Norm's editorial note */
+  .editor-note {
+    max-width: 32rem;
+    margin: 0 auto 38px;
+    padding: 18px 0;
+    border-top: 1px solid var(--gold-rule);
+    border-bottom: 1px solid var(--gold-rule);
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.68;
+    color: var(--ink-mid);
+  }
+  .editor-note p { margin: 0; }
+
+  /* ── Taylor's prose ── */
+  .exposition p { margin-bottom: 1.45em; }
+  .exposition p.opens::first-letter {
+    font-family: var(--cinzel);
+    font-size: 4.2em;
+    font-weight: 400;
+    float: left;
+    line-height: 0.76;
+    margin: 0.08em 0.12em 0 0;
+    color: var(--gold);
+  }
+
+  /* Scripture Taylor quotes as indented poetry */
+  .verse {
+    margin: 1.7em 0 1.7em 2.2em;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.62;
+    color: var(--ink-mid);
+  }
+
+  /* Hymns and poems */
+  .hymn {
+    margin: 2em auto;
+    max-width: 26rem;
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--gold);
+  }
+
+  /* Taylor's six-section scheme */
+  .scheme { list-style: none; margin: 1.7em 0 1.7em 1.2em; }
+  .scheme li { margin-bottom: 0.9em; line-height: 1.5; }
+  .scheme .sch-num { font-family: var(--cinzel); font-size: 13px; letter-spacing: 0.1em; color: var(--gold); margin-right: 10px; }
+  .scheme .sch-ref { display: block; font-style: italic; font-size: 16px; color: var(--ink-light); }
+
+  /* Source/edition note set inline in the text */
+  .source-note {
+    margin: 1.7em 0;
+    padding-left: 20px;
+    border-left: 1px solid var(--gold-border);
+    font-size: 17px;
+    font-style: italic;
+    color: var(--ink-light);
+    line-height: 1.65;
+  }
+
+  /* ── Scripture epigraph block ── */
+  .scripture-block {
+    border-left: 3px solid var(--gold);
+    padding: 14px 20px 14px 28px;
+    margin: 0 0 36px;
+    background: rgba(166,124,46,0.04);
+    border-radius: 0 2px 2px 0;
+  }
+  .scripture-block p { font-style: italic; font-size: 19px; color: var(--ink-mid); line-height: 1.65; }
+  .scripture-ref {
+    display: block;
+    font-family: var(--cinzel);
+    font-size: 9.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 12px;
+    text-align: right;
+  }
+
+  /* ── Back to contents ── */
+  .back-link {
+    display: block;
+    text-align: center;
+    margin-top: 42px;
+    font-family: var(--cinzel);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    text-decoration: none;
+  }
+  .back-link:hover { color: var(--gold); }
+
+  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+  @media (max-width: 640px) {
+    body { font-size: 18px; line-height: 1.75; }
+    .wrap { padding: 0 22px; }
+    .book-title { font-size: 27px; }
+    .section-title { font-size: 22px; }
+    .exposition p.opens::first-letter { font-size: 3.6em; }
+    .verse { margin-left: 1em; }
+    .callout { padding: 16px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/index.html">Home</a>
+  <a href="/reflections.html">Reflections</a>
+  <a href="/articles.html">Articles</a>
+  <a href="/word-studies.html">Word Studies</a>
+  <a href="/books.html">Books</a>
+  <a href="/glossary.html">Glossary</a>
+  <a href="/resources.html" class="current">Resources</a>
+</nav>
+
+<div class="wrap">
+
+  <header class="book-header">
+    <div class="breadcrumb"><a href="/resources.html">Resources</a> &nbsp;·&nbsp; Classical Devotional</div>
+    <h1 class="book-title">Union and Communion</h1>
+    <p class="book-subtitle">Thoughts on &lsquo;The Song of Solomon&rsquo; Relating to Personal Fellowship With Christ</p>
+    <p class="book-author">James Hudson Taylor &nbsp;·&nbsp; Founder of the China Inland Mission</p>
+    <div class="book-rule"></div>
+    <p class="epigraph">&ldquo;True love cannot be stationary: it must either decline or grow.&rdquo;<cite>James Hudson Taylor</cite></p>
+  </header>
+
+  <div class="framing">
+    <p>Hudson Taylor is remembered for the China Inland Mission, and rightly. <em>Union and Communion</em> shows where that life came from. Written in the 1890s and prefaced by J. Stuart Holden in 1914, it is a short devotional reading of the Song of Songs, structured around six movements of the soul&rsquo;s life with Christ &mdash; surrender, drift, restoration, drift again, restoration again, and at last a communion that no longer breaks. Holden&rsquo;s foreword makes the point that matters: what Taylor expounds here, he also exemplified.</p>
+
+    <p>The book is offered in full below, with each section followed by its Scripture passage as Taylor arranged it. The attribution of speakers &mdash; Bridegroom, bride, and daughters of Jerusalem &mdash; is Taylor&rsquo;s own, and it is what makes the Song legible in a way few readings do. Readers following in their own Bible will notice that he departs from the King James text at three points, arguing the pronoun should read <em>she</em> rather than <em>he</em>; his reasons are in his own footnotes.</p>
+  </div>
+
+  <div class="download-row">
+    <a href="/resources/union-and-communion.pdf" target="_blank" rel="noopener">Download PDF &rarr;</a>
+    <span class="meta">The complete book, for printing and offline reading.</span>
+  </div>
+
+  <nav class="contents" id="contents" aria-label="Contents">
+    <h2>Contents</h2>
+    <ul>
+      <li><a href="#foreword">Foreword &mdash; J. Stuart Holden</a></li>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#the-title">The Title</a></li>
+    </ul>
+  </nav>
+
+  <div class="callout">
+    <p><span class="lead">Reading the Scripture passages</span> Taylor marks each speaker typographically: <strong>bold</strong> for the Bridegroom, <em>italic</em> for the bride, and plain text for the daughters of Jerusalem. The Hebrew itself carries no such labels &mdash; the attribution is Taylor&rsquo;s own reading, set out in his Introduction.</p>
+  </div>
+
+
+  <!-- ══════════ FOREWORD ══════════ -->
+  <section class="section" id="foreword">
+    <div class="section-eyebrow">Foreword</div>
+    <h2 class="section-title">Foreword</h2>
+    <p class="section-ref">J. Stuart Holden &nbsp;·&nbsp; 1 June 1914</p>
+
+    <div class="exposition">
+      <p class="opens">This little book, whose design is to lead the devout Bible student into the Green Pastures of the Good Shepherd, thence to the Banqueting House of the King, and thence to the service of the Vineyard, is one of the abiding legacies of Mr. Hudson Taylor to the Church. In the power of an evident unction from the Holy One, he has been enabled herein to unfold in simplest language the deep truth of the believer&rsquo;s personal union with the Lord, which under symbol and imagery is the subject of The Song of Songs. And in so doing, he has ministered an unfailing guidance to one of the most commonly neglected and misunderstood of the Sacred Scriptures. For how many have said in bewilderment at the richness of language and profusion of figure which both conceal and reveal its meaning, &ldquo;How can I understand except some man should guide me?&rdquo; It is safe to say that these pages cannot fail to help and bless all such.</p>
+
+      <p>To those who knew him, Mr. Hudson Taylor&rsquo;s life was in the nature of emphasis upon the value of this small volume. For what he here expounds he also exemplified. If his words indicate the possibility and blessedness of union with Christ, his whole life declared it in actual experience. He lived as one who was &ldquo;married to Another, even to Him Who is raised from the dead&rdquo;; and as the outcome of that union he brought forth &ldquo;fruit unto God.&rdquo; What he was has given a meaning and confirmation to what he has here said, which cannot be exaggerated. It is inevitable that there are those who will read and reject as mystical and unpractical, that which is so directly concerned with the intimacies of fellowship with the unseen Lord. I would, however, venture to remind such that the writer of these pages founded the China Inland Mission! He translated his vision of the Beloved into life-long strenuous service, and so kept it undimmed through all the years of a life which has had hardly a parallel in these our days.</p>
+
+      <p>This is really the commendation of the following short chapters. They proclaim an evangel which has been distilled from experience, and form at least a track through this fenced portion of God&rsquo;s Word, which will lead many an one who treads it into the joys of Emmanuel&rsquo;s land.</p>
+
+      <p style="text-align:right;font-style:italic;color:var(--ink-light);">J. STUART HOLDEN<br>June 1, 1914</p>
+    </div>
+
+    <a class="back-link" href="#contents">Contents</a>
+  </section>
+
+
+  <!-- ══════════ INTRODUCTION ══════════ -->
+  <section class="section" id="introduction">
+    <div class="section-eyebrow">Introduction</div>
+    <h2 class="section-title">Introduction</h2>
+
+    <div class="exposition">
+      <p class="opens">The great purpose towards which all the dispensational dealings of God are tending, is revealed to us in the fifteenth chapter of the First Epistle of Paul to the Corinthians: &ldquo;That God may be all in all.&rdquo; With this agrees the teaching of our Lord in John xvii. 3: &ldquo;And this is (the object of) life eternal, that they might know Thee the only true God, and JESUS CHRIST, whom Thou hast sent.&rdquo; This being so, shall we not act wisely by keeping this object ever in view in our daily life and study of God&rsquo;s holy Word?</p>
+
+      <p>All Scripture is given by inspiration of God and is profitable, and hence no part is, or can be, neglected without loss. Few portions of the Word will help the devout student more in the pursuit of this all-important &ldquo;knowledge of God&rdquo; than the too-much neglected &ldquo;Song of Solomon.&rdquo; Like other portions of the Word of God, this book has its difficulties. But so have all the works of God. Is not the fact that they surpass our unaided powers of comprehension and research a &ldquo;sign-manual&rdquo; of divinity? Can feeble man expect to grasp divine power, or to understand and interpret the works or the providences of the All-wise? And if not, is it surprising that His Word also needs superhuman wisdom for its interpretation? Thanks be to God, the illumination of the HOLY GHOST is promised to all who seek for it: what more can we desire?</p>
+
+      <p>Read without the key, this book is specially unintelligible, but that key is easily found in the express teachings of the New Testament. The Incarnate Word is the true key to the written Word; but even before the incarnation, the devout student of the Old Testament would find much help to the understanding of the sacred mysteries of this book in the prophetic writings; for there Israel was taught that her MAKER was her HUSBAND. John the Baptist, the last of the prophets, recognized the Bridegroom in the person of CHRIST, and said, &ldquo;He that hath the bride is the Bridegroom: but the friend of the Bridegroom, which standeth and heareth Him, rejoiceth greatly because of the Bridegroom&rsquo;s voice: this my joy therefore is fulfilled.&rdquo; Paul, in the fifth chapter of the Epistle to the Ephesians, goes still further, and teaches that the union of CHRIST with His Church, and her subjection to Him, underlies the very relationship of marriage, and affords the pattern for every godly union.</p>
+
+      <p>In Solomon, the bridegroom king, as well as author of this poem, we have a type of our LORD, the true Prince of peace, in His coming reign. Then will be found not merely His bride, the Church, but also a willing people, His subjects, over whom He shall reign gloriously. Then distant potentates will bring their wealth, and will behold the glory of the enthroned KING, proving Him with hard questions, as once came the Queen of Sheba to King Solomon; and blessed will they be to whom this privilege is accorded. A brief glance will suffice them for a lifetime; but what shall be the royal dignity and blessedness of the risen and exalted bride! For ever with her LORD, for ever like her LORD, for ever conscious that His desire is toward her, she will share alike His heart and His throne. Can a study of the book which helps us to understand these mysteries of grace and love be other than most profitable?</p>
+
+      <p>It is interesting to notice the contrast between this book and that preceding it. The Book of Ecclesiastes teaches emphatically that &ldquo;Vanity of vanities, all is vanity&rdquo;: and thus the necessary introduction to the Song of Solomon, which shows how true blessing and satisfaction are to be possessed. In like manner our SAVIOUR&rsquo;S teaching in the fourth of John points out in a word the powerlessness of earthly things to give lasting satisfaction, in striking contrast with the flow of blessing that results from the presence of the HOLY GHOST (whose work it is, not to reveal Himself but CHRIST as the Bridegroom of the soul); &ldquo;Whosoever drinketh of this water shall thirst again; but whosoever drinketh of the water that I shall give him shall never thirst: but the water that I shall give him shall be in him a well of water springing up&rdquo;&mdash;overflowing, on and on&mdash;&ldquo;unto everlasting life.&rdquo;</p>
+
+      <p>We shall find it helpful to consider the book in six sections:&mdash;</p>
+
+      <ul class="scheme">
+        <li><span class="sch-num">I.</span>The Unsatisfied Life and its Remedy.<span class="sch-ref">Chapter i. 2&ndash;ii. 7.</span></li>
+        <li><span class="sch-num">II.</span>Communion Broken. Restoration.<span class="sch-ref">Chapter ii. 8&ndash;iii. 5.</span></li>
+        <li><span class="sch-num">III.</span>Unbroken Communion.<span class="sch-ref">Chapter iii. 6&ndash;v. I.</span></li>
+        <li><span class="sch-num">IV.</span>Communion Again Broken. Restoration.<span class="sch-ref">Chapter v. 2&ndash;vi. 10.</span></li>
+        <li><span class="sch-num">V.</span>Fruits of Recognized Union.<span class="sch-ref">Chapter vi. II&ndash;viii. 4.</span></li>
+        <li><span class="sch-num">VI.</span>Unrestrained Communion.<span class="sch-ref">Chapter viii. 5&ndash;14.</span></li>
+      </ul>
+
+      <p>In each of these sections we shall find the speakers to be&mdash;the bride, the Bridegroom, and the daughters of Jerusalem; it is not usually difficult to ascertain the speaker, though in some of the verses different conclusions have been arrived at. The bride speaks of the Bridegroom as &ldquo;her Beloved&rdquo;; the Bridegroom speaks of her as &ldquo;His love,&rdquo; while the address of the daughters of Jerusalem is more varied. In the last four sections they style her &ldquo;the fairest among women,&rdquo; but in the fifth she is spoken of as &ldquo;the Shulamite,&rdquo; or the King&rsquo;s bride, and also as the &ldquo;Prince&rsquo;s daughter.&rdquo;</p>
+
+      <p>The student of this book will find great help in suitable Bible marking.</p>
+
+      <p class="source-note">[Note: In the scripture passages following each Section, individual speakers are displayed in different formatted text: The bold text indicates that the Bridegroom (Beloved) is speaking. The Italic text indicates that the bride (love) is speaking. The plain text indicates that the daughters of Jerusalem are speaking.]</p>
+
+      <p>A horizontal line marking off the address of each speaker, with a double line to divide the sections, would be useful, as also perpendicular lines in the margin to indicate the speaker. We have ourselves ruled a single line to connect the verses which contain the utterances of the bride; a double line to indicate those of the Bridegroom, and a waved line to indicate the addresses of the daughters of Jerusalem.</p>
+
+      <p>It will be observed that the bride is the chief speaker in Sections I., II., and is much occupied with herself; but in Section III., where the communion is unbroken, she has little to say, and appears as the hearer; the daughters of Jerusalem give a long address, and the Bridegroom His longest. In that section for the first time He calls her His bride, and allures her to fellowship in service. In Section IV., the bride again is the chief speaker, but after her restoration the Bridegroom speaks at length, and &ldquo;upbraideth not.&rdquo; In Section V., as we noticed, the bride is no longer called &ldquo;the fairest among women,&rdquo; but claims herself to be, and is recognized as, the royal bride. In Section VI., the Bridegroom claims her from her very birth, and not merely from her espousals, as GOD in Ezekiel xvi. claimed Israel.</p>
+
+      <p class="hymn">In the secret of His presence<br>
+      How my soul delights to hide!<br>
+      Oh, how precious are the lessons<br>
+      Which I learn at JESUS&rsquo; side!<br>
+      Earthly cares can never vex me,<br>
+      Neither trials lay me low;<br>
+      For when Satan comes to vex me,<br>
+      To the secret place I go!</p>
+    </div>
+
+    <a class="back-link" href="#contents">Contents</a>
+  </section>
+
+
+  <!-- ══════════ THE TITLE ══════════ -->
+  <section class="section" id="the-title">
+    <div class="section-eyebrow">The Title</div>
+    <h2 class="section-title">The Title</h2>
+    <p class="section-ref">Song of Solomon 1:1</p>
+
+    <div class="scripture-block">
+      <p>&ldquo;The Song of Songs, which is Solomon&rsquo;s.&rdquo;<span class="scripture-ref">Song of Solomon 1:1</span></p>
+    </div>
+
+    <div class="exposition">
+      <p class="opens">Well may this book be called the Song of Songs! There is no song like it. Read aright, it brings a gladness to the heart which is as far beyond the joy of earthly things as heaven is higher than the earth. It has been well said that this is a song which grace alone can teach, and experience alone can learn. Our SAVIOUR, speaking of the union of the branch with the vine, adds, &ldquo;These things have I spoken unto you, that My joy might remain in you, and that your joy might be full&rdquo; (John xv. II). And the beloved disciple, writing of Him who &ldquo;was from the beginning,&rdquo; who &ldquo;was with the FATHER, and was manifested unto us,&rdquo; in order that we might share the fellowship which He enjoyed, also says, &ldquo;These things we write unto you, that your joy may be full.&rdquo; Union with CHRIST, and abiding in CHRIST, what do they not secure? Peace, perfect peace; rest, constant rest; answers to all our prayers; victory over all our foes; pure, holy living; ever-increasing fruitfulness. All, all of these are the glad outcome of abiding in CHRIST. To deepen this union, to make more constant this abiding, is the practical use of this precious Book.</p>
+    </div>
+
+    <a class="back-link" href="#contents">Contents</a>
+  </section>
+
+
+  <div class="callout" style="margin-top:64px;">
+    <p><span class="lead">About this text</span> <em>Union and Communion</em> was first published in the 1890s; this edition follows the text carrying J. Stuart Holden&rsquo;s foreword of 1914. Hudson Taylor died in 1905 and the work is in the public domain. The section headings, the arrangement of Scripture, and the attribution of speakers are Taylor&rsquo;s own.</p>
+  </div>
+
+</div>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>
