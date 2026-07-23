@@ -82,3 +82,8 @@ The card copy and manifest entry are added separately by the maintainer.
 - **Word Studies listing** is generated from the `STUDIES` manifest in `word-studies.html`
   (index + cards). Each study: add one object (id `ws-slug`, `lang` "hebrew"/"greek").
 - **Handout PDFs** that are only meant to be reached from inside an article get no card.
+- **RSS:** `feed.xml` at the repo root is the reflections feed (linked from the home page via
+  `follow.html`). When adding a new reflection, also add one `<item>` at the TOP of the list:
+  title, absolute link + guid (same URL), pubDate in RFC-822 form (e.g.
+  `Fri, 24 Jul 2026 06:00:00 +1000`), and a one-sentence description (reuse the manifest summary,
+  shortened). Keep roughly the 15 most recent items; drop the oldest when adding.
