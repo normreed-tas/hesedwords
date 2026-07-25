@@ -78,10 +78,23 @@ The card copy and manifest entry are added separately by the maintainer.
   If it stalls in "Queued" for many minutes, cancel and push an empty commit.
 - **Home page panels:** a new **psalm** reflection updates the *Psalms* panel; any other
   reflection updates the *Current Reading* panel (`index.html`, `.daily-reflection`).
-- **Reflections listing** is generated from the `ARTICLES` manifest in `reflections.html`.
-- **Word Studies listing** is generated from the `STUDIES` manifest in `word-studies.html`
-  (index + cards). Each study: add one object (id `ws-slug`, `lang` "hebrew"/"greek").
+- **Reflections listing** is generated from the `ARTICLES` manifest, which now lives in
+  `js/reflections-data.js` (loaded via `<script src>` by `reflections.html`) — NOT inline in the
+  page anymore. Edit that file when adding a reflection, newest first.
+- **Word Studies listing** is generated from the `STUDIES` manifest, which now lives in
+  `js/word-studies-data.js` (loaded via `<script src>` by `word-studies.html`). Each study: add
+  one object (id `ws-slug`, `lang` "hebrew"/"greek", plus `date`, `scripture[]`, `themes[]` —
+  added for the combined home-page index, not used by the word-studies page itself).
 - **Handout PDFs** that are only meant to be reached from inside an article get no card.
+- **Combined home-page index** (site-wide Browse Everything, below the hub cards) reads from
+  FOUR shared files in `js/`: `reflections-data.js`, `word-studies-data.js`, `articles-data.js`,
+  `books-data.js`. The first two are the single source of truth for their own pages (see above).
+  The last two (`articles-data.js`, `books-data.js`) are metadata MIRRORS — `articles.html` and
+  `books.html` remain hand-written HTML cards, unchanged. **Whenever you add a new article or
+  book card by hand, also add a matching entry to the corresponding `-data.js` file** (title,
+  url, date, scripture[], themes[], summary) or it won't appear in the combined index. Books
+  spanning many chapters (e.g. a set of Psalms) get a single light representative scripture
+  anchor (first chapter), not every chapter enumerated — see Songs for the Road.
 - **RSS:** `feed.xml` at the repo root is the reflections feed (linked from the home page via
   `follow.html`). When adding a new reflection, also add one `<item>` at the TOP of the list:
   title, absolute link + guid (same URL), pubDate in RFC-822 form (e.g.
