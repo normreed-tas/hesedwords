@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Coincidence",
+    date:     "2026-07-27",
+    url:      "/reflections/coincidence.html",
+    summary:  "The book of Esther never once names God, and reads at first like a story about luck — until nahafokh hu, the reverse happened, arrives at the pivot. A reflection on the dice that named Purim, and on a Friday-the-thirteenth morning that turned about the same way.",
+    scripture: ["Esther"],
+    themes:   ["providence", "Purim", "coincidence", "prayer meeting", "cardiac arrest"]
+  },
+  {
     title:    "God Seeks What Has Been Driven Away",
     date:     "2026-06-12",
     url:      "/reflections/god-seeks-what-has-been-driven-away.html",
