@@ -862,6 +862,69 @@
   }
   .browse-field select:disabled { opacity: 0.42; cursor: default; }
   .browse-field select:focus { outline: none; border-color: var(--gold); }
+
+  /* Theme combobox — type-to-filter */
+  .browse-combo { position: relative; }
+  .browse-combo input {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 15px;
+    color: var(--ink);
+    background: var(--parchment-mid);
+    border: 1px solid var(--border-light);
+    border-radius: 2px;
+    padding: 6px 26px 6px 10px;
+    min-width: 118px;
+    width: 152px;
+  }
+  .browse-combo input:focus { outline: none; border-color: var(--gold); }
+  .browse-combo input::placeholder { color: var(--ink); opacity: 0.55; }
+  #browse-theme-clear {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0 4px;
+    font-size: 17px;
+    line-height: 1;
+    color: var(--ink-faint);
+    cursor: pointer;
+  }
+  #browse-theme-clear:hover { color: var(--accent); }
+  .browse-combo-list {
+    position: absolute;
+    z-index: 40;
+    top: calc(100% + 3px);
+    left: 0;
+    width: 232px;
+    max-height: 244px;
+    overflow-y: auto;
+    margin: 0;
+    padding: 4px 0;
+    list-style: none;
+    background: var(--parchment);
+    border: 1px solid var(--gold);
+    border-radius: 2px;
+    box-shadow: 0 8px 24px var(--shadow);
+  }
+  .browse-combo-list li {
+    padding: 6px 12px;
+    font-size: 15px;
+    color: var(--ink-light);
+    cursor: pointer;
+  }
+  .browse-combo-list li[aria-selected="true"],
+  .browse-combo-list li:hover {
+    background: var(--parchment-dark);
+    color: var(--ink);
+  }
+  .browse-combo-empty {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--ink-faint);
+  }
   #browse-reset {
     font-family: 'Cinzel', serif;
     font-size: 8px;
@@ -960,6 +1023,14 @@
   @media (max-width: 700px) {
     .browse-filters { gap: 10px; }
     .browse-field select { min-width: 104px; font-size: 14px; }
+    /* keep the open theme list inside the viewport: hang it off the
+       input's right edge rather than its left */
+    .browse-combo input { width: 148px; min-width: 104px; font-size: 14px; }
+    .browse-combo-list {
+      left: auto;
+      right: 0;
+      width: min(232px, calc(100vw - 36px));
+    }
     .browse-card { flex-direction: column; gap: 10px; }
     .browse-badge { order: -1; align-self: flex-start; }
   }
@@ -1406,8 +1477,14 @@
       <select id="browse-verse" disabled><option value="">All</option></select>
     </div>
     <div class="browse-field">
-      <label for="browse-theme">Theme</label>
-      <select id="browse-theme"><option value="">All</option></select>
+      <label for="browse-theme-input">Theme</label>
+      <div class="browse-combo">
+        <input type="text" id="browse-theme-input" placeholder="All" autocomplete="off"
+               role="combobox" aria-expanded="false" aria-autocomplete="list"
+               aria-controls="browse-theme-list">
+        <button type="button" id="browse-theme-clear" aria-label="Clear theme filter" hidden>&times;</button>
+        <ul id="browse-theme-list" class="browse-combo-list" role="listbox" aria-label="Themes" hidden></ul>
+      </div>
     </div>
     <div class="browse-field">
       <label for="browse-type">Type</label>

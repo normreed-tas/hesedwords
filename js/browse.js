@@ -112,6 +112,9 @@
   }
 
   /* ── Build the dropdowns ────────────────────────────────────── */
+  var THEMES = [];       // every unique theme, sorted
+  var themeValue = "";   // the currently applied theme ("" = all)
+
   function buildFilters() {
     var themeSet = new Set(), yearSet = new Set(), typeSet = new Set();
     ITEMS.forEach(function (a) {
@@ -120,14 +123,113 @@
       typeSet.add(a.type);
     });
 
-    populate("browse-book",  Object.keys(SCRIPTURE_INDEX).sort(byBookOrder));
-    populate("browse-theme", Array.from(themeSet).sort(function (a, b) {
+    THEMES = Array.from(themeSet).sort(function (a, b) {
       return a.localeCompare(b, undefined, { sensitivity: "base" });
-    }));
+    });
+
+    populate("browse-book",  Object.keys(SCRIPTURE_INDEX).sort(byBookOrder));
     populate("browse-year",  Array.from(yearSet).sort().reverse());
     populate("browse-type",  Object.keys(TYPES)
       .filter(function (k) { return typeSet.has(k); })
       .map(function (k) { return { value: k, label: TYPES[k].label }; }));
+  }
+
+  /* ── Theme combobox (type-to-filter) ────────────────────────── */
+  var comboOpen = false, activeIndex = -1, matches = [];
+
+  function comboInput() { return $("browse-theme-input"); }
+  function comboList()  { return $("browse-theme-list"); }
+
+  function setTheme(v) {
+    themeValue = v;
+    comboInput().value = v;
+    $("browse-theme-clear").hidden = !v;
+    render();
+  }
+
+  function closeCombo() {
+    comboOpen = false;
+    activeIndex = -1;
+    var list = comboList();
+    list.hidden = true;
+    list.innerHTML = "";
+    comboInput().setAttribute("aria-expanded", "false");
+  }
+
+  function openCombo(query) {
+    var q = (query || "").trim().toLowerCase();
+    matches = q
+      ? THEMES.filter(function (t) { return t.toLowerCase().indexOf(q) !== -1; })
+      : THEMES.slice();
+
+    var list = comboList();
+    list.innerHTML = "";
+
+    if (!matches.length) {
+      list.innerHTML = '<li class="browse-combo-empty" role="presentation">No matching theme</li>';
+    } else {
+      matches.forEach(function (t, i) {
+        var li = document.createElement("li");
+        li.setAttribute("role", "option");
+        li.setAttribute("aria-selected", String(i === activeIndex));
+        li.textContent = t;
+        li.addEventListener("mousedown", function (e) {
+          e.preventDefault();          // keep focus, beat the blur handler
+          setTheme(t);
+          closeCombo();
+        });
+        list.appendChild(li);
+      });
+    }
+
+    list.hidden = false;
+    comboOpen = true;
+    comboInput().setAttribute("aria-expanded", "true");
+  }
+
+  function highlight(i) {
+    var list = comboList();
+    var items = list.querySelectorAll('li[role="option"]');
+    if (!items.length) return;
+    if (i < 0) i = items.length - 1;
+    if (i >= items.length) i = 0;
+    activeIndex = i;
+    items.forEach(function (el, n) { el.setAttribute("aria-selected", String(n === i)); });
+    items[i].scrollIntoView({ block: "nearest" });
+  }
+
+  function initCombo() {
+    var input = comboInput();
+
+    input.addEventListener("focus", function () { openCombo(input.value === themeValue ? "" : input.value); });
+    input.addEventListener("input", function () {
+      activeIndex = -1;
+      // clearing the box clears the filter
+      if (!input.value.trim() && themeValue) { themeValue = ""; $("browse-theme-clear").hidden = true; render(); }
+      openCombo(input.value);
+    });
+
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown") { e.preventDefault(); if (!comboOpen) openCombo(input.value); else highlight(activeIndex + 1); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); if (comboOpen) highlight(activeIndex - 1); }
+      else if (e.key === "Enter") {
+        e.preventDefault();
+        if (comboOpen && matches.length) { setTheme(matches[activeIndex >= 0 ? activeIndex : 0]); closeCombo(); }
+      } else if (e.key === "Escape") {
+        input.value = themeValue;   // revert any half-typed text
+        closeCombo();
+      }
+    });
+
+    input.addEventListener("blur", function () {
+      input.value = themeValue;     // never leave an unapplied query showing
+      closeCombo();
+    });
+
+    $("browse-theme-clear").addEventListener("click", function () {
+      setTheme("");
+      input.focus();
+    });
   }
 
   function onBookChange() {
@@ -165,7 +267,7 @@
     var bookF    = $("browse-book").value,
         chapterF = $("browse-chapter").value,
         verseF   = $("browse-verse").value,
-        themeF   = $("browse-theme").value,
+        themeF   = themeValue,
         typeF    = $("browse-type").value,
         yearF    = $("browse-year").value;
 
@@ -223,7 +325,9 @@
     $("browse-book").value = "";
     resetSelect("browse-chapter", true);
     resetSelect("browse-verse", true);
-    $("browse-theme").value = "";
+    themeValue = "";
+    comboInput().value = "";
+    $("browse-theme-clear").hidden = true;
     $("browse-type").value = "";
     $("browse-year").value = "";
     render();
@@ -233,10 +337,10 @@
   function init() {
     if (!$("browse-listing")) return;
     buildFilters();
+    initCombo();
     $("browse-book").addEventListener("change", onBookChange);
     $("browse-chapter").addEventListener("change", onChapterChange);
     $("browse-verse").addEventListener("change", render);
-    $("browse-theme").addEventListener("change", render);
     $("browse-type").addEventListener("change", render);
     $("browse-year").addEventListener("change", render);
     $("browse-reset").addEventListener("click", resetFilters);
