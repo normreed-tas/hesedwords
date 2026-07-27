@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "I Am Like an Olive Tree",
+    date:     "2026-07-28",
+    url:      "/reflections/i-am-like-an-olive-tree.html",
+    summary:  "Two men stand in the same psalm under the same verb. Doeg trusted in the abundance of his riches; David answers, but I am like a green olive tree in the house of God. Batach — to lean your weight on something and let it take you. The same posture, different ground: one man is uprooted, the other is a tree that cannot be.",
+    scripture: ["Psalm 52"],
+    themes:   ["batach", "trust", "hesed", "the olive tree", "Doeg", "endurance"]
+  },
+  {
     title:    "Coincidence",
     date:     "2026-07-27",
     url:      "/reflections/coincidence.html",
