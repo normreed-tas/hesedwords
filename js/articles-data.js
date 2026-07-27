@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Spot the Difference",
+    url:      "/articles/spot-the-difference.html",
+    date:     "2026-07-28",
+    scripture: ["Psalm 14", "Psalm 53"],
+    themes:   ["Zion", "the fool", "salvation", "the poor", "refuge", "paired psalms"],
+    summary:  "Psalm 14 and Psalm 53 are almost the same psalm — same opening, same verdict, same ache at the end. Two lines have gone missing from the middle of Psalm 53: the company God is with, and the place the poor could hide. The same cry goes up out of Zion, with nowhere else to look."
+  },
+  {
     title:    "Draw Me! The Voice Matters",
     url:      "/articles/draw-me-the-voice-matters.html",
     date:     "2026-07-01",
