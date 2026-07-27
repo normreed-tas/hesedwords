@@ -1,0 +1,4 @@
+# Local scratch/diagnostic scripts — kept on disk, not published.
+# The site is served from the repo root, so anything committed here is
+# publicly reachable; these are local tools, not site content.
+books/_audit.py
