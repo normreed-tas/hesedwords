@@ -872,26 +872,31 @@
     background: var(--parchment-mid);
     border: 1px solid var(--border-light);
     border-radius: 2px;
-    padding: 6px 26px 6px 10px;
+    padding: 6px 44px 6px 10px;
     min-width: 118px;
     width: 152px;
   }
   .browse-combo input:focus { outline: none; border-color: var(--gold); }
   .browse-combo input::placeholder { color: var(--ink); opacity: 0.55; }
-  #browse-theme-clear {
+  #browse-theme-clear,
+  #browse-theme-toggle {
     position: absolute;
-    right: 6px;
     top: 50%;
     transform: translateY(-50%);
     background: none;
     border: none;
     padding: 0 4px;
-    font-size: 17px;
     line-height: 1;
     color: var(--ink-faint);
     cursor: pointer;
   }
+  #browse-theme-clear { right: 24px; font-size: 17px; }
   #browse-theme-clear:hover { color: var(--accent); }
+  #browse-theme-toggle { right: 7px; display: flex; align-items: center; }
+  #browse-theme-toggle svg { width: 10px; height: 6px; display: block; }
+  #browse-theme-toggle:hover { color: var(--gold); }
+  .browse-combo.is-open #browse-theme-toggle { color: var(--gold); }
+  .browse-combo.is-open #browse-theme-toggle svg { transform: rotate(180deg); }
   .browse-combo-list {
     position: absolute;
     z-index: 40;
@@ -1483,6 +1488,12 @@
                role="combobox" aria-expanded="false" aria-autocomplete="list"
                aria-controls="browse-theme-list">
         <button type="button" id="browse-theme-clear" aria-label="Clear theme filter" hidden>&times;</button>
+        <button type="button" id="browse-theme-toggle" aria-label="Show all themes" tabindex="-1">
+          <svg viewBox="0 0 10 6" aria-hidden="true" focusable="false">
+            <path d="M1 1 L5 5 L9 1" fill="none" stroke="currentColor" stroke-width="1.4"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
         <ul id="browse-theme-list" class="browse-combo-list" role="listbox" aria-label="Themes" hidden></ul>
       </div>
     </div>

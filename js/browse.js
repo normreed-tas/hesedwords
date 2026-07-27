@@ -94,8 +94,16 @@
 
   function $(id) { return document.getElementById(id); }
 
+  /* Null-safe helpers. The markup and this file are separate cached
+     resources, so a browser can pair an old index.html with a new
+     browse.js (or vice versa). Nothing here may assume an element
+     exists — one missing node must never take down the rest. */
+  function val(id) { var el = $(id); return el ? el.value : ""; }
+  function on(id, ev, fn) { var el = $(id); if (el) el.addEventListener(ev, fn); }
+
   function populate(id, values) {
     var sel = $(id);
+    if (!sel) return;
     values.forEach(function (v) {
       var opt = document.createElement("option");
       opt.value = v.value !== undefined ? v.value : v;
@@ -106,6 +114,7 @@
 
   function resetSelect(id, disabled) {
     var sel = $(id);
+    if (!sel) return;
     sel.innerHTML = '<option value="">All</option>';
     sel.value = "";
     sel.disabled = !!disabled;
@@ -147,13 +156,15 @@
     render();
   }
 
+  function comboWrap() { var i = comboInput(); return i ? i.parentNode : null; }
+
   function closeCombo() {
     comboOpen = false;
     activeIndex = -1;
     var list = comboList();
-    list.hidden = true;
-    list.innerHTML = "";
-    comboInput().setAttribute("aria-expanded", "false");
+    if (list) { list.hidden = true; list.innerHTML = ""; }
+    if (comboInput()) comboInput().setAttribute("aria-expanded", "false");
+    if (comboWrap()) comboWrap().classList.remove("is-open");
   }
 
   function openCombo(query) {
@@ -185,6 +196,7 @@
     list.hidden = false;
     comboOpen = true;
     comboInput().setAttribute("aria-expanded", "true");
+    if (comboWrap()) comboWrap().classList.add("is-open");
   }
 
   function highlight(i) {
@@ -200,6 +212,7 @@
 
   function initCombo() {
     var input = comboInput();
+    if (!input || !comboList()) return;   // markup not present — skip quietly
 
     input.addEventListener("focus", function () { openCombo(input.value === themeValue ? "" : input.value); });
     input.addEventListener("input", function () {
@@ -226,10 +239,21 @@
       closeCombo();
     });
 
-    $("browse-theme-clear").addEventListener("click", function () {
+    on("browse-theme-clear", "click", function () {
       setTheme("");
       input.focus();
     });
+
+    /* Caret toggles the full list. mousedown (not click) so it beats
+       the input's blur handler, same reason as the options. */
+    var toggle = $("browse-theme-toggle");
+    if (toggle) {
+      toggle.addEventListener("mousedown", function (e) {
+        e.preventDefault();
+        if (comboOpen) { closeCombo(); }
+        else { input.focus(); openCombo(""); }
+      });
+    }
   }
 
   function onBookChange() {
@@ -264,12 +288,12 @@
 
   /* ── Render ─────────────────────────────────────────────────── */
   function render() {
-    var bookF    = $("browse-book").value,
-        chapterF = $("browse-chapter").value,
-        verseF   = $("browse-verse").value,
+    var bookF    = val("browse-book"),
+        chapterF = val("browse-chapter"),
+        verseF   = val("browse-verse"),
         themeF   = themeValue,
-        typeF    = $("browse-type").value,
-        yearF    = $("browse-year").value;
+        typeF    = val("browse-type"),
+        yearF    = val("browse-year");
 
     var filtered = ITEMS.filter(function (a) {
       if (bookF && !a.scripture.some(function (s) {
@@ -322,14 +346,14 @@
   }
 
   function resetFilters() {
-    $("browse-book").value = "";
+    if ($("browse-book")) $("browse-book").value = "";
     resetSelect("browse-chapter", true);
     resetSelect("browse-verse", true);
     themeValue = "";
-    comboInput().value = "";
-    $("browse-theme-clear").hidden = true;
-    $("browse-type").value = "";
-    $("browse-year").value = "";
+    if (comboInput()) comboInput().value = "";
+    if ($("browse-theme-clear")) $("browse-theme-clear").hidden = true;
+    if ($("browse-type")) $("browse-type").value = "";
+    if ($("browse-year")) $("browse-year").value = "";
     render();
   }
 
@@ -337,13 +361,24 @@
   function init() {
     if (!$("browse-listing")) return;
     buildFilters();
-    initCombo();
-    $("browse-book").addEventListener("change", onBookChange);
-    $("browse-chapter").addEventListener("change", onChapterChange);
-    $("browse-verse").addEventListener("change", render);
-    $("browse-type").addEventListener("change", render);
-    $("browse-year").addEventListener("change", render);
-    $("browse-reset").addEventListener("click", resetFilters);
+
+    /* Core filters are wired FIRST and unconditionally. The theme
+       combobox is an enhancement on top; if it ever fails to
+       initialise it must not stop the Book > Chapter > Verse
+       cascade from working. */
+    on("browse-book",    "change", onBookChange);
+    on("browse-chapter", "change", onChapterChange);
+    on("browse-verse",   "change", render);
+    on("browse-type",    "change", render);
+    on("browse-year",    "change", render);
+    on("browse-reset",   "click",  resetFilters);
+
+    try {
+      initCombo();
+    } catch (e) {
+      if (window.console) console.warn("Theme filter unavailable:", e);
+    }
+
     render();
   }
 
