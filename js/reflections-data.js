@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Pride",
+    date:     "2026-07-30",
+    url:      "/reflections/pride.html",
+    summary:  "Waking with thoughts upon the bed, like Nebuchadnezzar at the start of Daniel 4 — and the discovery that pride never feels like pride from the inside, only ever like accuracy. The verdict we reach about our own humility is useless; the only real test is whether we can still be corrected.",
+    scripture: ["Daniel 4:5"],
+    themes:   ["pride", "humility", "correction", "Nebuchadnezzar"]
+  },
+  {
     title:    "I Am Like an Olive Tree",
     date:     "2026-07-28",
     url:      "/reflections/i-am-like-an-olive-tree.html",

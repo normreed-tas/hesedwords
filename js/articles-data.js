@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Nobody Left to Say No",
+    url:      "/articles/nobody-left-to-say-no.html",
+    date:     "2026-07-30",
+    scripture: ["Daniel 4:30", "Daniel 4:27", "Daniel 4:33", "Daniel 4:34", "Daniel 4:36", "Isaiah 14:13-14", "2 Kings 5:11-14"],
+    themes:   ["pride", "humility", "correction", "Nebuchadnezzar", "Naaman"],
+    summary:  "Nebuchadnezzar on the roof of his palace, Howard Hughes in a sealed hotel room, Naaman in the Jordan, and a preacher buried in a pine box built by prisoners. Pride does not announce itself — it sounds, from the inside, like accuracy. The only real test is whether anyone is still able to tell you the truth, and whether you would listen."
+  },
+  {
     title:    "Spot the Difference",
     url:      "/articles/spot-the-difference.html",
     date:     "2026-07-28",
