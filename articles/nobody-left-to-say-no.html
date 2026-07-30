@@ -230,6 +230,24 @@ blockquote.scripture .ref{
   margin:3em 0 0;
 }
 
+/* ── PDF download ── */
+.pdf-download{
+  text-align:center;
+  margin-top:44px;
+}
+.pdf-download a{
+  font-family:'Cinzel',serif;
+  font-size:10px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--muted);
+  text-decoration:none;
+  border-bottom:1px solid var(--gold-soft);
+  padding-bottom:2px;
+  transition:color .2s,border-color .2s;
+}
+.pdf-download a:hover{color:var(--gold-deep);border-bottom-color:var(--gold-deep);}
+
 /* ── Mobile ── */
 @media (max-width:700px){
   body{font-size:19px;}
@@ -622,6 +640,10 @@ blockquote.scripture .ref{
   </div>
 
   <div class="tagline">Hesed Words &middot; Written for the road</div>
+
+  <div class="pdf-download">
+    <a href="/articles/pdf/nobody-left-to-say-no.pdf" target="_blank" rel="noopener">Download as PDF</a>
+  </div>
 
 </div>
 
