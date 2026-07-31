@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "This I Know",
+    date:     "2026-07-31",
+    url:      "/reflections/this-i-know.html",
+    summary:  "Psalm 56 never says we, only I. Batach — to lean your whole weight on something and find out whether it holds. A reflection on trust, the tears God counts and bottles, and the one line in the psalm that only comes after the tossings have been numbered: this I know, that God is for me.",
+    scripture: ["Psalm 56"],
+    themes:   ["batach", "trust", "tears", "knowing God", "fear"]
+  },
+  {
     title:    "Pride",
     date:     "2026-07-30",
     url:      "/reflections/pride.html",
