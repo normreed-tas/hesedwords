@@ -100,3 +100,48 @@ The card copy and manifest entry are added separately by the maintainer.
   title, absolute link + guid (same URL), pubDate in RFC-822 form (e.g.
   `Fri, 24 Jul 2026 06:00:00 +1000`), and a one-sentence description (reuse the manifest summary,
   shortened). Keep roughly the 15 most recent items; drop the oldest when adding.
+- **In-page PDF link:** articles with a companion PDF need a "Download as PDF" link on the
+  article page itself (a `.pdf-download` block after the AI disclaimer, before `</div>`), not
+  just on the articles.html listing card. Easy to drop when building a new article page — check
+  for it explicitly.
+
+## Established patterns for long-form / paired pieces
+
+These are not fixed classes shared across a stylesheet — this site has no shared CSS file, and
+every page styles itself inline. Treat what follows as a documented pattern to reproduce
+per-page, not a rule that a class name must match exactly.
+
+- **Numeral-and-interlude sections** (for articles long enough to need markers — not shorter
+  pieces, not reflections): sections are centred Roman numerals in Cinzel small caps
+  (`h2.numeral`). An interlude breaks the sequence by name instead of number — heading word in
+  Cinzel small caps with an italic subtitle beneath (`h2.interlude > span`), signalling a change
+  of register and marking it as outside the argument's progression. See
+  `articles/reading-daniel-without-arithmetic.html` for a full example.
+- **Footnotes:** superscript numeral (`sup.fn`) immediately after punctuation in the text; notes
+  collected in a ruled block (`.notes`) at the foot of the article, above the AI disclaimer,
+  numbered per-article from 1. Reserved for citing sources, never for asides — if it's saying
+  something rather than citing something, it belongs in the prose.
+- **Cross-links between companion pieces:** where an article and a reflection are written as a
+  pair, each links to the other near the end of the body. Two variants are in live use — an
+  inline italic sentence (`.companion`, e.g. `articles/nobody-left-to-say-no.html`) and a boxed
+  callout (`.crosslink`, e.g. `articles/reading-daniel-without-arithmetic.html`). Either is fine;
+  match whichever the piece's tone suits. Both are screen-only — strip from any print/PDF copy.
+- **Selah block** (reflections): a personal, italicised aside set off from the surrounding prose,
+  usually with gold rules top and bottom on a slightly lighter background and a small centred
+  "Selah" heading. Every reflection that uses one restyles it locally to match that page's
+  palette — there is no single canonical version to copy verbatim; see any recent reflection
+  (e.g. `reflections/those-who-know-their-god.html`) for a representative example.
+
+## PDF companions
+
+Companion PDFs are produced outside this repo's normal edit/preview/deploy loop (currently by a
+separate Claude session working from a Word-style manuscript) and arrive here as a finished file
+plus the article HTML, both to be uploaded together — the maintainer's job is to link them, not
+to generate them. Notes for whoever generates them:
+- Render from a nav/footer-stripped copy of the article, not via `@media print` rules on the live
+  page — background suppression and elements like the cross-link box are unreliable that way.
+- Strip from the print copy: site nav, site footer, any `.companion`/`.crosslink` box, the
+  in-page `.pdf-download` block.
+- White page background, not parchment — parchment reads muddy on paper and costs ink.
+- A translation note (e.g. a memory verse quoted in older wording where the rest of the piece
+  uses ESV) counts as a footnote — mark the exception at first occurrence.
