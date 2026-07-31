@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Those Who Know Their God",
+    date:     "2026-08-01",
+    url:      "/reflections/those-who-know-their-god.html",
+    summary:  "Daniel 11:32 promises that those who know their God shall be strong and do exploits — a verse that once became, for a young Christian with an explanation for every date, a chapter about knowing better instead of a chapter about knowing God. The exploit is the instructing, not the solving.",
+    scripture: ["Daniel 11:32-33"],
+    themes:   ["Daniel", "certainty", "unity", "prophecy", "knowing God"]
+  },
+  {
     title:    "This I Know",
     date:     "2026-07-31",
     url:      "/reflections/this-i-know.html",

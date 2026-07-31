@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Reading Daniel Without Arithmetic",
+    url:      "/articles/reading-daniel-without-arithmetic.html",
+    date:     "2026-08-01",
+    scripture: ["Daniel 11:32-33", "Daniel 12:2-3", "Daniel 12:10"],
+    themes:   ["Daniel", "prophecy", "certainty", "eschatology", "endurance"],
+    summary:  "Daniel 11–12 has cost the church more peace than almost anything else in the Old Testament. Four broad readings, each guarding something real, and not one of them defending a date. The book itself says who reads it rightly — not the one with the best chronology, but the one being refined."
+  },
+  {
     title:    "Nobody Left to Say No",
     url:      "/articles/nobody-left-to-say-no.html",
     date:     "2026-07-30",
