@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Is There No Hesed in John?",
+    url:      "/articles/is-there-no-hesed-in-john.html",
+    date:     "2026-08-02",
+    scripture: ["John 1:14", "John 1:17", "John 13:1-17", "Hosea 6:6"],
+    themes:   ["hesed", "eleos", "charis", "aletheia", "agape", "John's Gospel"],
+    summary:  "The Greek word the Septuagint reaches for when translating hesed never appears in John's Gospel — not once in twenty-one chapters. But grace and truth, said twice in four verses at the very start, are almost certainly hesed we'emet in Greek clothing. The word doesn't go missing. It gets spent, once, and then John makes us watch it for twenty chapters."
+  },
+  {
     title:    "Reading Daniel Without Arithmetic",
     url:      "/articles/reading-daniel-without-arithmetic.html",
     date:     "2026-08-01",
