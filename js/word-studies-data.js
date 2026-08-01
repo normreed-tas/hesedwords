@@ -7,6 +7,18 @@
    ================================================================ */
 const STUDIES = [
   {
+    id:       "ws-rasha",
+    word:     "רָשָׁע",
+    lang:     "hebrew",
+    translit: "rasha'",
+    title:    "Is \"Wicked\" a Verdict or a Character?",
+    url:      "/word-studies/is-wicked-a-verdict-or-a-character.html",
+    date:     "2026-08-03",
+    scripture: ["Deuteronomy 25:1", "1 Kings 8:32", "Exodus 23:7", "Psalm 58:1"],
+    themes:   ["rasha", "tzaddiq", "wicked", "justice", "verdict"],
+    summary:  "The Hebrew behind \"wicked\" starts in a courtroom, not in a character. Rasha' is half of a forensic pair with tzaddiq — not two kinds of people but two outcomes of a case, and English kept the character sense while losing the courtroom that produced it."
+  },
+  {
     id:       "ws-idle",
     word:     "ἀργός",
     lang:     "greek",

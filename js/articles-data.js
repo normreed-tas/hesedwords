@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "What Did Jesus Call Wicked?",
+    url:      "/articles/what-did-jesus-call-wicked.html",
+    date:     "2026-08-03",
+    scripture: ["Psalm 58", "Psalm 82", "Matthew 23:23", "Matthew 25:26", "Matthew 18:32", "John 10:34"],
+    themes:   ["rasha", "wicked", "justice", "mercy", "the bench", "imprecatory psalms"],
+    summary:  "Psalm 58 is a psalm most Christians have never heard read aloud. Read alongside Psalm 82 and Matthew 23, it turns out to be saying what the gospel says — that authority given to protect the vulnerable, turned and used against them, has a name. Not a text the gospel improved on. A text that says what the gospel says."
+  },
+  {
     title:    "Is There No Hesed in John?",
     url:      "/articles/is-there-no-hesed-in-john.html",
     date:     "2026-08-02",

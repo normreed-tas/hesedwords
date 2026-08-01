@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "What Is Wicked in This Story?",
+    date:     "2026-08-03",
+    url:      "/reflections/what-is-wicked-in-this-story.html",
+    summary:  "Psalm 58 ends with the righteous bathing their feet in the blood of the wicked — unusable, until verse one turns out to say who it's actually addressed to. Not criminals. The bench. A reflection on twenty-five placements, a debt nobody thought they were carrying, and hesed withheld by people whose office existed to extend it.",
+    scripture: ["Psalm 58"],
+    themes:   ["rasha", "wicked", "justice", "the bench", "prison ministry", "hesed withheld"]
+  },
+  {
     title:    "Those Who Know Their God",
     date:     "2026-08-01",
     url:      "/reflections/those-who-know-their-god.html",
