@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "The Vow?",
+    date:     "2026-08-04",
+    url:      "/reflections/the-vow.html",
+    summary:  "Psalm 61 asks four times for a place — a rock, a tower, a tent, the shelter of wings — and every one of them has an owner. Then a vow appears and the prayer tilts: does the wing come at a price? Heard first, performed last, with the shelter sitting in between. Not the shape of a bargain.",
+    scripture: ["Psalm 61"],
+    themes:   ["neder", "shalem", "vows", "shelter", "belonging", "prison ministry"]
+  },
+  {
     title:    "What Is Wicked in This Story?",
     date:     "2026-08-03",
     url:      "/reflections/what-is-wicked-in-this-story.html",

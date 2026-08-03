@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "The Vow That Is Not a Payment",
+    url:      "/articles/vows.html",
+    date:     "2026-08-04",
+    scripture: ["Psalm 61", "Ecclesiastes 5", "Matthew 5", "Numbers 30", "Deuteronomy 23"],
+    themes:   ["neder", "shalem", "vows", "oaths", "obligation", "thanksgiving"],
+    summary:  "Most vows to God are made in a car park or a waiting room, and they all have the same shape: if you get me out of this, I will — which assumes a trade. The obligation is real; what is misplaced is what the obligation is for. On what a neder was, why Ecclesiastes warns against making one lightly, and what Jesus was actually objecting to."
+  },
+  {
     title:    "What Did Jesus Call Wicked?",
     url:      "/articles/what-did-jesus-call-wicked.html",
     date:     "2026-08-03",
