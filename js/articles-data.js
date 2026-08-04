@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "An Interview with a Saint",
+    url:      "/articles/an-interview-with-a-saint.html",
+    date:     "2026-08-06",
+    scripture: ["Romans 1:7", "1 Corinthians 1:2", "Philippians 1:1", "Ephesians 1:1"],
+    themes:   ["hagioi", "saints", "testimony", "AIDS ministry", "community"],
+    summary:  "The word arrives already furnished — Francis, Teresa, held at a distance so the rest of us are let off. The New Testament's word for saint, hagioi, is almost always plural: not one figure but a room full of ordinary ones. A recorded conversation with the author's sister Jessica, about a week spent training to care for people with AIDS thirty years ago, and what it means that nobody is a saint alone."
+  },
+  {
     title:    "Measured, and Immeasurable",
     url:      "/articles/measured-and-immeasurable.html",
     date:     "2026-08-05",
