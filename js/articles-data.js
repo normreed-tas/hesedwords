@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Measured, and Immeasurable",
+    url:      "/articles/measured-and-immeasurable.html",
+    date:     "2026-08-05",
+    scripture: ["Zechariah 1:16", "Zechariah 2", "2 Kings 21:13", "Lamentations 2:8", "Ephesians 3:18-19"],
+    themes:   ["rachamim", "mercy", "measure", "prison ministry", "forgiveness", "delegation"],
+    summary:  "A young man in Zechariah's second vision goes out to survey Jerusalem, and is stopped — the city will not hold still to be measured. What that reversal of the demolition-line has to do with a burned man in a prison visits room, a tablet with a poor signal, and the sentence that took fourteen years to get truer rather than easier: grace is not grace if you don't know the offence."
+  },
+  {
     title:    "The Vow That Is Not a Payment",
     url:      "/articles/vows.html",
     date:     "2026-08-04",

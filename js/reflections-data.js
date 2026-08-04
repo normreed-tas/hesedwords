@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "The One Thing He Wouldn't Delegate",
+    date:     "2026-08-05",
+    url:      "/reflections/the-one-thing-he-wouldnt-delegate.html",
+    summary:  "A young man in Zechariah's second vision is stopped mid-survey — the cord was not the wrong instrument, just not the last word. A reflection on a hard man in Papua New Guinea who handed over every authority except the one to be merciful, and what it took thirty years to understand about that.",
+    scripture: ["Zechariah 2"],
+    themes:   ["mercy", "delegation", "authority", "Papua New Guinea"]
+  },
+  {
     title:    "The Vow?",
     date:     "2026-08-04",
     url:      "/reflections/the-vow.html",
