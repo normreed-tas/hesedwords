@@ -98,8 +98,18 @@ The card copy and manifest entry are added separately by the maintainer.
 - **RSS:** `feed.xml` at the repo root is the reflections feed (linked from the home page via
   `follow.html`). When adding a new reflection, also add one `<item>` at the TOP of the list:
   title, absolute link + guid (same URL), pubDate in RFC-822 form (e.g.
-  `Fri, 24 Jul 2026 06:00:00 +1000`), and a one-sentence description (reuse the manifest summary,
-  shortened). Keep roughly the 15 most recent items; drop the oldest when adding.
+  `Fri, 24 Jul 2026 06:00:00 +1000`), an `<enclosure>` + `<media:thumbnail>` pair pointing at
+  `https://hesedwords.com/images/feed-banner.png` (every item reuses this one site graphic — see
+  below), and a one-sentence description (reuse the manifest summary, shortened). Keep roughly
+  the 15 most recent items; drop the oldest when adding.
+- **Feed images:** `images/feed-banner.png` (1200×630) is the reusable graphic attached to every
+  RSS item via `<enclosure>`/`<media:thumbnail>`, and `images/feed-icon.png` (512×512) is the
+  feed's own icon, set once in `feed.xml`'s channel-level `<image>` block — readers like Inoreader
+  show this instead of a generic placeholder avatar. Both were rendered from throwaway HTML via
+  `npx playwright screenshot --viewport-size=W,H file:///path/to.html out.png` (Playwright's
+  Chromium must be installed first: `npx playwright install chromium`). Neither file is
+  reflection-specific — don't regenerate per upload; only touch them if the site's visual identity
+  changes.
 - **In-page PDF link:** articles with a companion PDF need a "Download as PDF" link on the
   article page itself (a `.pdf-download` block after the AI disclaimer, before `</div>`), not
   just on the articles.html listing card. Easy to drop when building a new article page — check

@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
 <channel>
   <title>Hesed Words — Reflections</title>
   <link>https://hesedwords.com/</link>
   <description>Devotional reflections by Norm Reed. Scripture, justice, and the love that holds. Written for the road.</description>
   <language>en-au</language>
   <atom:link href="https://hesedwords.com/feed.xml" rel="self" type="application/rss+xml"/>
+  <image>
+    <url>https://hesedwords.com/images/feed-icon.png</url>
+    <title>Hesed Words — Reflections</title>
+    <link>https://hesedwords.com/</link>
+  </image>
 
   <!-- ── Add new reflections at the TOP of this list, one <item> each ── -->
 
@@ -13,6 +18,8 @@
     <title>The Vow?</title>
     <link>https://hesedwords.com/reflections/the-vow.html</link>
     <guid>https://hesedwords.com/reflections/the-vow.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Tue, 04 Aug 2026 06:00:00 +1000</pubDate>
     <description>Psalm 61 asks four times for a place, and every shelter in it has an owner. Then a vow appears and the prayer tilts: heard first, performed last, with the shelter sitting in between. Not the shape of a bargain.</description>
   </item>
@@ -21,6 +28,8 @@
     <title>What Is Wicked in This Story?</title>
     <link>https://hesedwords.com/reflections/what-is-wicked-in-this-story.html</link>
     <guid>https://hesedwords.com/reflections/what-is-wicked-in-this-story.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Mon, 03 Aug 2026 06:00:00 +1000</pubDate>
     <description>Psalm 58 ends with the righteous bathing their feet in the blood of the wicked — unusable, until verse one turns out to say who it's actually addressed to. Not criminals. The bench.</description>
   </item>
@@ -29,6 +38,8 @@
     <title>Those Who Know Their God</title>
     <link>https://hesedwords.com/reflections/those-who-know-their-god.html</link>
     <guid>https://hesedwords.com/reflections/those-who-know-their-god.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Sat, 01 Aug 2026 06:00:00 +1000</pubDate>
     <description>Daniel 11:32 promises the people who know their God shall be strong and do exploits — a verse that once became, for a young Christian with an explanation for every date, a chapter about knowing better instead of knowing God.</description>
   </item>
@@ -37,6 +48,8 @@
     <title>This I Know</title>
     <link>https://hesedwords.com/reflections/this-i-know.html</link>
     <guid>https://hesedwords.com/reflections/this-i-know.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Fri, 31 Jul 2026 06:00:00 +1000</pubDate>
     <description>Psalm 56 never says we, only I. Batach — to lean your whole weight on something and find out whether it holds. This I know, that God is for me — a line that only comes after the tossings have been numbered.</description>
   </item>
@@ -45,6 +58,8 @@
     <title>Pride</title>
     <link>https://hesedwords.com/reflections/pride.html</link>
     <guid>https://hesedwords.com/reflections/pride.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Thu, 30 Jul 2026 06:00:00 +1000</pubDate>
     <description>Waking with thoughts upon the bed, like Nebuchadnezzar in Daniel 4 — and the discovery that pride never feels like pride from the inside, only ever like accuracy. The verdict we reach about our own humility is useless.</description>
   </item>
@@ -53,6 +68,8 @@
     <title>I Am Like an Olive Tree</title>
     <link>https://hesedwords.com/reflections/i-am-like-an-olive-tree.html</link>
     <guid>https://hesedwords.com/reflections/i-am-like-an-olive-tree.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Tue, 28 Jul 2026 06:00:00 +1000</pubDate>
     <description>Two men stand in the same psalm under the same verb. Doeg trusted in the abundance of his riches; David answers, but I am like a green olive tree in the house of God. Batach — the same posture, different ground.</description>
   </item>
@@ -61,6 +78,8 @@
     <title>Coincidence</title>
     <link>https://hesedwords.com/reflections/coincidence.html</link>
     <guid>https://hesedwords.com/reflections/coincidence.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Mon, 27 Jul 2026 06:00:00 +1000</pubDate>
     <description>The book of Esther never once names God, and reads at first like a story about luck — until nahafokh hu, it was turned about, arrives at the pivot. A reflection on the dice that named Purim, and a Friday-the-thirteenth morning that turned the same way.</description>
   </item>
@@ -69,6 +88,8 @@
     <title>The Sacrifice of Thanksgiving</title>
     <link>https://hesedwords.com/reflections/the-sacrifice-of-thanksgiving.html</link>
     <guid>https://hesedwords.com/reflections/the-sacrifice-of-thanksgiving.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Fri, 24 Jul 2026 06:00:00 +1000</pubDate>
     <description>Psalm 50 opens like a courtroom, and the first thing God says is that he is not hungry — the offerings were never supply. What he wants: offer to God a sacrifice of thanksgiving; the one who offers thanksgiving glorifies me.</description>
   </item>
@@ -77,6 +98,8 @@
     <title>Understanding?</title>
     <link>https://hesedwords.com/reflections/understanding.html</link>
     <guid>https://hesedwords.com/reflections/understanding.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Thu, 23 Jul 2026 06:00:00 +1000</pubDate>
     <description>Reading Psalm 49, a state funeral came back to me. 'Man in his pomp, yet without understanding, is like the beasts that perish.' Not intelligence. Da'at — the knowing of God that is not in the head but in the hands.</description>
   </item>
@@ -85,6 +108,8 @@
     <title>In the Midst of the Temple</title>
     <link>https://hesedwords.com/reflections/in-the-midst-of-the-temple.html</link>
     <guid>https://hesedwords.com/reflections/in-the-midst-of-the-temple.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Thu, 23 Jul 2026 05:30:00 +1000</pubDate>
     <description>Psalm 48 builds the city — and then Selah. When the pause ends, the question surfaces: not what does the city look like, but what is it for? If hesed is what Zion is built on, does my life exude it? Does the church?</description>
   </item>
@@ -93,6 +118,8 @@
     <title>See Me Trying</title>
     <link>https://hesedwords.com/reflections/see-me-trying.html</link>
     <guid>https://hesedwords.com/reflections/see-me-trying.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Wed, 22 Jul 2026 06:00:00 +1000</pubDate>
     <description>I had misread Nehemiah's prayer as ledger-keeping. It is the vulnerability of worship itself: a child carrying a crayon drawing to their father. Not asking for payment. Asking to be seen.</description>
   </item>
@@ -101,6 +128,8 @@
     <title>Is There Not a Cause</title>
     <link>https://hesedwords.com/reflections/is-there-not-a-cause.html</link>
     <guid>https://hesedwords.com/reflections/is-there-not-a-cause.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Mon, 20 Jul 2026 06:00:00 +1000</pubDate>
     <description>I wanted a cause to die for. The King rides for truth, meekness, and righteousness — not toward them but on account of them. They are not the objective; they are what the ride is made of.</description>
   </item>
@@ -109,6 +138,8 @@
     <title>Not the Lesson I First Thought</title>
     <link>https://hesedwords.com/reflections/not-the-lesson-i-first-thought.html</link>
     <guid>https://hesedwords.com/reflections/not-the-lesson-i-first-thought.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Sun, 19 Jul 2026 06:00:00 +1000</pubDate>
     <description>In Ezra 4 the neighbours offer to help build, and Zerubbabel refuses. They raised worship; he answered architecture. They thought they were building a house. They were meant to be gathering worshippers.</description>
   </item>
@@ -117,6 +148,8 @@
     <title>Our God-Sponsored Projects</title>
     <link>https://hesedwords.com/reflections/our-god-sponsored-projects.html</link>
     <guid>https://hesedwords.com/reflections/our-god-sponsored-projects.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Sat, 18 Jul 2026 06:00:00 +1000</pubDate>
     <description>Ezra–Nehemiah records what men finished and could not keep. Jesus is building what he has not finished — and therefore cannot lose.</description>
   </item>
@@ -125,6 +158,8 @@
     <title>A Place for Salt</title>
     <link>https://hesedwords.com/reflections/a-place-for-salt.html</link>
     <guid>https://hesedwords.com/reflections/a-place-for-salt.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Fri, 17 Jul 2026 06:00:00 +1000</pubDate>
     <description>Ezekiel's river heals the Dead Sea — and then one line no one preaches: 'but its swamps and marshes will not become fresh; they are to be left for salt.' In the greatest picture of renewal in the prophets, the salt stays.</description>
   </item>
