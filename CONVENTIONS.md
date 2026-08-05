@@ -54,7 +54,13 @@ shem, derek, torah, lev, chanan, shalom, shuvah, zakar, sod, selichah, shamar,
 selah, hevel (note: some pieces spell hevel "hebel" — the glossary slug is #hevel),
 yada, da'at (paired entry, slug #yada), emet, paga, argos, ta'am, nashaq, sava, sakal,
 chokmah, anavah, gibbor, rachash, mashak, eleos, charis, aletheia, agape, rasha, tzaddiq,
-hagioi (paired entry with hagios, filed under the plural since that's the form articles use).
+hagioi (paired entry with hagios, filed under the plural since that's the form articles use),
+batach, menuha, yachad, nachalah, qavah, barak, shub (slug for the phrase "shub shebut"),
+yirat (slug for the phrase "yirat Adonai"), neder, gur.
+NOTE: this list has previously fallen out of sync with the actual glossary — if a word looks
+plausible but isn't listed here, grep glossary.html for its slug before assuming it needs
+seeding. A prior upload brief wrongly assumed 8 of 9 candidate words were missing when they
+already existed.
 If unsure of a slug, still use the natural transliteration — the glossary matches
 on the transliteration, so close spellings resolve.
 

@@ -5,6 +5,126 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "The Last Word of the Road",
+    date:     "2026-05-30",
+    url:      "/reflections/the-last-word-of-the-road.html",
+    summary:  "The road ends in blessing given, not blessing received — and then the blessing turns.",
+    scripture: ["Psalm 134"],
+    themes:   ["barak", "blessing", "arrival", "psalms of ascent"]
+  },
+  {
+    title:    "How Good and Pleasant",
+    date:     "2026-05-29",
+    url:      "/reflections/how-good-and-pleasant.html",
+    summary:  "Oil running down the beard of Aaron, and the blessing commanded where the gathering happens.",
+    scripture: ["Psalm 133"],
+    themes:   ["yachad", "unity", "blessing", "psalms of ascent"]
+  },
+  {
+    title:    "The Place Where God Rests",
+    date:     "2026-05-28",
+    url:      "/reflections/the-place-where-god-rests.html",
+    summary:  "The theological centre of the ascent — God declaring where he will settle.",
+    scripture: ["Psalm 132"],
+    themes:   ["menuha", "covenant", "dwelling", "psalms of ascent"]
+  },
+  {
+    title:    "The Quiet Soul",
+    date:     "2026-05-27",
+    url:      "/reflections/the-quiet-soul.html",
+    summary:  "Three verses on the soul that has been weaned from the need to carry what was never its to carry.",
+    scripture: ["Psalm 131"],
+    themes:   ["batach", "menuha", "rest", "humility", "psalms of ascent"]
+  },
+  {
+    title:    "Out of the Depths",
+    date:     "2026-05-26",
+    url:      "/reflections/out-of-the-depths.html",
+    summary:  "Forgiveness that refuses to let the ledger be the last word, and a watchman waiting for morning.",
+    scripture: ["Psalm 130"],
+    themes:   ["selichah", "qavah", "forgiveness", "psalms of ascent"]
+  },
+  {
+    title:    "They Have Not Prevailed",
+    date:     "2026-05-25",
+    url:      "/reflections/they-have-not-prevailed.html",
+    summary:  "Long affliction, generational furrows, and the second sentence that must be added to the first.",
+    scripture: ["Psalm 129"],
+    themes:   ["affliction", "testimony", "tzaddiq", "psalms of ascent"]
+  },
+  {
+    title:    "The Ordinary Blessing",
+    date:     "2026-05-24",
+    url:      "/reflections/the-ordinary-blessing.html",
+    summary:  "What a life built on the fear of the LORD actually looks like from the inside — a table, a vine, a kitchen.",
+    scripture: ["Psalm 128"],
+    themes:   ["yirat Adonai", "blessing", "family", "psalms of ascent"]
+  },
+  {
+    title:    "The House the LORD Builds",
+    date:     "2026-05-23",
+    url:      "/reflections/the-house-the-lord-builds.html",
+    summary:  "At the centre of the collection, a question about whose hands are doing the building.",
+    scripture: ["Psalm 127"],
+    themes:   ["menuha", "nachalah", "building", "rest", "psalms of ascent"]
+  },
+  {
+    title:    "Like Those Who Dream",
+    date:     "2026-05-22",
+    url:      "/reflections/like-those-who-dream.html",
+    summary:  "The psalm of incomplete restoration — celebrating what has been given while crying out for what has not.",
+    scripture: ["Psalm 126"],
+    themes:   ["shub shebut", "restoration", "tears", "psalms of ascent"]
+  },
+  {
+    title:    "The Mountain That Cannot Be Moved",
+    date:     "2026-05-21",
+    url:      "/reflections/the-mountain-that-cannot-be-moved.html",
+    summary:  "Security that is entirely derived — the mountain does not hold itself up.",
+    scripture: ["Psalm 125"],
+    themes:   ["batach", "security", "shalom", "psalms of ascent"]
+  },
+  {
+    title:    "Let Israel Say",
+    date:     "2026-05-20",
+    url:      "/reflections/let-israel-say.html",
+    summary:  "The summons to communal testimony, and the snare that breaks before the bird gets out.",
+    scripture: ["Psalm 124"],
+    themes:   ["testimony", "deliverance", "communal memory", "psalms of ascent"]
+  },
+  {
+    title:    "Eyes Fixed Upward",
+    date:     "2026-05-19",
+    url:      "/reflections/eyes-fixed-upward.html",
+    summary:  "Inside the city and still despised — the psalm that refuses the expectation that arrival resolves everything.",
+    scripture: ["Psalm 123"],
+    themes:   ["chanan", "contempt", "waiting", "psalms of ascent"]
+  },
+  {
+    title:    "Our Feet Are Standing",
+    date:     "2026-05-18",
+    url:      "/reflections/our-feet-are-standing.html",
+    summary:  "Arrival turns immediately into intercession for those still on the road.",
+    scripture: ["Psalm 122"],
+    themes:   ["arrival", "intercession", "mishpat", "shalom", "psalms of ascent"]
+  },
+  {
+    title:    "The Keeper on the Road",
+    date:     "2026-05-17",
+    url:      "/reflections/the-keeper-on-the-road.html",
+    summary:  "One Hebrew word, six times in eight verses: the God who keeps does not sleep.",
+    scripture: ["Psalm 121"],
+    themes:   ["shamar", "keeping", "presence", "psalms of ascent"]
+  },
+  {
+    title:    "The Far Country",
+    date:     "2026-05-16",
+    url:      "/reflections/the-far-country.html",
+    summary:  "The ascent begins not at the temple gate but in the honest recognition of where your feet actually are.",
+    scripture: ["Psalm 120"],
+    themes:   ["gur", "exile", "shalom", "honesty", "psalms of ascent"]
+  },
+  {
     title:    "The One Thing He Wouldn't Delegate",
     date:     "2026-08-05",
     url:      "/reflections/the-one-thing-he-wouldnt-delegate.html",
