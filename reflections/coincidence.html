@@ -3,218 +3,140 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Coincidence &middot; Hesed Words</title>
+<title>Coincidence — Hesed Words</title>
+<meta name="description" content="The book of Esther never once names God, and reads at first like a story about luck — until nahafokh hu, the reverse happened, arrives at the pivot. A reflection on the dice that named Purim, and on a Friday-the-thirteenth morning that turned about the same way.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-:root{
-  --parchment:#e8dfc8;
-  --parchment-page:#f3ecda;
-  --gold:#c9a84c;
-  --gold-deep:#A67C2E;
-  --gold-soft:#D9C49A;
-  --muted:#6B5C45;
-  --rule:#C8B58F;
-  --ink:#2A2218;
-}
-*{box-sizing:border-box;}
-body{
-  margin:0;
-  background:var(--parchment);
-  color:var(--ink);
-  font-family:'Cormorant Garamond','Garamond',Georgia,serif;
-  font-size:20px;
-  line-height:1.72;
-}
-
-/* ── Site nav ── */
-nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-nav.hw-nav a:hover{opacity:1;color:#fff;}
-nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-/* ── Footer ── */
-footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-.page{
-  max-width:720px;
-  margin:0 auto;
-  background:var(--parchment-page);
-  border-left:1px solid var(--rule);
-  border-right:1px solid var(--rule);
-  padding:72px 64px 56px;
-}
-.eyebrow{
-  font-family:'Cinzel',serif;
-  font-size:11px;
-  letter-spacing:.28em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-  text-align:center;
-  margin-bottom:22px;
-}
-h1{
-  font-family:'Cinzel',serif;
-  font-weight:500;
-  font-size:44px;
-  letter-spacing:.05em;
-  text-align:center;
-  margin:0 0 10px;
-  line-height:1.15;
-}
-.subtitle{
-  text-align:center;
-  font-style:italic;
-  font-size:20px;
-  color:#4A3E2C;
-  margin:0 0 26px;
-}
-.motif{
-  text-align:center;
-  color:var(--gold);
-  letter-spacing:.7em;
-  font-size:13px;
-  margin:0 0 18px;
-}
-.byline{
-  font-family:'Cinzel',serif;
-  font-size:10px;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:var(--muted);
-  text-align:center;
-  margin:0 0 48px;
-}
-.rule{
-  border:0;
-  border-top:1px solid var(--rule);
-  width:100%;
-  margin:0 0 40px;
-}
-p{margin:0 0 1.25em;}
-p.lead::first-letter{
-  font-family:'Cinzel',serif;
-  color:var(--gold-deep);
-  font-size:3.1em;
-  line-height:.86;
-  float:left;
-  padding:.06em .1em 0 0;
-}
-.hebrew{font-style:italic;}
-.divider{
-  text-align:center;
-  color:var(--gold);
-  letter-spacing:.7em;
-  font-size:13px;
-  margin:2.4em 0;
-}
-.close{
-  margin-top:2.2em;
-}
-@media (max-width:640px){
-  body{font-size:18px;}
-  .page{padding:44px 24px 36px;border-left:0;border-right:0;}
-  h1{font-size:32px;}
-}
+  .hw-article-body p.first::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
+  }
+  .hw-article-body .divider { text-align: center; color: var(--brass); letter-spacing: 0.6em; font-size: 14px; margin: 40px 0; }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html" class="current">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
+  </div>
+</header>
 
-<main class="page">
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>
+      <div>Esther</div>
+      <div>27 Jul 2026</div>
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>Coincidence</h1>
+      <div class="hw-article-body">
 
-  <div class="eyebrow">Reflection &middot; Esther</div>
-  <h1>Coincidence</h1>
-  <p class="motif">&middot; &middot; &middot;</p>
-  <div class="byline">Norm Reed</div>
-  <hr class="rule">
+        <p class="first">There is one book in the Bible that never mentions God.</p>
 
-  <p class="lead">There is one book in the Bible that never mentions God.</p>
+        <p>Not once. No prayer that is answered out loud, no prophet, no vision, no covenant name. Esther runs for ten chapters through a palace in Persia, and God is never named in any of them.</p>
 
-  <p>Not once. No prayer that is answered out loud, no prophet, no vision, no covenant name. Esther runs for ten chapters through a palace in Persia, and God is never named in any of them.</p>
+        <p>It reads, at first, like a story about luck.</p>
 
-  <p>It reads, at first, like a story about luck.</p>
+        <p>A queen loses her temper at a banquet and refuses to appear before her husband. She is dismissed, and the search begins for another.</p>
 
-  <p>A queen loses her temper at a banquet and refuses to appear before her husband. She is dismissed, and the search begins for another.</p>
+        <p>A Jewish girl, orphaned, raised by her cousin, is taken into the harem. She happens to please the man who oversees the women. She happens to please the king.</p>
 
-  <p>A Jewish girl, orphaned, raised by her cousin, is taken into the harem. She happens to please the man who oversees the women. She happens to please the king.</p>
+        <p>Her cousin is sitting at the palace gate one day and overhears two men planning to kill the king. He reports it. It is written down in the royal records and then forgotten.</p>
 
-  <p>Her cousin is sitting at the palace gate one day and overhears two men planning to kill the king. He reports it. It is written down in the royal records and then forgotten.</p>
+        <p>A man called Haman is promoted, and takes offence that the cousin will not bow to him. He decides to kill not the man but his whole people, and gets a decree to do it.</p>
 
-  <p>A man called Haman is promoted, and takes offence that the cousin will not bow to him. He decides to kill not the man but his whole people, and gets a decree to do it.</p>
+        <p>The queen goes to the king unsummoned, which carries a death penalty. He holds out the sceptre.</p>
 
-  <p>The queen goes to the king unsummoned, which carries a death penalty. He holds out the sceptre.</p>
+        <p>That night, of all nights, the king cannot sleep. He asks for the royal records to be read to him. Of everything in them, the servants read the account of a man who once reported an assassination plot and was never rewarded.</p>
 
-  <p>That night, of all nights, the king cannot sleep. He asks for the royal records to be read to him. Of everything in them, the servants read the account of a man who once reported an assassination plot and was never rewarded.</p>
+        <p>The king asks who is in the court. Haman has arrived early &mdash; he has come to ask permission to hang the man. Before he can speak, the king asks him what should be done for a man the king wishes to honour. Haman, assuming it is himself, describes something magnificent. He is made to carry it out for his enemy.</p>
 
-  <p>The king asks who is in the court. Haman has arrived early &mdash; he has come to ask permission to hang the man. Before he can speak, the king asks him what should be done for a man the king wishes to honour. Haman, assuming it is himself, describes something magnificent. He is made to carry it out for his enemy.</p>
+        <p>Then, at the queen&rsquo;s second banquet, Haman falls across her couch begging for his life at the moment the king walks back into the room. It looks like assault. The gallows he built are still standing in his courtyard, seventy-five feet high, and that is where he is hanged.</p>
 
-  <p>Then, at the queen&rsquo;s second banquet, Haman falls across her couch begging for his life at the moment the king walks back into the room. It looks like assault. The gallows he built are still standing in his courtyard, seventy-five feet high, and that is where he is hanged.</p>
+        <div class="divider">&middot; &middot; &middot;</div>
 
-  <p class="divider">&middot; &middot; &middot;</p>
+        <p>And then there are the dice.</p>
 
-  <p>And then there are the dice.</p>
+        <p>Before Haman set the date for the killing, he had lots thrown in front of him. Not a decision &mdash; a divination. The Persian word for the lot was <em>pur</em>, and the point of throwing it was to let fate name the day, so that nobody could say the date was a man&rsquo;s choosing. It was sealed. It was written into the order of things.</p>
 
-  <p>Before Haman set the date for the killing, he had lots thrown in front of him. Not a decision &mdash; a divination. The Persian word for the lot was <span class="hebrew">pur</span>, and the point of throwing it was to let fate name the day, so that nobody could say the date was a man&rsquo;s choosing. It was sealed. It was written into the order of things.</p>
+        <p>The lot fell on the twelfth month.</p>
 
-  <p>The lot fell on the twelfth month.</p>
+        <p>The decree went out in the first. Which means that the mechanism designed to prove the Jews&rsquo; end was fixed handed them eleven months in which to do something about it. Everything that follows &mdash; the fast, the sceptre, the two banquets, the sleepless night &mdash; happens in the room that the dice made.</p>
 
-  <p>The decree went out in the first. Which means that the mechanism designed to prove the Jews&rsquo; end was fixed handed them eleven months in which to do something about it. Everything that follows &mdash; the fast, the sceptre, the two banquets, the sleepless night &mdash; happens in the room that the dice made.</p>
+        <p>And when it is over and the Jews keep a feast to remember it, they do not name the feast after Esther, or after Mordecai, or after the deliverance.</p>
 
-  <p>And when it is over and the Jews keep a feast to remember it, they do not name the feast after Esther, or after Mordecai, or after the deliverance.</p>
+        <p>They name it after Haman&rsquo;s dice. <em>Purim</em>.</p>
 
-  <p>They name it after Haman&rsquo;s dice. <span class="hebrew">Purim</span>.</p>
+        <p>The book has a word for what happened. It arrives in chapter nine, at the day the killing was meant to begin: <em>nahafokh hu</em> &mdash; it was turned about. The reverse happened.</p>
 
-  <p>The book has a word for what happened. It arrives in chapter nine, at the day the killing was meant to begin: <span class="hebrew">nahafokh hu</span> &mdash; it was turned about. The reverse happened.</p>
+        <p>Two words. And the writer puts them at the exact point where the whole thing pivots, as if to say: this is what you have been reading. Not a run of luck. A turning.</p>
 
-  <p>Two words. And the writer puts them at the exact point where the whole thing pivots, as if to say: this is what you have been reading. Not a run of luck. A turning.</p>
+        <div class="divider">&middot; &middot; &middot;</div>
 
-  <p class="divider">&middot; &middot; &middot;</p>
+        <p>I know when I first understood that.</p>
 
-  <p>I know when I first understood that.</p>
+        <p>It was a little after seven in the morning. We met in the church cafe &mdash; a group of us who work with men in prison &mdash; and the meeting started at half past. I had meant to set the room up the night before and hadn&rsquo;t, so I was there early, on my own.</p>
 
-  <p>It was a little after seven in the morning. We met in the church cafe &mdash; a group of us who work with men in prison &mdash; and the meeting started at half past. I had meant to set the room up the night before and hadn&rsquo;t, so I was there early, on my own.</p>
+        <p>Ian came in. Ian never comes early. Something had happened at home and he only wanted to be out of the house.</p>
 
-  <p>Ian came in. Ian never comes early. Something had happened at home and he only wanted to be out of the house.</p>
+        <p>A few minutes later two men walked in. They had never been to one of our meetings before. It was quarter past seven and nobody else was due yet, so I went to make them a coffee.</p>
 
-  <p>A few minutes later two men walked in. They had never been to one of our meetings before. It was quarter past seven and nobody else was due yet, so I went to make them a coffee.</p>
+        <p>I had taken a few steps when my heart stopped and I went down on the floor, dead.</p>
 
-  <p>I had taken a few steps when my heart stopped and I went down on the floor, dead.</p>
+        <p>They were on me within a minute. One of them started CPR while the other rang for the ambulance, and the ambulance was there in ten. The paramedic told me afterwards it was one of the fastest runs he had ever made &mdash; green lights the whole way, no siren needed.</p>
 
-  <p>They were on me within a minute. One of them started CPR while the other rang for the ambulance, and the ambulance was there in ten. The paramedic told me afterwards it was one of the fastest runs he had ever made &mdash; green lights the whole way, no siren needed.</p>
+        <p>By the time they carried me out on the stretcher I was awake and talking, with a set of cracked ribs from CPR done properly.</p>
 
-  <p>By the time they carried me out on the stretcher I was awake and talking, with a set of cracked ribs from CPR done properly.</p>
+        <p>About one in ten people survive a cardiac arrest outside a hospital.</p>
 
-  <p>About one in ten people survive a cardiac arrest outside a hospital.</p>
+        <p>And lying on that stretcher I started going back over it. If I had set the room up the night before. If Ian had stayed home. If Peter and Tom had come at half past with everybody else. If I had gone down three minutes earlier, before any of them walked through the door.</p>
 
-  <p>And lying on that stretcher I started going back over it. If I had set the room up the night before. If Ian had stayed home. If Peter and Tom had come at half past with everybody else. If I had gone down three minutes earlier, before any of them walked through the door.</p>
+        <p>In just about any other place, at just about any other time, the outcome would have been different.</p>
 
-  <p>In just about any other place, at just about any other time, the outcome would have been different.</p>
+        <p>I did not see any of it while it was happening. I was going to make a coffee.</p>
 
-  <p>I did not see any of it while it was happening. I was going to make a coffee.</p>
+        <p>You almost never see it at the time. You see it afterwards, going back over the room, working out who was standing where.</p>
 
-  <p>You almost never see it at the time. You see it afterwards, going back over the room, working out who was standing where.</p>
+        <p>It does not change what happened. My heart still stopped. Esther still had to walk into that throne room not knowing whether she would come out.</p>
 
-  <p>It does not change what happened. My heart still stopped. Esther still had to walk into that throne room not knowing whether she would come out.</p>
+        <p>But it changes the ground you stand on. God knows. And you know that God knows. That is the whole difference.</p>
 
-  <p>But it changes the ground you stand on. God knows. And you know that God knows. That is the whole difference.</p>
+        <p>Haman&rsquo;s people threw dice to find a day that could not be argued with. The day they found is a feast now, and it carries the name of the dice.</p>
 
-  <p class="close">Haman&rsquo;s people threw dice to find a day that could not be argued with. The day they found is a feast now, and it carries the name of the dice.</p>
+        <p>My event happened on Friday the thirteenth.</p>
 
-  <p>My event happened on Friday the thirteenth.</p>
+      </div>
+    </div>
+  </div>
+</article>
 
-</main>
-
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 </body>
 </html>

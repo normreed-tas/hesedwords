@@ -1,295 +1,107 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deceived — Hesedwords</title>
+<title>Deceived — Hesed Words</title>
+<meta name="description" content="A true sentence repeated as a charm. Jeremiah 7 opens with words without weight, closes with the only boast that holds — a life that cannot lie. Jesus tells the same story twice: the goats were certain, not hesitant. That is what unsettles me.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-
-  :root {
-    --parchment: #FAF5E8;
-    --parchment-deep: #F2E9D4;
-    --border: #C8B58F;
-    --border-soft: #D9C49A;
-    --gold: #A67C2E;
-    --gold-deep: #8C6624;
-    --ink: #2A2218;
-    --ink-soft: #4A3E2C;
-    --byline: #6B5C45;
-    --nav-dark: #1f1b16;
+  .hw-article-body p.first::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
   }
-
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    background: var(--parchment-deep);
-    color: var(--ink);
-    font-family: 'Cormorant Garamond', 'Garamond', Georgia, serif;
-    line-height: 1.7;
-  }
-
-  /* ---- Site navigation (standard hw-nav, exact markup) ---- */
-  nav.hw-nav {
-    background: var(--nav-dark);
-    font-family: 'Cinzel', serif;
-    font-size: .78rem;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    gap: 2.2rem;
-    padding: 1.05rem 1rem;
-    flex-wrap: wrap;
-  }
-  nav.hw-nav a { color: #f5edd6; text-decoration: none; opacity: .82; transition: opacity .2s; }
-  nav.hw-nav a:hover { opacity: 1; color: #fff; }
-  nav.hw-nav a.current { opacity: 1; border-bottom: 1px solid #b8922c; padding-bottom: .15rem; }
-
-  /* ---- Page shell ---- */
-  main {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 0 24px 80px;
-  }
-
-  /* ---- Title block ---- */
-  .title-block {
-    text-align: center;
-    padding: 56px 0 36px;
-  }
-
-  .eyebrow {
-    font-family: 'Cinzel', serif;
-    font-size: 12px;
-    letter-spacing: .3em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 22px;
-  }
-
-  .eyebrow::before, .eyebrow::after {
-    content: "";
-    display: inline-block;
-    width: 28px;
-    height: 1px;
-    background: var(--gold);
-    vertical-align: middle;
-    margin: 0 12px;
-  }
-
-  h1.title {
-    font-family: 'Cinzel', serif;
-    font-weight: 500;
-    font-size: 44px;
-    letter-spacing: .02em;
-    color: var(--ink);
-    margin: 0 0 18px;
-    line-height: 1.15;
-  }
-
-  .byline {
-    font-family: 'Cinzel', serif;
-    font-size: 11px;
-    letter-spacing: .22em;
-    text-transform: uppercase;
-    color: var(--byline);
-    margin: 0;
-  }
-
-  .companion-note {
-    font-style: italic;
-    font-size: 16px;
-    color: var(--ink-soft);
-    margin: 18px 0 0;
-  }
-
-  .companion-note a {
-    color: var(--gold-deep);
-    text-decoration: none;
-    border-bottom: 1px solid var(--border-soft);
-  }
-
-  .ornament {
-    text-align: center;
-    color: var(--gold);
-    letter-spacing: .6em;
-    font-size: 11px;
-    margin: 32px 0 6px;
-  }
-
-  /* ---- Body ---- */
-  .body-copy {
-    background: var(--parchment);
-    border: 1px solid var(--border);
-    padding: 48px 52px;
-    border-radius: 2px;
-  }
-
-  .body-copy p {
-    font-size: 20px;
-    color: var(--ink);
-    margin: 0 0 26px;
-  }
-
-  .body-copy p.lede::first-letter {
-    font-family: 'Cinzel', serif;
-    font-size: 58px;
-    color: var(--gold-deep);
-    float: left;
-    line-height: 0.85;
-    margin: 6px 10px 0 0;
-  }
-
-  .body-copy em { font-style: italic; }
-
-  /* ---- Scripture blocks ---- */
-  blockquote.scripture {
-    margin: 32px 0;
-    padding: 4px 0 4px 26px;
-    border-left: 3px solid var(--gold);
-    font-style: italic;
-    font-size: 19px;
-    color: var(--ink-soft);
-  }
-
-  blockquote.scripture .ref {
-    display: block;
-    margin-top: 10px;
-    font-family: 'Cinzel', serif;
-    font-style: normal;
-    font-size: 11px;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: var(--gold-deep);
-  }
-
-  /* ---- Selah ---- */
-  .selah-divider {
-    text-align: center;
-    color: var(--gold);
-    letter-spacing: .6em;
-    font-size: 11px;
-    margin: 44px 0 18px;
-  }
-
-  .selah-label {
-    text-align: center;
-    font-family: 'Cinzel', serif;
-    font-size: 13px;
-    letter-spacing: .3em;
-    text-transform: uppercase;
-    color: var(--gold-deep);
-    margin-bottom: 18px;
-  }
-
-  p.selah-text {
-    font-style: italic;
-    font-size: 20px;
-    color: var(--ink-soft);
-  }
-
-  /* ---- Closing reflective questions ---- */
-  .questions {
-    margin-top: 36px;
-    padding-left: 22px;
-    border-left: 2px solid var(--border-soft);
-  }
-
-  .questions p {
-    font-style: italic;
-    font-size: 19px;
-    color: var(--ink-soft);
-    margin: 0 0 16px;
-  }
-
-  /* ---- Footer ---- */
-  footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-  @media (max-width: 640px) {
-    h1.title { font-size: 32px; }
-    .body-copy { padding: 32px 24px; }
-    .body-copy p, blockquote.scripture, p.selah-text, .questions p { font-size: 18px; }
-    .body-copy p.lede::first-letter { font-size: 44px; }
-  }
-
+  .hw-article-body .questions { margin-top: 32px; padding-left: 20px; border-left: 2px solid var(--hairline); }
+  .hw-article-body .questions p { font-style: italic; color: var(--muted); }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html" class="current">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<main>
-
-  <div class="title-block">
-    <div class="eyebrow">A Hesedwords Reflection</div>
-    <h1 class="title">Deceived</h1>
-    <p class="byline">Norm Reed &middot; June 2026</p>
-    <p class="companion-note">A companion piece, <a href="/reflections/have-they-no-knowledge.html">Have They No Knowledge?</a>, follows on Psalm 14</p>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
   </div>
+</header>
 
-  <div class="ornament">&bull;&nbsp;&bull;&nbsp;&bull;</div>
-
-  <article class="body-copy">
-
-    <p class="lede">I have been reading slowly through Jeremiah 7 to 9, and today two pieces joined up that I had not seen as one before.</p>
-
-    <p>It starts at the temple gate. Three times, like a chant. The people had turned a true sentence into a charm &mdash; repeat it enough and you are safe, whatever else is true of your life.</p>
-
-    <blockquote class="scripture">
-      Do not trust in deceptive words: &ldquo;This is the temple of the LORD, the temple of the LORD, the temple of the LORD.&rdquo;
-      <span class="ref">Jeremiah 7:4</span>
-    </blockquote>
-
-    <p>Jeremiah names exactly what is wrong with that: words without weight. You can say the right thing and still oppress the widow, still shed innocent blood, still go on exactly as before.</p>
-
-    <p>That is where the section opens. I had not noticed, until today, what it closes with &mdash; two chapters later, in chapter 9.</p>
-
-    <blockquote class="scripture">
-      Let not the wise man boast in his wisdom, let not the mighty man boast in his might, let not the rich man boast in his riches, but let him who boasts boast in this, that he understands and knows me, that I am the LORD who practices steadfast love, justice, and righteousness in the earth.
-      <span class="ref">Jeremiah 9:23&ndash;24</span>
-    </blockquote>
-
-    <p>&ldquo;Boast&rdquo; is a strange word here. But the Hebrew is <em>yithallel</em> &mdash; the same root as Hallelujah. It is the praising word, simply turned toward yourself instead of God. The people at the temple gate had words without a life to match them. Jeremiah&rsquo;s answer is not &ldquo;find better words.&rdquo; It is: the only praise that holds is one that is proved, not declared.</p>
-
-    <p>Words open the section. A life that cannot lie closes it.</p>
-
-    <p>Jesus tells the same story twice. In the sheep and the goats, both stand before the King and ask some version of the same question &mdash; <em>Lord, when did we see you?</em> Neither side had spent their lives declaring it. The sheep had simply fed, clothed, visited, with no idea it counted. The goats, perhaps, had words.</p>
-
-    <p>But he says it even more sharply earlier:</p>
-
-    <blockquote class="scripture">
-      Many will say to me on that day, &ldquo;Lord, Lord, did we not prophesy in your name, and cast out demons in your name, and do many mighty works in your name?&rdquo; And then I will declare to them, &ldquo;I never knew you.&rdquo;
-      <span class="ref">Matthew 7:22&ndash;23</span>
-    </blockquote>
-
-    <p><em>Lord, Lord</em> &mdash; doubled, confident, the same shape as the temple chant. These were not hesitant people. They had prophesied. Done mighty works in his name. And the verdict was still: I never knew you.</p>
-
-    <div class="selah-divider">&bull;&nbsp;&bull;&nbsp;&bull;</div>
-    <div class="selah-label">Selah</div>
-    <p class="selah-text">What unsettles me is not just the goats&rsquo; failure &mdash; it is their certainty. The temple, the temple, the temple. Lord, Lord. Mighty works done in his name. None of it hesitant. I have to ask whether my own confidence &mdash; that I know God, that my life proves it &mdash; would survive the same question.</p>
-
-    <div class="questions">
-      <p>What words have I let stand in for a life that does not yet match them?</p>
-      <p>If I were asked today, &ldquo;when did you see me?&rdquo; &mdash; would my life answer before I could, or would I, like the goats, simply be certain and wrong?</p>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>
+      <div>Jeremiah 7:4</div>
+      <div>20 Jun 2026</div>
+      <div class="byline">Norm Reed</div>
     </div>
+    <div>
+      <h1>Deceived</h1>
+      <div class="hw-article-body">
+        <p class="hw-companion" style="margin-top:-20px;margin-bottom:34px;">A companion piece, <a href="/reflections/have-they-no-knowledge.html">Have They No Knowledge?</a>, follows on Psalm 14</p>
 
-  </article>
+        <p class="first">I have been reading slowly through Jeremiah 7 to 9, and today two pieces joined up that I had not seen as one before.</p>
 
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+        <p>It starts at the temple gate. Three times, like a chant. The people had turned a true sentence into a charm &mdash; repeat it enough and you are safe, whatever else is true of your life.</p>
 
-</main>
+        <p class="verse">Do not trust in deceptive words: &ldquo;This is the temple of the LORD, the temple of the LORD, the temple of the LORD.&rdquo; <em>Jeremiah 7:4</em></p>
+
+        <p>Jeremiah names exactly what is wrong with that: words without weight. You can say the right thing and still oppress the widow, still shed innocent blood, still go on exactly as before.</p>
+
+        <p>That is where the section opens. I had not noticed, until today, what it closes with &mdash; two chapters later, in chapter 9.</p>
+
+        <p class="verse">Let not the wise man boast in his wisdom, let not the mighty man boast in his might, let not the rich man boast in his riches, but let him who boasts boast in this, that he understands and knows me, that I am the LORD who practices steadfast love, justice, and righteousness in the earth. <em>Jeremiah 9:23&ndash;24</em></p>
+
+        <p>&ldquo;Boast&rdquo; is a strange word here. But the Hebrew is <em>yithallel</em> &mdash; the same root as Hallelujah. It is the praising word, simply turned toward yourself instead of God. The people at the temple gate had words without a life to match them. Jeremiah&rsquo;s answer is not &ldquo;find better words.&rdquo; It is: the only praise that holds is one that is proved, not declared.</p>
+
+        <p>Words open the section. A life that cannot lie closes it.</p>
+
+        <p>Jesus tells the same story twice. In the sheep and the goats, both stand before the King and ask some version of the same question &mdash; <em>Lord, when did we see you?</em> Neither side had spent their lives declaring it. The sheep had simply fed, clothed, visited, with no idea it counted. The goats, perhaps, had words.</p>
+
+        <p>But he says it even more sharply earlier:</p>
+
+        <p class="verse">Many will say to me on that day, &ldquo;Lord, Lord, did we not prophesy in your name, and cast out demons in your name, and do many mighty works in your name?&rdquo; And then I will declare to them, &ldquo;I never knew you.&rdquo; <em>Matthew 7:22&ndash;23</em></p>
+
+        <p><em>Lord, Lord</em> &mdash; doubled, confident, the same shape as the temple chant. These were not hesitant people. They had prophesied. Done mighty works in his name. And the verdict was still: I never knew you.</p>
+
+        <div class="hw-selah">
+          <div class="rule"></div>
+          <div class="word">Selah</div>
+          <div class="rule"></div>
+        </div>
+
+        <p>What unsettles me is not just the goats&rsquo; failure &mdash; it is their certainty. The temple, the temple, the temple. Lord, Lord. Mighty works done in his name. None of it hesitant. I have to ask whether my own confidence &mdash; that I know God, that my life proves it &mdash; would survive the same question.</p>
+
+        <div class="questions">
+          <p>What words have I let stand in for a life that does not yet match them?</p>
+          <p>If I were asked today, &ldquo;when did you see me?&rdquo; &mdash; would my life answer before I could, or would I, like the goats, simply be certain and wrong?</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 </body>
 </html>
