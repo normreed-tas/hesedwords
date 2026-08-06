@@ -3,194 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>We All Need Our Rechabites</title>
+<title>We All Need Our Rechabites — Hesed Words</title>
+<meta name="description" content="A lighthouse does not chase the ship. It stays lit on the headland, and a boat in the dark takes a bearing off it. The Rechabites are that fixed point in Jeremiah 35 — their not-moving is the whole service they render, and the diagnostic they offer Judah is the one they offer us.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-  :root{
-    --parchment:#e8dfc8;
-    --parchment-light:#f1ead7;
-    --ink:#2e2a22;
-    --ink-soft:#4a4438;
-    --gold:#c9a84c;
-    --gold-deep:#a8862f;
-    --rule:#d8c89a;
+  .hw-article-body .subtitle { font-style: italic; color: var(--muted); font-size: 22px; margin: -20px 0 34px; }
+  .hw-article-body p.first::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
   }
-  *{box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
-  body{
-    margin:0;
-    background:var(--parchment);
-    background-image:radial-gradient(ellipse at top,#efe7d2 0%,var(--parchment) 60%,#e2d8bf 100%);
-    color:var(--ink);
-    font-family:'Cormorant Garamond',Georgia,serif;
-    font-size:21px;
-    line-height:1.72;
-    padding:0;
-  }
-  .page{
-    max-width:680px;
-    margin:0 auto;
-    padding:64px 32px 96px;
-  }
-  .eyebrow{
-    text-align:center;
-    font-family:'Cinzel',serif;
-    font-size:12px;
-    letter-spacing:0.34em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    margin:0 0 28px;
-  }
-  .eyebrow::before,.eyebrow::after{
-    content:"";
-    display:inline-block;
-    width:34px;
-    height:1px;
-    background:var(--gold);
-    vertical-align:middle;
-    margin:0 14px 4px;
-  }
-  h1{
-    text-align:center;
-    font-family:'Cinzel',serif;
-    font-weight:500;
-    font-size:36px;
-    line-height:1.2;
-    letter-spacing:0.02em;
-    color:var(--ink);
-    margin:0 0 22px;
-  }
-  .subtitle{
-    text-align:center;
-    font-style:italic;
-    font-size:20px;
-    color:var(--ink-soft);
-    margin:0 0 18px;
-  }
-  .ornament{
-    text-align:center;
-    color:var(--gold);
-    font-size:16px;
-    letter-spacing:0.6em;
-    margin:30px 0 40px;
-  }
-  .ornament::before{content:"\2726\00a0\00a0\2726\00a0\00a0\2726";}
-  p{margin:0 0 20px;}
-  .lead{margin-top:0;}
-  .lead::first-letter{
-    float:left;
-    font-family:'Cinzel',serif;
-    font-weight:600;
-    color:var(--gold-deep);
-    font-size:66px;
-    line-height:0.82;
-    padding:6px 12px 0 0;
-  }
-  em{font-style:italic;}
-  .standalone{
-    text-align:center;
-    font-size:22px;
-    color:var(--ink-soft);
-    margin:34px 0;
-    font-style:italic;
-  }
-  .bearings{
-    margin:36px 0 30px;
-    padding:24px 30px;
-    background:rgba(201,168,76,0.07);
-    border-left:3px solid var(--gold);
-  }
-  .bearings p{margin:0;}
-  .close{
-    text-align:center;
-    font-family:'Cinzel',serif;
-    font-weight:500;
-    font-size:22px;
-    letter-spacing:0.06em;
-    color:var(--gold-deep);
-    margin:48px 0 8px;
-  }
-  .tagline{
-    text-align:center;
-    font-family:'Cinzel',serif;
-    font-size:11px;
-    letter-spacing:0.3em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    margin-top:72px;
-    opacity:0.8;
-  }
-  .tagline::before,.tagline::after{
-    content:"";
-    display:inline-block;
-    width:26px;
-    height:1px;
-    background:var(--gold);
-    vertical-align:middle;
-    margin:0 12px 3px;
-  }
-  /* ── Site nav ── */
-  nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-  nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-  nav.hw-nav a:hover{opacity:1;color:#fff;}
-  nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-  /* ── Footer ── */
-  footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-  @media(max-width:600px){
-    body{font-size:19px;}
-    .page{padding:48px 22px 72px;}
-    h1{font-size:29px;}
-    .lead::first-letter{font-size:56px;}
-  }
+  .hw-article-body .close { text-align: center; font-size: 26px; font-weight: 400; letter-spacing: -0.01em; color: var(--oxblood); margin: 48px 0 8px; }
 </style>
 </head>
-<body>
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html" class="current">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-  <article class="page">
-    <p class="eyebrow">A Hesedwords Reflection</p>
-    <h1>We All Need Our Rechabites</h1>
-    <p class="subtitle">A reflection on Jeremiah 35</p>
-    <div class="ornament"></div>
+<body class="hw">
 
-    <p class="lead">The Rechabites stand out. That is the whole of it.</p>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
+  </div>
+</header>
 
-    <p>Jeremiah brings them into a chamber of the temple and sets wine before them, and they will not drink it. Not because wine is evil. Because Jonadab their forefather, centuries dead, told them not to &mdash; and they have kept his word down all the generations since. No one was watching. No one was enforcing. They simply are who they were told to be.</p>
-
-    <p>And against them, Judah is shown to have drifted.</p>
-
-    <p>That is what a fixed point does. It does not move, and its not-moving is the whole service it renders. A lighthouse does not chase the ship. It stays lit on the headland, and a boat out in the dark can take a bearing off it and learn, sometimes for the first time, that it has been drifting all along. The Rechabites are lit on the headland. Judah reads its position off them and does not like what it sees.</p>
-
-    <p>I was a boy selling raffle tickets door to door for the scouts. At one door a man told me, politely, that he was a Christian and did not gamble. He would not buy a ticket. From memory he gave me something for the cause anyway, and sent me on my way kindly. I went off thinking him a little strange, not understanding his point at all.</p>
-
-    <p>I understand it now. He was a fixed point, and I took a bearing off him without knowing it, and the bearing held for fifty years. He did not lecture me. He simply stayed lit.</p>
-
-    <p>I want to be careful here, because too much can be made of this. Jeremiah does not make too much of it. He uses the Rechabites once, as a diagnostic, and moves on. The chapter ends not with <em>be like the Rechabites</em> but with the indictment of Judah and a quiet promise to Jonadab's line.</p>
-
-    <p>Convictions are not the same as obedience. A held conviction points toward obedience &mdash; it indicates the desire for it &mdash; but it is not the thing itself. And a conviction prized for its own sake becomes an idol. The Rechabites are safe from this only because their vow keeps pointing past itself, to a word received, and never to their own distinctiveness. They are not held up as the ultimate requirement. Obedience to God is. Jonadab's word was a small, human word &mdash; and the chapter's whole weight is <em>if they kept even that, how much more should you have kept Mine.</em></p>
-
-    <p>Because the one being tested here is not the Rechabites. It is Judah. And Judah fails &mdash; not the failure of a single cup, but the long failure to obey the God who kept speaking. The Rechabites are not sitting the exam. They are the worked answer the teacher lifts from another student's paper and holds to the light &mdash; <em>here, this is what obedience looks like; it was possible all along.</em> The red tick in the margin is not the requirement. It only shows the requirement could have been met.</p>
-
-    <p class="standalone">Drift is inevitable. Recognising it is essential.</p>
-
-    <div class="bearings">
-      <p>So what is God using to give you your bearings? A Sunday message. A reading of Scripture. A book open on the table. A challenging word from someone polite at a door.</p>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>
+      <div>Jeremiah 35</div>
+      <div>26 Jun 2026</div>
+      <div class="byline">Norm Reed</div>
     </div>
+    <div>
+      <h1>We All Need Our Rechabites</h1>
+      <div class="hw-article-body">
+        <p class="subtitle">A reflection on Jeremiah 35</p>
 
-    <p class="close">We all need our Rechabites.</p>
+        <p class="first">The Rechabites stand out. That is the whole of it.</p>
 
-    <p class="tagline">Hesedwords</p>
-  </article>
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+        <p>Jeremiah brings them into a chamber of the temple and sets wine before them, and they will not drink it. Not because wine is evil. Because Jonadab their forefather, centuries dead, told them not to &mdash; and they have kept his word down all the generations since. No one was watching. No one was enforcing. They simply are who they were told to be.</p>
+
+        <p>And against them, Judah is shown to have drifted.</p>
+
+        <p>That is what a fixed point does. It does not move, and its not-moving is the whole service it renders. A lighthouse does not chase the ship. It stays lit on the headland, and a boat out in the dark can take a bearing off it and learn, sometimes for the first time, that it has been drifting all along. The Rechabites are lit on the headland. Judah reads its position off them and does not like what it sees.</p>
+
+        <p>I was a boy selling raffle tickets door to door for the scouts. At one door a man told me, politely, that he was a Christian and did not gamble. He would not buy a ticket. From memory he gave me something for the cause anyway, and sent me on my way kindly. I went off thinking him a little strange, not understanding his point at all.</p>
+
+        <p>I understand it now. He was a fixed point, and I took a bearing off him without knowing it, and the bearing held for fifty years. He did not lecture me. He simply stayed lit.</p>
+
+        <p>I want to be careful here, because too much can be made of this. Jeremiah does not make too much of it. He uses the Rechabites once, as a diagnostic, and moves on. The chapter ends not with <em>be like the Rechabites</em> but with the indictment of Judah and a quiet promise to Jonadab's line.</p>
+
+        <p>Convictions are not the same as obedience. A held conviction points toward obedience &mdash; it indicates the desire for it &mdash; but it is not the thing itself. And a conviction prized for its own sake becomes an idol. The Rechabites are safe from this only because their vow keeps pointing past itself, to a word received, and never to their own distinctiveness. They are not held up as the ultimate requirement. Obedience to God is. Jonadab's word was a small, human word &mdash; and the chapter's whole weight is <em>if they kept even that, how much more should you have kept Mine.</em></p>
+
+        <p>Because the one being tested here is not the Rechabites. It is Judah. And Judah fails &mdash; not the failure of a single cup, but the long failure to obey the God who kept speaking. The Rechabites are not sitting the exam. They are the worked answer the teacher lifts from another student's paper and holds to the light &mdash; <em>here, this is what obedience looks like; it was possible all along.</em> The red tick in the margin is not the requirement. It only shows the requirement could have been met.</p>
+
+        <p class="pull">Drift is inevitable. Recognising it is essential.</p>
+
+        <p class="verse">So what is God using to give you your bearings? A Sunday message. A reading of Scripture. A book open on the table. A challenging word from someone polite at a door.</p>
+
+        <p class="close">We all need our Rechabites.</p>
+
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
+
 </body>
 </html>

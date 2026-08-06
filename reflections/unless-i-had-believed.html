@@ -4,263 +4,112 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Unless I Had Believed — Hesed Words</title>
+<meta name="description" content="At the hinge of Psalm 27 David reaches for a word he uses nowhere else — he'emanti, the root behind amen, the kind of ground you build a life on. Not strategy. Not resolve. One word kept him from fainting: believed.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-  :root{
-    --parchment:#e8dfc8;
-    --parchment-page:#f3ecda;
-    --gold:#c9a84c;
-    --gold-deep:#A67C2E;
-    --gold-soft:#D9C49A;
-    --muted:#6B5C45;
-    --rule:#C8B58F;
-    --ink:#2A2218;
+  .hw-article-body .subtitle { font-style: italic; color: var(--muted); font-size: 22px; margin: -20px 0 34px; }
+  .hw-article-body p.first::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
   }
-
-  *{box-sizing:border-box;}
-
-  body{
-    margin:0;
-    background:var(--parchment);
-    color:var(--ink);
-    font-family:'Cormorant Garamond', Georgia, serif;
-    -webkit-font-smoothing:antialiased;
-  }
-
-  /* ── Site nav ── */
-  nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-  nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-  nav.hw-nav a:hover{opacity:1;color:#fff;}
-  nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-
-  /* ── Footer ── */
-  footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-  .page{
-    max-width:680px;
-    margin:0 auto;
-    padding:3.5rem 1.5rem 2rem;
-  }
-
-  /* ── Title block ── */
-  .eyebrow{
-    text-align:center;
-    font-family:'Cinzel',serif;
-    font-size:.72rem;
-    letter-spacing:.3em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    margin-bottom:1.1rem;
-  }
-
-  h1.title{
-    text-align:center;
-    font-family:'Cinzel',serif;
-    font-weight:500;
-    font-size:2.4rem;
-    letter-spacing:.02em;
-    margin:0 0 .6rem;
-    line-height:1.2;
-    color:var(--ink);
-  }
-
-  .subtitle{
-    text-align:center;
-    font-style:italic;
-    font-size:1.2rem;
-    color:#4A3E2C;
-    margin:0 0 1.4rem;
-  }
-
-  .ornament{
-    text-align:center;
-    color:var(--gold);
-    letter-spacing:.6em;
-    font-size:.8rem;
-    margin:0 0 1rem;
-  }
-
-  .byline{
-    text-align:center;
-    font-family:'Cinzel',serif;
-    font-size:.74rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:var(--muted);
-    margin-bottom:2.6rem;
-  }
-
-  /* ── Scripture block ── */
-  .scripture{
-    border-left:3px solid var(--gold);
-    padding:.2rem 0 .2rem 1.3rem;
-    margin:0 0 2.8rem;
-    font-style:italic;
-    font-size:1.18rem;
-    line-height:1.65;
-    color:#3a3022;
-  }
-  .scripture .ref{
-    display:block;
-    margin-top:.6rem;
-    font-style:normal;
-    font-family:'Cinzel',serif;
-    font-size:.7rem;
-    letter-spacing:.16em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-  }
-
-  /* ── Body ── */
-  .body-text p{
-    font-size:1.22rem;
-    line-height:1.75;
-    margin:0 0 1.3rem;
-    color:#2c241a;
-  }
-
-  .body-text p.opening::first-letter{
-    font-family:'Cinzel',serif;
-    font-size:3.4rem;
-    color:var(--gold-deep);
-    float:left;
-    line-height:.85;
-    padding-right:.12em;
-    padding-top:.05em;
-  }
-
-  .body-text em{ color:#4A3E2C; }
-
-  /* ── Selah ── */
-  .selah{
-    border-left:2px solid var(--gold-soft);
-    padding:.3rem 0 .3rem 1.3rem;
-    margin:2.6rem 0 2.6rem;
-  }
-  .selah .selah-label{
-    font-family:'Cinzel',serif;
-    font-size:.78rem;
-    letter-spacing:.3em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    display:block;
-    margin-bottom:1.1rem;
-  }
-  .selah p{
-    font-size:1.22rem;
-    line-height:1.75;
-    margin:0 0 1.2rem;
-    color:#2c241a;
-  }
-  .selah p.thesis{
-    font-style:italic;
-    font-size:1.3rem;
-    color:#3a3022;
-    text-align:center;
-    margin:1.6rem 0;
-  }
-
-  /* ── Divider ── */
-  .divider{
-    text-align:center;
-    color:var(--gold);
-    letter-spacing:.6em;
-    font-size:.8rem;
-    margin:2.8rem 0;
-  }
-
-  /* ── Closing questions ── */
-  .questions{
-    margin:2.4rem 0 1rem;
-  }
-  .questions p{
-    font-style:italic;
-    font-size:1.2rem;
-    line-height:1.7;
-    color:#4A3E2C;
-    text-align:center;
-    margin:0 0 1.1rem;
-  }
-
-  @media (max-width:600px){
-    h1.title{font-size:1.85rem;}
-    .body-text p, .selah p{font-size:1.12rem;}
-    .scripture{font-size:1.05rem;}
-  }
+  .hw-article-body .questions p { font-style: italic; text-align: center; color: var(--muted); font-size: 18px; }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html" class="current">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<div class="page">
-
-  <p class="eyebrow">A Reflection for Curious Minds</p>
-  <h1 class="title">Unless I Had Believed</h1>
-  <p class="subtitle">What David knew about God that kept him from fainting</p>
-  <p class="ornament">&middot; &middot; &middot;</p>
-  <p class="byline">Norm Reed &middot; July 2026</p>
-
-  <div class="scripture">
-    I would have despaired unless I had believed that I would see the goodness of the LORD in the land of the living. Wait for the LORD; be strong, and let your heart take courage; wait for the LORD!
-    <span class="ref">Psalm 27:13&ndash;14</span>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
   </div>
+</header>
 
-  <div class="body-text">
-    <p class="opening">I would have fainted.</p>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>
+      <div>Psalm 27</div>
+      <div>1 Jul 2026</div>
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>Unless I Had Believed</h1>
+      <div class="hw-article-body">
+        <p class="subtitle">What David knew about God that kept him from fainting</p>
 
-    <p>Verse thirteen says it plainly, almost too plainly to notice on a first read past it. <em>Unless I had believed.</em> The psalm has already done its work by then &mdash; the enemies circling, the false witnesses, the parents who let go. David has named every threat he can name. And then, near the end, he tells us what kept him upright through all of it. Not strategy. Not resolve. One word: believed.</p>
+        <p class="verse">I would have despaired unless I had believed that I would see the goodness of the LORD in the land of the living. Wait for the LORD; be strong, and let your heart take courage; wait for the LORD! <em>Psalm 27:13&ndash;14</em></p>
 
-    <p>It&rsquo;s worth stopping on, because it&rsquo;s the only place in anything David wrote where he uses that particular word about himself. He trusts often &mdash; <em>batach</em>, leaning his full weight somewhere, a word that shows up again and again in his psalms. But here, at the hinge of this one, he reaches for something rarer. <em>He&rsquo;emanti.</em> The root behind <em>amen</em>. The word for something that has become fixed, load-bearing, the kind of ground you can build a life on rather than just lean against for a moment.</p>
+        <p class="first">I would have fainted.</p>
 
-    <p>So what was it David believed, exactly, that kept him from fainting?</p>
+        <p>Verse thirteen says it plainly, almost too plainly to notice on a first read past it. <em>Unless I had believed.</em> The psalm has already done its work by then &mdash; the enemies circling, the false witnesses, the parents who let go. David has named every threat he can name. And then, near the end, he tells us what kept him upright through all of it. Not strategy. Not resolve. One word: believed.</p>
 
-    <p>He believed God was good. Not powerful, though God is that. Not faithful in some general, dependable-weather sort of way. Good &mdash; <em>tuv</em>, the same word God himself reached for centuries earlier when Moses asked to see his glory and was told: <em>I will make all my goodness pass before you.</em> What followed that promise was the fullest self-portrait God ever gave &mdash; abounding in steadfast love, in faithfulness. Goodness was the headline. Everything else was commentary.</p>
+        <p>It&rsquo;s worth stopping on, because it&rsquo;s the only place in anything David wrote where he uses that particular word about himself. He trusts often &mdash; <em>batach</em>, leaning his full weight somewhere, a word that shows up again and again in his psalms. But here, at the hinge of this one, he reaches for something rarer. <em>He&rsquo;emanti.</em> The root behind <em>amen</em>. The word for something that has become fixed, load-bearing, the kind of ground you can build a life on rather than just lean against for a moment.</p>
 
-    <p>It&rsquo;s worth being honest about what believing isn&rsquo;t. <em>You believe that God is one,</em> James writes. <em>Good. Even the demons believe that &mdash; and shudder.</em> They have the facts straight. One God, all-powerful, fully real. And it terrifies them. Which means correct belief was never the issue David&rsquo;s psalm is solving. The question underneath the question is not <em>does God exist</em> but <em>what is he like</em> &mdash; and that&rsquo;s a fork in the road that can be navigated either way.</p>
+        <p>So what was it David believed, exactly, that kept him from fainting?</p>
 
-    <p>C.S. Lewis found himself standing at that exact fork, decades later, in the rawest pages he ever published. Grief had not shaken his belief that God was there. It shook something worse &mdash; his certainty about God&rsquo;s character. In his darkest entries he reached for ugly language to describe what he feared he might be looking at &mdash; not absence, but cruelty wearing the mask of love. He wasn&rsquo;t tempted toward atheism. He was tempted toward the wrong god.</p>
+        <p>He believed God was good. Not powerful, though God is that. Not faithful in some general, dependable-weather sort of way. Good &mdash; <em>tuv</em>, the same word God himself reached for centuries earlier when Moses asked to see his glory and was told: <em>I will make all my goodness pass before you.</em> What followed that promise was the fullest self-portrait God ever gave &mdash; abounding in steadfast love, in faithfulness. Goodness was the headline. Everything else was commentary.</p>
 
-    <p>David never went there. Nor, three thousand years later, did George M&uuml;ller. Standing at his wife&rsquo;s deathbed, not yet knowing if she would live, M&uuml;ller took as his text <em>thou art good, and doest good</em> &mdash; and when she died, preached the same words over her. Not <em>God is sovereign, so I submit.</em> God is good &mdash; therefore whatever this is, it is good too. The same shape as David&rsquo;s <em>lulei</em>. Take away that one belief, and the whole thing buckles.</p>
+        <p>It&rsquo;s worth being honest about what believing isn&rsquo;t. <em>You believe that God is one,</em> James writes. <em>Good. Even the demons believe that &mdash; and shudder.</em> They have the facts straight. One God, all-powerful, fully real. And it terrifies them. Which means correct belief was never the issue David&rsquo;s psalm is solving. The question underneath the question is not <em>does God exist</em> but <em>what is he like</em> &mdash; and that&rsquo;s a fork in the road that can be navigated either way.</p>
 
-    <p>And David said it once more, years later, kneeling in front of Nathan&rsquo;s promise of an eternal house: <em>your words are emet</em> &mdash; true, trustworthy, the same root as <em>believed</em>. Twice in his life, at opposite ends of it, the same word does the same work.</p>
+        <p>C.S. Lewis found himself standing at that exact fork, decades later, in the rawest pages he ever published. Grief had not shaken his belief that God was there. It shook something worse &mdash; his certainty about God&rsquo;s character. In his darkest entries he reached for ugly language to describe what he feared he might be looking at &mdash; not absence, but cruelty wearing the mask of love. He wasn&rsquo;t tempted toward atheism. He was tempted toward the wrong god.</p>
+
+        <p>David never went there. Nor, three thousand years later, did George M&uuml;ller. Standing at his wife&rsquo;s deathbed, not yet knowing if she would live, M&uuml;ller took as his text <em>thou art good, and doest good</em> &mdash; and when she died, preached the same words over her. Not <em>God is sovereign, so I submit.</em> God is good &mdash; therefore whatever this is, it is good too. The same shape as David&rsquo;s <em>lulei</em>. Take away that one belief, and the whole thing buckles.</p>
+
+        <p>And David said it once more, years later, kneeling in front of Nathan&rsquo;s promise of an eternal house: <em>your words are emet</em> &mdash; true, trustworthy, the same root as <em>believed</em>. Twice in his life, at opposite ends of it, the same word does the same work.</p>
+
+        <div class="hw-selah">
+          <div class="rule"></div>
+          <div class="word">Selah</div>
+          <div class="rule"></div>
+        </div>
+
+        <p>Here is the question underneath every other question I ask about God: do I believe he is good. Not good in general. Good at the core. Good before he does anything at all.</p>
+
+        <p>It would change how I pray. Right now my prayers carry a quiet hedge &mdash; as if asking too plainly might be presuming, as if God&rsquo;s first instinct needs managing rather than trusting. But if he withholds no good thing, the hedge is unnecessary. The asking can be open-handed.</p>
+
+        <p>It would change how I read what happens to me. The losses, the slow years, February 13th &mdash; all of it gets read differently depending on which God stands behind it. A powerful God who may or may not be kind leaves me bracing. A good God, however hard his hand, leaves me held.</p>
+
+        <p>It would change how I hold the people in front of me. Goodness believed becomes goodness practised &mdash; toward the men I sit with inside the wire, toward the ones still waiting for someone to believe something good about them.</p>
+
+        <p class="pull">The degree to which I believe in the inherent goodness of God defines my belief in God.</p>
+
+        <p>That is the one thing I am asking for. Not relief from the road. Just this: that I would believe, all the way down, that he is good &mdash; and not withholding.</p>
+
+        <div style="text-align:center;color:var(--brass);letter-spacing:0.6em;font-size:14px;margin:44px 0;">&middot; &middot; &middot;</div>
+
+        <div class="questions">
+          <p><em>What do you believe, at the core, about the character of God &mdash; and where did that belief come from?</em></p>
+          <p><em>If you let that belief govern how you prayed today, what would you ask for differently?</em></p>
+        </div>
+
+      </div>
+    </div>
   </div>
+</article>
 
-  <div class="selah">
-    <span class="selah-label">Selah</span>
-
-    <p>Here is the question underneath every other question I ask about God: do I believe he is good. Not good in general. Good at the core. Good before he does anything at all.</p>
-
-    <p>It would change how I pray. Right now my prayers carry a quiet hedge &mdash; as if asking too plainly might be presuming, as if God&rsquo;s first instinct needs managing rather than trusting. But if he withholds no good thing, the hedge is unnecessary. The asking can be open-handed.</p>
-
-    <p>It would change how I read what happens to me. The losses, the slow years, February 13th &mdash; all of it gets read differently depending on which God stands behind it. A powerful God who may or may not be kind leaves me bracing. A good God, however hard his hand, leaves me held.</p>
-
-    <p>It would change how I hold the people in front of me. Goodness believed becomes goodness practised &mdash; toward the men I sit with inside the wire, toward the ones still waiting for someone to believe something good about them.</p>
-
-    <p class="thesis">The degree to which I believe in the inherent goodness of God defines my belief in God.</p>
-
-    <p>That is the one thing I am asking for. Not relief from the road. Just this: that I would believe, all the way down, that he is good &mdash; and not withholding.</p>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
   </div>
-
-  <p class="divider">&middot; &middot; &middot;</p>
-
-  <div class="questions">
-    <p><em>What do you believe, at the core, about the character of God &mdash; and where did that belief come from?</em></p>
-    <p><em>If you let that belief govern how you prayed today, what would you ask for differently?</em></p>
-  </div>
-
-</div>
-
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+</footer>
 
 </body>
 </html>
