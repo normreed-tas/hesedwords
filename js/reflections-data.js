@@ -5,6 +5,22 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "God Alone",
+    date:     "2026-08-08",
+    url:      "/reflections/god-alone.html",
+    summary:  "Psalm 62 leans six times on ak, a fencing word — only, alone, nothing more. David commands his own soul to be still, is battered, and has to command it again. Written from the far side of a cardiac arrest, on stillness, hesed, and the two things that are true of God when everything else is found to weigh nothing.",
+    scripture: ["Psalm 62"],
+    themes:   ["ak", "batach", "hesed", "hevel", "stillness", "trust", "cardiac arrest"]
+  },
+  {
+    title:    "The Piece I Keep Picking Up",
+    date:     "2026-08-06",
+    url:      "/reflections/the-piece-i-keep-picking-up.html",
+    summary:  "Reading to the end of Zechariah and not finishing it. A reflection on sorting, edges, and the one verse that will not sit down — bells on the horses, and a man who wants to boil some meat.",
+    scripture: ["Zechariah 14"],
+    themes:   ["holiness", "Zechariah", "unfinished reading", "everyday sacredness"]
+  },
+  {
     title:    "The Last Word of the Road",
     date:     "2026-05-30",
     url:      "/reflections/the-last-word-of-the-road.html",

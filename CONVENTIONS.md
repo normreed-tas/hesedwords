@@ -56,7 +56,9 @@ yada, da'at (paired entry, slug #yada), emet, paga, argos, ta'am, nashaq, sava, 
 chokmah, anavah, gibbor, rachash, mashak, eleos, charis, aletheia, agape, rasha, tzaddiq,
 hagioi (paired entry with hagios, filed under the plural since that's the form articles use),
 batach, menuha, yachad, nachalah, qavah, barak, shub (slug for the phrase "shub shebut"),
-yirat (slug for the phrase "yirat Adonai"), neder, gur.
+yirat (slug for the phrase "yirat Adonai"), neder, gur, ruth (a proper name, not a
+transliterated word — scope exception since the whole point of its companion article is
+that "Ruth" is the standing picture of hesed).
 NOTE: this list has previously fallen out of sync with the actual glossary — if a word looks
 plausible but isn't listed here, grep glossary.html for its slug before assuming it needs
 seeding. A prior upload brief wrongly assumed 8 of 9 candidate words were missing when they
@@ -148,6 +150,15 @@ per-page, not a rule that a class name must match exactly.
   "Selah" heading. Every reflection that uses one restyles it locally to match that page's
   palette — there is no single canonical version to copy verbatim; see any recent reflection
   (e.g. `reflections/those-who-know-their-god.html`) for a representative example.
+- **Pull-quotes** (reflections and articles): a lifted sentence set large in the body, gold-ruled
+  or unruled to suit the page's own palette — styled per-page like everything else here, no shared
+  class (`.pullquote` is a per-page convention, not a shared stylesheet rule). Rules of use:
+  maximum two or three per piece; never lifted from a Selah block; never placed on the same screen
+  as its own occurrence in the prose — set it further down (or, if it foreshadows a later
+  paragraph, well ahead of that paragraph) so the repetition reads as a bridge, not an echo.
+  Reserve for sentences carrying the piece's actual argument, not for decoration. See
+  `reflections/god-alone.html` for two working examples, one placed after the material that leads
+  to it, one placed ahead of the paragraph where the sentence itself lands.
 
 ## PDF companions
 
