@@ -4,349 +4,147 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Did the Word Become a List? — Hesed Words</title>
+<meta name="description" content="Six lines in Psalm 19 look like a list of demands. They are not. Look at the back of each line — what the word does to a person — and the list becomes a description of what a young person is often missing and cannot name. That changes everything about how you hand it on.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-  :root{
-    --parchment:#e8dfc8;
-    --paper:#fdfbf4;
-    --ink:#2A2218;
-    --ink-soft:#4A3E2C;
-    --gold:#c9a84c;
-    --gold-deep:#A67C2E;
-    --gold-soft:#D9C49A;
-    --rule:#C8B58F;
+  .hw-article-body .subtitle { font-style: italic; color: var(--muted); font-size: 22px; margin: -20px 0 34px; }
+  .hw-article-body p.first::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
   }
-  *{box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
-  body{
-    margin:0;
-    background:var(--parchment);
-    color:var(--ink);
-    font-family:'Cormorant Garamond','Garamond',Georgia,serif;
-    font-size:21px;
-    line-height:1.72;
+  .hw-article-body .divider { text-align: center; color: var(--brass); letter-spacing: 0.6em; font-size: 14px; margin: 36px 0; }
+  .hw-article-body .rendering { margin: 30px 0; padding: 28px 32px; background: var(--paper-hover); border: 1px solid var(--hairline); }
+  .hw-article-body .rendering p { margin: 0 0 10px; font-size: 18px; }
+  .hw-article-body .rendering p:last-child { margin-bottom: 0; }
+  .hw-article-body .rendering .what { color: var(--brass); font-style: italic; }
+  .hw-article-body .questions { margin: 32px 0 8px; font-style: italic; color: var(--muted); }
+  .hw-article-body .questions p { margin: 0 0 10px; }
+  .hw-article-body .book-link {
+    display: block; margin: 44px 0 8px; padding: 28px 32px; background: var(--paper-hover); border: 1px solid var(--hairline);
+    text-decoration: none; color: var(--ink);
   }
-  .page{
-    max-width:720px;
-    margin:0 auto;
-    background:var(--paper);
-    border-left:1px solid var(--rule);
-    border-right:1px solid var(--rule);
-    padding:0 62px 84px;
-  }
-
-  /* ---- title block ---- */
-  header.title{
-    text-align:center;
-    padding:78px 0 26px;
-  }
-  .eyebrow{
-    font-family:'Cinzel',serif;
-    font-size:12px;
-    letter-spacing:0.28em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    margin-bottom:30px;
-  }
-  header.title h1{
-    font-family:'Cinzel',serif;
-    font-weight:600;
-    font-size:33px;
-    letter-spacing:0.03em;
-    line-height:1.22;
-    color:var(--ink);
-    margin:0 0 16px;
-  }
-  .subtitle{
-    font-style:italic;
-    font-size:20px;
-    color:var(--ink-soft);
-    margin:0 0 26px;
-  }
-  .dot-motif{
-    color:var(--gold);
-    letter-spacing:0.5em;
-    font-size:13px;
-    padding-left:0.5em;
-    margin-bottom:8px;
-  }
-  .byline{
-    font-family:'Cinzel',serif;
-    font-size:11px;
-    letter-spacing:0.22em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-  }
-
-  .lead-rule{
-    width:54px;height:1px;
-    background:var(--gold);
-    margin:18px auto 40px;
-  }
-
-  /* ---- body ---- */
-  main p{ margin:0 0 20px; }
-  main p.first{ text-indent:0; }
-  main p.drop::first-letter{
-    font-family:'Cinzel',serif;
-    font-size:56px;
-    line-height:0.8;
-    float:left;
-    padding:6px 10px 0 0;
-    color:var(--gold-deep);
-    font-weight:600;
-  }
-
-  .scripture{
-    margin:30px 0 30px 0;
-    padding:4px 0 4px 26px;
-    border-left:3px solid var(--gold);
-    font-style:italic;
-    color:var(--ink-soft);
-    font-size:20px;
-    line-height:1.6;
-  }
-  .scripture .ref{
-    display:block;
-    font-style:normal;
-    font-family:'Cinzel',serif;
-    font-size:10px;
-    letter-spacing:0.2em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    margin-top:12px;
-  }
-
-  /* the six-rung rendering */
-  .rendering{
-    margin:34px 0;
-    padding:30px 34px;
-    background:#FAF5E8;
-    border:1px solid var(--gold-soft);
-    border-radius:2px;
-  }
-  .rendering p{
-    margin:0 0 10px;
-    font-size:19px;
-    line-height:1.5;
-  }
-  .rendering p:last-child{ margin-bottom:0; }
-  .rendering .what{ color:var(--gold-deep); font-style:italic; }
-
-  .divider{
-    text-align:center;
-    color:var(--gold);
-    letter-spacing:0.5em;
-    font-size:15px;
-    margin:42px 0;
-    padding-left:0.5em;
-  }
-
-  /* Selah block */
-  .selah{
-    margin:40px 0;
-    text-align:center;
-  }
-  .selah .selah-word{
-    font-family:'Cinzel',serif;
-    font-size:13px;
-    letter-spacing:0.34em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    margin-bottom:6px;
-  }
-  .selah .selah-rule{
-    width:40px;height:1px;background:var(--gold-soft);
-    margin:0 auto 26px;
-  }
-  .selah p{
-    text-align:left;
-    font-size:21px;
-  }
-
-  .questions{
-    margin:36px 0 8px;
-    font-style:italic;
-    color:var(--ink-soft);
-    font-size:21px;
-    line-height:1.7;
-  }
-  .questions p{ margin:0 0 10px; }
-
-  /* ---- book link card ---- */
-  .book-link{
-    display:block;
-    margin:52px 0 8px;
-    padding:30px 34px 26px;
-    background:#FAF5E8;
-    border:1px solid var(--rule);
-    border-radius:2px;
-    text-decoration:none;
-    color:var(--ink);
-    transition:box-shadow 0.25s ease, transform 0.25s ease;
-  }
-  .book-link:hover{
-    box-shadow:0 6px 24px rgba(166,124,46,0.18);
-    transform:translateY(-2px);
-  }
-  .book-link .bl-eyebrow{
-    font-family:'Cinzel',serif;
-    font-size:10px;
-    letter-spacing:0.26em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    margin-bottom:12px;
-  }
-  .book-link .bl-title{
-    font-family:'Cinzel',serif;
-    font-weight:500;
-    font-size:26px;
-    letter-spacing:0.03em;
-    margin:0 0 6px;
-    line-height:1.2;
-  }
-  .book-link .bl-sub{
-    font-style:italic;
-    font-size:17px;
-    color:var(--ink-soft);
-    margin:0 0 14px;
-  }
-  .book-link .bl-read{
-    font-style:italic;
-    font-size:15px;
-    color:var(--gold-deep);
-  }
-  .pdf-line{
-    text-align:center;
-    margin:6px 0 0;
-  }
-  .pdf-line a{
-    font-family:'Cinzel',serif;
-    font-size:10px;
-    letter-spacing:0.22em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    text-decoration:none;
-    border-bottom:1px solid var(--gold-soft);
-    padding-bottom:2px;
-  }
-  .pdf-line a:hover{ color:var(--gold-deep); border-bottom-color:var(--gold-deep); }
-
-  /* ── Site nav ── */
-  nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-  nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-  nav.hw-nav a:hover{opacity:1;color:#fff;}
-  nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-
-  /* ── Footer ── */
-  footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-  @media (max-width:680px){
-    body{ font-size:19px; }
-    .page{ padding:0 26px 56px; border-left:none; border-right:none; }
-    header.title{ padding:50px 0 20px; }
-    header.title h1{ font-size:27px; }
-    .rendering{ padding:24px 22px; }
-    .book-link{ padding:24px 22px 22px; }
-  }
+  .hw-article-body .book-link:hover { background: var(--paper); border-color: var(--oxblood); }
+  .hw-article-body .book-link .bl-eyebrow { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); margin-bottom: 10px; }
+  .hw-article-body .book-link .bl-title { font-size: 24px; margin: 0 0 6px; }
+  .hw-article-body .book-link .bl-sub { font-style: italic; color: var(--muted); margin: 0 0 12px; }
+  .hw-article-body .book-link .bl-read { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--oxblood); }
+  .hw-article-body .pdf-line { text-align: center; margin: 6px 0 0; }
+  .hw-article-body .pdf-line a { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--hairline); }
+  .hw-article-body .pdf-line a:hover { color: var(--oxblood); border-bottom-color: var(--oxblood); }
 </style>
 </head>
-<body>
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html" class="current">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-<div class="page">
+<body class="hw">
 
-  <header class="title">
-    <div class="eyebrow">A Hesed Words Reflection</div>
-    <h1>Did the Word Become a List?</h1>
-    <p class="subtitle">Psalm 19, and the language a child can hear</p>
-    <div class="dot-motif">&middot; &middot; &middot;</div>
-    <div class="byline">Norm Reed</div>
-  </header>
-
-  <div class="lead-rule"></div>
-
-  <main>
-
-    <p class="first drop">There is a stretch in the middle of Psalm 19 that most of us have heard read aloud, and most of us have stopped listening to halfway through. Six lines, stacked, all built the same way. The law of the Lord, the testimony of the Lord, the precepts, the commandment, the fear, the judgments. To a modern ear &mdash; and to almost any young ear &mdash; it can sound like a list of demands. A catalogue of things required. Rules.</p>
-
-    <p>But that is not what it is. And the moment you see what it actually is, the whole psalm turns over in your hands.</p>
-
-    <p>Read the six lines again, and this time look not at the front of each line but at the back of it. Look at what each one <em>does.</em></p>
-
-    <div class="scripture">
-      The law of the Lord is perfect, reviving the soul;<br>
-      the testimony of the Lord is sure, making wise the simple;<br>
-      the precepts of the Lord are right, rejoicing the heart;<br>
-      the commandment of the Lord is pure, enlightening the eyes&hellip;
-      <span class="ref">Psalm 19 &middot; 7&ndash;8</span>
-    </div>
-
-    <p>Every line is the same shape: here is something God has said &mdash; and here is what it does to a person. It revives. It makes wise. It gladdens. It gives light. Not one of these is a demand. Every one is a gift. The word of God, in this psalm, is not a fence built around a life to keep it in. It is something that moves toward a person and does them good.</p>
-
-    <p>That changes everything about how you hand it on.</p>
-
-    <div class="divider">&middot; &middot; &middot;</div>
-
-    <p>I have spent a good deal of my life trying to say true things in plain words &mdash; to people in prison, to families divided by a prison wall, to anyone for whom the old formal language of faith had long ago closed like a door. And I have learned that putting something into plain words is not making it smaller. It is a test. If a truth cannot survive being said simply, it may be that we never understood it as well as we thought.</p>
-
-    <p>So I tried it with these six lines. I asked what they would sound like to a thirteen-year-old &mdash; not dumbed down, but cleared of fog, so the thing underneath could actually be heard:</p>
-
-    <div class="rendering">
-      <p>God&rsquo;s teaching is perfect; <span class="what">it brings you back to life.</span></p>
-      <p>What God says can be trusted; <span class="what">it makes a simple person wise.</span></p>
-      <p>God&rsquo;s directions are right; <span class="what">they make your heart glad.</span></p>
-      <p>God&rsquo;s commands are clear; <span class="what">they help you see.</span></p>
-      <p>Standing in awe of God is clean, <span class="what">and it lasts for ever.</span></p>
-      <p>The way God decides things is true, <span class="what">and fair, all the way through.</span></p>
-    </div>
-
-    <p>Said like that, the list stops being a list. It becomes a description of exactly the things a young person is often missing and cannot name &mdash; to be brought back when they feel flat, to be given wisdom when they feel they missed the lesson everyone else was in, to be gladdened, to be helped to see. The word is not asking them for something. It is offering them something.</p>
-
-    <div class="selah">
-      <div class="selah-word">Selah</div>
-      <div class="selah-rule"></div>
-    </div>
-
-    <p>I have been thinking about my grandchildren. As I write this they are a long way off, on a long holiday, and even a holiday can become a long stretch to fill &mdash; days at home, responsibilities that crowd out the time to simply play, the ordinary weight of a young life with more asked of it than it always wants to give. I find I want a great deal for them. And what I want, when I am honest, is not chiefly that they would obey. It is that the word of God would do for them what this psalm says it does &mdash; that it would revive them, gladden them, give them light. That it would keep them, rather than merely be kept by them.</p>
-
-    <p>And thinking about them sends me further back, to their mothers. My two daughters grew up as the children of a missionary, inside a community where the church was not a Sunday event but the very air of every day. Scripture was always there, always spoken, always near. And I have wondered &mdash; with the particular honesty a man is granted late &mdash; what it became for them in all that nearness. Did the constant presence of the word make it a list of rules to be measured against? Or did it become what Psalm 19 promises: a liberating force, reviving and gladdening and giving light?</p>
-
-    <p>I do not think that is a question a parent ever fully gets to answer. But it is the right question, and this psalm is the one that asks it. Because the difference between a rule and a gift is not in the word itself. It is in whether we ever heard what the word was for.</p>
-
-    <div class="divider">&middot; &middot; &middot;</div>
-
-    <p>So I wanted to see what these six lines would look like if they did not stay on the page &mdash; if they happened to one ordinary girl, on one ordinary week, in the kind of long flat stretch a young person knows from the inside. Not a sermon about the psalm. A story in which the psalm quietly does its work, the way it is meant to: unasked, almost unnoticed, and from outside.</p>
-
-    <p>I wrote it for the young. But I find, as I always seem to, that I wrote it for myself as well.</p>
-
-    <a class="book-link" href="/books/who-would-have-thought.html">
-      <div class="bl-eyebrow">Read the story</div>
-      <div class="bl-title">Who Would Have Thought</div>
-      <div class="bl-sub">A girl, a long week, and a verse caught by accident</div>
-      <div class="bl-read">Read the book &rarr;</div>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
     </a>
-    <p class="pdf-line">
-      <a href="/books/who-would-have-thought.pdf" target="_blank" rel="noopener">Download as PDF</a>
-    </p>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
+  </div>
+</header>
 
-    <div class="questions">
-      <p><em>What did the word of God become, in the house I grew up in &mdash; a list to be measured against, or a hand held out?</em></p>
-      <p><em>And the young people I love now: am I handing them a fence, or a gift?</em></p>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>
+      <div>Psalm 19:7&ndash;8</div>
+      <div>23 Jun 2026</div>
+      <div class="byline">Norm Reed</div>
     </div>
+    <div>
+      <h1>Did the Word Become a List?</h1>
+      <div class="hw-article-body">
+        <p class="subtitle">Psalm 19, and the language a child can hear</p>
 
-  </main>
+        <p class="first">There is a stretch in the middle of Psalm 19 that most of us have heard read aloud, and most of us have stopped listening to halfway through. Six lines, stacked, all built the same way. The law of the Lord, the testimony of the Lord, the precepts, the commandment, the fear, the judgments. To a modern ear &mdash; and to almost any young ear &mdash; it can sound like a list of demands. A catalogue of things required. Rules.</p>
 
-</div>
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+        <p>But that is not what it is. And the moment you see what it actually is, the whole psalm turns over in your hands.</p>
+
+        <p>Read the six lines again, and this time look not at the front of each line but at the back of it. Look at what each one <em>does.</em></p>
+
+        <p class="verse">The law of the Lord is perfect, reviving the soul; the testimony of the Lord is sure, making wise the simple; the precepts of the Lord are right, rejoicing the heart; the commandment of the Lord is pure, enlightening the eyes&hellip; <em>Psalm 19:7&ndash;8</em></p>
+
+        <p>Every line is the same shape: here is something God has said &mdash; and here is what it does to a person. It revives. It makes wise. It gladdens. It gives light. Not one of these is a demand. Every one is a gift. The word of God, in this psalm, is not a fence built around a life to keep it in. It is something that moves toward a person and does them good.</p>
+
+        <p>That changes everything about how you hand it on.</p>
+
+        <div class="divider">&middot; &middot; &middot;</div>
+
+        <p>I have spent a good deal of my life trying to say true things in plain words &mdash; to people in prison, to families divided by a prison wall, to anyone for whom the old formal language of faith had long ago closed like a door. And I have learned that putting something into plain words is not making it smaller. It is a test. If a truth cannot survive being said simply, it may be that we never understood it as well as we thought.</p>
+
+        <p>So I tried it with these six lines. I asked what they would sound like to a thirteen-year-old &mdash; not dumbed down, but cleared of fog, so the thing underneath could actually be heard:</p>
+
+        <div class="rendering">
+          <p>God&rsquo;s teaching is perfect; <span class="what">it brings you back to life.</span></p>
+          <p>What God says can be trusted; <span class="what">it makes a simple person wise.</span></p>
+          <p>God&rsquo;s directions are right; <span class="what">they make your heart glad.</span></p>
+          <p>God&rsquo;s commands are clear; <span class="what">they help you see.</span></p>
+          <p>Standing in awe of God is clean, <span class="what">and it lasts for ever.</span></p>
+          <p>The way God decides things is true, <span class="what">and fair, all the way through.</span></p>
+        </div>
+
+        <p>Said like that, the list stops being a list. It becomes a description of exactly the things a young person is often missing and cannot name &mdash; to be brought back when they feel flat, to be given wisdom when they feel they missed the lesson everyone else was in, to be gladdened, to be helped to see. The word is not asking them for something. It is offering them something.</p>
+
+        <div class="hw-selah">
+          <div class="rule"></div>
+          <div class="word">Selah</div>
+          <div class="rule"></div>
+        </div>
+
+        <p>I have been thinking about my grandchildren. As I write this they are a long way off, on a long holiday, and even a holiday can become a long stretch to fill &mdash; days at home, responsibilities that crowd out the time to simply play, the ordinary weight of a young life with more asked of it than it always wants to give. I find I want a great deal for them. And what I want, when I am honest, is not chiefly that they would obey. It is that the word of God would do for them what this psalm says it does &mdash; that it would revive them, gladden them, give them light. That it would keep them, rather than merely be kept by them.</p>
+
+        <p>And thinking about them sends me further back, to their mothers. My two daughters grew up as the children of a missionary, inside a community where the church was not a Sunday event but the very air of every day. Scripture was always there, always spoken, always near. And I have wondered &mdash; with the particular honesty a man is granted late &mdash; what it became for them in all that nearness. Did the constant presence of the word make it a list of rules to be measured against? Or did it become what Psalm 19 promises: a liberating force, reviving and gladdening and giving light?</p>
+
+        <p>I do not think that is a question a parent ever fully gets to answer. But it is the right question, and this psalm is the one that asks it. Because the difference between a rule and a gift is not in the word itself. It is in whether we ever heard what the word was for.</p>
+
+        <div class="divider">&middot; &middot; &middot;</div>
+
+        <p>So I wanted to see what these six lines would look like if they did not stay on the page &mdash; if they happened to one ordinary girl, on one ordinary week, in the kind of long flat stretch a young person knows from the inside. Not a sermon about the psalm. A story in which the psalm quietly does its work, the way it is meant to: unasked, almost unnoticed, and from outside.</p>
+
+        <p>I wrote it for the young. But I find, as I always seem to, that I wrote it for myself as well.</p>
+
+        <a class="book-link" href="/books/who-would-have-thought.html">
+          <div class="bl-eyebrow">Read the story</div>
+          <div class="bl-title">Who Would Have Thought</div>
+          <div class="bl-sub">A girl, a long week, and a verse caught by accident</div>
+          <div class="bl-read">Read the book &rarr;</div>
+        </a>
+        <p class="pdf-line">
+          <a href="/books/who-would-have-thought.pdf" target="_blank" rel="noopener">Download as PDF</a>
+        </p>
+
+        <div class="questions">
+          <p><em>What did the word of God become, in the house I grew up in &mdash; a list to be measured against, or a hand held out?</em></p>
+          <p><em>And the young people I love now: am I handing them a fence, or a gift?</em></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
+
 </body>
 </html>
