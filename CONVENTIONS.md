@@ -150,6 +150,15 @@ per-page, not a rule that a class name must match exactly.
   "Selah" heading. Every reflection that uses one restyles it locally to match that page's
   palette — there is no single canonical version to copy verbatim; see any recent reflection
   (e.g. `reflections/those-who-know-their-god.html`) for a representative example.
+- **Pull-quotes** (reflections and articles): a lifted sentence set large in the body, gold-ruled
+  or unruled to suit the page's own palette — styled per-page like everything else here, no shared
+  class (`.pullquote` is a per-page convention, not a shared stylesheet rule). Rules of use:
+  maximum two or three per piece; never lifted from a Selah block; never placed on the same screen
+  as its own occurrence in the prose — set it further down (or, if it foreshadows a later
+  paragraph, well ahead of that paragraph) so the repetition reads as a bridge, not an echo.
+  Reserve for sentences carrying the piece's actual argument, not for decoration. See
+  `reflections/god-alone.html` for two working examples, one placed after the material that leads
+  to it, one placed ahead of the paragraph where the sentence itself lands.
 
 ## PDF companions
 
