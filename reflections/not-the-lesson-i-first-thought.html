@@ -3,264 +3,175 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Not the Lesson I First Thought &middot; Hesed Words</title>
+<title>Not the Lesson I First Thought — Hesed Words</title>
+<meta name="description" content="In Ezra 4 the neighbours offer to help build, and Zerubbabel refuses. They raised worship; he answered architecture. The invitation was written into the founding charter — Solomon prayed for the foreigner, Isaiah called it a house of prayer for all peoples — and he did not reach for it.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-:root{
-  --parchment:#e8dfc8;
-  --parchment-page:#f3ecda;
-  --gold:#c9a84c;
-  --gold-deep:#A67C2E;
-  --gold-soft:#D9C49A;
-  --ink:#2A2218;
-  --muted:#6B5C45;
-  --rule:#C8B58F;
-}
-*{box-sizing:border-box;}
-body{
-  margin:0;
-  background:var(--parchment);
-  color:var(--ink);
-  font-family:'Cormorant Garamond','Garamond',Georgia,serif;
-  font-size:19px;
-  line-height:1.72;
-}
-
-/* ── Site nav ── */
-nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-nav.hw-nav a:hover{opacity:1;color:#fff;}
-nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-/* ── Footer ── */
-footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-.page{
-  max-width:720px;
-  margin:0 auto;
-  background:var(--parchment-page);
-  padding:64px 56px 24px;
-  border-left:1px solid var(--rule);
-  border-right:1px solid var(--rule);
-}
-.eyebrow{
-  font-family:'Cinzel',serif;
-  font-size:11px;
-  letter-spacing:.28em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-  text-align:center;
-  margin-bottom:20px;
-}
-h1{
-  font-family:'Cinzel',serif;
-  font-weight:500;
-  font-size:34px;
-  letter-spacing:.03em;
-  line-height:1.22;
-  text-align:center;
-  margin:0 0 14px;
-}
-.subtitle{
-  text-align:center;
-  font-style:italic;
-  font-size:20px;
-  color:#4A3E2C;
-  margin:0 0 26px;
-}
-.dots{
-  text-align:center;
-  color:var(--gold);
-  letter-spacing:.6em;
-  font-size:13px;
-  margin:0 0 18px;
-}
-.byline{
-  text-align:center;
-  font-family:'Cinzel',serif;
-  font-size:10px;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin:0 0 52px;
-}
-.selah{
-  border-left:3px solid var(--gold);
-  padding:4px 0 4px 24px;
-  margin:0 0 44px;
-}
-.selah .selah-label{
-  font-family:'Cinzel',serif;
-  font-size:11px;
-  letter-spacing:.26em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-  margin-bottom:14px;
-}
-.selah p{margin:0 0 16px;}
-.selah p:last-child{margin-bottom:0;}
-p{margin:0 0 20px;}
-em{font-style:italic;}
-hr.div{
-  border:none;
-  text-align:center;
-  margin:40px 0;
-}
-hr.div:after{
-  content:'\2022 \2022 \2022';
-  color:var(--gold);
-  letter-spacing:.6em;
-  font-size:12px;
-}
-.prayer{
-  margin:44px 0 8px;
-  padding-top:28px;
-  border-top:1px solid var(--gold-soft);
-  text-align:center;
-  font-style:italic;
-  color:#3A3024;
-  line-height:1.9;
-}
-.prayer .amen{
-  display:block;
-  font-family:'Cinzel',serif;
-  font-style:normal;
-  font-size:11px;
-  letter-spacing:.26em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-  margin-top:16px;
-}
-@media (max-width:640px){
-  body{font-size:18px;}
-  .page{padding:40px 22px 16px;border-left:none;border-right:none;}
-  h1{font-size:26px;}
-  .subtitle{font-size:18px;}
-  .selah{padding-left:16px;}
-}
+  .hw-article-body .subtitle { font-style: italic; color: var(--muted); font-size: 22px; margin: -20px 0 34px; }
+  .hw-article-body .divider { text-align: center; color: var(--brass); letter-spacing: 0.6em; font-size: 14px; margin: 36px 0; }
+  .hw-article-body .prayer {
+    margin: 40px 0 8px; padding-top: 26px; border-top: 1px solid var(--hairline); text-align: center; font-style: italic; color: var(--muted);
+  }
+  .hw-article-body .prayer .amen {
+    display: block; font-family: var(--font-mono); font-style: normal; font-size: 11px; letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--brass); margin-top: 16px;
+  }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html" class="current">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<div class="page">
-
-  <div class="eyebrow">Reflection</div>
-  <h1>Not the Lesson I First Thought</h1>
-  <p class="subtitle">Ezra 4, John 4, and the question underneath</p>
-  <div class="dots">&bull; &bull; &bull;</div>
-  <div class="byline">Norm Reed</div>
-
-  <div class="selah">
-    <div class="selah-label">Selah</div>
-    <p>The devotional readings had brought me to the end of Nehemiah, and I had written about what I found there. I expected that to be the end of it.</p>
-    <p>But the reading went on, and the pattern went back. Not just Nehemiah. Zerubbabel finished a temple. Ezra delivered the word and the people wept and covenanted. Nehemiah raised walls in fifty-two days. Three men, three finished works, and by the last chapter of the last book, all of it undone &mdash; the same mixed marriages, the same neglected Levites, the same profaned Sabbath.</p>
-    <p>I had been asking why it didn&rsquo;t hold. That is the obvious question and I think it is the wrong one.</p>
-    <p>The question underneath is what they thought they were building.</p>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
   </div>
+</header>
 
-  <p>Ezra 4 comes early, and I had never stopped at it.</p>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>
+      <div>Ezra 4</div>
+      <div>John 4</div>
+      <div>19 Jul 2026</div>
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>Not the Lesson I First Thought</h1>
+      <div class="hw-article-body">
+        <p class="subtitle">Ezra 4, John 4, and the question underneath</p>
 
-  <p>The neighbouring people come to Zerubbabel with an offer: let us build with you, for we seek your God as you do, and we have been sacrificing to him since the days of Esarhaddon. Zerubbabel and Jeshua answer: you have nothing to do with us in building a house to our God; we alone will build.</p>
+        <div class="hw-selah">
+          <div class="rule"></div>
+          <div class="word">Selah</div>
+          <div class="rule"></div>
+        </div>
 
-  <p>I had always assumed that was right, and there are good reasons to. The narrator has already called them adversaries before they open their mouths. Their worship was the mixed thing 2 Kings describes &mdash; fearing the LORD and serving their own gods. The moment they are refused they begin bribing officials to stop the work, which tells us something about what the offer was. And Haggai and Zechariah are preaching to this community at this moment, and neither of them says a word against the refusal.</p>
+        <p>The devotional readings had brought me to the end of Nehemiah, and I had written about what I found there. I expected that to be the end of it.</p>
 
-  <p>So the refusal was not cowardice and it was not bigotry. It was a man with a building permit and a half-built house, protecting the thing he had been sent to protect.</p>
+        <p>But the reading went on, and the pattern went back. Not just Nehemiah. Zerubbabel finished a temple. Ezra delivered the word and the people wept and covenanted. Nehemiah raised walls in fifty-two days. Three men, three finished works, and by the last chapter of the last book, all of it undone &mdash; the same mixed marriages, the same neglected Levites, the same profaned Sabbath.</p>
 
-  <p>What I had never noticed is what he answered. They said <em>we seek your God</em>. He said <em>you have nothing to do with the building</em>.</p>
+        <p>I had been asking why it didn&rsquo;t hold. That is the obvious question and I think it is the wrong one.</p>
 
-  <p>They raised worship. He answered architecture.</p>
+        <p>The question underneath is what they thought they were building.</p>
 
-  <hr class="div">
+        <p>Ezra 4 comes early, and I had never stopped at it.</p>
 
-  <p>He was not without an answer. That is the part that has stayed with me.</p>
+        <p>The neighbouring people come to Zerubbabel with an offer: let us build with you, for we seek your God as you do, and we have been sacrificing to him since the days of Esarhaddon. Zerubbabel and Jeshua answer: you have nothing to do with us in building a house to our God; we alone will build.</p>
 
-  <p>When Solomon dedicated the first temple, he prayed about the foreigner. Not the resident alien with obligations under the law &mdash; the one who comes from a far country because he has heard of God&rsquo;s name. <em>Hear in heaven, and do according to all that the foreigner calls to you.</em> The building was consecrated with the outsider already named in the prayer.</p>
+        <p>I had always assumed that was right, and there are good reasons to. The narrator has already called them adversaries before they open their mouths. Their worship was the mixed thing 2 Kings describes &mdash; fearing the LORD and serving their own gods. The moment they are refused they begin bribing officials to stop the work, which tells us something about what the offer was. And Haggai and Zechariah are preaching to this community at this moment, and neither of them says a word against the refusal.</p>
 
-  <p>Isaiah is preaching to this generation, the ones coming back, and says it again: foreigners who join themselves to the LORD, to love his name and be his servants &mdash; these I will bring to my holy mountain, for my house shall be called a house of prayer for all peoples.</p>
+        <p>So the refusal was not cowardice and it was not bigotry. It was a man with a building permit and a half-built house, protecting the thing he had been sent to protect.</p>
 
-  <p>And when the temple was eventually finished and enlarged, it had a court for the Gentiles. There was designated ground inside the structure for the very people who had been refused as builders. Refused at the scaffolding, admitted at the gate.</p>
+        <p>What I had never noticed is what he answered. They said <em>we seek your God</em>. He said <em>you have nothing to do with the building</em>.</p>
 
-  <p>I do not think Zerubbabel was being a hypocrite. I think he was answering a question about worship with the only category he had ready, and the category was too small. The building was never the point. It was built to testify &mdash; to stand there and say, come and see who this God is. He treated it as a thing to be defended when it was meant to be a thing that invites.</p>
+        <p>They raised worship. He answered architecture.</p>
 
-  <p>The invitation was written into the founding charter. He had it in hand. He did not reach for it.</p>
+        <div class="divider">&middot; &middot; &middot;</div>
 
-  <hr class="div">
+        <p>He was not without an answer. That is the part that has stayed with me.</p>
 
-  <p>Five hundred years later a woman at a well raises the same grievance.</p>
+        <p>When Solomon dedicated the first temple, he prayed about the foreigner. Not the resident alien with obligations under the law &mdash; the one who comes from a far country because he has heard of God&rsquo;s name. <em>Hear in heaven, and do according to all that the foreigner calls to you.</em> The building was consecrated with the outsider already named in the prayer.</p>
 
-  <p><em>Our fathers worshipped on this mountain, and you say that in Jerusalem is the place where people ought to worship.</em> That is Ezra 4 still being argued. She is a descendant of the excluded and she has been taught that the question is which building.</p>
+        <p>Isaiah is preaching to this generation, the ones coming back, and says it again: foreigners who join themselves to the LORD, to love his name and be his servants &mdash; these I will bring to my holy mountain, for my house shall be called a house of prayer for all peoples.</p>
 
-  <p>Everything about the encounter should have ended it. She is a Samaritan, she is a woman, she has a history. Any one of them was ground enough. And Jesus does not soften the difference &mdash; he says plainly, you worship what you do not know; salvation is from the Jews. The same content as Zerubbabel&rsquo;s refusal. She is not in a position to build this.</p>
+        <p>And when the temple was eventually finished and enlarged, it had a court for the Gentiles. There was designated ground inside the structure for the very people who had been refused as builders. Refused at the scaffolding, admitted at the gate.</p>
 
-  <p>But he does not stop there, and that is the whole of it.</p>
+        <p>I do not think Zerubbabel was being a hypocrite. I think he was answering a question about worship with the only category he had ready, and the category was too small. The building was never the point. It was built to testify &mdash; to stand there and say, come and see who this God is. He treated it as a thing to be defended when it was meant to be a thing that invites.</p>
 
-  <p><em>The hour is coming, and is now here, when the true worshippers will worship the Father in spirit and truth.</em></p>
+        <p>The invitation was written into the founding charter. He had it in hand. He did not reach for it.</p>
 
-  <p>He does not lower the standard. Spirit and truth is harder than a mountain. What he changes is what kind of thing makes a person suitable. Zerubbabel&rsquo;s grounds were ancestry and provenance &mdash; things you either have or do not, and cannot acquire. Jesus makes the ground something that can be given. And you cannot invite someone into an ancestry. You can invite someone into a gift.</p>
+        <div class="divider">&middot; &middot; &middot;</div>
 
-  <p>He never refuses her. He creates a thirst and then satisfies it. Zerubbabel foreclosed a thirst he never tested.</p>
+        <p>Five hundred years later a woman at a well raises the same grievance.</p>
 
-  <p>Zerubbabel made the issue of worship about the temple. Jesus made the issue of the temple about worship.</p>
+        <p><em>Our fathers worshipped on this mountain, and you say that in Jerusalem is the place where people ought to worship.</em> That is Ezra 4 still being argued. She is a descendant of the excluded and she has been taught that the question is which building.</p>
 
-  <hr class="div">
+        <p>Everything about the encounter should have ended it. She is a Samaritan, she is a woman, she has a history. Any one of them was ground enough. And Jesus does not soften the difference &mdash; he says plainly, you worship what you do not know; salvation is from the Jews. The same content as Zerubbabel&rsquo;s refusal. She is not in a position to build this.</p>
 
-  <p>John Piper opens <em>Let the Nations Be Glad</em> with a sentence I have never got past: missions exists because worship doesn&rsquo;t. Worship is ultimate; missions is penultimate, and it stops when worship is everywhere. The work is not the point. The work exists because the point is missing.</p>
+        <p>But he does not stop there, and that is the whole of it.</p>
 
-  <p>Which means the question in Ezra 4 was an evangelistic opportunity and it was read as a security threat.</p>
+        <p><em>The hour is coming, and is now here, when the true worshippers will worship the Father in spirit and truth.</em></p>
 
-  <p>We have done that on a scale it is hard to look at. The crusades are the obvious end of it &mdash; men who believed they were defending the holy place and killed the people the holy place was built to invite. That is Zerubbabel&rsquo;s error with an army attached.</p>
+        <p>He does not lower the standard. Spirit and truth is harder than a mountain. What he changes is what kind of thing makes a person suitable. Zerubbabel&rsquo;s grounds were ancestry and provenance &mdash; things you either have or do not, and cannot acquire. Jesus makes the ground something that can be given. And you cannot invite someone into an ancestry. You can invite someone into a gift.</p>
 
-  <p>But the crusades are not where most of us live. The ordinary version is quieter.</p>
+        <p>He never refuses her. He creates a thirst and then satisfies it. Zerubbabel foreclosed a thirst he never tested.</p>
 
-  <p>I have observed worship in churches where the musicians could not be faulted &mdash; trained, correct, entirely acceptable, and hard on the people &mdash; and the congregation did not worship. And in churches where the platform would not have survived much scrutiny, and the people wept.</p>
+        <p>Zerubbabel made the issue of worship about the temple. Jesus made the issue of the temple about worship.</p>
 
-  <p>I do not offer that as a policy. It is not an argument for carelessness, and I would not build a ministry on it. But I have never been able to unlearn it. The thing we were measuring was not the thing that mattered.</p>
+        <div class="divider">&middot; &middot; &middot;</div>
 
-  <p>We are more professional now than we were then. The playing is better. The lighting is better. And there is a danger in it that Zerubbabel would recognise &mdash; that the platform becomes the structure we are protecting, maintained to a standard, defended against the unsuitable, with a form of worship and not much of the Spirit in it. Skill was never the problem. Neither was Zerubbabel&rsquo;s diligence. The problem is what happens when the thing built to invite becomes the thing we guard.</p>
+        <p>John Piper opens <em>Let the Nations Be Glad</em> with a sentence I have never got past: missions exists because worship doesn&rsquo;t. Worship is ultimate; missions is penultimate, and it stops when worship is everywhere. The work is not the point. The work exists because the point is missing.</p>
 
-  <hr class="div">
+        <p>Which means the question in Ezra 4 was an evangelistic opportunity and it was read as a security threat.</p>
 
-  <p>The three of them finished what they were sent to finish. The temple stood. The word was read and the people wept and covenanted. The walls went up in fifty-two days. And none of it held.</p>
+        <p>We have done that on a scale it is hard to look at. The crusades are the obvious end of it &mdash; men who believed they were defending the holy place and killed the people the holy place was built to invite. That is Zerubbabel&rsquo;s error with an army attached.</p>
 
-  <p>I used to read that as a failure of endurance &mdash; good work that needed better follow-through, stronger successors, a longer obedience. I no longer think so. I think the primary task was misidentified at the foundation, and everything after it inherited the mistake.</p>
+        <p>But the crusades are not where most of us live. The ordinary version is quieter.</p>
 
-  <p>They thought they were building a house. They were meant to be gathering worshippers.</p>
+        <p>I have observed worship in churches where the musicians could not be faulted &mdash; trained, correct, entirely acceptable, and hard on the people &mdash; and the congregation did not worship. And in churches where the platform would not have survived much scrutiny, and the people wept.</p>
 
-  <p>The house was only ever the means. It stood there to say <em>come and see who this God is</em>, and the first recorded decision made about it was to turn people away from it.</p>
+        <p>I do not offer that as a policy. It is not an argument for carelessness, and I would not build a ministry on it. But I have never been able to unlearn it. The thing we were measuring was not the thing that mattered.</p>
 
-  <p>There is a lesson in these men and it is not the one we usually reach for. We are not meant to hold them up as models to be emulated. We can learn from them &mdash; and there is as much to learn from what they achieved as from where they fell short. Like us, they were fallible. That is the use of them.</p>
+        <p>We are more professional now than we were then. The playing is better. The lighting is better. And there is a danger in it that Zerubbabel would recognise &mdash; that the platform becomes the structure we are protecting, maintained to a standard, defended against the unsuitable, with a form of worship and not much of the Spirit in it. Skill was never the problem. Neither was Zerubbabel&rsquo;s diligence. The problem is what happens when the thing built to invite becomes the thing we guard.</p>
 
-  <p>And where they fell short is where we are still falling short &mdash; still guarding the structure, still measuring the wrong thing, still answering questions about worship with answers about buildings.</p>
+        <div class="divider">&middot; &middot; &middot;</div>
 
-  <p>The temple is finished now. He finished it himself, and it is a body, and it is still being built.</p>
+        <p>The three of them finished what they were sent to finish. The temple stood. The word was read and the people wept and covenanted. The walls went up in fifty-two days. And none of it held.</p>
 
-  <p>And in the courts of that same temple &mdash; Zerubbabel&rsquo;s foundation, enlarged and gilded by Herod &mdash; a man once said: destroy this temple, and in three days I will raise it up. He was speaking of his body.</p>
+        <p>I used to read that as a failure of endurance &mdash; good work that needed better follow-through, stronger successors, a longer obedience. I no longer think so. I think the primary task was misidentified at the foundation, and everything after it inherited the mistake.</p>
 
-  <p>And when he had raised it, he did not refuse builders. He commissioned a small group of them and sent them to every nation to enlist more &mdash; Samaritans among the first &mdash; until people of every tribe and tongue were built together as living stones into a house where God himself lives.</p>
+        <p>They thought they were building a house. They were meant to be gathering worshippers.</p>
 
-  <p>The offer Zerubbabel turned down was made again, and this time it came from the other direction.</p>
+        <p>The house was only ever the means. It stood there to say <em>come and see who this God is</em>, and the first recorded decision made about it was to turn people away from it.</p>
 
-  <div class="prayer">
-    <p>Father, forgive us for guarding what you built to invite.<br>
-    Teach us to want worshippers more than we want walls.<br>
-    And let the house you are building &mdash; the one you have not finished &mdash; be built in us.</p>
-    <span class="amen">Amen</span>
+        <p>There is a lesson in these men and it is not the one we usually reach for. We are not meant to hold them up as models to be emulated. We can learn from them &mdash; and there is as much to learn from what they achieved as from where they fell short. Like us, they were fallible. That is the use of them.</p>
+
+        <p>And where they fell short is where we are still falling short &mdash; still guarding the structure, still measuring the wrong thing, still answering questions about worship with answers about buildings.</p>
+
+        <p>The temple is finished now. He finished it himself, and it is a body, and it is still being built.</p>
+
+        <p>And in the courts of that same temple &mdash; Zerubbabel&rsquo;s foundation, enlarged and gilded by Herod &mdash; a man once said: destroy this temple, and in three days I will raise it up. He was speaking of his body.</p>
+
+        <p>And when he had raised it, he did not refuse builders. He commissioned a small group of them and sent them to every nation to enlist more &mdash; Samaritans among the first &mdash; until people of every tribe and tongue were built together as living stones into a house where God himself lives.</p>
+
+        <p>The offer Zerubbabel turned down was made again, and this time it came from the other direction.</p>
+
+        <div class="prayer">
+          <p>Father, forgive us for guarding what you built to invite.<br>
+          Teach us to want worshippers more than we want walls.<br>
+          And let the house you are building &mdash; the one you have not finished &mdash; be built in us.</p>
+          <span class="amen">Amen</span>
+        </div>
+
+      </div>
+    </div>
   </div>
+</article>
 
-</div>
-
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 </body>
 </html>
