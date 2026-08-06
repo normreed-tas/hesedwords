@@ -56,7 +56,9 @@ yada, da'at (paired entry, slug #yada), emet, paga, argos, ta'am, nashaq, sava, 
 chokmah, anavah, gibbor, rachash, mashak, eleos, charis, aletheia, agape, rasha, tzaddiq,
 hagioi (paired entry with hagios, filed under the plural since that's the form articles use),
 batach, menuha, yachad, nachalah, qavah, barak, shub (slug for the phrase "shub shebut"),
-yirat (slug for the phrase "yirat Adonai"), neder, gur.
+yirat (slug for the phrase "yirat Adonai"), neder, gur, ruth (a proper name, not a
+transliterated word — scope exception since the whole point of its companion article is
+that "Ruth" is the standing picture of hesed).
 NOTE: this list has previously fallen out of sync with the actual glossary — if a word looks
 plausible but isn't listed here, grep glossary.html for its slug before assuming it needs
 seeding. A prior upload brief wrongly assumed 8 of 9 candidate words were missing when they
