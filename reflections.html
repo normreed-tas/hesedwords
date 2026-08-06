@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,262 +8,93 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 
 <style>
-  :root{
-    --parchment:#f4ecd8;
-    --parchment-deep:#ece1c7;
-    --ink:#1f1b16;
-    --ink-soft:#3a332a;
-    --gold:#b08d3f;
-    --gold-deep:#8a6d2b;
-    --rule:#d8c9a3;
-    --maxw:52rem;
+  /* Page-specific: reflections.html builds these via its own inline script
+     (buildFilters/render below) — restyled here, class names unchanged. */
+  .filters {
+    max-width: 1180px; margin: 0 auto; padding: 26px 40px; border-bottom: 1px solid var(--hairline);
+    display: flex; gap: 30px; flex-wrap: wrap; align-items: center;
   }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:radial-gradient(ellipse at top,#f7f0de 0%,var(--parchment) 55%,var(--parchment-deep) 100%) fixed;
-    color:var(--ink);
-    font-family:"Cormorant Garamond",Georgia,serif;
-    font-size:1.2rem;
-    line-height:1.7;
-    -webkit-font-smoothing:antialiased;
+  .fg { display: inline-flex; align-items: baseline; gap: 8px; }
+  .filters label {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #9096A0;
   }
+  .filters select {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ink); background: var(--paper); border: none; border-bottom: 1px solid var(--oxblood);
+    padding: 2px 4px 4px 0; cursor: pointer;
+  }
+  .filters select:disabled { opacity: 0.4; cursor: default; }
+  .filter-break { display: none; }
+  .filter-reset {
+    margin-left: auto; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--oxblood); background: none; border: none; cursor: pointer; padding: 0;
+  }
+  .filter-reset:hover { color: var(--oxblood-dark); }
 
-  /* ── Nav ── */
-  nav.hw-nav{
-    background:var(--ink);
-    color:var(--parchment);
-    font-family:"Cinzel",serif;
-    font-size:.78rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    display:flex;
-    justify-content:center;
-    gap:2.2rem;
-    padding:1.05rem 1rem;
-    flex-wrap:wrap;
+  .listing { max-width: 1180px; margin: 0 auto; padding: 0 40px 96px; }
+  .article-card {
+    display: grid; grid-template-columns: 150px minmax(0,1fr); gap: 36px; align-items: baseline;
+    padding: 28px 0; border-bottom: 1px solid var(--hairline);
   }
-  nav.hw-nav a{color:var(--parchment);text-decoration:none;opacity:.82;transition:opacity .2s;}
-  nav.hw-nav a:hover{opacity:1;color:#fff;}
-  nav.hw-nav a.current{opacity:1;border-bottom:1px solid var(--gold);padding-bottom:.15rem;}
+  .article-card:hover { background: var(--paper-hover); }
+  .card-date {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase;
+  }
+  .card-title { font-size: 26px; font-weight: 400; letter-spacing: -0.015em; margin: 0 0 8px; line-height: 1.25; }
+  .card-title a { color: var(--ink); text-decoration: none; }
+  .card-title a:hover { color: var(--oxblood); }
+  .card-summary { font-style: normal; font-size: 17px; line-height: 1.6; color: var(--muted); max-width: 66ch; margin: 0 0 8px; }
+  .card-meta {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass);
+    display: flex; gap: 8px; flex-wrap: wrap;
+  }
+  .card-meta span::before { content: none; }
+  .card-poster-link {
+    display: inline-block; margin-top: 10px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--oxblood); text-decoration: none; border-bottom: 1px solid var(--hairline);
+  }
+  .card-poster-link:hover { border-bottom-color: var(--oxblood); }
 
-  /* ── Section header ── */
-  .section-header{
-    text-align:center;
-    padding:4rem 1.5rem 2.8rem;
-    max-width:var(--maxw);
-    margin:0 auto;
-  }
-  .haga{
-    font-family:"Cinzel",serif;
-    font-size:3.4rem;
-    line-height:1.1;
-    color:var(--gold);
-    margin:0 0 .6rem;
-    letter-spacing:.04em;
-  }
-  .section-eyebrow{
-    font-family:"Cinzel",serif;
-    font-size:.72rem;
-    letter-spacing:.26em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    margin:0 0 1.4rem;
-  }
-  .section-desc{
-    font-style:italic;
-    color:var(--ink-soft);
-    font-size:1.15rem;
-    max-width:36rem;
-    margin:0 auto;
-  }
+  .empty { text-align: center; font-style: italic; color: var(--muted); padding: 48px 0; display: none; }
 
-  /* ── Divider ── */
-  .rule-line{
-    border:0;
-    border-top:1px solid var(--rule);
-    max-width:var(--maxw);
-    margin:0 auto 2.4rem;
-  }
-
-  /* ── Filters ── */
-  .filters{
-    max-width:var(--maxw);
-    margin:0 auto 2.8rem;
-    padding:0 1.5rem;
-    display:flex;
-    gap:1.2rem;
-    flex-wrap:wrap;
-    align-items:center;
-  }
-  .filters label{
-    font-family:"Cinzel",serif;
-    font-size:.68rem;
-    letter-spacing:.2em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-  }
-  .filters select{
-    font-family:"Cormorant Garamond",serif;
-    font-size:1rem;
-    background:var(--parchment-deep);
-    border:1px solid var(--rule);
-    color:var(--ink);
-    padding:.3rem .7rem;
-    border-radius:2px;
-    cursor:pointer;
-    appearance:none;
-    -webkit-appearance:none;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238a6d2b'/%3E%3C/svg%3E");
-    background-repeat:no-repeat;
-    background-position:right .6rem center;
-    padding-right:1.8rem;
-  }
-  .filter-reset{
-    font-family:"Cinzel",serif;
-    font-size:.65rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    background:none;
-    border:1px solid var(--rule);
-    padding:.3rem .8rem;
-    cursor:pointer;
-    border-radius:2px;
-    transition:border-color .2s,color .2s;
-  }
-  .filter-reset:hover{border-color:var(--gold);color:var(--gold);}
-  .filter-break{width:100%;height:0;}
-  .filters select:disabled{opacity:.45;cursor:default;}
-  .fg{display:inline-flex;align-items:center;gap:.55rem;}
-
-  /* ── Article listing ── */
-  .listing{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:0 1.5rem 5rem;
-    display:flex;
-    flex-direction:column;
-    gap:0;
-  }
-  .article-card{
-    border-top:1px solid var(--rule);
-    padding:2rem 0 2rem;
-    display:grid;
-    grid-template-columns:7rem 1fr;
-    gap:0 2rem;
-  }
-  .article-card:last-child{border-bottom:1px solid var(--rule);}
-  .card-date{
-    font-family:"Cinzel",serif;
-    font-size:.68rem;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    padding-top:.35rem;
-    line-height:1.5;
-  }
-  .card-body{}
-  .card-title{
-    font-family:"Cinzel",serif;
-    font-weight:500;
-    font-size:1.3rem;
-    line-height:1.25;
-    margin:0 0 .6rem;
-  }
-  .card-title a{
-    color:var(--ink);
-    text-decoration:none;
-    transition:color .2s;
-  }
-  .card-title a:hover{color:var(--gold-deep);}
-  .card-summary{
-    font-style:italic;
-    color:var(--ink-soft);
-    margin:0 0 .8rem;
-    font-size:1.05rem;
-  }
-  .card-meta{
-    font-family:"Cinzel",serif;
-    font-size:.64rem;
-    letter-spacing:.15em;
-    text-transform:uppercase;
-    color:var(--gold);
-    display:flex;
-    gap:1.2rem;
-    flex-wrap:wrap;
-  }
-  .card-meta span::before{
-    content:"✦ ";
-    opacity:.6;
-  }
-
-  .card-poster-link{
-    display:inline-block;
-    margin-top:.7rem;
-    font-family:"Cinzel",serif;
-    font-size:.65rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    text-decoration:none;
-    border-bottom:1px solid var(--rule);
-    padding-bottom:2px;
-    transition:color .2s,border-color .2s;
-  }
-  .card-poster-link:hover{color:var(--gold);border-bottom-color:var(--gold);}
-
-  /* ── Empty state ── */
-  .empty{
-    text-align:center;
-    font-style:italic;
-    color:var(--ink-soft);
-    padding:3rem 0;
-    display:none;
-  }
-
-  footer.hw-foot{
-    text-align:center;
-    font-family:"Cinzel",serif;
-    font-size:.7rem;
-    letter-spacing:.2em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    padding:2.5rem 1rem 3.5rem;
-    opacity:.8;
-  }
-
-  @media(max-width:600px){
-    .haga{font-size:2.4rem;}
-    .article-card{grid-template-columns:1fr;gap:.4rem;}
-    .card-date{padding-top:0;}
-    .filters{flex-direction:column;align-items:flex-start;}
+  @media (max-width: 900px) {
+    .article-card { grid-template-columns: 1fr; gap: 8px; }
   }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html" class="current">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<header class="section-header">
-  <p class="haga">הָגָה</p>
-  <p class="section-eyebrow">Devotional Reflections</p>
-  <p class="section-desc">Threading Scripture, word by word, toward the love that holds.</p>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
+  </div>
 </header>
 
-<hr class="rule-line">
+<section class="hw-hero hw-hero-sm">
+  <div class="hw-hero-inner">
+    <div>
+      <div class="hw-eyebrow">I / Reflections</div>
+      <h1>Devotional Reflections</h1>
+      <p class="hw-tagline">Threading Scripture, word by word, toward the love that holds.</p>
+    </div>
+    <div class="hw-hero-heb">הָגָה</div>
+  </div>
+</section>
 
 <div class="filters">
   <span class="fg"><label for="filter-book">Book</label>
@@ -306,7 +137,16 @@
 <div class="listing" id="listing"></div>
 <p class="empty" id="empty">No reflections match those filters.</p>
 
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 <script src="/js/reflections-data.js"></script>
 <script>

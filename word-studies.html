@@ -7,238 +7,101 @@
 <meta name="description" content="Word studies by Norm Reed — one Hebrew or Greek word at a time, and what the English lost. Scripture read slowly.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
+
 <style>
-  :root{
-    --parchment:#f4ecd8;
-    --parchment-deep:#ece1c7;
-    --parchment-mid:#f0e6ce;
-    --ink:#1f1b16;
-    --ink-soft:#3a332a;
-    --ink-light:#4a3218;
-    --gold:#b08d3f;
-    --gold-deep:#8a6d2b;
-    --border:#c8a96e;
-    --border-light:#ddc48a;
-    --rule:#d8c9a3;
-    --shadow:rgba(30,21,8,0.18);
-    --maxw:52rem;
+  /* Page-specific: index list + study cards, built by the inline
+     script below from js/word-studies-data.js. Class names unchanged. */
+  .study-index {
+    max-width: 1180px; margin: 0 auto; padding: 40px 40px 0;
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:radial-gradient(ellipse at top,#f7f0de 0%,var(--parchment) 55%,var(--parchment-deep) 100%) fixed;
-    color:var(--ink);
-    font-family:"Cormorant Garamond",Georgia,serif;
-    font-size:1.15rem;
-    line-height:1.7;
-    -webkit-font-smoothing:antialiased;
+  .index-eyebrow {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 20px;
   }
+  .study-index ul { list-style: none; margin: 0; padding: 0; column-width: 15rem; column-gap: 40px; }
+  .study-index li { margin: 0 0 10px; break-inside: avoid; }
+  .study-index a { font-size: 16px; color: var(--ink); text-decoration: none; }
+  .study-index a:hover { color: var(--oxblood); }
+  .idx-word { font-style: italic; font-family: var(--font-mono); font-size: 11px; color: var(--brass); }
 
-  /* ── Nav ── */
-  nav.hw-nav{
-    background:var(--ink);
-    font-family:"Cinzel",serif;
-    font-size:.78rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    display:flex;
-    justify-content:center;
-    gap:2.2rem;
-    padding:1.05rem 1rem;
-    flex-wrap:wrap;
-  }
-  nav.hw-nav a{color:var(--parchment);text-decoration:none;opacity:.82;transition:opacity .2s;}
-  nav.hw-nav a:hover{opacity:1;color:#fff;}
-  nav.hw-nav a.current{opacity:1;border-bottom:1px solid var(--gold);padding-bottom:.15rem;}
+  .listing { max-width: 1180px; margin: 0 auto; padding: 40px 40px 96px; }
 
-  /* ── Header ── */
-  .section-header{
-    text-align:center;
-    padding:4rem 1.5rem 2.8rem;
-    max-width:var(--maxw);
-    margin:0 auto;
+  /* The one custom Hebrew-forward treatment: the word itself is a
+     wide structural column, not a decorative flourish beside the title. */
+  .study-card {
+    display: grid; grid-template-columns: 260px minmax(0,1fr); gap: 48px; align-items: center;
+    border-bottom: 1px solid var(--hairline); padding: 44px 0; text-decoration: none; color: var(--ink);
+    scroll-margin-top: 90px;
   }
-  .section-eyebrow{
-    font-family:"Cinzel",serif;
-    font-size:.72rem;
-    letter-spacing:.26em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    margin-bottom:1rem;
+  .study-card:hover { background: var(--paper-hover); }
+  .card-heb {
+    font-family: var(--font-heb); font-weight: 300; font-size: 96px; line-height: 1;
+    color: var(--brass); direction: rtl; text-align: center; letter-spacing: 0.02em;
   }
-  .section-title{
-    font-family:"Cinzel",serif;
-    font-weight:500;
-    font-size:clamp(1.8rem,4vw,2.8rem);
-    color:var(--ink);
-    margin-bottom:1.2rem;
-    letter-spacing:.04em;
+  .card-heb.is-greek { direction: ltr; font-size: 72px; }
+  .card-word {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--oxblood); margin: 0 0 10px;
   }
-  .section-rule{
-    width:3rem;
-    height:1px;
-    background:var(--gold);
-    margin:.8rem auto 1.6rem;
-  }
-  .section-desc{
-    font-style:italic;
-    color:var(--ink-soft);
-    font-size:1.1rem;
-    max-width:36rem;
-    margin:0 auto;
-  }
+  .card-title { font-size: 30px; font-weight: 400; letter-spacing: -0.015em; line-height: 1.2; margin: 0 0 10px; }
+  .study-card:hover .card-title { color: var(--oxblood); }
+  .card-summary { font-style: normal; color: var(--muted); font-size: 17px; line-height: 1.6; margin: 0; }
 
-  hr.rule-line{
-    border:0;
-    border-top:1px solid var(--rule);
-    max-width:var(--maxw);
-    margin:0 auto 2.4rem;
-  }
-
-  /* ── Index ── */
-  .study-index{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:0 1.5rem 2.6rem;
-  }
-  .index-eyebrow{
-    font-family:"Cinzel",serif;
-    font-size:.7rem;
-    letter-spacing:.28em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    text-align:center;
-    margin-bottom:1.4rem;
-  }
-  .study-index ul{
-    list-style:none;
-    margin:0;padding:0;
-    column-width:16rem;
-    column-gap:2.4rem;
-  }
-  .study-index li{
-    margin:0 0 .7rem;
-    break-inside:avoid;
-  }
-  .study-index a{
-    font-family:"Cormorant Garamond",serif;
-    font-size:1.08rem;
-    color:var(--ink);
-    text-decoration:none;
-    border-bottom:1px solid transparent;
-    transition:color .2s,border-color .2s;
-  }
-  .study-index a:hover{color:var(--gold-deep);border-bottom-color:var(--gold);}
-  .idx-word{
-    font-style:italic;
-    color:var(--gold-deep);
-    font-size:.9rem;
-  }
-
-  /* ── Word-study listing ── */
-  .listing{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:0 1.5rem 5rem;
-  }
-  .study-card{
-    display:grid;
-    grid-template-columns:9rem 1fr;
-    gap:0 2.4rem;
-    align-items:center;
-    border-top:1px solid var(--rule);
-    padding:2.4rem 0;
-    scroll-margin-top:1.5rem;
-    text-decoration:none;
-    color:var(--ink);
-    transition:background .2s;
-  }
-  .study-card:last-of-type{border-bottom:1px solid var(--rule);}
-
-  /* Hebrew/Greek signature — the series mark */
-  .card-heb{
-    font-family:"Cormorant Garamond",serif;
-    font-weight:300;
-    font-size:clamp(48px,8vw,72px);
-    line-height:1;
-    color:var(--gold);
-    direction:rtl;
-    text-align:center;
-    letter-spacing:.04em;
-  }
-  .card-heb.is-greek{direction:ltr;letter-spacing:.02em;}
-
-  .card-word{
-    font-family:"Cormorant Garamond",serif;
-    font-style:italic;
-    font-size:.95rem;
-    letter-spacing:.06em;
-    color:var(--gold-deep);
-    margin-bottom:.5rem;
-  }
-  .card-title{
-    font-family:"Cinzel",serif;
-    font-weight:500;
-    font-size:1.3rem;
-    line-height:1.25;
-    margin:0 0 .6rem;
-    transition:color .2s;
-  }
-  .study-card:hover .card-title{color:var(--gold-deep);}
-  .card-summary{
-    font-style:italic;
-    color:var(--ink-soft);
-    margin:0;
-    font-size:1.02rem;
-  }
-
-  footer.hw-foot{
-    text-align:center;
-    font-family:"Cinzel",serif;
-    font-size:.7rem;
-    letter-spacing:.2em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    padding:2.5rem 1rem 3.5rem;
-    opacity:.8;
-  }
-
-  @media(max-width:600px){
-    .study-card{grid-template-columns:1fr;gap:1rem;text-align:center;}
-    .card-heb{text-align:center;}
+  @media (max-width: 900px) {
+    .study-card { grid-template-columns: 1fr; gap: 16px; text-align: left; }
+    .card-heb { text-align: left; font-size: 64px; }
   }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html" class="current">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<header class="section-header">
-  <p class="section-eyebrow">Hesed Words</p>
-  <h1 class="section-title">Word Studies</h1>
-  <div class="section-rule"></div>
-  <p class="section-desc">One word at a time — a single Hebrew or Greek word read slowly enough to see what the English lost, and where it leads.</p>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a class="current" href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
+  </div>
 </header>
+
+<section class="hw-hero hw-hero-sm">
+  <div class="hw-hero-inner">
+    <div>
+      <div class="hw-eyebrow">III / Word Studies</div>
+      <h1>Word Studies</h1>
+      <p class="hw-tagline">One word, and what the English lost.</p>
+    </div>
+    <div class="hw-hero-heb">אמר</div>
+  </div>
+</section>
 
 <nav class="study-index" aria-label="Index of word studies">
   <p class="index-eyebrow">Index</p>
   <ul id="ws-index"></ul>
 </nav>
 
-<hr class="rule-line">
-
 <div class="listing" id="ws-listing"></div>
 
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 <script src="/js/word-studies-data.js"></script>
 <script>

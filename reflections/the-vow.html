@@ -7,225 +7,132 @@
 <meta name="description" content="A reflection on Psalm 61 — shelter, the wing, and a vow that turns out not to be a payment.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<style>
-:root{
-  --parchment:#e8dfc8;
-  --parchment-page:#f3ecda;
-  --gold:#c9a84c;
-  --gold-deep:#A67C2E;
-  --gold-soft:#D9C49A;
-  --muted:#6B5C45;
-  --rule:#C8B58F;
-  --ink:#2b2620;
-}
-*{box-sizing:border-box;}
-body{
-  margin:0;
-  background:var(--parchment);
-  color:var(--ink);
-  font-family:'Cormorant Garamond',Georgia,serif;
-  font-size:1.22rem;
-  line-height:1.75;
-}
-nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-nav.hw-nav a:hover{opacity:1;color:#fff;}
-nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-
-.page{
-  max-width:40rem;
-  margin:0 auto;
-  background:var(--parchment-page);
-  padding:3.5rem 2.2rem 1rem;
-  border-left:1px solid var(--rule);
-  border-right:1px solid var(--rule);
-}
-header.piece{text-align:center;margin-bottom:2.8rem;}
-header.piece h1{
-  font-family:'Cinzel',serif;
-  font-weight:600;
-  font-size:2.05rem;
-  letter-spacing:.06em;
-  margin:0 0 .6rem;
-  color:#241f19;
-}
-header.piece .ref{
-  font-family:'Cinzel',serif;
-  font-size:.74rem;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-}
-header.piece .byline{
-  font-size:.95rem;
-  font-style:italic;
-  color:var(--muted);
-  margin-top:.9rem;
-}
-header.piece .flourish{
-  width:3.2rem;height:1px;background:var(--gold);
-  margin:1.5rem auto 0;opacity:.8;
-}
-p{margin:0 0 1.15rem;}
-.verse{
-  font-style:italic;
-  color:#3a332a;
-  margin:0 0 1.15rem;
-  padding-left:1.1rem;
-  border-left:2px solid var(--gold-soft);
-}
-hr.movement{
-  border:0;height:1px;background:var(--rule);
-  width:5rem;margin:2.6rem auto;opacity:.85;
-}
-a.gloss{color:inherit;text-decoration:none;border-bottom:1px dotted var(--gold-deep);}
-a.gloss:hover{color:var(--gold-deep);}
-
-.selah{
-  background:#f8f3e6;
-  border-top:1px solid var(--gold);
-  border-bottom:1px solid var(--gold);
-  padding:1.8rem 1.6rem .6rem;
-  margin:2.6rem 0;
-}
-.selah h2{
-  font-family:'Cinzel',serif;
-  font-size:.78rem;
-  letter-spacing:.28em;
-  text-transform:uppercase;
-  text-align:center;
-  color:var(--gold-deep);
-  font-weight:600;
-  margin:0 0 1.5rem;
-}
-.selah p{font-style:italic;color:#3a332a;}
-.selah p.quoted{
-  font-style:italic;
-  padding-left:1.1rem;
-  border-left:2px solid var(--gold-soft);
-}
-
-sup.fn{font-size:.68em;color:var(--gold-deep);font-family:'Cinzel',serif;}
-.notes{
-  border-top:1px solid var(--rule);
-  margin-top:2.8rem;
-  padding-top:1.2rem;
-  font-size:.95rem;
-  color:var(--muted);
-  line-height:1.6;
-}
-.notes .n{margin-bottom:.6rem;}
-.companion{
-  font-style:italic;
-  color:var(--muted);
-  font-size:1.02rem;
-  margin-top:2.2rem;
-}
-.companion a{color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold-soft);}
-.companion a:hover{border-bottom-color:var(--gold-deep);}
-
-footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-@media (max-width:640px){
-  body{font-size:1.14rem;}
-  .page{padding:2.4rem 1.3rem 1rem;border-left:0;border-right:0;}
-  header.piece h1{font-size:1.7rem;}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a class="current" href="/reflections.html">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<div class="page">
-
-<header class="piece">
-  <h1>The Vow?</h1>
-  <div class="ref">Psalm 61</div>
-  <div class="byline">Norm Reed</div>
-  <div class="flourish"></div>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
+  </div>
 </header>
 
-<p class="verse">Hear my cry, O God; listen to my prayer.</p>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>
+      <div>Psalm 61</div>
+      <div>4 Aug 2026</div>
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>The Vow?</h1>
+      <div class="hw-article-body">
 
-<p class="verse">From the end of the earth I call to you when my heart is faint.</p>
+        <p class="verse">Hear my cry, O God; listen to my prayer.</p>
+        <p class="verse">From the end of the earth I call to you when my heart is faint.</p>
 
-<p>David is a long way from wherever he means by home. Not lost — he knows exactly where he is, which is the trouble. The end of the earth is not a place on a map. It is the place from which you can still call but are not sure the call will carry, and his heart is failing him even as he makes it.</p>
+        <p>David is a long way from wherever he means by home. Not lost — he knows exactly where he is, which is the trouble. The end of the earth is not a place on a map. It is the place from which you can still call but are not sure the call will carry, and his heart is failing him even as he makes it.</p>
 
-<p>Then he asks for something.</p>
+        <p>Then he asks for something.</p>
 
-<p class="verse">Lead me to the rock that is higher than I.</p>
+        <p class="verse">Lead me to the rock that is higher than I.</p>
 
-<p>That is the first of four. A rock higher than himself. A strong tower. A tent to dwell in. The shelter of wings. Different pictures, one request underneath: somewhere to be.</p>
+        <p>That is the first of four. A rock higher than himself. A strong tower. A tent to dwell in. The shelter of wings. Different pictures, one request underneath: somewhere to be.</p>
 
-<p>Notice what he does not ask for. He does not ask that the enemy be dealt with, though there is clearly an enemy. He does not ask to be brought back, though he is at the end of the earth. He does not ask to feel better, though his heart is faint. He asks for a place.</p>
+        <p>Notice what he does not ask for. He does not ask that the enemy be dealt with, though there is clearly an enemy. He does not ask to be brought back, though he is at the end of the earth. He does not ask to feel better, though his heart is faint. He asks for a place.</p>
 
-<p class="verse">For you have been my refuge, a strong tower against the enemy.</p>
+        <p class="verse">For you have been my refuge, a strong tower against the enemy.</p>
 
-<p>This is not a new request. It is a man asking again for the one thing he already knows works.</p>
+        <p>This is not a new request. It is a man asking again for the one thing he already knows works.</p>
 
-<hr class="movement">
+        <div class="hw-selah">
+          <div class="rule"></div>
+          <div class="word">Selah</div>
+          <div class="rule"></div>
+        </div>
 
-<p>Read the four again and something small keeps repeating.</p>
+        <p>Read the four again and something small keeps repeating.</p>
 
-<p><em>Your</em> tent. <em>Your</em> wings. The rock he asks to be led to is the one God leads him to. The strong tower has already been named — you have been my refuge. Every shelter in the psalm has an owner, and it is the owner who makes it a shelter.</p>
+        <p><em>Your</em> tent. <em>Your</em> wings. The rock he asks to be led to is the one God leads him to. The strong tower has already been named — you have been my refuge. Every shelter in the psalm has an owner, and it is the owner who makes it a shelter.</p>
 
-<p>Take the possessives out and see what is left. A rock. A tower. A tent. Four walls and a roof. All of it structurally sound and none of it any use at three in the morning.</p>
+        <p>Take the possessives out and see what is left. A rock. A tower. A tent. Four walls and a roof. All of it structurally sound and none of it any use at three in the morning.</p>
 
-<p>I have watched men walk out of prison into a flat of their own. Keys, a bed, an address to put on a form — the thing everyone agreed was missing. And then night, and the flat, and nobody in it.</p>
+        <p>I have watched men walk out of prison into a flat of their own. Keys, a bed, an address to put on a form — the thing everyone agreed was missing. And then night, and the flat, and nobody in it.</p>
 
-<p>We think we know the order. Get the shelter first; belonging can come later, once the basics are covered. David has it the other way round. What he asks for at the end of the earth is not a structure but a place with someone in it. Under your wings. Not walled off from the trouble — accompanied in it.</p>
+        <p>We think we know the order. Get the shelter first; belonging can come later, once the basics are covered. David has it the other way round. What he asks for at the end of the earth is not a structure but a place with someone in it. Under your wings. Not walled off from the trouble — accompanied in it.</p>
 
-<p>A house keeps the weather out. A wing keeps company.</p>
+        <p class="pull">A house keeps the weather out. A wing keeps company.</p>
 
-<p>But wings are also a debt, or they look like one. Somewhere between the asking and the shelter there is a vow, and David brings it up himself, and the moment it appears the whole prayer tilts. Does the wing come at a price?</p>
+        <p>But wings are also a debt, or they look like one. Somewhere between the asking and the shelter there is a vow, and David brings it up himself, and the moment it appears the whole prayer tilts. Does the wing come at a price?</p>
 
-<div class="selah">
-  <h2>Selah</h2>
-  <p>People came to visit me in hospital. At some point one of them turned to her and asked how she was doing.</p>
-  <p class="quoted">I came back from the hospital that night and walked into an empty house. Then it dawned on me. This could have been my future.</p>
-  <p>I heard her say it. I was three feet away and I had not known.</p>
-  <p>She had come home to the house we had lived in for years. Same rooms, same door, same key. And it was not a shelter, because I was in a bed on the other side of town and might not have been coming back.</p>
-</div>
+        <div class="hw-selah">
+          <div class="rule"></div>
+          <div class="word">Selah</div>
+          <div class="rule"></div>
+        </div>
 
-<p class="verse">You, O God, have heard my vows.</p>
+        <p>People came to visit me in hospital. At some point one of them turned to her and asked how she was doing.</p>
 
-<p>Heard. Past tense, and it sits before the shelter arrives — before the tent, before the enthronement, before anything is granted. Whatever David promised, it was already heard while he was still at the end of the earth.</p>
+        <p class="verse">I came back from the hospital that night and walked into an empty house. Then it dawned on me. This could have been my future.</p>
 
-<p>Then, at the close: <em>so will I ever sing praise to your name, as I perform my vows day after day.</em></p>
+        <p>I heard her say it. I was three feet away and I had not known.</p>
 
-<p>So the vow is heard first and performed last, and the shelter sits in the middle. That is not the shape of a bargain. A bargain runs the other way — you perform, and then the safety is released. Here God has already heard, and the performing is what a man does with his days once he is safe.</p>
+        <p>She had come home to the house we had lived in for years. Same rooms, same door, same key. And it was not a shelter, because I was in a bed on the other side of town and might not have been coming back.</p>
 
-<p>He never tells us what he promised. Only that it was heard, and that he will be performing it tomorrow, and the day after.</p>
+        <p class="verse">You, O God, have heard my vows.</p>
 
-<p>A vow in Israel — <a class="gloss" href="/glossary.html#neder"><em>neder</em></a> — was not a payment. It was made in trouble and discharged in public — you came back to the sanctuary and told people what had happened. <em>I said this when I was drowning; here I am.</em> Performing a vow meant showing up in the room and not going quiet about it. The Psalms keep returning to it, and almost always in that order: trouble, deliverance, and then the telling.<sup class="fn">1</sup></p>
+        <p>Heard. Past tense, and it sits before the shelter arrives — before the tent, before the enthronement, before anything is granted. Whatever David promised, it was already heard while he was still at the end of the earth.</p>
 
-<p>Which is why Jesus can say let your yes be yes and not be contradicting David. What he objects to is the machinery — swearing by heaven, by earth, by Jerusalem, a graded system where the skill lay in knowing which oaths could be slipped. That is a way of managing what your word will cost you. David is not managing anything. He is a man whose yes turned out to be yes.</p>
+        <p>Then, at the close: <em>so will I ever sing praise to your name, as I perform my vows day after day.</em></p>
 
-<p>The word for performing it is the word for making something whole.</p>
+        <p>So the vow is heard first and performed last, and the shelter sits in the middle. That is not the shape of a bargain. A bargain runs the other way — you perform, and then the safety is released. Here God has already heard, and the performing is what a man does with his days once he is safe.</p>
 
-<p>I have a vow, though I have never called it that. It is what I want the second half to be for: to know him. That is the reason I get up.</p>
+        <p>He never tells us what he promised. Only that it was heard, and that he will be performing it tomorrow, and the day after.</p>
 
-<p>Not because I owe anyone a morning. Because there is a chair, and a Bible open at the next psalm, and I am not finished.</p>
+        <p>A vow in Israel — <a class="gloss" href="/glossary.html#neder"><em>neder</em></a> — was not a payment. It was made in trouble and discharged in public — you came back to the sanctuary and told people what had happened. <em>I said this when I was drowning; here I am.</em> Performing a vow meant showing up in the room and not going quiet about it. The Psalms keep returning to it, and almost always in that order: trouble, deliverance, and then the telling.<sup class="fn">1</sup></p>
 
-<div class="notes">
-  <div class="n"><sup class="fn">1</sup> The pattern recurs across the Psalter. Psalm 22:25 — vows performed before the great congregation. Psalm 50:14 — a sacrifice of thanksgiving and vows to the Most High. Psalm 56:12 — vows upon me, thank offerings to render. Psalm 61:5, 8 — heard, and then performed day after day. Psalm 65:1 — praise waiting, and the vow to be performed. Psalm 66:13–14 — what my lips uttered when I was in trouble. Psalm 76:11 — make your vows and perform them. Psalm 116:14, 18 — in the presence of all his people, twice. Psalm 132:2 — David's vow to the Mighty One of Jacob.</div>
-</div>
+        <p>Which is why Jesus can say let your yes be yes and not be contradicting David. What he objects to is the machinery — swearing by heaven, by earth, by Jerusalem, a graded system where the skill lay in knowing which oaths could be slipped. That is a way of managing what your word will cost you. David is not managing anything. He is a man whose yes turned out to be yes.</p>
 
-<p class="companion">On vows more fully — what a <em>neder</em> was, why Ecclesiastes warns against making one lightly, and what Jesus was actually objecting to: <a href="/articles/vows.html">The Vow That Is Not a Payment</a>.</p>
+        <p>The word for performing it is the word for making something whole.</p>
 
-</div>
+        <p>I have a vow, though I have never called it that. It is what I want the second half to be for: to know him. That is the reason I get up.</p>
 
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+        <p>Not because I owe anyone a morning. Because there is a chair, and a Bible open at the next psalm, and I am not finished.</p>
+
+        <div class="hw-notes">
+          <div class="n"><span class="num">1</span>&nbsp; The pattern recurs across the Psalter. Psalm 22:25 — vows performed before the great congregation. Psalm 50:14 — a sacrifice of thanksgiving and vows to the Most High. Psalm 56:12 — vows upon me, thank offerings to render. Psalm 61:5, 8 — heard, and then performed day after day. Psalm 65:1 — praise waiting, and the vow to be performed. Psalm 66:13–14 — what my lips uttered when I was in trouble. Psalm 76:11 — make your vows and perform them. Psalm 116:14, 18 — in the presence of all his people, twice. Psalm 132:2 — David's vow to the Mighty One of Jacob.</div>
+        </div>
+
+        <p class="hw-companion">On vows more fully — what a <em>neder</em> was, why Ecclesiastes warns against making one lightly, and what Jesus was actually objecting to: <a href="/articles/vows.html">The Vow That Is Not a Payment</a>.</p>
+
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 </body>
 </html>

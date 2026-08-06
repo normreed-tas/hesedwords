@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,206 +7,76 @@
 <meta name="description" content="Pastoral and theological articles by Norm Reed. Scripture, justice, and the formation of the church.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
+
 <style>
-  :root{
-    --parchment:#f4ecd8;
-    --parchment-deep:#ece1c7;
-    --parchment-mid:#f0e6ce;
-    --ink:#1f1b16;
-    --ink-soft:#3a332a;
-    --ink-light:#4a3218;
-    --gold:#b08d3f;
-    --gold-deep:#8a6d2b;
-    --border:#c8a96e;
-    --border-light:#ddc48a;
-    --rule:#d8c9a3;
-    --shadow:rgba(30,21,8,0.18);
-    --maxw:52rem;
+  .listing { max-width: 1180px; margin: 0 auto; padding: 0 40px 96px; }
+  .article-card {
+    position: relative;
+    display: grid; grid-template-columns: 150px minmax(0,1fr); gap: 36px; align-items: baseline;
+    padding: 30px 0; border-bottom: 1px solid var(--hairline); color: var(--ink);
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:radial-gradient(ellipse at top,#f7f0de 0%,var(--parchment) 55%,var(--parchment-deep) 100%) fixed;
-    color:var(--ink);
-    font-family:"Cormorant Garamond",Georgia,serif;
-    font-size:1.15rem;
-    line-height:1.7;
-    -webkit-font-smoothing:antialiased;
+  .article-card:hover { background: var(--paper-hover); }
+  .card-stretch { position: absolute; inset: 0; z-index: 1; }
+  .card-date, .card-body { position: relative; z-index: 0; }
+  .card-date {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
   }
+  .card-title { font-size: 26px; font-weight: 400; letter-spacing: -0.015em; line-height: 1.25; margin: 0 0 10px; }
+  .article-card:hover .card-title { color: var(--oxblood); }
+  .card-summary { font-style: normal; color: var(--muted); font-size: 17px; line-height: 1.6; max-width: 66ch; margin: 0 0 10px; }
+  .card-ref {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass);
+  }
+  .article-card.soon { opacity: 0.5; cursor: default; pointer-events: none; }
+  .card-pdf {
+    position: relative; z-index: 2;
+    display: block; width: fit-content; margin-top: 10px; font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--oxblood); text-decoration: none;
+    border-bottom: 1px solid var(--hairline); pointer-events: auto;
+  }
+  .card-pdf:hover { border-bottom-color: var(--oxblood); }
 
-  /* ── Nav ── */
-  nav.hw-nav{
-    background:var(--ink);
-    font-family:"Cinzel",serif;
-    font-size:.78rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    display:flex;
-    justify-content:center;
-    gap:2.2rem;
-    padding:1.05rem 1rem;
-    flex-wrap:wrap;
-  }
-  nav.hw-nav a{color:var(--parchment);text-decoration:none;opacity:.82;transition:opacity .2s;}
-  nav.hw-nav a:hover{opacity:1;color:#fff;}
-  nav.hw-nav a.current{opacity:1;border-bottom:1px solid var(--gold);padding-bottom:.15rem;}
-
-  /* ── Header ── */
-  .section-header{
-    text-align:center;
-    padding:4rem 1.5rem 2.8rem;
-    max-width:var(--maxw);
-    margin:0 auto;
-  }
-  .section-eyebrow{
-    font-family:"Cinzel",serif;
-    font-size:.72rem;
-    letter-spacing:.26em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    margin-bottom:1rem;
-  }
-  .section-title{
-    font-family:"Cinzel",serif;
-    font-weight:500;
-    font-size:clamp(1.8rem,4vw,2.8rem);
-    color:var(--ink);
-    margin-bottom:1.2rem;
-    letter-spacing:.04em;
-  }
-  .section-rule{
-    width:3rem;
-    height:1px;
-    background:var(--gold);
-    margin:.8rem auto 1.6rem;
-  }
-  .section-desc{
-    font-style:italic;
-    color:var(--ink-soft);
-    font-size:1.1rem;
-    max-width:36rem;
-    margin:0 auto;
-  }
-
-  hr.rule-line{
-    border:0;
-    border-top:1px solid var(--rule);
-    max-width:var(--maxw);
-    margin:0 auto 2.4rem;
-  }
-
-  /* ── Article listing ── */
-  .listing{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:0 1.5rem 5rem;
-  }
-  .article-card{
-    display:grid;
-    grid-template-columns:7rem 1fr;
-    gap:0 2rem;
-    border-top:1px solid var(--rule);
-    padding:2rem 0;
-    text-decoration:none;
-    color:var(--ink);
-    transition:background .2s;
-  }
-  .article-card:last-of-type{border-bottom:1px solid var(--rule);}
-  .card-date{
-    font-family:"Cinzel",serif;
-    font-size:.68rem;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    padding-top:.35rem;
-    line-height:1.5;
-  }
-  .card-title{
-    font-family:"Cinzel",serif;
-    font-weight:500;
-    font-size:1.25rem;
-    line-height:1.25;
-    margin:0 0 .6rem;
-    transition:color .2s;
-  }
-  .article-card:hover .card-title{color:var(--gold-deep);}
-  .card-summary{
-    font-style:italic;
-    color:var(--ink-soft);
-    margin:0 0 .7rem;
-    font-size:1rem;
-  }
-  .card-ref{
-    font-family:"Cinzel",serif;
-    font-size:.64rem;
-    letter-spacing:.15em;
-    text-transform:uppercase;
-    color:var(--gold);
-  }
-  .card-ref::before{content:"✦ ";opacity:.6;}
-
-  /* Coming soon card */
-  .article-card.soon{opacity:.5;cursor:default;pointer-events:none;}
-
-  /* PDF link */
-  .card-pdf{
-    display:block;
-    font-family:"Cinzel",serif;
-    font-size:.65rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    text-decoration:none;
-    border-bottom:1px solid var(--rule);
-    padding-bottom:2px;
-    margin-top:.5rem;
-    width:fit-content;
-    transition:color .2s,border-color .2s;
-  }
-  .card-pdf:hover{color:var(--gold);border-bottom-color:var(--gold);}
-
-  footer.hw-foot{
-    text-align:center;
-    font-family:"Cinzel",serif;
-    font-size:.7rem;
-    letter-spacing:.2em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    padding:2.5rem 1rem 3.5rem;
-    opacity:.8;
-  }
-
-  @media(max-width:600px){
-    .article-card{grid-template-columns:1fr;gap:.4rem;}
-    .card-date{padding-top:0;}
+  @media (max-width: 900px) {
+    .article-card { grid-template-columns: 1fr; gap: 8px; }
   }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html">Reflections</a>
-  <a href="/articles.html" class="current">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<header class="section-header">
-  <p class="section-eyebrow">Hesed Words</p>
-  <h1 class="section-title">Articles</h1>
-  <div class="section-rule"></div>
-  <p class="section-desc">Longer pastoral and theological writing — the questions that take more than a morning to work through.</p>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a href="/reflections.html">Reflections</a>
+      <a class="current" href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
+  </div>
 </header>
 
-<hr class="rule-line">
+<section class="hw-hero hw-hero-sm">
+  <div class="hw-hero-inner">
+    <div>
+      <div class="hw-eyebrow">II / Articles</div>
+      <h1>Articles</h1>
+      <p class="hw-tagline">The questions that take longer than a morning.</p>
+    </div>
+    <div class="hw-hero-heb">דבר</div>
+  </div>
+</section>
 
 <div class="listing">
 
-  <a href="/articles/an-interview-with-a-saint.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/an-interview-with-a-saint.html" aria-label="Read this piece"></a>
     <div class="card-date">August 2026</div>
     <div class="card-body">
       <h2 class="card-title">An Interview with a Saint</h2>
@@ -214,9 +84,10 @@
       <span class="card-ref">Romans 1:7 &middot; Philippians 1:1 &nbsp;·&nbsp; Norm Reed</span>
       <a href="/articles/pdf/an-interview-with-a-saint.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
     </div>
-  </a>
+  </div>
 
-  <a href="/articles/measured-and-immeasurable.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/measured-and-immeasurable.html" aria-label="Read this piece"></a>
     <div class="card-date">August 2026</div>
     <div class="card-body">
       <h2 class="card-title">Measured, and Immeasurable</h2>
@@ -224,9 +95,10 @@
       <span class="card-ref">Zechariah 1&ndash;2 &middot; Ephesians 3 &nbsp;·&nbsp; Norm Reed</span>
       <a href="/articles/pdf/measured-and-immeasurable.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
     </div>
-  </a>
+  </div>
 
-  <a href="/articles/vows.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/vows.html" aria-label="Read this piece"></a>
     <div class="card-date">August 2026</div>
     <div class="card-body">
       <h2 class="card-title">The Vow That Is Not a Payment</h2>
@@ -234,9 +106,10 @@
       <span class="card-ref">Psalm 61 &middot; Ecclesiastes 5 &middot; Matthew 5 &nbsp;·&nbsp; Norm Reed</span>
       <a href="/articles/pdf/vows.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
     </div>
-  </a>
+  </div>
 
-  <a href="/articles/what-did-jesus-call-wicked.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/what-did-jesus-call-wicked.html" aria-label="Read this piece"></a>
     <div class="card-date">August 2026</div>
     <div class="card-body">
       <h2 class="card-title">What Did Jesus Call Wicked?</h2>
@@ -244,9 +117,10 @@
       <span class="card-ref">Psalm 58 &middot; Matthew 23 &nbsp;·&nbsp; Norm Reed</span>
       <a href="/articles/pdf/what-did-jesus-call-wicked.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
     </div>
-  </a>
+  </div>
 
-  <a href="/articles/is-there-no-hesed-in-john.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/is-there-no-hesed-in-john.html" aria-label="Read this piece"></a>
     <div class="card-date">August 2026</div>
     <div class="card-body">
       <h2 class="card-title">Is There No Hesed in John?</h2>
@@ -254,9 +128,10 @@
       <span class="card-ref">John 1:14&ndash;17 &nbsp;·&nbsp; Norm Reed</span>
       <a href="/articles/pdf/is-there-no-hesed-in-john.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
     </div>
-  </a>
+  </div>
 
-  <a href="/articles/reading-daniel-without-arithmetic.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/reading-daniel-without-arithmetic.html" aria-label="Read this piece"></a>
     <div class="card-date">July 2026</div>
     <div class="card-body">
       <h2 class="card-title">Reading Daniel Without Arithmetic</h2>
@@ -264,9 +139,10 @@
       <span class="card-ref">Daniel 11&ndash;12 &nbsp;·&nbsp; Norm Reed</span>
       <a href="/articles/pdf/reading-daniel-without-arithmetic.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
     </div>
-  </a>
+  </div>
 
-  <a href="/articles/nobody-left-to-say-no.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/nobody-left-to-say-no.html" aria-label="Read this piece"></a>
     <div class="card-date">July 2026</div>
     <div class="card-body">
       <h2 class="card-title">Nobody Left to Say No</h2>
@@ -274,9 +150,10 @@
       <span class="card-ref">Daniel 4 &nbsp;·&nbsp; Norm Reed</span>
       <a href="/articles/pdf/nobody-left-to-say-no.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
     </div>
-  </a>
+  </div>
 
-  <a href="/articles/spot-the-difference.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/spot-the-difference.html" aria-label="Read this piece"></a>
     <div class="card-date">July 2026</div>
     <div class="card-body">
       <h2 class="card-title">Spot the Difference</h2>
@@ -284,9 +161,10 @@
       <span class="card-ref">Psalm 14 &amp; Psalm 53 &nbsp;·&nbsp; Norm Reed</span>
       <a href="/articles/pdf/spot-the-difference.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
     </div>
-  </a>
+  </div>
 
-  <a href="/articles/draw-me-the-voice-matters.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/draw-me-the-voice-matters.html" aria-label="Read this piece"></a>
     <div class="card-date">July 2026</div>
     <div class="card-body">
       <h2 class="card-title">Draw Me! The Voice Matters</h2>
@@ -294,9 +172,10 @@
       <span class="card-ref">Song of Songs 1:2&ndash;4 &nbsp;·&nbsp; Norm Reed</span>
       <a href="/articles/pdf/draw-me-the-voice-matters.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
     </div>
-  </a>
+  </div>
 
-  <a href="/articles/psalm-45-meekness.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/psalm-45-meekness.html" aria-label="Read this piece"></a>
     <div class="card-date">July 2026</div>
     <div class="card-body">
       <h2 class="card-title">Meekness</h2>
@@ -304,9 +183,10 @@
       <span class="card-ref">Psalm 45 &nbsp;·&nbsp; Norm Reed</span>
       <a href="/articles/pdf/psalm-45-meekness.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
     </div>
-  </a>
+  </div>
 
-  <a href="/articles/ezra-had-the-scroll.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/ezra-had-the-scroll.html" aria-label="Read this piece"></a>
     <div class="card-date">July 2026</div>
     <div class="card-body">
       <h2 class="card-title">Ezra Had the Scroll</h2>
@@ -314,9 +194,10 @@
       <span class="card-ref">Nehemiah 8 &nbsp;·&nbsp; Norm Reed</span>
       <a href="/articles/pdf/ezra-had-the-scroll.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
     </div>
-  </a>
+  </div>
 
-  <a href="/articles/until-we-reach-psalm-83.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/until-we-reach-psalm-83.html" aria-label="Read this piece"></a>
     <div class="card-date">July 2026</div>
     <div class="card-body">
       <h2 class="card-title">Learning to Pray by Praying the Psalms — Until We Reach Psalm 83</h2>
@@ -324,18 +205,20 @@
       <span class="card-ref">Psalm 83 &nbsp;·&nbsp; Norm Reed</span>
       <a href="/articles/pdf/until-we-reach-psalm-83.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
     </div>
-  </a>
+  </div>
 
-  <a href="/articles/the-song-begins-in-longing.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/the-song-begins-in-longing.html" aria-label="Read this piece"></a>
     <div class="card-date">June 2026</div>
     <div class="card-body">
       <h2 class="card-title">The Song Begins in Longing</h2>
       <p class="card-summary">Why the greatest of all songs opens not with the kiss but with the wanting of it — a close reading of Song of Songs 1:1. The grammar that lurches from third person to second, the doubled kiss the Hebrew refuses to simplify, and the time the poem declines to fix.</p>
       <span class="card-ref">Song of Songs 1:1 &nbsp;·&nbsp; Norm Reed</span>
     </div>
-  </a>
+  </div>
 
-  <a href="/articles/not-finished-waking.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/not-finished-waking.html" aria-label="Read this piece"></a>
     <div class="card-date">June 2026</div>
     <div class="card-body">
       <h2 class="card-title">Not Finished Waking</h2>
@@ -343,9 +226,10 @@
       <span class="card-ref">Job 19:25–27 &nbsp;·&nbsp; Psalm 17:15 &nbsp;·&nbsp; Norm Reed</span>
       <a href="/articles/pdf/not-finished-waking.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
     </div>
-  </a>
+  </div>
 
-  <a href="/articles/he-does-not-afflict-from-his-heart.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/he-does-not-afflict-from-his-heart.html" aria-label="Read this piece"></a>
     <div class="card-date">June 2026</div>
     <div class="card-body">
       <h2 class="card-title">He Does Not Afflict From His Heart</h2>
@@ -353,9 +237,10 @@
       <span class="card-ref">Jeremiah &nbsp;·&nbsp; Lamentations 3:32–33 &nbsp;·&nbsp; Norm Reed</span>
       <a href="/articles/pdf/he-does-not-afflict-from-his-heart.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
     </div>
-  </a>
+  </div>
 
-  <a href="/articles/jesus-as-leader.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/jesus-as-leader.html" aria-label="Read this piece"></a>
     <div class="card-date">June 2026</div>
     <div class="card-body">
       <h2 class="card-title">Jesus as Leader</h2>
@@ -363,16 +248,17 @@
       <span class="card-ref">A Hesedwords Reflection &nbsp;·&nbsp; Norm Reed</span>
       <a href="/articles/pdf/jesus-as-leader.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
     </div>
-  </a>
+  </div>
 
-  <a href="/articles/when-the-heart-was-awake.html" class="article-card">
+  <div class="article-card">
+    <a class="card-stretch" href="/articles/when-the-heart-was-awake.html" aria-label="Read this piece"></a>
     <div class="card-date">June 2026</div>
     <div class="card-body">
       <h2 class="card-title">When the Heart Was Awake</h2>
       <p class="card-summary">The arc of desire in the Song of Songs — from longing into belonging into open-handed offering — and what interrupts it. The warm bed, the idol as ordinary comfort, Paul's anatomy of the divided self in Romans 7, and the hesed that kindles what we cannot work up in ourselves.</p>
       <span class="card-ref">Song of Songs 5 &nbsp;·&nbsp; Romans 7 &nbsp;·&nbsp; Norm Reed</span>
     </div>
-  </a>
+  </div>
 
   <div class="article-card soon">
     <div class="card-date">Coming Soon</div>
@@ -385,7 +271,16 @@
 
 </div>
 
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 </body>
 </html>
