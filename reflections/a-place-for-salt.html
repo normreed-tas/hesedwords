@@ -4,181 +4,114 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A Place for Salt — Hesed Words</title>
+<meta name="description" content="Ezekiel's river heals the Dead Sea — and then one line no one preaches: 'but its swamps and marshes will not become fresh; they are to be left for salt.' Cut it and nothing in the vision breaks. The prophet left it in.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-:root{
-  --parchment:#e8dfc8;
-  --parchment-page:#f3ecda;
-  --gold:#c9a84c;
-  --gold-deep:#A67C2E;
-  --gold-soft:#D9C49A;
-  --muted:#6B5C45;
-  --rule:#C8B58F;
-  --ink:#2c2416;
-}
-*{box-sizing:border-box;}
-html,body{margin:0;padding:0;}
-body{
-  background:var(--parchment);
-  color:var(--ink);
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.28rem;
-  line-height:1.72;
-}
-/* ── Site nav ── */
-nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-nav.hw-nav a:hover{opacity:1;color:#fff;}
-nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-/* ── Footer ── */
-footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-.page{
-  max-width:680px;
-  margin:0 auto;
-  background:var(--parchment-page);
-  padding:4.5rem 3.2rem 3rem;
-  box-shadow:0 1px 40px rgba(60,45,20,.12);
-}
-@media(max-width:640px){
-  .page{padding:3rem 1.5rem 2rem;}
-  body{font-size:1.18rem;}
-}
-header.piece{
-  text-align:center;
-  margin-bottom:2.8rem;
-  padding-bottom:2rem;
-  border-bottom:1px solid var(--rule);
-}
-header.piece h1{
-  font-family:'Cinzel',serif;
-  font-weight:600;
-  font-size:2.15rem;
-  letter-spacing:.04em;
-  color:var(--ink);
-  margin:0 0 .9rem;
-  line-height:1.2;
-}
-header.piece .subtitle{
-  font-style:italic;
-  font-size:1.2rem;
-  color:var(--muted);
-  margin:0 0 1.4rem;
-}
-header.piece .meta{
-  font-family:'Cinzel',serif;
-  font-size:.68rem;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-}
-header.piece .meta .sep{margin:0 .6rem;opacity:.5;}
-.page p{margin:0 0 1.35rem;}
-.page p.q{margin-bottom:1.35rem;}
-.lone{
-  text-align:center;
-  font-size:1.5rem;
-  font-style:italic;
-  color:var(--gold-deep);
-  margin:2rem 0 2.2rem;
-}
-blockquote.scripture{
-  margin:2.2rem 0;
-  padding:1.1rem 1.6rem;
-  border-top:1px solid var(--gold);
-  border-bottom:1px solid var(--gold);
-  font-size:1.32rem;
-  font-style:italic;
-  color:var(--ink);
-  text-align:center;
-}
-blockquote.scripture p{margin:0;}
-em{font-style:italic;}
-.close{
-  text-align:center;
-  font-size:1.42rem;
-  margin:2.2rem 0 .5rem;
-  color:var(--ink);
-}
+  .hw-article-body .subtitle { font-style: italic; color: var(--muted); font-size: 22px; margin: -20px 0 34px; }
+  .hw-article-body .lone { text-align: center; font-size: 24px; font-style: italic; color: var(--brass); margin: 32px 0; }
+  .hw-article-body .close { text-align: center; font-size: 24px; color: var(--ink); margin: 34px 0 8px; }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html" class="current">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<div class="page">
-
-<header class="piece">
-  <h1>A Place for Salt</h1>
-  <p class="subtitle">A reflection on Ezekiel 47:11</p>
-  <p class="meta">Norm Reed <span class="sep">·</span> 17 July 2026</p>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
+  </div>
 </header>
 
-<p>I finished Ezekiel this morning. You know the last vision, or the shape of it — the water coming out from under the threshold of the temple, ankle-deep, then knee-deep, then a river no one can cross. It runs down to the Dead Sea, and the sea that has never held anything alive fills with fish. Nets drying at En-gedi. Trees on both banks that fruit every month and never lose a leaf. It is one of the great pictures in all of Scripture of a world put right.</p>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>
+      <div>Ezekiel 47:11</div>
+      <div>17 Jul 2026</div>
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>A Place for Salt</h1>
+      <div class="hw-article-body">
+        <p class="subtitle">A reflection on Ezekiel 47:11</p>
 
-<p>And then one line, near the end, that I have never heard anyone preach:</p>
+        <p>I finished Ezekiel this morning. You know the last vision, or the shape of it &mdash; the water coming out from under the threshold of the temple, ankle-deep, then knee-deep, then a river no one can cross. It runs down to the Dead Sea, and the sea that has never held anything alive fills with fish. Nets drying at En-gedi. Trees on both banks that fruit every month and never lose a leaf. It is one of the great pictures in all of Scripture of a world put right.</p>
 
-<blockquote class="scripture">
-  <p>But its swamps and marshes will not become fresh; they are to be left for salt.</p>
-</blockquote>
+        <p>And then one line, near the end, that I have never heard anyone preach:</p>
 
-<p>I read past it, the way you read past a name in a genealogy. Then I stopped, and went back. Because it did not have to be there. Cut it, and nothing in the vision breaks — the river still heals the sea, the fish still come, the trees still fruit. The picture is, if anything, cleaner without it. One clause, easy to lose, and the prophet left it in.</p>
+        <p class="verse">But its swamps and marshes will not become fresh; they are to be left for salt.</p>
 
-<p class="lone">Why?</p>
+        <p>I read past it, the way you read past a name in a genealogy. Then I stopped, and went back. Because it did not have to be there. Cut it, and nothing in the vision breaks &mdash; the river still heals the sea, the fish still come, the trees still fruit. The picture is, if anything, cleaner without it. One clause, easy to lose, and the prophet left it in.</p>
 
-<p>Start with the plain fact, the one the first hearers would have known in their bodies. The Dead Sea was where you got salt. Its water is nine times saltier than the ocean; nothing lives in it, and that same deadness is what made it useful — let the shallow water at its edges evaporate under that heat and it leaves salt behind, crusted on the ground, there for the gathering. For Israel this was no small thing. Salt preserved the meat and the fish through a world with no other way to keep them. Salt seasoned the grain offering on the altar — <em>with all your offerings you shall offer salt</em>, the salt of the covenant. A household needed it. The temple itself needed it. And the place it came from was that dead, bright, bitter shore.</p>
+        <p class="lone">Why?</p>
 
-<p>So put yourself beside the prophet as the vision runs its course. The river comes down, the sea freshens, the fish arrive — and if you had lived your whole life gathering salt from those flats, somewhere in the wonder a small practical question would surface. <em>If the sea goes sweet, where does the salt come from?</em></p>
+        <p>Start with the plain fact, the one the first hearers would have known in their bodies. The Dead Sea was where you got salt. Its water is nine times saltier than the ocean; nothing lives in it, and that same deadness is what made it useful &mdash; let the shallow water at its edges evaporate under that heat and it leaves salt behind, crusted on the ground, there for the gathering. For Israel this was no small thing. Salt preserved the meat and the fish through a world with no other way to keep them. Salt seasoned the grain offering on the altar &mdash; <em>with all your offerings you shall offer salt</em>, the salt of the covenant. A household needed it. The temple itself needed it. And the place it came from was that dead, bright, bitter shore.</p>
 
-<p>The vision answers it. Not all of it is made fresh. The swamps and marshes are left as they are — left for salt. The picture is honest enough not to erase the thing the people standing on that shore depended on. The marshes are in the vision because the marshes were in the world. Realism, not riddle. Before it is a symbol of anything, it is simply true.</p>
+        <p>So put yourself beside the prophet as the vision runs its course. The river comes down, the sea freshens, the fish arrive &mdash; and if you had lived your whole life gathering salt from those flats, somewhere in the wonder a small practical question would surface. <em>If the sea goes sweet, where does the salt come from?</em></p>
 
-<p>Only then, with the plain reason in hand, is it worth asking the other question — the one the commentators have asked for centuries. Because they have not left verse 11 alone, even if our preaching has. And they have not agreed about it.</p>
+        <p>The vision answers it. Not all of it is made fresh. The swamps and marshes are left as they are &mdash; left for salt. The picture is honest enough not to erase the thing the people standing on that shore depended on. The marshes are in the vision because the marshes were in the world. Realism, not riddle. Before it is a symbol of anything, it is simply true.</p>
 
-<p>One line of readers hears judgment. The marshes are the ground the river reaches and does not heal — the part of the world that stays bitter, given over to salt the way Scripture elsewhere speaks of a land sown with salt, ruined and barren. On this reading the verse is a sober note struck inside the music: the renewal is real, and it is not total. Something remains outside it.</p>
+        <p>Only then, with the plain reason in hand, is it worth asking the other question &mdash; the one the commentators have asked for centuries. Because they have not left verse 11 alone, even if our preaching has. And they have not agreed about it.</p>
 
-<p>Another line hears provision. The marshes are not the river's failure but its wisdom — salt-flats kept back on purpose, because a people restored to the land will still need salt to preserve and to offer. On this reading nothing is wasted. What is not made sweet is made useful.</p>
+        <p>One line of readers hears judgment. The marshes are the ground the river reaches and does not heal &mdash; the part of the world that stays bitter, given over to salt the way Scripture elsewhere speaks of a land sown with salt, ruined and barren. On this reading the verse is a sober note struck inside the music: the renewal is real, and it is not total. Something remains outside it.</p>
 
-<p>Notice they cannot both be the whole truth, and notice that the tradition has never chosen. I am not going to choose for you either, because I think the reaching-for-one-answer is how we lose the verse a second time. What matters is what both readings already agree on, underneath their disagreement — and it is the thing that stopped me in the first place.</p>
+        <p>Another line hears provision. The marshes are not the river's failure but its wisdom &mdash; salt-flats kept back on purpose, because a people restored to the land will still need salt to preserve and to offer. On this reading nothing is wasted. What is not made sweet is made useful.</p>
 
-<p>They agree that <em>healed</em> does not mean <em>smoothed into sweetness</em>. We come to a vision of the world put right carrying a quiet assumption about what "right" will look like: everything hard dissolved, everything bitter made mild, the whole landscape gone gentle. And verse 11 will not let us keep it. In the middle of the greatest picture of renewal in the prophets, the salt stays. The renewed world still has a bitter shore. That is not the flaw in the vision. That may be the most honest thing in it.</p>
+        <p>Notice they cannot both be the whole truth, and notice that the tradition has never chosen. I am not going to choose for you either, because I think the reaching-for-one-answer is how we lose the verse a second time. What matters is what both readings already agree on, underneath their disagreement &mdash; and it is the thing that stopped me in the first place.</p>
 
-<p>Sit with that a moment before moving on, because it changes what we are hoping for.</p>
+        <p>They agree that <em>healed</em> does not mean <em>smoothed into sweetness</em>. We come to a vision of the world put right carrying a quiet assumption about what "right" will look like: everything hard dissolved, everything bitter made mild, the whole landscape gone gentle. And verse 11 will not let us keep it. In the middle of the greatest picture of renewal in the prophets, the salt stays. The renewed world still has a bitter shore. That is not the flaw in the vision. That may be the most honest thing in it.</p>
 
-<p>If the world put right still has its salt-flats, then the future God is showing Ezekiel is not a world with the hard places edited out. It is not sweetness poured over everything until the bitter ground is gone. It is something stranger and sturdier — life so abundant that even the salt has a place in it. The marsh is not dissolved. It is not pretended away. It is taken up into the renewed world and given something to yield.</p>
+        <p>Sit with that a moment before moving on, because it changes what we are hoping for.</p>
 
-<p>And once you have seen that shape — the hard thing not erased but kept — you have seen the shadow of something more profound. Not the thing itself yet; only the shape it throws. But you have seen how God tends to mend things. Not by making it as though the wound had never been. By another way entirely.</p>
+        <p>If the world put right still has its salt-flats, then the future God is showing Ezekiel is not a world with the hard places edited out. It is not sweetness poured over everything until the bitter ground is gone. It is something stranger and sturdier &mdash; life so abundant that even the salt has a place in it. The marsh is not dissolved. It is not pretended away. It is taken up into the renewed world and given something to yield.</p>
 
-<p>So turn and look at what casts it.</p>
+        <p>And once you have seen that shape &mdash; the hard thing not erased but kept &mdash; you have seen the shadow of something more profound. Not the thing itself yet; only the shape it throws. But you have seen how God tends to mend things. Not by making it as though the wound had never been. By another way entirely.</p>
 
-<p>When Jesus stood on a hillside and told a crowd what they were, he did not reach for the river. He reached for the salt. <em>You are the salt of the earth.</em> And look who he was saying it to — not the polished and the pleasant, not the ones whose lives had gone sweet, but the poor in spirit, the mourning, the hungry, the ones the world had already written off as the bitter margin. He did not tell them they would be dissolved into something more agreeable. He told them the salt was the point. The set-apart, unmistakable tang of them was the very thing the earth could not do without.</p>
+        <p>So turn and look at what casts it.</p>
 
-<p>That is verse 11 with a face. The place that looked left out is the place given a use. And the crowd hearing it were the marsh.</p>
+        <p>When Jesus stood on a hillside and told a crowd what they were, he did not reach for the river. He reached for the salt. <em>You are the salt of the earth.</em> And look who he was saying it to &mdash; not the polished and the pleasant, not the ones whose lives had gone sweet, but the poor in spirit, the mourning, the hungry, the ones the world had already written off as the bitter margin. He did not tell them they would be dissolved into something more agreeable. He told them the salt was the point. The set-apart, unmistakable tang of them was the very thing the earth could not do without.</p>
 
-<p>But go further in, because the shadow reaches deeper than a saying. When this same Jesus rose from the dead, he did not rise smoothed. He rose carrying the wounds. He showed them — the hands, the side — to a man who could not believe without touching them. The resurrection did not run the film backward until the cross had never happened. It did not return him to un-pierced skin, as though the suffering were an episode best forgotten now that it was over. The risen body kept its salt. The wounds were not erased. They were taken up, and they became the very thing by which he was known.</p>
+        <p>That is verse 11 with a face. The place that looked left out is the place given a use. And the crowd hearing it were the marsh.</p>
 
-<p>This is how God mends. Not by pretending the marsh was never there. By raising it — salt and all.</p>
+        <p>But go further in, because the shadow reaches deeper than a saying. When this same Jesus rose from the dead, he did not rise smoothed. He rose carrying the wounds. He showed them &mdash; the hands, the side &mdash; to a man who could not believe without touching them. The resurrection did not run the film backward until the cross had never happened. It did not return him to un-pierced skin, as though the suffering were an episode best forgotten now that it was over. The risen body kept its salt. The wounds were not erased. They were taken up, and they became the very thing by which he was known.</p>
 
-<p>Maybe you know the ground I mean.</p>
+        <p>This is how God mends. Not by pretending the marsh was never there. By raising it &mdash; salt and all.</p>
 
-<p>There is a place in most lives the river has not reached. A grief that never turned sweet. A season, a loss, a fault line in a family, a prison cell — something you long ago stopped expecting to be made fresh. You have read the visions of the world put right and quietly assumed that place has no part in them, because it is still bitter, and everything there is meant to be sweet.</p>
+        <p>Maybe you know the ground I mean.</p>
 
-<p>Verse 11 says otherwise. The salt is not outside the promise. The marsh is not what God edits out on the way to glory.</p>
+        <p>There is a place in most lives the river has not reached. A grief that never turned sweet. A season, a loss, a fault line in a family, a prison cell &mdash; something you long ago stopped expecting to be made fresh. You have read the visions of the world put right and quietly assumed that place has no part in them, because it is still bitter, and everything there is meant to be sweet.</p>
 
-<p class="close">He raises it. Salt and all.</p>
+        <p>Verse 11 says otherwise. The salt is not outside the promise. The marsh is not what God edits out on the way to glory.</p>
 
-</div>
+        <p class="close">He raises it. Salt and all.</p>
 
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 </body>
 </html>

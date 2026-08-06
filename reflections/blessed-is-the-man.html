@@ -4,260 +4,129 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blessed Is the Man &middot; Psalm 32 &middot; Hesed Words</title>
+<meta name="description" content="It doesn't say the man who never sinned. It says the man whose sin isn't counted against him. Three names for sin, and not one on the ledger. But when David kept quiet, his bones wore out — the shut mouth and the drying bones were the same thing.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-:root{
-  --parchment:#e8dfc8;
-  --parchment-page:#f3ecda;
-  --gold:#c9a84c;
-  --gold-deep:#A67C2E;
-  --gold-soft:#D9C49A;
-  --muted:#6B5C45;
-  --rule:#C8B58F;
-  --ink:#2A2218;
-  --ink-soft:#4A3E2C;
-}
-
-*{box-sizing:border-box;}
-
-html{-webkit-text-size-adjust:100%;}
-
-body{
-  margin:0;
-  background:var(--parchment);
-  color:var(--ink);
-  font-family:'Cormorant Garamond','Garamond',Georgia,serif;
-  font-size:1.32rem;
-  line-height:1.72;
-  -webkit-font-smoothing:antialiased;
-}
-
-/* ── Site nav ── */
-nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-nav.hw-nav a:hover{opacity:1;color:#fff;}
-nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-
-/* ── Footer ── */
-footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-.page{
-  max-width:680px;
-  margin:0 auto;
-  padding:0 28px;
-}
-
-.reflection{
-  background:var(--parchment-page);
-  margin:48px auto 60px;
-  padding:64px 60px 72px;
-  border:1px solid var(--rule);
-  border-radius:2px;
-  box-shadow:0 2px 30px rgba(42,34,24,.06);
-}
-
-/* ── Title block ── */
-.eyebrow{
-  font-family:'Cinzel',serif;
-  font-size:.68rem;
-  letter-spacing:.28em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-  text-align:center;
-  margin-bottom:22px;
-}
-
-h1.title{
-  font-family:'Cinzel',serif;
-  font-weight:500;
-  font-size:2.5rem;
-  letter-spacing:.02em;
-  line-height:1.18;
-  text-align:center;
-  margin:0 0 10px;
-  color:var(--ink);
-}
-
-.reference{
-  font-family:'Cinzel',serif;
-  font-weight:400;
-  font-size:.82rem;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  text-align:center;
-  color:var(--muted);
-  margin:0;
-}
-
-/* ── Ornamental divider (three dots) ── */
-.ornament{
-  text-align:center;
-  margin:38px 0;
-  color:var(--gold);
-  font-size:1rem;
-  letter-spacing:.6em;
-}
-.ornament::before{content:"\2022 \2022 \2022";padding-left:.6em;}
-
-/* ── Section headings ── */
-h2.section{
-  font-family:'Cinzel',serif;
-  font-weight:500;
-  font-size:1.35rem;
-  letter-spacing:.04em;
-  color:var(--ink);
-  margin:2.6em 0 .2em;
-  padding-bottom:.5rem;
-  border-bottom:1px solid var(--gold-soft);
-}
-
-p{margin:0 0 1.15em;}
-
-em{font-style:italic;}
-
-/* first paragraph after a section heading — no top gap */
-h2.section + p{margin-top:.9em;}
-
-/* ── Selah heading gets a touch more weight ── */
-h2.section.selah{
-  text-align:center;
-  border-bottom:none;
-  letter-spacing:.32em;
-  text-transform:uppercase;
-  font-size:1.15rem;
-  color:var(--gold-deep);
-  margin-top:2.8em;
-}
-h2.section.selah::after{
-  content:"";
-  display:block;
-  width:56px;
-  height:1px;
-  background:var(--gold-soft);
-  margin:.9rem auto 0;
-}
-
-/* ── Closing prayer ── */
-.prayer{
-  font-style:italic;
-  color:var(--ink-soft);
-  margin-top:1.8em;
-  padding-top:1.4em;
-  border-top:1px solid var(--gold-soft);
-}
-
-/* ── Psalm-list emphasis inside Selah ── */
-strong{font-weight:600;color:var(--gold-deep);letter-spacing:.02em;}
-
-/* ── Byline ── */
-.byline{
-  font-family:'Cinzel',serif;
-  font-size:.66rem;
-  letter-spacing:.24em;
-  text-transform:uppercase;
-  color:var(--muted);
-  text-align:center;
-  margin-top:3.4em;
-  padding-top:1.6em;
-  border-top:1px solid var(--gold-soft);
-}
-
-@media (max-width:640px){
-  body{font-size:1.22rem;}
-  .reflection{padding:40px 26px 48px;margin:28px auto 40px;}
-  .page{padding:0 14px;}
-  h1.title{font-size:2rem;}
-  nav.hw-nav{gap:1.3rem;font-size:.7rem;}
-}
+  .hw-article-body h2.section {
+    font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;
+    font-weight: 500; color: var(--ink); margin: 44px 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--hairline);
+  }
+  .hw-article-body h2.section.selah {
+    text-align: center; border-bottom: none; letter-spacing: 0.3em; font-size: 12px; color: var(--brass); margin-top: 52px;
+  }
+  .hw-article-body strong { font-weight: 600; color: var(--oxblood); }
+  .hw-article-body p.prayer {
+    font-style: italic; color: var(--muted); margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--hairline);
+  }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html" class="current">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
+  </div>
+</header>
 
-<div class="page">
-  <article class="reflection">
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>
+      <div>Psalm 32</div>
+      <div>6 Jul 2026</div>
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>Blessed Is the Man</h1>
+      <div class="hw-article-body">
 
-    <div class="eyebrow">A Hesed Words Reflection</div>
-    <h1 class="title">Blessed Is the Man</h1>
-    <p class="reference">Psalm 32</p>
+        <p>Blessed is the man whose wrongdoing is forgiven, whose sin is covered. Blessed is the man the Lord doesn&rsquo;t hold his sin against.</p>
 
-    <div class="ornament"></div>
+        <p>Notice it doesn&rsquo;t say <em>the man who never sinned.</em> It says the man whose sin isn&rsquo;t counted against him. The sin is still there. It even has names &mdash; three of them, before the psalm is two verses old: breaking faith, missing the mark, the crookedness that pulls a life out of shape. David doesn&rsquo;t dress any of them up. He lays them out plain, and then says the surprising thing: not one of them is being counted.</p>
 
-    <p>Blessed is the man whose wrongdoing is forgiven, whose sin is covered. Blessed is the man the Lord doesn&rsquo;t hold his sin against.</p>
+        <p>And that should be the end of all our hiding. If the weight can just be lifted off &mdash; carried away, not held against me &mdash; then why would anyone stay quiet? Who would keep the sin in his own hands when God is offering to take it?</p>
 
-    <p>Notice it doesn&rsquo;t say <em>the man who never sinned.</em> It says the man whose sin isn&rsquo;t counted against him. The sin is still there. It even has names &mdash; three of them, before the psalm is two verses old: breaking faith, missing the mark, the crookedness that pulls a life out of shape. David doesn&rsquo;t dress any of them up. He lays them out plain, and then says the surprising thing: not one of them is being counted.</p>
+        <p>And yet.</p>
 
-    <p>And that should be the end of all our hiding. If the weight can just be lifted off &mdash; carried away, not held against me &mdash; then why would anyone stay quiet? Who would keep the sin in his own hands when God is offering to take it?</p>
+        <h2 class="section">And yet.</h2>
 
-    <p>And yet.</p>
+        <p>When I kept quiet, my bones wore out. Day and night your hand pressed down on me; I dried up like a creek bed in summer.</p>
 
-    <h2 class="section">And yet.</h2>
+        <p>Read it again and notice what it doesn&rsquo;t say. It doesn&rsquo;t say <em>while I was getting ready to confess.</em> It says <em>when I kept quiet.</em> The wearing-out wasn&rsquo;t a stage on the way to speaking. It was what the silence did. The shut mouth and the drying bones were the same thing. I wasn&rsquo;t waiting. I was refusing.</p>
 
-    <p>When I kept quiet, my bones wore out. Day and night your hand pressed down on me; I dried up like a creek bed in summer.</p>
+        <p>Which brings up the question the psalm doesn&rsquo;t ask out loud but sets right in front of me. If the reward is so good &mdash; if the weight just lifts &mdash; why would I stay quiet at all?</p>
 
-    <p>Read it again and notice what it doesn&rsquo;t say. It doesn&rsquo;t say <em>while I was getting ready to confess.</em> It says <em>when I kept quiet.</em> The wearing-out wasn&rsquo;t a stage on the way to speaking. It was what the silence did. The shut mouth and the drying bones were the same thing. I wasn&rsquo;t waiting. I was refusing.</p>
+        <p>Because staying quiet protects something.</p>
 
-    <p>Which brings up the question the psalm doesn&rsquo;t ask out loud but sets right in front of me. If the reward is so good &mdash; if the weight just lifts &mdash; why would I stay quiet at all?</p>
+        <p>It lets me stay the man I&rsquo;d rather be. To open my mouth is to agree with the charge &mdash; to say the crookedness is mine. Not the situation. Not the other person. Not the thing that was done to me. As long as I say nothing, I get to keep myself in one piece.</p>
 
-    <p>Because staying quiet protects something.</p>
+        <p>And it feels like being in control. At least the heavy hand is <em>my</em> weight to carry. To confess is to hand it over, to let it out of my grip. Part of me would rather carry the weight than let go of the wheel.</p>
 
-    <p>It lets me stay the man I&rsquo;d rather be. To open my mouth is to agree with the charge &mdash; to say the crookedness is mine. Not the situation. Not the other person. Not the thing that was done to me. As long as I say nothing, I get to keep myself in one piece.</p>
+        <p>So the mouth stays shut, and the bones keep wearing out, and I call it being strong.</p>
 
-    <p>And it feels like being in control. At least the heavy hand is <em>my</em> weight to carry. To confess is to hand it over, to let it out of my grip. Part of me would rather carry the weight than let go of the wheel.</p>
+        <h2 class="section">The mouth opens.</h2>
 
-    <p>So the mouth stays shut, and the bones keep wearing out, and I call it being strong.</p>
+        <p>Then I told you about my sin. I stopped hiding it. I said, <em>I&rsquo;m going to lay it all out before the Lord</em> &mdash; and you forgave it. You let it go.</p>
 
-    <h2 class="section">The mouth opens.</h2>
+        <p>That was all it took. I didn&rsquo;t have to prove I&rsquo;d changed first. I didn&rsquo;t have to feel bad long enough to earn it. I just said the thing, and it was done.</p>
 
-    <p>Then I told you about my sin. I stopped hiding it. I said, <em>I&rsquo;m going to lay it all out before the Lord</em> &mdash; and you forgave it. You let it go.</p>
+        <p>And look at what confessing actually is, because we make it bigger than it is. It&rsquo;s not putting on a sad face. It&rsquo;s agreeing. <em>I stopped covering it.</em> That&rsquo;s the whole move &mdash; I quit doing the one thing I&rsquo;d been doing the whole time, holding it in, keeping it hidden, keeping it mine. Confessing is just letting it be seen.</p>
 
-    <p>That was all it took. I didn&rsquo;t have to prove I&rsquo;d changed first. I didn&rsquo;t have to feel bad long enough to earn it. I just said the thing, and it was done.</p>
+        <p>Now watch what God does with it, because his covering is nothing like mine. When I covered my sin, it was still there &mdash; hidden, but sitting in me, wearing me out. When God covers it, it&rsquo;s <em>gone.</em> He doesn&rsquo;t cup his hand over a thing that&rsquo;s still there and agree not to look. The psalm uses three words for it, and they all point one way: the sin is lifted off and carried away, put out of sight, not written down against me. Not one entry on the ledger. David doesn&rsquo;t say <em>how</em> it&rsquo;s gone &mdash; only that it is. We know how now. He didn&rsquo;t tuck it away. He dealt with it.</p>
 
-    <p>And look at what confessing actually is, because we make it bigger than it is. It&rsquo;s not putting on a sad face. It&rsquo;s agreeing. <em>I stopped covering it.</em> That&rsquo;s the whole move &mdash; I quit doing the one thing I&rsquo;d been doing the whole time, holding it in, keeping it hidden, keeping it mine. Confessing is just letting it be seen.</p>
+        <p>So the whole time I was quiet I was working hard to keep the sin covered up. And the second I stopped &mdash; the second I uncovered it myself &mdash; I found it covered. Not by me. By him. Mine kept me dry. His set me free. They were never the same thing.</p>
 
-    <p>Now watch what God does with it, because his covering is nothing like mine. When I covered my sin, it was still there &mdash; hidden, but sitting in me, wearing me out. When God covers it, it&rsquo;s <em>gone.</em> He doesn&rsquo;t cup his hand over a thing that&rsquo;s still there and agree not to look. The psalm uses three words for it, and they all point one way: the sin is lifted off and carried away, put out of sight, not written down against me. Not one entry on the ledger. David doesn&rsquo;t say <em>how</em> it&rsquo;s gone &mdash; only that it is. We know how now. He didn&rsquo;t tuck it away. He dealt with it.</p>
+        <p>I let go, and it was carried. That&rsquo;s it.</p>
 
-    <p>So the whole time I was quiet I was working hard to keep the sin covered up. And the second I stopped &mdash; the second I uncovered it myself &mdash; I found it covered. Not by me. By him. Mine kept me dry. His set me free. They were never the same thing.</p>
+        <h2 class="section selah">Selah</h2>
 
-    <p>I let go, and it was carried. That&rsquo;s it.</p>
+        <p>I don&rsquo;t like being vulnerable. Not in front of colleagues, not friends, not family. When I do something wrong, my first instinct is that I&rsquo;d rather no one found out.</p>
 
-    <h2 class="section selah">Selah</h2>
+        <p>A short while after I joined the mission in Papua New Guinea, I noticed a pressure valve on the water main was leaking. It came up later in a staff meeting &mdash; had anyone noticed it? It was a small thing. I chose to keep quiet.</p>
 
-    <p>I don&rsquo;t like being vulnerable. Not in front of colleagues, not friends, not family. When I do something wrong, my first instinct is that I&rsquo;d rather no one found out.</p>
+        <p>But I couldn&rsquo;t sleep that night. I felt a little like the man in this psalm. In the end I went to the Director and told him the truth.</p>
 
-    <p>A short while after I joined the mission in Papua New Guinea, I noticed a pressure valve on the water main was leaking. It came up later in a staff meeting &mdash; had anyone noticed it? It was a small thing. I chose to keep quiet.</p>
+        <p>What I didn&rsquo;t expect was what it did. The relief, yes &mdash; but more than that, it settled something between us. He told me later it was that incident that showed him I could be trusted. If I was willing to own a failure like that, then I had a heart open to correction. The thing I&rsquo;d been most afraid to admit turned out to be the thing that vouched for me.</p>
 
-    <p>But I couldn&rsquo;t sleep that night. I felt a little like the man in this psalm. In the end I went to the Director and told him the truth.</p>
+        <p>I wish I always felt the conviction I felt that night. But I&rsquo;m busy, I&rsquo;m in a hurry, and I don&rsquo;t always stop long enough to notice &mdash; long enough to <em>selah.</em></p>
 
-    <p>What I didn&rsquo;t expect was what it did. The relief, yes &mdash; but more than that, it settled something between us. He told me later it was that incident that showed him I could be trusted. If I was willing to own a failure like that, then I had a heart open to correction. The thing I&rsquo;d been most afraid to admit turned out to be the thing that vouched for me.</p>
+        <p>I can learn from Augustine. As he lay dying, he had these psalms &mdash; the ones the church calls the Penitential Psalms &mdash; pinned to the wall beside his bed, where he could read them and weep. Seven of them, worn smooth by centuries of people doing exactly what this psalm asks: <strong>6, 32, 38, 51, 130.</strong> I may not need to paper my wall with them. But I can at least take this morning to stop, to look honestly at my life, and to reflect on what it really means to be a blessed man.</p>
 
-    <p>I wish I always felt the conviction I felt that night. But I&rsquo;m busy, I&rsquo;m in a hurry, and I don&rsquo;t always stop long enough to notice &mdash; long enough to <em>selah.</em></p>
+        <p>Because John says it plainly: <em>if we confess our sins, he is faithful and just to forgive us.</em> Faithful &mdash; he will do it. Just &mdash; he is right to, because the debt is already carried. The door isn&rsquo;t locked. It never was.</p>
 
-    <p>I can learn from Augustine. As he lay dying, he had these psalms &mdash; the ones the church calls the Penitential Psalms &mdash; pinned to the wall beside his bed, where he could read them and weep. Seven of them, worn smooth by centuries of people doing exactly what this psalm asks: <strong>6, 32, 38, 51, 130.</strong> I may not need to paper my wall with them. But I can at least take this morning to stop, to look honestly at my life, and to reflect on what it really means to be a blessed man.</p>
+        <p>So what is stopping me?</p>
 
-    <p>Because John says it plainly: <em>if we confess our sins, he is faithful and just to forgive us.</em> Faithful &mdash; he will do it. Just &mdash; he is right to, because the debt is already carried. The door isn&rsquo;t locked. It never was.</p>
+        <p class="prayer">Lord, I&rsquo;ve spent so long holding things in and calling it strength. Teach me to open my hand sooner. Cover what I can&rsquo;t &mdash; carry it off, the way you promise to. And keep your eye on me; I&rsquo;d rather be watched over than left alone with the weight. Amen.</p>
 
-    <p>So what is stopping me?</p>
+      </div>
+    </div>
+  </div>
+</article>
 
-    <p class="prayer">Lord, I&rsquo;ve spent so long holding things in and calling it strength. Teach me to open my hand sooner. Cover what I can&rsquo;t &mdash; carry it off, the way you promise to. And keep your eye on me; I&rsquo;d rather be watched over than left alone with the weight. Amen.</p>
-
-    <div class="byline">Norm Reed</div>
-
-  </article>
-</div>
-
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 </body>
 </html>
