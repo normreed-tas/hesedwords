@@ -4,245 +4,142 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Into Your Hand — Hesed Words</title>
+<meta name="description" content="He did not have much breath left. What a man spends his last air on tells you what he was holding onto at the end. He spent it on a line from a psalm — a deposit-word, the language of placing something valuable into the keeping of someone who will be accountable for it.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-:root{
-  --parchment:#e8dfc8;
-  --parchment-page:#f3ecda;
-  --gold:#c9a84c;
-  --gold-deep:#A67C2E;
-  --gold-soft:#D9C49A;
-  --muted:#6B5C45;
-  --rule:#C8B58F;
-  --ink:#2A2218;
-}
-*{box-sizing:border-box;}
-html,body{margin:0;padding:0;}
-body{
-  background:var(--parchment);
-  color:var(--ink);
-  font-family:'Cormorant Garamond','Garamond',Georgia,serif;
-  font-size:1.25rem;
-  line-height:1.7;
-  -webkit-font-smoothing:antialiased;
-}
-
-/* ── Site nav ── */
-nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-nav.hw-nav a:hover{opacity:1;color:#fff;}
-nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-/* ── Footer ── */
-footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-.page{
-  max-width:680px;
-  margin:0 auto;
-  padding:3.5rem 1.5rem 1rem;
-  background:var(--parchment-page);
-}
-@media(min-width:720px){
-  .page{padding:4.5rem 3.5rem 1.5rem;margin-top:2.5rem;margin-bottom:2.5rem;border:1px solid var(--rule);}
-}
-
-.eyebrow{
-  font-family:'Cinzel',serif;
-  font-size:.7rem;
-  letter-spacing:.28em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-  text-align:center;
-  margin-bottom:1.1rem;
-}
-h1{
-  font-family:'Cinzel',serif;
-  font-weight:500;
-  font-size:2.4rem;
-  letter-spacing:.03em;
-  text-align:center;
-  margin:0 0 .5rem;
-  line-height:1.2;
-}
-.ref{
-  text-align:center;
-  font-style:italic;
-  font-size:1.15rem;
-  color:var(--muted);
-  margin:0 0 1.3rem;
-}
-.dotrule{
-  text-align:center;
-  color:var(--gold);
-  letter-spacing:.5em;
-  font-size:1rem;
-  margin:1.1rem 0;
-}
-.byline{
-  font-family:'Cinzel',serif;
-  font-size:.65rem;
-  letter-spacing:.24em;
-  text-transform:uppercase;
-  color:var(--muted);
-  text-align:center;
-  margin-bottom:2.4rem;
-}
-
-p{margin:0 0 1.25rem;}
-
-.hebrew{
-  font-size:1.9rem;
-  text-align:center;
-  color:var(--ink);
-  margin:1.4rem 0 .3rem;
-  direction:rtl;
-  font-family:'Times New Roman',serif;
-}
-.translit{
-  text-align:center;
-  font-style:italic;
-  color:var(--muted);
-  font-size:1.15rem;
-  margin:0 0 1.5rem;
-}
-
-.selah{
-  border-left:3px solid var(--gold);
-  padding:.4rem 0 .4rem 1.5rem;
-  margin:2.2rem 0;
-}
-.selah .selah-head{
-  font-family:'Cinzel',serif;
-  font-size:.9rem;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-  margin-bottom:1rem;
-}
-
-.prayer{
-  text-align:center;
-  font-style:italic;
-  font-size:1.3rem;
-  line-height:1.75;
-  color:var(--ink);
-  margin:2.4rem 0 1rem;
-}
-.prayer .amen{font-style:normal;font-variant:small-caps;letter-spacing:.1em;}
-
-em{font-style:italic;}
-a.keeper-link{color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold-soft);}
-a.keeper-link:hover{border-bottom-color:var(--gold-deep);}
-
-.footnote{
-  max-width:520px;
-  margin:2.6rem auto 0;
-  padding-top:1.2rem;
-  border-top:1px solid var(--gold-soft);
-  font-size:1rem;
-  font-style:italic;
-  line-height:1.55;
-  color:var(--muted);
-  text-align:center;
-}
-.footnote a{color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold-soft);}
-.footnote a:hover{border-bottom-color:var(--gold-deep);}
-.footnote cite{font-style:italic;}
+  .hw-article-body .hebrew { font-family: var(--font-heb); font-size: 32px; text-align: center; color: var(--brass); margin: 24px 0 6px; direction: rtl; }
+  .hw-article-body .translit { text-align: center; font-style: italic; color: var(--muted); margin: 0 0 26px; }
+  .hw-article-body .divider { text-align: center; color: var(--brass); letter-spacing: 0.6em; font-size: 14px; margin: 32px 0; }
+  .hw-article-body .prayer {
+    text-align: center; font-style: italic; font-size: 22px; line-height: 1.7; color: var(--ink); margin: 40px 0 16px;
+  }
+  .hw-article-body .prayer .amen { font-style: normal; font-variant: small-caps; letter-spacing: 0.1em; }
+  .hw-article-body .footnote {
+    max-width: 520px; margin: 40px auto 0; padding-top: 20px; border-top: 1px solid var(--hairline);
+    font-size: 15px; font-style: italic; color: var(--muted); text-align: center;
+  }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html" class="current">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<main class="page">
-
-  <div class="eyebrow">A Hesed Words Reflection</div>
-  <h1>Into Your Hand</h1>
-  <p class="ref">Psalm 31:5</p>
-  <div class="dotrule">&middot; &middot; &middot;</div>
-  <div class="byline">Norm Reed</div>
-
-  <p>He did not have much breath left.</p>
-
-  <p>That is the first thing. A man on a cross does not die so much of the wounds as of the slow work of not being able to breathe. Every word costs. You do not waste air. And what a man spends his last air on tells you, more than anything else could, what he was holding onto at the end.</p>
-
-  <p>He spent it on a line from a psalm.</p>
-
-  <p class="hebrew">בְּיָדְךָ אַפְקִיד רוּחִי</p>
-  <p class="translit">Into your hand I entrust my spirit.</p>
-
-  <p>Not surrender. <em>Entrust.</em> The Hebrew is <em>afqid</em> — a deposit-word, the language of placing something valuable into the keeping of someone who will be accountable for it. You do not deposit into a void. You deposit with a keeper. The breath is placed into a hand that holds it.</p>
-
-  <div class="dotrule">&middot; &middot; &middot;</div>
-
-  <p>But here is the thing about a line from a psalm, prayed by a Jew, in front of people who knew their psalms. You do not breathe the whole building. You breathe one line, and the hearers hold the rest.</p>
-
-  <p>He does it at the other cry too — <em>my God, my God, why have you forsaken me</em> — and everyone who hears the abandonment forgets the psalm turns, forgets it ends in vindication. To breathe the head of a psalm is to summon all of it.</p>
-
-  <p>So what did he summon?</p>
-
-  <p>Not a death-song. Psalm 31 is a trust-song, sung into mortal danger. <em>In you, O LORD, I take refuge. My times are in your hand.</em> It is the prayer of a man pressed on every side, slandered, hunted, and still leaning his whole weight on God. When Jesus breathes its sixth verse from the cross, he is not reaching for a convenient line about spirits. He is praying the whole posture of it — the refuge, the times held in a faithful hand, the trust that outlasts the pressing.</p>
-
-  <p>The last breath was not improvised confidence. It was the last verse of a song he had been singing all along.</p>
-
-  <div class="dotrule">&middot; &middot; &middot;</div>
-
-  <p>David sang it first. But David sang it for safety — hand the life over, and receive it back, when the danger has passed, unchanged. A thing kept in a vault comes out the way it went in.</p>
-
-  <p>David asks to be kept safe. Jesus does not ask to be kept safe. He gives his life, safe, into a hand — and what is given here does not come back the same. The image you reach for to feel secure is the image you outgrow in the middle of the verse. The vault is David's hope. It is not deep enough for this.</p>
-
-  <p>His life was not taken from him. He gave it. Into a hand he had, the whole psalm long, already called faithful.</p>
-
-  <p>And the hope that this entrusting is unto life, and not into the dark — that is not in the verse. The verse gives only the giving. The ground for reading the giving as unto life is in what happens three days after the verse is prayed.</p>
-
-  <div class="dotrule">&middot; &middot; &middot;</div>
-
-  <div class="selah">
-    <div class="selah-head">Selah</div>
-
-    <p>I keep going back to the day my heart stopped.</p>
-
-    <p>There was no last verse for me. No psalm breathed out with the final air. There was no time to pray at all. Whatever was happening was happening faster than words.</p>
-
-    <p>And I was kept anyway.</p>
-
-    <p>That is what I have had to sit with. He had breath enough for a whole song. I had none. And the same hand held us both. The trust was never in the praying. If it had been, I would not be here to write this — I did not manage the praying. I was carried when I could not carry myself.</p>
-
-    <p>So when I read <em>into your hand I entrust my spirit</em> now, I do not read it as a thing I have to achieve at the end. My life is already his. It was always his. <a href="/books/songs-for-the-road.html" class="keeper-link">He keeps me</a>. Committing it is not handing something over to make it safe. It is finally saying out loud what was true the whole time — that it is held, and has been held, by hands that kept me even when I could not reach for them.</p>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
   </div>
+</header>
 
-  <div class="prayer">
-    Father,<br>
-    my life was never mine to keep.<br>
-    You keep me.<br>
-    When I had no time to pray — you kept me.<br>
-    You held me when I had no breath.<br>
-    I entrust to you now<br>
-    what was always yours to keep —<br>
-    not to make it safe,<br>
-    but because it is.<br>
-    Into your hand.<br>
-    <span class="amen">Amen.</span>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>
+      <div>Psalm 31</div>
+      <div>5 Jul 2026</div>
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>Into Your Hand</h1>
+      <div class="hw-article-body">
+
+        <p>He did not have much breath left.</p>
+
+        <p>That is the first thing. A man on a cross does not die so much of the wounds as of the slow work of not being able to breathe. Every word costs. You do not waste air. And what a man spends his last air on tells you, more than anything else could, what he was holding onto at the end.</p>
+
+        <p>He spent it on a line from a psalm.</p>
+
+        <p class="hebrew">בְּיָדְךָ אַפְקִיד רוּחִי</p>
+        <p class="translit">Into your hand I entrust my spirit.</p>
+
+        <p>Not surrender. <em>Entrust.</em> The Hebrew is <em>afqid</em> &mdash; a deposit-word, the language of placing something valuable into the keeping of someone who will be accountable for it. You do not deposit into a void. You deposit with a keeper. The breath is placed into a hand that holds it.</p>
+
+        <div class="divider">&middot; &middot; &middot;</div>
+
+        <p>But here is the thing about a line from a psalm, prayed by a Jew, in front of people who knew their psalms. You do not breathe the whole building. You breathe one line, and the hearers hold the rest.</p>
+
+        <p>He does it at the other cry too &mdash; <em>my God, my God, why have you forsaken me</em> &mdash; and everyone who hears the abandonment forgets the psalm turns, forgets it ends in vindication. To breathe the head of a psalm is to summon all of it.</p>
+
+        <p>So what did he summon?</p>
+
+        <p>Not a death-song. Psalm 31 is a trust-song, sung into mortal danger. <em>In you, O LORD, I take refuge. My times are in your hand.</em> It is the prayer of a man pressed on every side, slandered, hunted, and still leaning his whole weight on God. When Jesus breathes its sixth verse from the cross, he is not reaching for a convenient line about spirits. He is praying the whole posture of it &mdash; the refuge, the times held in a faithful hand, the trust that outlasts the pressing.</p>
+
+        <p>The last breath was not improvised confidence. It was the last verse of a song he had been singing all along.</p>
+
+        <div class="divider">&middot; &middot; &middot;</div>
+
+        <p>David sang it first. But David sang it for safety &mdash; hand the life over, and receive it back, when the danger has passed, unchanged. A thing kept in a vault comes out the way it went in.</p>
+
+        <p>David asks to be kept safe. Jesus does not ask to be kept safe. He gives his life, safe, into a hand &mdash; and what is given here does not come back the same. The image you reach for to feel secure is the image you outgrow in the middle of the verse. The vault is David's hope. It is not deep enough for this.</p>
+
+        <p>His life was not taken from him. He gave it. Into a hand he had, the whole psalm long, already called faithful.</p>
+
+        <p>And the hope that this entrusting is unto life, and not into the dark &mdash; that is not in the verse. The verse gives only the giving. The ground for reading the giving as unto life is in what happens three days after the verse is prayed.</p>
+
+        <div class="divider">&middot; &middot; &middot;</div>
+
+        <div class="hw-selah">
+          <div class="rule"></div>
+          <div class="word">Selah</div>
+          <div class="rule"></div>
+        </div>
+
+        <p>I keep going back to the day my heart stopped.</p>
+
+        <p>There was no last verse for me. No psalm breathed out with the final air. There was no time to pray at all. Whatever was happening was happening faster than words.</p>
+
+        <p>And I was kept anyway.</p>
+
+        <p>That is what I have had to sit with. He had breath enough for a whole song. I had none. And the same hand held us both. The trust was never in the praying. If it had been, I would not be here to write this &mdash; I did not manage the praying. I was carried when I could not carry myself.</p>
+
+        <p>So when I read <em>into your hand I entrust my spirit</em> now, I do not read it as a thing I have to achieve at the end. My life is already his. It was always his. <a href="/books/songs-for-the-road.html" class="gloss">He keeps me</a>. Committing it is not handing something over to make it safe. It is finally saying out loud what was true the whole time &mdash; that it is held, and has been held, by hands that kept me even when I could not reach for them.</p>
+
+        <div class="prayer">
+          Father,<br>
+          my life was never mine to keep.<br>
+          You keep me.<br>
+          When I had no time to pray &mdash; you kept me.<br>
+          You held me when I had no breath.<br>
+          I entrust to you now<br>
+          what was always yours to keep &mdash;<br>
+          not to make it safe,<br>
+          but because it is.<br>
+          Into your hand.<br>
+          <span class="amen">Amen.</span>
+        </div>
+
+        <p class="footnote">
+          For a fuller reading of God as keeper &mdash; <em>shamar</em> &mdash; see
+          &ldquo;The Keeper on the Road,&rdquo; Chapter Two of
+          <a href="/books/songs-for-the-road.html"><cite>Songs for the Road</cite></a>.
+        </p>
+
+      </div>
+    </div>
   </div>
+</article>
 
-  <p class="footnote">
-    For a fuller reading of God as keeper &mdash; <em>shamar</em> &mdash; see
-    &ldquo;The Keeper on the Road,&rdquo; Chapter Two of
-    <a href="/books/songs-for-the-road.html"><cite>Songs for the Road</cite></a>.
-  </p>
-
-</main>
-
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 </body>
 </html>
