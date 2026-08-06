@@ -1,311 +1,136 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Let Him Kiss Me — Hesedwords</title>
-  <meta name="description" content="A reflection on Song of Songs 1:1 — the song that opens not with the kiss but with the longing for it.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --parchment:     #FAF5E8;
-      --parchment-mid: #F2EAD4;
-      --gold:          #A67C2E;
-      --gold-border:   #C8B58F;
-      --gold-rule:     #D9C49A;
-      --ink:           #2A2218;
-      --ink-mid:       #4A3E2C;
-      --ink-light:     #6B5C45;
-      --cinzel:        'Cinzel', 'Palatino Linotype', Georgia, serif;
-      --cormorant:     'Cormorant Garamond', 'Garamond', Georgia, serif;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: var(--parchment);
-      color: var(--ink);
-      font-family: var(--cormorant);
-      font-size: 20px;
-      line-height: 1.78;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── Site nav ── */
-    nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-    nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-    nav.hw-nav a:hover{opacity:1;color:#fff;}
-    nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-
-    /* ── Reflection wrapper ── */
-    .reflection-wrap {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 64px 40px 90px;
-    }
-
-    /* ── Title block ── */
-    .reflection-eyebrow {
-      font-family: var(--cinzel);
-      font-size: 10px;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: var(--gold);
-      text-align: center;
-      margin-bottom: 22px;
-    }
-    .reflection-title {
-      font-family: var(--cinzel);
-      font-size: 36px;
-      font-weight: 500;
-      letter-spacing: 0.03em;
-      color: var(--ink);
-      text-align: center;
-      line-height: 1.2;
-      margin-bottom: 18px;
-    }
-    .reflection-subtitle {
-      font-family: var(--cormorant);
-      font-style: italic;
-      font-size: 19px;
-      color: var(--ink-mid);
-      text-align: center;
-      line-height: 1.45;
-      margin-bottom: 28px;
-    }
-    .reflection-ornament {
-      text-align: center;
-      color: var(--gold);
-      font-size: 14px;
-      letter-spacing: 0.7em;
-      margin: 0 0 20px;
-    }
-    .reflection-byline {
-      font-family: var(--cinzel);
-      font-size: 10px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      text-align: center;
-      margin-bottom: 56px;
-    }
-
-    /* ── Body ── */
-    .reflection-body p {
-      margin-bottom: 1.45em;
-      font-size: 20px;
-      line-height: 1.78;
-      color: var(--ink);
-    }
-
-    /* ── Drop cap ── */
-    .drop-cap::first-letter {
-      font-family: var(--cinzel);
-      font-size: 4.4em;
-      font-weight: 400;
-      float: left;
-      line-height: 0.76;
-      margin: 0.1em 0.12em 0 0;
-      color: var(--gold);
-    }
-
-    /* ── Scene break ── */
-    .scene-break {
-      text-align: center;
-      color: var(--gold);
-      font-size: 13px;
-      letter-spacing: 0.7em;
-      margin: 34px 0 30px;
-    }
-
-    /* ── Section heading ── */
-    .section-head {
-      font-family: var(--cinzel);
-      font-size: 11px;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--gold);
-      text-align: center;
-      margin: 0 0 26px;
-    }
-
-    /* ── Scripture block ── */
-    .scripture-block {
-      border-left: 3px solid var(--gold);
-      padding: 14px 20px 14px 28px;
-      margin: 30px 0;
-      background: rgba(166, 124, 46, 0.04);
-      border-radius: 0 2px 2px 0;
-    }
-    .scripture-block p {
-      font-style: italic;
-      font-size: 19px !important;
-      color: var(--ink-mid) !important;
-      margin-bottom: 0 !important;
-      line-height: 1.65 !important;
-    }
-    .scripture-ref {
-      display: block;
-      font-family: var(--cinzel);
-      font-size: 9.5px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-top: 12px;
-      text-align: right;
-    }
-
-    /* ── Article link ── */
-    .article-link {
-      border-top: 1px solid var(--gold-rule);
-      margin-top: 44px;
-      padding-top: 36px;
-      text-align: center;
-    }
-    .article-link p {
-      font-family: var(--cinzel);
-      font-size: 10px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      margin-bottom: 12px !important;
-    }
-    .article-link a {
-      font-family: var(--cormorant);
-      font-style: italic;
-      font-size: 19px;
-      color: var(--gold);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-rule);
-      padding-bottom: 2px;
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .article-link a:hover {
-      color: var(--ink-mid);
-      border-bottom-color: var(--ink-mid);
-    }
-
-    /* ── Closing questions ── */
-    .closing-questions {
-      margin-top: 20px;
-      padding-top: 14px;
-    }
-    .closing-questions p {
-      font-style: italic;
-      font-size: 20px;
-      color: var(--ink-mid);
-      text-align: center;
-      line-height: 1.6;
-      margin-bottom: 1.1em;
-    }
-
-    /* ── Footer ── */
-    footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-    /* ── Mobile ── */
-    @media (max-width: 640px) {
-      .reflection-wrap { padding: 44px 24px 64px; }
-      .reflection-title { font-size: 26px; }
-      .reflection-subtitle { font-size: 17px; }
-      .reflection-body p { font-size: 18px; }
-      .scripture-block p { font-size: 17px !important; }
-      .drop-cap::first-letter { font-size: 3.8em; }
-    }
-
-    /* ── Print ── */
-    @media print {
-      .hw-nav, .hw-foot { display: none; }
-      body { background: white; }
-      .reflection-wrap { padding: 0; max-width: 100%; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Let Him Kiss Me — Hesed Words</title>
+<meta name="description" content="The greatest of all songs opens on a woman wanting. Not a story, not a setting — just the longing, before we have been given anything safe to hold. A reflection on what it means that the Song begins here, and what the Shulammite's reach shares with David's one thing and Paul's pressing on.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
+<style>
+  .hw-article-body .subtitle { font-style: italic; color: var(--muted); font-size: 22px; margin: -20px 0 34px; }
+  .hw-article-body p.first::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
+  }
+  .hw-article-body .section-head {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--brass); text-align: center; margin: 40px 0 20px;
+  }
+  .hw-article-body .scene-break { text-align: center; color: var(--brass); letter-spacing: 0.6em; font-size: 14px; margin: 32px 0; }
+  .hw-article-body .article-link { border-top: 1px solid var(--hairline); margin-top: 40px; padding-top: 32px; text-align: center; }
+  .hw-article-body .article-link p {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px;
+  }
+  .hw-article-body .article-link a { font-style: italic; font-size: 19px; color: var(--oxblood); border-bottom: 1px solid var(--hairline); }
+  .hw-article-body .article-link a:hover { border-bottom-color: var(--oxblood); }
+  .hw-article-body .closing-questions { margin-top: 20px; }
+  .hw-article-body .closing-questions p { font-style: italic; color: var(--muted); text-align: center; }
+</style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html" class="current">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
+  </div>
+</header>
 
-  <main class="reflection-wrap">
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>
+      <div>Song of Songs 1:1</div>
+      <div>25 Jun 2026</div>
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>Let Him Kiss Me</h1>
+      <div class="hw-article-body">
+        <p class="subtitle">A reflection on Song of Songs 1:1</p>
 
-    <header>
-      <p class="reflection-eyebrow">A Hesedwords Reflection</p>
-      <h1 class="reflection-title">Let Him Kiss Me</h1>
-      <p class="reflection-subtitle">A reflection on Song of Songs 1:1</p>
-      <p class="reflection-ornament">✦ &nbsp; ✦ &nbsp; ✦</p>
-      <p class="reflection-byline">Norm Reed &middot; June 2026</p>
-    </header>
+        <div class="section-head">At the Window</div>
 
-    <article class="reflection-body">
+        <p class="verse">Let him kiss me with the kisses of his mouth! For your love is better than wine. <em>Song of Songs 1:1 &middot; ESV</em></p>
 
-      <p class="section-head">At the Window</p>
+        <p class="first">The greatest of all songs opens on a woman wanting. Not a story, not a setting, not even her name &mdash; just the wanting, before we have been given anything safe to hold.</p>
 
-      <div class="scripture-block">
-        <p>Let him kiss me with the kisses of his mouth! For your love is better than wine.</p>
-        <span class="scripture-ref">Song of Songs 1:1 &middot; ESV</span>
+        <p>She is alone. You can hear it in the grammar. <em>Let him</em> &mdash; she speaks of him the way you speak of someone who is not in the room. A girl on her bed, perhaps, the window open, the evening coming on. She has closed her eyes and drawn him near the only way she can, and the kiss is happening in the quiet space of the imagination, where no one can see her want it.</p>
+
+        <p>And we are not told &mdash; this is the tender thing &mdash; whether she is longing toward a first kiss she has never known, or back toward one she cannot stop remembering. The song withholds it. A poet that careful withheld it on purpose. Because the longing forward and the longing back feel the same from the inside, and the song does not need us to know <em>when</em> she is. It only needs us to feel what she feels.</p>
+
+        <div class="scene-break">&#10022; &#10022; &#10022;</div>
+
+        <div class="section-head">The One Thing</div>
+
+        <p>Then the line turns. <em>Your love is better than wine.</em> That is not a girl wondering what love might be like. That is a woman who has tasted, and is telling you it outruns the best thing she has a word for.</p>
+
+        <p>So this is not infatuation. Not the ache for someone you have never had &mdash; that is a thinner ache. This is the deeper loneliness: wanting more of what you have already held.</p>
+
+        <p>And here the song meets two others. David, with one thing on his heart &mdash; <em>that I may dwell in the house of the Lord&hellip; to behold his beauty.</em> And Paul, in a cell, with death close enough to touch, wanting not release but one thing only &mdash; <em>that I may know him</em> &mdash; counting everything else as loss, as rubbish, beside it.</p>
+
+        <div class="scene-break">&#10022; &#10022; &#10022;</div>
+
+        <div class="hw-selah">
+          <div class="rule"></div>
+          <div class="word">Selah</div>
+          <div class="rule"></div>
+        </div>
+
+        <p>I have known Him a long time. Since 1979. A life has been shaped by that knowing &mdash; the Navy, the years in Papua New Guinea, the long ordinary work of the church and even leading a church in ministry &mdash; and you would think, after all of it, the wanting would have settled into having. It has not. Like Paul, I am still reaching.</p>
+
+        <p>There is a song I play. Stephen Green&rsquo;s <em>I Want to Know You More.</em> And I have noticed that I do not so much sing it as find it already on my lips &mdash; the words arriving before I have decided to say them. <em>Deep within my heart, I want to know Him.</em> Not know <em>about</em> Him. I have known about Him for forty years; I could fill the hours telling you what I know about Him. That is not the ache. The ache is to know <em>Him.</em></p>
+
+        <p>The day my heart stopped I became aware of something. Life is a gift. When a thing you assumed you still had is taken and then, by mercy, handed back, you stop counting it as ordinary. The days became gift. And a gift sharpens the one question down to a point. Not <em>what will I do with the time.</em> Something simpler and harder. <em>Out of everything, what is the one thing?</em></p>
+
+        <p>I knew the answer. I had always known it. That is the strange part &mdash; I could have told you at any point in forty years that to know Him was the one thing. But knowing it and living as though it were true are not the same. This is what Paul meant: not that he had only now found Christ, but that everything else had finally moved to the other side of the scale, counted as loss beside the surpassing worth of knowing Him. It is David&rsquo;s one thing &mdash; out of all a man could ask, <em>this</em> &mdash; to behold His beauty, to inquire in His temple.</p>
+
+        <p>And the answer, when everything else fell away, was not complicated. It was the song already on my lips. It was the Shulammite at her window. It was to know Him &mdash; and perhaps to recognise this as the reason for the wonderful gift I have been given.</p>
+
+        <div class="scene-break">&#10022; &#10022; &#10022;</div>
+
+        <p>Perhaps that is what this song is. Stephen Green&rsquo;s song and the Song of Songs, the same song in different garments &mdash; the longing to know Him, set to music because the heart cannot say it plainly.</p>
+
+        <p>I do not stand where Paul stood. I cannot yet say <em>everything else is loss</em> and mean it all the way down. But I can say this: I want to want that. And my prayer is that this song &mdash; the Song of all songs &mdash; would develop and nurture that longing.</p>
+
+        <div class="article-link">
+          <p>There is more &mdash; if you want to follow it further</p>
+          <a href="/articles/the-song-begins-in-longing.html">The Song Begins in Longing &nbsp;&rarr;</a>
+        </div>
+
+        <div class="closing-questions">
+          <p>Where are you still standing at the window &mdash; reaching for a nearness you have known, but do not presently hold?</p>
+          <p>And what would it mean to believe that the longing itself, before anything is resolved, is already the song &mdash; and not the absence of it?</p>
+        </div>
+
       </div>
+    </div>
+  </div>
+</article>
 
-      <p class="drop-cap">The greatest of all songs opens on a woman wanting. Not a story, not a setting, not even her name &mdash; just the wanting, before we have been given anything safe to hold.</p>
-
-      <p>She is alone. You can hear it in the grammar. <em>Let him</em> &mdash; she speaks of him the way you speak of someone who is not in the room. A girl on her bed, perhaps, the window open, the evening coming on. She has closed her eyes and drawn him near the only way she can, and the kiss is happening in the quiet space of the imagination, where no one can see her want it.</p>
-
-      <p>And we are not told &mdash; this is the tender thing &mdash; whether she is longing toward a first kiss she has never known, or back toward one she cannot stop remembering. The song withholds it. A poet that careful withheld it on purpose. Because the longing forward and the longing back feel the same from the inside, and the song does not need us to know <em>when</em> she is. It only needs us to feel what she feels.</p>
-
-      <p class="scene-break">✦ &nbsp; ✦ &nbsp; ✦</p>
-
-      <p class="section-head">The One Thing</p>
-
-      <p>Then the line turns. <em>Your love is better than wine.</em> That is not a girl wondering what love might be like. That is a woman who has tasted, and is telling you it outruns the best thing she has a word for.</p>
-
-      <p>So this is not infatuation. Not the ache for someone you have never had &mdash; that is a thinner ache. This is the deeper loneliness: wanting more of what you have already held.</p>
-
-      <p>And here the song meets two others. David, with one thing on his heart &mdash; <em>that I may dwell in the house of the Lord&hellip; to behold his beauty.</em> And Paul, in a cell, with death close enough to touch, wanting not release but one thing only &mdash; <em>that I may know him</em> &mdash; counting everything else as loss, as rubbish, beside it.</p>
-
-      <p class="scene-break">✦ &nbsp; ✦ &nbsp; ✦</p>
-
-      <p class="section-head">Selah</p>
-
-      <p>I have known Him a long time. Since 1979. A life has been shaped by that knowing &mdash; the Navy, the years in Papua New Guinea, the long ordinary work of the church and even leading a church in ministry &mdash; and you would think, after all of it, the wanting would have settled into having. It has not. Like Paul, I am still reaching.</p>
-
-      <p>There is a song I play. Stephen Green&rsquo;s <em>I Want to Know You More.</em> And I have noticed that I do not so much sing it as find it already on my lips &mdash; the words arriving before I have decided to say them. <em>Deep within my heart, I want to know Him.</em> Not know <em>about</em> Him. I have known about Him for forty years; I could fill the hours telling you what I know about Him. That is not the ache. The ache is to know <em>Him.</em></p>
-
-      <p>The day my heart stopped I became aware of something. Life is a gift. When a thing you assumed you still had is taken and then, by mercy, handed back, you stop counting it as ordinary. The days became gift. And a gift sharpens the one question down to a point. Not <em>what will I do with the time.</em> Something simpler and harder. <em>Out of everything, what is the one thing?</em></p>
-
-      <p>I knew the answer. I had always known it. That is the strange part &mdash; I could have told you at any point in forty years that to know Him was the one thing. But knowing it and living as though it were true are not the same. This is what Paul meant: not that he had only now found Christ, but that everything else had finally moved to the other side of the scale, counted as loss beside the surpassing worth of knowing Him. It is David&rsquo;s one thing &mdash; out of all a man could ask, <em>this</em> &mdash; to behold His beauty, to inquire in His temple.</p>
-
-      <p>And the answer, when everything else fell away, was not complicated. It was the song already on my lips. It was the Shulammite at her window. It was to know Him &mdash; and perhaps to recognise this as the reason for the wonderful gift I have been given.</p>
-
-      <p class="scene-break">✦ &nbsp; ✦ &nbsp; ✦</p>
-
-      <p>Perhaps that is what this song is. Stephen Green&rsquo;s song and the Song of Songs, the same song in different garments &mdash; the longing to know Him, set to music because the heart cannot say it plainly.</p>
-
-      <p>I do not stand where Paul stood. I cannot yet say <em>everything else is loss</em> and mean it all the way down. But I can say this: I want to want that. And my prayer is that this song &mdash; the Song of all songs &mdash; would develop and nurture that longing.</p>
-
-      <div class="article-link">
-        <p>There is more &mdash; if you want to follow it further</p>
-        <a href="/articles/the-song-begins-in-longing.html">
-          The Song Begins in Longing &nbsp;&rarr;
-        </a>
-      </div>
-
-      <div class="closing-questions">
-        <p>Where are you still standing at the window &mdash; reaching for a nearness you have known, but do not presently hold?</p>
-        <p>And what would it mean to believe that the longing itself, before anything is resolved, is already the song &mdash; and not the absence of it?</p>
-      </div>
-
-    </article>
-
-  </main>
-
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 </body>
 </html>
