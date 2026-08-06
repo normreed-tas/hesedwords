@@ -1,365 +1,132 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Justice Is Not What You Think — Hesed Words</title>
-
-<!-- ============================================================
-     DEVOTIONAL METADATA
-     Read by the "devotional thoughts" index for sorting + filtering.
-     Keep this block in every devotional article. Edit values per piece.
-     ============================================================ -->
-<meta name="hw:type" content="devotional">
-<meta name="hw:title" content="Justice Is Not What You Think">
-<meta name="hw:date" content="2026-06-10">
-<meta name="hw:scripture" content="Proverbs 28:5; Isaiah 42:1-4; Matthew 12:18-21; John 16:8-11; John 17:3">
-<meta name="hw:themes" content="mishpat; tzedakah; da'at; justice; perception; the Spirit; the Servant">
-<meta name="hw:summary" content="The deepest problem is not injustice done but justice unperceived. A thread from Proverbs through Isaiah's Servant to the Spirit's work in John.">
-
+<meta name="description" content="The deepest problem is not injustice done but justice unperceived. A thread from Proverbs through Isaiah's Servant to the Spirit's work in John.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-  :root{
-    --parchment:#f4ecd8;
-    --parchment-deep:#ece1c7;
-    --ink:#1f1b16;
-    --ink-soft:#3a332a;
-    --gold:#b08d3f;
-    --gold-deep:#8a6d2b;
-    --rule:#d8c9a3;
-    --maxw:46rem;
+  .hw-article-body p.first::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
   }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:
-      radial-gradient(ellipse at top, #f7f0de 0%, var(--parchment) 55%, var(--parchment-deep) 100%) fixed;
-    color:var(--ink);
-    font-family:"Cormorant Garamond",Georgia,serif;
-    font-size:1.32rem;
-    line-height:1.72;
-    -webkit-font-smoothing:antialiased;
+  .hw-article-body .panel-num {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--brass); text-align: center; margin: 44px 0 6px;
   }
-
-  /* ---- Navigation (matches site shell) ---- */
-  nav.hw-nav{
-    background:var(--ink);
-    color:var(--parchment);
-    font-family:"Cinzel",serif;
-    font-size:.78rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    display:flex;
-    justify-content:center;
-    gap:2.2rem;
-    padding:1.05rem 1rem;
-    flex-wrap:wrap;
-  }
-  nav.hw-nav a{color:var(--parchment);text-decoration:none;opacity:.82;transition:opacity .2s;}
-  nav.hw-nav a:hover{opacity:1;color:#fff;}
-  nav.hw-nav a.current{opacity:1;border-bottom:1px solid var(--gold);padding-bottom:.15rem;}
-
-  /* ---- Article frame ---- */
-  main{max-width:var(--maxw);margin:0 auto;padding:3.4rem 1.5rem 5rem;}
-
-  .eyebrow{
-    font-family:"Cinzel",serif;
-    font-size:.72rem;
-    letter-spacing:.26em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    text-align:center;
-    margin-bottom:1.1rem;
-  }
-  h1{
-    font-family:"Cinzel",serif;
-    font-weight:500;
-    font-size:2.5rem;
-    line-height:1.18;
-    text-align:center;
-    margin:0 0 1.6rem;
-    color:var(--ink);
-  }
-  .byline{
-    text-align:center;
-    font-style:italic;
-    color:var(--ink-soft);
-    font-size:1.05rem;
-    letter-spacing:.02em;
-    margin-bottom:2.4rem;
-  }
-
-  /* ---- Scripture epigraph ---- */
-  .epigraph{
-    max-width:34rem;
-    margin:0 auto 3.2rem;
-    text-align:center;
-    font-style:italic;
-    font-size:1.4rem;
-    line-height:1.6;
-    color:var(--ink-soft);
-  }
-  .epigraph .ref{
-    display:block;
-    font-style:normal;
-    font-family:"Cinzel",serif;
-    font-size:.72rem;
-    letter-spacing:.2em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    margin-top:1rem;
-  }
-
-  /* ---- Ornamental rule ---- */
-  .rule{
-    border:0;
-    text-align:center;
-    margin:2.8rem auto;
-    width:100%;
-  }
-  .rule::before{
-    content:"❧";
-    color:var(--gold);
-    font-size:1.3rem;
-    display:inline-block;
-  }
-
-  /* ---- Panel headings ---- */
-  .panel-num{
-    font-family:"Cinzel",serif;
-    font-size:.72rem;
-    letter-spacing:.24em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    text-align:center;
-    margin-top:.4rem;
-    margin-bottom:.5rem;
-  }
-  h2{
-    font-family:"Cinzel",serif;
-    font-weight:500;
-    font-size:1.55rem;
-    line-height:1.3;
-    text-align:center;
-    margin:0 0 1.8rem;
-    color:var(--ink);
-  }
-
-  p{margin:0 0 1.35rem;}
-  p.first::first-letter{
-    font-family:"Cinzel",serif;
-    font-size:3.1rem;
-    line-height:.8;
-    float:left;
-    padding:.35rem .55rem 0 0;
-    color:var(--gold-deep);
-  }
-
-  /* ---- Hebrew / Greek inline term ---- */
-  .term{font-weight:600;color:var(--ink);}
-  .script{
-    font-family:"Cormorant Garamond",serif;
-    font-size:1.18em;
-  }
-  em{color:var(--ink-soft);}
-
-  /* ---- Pull line ---- */
-  .pull{
-    font-family:"Cinzel",serif;
-    font-weight:400;
-    font-size:1.18rem;
-    line-height:1.5;
-    text-align:center;
-    color:var(--gold-deep);
-    margin:2.6rem auto;
-    max-width:32rem;
-    letter-spacing:.01em;
-  }
-
-  /* ---- Closing ---- */
-  .closing{
-    margin-top:2.6rem;
-    padding-top:2.2rem;
-    border-top:1px solid var(--rule);
-    font-style:italic;
-    color:var(--ink-soft);
-  }
-
-  footer.hw-foot{
-    text-align:center;
-    font-family:"Cinzel",serif;
-    font-size:.7rem;
-    letter-spacing:.2em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    padding:2.5rem 1rem 3.5rem;
-    opacity:.8;
-  }
-
-  @media(max-width:600px){
-    body{font-size:1.2rem;}
-    h1{font-size:2rem;}
-    main{padding:2.4rem 1.2rem 4rem;}
+  .hw-article-body h2.panel { font-size: 28px; font-weight: 400; text-align: center; margin: 0 0 24px; }
+  .hw-article-body .rule-divider { text-align: center; margin: 40px auto; color: var(--brass); font-size: 20px; }
+  .hw-article-body .term { font-weight: 600; color: var(--ink); }
+  .hw-article-body .closing {
+    margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--hairline); font-style: italic; color: var(--muted);
   }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<!-- Adjust hrefs to match your site's routes -->
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html" class="current">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<main>
-  <p class="eyebrow">Devotional Reflections</p>
-  <h1>Justice Is Not What You Think</h1>
-  <p class="byline">Norm Reed</p>
-
-  <p class="epigraph">
-    Evil men do not understand justice,<br>
-    but those who seek the LORD understand it completely.
-    <span class="ref">Proverbs 28:5</span>
-  </p>
-
-  <p class="first">There is a verse in Proverbs that does not say what we expect it to say. We come to it
-  ready to hear that evil men <em>do</em> injustice — that they cheat, and crush, and take. And of course
-  they do. But that is not what the proverb tells us. It tells us something stranger and more searching.
-  Evil men, it says, do not <em>understand</em> justice. They do not <em>perceive</em> it — the Hebrew word
-  for understanding here, <em>yavin</em>, is the verb for discernment, for seeing how things are ordered, for
-  catching the shape of reality. So the proverb locates the problem of evil not first in the hands but in the
-  eyes. The trouble is not only that evil men do wrong. It is that they cannot <em>see</em> what is right. The
-  faculty itself has gone dark.</p>
-
-  <p>And the proverb names the cause. The opposite of the evil man is not, as we might guess, the good man — the
-  one with the better record. It is those who <em>seek the LORD</em> (<em>mevaqshei YHWH</em>). The contrast is not
-  behavioural but relational. One does not seek God and so cannot see justice; the other seeks God and so
-  understands the whole. Justice, it turns out, is not a thing you work
-  out on your own. It is a thing you are given eyes to see, and the eyes are opened in the seeking.</p>
-
-  <p>This is the hidden architecture of the whole Bible, stated here as a single proverb. Intimate knowing —
-  <span class="term">דַּעַת</span> (<em>da'at</em>) — is the root. From it flows the covenant bond,
-  <span class="term">חֶסֶד</span> (<em>hesed</em>). And out of that bond comes its social shape:
-  <em>mishpat</em> and <em>tzedakah</em>, justice and righteousness, which are simply
-  right relationship made visible in the world. Cut the root, and the whole thing fails — not loudly, at first,
-  but in the eyes. The seeing goes. And once a person cannot see justice, no law will teach it to him. You cannot
-  legislate sight into a blind eye.</p>
-
-  <p class="pull">The deepest problem is not the injustice we do.<br>It is the justice we can no longer see.</p>
-
-  <hr class="rule">
-
-  <p class="panel-num">One — The Diagnosis</p>
-  <h2>The Eye That Cannot See</h2>
-
-  <p>Hold the proverb's claim, because everything turns on it. If the evil man's problem were merely disobedience,
-  the cure would be obvious: clearer commands, sterner penalties, a heavier hand. But the proverb has told us the
-  problem is deeper than disobedience. It is <em>blindness</em>. The man does not refuse to see justice; he
-  <em>cannot</em>. And blindness is not healed by shouting at the blind.</p>
-
-  <p>The wisdom tradition knows this and says it again and again. <em>The way of the wicked is like deep darkness;
-  they do not know over what they stumble</em> (Proverbs 4:19). That is our proverb in narrative form. The wicked
-  are not first lawbreakers; they are men walking in the dark, unable to perceive the very structure they are
-  breaking. And the prophets carry the same diagnosis out of the study and into the street. Hosea names the
-  collapse of <span class="term"><em>da'at Elohim</em></span> — the knowledge of God — and watches the social
-  fabric unravel behind it (Hosea 4:1–6). Isaiah says it plainest of all: <em>Israel does not know, my people do
-  not understand</em> (Isaiah 1:3) — the same root, the same dark eye, now spread across a whole people's history.</p>
-
-  <p>So the diagnosis stands, and it requires a particular kind of cure. Not enforcement. Illumination. Not a
-  sharper law, but the opening of an eye. And that is exactly what the next panel gives us.</p>
-
-  <hr class="rule">
-
-  <p class="panel-num">Two — The Healing</p>
-  <h2>The Servant Who Brings Justice to Sight</h2>
-
-  <p>When Matthew wants to tell us who Jesus is, he reaches for Isaiah's Servant. <em>A bruised reed he will not
-  break, and a smouldering wick he will not quench, until he brings justice to victory</em> (Matthew 12:20,
-  citing Isaiah 42). The word translated <em>justice</em> here carries the full weight of the Hebrew
-  <em>mishpat</em>.
-  And here is the thing we must not rush past: notice <em>how</em> the Servant brings justice to victory. He does
-  not cry out. He does not break the bruised reed. He does not quench the failing wick. The establishment of
-  justice is conspicuously <em>not</em> by crushing.</p>
-
-  <p>Why not? Read it back through the proverb and the answer arrives. If the world's deepest problem with justice
-  is that it cannot be <em>seen</em>, then victory over that problem cannot mean imposing a heavier verdict. It must
-  mean the healing of the eye. The Servant brings <em>mishpat</em> to victory by doing what no penalty could ever
-  do — he makes justice visible. He restores the faculty. He is himself the seeking-of-the-LORD made flesh, the
-  knowledge of God walking on the earth, so that to know him is to have the severed root reconnected and the dark
-  eye opened.</p>
-
-  <p>This is why the reed is not broken. The whole point is to heal the faculty, not to crush the failure. A
-  forensic justice, a justice that merely sentences, would snap the bruised reed without a thought — the reed has
-  failed, after all. But this is justice as <span class="term"><em>tzedakah</em></span>: relational restoration,
-  God moving toward the deficit, reconnecting the severed root, so that the very ones who — by the proverb's
-  definition — could not see, are given eyes. The Servant does not bring understanding <em>instead</em> of
-  enacting justice. He enacts justice precisely by restoring the sight from which true justice alone can come.</p>
-
-  <p class="pull">The bruised reed is not broken<br>because the whole point is to heal the eye,<br>not to crush the failure.</p>
-
-  <hr class="rule">
-
-  <p class="panel-num">Three — The Extension</p>
-  <h2>The Spirit Who Carries Sight to the World</h2>
-
-  <p>But the Servant in the flesh is one man, in one place, walking one set of roads. The proverb's blindness is
-  not confined to Galilee; it is the condition of the whole world (<em>kosmos</em>) — the world of men who do not
-  seek the LORD and so cannot see.
-  And so Jesus, on the last night, promises the next movement. <em>When the Spirit comes, he will convict the
-  world concerning sin and righteousness and judgment</em> (John 16:8).</p>
-
-  <p>The verb is <span class="term">ἐλέγχω</span> <span class="term">(<em>elenchō</em>)</span>, and our English
-  word <em>convict</em> pulls it straight into the courtroom — verdict, sentence, condemnation. But <em>elenchō</em>
-  is older and wider than the courtroom. At its root it means <em>to expose, to bring into the light, to show
-  someone the truth of a thing they could not or would not see</em>. It is the word for refuting a false argument
-  by demonstration, for bringing a hidden fault to the light, for waking a sleeper to what is actually there.
-  Under the forensic edge lies something gentler and more radical: the making-visible of what was concealed.</p>
-
-  <p>Now look at what the Spirit does, and to whom. He comes to the <em>world</em> — precisely the realm of the
-  men of evil, those constitutionally unable to perceive — and he <em>elenchō</em>s it concerning
-  righteousness and judgment, the very things the proverb said the dark eye could not see. This is the proverb
-  answered at the scale of the whole world. They cannot perceive justice. And
-  what does the Spirit do? He exposes justice to their sight. He brings into the light the very thing the dark eye
-  could not grasp.</p>
-
-  <p>Here is what John adds that the proverb only implied. Proverbs leaves the blindness as a settled condition —
-  the men of evil simply do not perceive, and there it ends, almost as fate. John refuses to leave it there. The
-  Spirit <em>goes to</em> the world — to the very realm defined by its blindness — and works upon it. This is
-  <em>tzedakah</em> carried to its furthest reach: God moving toward the deficit not
-  only in those who already seek him, but in the world that does not. The bruised reed not broken — now at the
-  scale of the whole earth. The Spirit does not come to condemn the world; that would be the reed crushed. He
-  comes to expose — to open the eyes of the very ones who could not see.</p>
-
-  <p>And so the architecture closes where it began. The root is named being healed: <em>this is eternal life,
-  that they know you</em> (John 17:3) — <em>da'at</em> itself, intimate knowing,
-  restored at the source. And the fruit is named being made visible: justice and righteousness exposed to the
-  world's sight by the Spirit. The proverb diagnosed the dark eye. The Servant healed it in person. The Spirit
-  carries the healing outward to the world. One faculty, one cure, three movements — and the cure is never a
-  sharper law. It is always the root reconnected, and the eye opened.</p>
-
-  <div class="closing">
-    <p>So justice is not what you think. It is not first a verdict to be enforced, nor a record to be cleared. It
-    is a kind of <em>sight</em> — the capacity to see how things are meant to hold together — and it is given, not
-    achieved. We do not reason our way to it. We are given eyes for it, in the seeking of the One who is himself
-    the knowledge of God.</p>
-    <p>Which means the question that hangs over us is not, in the end, <em>are we just enough?</em> It is the
-    quieter and more hopeful one: <em>will we let our eyes be opened?</em> The reed is not broken. The Spirit has
-    come. And the whole point, from Proverbs to the upper room, has always been to heal the eye — never to crush
-    the failure.</p>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
   </div>
-</main>
+</header>
+
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>
+      <div>Proverbs 28:5</div>
+      <div>Isaiah 42:1&ndash;4</div>
+      <div>John 17:3</div>
+      <div>10 Jun 2026</div>
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>Justice Is Not What You Think</h1>
+      <div class="hw-article-body">
+
+        <p class="verse">Evil men do not understand justice, but those who seek the LORD understand it completely. <em>Proverbs 28:5</em></p>
+
+        <p class="first">There is a verse in Proverbs that does not say what we expect it to say. We come to it ready to hear that evil men <em>do</em> injustice &mdash; that they cheat, and crush, and take. And of course they do. But that is not what the proverb tells us. It tells us something stranger and more searching. Evil men, it says, do not <em>understand</em> justice. They do not <em>perceive</em> it &mdash; the Hebrew word for understanding here, <em>yavin</em>, is the verb for discernment, for seeing how things are ordered, for catching the shape of reality. So the proverb locates the problem of evil not first in the hands but in the eyes. The trouble is not only that evil men do wrong. It is that they cannot <em>see</em> what is right. The faculty itself has gone dark.</p>
+
+        <p>And the proverb names the cause. The opposite of the evil man is not, as we might guess, the good man &mdash; the one with the better record. It is those who <em>seek the LORD</em> (<em>mevaqshei YHWH</em>). The contrast is not behavioural but relational. One does not seek God and so cannot see justice; the other seeks God and so understands the whole. Justice, it turns out, is not a thing you work out on your own. It is a thing you are given eyes to see, and the eyes are opened in the seeking.</p>
+
+        <p>This is the hidden architecture of the whole Bible, stated here as a single proverb. Intimate knowing &mdash; <span class="term">דַּעַת</span> (<em>da'at</em>) &mdash; is the root. From it flows the covenant bond, <span class="term">חֶסֶד</span> (<em>hesed</em>). And out of that bond comes its social shape: <em>mishpat</em> and <em>tzedakah</em>, justice and righteousness, which are simply right relationship made visible in the world. Cut the root, and the whole thing fails &mdash; not loudly, at first, but in the eyes. The seeing goes. And once a person cannot see justice, no law will teach it to him. You cannot legislate sight into a blind eye.</p>
+
+        <p class="pull">The deepest problem is not the injustice we do. It is the justice we can no longer see.</p>
+
+        <div class="rule-divider">&#10086;</div>
+
+        <div class="panel-num">One &mdash; The Diagnosis</div>
+        <h2 class="panel">The Eye That Cannot See</h2>
+
+        <p>Hold the proverb's claim, because everything turns on it. If the evil man's problem were merely disobedience, the cure would be obvious: clearer commands, sterner penalties, a heavier hand. But the proverb has told us the problem is deeper than disobedience. It is <em>blindness</em>. The man does not refuse to see justice; he <em>cannot</em>. And blindness is not healed by shouting at the blind.</p>
+
+        <p>The wisdom tradition knows this and says it again and again. <em>The way of the wicked is like deep darkness; they do not know over what they stumble</em> (Proverbs 4:19). That is our proverb in narrative form. The wicked are not first lawbreakers; they are men walking in the dark, unable to perceive the very structure they are breaking. And the prophets carry the same diagnosis out of the study and into the street. Hosea names the collapse of <span class="term"><em>da'at Elohim</em></span> &mdash; the knowledge of God &mdash; and watches the social fabric unravel behind it (Hosea 4:1&ndash;6). Isaiah says it plainest of all: <em>Israel does not know, my people do not understand</em> (Isaiah 1:3) &mdash; the same root, the same dark eye, now spread across a whole people's history.</p>
+
+        <p>So the diagnosis stands, and it requires a particular kind of cure. Not enforcement. Illumination. Not a sharper law, but the opening of an eye. And that is exactly what the next panel gives us.</p>
+
+        <div class="rule-divider">&#10086;</div>
+
+        <div class="panel-num">Two &mdash; The Healing</div>
+        <h2 class="panel">The Servant Who Brings Justice to Sight</h2>
+
+        <p>When Matthew wants to tell us who Jesus is, he reaches for Isaiah's Servant. <em>A bruised reed he will not break, and a smouldering wick he will not quench, until he brings justice to victory</em> (Matthew 12:20, citing Isaiah 42). The word translated <em>justice</em> here carries the full weight of the Hebrew <em>mishpat</em>. And here is the thing we must not rush past: notice <em>how</em> the Servant brings justice to victory. He does not cry out. He does not break the bruised reed. He does not quench the failing wick. The establishment of justice is conspicuously <em>not</em> by crushing.</p>
+
+        <p>Why not? Read it back through the proverb and the answer arrives. If the world's deepest problem with justice is that it cannot be <em>seen</em>, then victory over that problem cannot mean imposing a heavier verdict. It must mean the healing of the eye. The Servant brings <em>mishpat</em> to victory by doing what no penalty could ever do &mdash; he makes justice visible. He restores the faculty. He is himself the seeking-of-the-LORD made flesh, the knowledge of God walking on the earth, so that to know him is to have the severed root reconnected and the dark eye opened.</p>
+
+        <p>This is why the reed is not broken. The whole point is to heal the faculty, not to crush the failure. A forensic justice, a justice that merely sentences, would snap the bruised reed without a thought &mdash; the reed has failed, after all. But this is justice as <span class="term"><em>tzedakah</em></span>: relational restoration, God moving toward the deficit, reconnecting the severed root, so that the very ones who &mdash; by the proverb's definition &mdash; could not see, are given eyes. The Servant does not bring understanding <em>instead</em> of enacting justice. He enacts justice precisely by restoring the sight from which true justice alone can come.</p>
+
+        <p class="pull">The bruised reed is not broken because the whole point is to heal the eye, not to crush the failure.</p>
+
+        <div class="rule-divider">&#10086;</div>
+
+        <div class="panel-num">Three &mdash; The Extension</div>
+        <h2 class="panel">The Spirit Who Carries Sight to the World</h2>
+
+        <p>But the Servant in the flesh is one man, in one place, walking one set of roads. The proverb's blindness is not confined to Galilee; it is the condition of the whole world (<em>kosmos</em>) &mdash; the world of men who do not seek the LORD and so cannot see. And so Jesus, on the last night, promises the next movement. <em>When the Spirit comes, he will convict the world concerning sin and righteousness and judgment</em> (John 16:8).</p>
+
+        <p>The verb is <span class="term">&#7952;&#955;&#941;&#947;&#967;&#969;</span> <span class="term">(<em>elenchō</em>)</span>, and our English word <em>convict</em> pulls it straight into the courtroom &mdash; verdict, sentence, condemnation. But <em>elenchō</em> is older and wider than the courtroom. At its root it means <em>to expose, to bring into the light, to show someone the truth of a thing they could not or would not see</em>. It is the word for refuting a false argument by demonstration, for bringing a hidden fault to the light, for waking a sleeper to what is actually there. Under the forensic edge lies something gentler and more radical: the making-visible of what was concealed.</p>
+
+        <p>Now look at what the Spirit does, and to whom. He comes to the <em>world</em> &mdash; precisely the realm of the men of evil, those constitutionally unable to perceive &mdash; and he <em>elenchō</em>s it concerning righteousness and judgment, the very things the proverb said the dark eye could not see. This is the proverb answered at the scale of the whole world. They cannot perceive justice. And what does the Spirit do? He exposes justice to their sight. He brings into the light the very thing the dark eye could not grasp.</p>
+
+        <p>Here is what John adds that the proverb only implied. Proverbs leaves the blindness as a settled condition &mdash; the men of evil simply do not perceive, and there it ends, almost as fate. John refuses to leave it there. The Spirit <em>goes to</em> the world &mdash; to the very realm defined by its blindness &mdash; and works upon it. This is <em>tzedakah</em> carried to its furthest reach: God moving toward the deficit not only in those who already seek him, but in the world that does not. The bruised reed not broken &mdash; now at the scale of the whole earth. The Spirit does not come to condemn the world; that would be the reed crushed. He comes to expose &mdash; to open the eyes of the very ones who could not see.</p>
+
+        <p>And so the architecture closes where it began. The root is named being healed: <em>this is eternal life, that they know you</em> (John 17:3) &mdash; <em>da'at</em> itself, intimate knowing, restored at the source. And the fruit is named being made visible: justice and righteousness exposed to the world's sight by the Spirit. The proverb diagnosed the dark eye. The Servant healed it in person. The Spirit carries the healing outward to the world. One faculty, one cure, three movements &mdash; and the cure is never a sharper law. It is always the root reconnected, and the eye opened.</p>
+
+        <div class="closing">
+          <p>So justice is not what you think. It is not first a verdict to be enforced, nor a record to be cleared. It is a kind of <em>sight</em> &mdash; the capacity to see how things are meant to hold together &mdash; and it is given, not achieved. We do not reason our way to it. We are given eyes for it, in the seeking of the One who is himself the knowledge of God.</p>
+          <p>Which means the question that hangs over us is not, in the end, <em>are we just enough?</em> It is the quieter and more hopeful one: <em>will we let our eyes be opened?</em> The reed is not broken. The Spirit has come. And the whole point, from Proverbs to the upper room, has always been to heal the eye &mdash; never to crush the failure.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</article>
 
 <footer class="hw-foot">
-  Hesed words. Written for the road.
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
 </footer>
 
 </body>
