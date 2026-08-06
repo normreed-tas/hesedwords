@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "The Piece I Keep Picking Up",
+    date:     "2026-08-06",
+    url:      "/reflections/the-piece-i-keep-picking-up.html",
+    summary:  "Reading to the end of Zechariah and not finishing it. A reflection on sorting, edges, and the one verse that will not sit down — bells on the horses, and a man who wants to boil some meat.",
+    scripture: ["Zechariah 14"],
+    themes:   ["holiness", "Zechariah", "unfinished reading", "everyday sacredness"]
+  },
+  {
     title:    "The Last Word of the Road",
     date:     "2026-05-30",
     url:      "/reflections/the-last-word-of-the-road.html",
