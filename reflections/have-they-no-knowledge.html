@@ -1,300 +1,110 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Have They No Knowledge? — Hesedwords</title>
+<title>Have They No Knowledge? — Hesed Words</title>
+<meta name="description" content="Psalm 14 surfaced in my reading plan the same day I finished tracing the pattern through Jeremiah and Matthew. David asked centuries earlier the very question the rest of my reading this week had been answering.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-
-  :root {
-    --parchment: #FAF5E8;
-    --parchment-deep: #F2E9D4;
-    --border: #C8B58F;
-    --border-soft: #D9C49A;
-    --gold: #A67C2E;
-    --gold-deep: #8C6624;
-    --ink: #2A2218;
-    --ink-soft: #4A3E2C;
-    --byline: #6B5C45;
-    --nav-dark: #1f1b16;
+  .hw-article-body p.first::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
   }
-
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    background: var(--parchment-deep);
-    color: var(--ink);
-    font-family: 'Cormorant Garamond', 'Garamond', Georgia, serif;
-    line-height: 1.7;
-  }
-
-  /* ---- Site navigation (standard hw-nav, exact markup) ---- */
-  nav.hw-nav {
-    background: var(--nav-dark);
-    font-family: 'Cinzel', serif;
-    font-size: .78rem;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    gap: 2.2rem;
-    padding: 1.05rem 1rem;
-    flex-wrap: wrap;
-  }
-  nav.hw-nav a { color: #f5edd6; text-decoration: none; opacity: .82; transition: opacity .2s; }
-  nav.hw-nav a:hover { opacity: 1; color: #fff; }
-  nav.hw-nav a.current { opacity: 1; border-bottom: 1px solid #b8922c; padding-bottom: .15rem; }
-
-  /* ---- Page shell ---- */
-  main {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 0 24px 80px;
-  }
-
-  /* ---- Title block ---- */
-  .title-block {
-    text-align: center;
-    padding: 56px 0 36px;
-  }
-
-  .eyebrow {
-    font-family: 'Cinzel', serif;
-    font-size: 12px;
-    letter-spacing: .3em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 22px;
-  }
-
-  .eyebrow::before, .eyebrow::after {
-    content: "";
-    display: inline-block;
-    width: 28px;
-    height: 1px;
-    background: var(--gold);
-    vertical-align: middle;
-    margin: 0 12px;
-  }
-
-  h1.title {
-    font-family: 'Cinzel', serif;
-    font-weight: 500;
-    font-size: 40px;
-    letter-spacing: .02em;
-    color: var(--ink);
-    margin: 0 0 18px;
-    line-height: 1.2;
-  }
-
-  .byline {
-    font-family: 'Cinzel', serif;
-    font-size: 11px;
-    letter-spacing: .22em;
-    text-transform: uppercase;
-    color: var(--byline);
-    margin: 0;
-  }
-
-  .companion-note {
-    font-style: italic;
-    font-size: 16px;
-    color: var(--ink-soft);
-    margin: 18px 0 0;
-  }
-
-  .companion-note a {
-    color: var(--gold-deep);
-    text-decoration: none;
-    border-bottom: 1px solid var(--border-soft);
-  }
-
-  .ornament {
-    text-align: center;
-    color: var(--gold);
-    letter-spacing: .6em;
-    font-size: 11px;
-    margin: 32px 0 6px;
-  }
-
-  /* ---- Body ---- */
-  .body-copy {
-    background: var(--parchment);
-    border: 1px solid var(--border);
-    padding: 48px 52px;
-    border-radius: 2px;
-  }
-
-  .body-copy p {
-    font-size: 20px;
-    color: var(--ink);
-    margin: 0 0 26px;
-  }
-
-  .body-copy p.lede::first-letter {
-    font-family: 'Cinzel', serif;
-    font-size: 58px;
-    color: var(--gold-deep);
-    float: left;
-    line-height: 0.85;
-    margin: 6px 10px 0 0;
-  }
-
-  .body-copy em { font-style: italic; }
-
-  /* ---- Scripture blocks ---- */
-  blockquote.scripture {
-    margin: 32px 0;
-    padding: 4px 0 4px 26px;
-    border-left: 3px solid var(--gold);
-    font-style: italic;
-    font-size: 19px;
-    color: var(--ink-soft);
-  }
-
-  blockquote.scripture .ref {
-    display: block;
-    margin-top: 10px;
-    font-family: 'Cinzel', serif;
-    font-style: normal;
-    font-size: 11px;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: var(--gold-deep);
-  }
-
-  /* ---- Selah ---- */
-  .selah-divider {
-    text-align: center;
-    color: var(--gold);
-    letter-spacing: .6em;
-    font-size: 11px;
-    margin: 44px 0 18px;
-  }
-
-  .selah-label {
-    text-align: center;
-    font-family: 'Cinzel', serif;
-    font-size: 13px;
-    letter-spacing: .3em;
-    text-transform: uppercase;
-    color: var(--gold-deep);
-    margin-bottom: 18px;
-  }
-
-  p.selah-text {
-    font-style: italic;
-    font-size: 20px;
-    color: var(--ink-soft);
-  }
-
-  /* ---- Closing reflective questions ---- */
-  .questions {
-    margin-top: 36px;
-    padding-left: 22px;
-    border-left: 2px solid var(--border-soft);
-  }
-
-  .questions p {
-    font-style: italic;
-    font-size: 19px;
-    color: var(--ink-soft);
-    margin: 0 0 16px;
-  }
-
-  /* ---- Footer ---- */
-  footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-  @media (max-width: 640px) {
-    h1.title { font-size: 30px; }
-    .body-copy { padding: 32px 24px; }
-    .body-copy p, blockquote.scripture, p.selah-text, .questions p { font-size: 18px; }
-    .body-copy p.lede::first-letter { font-size: 44px; }
-  }
-
+  .hw-article-body .questions { margin-top: 32px; padding-left: 20px; border-left: 2px solid var(--hairline); }
+  .hw-article-body .questions p { font-style: italic; color: var(--muted); }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html" class="current">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<main>
-
-  <div class="title-block">
-    <div class="eyebrow">A Hesedwords Reflection</div>
-    <h1 class="title">Have They No Knowledge?</h1>
-    <p class="byline">Norm Reed &middot; June 2026</p>
-    <p class="companion-note">A companion piece to <a href="/reflections/deceived.html">Deceived</a></p>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
   </div>
+</header>
 
-  <div class="ornament">&bull;&nbsp;&bull;&nbsp;&bull;</div>
-
-  <article class="body-copy">
-
-    <p class="lede">I read Psalm 14 this morning, in the ordinary place in my reading plan, the same day I finished the reflection on Jeremiah and the sheep and the goats. It did not feel like coincidence.</p>
-
-    <p>David&rsquo;s psalm asks, almost in passing, the very question it took me two chapters of Jeremiah and a parable of Jesus to arrive at.</p>
-
-    <blockquote class="scripture">
-      The fool says in his heart, &ldquo;There is no God.&rdquo; They are corrupt, they do abominable deeds; there is none who does good.
-      <span class="ref">Psalm 14:1</span>
-    </blockquote>
-
-    <p>This is not the village atheist. It is someone living as though God&rsquo;s claims simply don&rsquo;t reach as far as their actual life &mdash; which is the same disease as the temple chant, the same disease as &ldquo;Lord, Lord.&rdquo; Not denial spoken aloud. Denial lived quietly, in the heart, while everything on the surface looks unremarkable.</p>
-
-    <p>Then verse 4, which stopped me cold once I saw what it was actually asking:</p>
-
-    <blockquote class="scripture">
-      Have they no knowledge, all who work evil, who eat up my people as they eat bread, and do not call upon the LORD?
-      <span class="ref">Psalm 14:4</span>
-    </blockquote>
-
-    <p>&ldquo;Have they no knowledge&rdquo; is <em>yada</em> &mdash; the knowing word. This is the same question Hosea later answers flatly &mdash; no knowledge of God in the land &mdash; and the same word Jeremiah resolves three chapters later: the only boast that holds is knowing God, evidenced in a life that practices what he practices. David is asking, centuries earlier, the very question the rest of my reading this week has been answering. And the evidence of the missing knowledge here is exactly what it was in Jeremiah &mdash; not bad theology, but predation: eating up the vulnerable like bread, casually, as a matter of course.</p>
-
-    <p>Verse 2 carries the other half:</p>
-
-    <blockquote class="scripture">
-      The LORD looks down from heaven&hellip; to see if there are any who understand, who seek after God.
-      <span class="ref">Psalm 14:2</span>
-    </blockquote>
-
-    <p>Understand &mdash; <em>sakal</em> &mdash; is the same root behind Jeremiah&rsquo;s &ldquo;that he understands and knows me.&rdquo; Paul will later lift this very verse into Romans 3 to make his own case that none of this is anyone&rsquo;s exception.</p>
-
-    <p>And verse 5 gives the same reversal I keep finding everywhere this week:</p>
-
-    <blockquote class="scripture">
-      There they are, in great terror.
-      <span class="ref">Psalm 14:5</span>
-    </blockquote>
-
-    <p>Sudden dread, falling on people who had felt entirely secure. The fool&rsquo;s confidence and the goats&rsquo; confidence are the same posture, in different clothes.</p>
-
-    <div class="selah-divider">&bull;&nbsp;&bull;&nbsp;&bull;</div>
-    <div class="selah-label">Selah</div>
-    <p class="selah-text">I was not looking for this. It surfaced in the ordinary rhythm of a reading plan I follow every day, the same day I had just finished tracing this exact pattern through Jeremiah and Matthew. I don&rsquo;t think the timing is meaningless, but I also don&rsquo;t think it required anything supernatural &mdash; I think it means that once you have been shown the shape of a thing, you start seeing it everywhere it has always been. Psalm 14 was always asking this question. I have read it before. I am not sure I ever heard it before today.</p>
-
-    <div class="questions">
-      <p>Is it coincidence that the same question keeps surfacing &mdash; or is it simply what happens once you&rsquo;ve been shown what to listen for?</p>
-      <p>Where else have I read past this question, before I knew it was being asked?</p>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>
+      <div>Psalm 14:1</div>
+      <div>Psalm 14:4</div>
+      <div>20 Jun 2026</div>
+      <div class="byline">Norm Reed</div>
     </div>
+    <div>
+      <h1>Have They No Knowledge?</h1>
+      <div class="hw-article-body">
+        <p class="hw-companion" style="margin-top:-20px;margin-bottom:34px;">A companion piece to <a href="/reflections/deceived.html">Deceived</a></p>
 
-  </article>
+        <p class="first">I read Psalm 14 this morning, in the ordinary place in my reading plan, the same day I finished the reflection on Jeremiah and the sheep and the goats. It did not feel like coincidence.</p>
 
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+        <p>David&rsquo;s psalm asks, almost in passing, the very question it took me two chapters of Jeremiah and a parable of Jesus to arrive at.</p>
 
-</main>
+        <p class="verse">The fool says in his heart, &ldquo;There is no God.&rdquo; They are corrupt, they do abominable deeds; there is none who does good. <em>Psalm 14:1</em></p>
+
+        <p>This is not the village atheist. It is someone living as though God&rsquo;s claims simply don&rsquo;t reach as far as their actual life &mdash; which is the same disease as the temple chant, the same disease as &ldquo;Lord, Lord.&rdquo; Not denial spoken aloud. Denial lived quietly, in the heart, while everything on the surface looks unremarkable.</p>
+
+        <p>Then verse 4, which stopped me cold once I saw what it was actually asking:</p>
+
+        <p class="verse">Have they no knowledge, all who work evil, who eat up my people as they eat bread, and do not call upon the LORD? <em>Psalm 14:4</em></p>
+
+        <p>&ldquo;Have they no knowledge&rdquo; is <em>yada</em> &mdash; the knowing word. This is the same question Hosea later answers flatly &mdash; no knowledge of God in the land &mdash; and the same word Jeremiah resolves three chapters later: the only boast that holds is knowing God, evidenced in a life that practices what he practices. David is asking, centuries earlier, the very question the rest of my reading this week has been answering. And the evidence of the missing knowledge here is exactly what it was in Jeremiah &mdash; not bad theology, but predation: eating up the vulnerable like bread, casually, as a matter of course.</p>
+
+        <p>Verse 2 carries the other half:</p>
+
+        <p class="verse">The LORD looks down from heaven&hellip; to see if there are any who understand, who seek after God. <em>Psalm 14:2</em></p>
+
+        <p>Understand &mdash; <em>sakal</em> &mdash; is the same root behind Jeremiah&rsquo;s &ldquo;that he understands and knows me.&rdquo; Paul will later lift this very verse into Romans 3 to make his own case that none of this is anyone&rsquo;s exception.</p>
+
+        <p>And verse 5 gives the same reversal I keep finding everywhere this week:</p>
+
+        <p class="verse">There they are, in great terror. <em>Psalm 14:5</em></p>
+
+        <p>Sudden dread, falling on people who had felt entirely secure. The fool&rsquo;s confidence and the goats&rsquo; confidence are the same posture, in different clothes.</p>
+
+        <div class="hw-selah">
+          <div class="rule"></div>
+          <div class="word">Selah</div>
+          <div class="rule"></div>
+        </div>
+
+        <p>I was not looking for this. It surfaced in the ordinary rhythm of a reading plan I follow every day, the same day I had just finished tracing this exact pattern through Jeremiah and Matthew. I don&rsquo;t think the timing is meaningless, but I also don&rsquo;t think it required anything supernatural &mdash; I think it means that once you have been shown the shape of a thing, you start seeing it everywhere it has always been. Psalm 14 was always asking this question. I have read it before. I am not sure I ever heard it before today.</p>
+
+        <div class="questions">
+          <p>Is it coincidence that the same question keeps surfacing &mdash; or is it simply what happens once you&rsquo;ve been shown what to listen for?</p>
+          <p>Where else have I read past this question, before I knew it was being asked?</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 </body>
 </html>
