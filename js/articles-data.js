@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Sitting with a Sinner",
+    url:      "/articles/sitting-with-a-sinner.html",
+    date:     "2026-08-07",
+    scripture: ["Luke 15:1-2", "Luke 5:30", "Luke 7:34"],
+    themes:   ["hesed", "sinner", "labels", "family", "prison ministry"],
+    summary:  "A companion to An Interview with a Saint. My sister Ruth calls herself the black sheep of the family — and has quietly been the backbone of a church and a prison ministry for over a decade, without ever filing any of it under a category. On the two words we keep in our pockets for people, and the one Jesus refused to be embarrassed by."
+  },
+  {
     title:    "An Interview with a Saint",
     url:      "/articles/an-interview-with-a-saint.html",
     date:     "2026-08-06",
