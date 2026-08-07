@@ -4,210 +4,110 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Taste and See — Hesed Words</title>
+<meta name="description" content="Psalm 34 does not tell you God is good. It dares you to find out. Taste first, then see — the seeing is downstream of the tasting. You do not verify God from across the room and then approach. You approach, and the approach is how you come to know.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-  :root{
-    --parchment:#e8dfc8;
-    --parchment-page:#f3ecda;
-    --gold:#c9a84c;
-    --gold-deep:#A67C2E;
-    --gold-soft:#D9C49A;
-    --muted:#6B5C45;
-    --rule:#C8B58F;
-    --ink:#2A2218;
-  }
-
-  *{box-sizing:border-box;}
-
-  html{-webkit-text-size-adjust:100%;}
-
-  body{
-    margin:0;
-    background:var(--parchment);
-    color:var(--ink);
-    font-family:'Cormorant Garamond','Garamond',Georgia,serif;
-    line-height:1.7;
-  }
-
-  /* ── Site nav ── */
-  nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-  nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-  nav.hw-nav a:hover{opacity:1;color:#fff;}
-  nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-
-  /* ── Footer ── */
-  footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-  .page{
-    max-width:680px;
-    margin:0 auto;
-    background:var(--parchment-page);
-    padding:64px 56px 40px;
-  }
-
-  @media (max-width:640px){
-    .page{padding:40px 24px 24px;}
-  }
-
-  .eyebrow{
-    font-family:'Cinzel',serif;
-    font-size:.72rem;
-    letter-spacing:.28em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    text-align:center;
-    margin-bottom:20px;
-  }
-
-  h1{
-    font-family:'Cinzel',serif;
-    font-weight:500;
-    font-size:2.5rem;
-    letter-spacing:.03em;
-    text-align:center;
-    color:var(--ink);
-    margin:0 0 14px;
-    line-height:1.15;
-  }
-
-  .subtitle{
-    font-style:italic;
-    font-size:1.2rem;
-    text-align:center;
-    color:var(--muted);
-    margin:0 0 26px;
-  }
-
-  .dots{
-    text-align:center;
-    color:var(--gold);
-    letter-spacing:.6em;
-    font-size:.9rem;
-    margin:0 0 30px;
-  }
-
-  .epigraph{
-    font-style:italic;
-    text-align:center;
-    font-size:1.15rem;
-    color:var(--ink);
-    max-width:520px;
-    margin:0 auto 44px;
-    line-height:1.6;
-  }
-
-  p{font-size:1.18rem;margin:0 0 1.35rem;}
-
-  p.first::first-letter{
-    font-family:'Cinzel',serif;
-    font-size:3.4rem;
-    line-height:.8;
-    float:left;
-    padding:.08em .12em 0 0;
-    color:var(--gold-deep);
-  }
-
-  .selah{
-    font-family:'Cinzel',serif;
-    font-style:normal;
-    font-size:1rem;
-    letter-spacing:.28em;
-    text-transform:uppercase;
-    color:var(--gold-deep);
-    text-align:center;
-    margin:3rem 0 2rem;
-  }
-
-  .selah::before,.selah::after{
-    content:"·";
-    color:var(--gold);
-    margin:0 .8em;
-  }
-
-  a.inline{
-    color:var(--gold-deep);
-    text-decoration:none;
-    border-bottom:1px solid var(--gold-soft);
-    transition:border-color .2s,color .2s;
-  }
-  a.inline:hover{color:var(--ink);border-bottom-color:var(--gold-deep);}
-
-  .close{
-    margin-top:2rem;
-  }
-
-  .companion{
-    margin-top:3rem;
-    padding-top:1.6rem;
-    border-top:1px solid var(--rule);
-    font-size:1rem;
-    font-style:italic;
-    color:var(--muted);
+  .hw-article-body .subtitle { font-style: italic; color: var(--muted); font-size: 22px; margin: -20px 0 34px; }
+  .hw-article-body p.first::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
   }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html" class="current">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
+  </div>
+</header>
 
-<article class="page">
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>
+      <div>Psalm 34</div>
+      <div>Isaiah 55</div>
+      <div>1 Peter 2</div>
+      <div>9 Jul 2026</div>
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>Taste and See</h1>
+      <div class="hw-article-body">
+        <p class="subtitle">A reflection on Psalm 34:8</p>
 
-  <div class="eyebrow">A Hesed Words Reflection</div>
-  <h1>Taste and See</h1>
-  <p class="subtitle">A reflection on Psalm 34:8</p>
-  <div class="dots">&bull; &bull; &bull;</div>
+        <p class="verse">Oh, taste and see that the LORD is good; blessed is the man who takes refuge in him.</p>
 
-  <p class="epigraph">Oh, taste and see that the LORD is good; blessed is the man who takes refuge in him.</p>
+        <p class="first">Scripture tells us, everywhere, that God is good. It is the ground note under the whole book. But Psalm 34 does something the flat declaration never does. It does not tell you God is good. It dares you to find out.</p>
 
-  <p class="first">Scripture tells us, everywhere, that God is good. It is the ground note under the whole book. But Psalm 34 does something the flat declaration never does. It does not tell you God is good. It dares you to find out.</p>
+        <p><em>Taste and see.</em> Two verbs, both imperatives, both aimed at you.</p>
 
-  <p><em>Taste and see.</em> Two verbs, both imperatives, both aimed at you.</p>
+        <p>The word is <em>ta&rsquo;am</em>. It means to taste &mdash; the tongue on the thing itself, food in the mouth. But it carries a second sense the English mislays: to discern, to test something by taking it in. It is the word for finding out by contact. So the invitation is not asking you to feel a certain way about God, or to agree that he is good because someone told you so. It is saying: test him. Take him in. Find out for yourself.</p>
 
-  <p>The word is <em>ta&rsquo;am</em>. It means to taste &mdash; the tongue on the thing itself, food in the mouth. But it carries a second sense the English mislays: to discern, to test something by taking it in. It is the word for finding out by contact. So the invitation is not asking you to feel a certain way about God, or to agree that he is good because someone told you so. It is saying: test him. Take him in. Find out for yourself.</p>
+        <p>And notice the order. Taste, then see. That is not how we usually come to know anything. Ordinarily we see first &mdash; we stand at a safe distance, we look the thing over, we weigh it, and then we decide whether to draw near. This verse reverses it. You draw near first. You take him in. And <em>that</em> is how the seeing comes. The seeing is downstream of the tasting. You do not verify God from across the room and then approach. You approach, and the approach is how you come to know.</p>
 
-  <p>And notice the order. Taste, then see. That is not how we usually come to know anything. Ordinarily we see first &mdash; we stand at a safe distance, we look the thing over, we weigh it, and then we decide whether to draw near. This verse reverses it. You draw near first. You take him in. And <em>that</em> is how the seeing comes. The seeing is downstream of the tasting. You do not verify God from across the room and then approach. You approach, and the approach is how you come to know.</p>
+        <p>What you taste is not a fact about God. It is God. Not a report of his goodness received secondhand, but the goodness itself. And this is the quiet turn in the verse: <em>that the LORD is good</em> is not the conclusion you reach after tasting, as though you sampled him and then reasoned your way to a verdict. It is what the taste is. To taste him and to find him good are the same event. There is no gap between them.</p>
 
-  <p>What you taste is not a fact about God. It is God. Not a report of his goodness received secondhand, but the goodness itself. And this is the quiet turn in the verse: <em>that the LORD is good</em> is not the conclusion you reach after tasting, as though you sampled him and then reasoned your way to a verdict. It is what the taste is. To taste him and to find him good are the same event. There is no gap between them.</p>
+        <p>But taste of what? Here the psalm is honest, and this is where it stops being abstract. The invitation does not float free. It sits inside a testimony. A few verses back: <em>I sought the LORD, and he answered me.</em> And: <em>this poor man cried, and the LORD heard him.</em> He is not handing you a technique. He is telling you what happened to him. He brought his trouble to God and found God good in it &mdash; and now he turns to you and says, come and see for yourself. That is how the tasting works. You bring the real thing, the fear and the trouble and the empty hands, and you find him good.</p>
 
-  <p>But taste of what? Here the psalm is honest, and this is where it stops being abstract. The invitation does not float free. It sits inside a testimony. A few verses back: <em>I sought the LORD, and he answered me.</em> And: <em>this poor man cried, and the LORD heard him.</em> He is not handing you a technique. He is telling you what happened to him. He brought his trouble to God and found God good in it &mdash; and now he turns to you and says, come and see for yourself. That is how the tasting works. You bring the real thing, the fear and the trouble and the empty hands, and you find him good.</p>
+        <p>And it must be said plainly, because it is easy to get wrong: you do not taste that the <em>trouble</em> was secretly sweet. The psalm never pretends the affliction was a gift in disguise. It says, in the same breath, that the LORD is near to the brokenhearted, and that the afflictions of the righteous are many. The trouble stays real. What you taste is that <em>he</em> is good &mdash; good on the near side of the trouble, present in it, not requiring you to rename it. Which is why the invitation reaches everywhere. There is no circumstance so far gone that the cry of the poor man cannot be made from inside it. Nowhere is off the menu.</p>
 
-  <p>And it must be said plainly, because it is easy to get wrong: you do not taste that the <em>trouble</em> was secretly sweet. The psalm never pretends the affliction was a gift in disguise. It says, in the same breath, that the LORD is near to the brokenhearted, and that the afflictions of the righteous are many. The trouble stays real. What you taste is that <em>he</em> is good &mdash; good on the near side of the trouble, present in it, not requiring you to rename it. Which is why the invitation reaches everywhere. There is no circumstance so far gone that the cry of the poor man cannot be made from inside it. Nowhere is off the menu.</p>
+        <p>There is one more thing, and it is the order again. The invitation to taste comes in verse eight. The teaching on the fear of the LORD begins in verse nine and runs on from there &mdash; <em>come, children, listen to me; I will teach you the fear of the LORD.</em> Taste first. Then fear. It is not accidental. A fear of God that has never tasted his goodness curdles into something else &mdash; into dread, into the cringe before a power you have not learned to trust. What the psalm calls the fear of the LORD is what happens when someone who has already tasted that he is good then reckons with who it is they have tasted. Awe built on goodness. Not terror in the dark.</p>
 
-  <p>There is one more thing, and it is the order again. The invitation to taste comes in verse eight. The teaching on the fear of the LORD begins in verse nine and runs on from there &mdash; <em>come, children, listen to me; I will teach you the fear of the LORD.</em> Taste first. Then fear. It is not accidental. A fear of God that has never tasted his goodness curdles into something else &mdash; into dread, into the cringe before a power you have not learned to trust. What the psalm calls the fear of the LORD is what happens when someone who has already tasted that he is good then reckons with who it is they have tasted. Awe built on goodness. Not terror in the dark.</p>
+        <p>Scripture keeps coming back to this. It will not leave the goodness of God as a thing merely stated. <em>Come</em>, says Isaiah &mdash; <em>come, buy and eat; come, delight yourselves in rich food.</em> The same imperative, the same table. And when Peter writes to the scattered church, he reaches for this very verse and turns it into something assumed: <em>if indeed you have tasted that the Lord is good.</em> Not <em>if you have heard.</em> Tasted. As though by now you would know the difference.</p>
 
-  <p>Scripture keeps coming back to this. It will not leave the goodness of God as a thing merely stated. <em>Come</em>, says Isaiah &mdash; <em>come, buy and eat; come, delight yourselves in rich food.</em> The same imperative, the same table. And when Peter writes to the scattered church, he reaches for this very verse and turns it into something assumed: <em>if indeed you have tasted that the Lord is good.</em> Not <em>if you have heard.</em> Tasted. As though by now you would know the difference.</p>
+        <div class="hw-selah">
+          <div class="rule"></div>
+          <div class="word">Selah</div>
+          <div class="rule"></div>
+        </div>
 
-  <div class="selah">Selah</div>
+        <p>They introduced someone in the meeting as the Chief Goodness Officer.</p>
 
-  <p>They introduced someone in the meeting as the Chief Goodness Officer.</p>
+        <p>I thought it was a gimmick. Cheap American branding &mdash; the kind of title you print on a lanyard to make an organisation sound warm. I sat there and quietly wrote it off.</p>
 
-  <p>I thought it was a gimmick. Cheap American branding &mdash; the kind of title you print on a lanyard to make an organisation sound warm. I sat there and quietly wrote it off.</p>
+        <p>Then I lived there for three days.</p>
 
-  <p>Then I lived there for three days.</p>
+        <p>It was 2019. I had come to Community First Village in Austin, Texas &mdash; a community of tiny homes built to house men and women who had been chronically homeless, most of them for years. I did not tour it. I paid to stay, and I stayed, and I ate and walked and talked in the place. There is a street there called Goodness Way. The word turns up everywhere &mdash; on signs, in how people speak, in the ordinary run of the day. At first it read like a slogan. By the end it had stopped sounding like branding and started sounding like the thing itself. Goodness was not the marketing. Goodness was what the place was made of.</p>
 
-  <p>It was 2019. I had come to Community First Village in Austin, Texas &mdash; a community of tiny homes built to house men and women who had been chronically homeless, most of them for years. I did not tour it. I paid to stay, and I stayed, and I ate and walked and talked in the place. There is a street there called Goodness Way. The word turns up everywhere &mdash; on signs, in how people speak, in the ordinary run of the day. At first it read like a slogan. By the end it had stopped sounding like branding and started sounding like the thing itself. Goodness was not the marketing. Goodness was what the place was made of.</p>
+        <p>The ministry behind the village, <a class="gloss" href="https://mlf.org" target="_blank" rel="noopener">Mobile Loaves and Fishes</a>, has three words under its name: <em>Serving Goodness.</em> I understand them now.</p>
 
-  <p>The ministry behind the village, <a class="inline" href="https://mlf.org" target="_blank" rel="noopener">Mobile Loaves and Fishes</a>, has three words under its name: <em>Serving Goodness.</em> I understand them now.</p>
+        <p>When I came home and tried to describe it to colleagues, I kept saying the same thing &mdash; that it was the most authentic expression of the gospel I had ever seen. I still find that strange to have said. I came out of a Pentecostal world. The man who built that place is deeply, unmistakably Catholic. Everything in my formation would have kept me at the distance of seeing-first &mdash; looking it over across the divide, weighing it, deciding. But I had lived there three days. I had tasted it. And I know it was real.</p>
 
-  <p>When I came home and tried to describe it to colleagues, I kept saying the same thing &mdash; that it was the most authentic expression of the gospel I had ever seen. I still find that strange to have said. I came out of a Pentecostal world. The man who built that place is deeply, unmistakably Catholic. Everything in my formation would have kept me at the distance of seeing-first &mdash; looking it over across the divide, weighing it, deciding. But I had lived there three days. I had tasted it. And I know it was real.</p>
+        <p class="pull">Chief Goodness Officer. I thought it was tacky. I have come to think it is not a job description but a role I hold today &mdash; my marching orders. To be a walking invitation, in the worst of circumstances, for others to taste and see that God is good.</p>
 
-  <p class="close">Chief Goodness Officer. I thought it was tacky. I have come to think it is not a job description but a role I hold today &mdash; my marching orders. To be a walking invitation, in the worst of circumstances, for others to taste and see that God is good.</p>
+        <p class="hw-companion"><a href="/reflections/unless-i-had-believed.html">Unless I Had Believed</a> &mdash; a companion reflection, on holding to the goodness of God before it can be tasted.</p>
 
-  <p class="companion"><a class="inline" href="/reflections/unless-i-had-believed.html">Unless I Had Believed</a> &mdash; a companion reflection, on holding to the goodness of God before it can be tasted.</p>
-
+      </div>
+    </div>
+  </div>
 </article>
 
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 </body>
 </html>

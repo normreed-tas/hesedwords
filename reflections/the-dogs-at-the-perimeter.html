@@ -4,230 +4,99 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Dogs at the Perimeter — Hesed Words</title>
+<meta name="description" content="The lion strikes once and is gone. The dogs are different — they wait, they circle, they win by duration. A reflection on Psalm 22 and the persistent small things at the edges of every life, and what it means to stop throwing stones and give yourself over to hands stronger than yours.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-  :root {
-    --parchment:      #e8dfc8;
-    --parchment-page: #f3ecda;
-    --ink:            #2A2218;
-    --ink-soft:       #4a4030;
-    --gold:           #c9a84c;
-    --gold-deep:      #A67C2E;
-    --gold-soft:      #D9C49A;
-    --muted:          #6B5C45;
-    --rule:           #C8B58F;
+  .hw-article-body .subtitle { font-style: italic; color: var(--muted); font-size: 22px; margin: -20px 0 34px; }
+  .hw-article-body p.first::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
   }
-
-  * { box-sizing: border-box; }
-
-  html { -webkit-text-size-adjust: 100%; }
-
-  body {
-    margin: 0;
-    background: var(--parchment);
-    color: var(--ink);
-    font-family: 'Cormorant Garamond', 'Garamond', Georgia, serif;
-    font-size: 21px;
-    line-height: 1.72;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .page {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 64px 40px 80px;
-    background: var(--parchment-page);
-    min-height: 100vh;
-    box-shadow: 0 0 60px rgba(80, 60, 20, 0.06);
-  }
-
-  /* ---- Title block ---- */
-  .eyebrow {
-    text-align: center;
-    font-family: 'Cinzel', serif;
-    font-size: 11px;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: var(--gold-deep);
-    margin: 0 0 8px;
-  }
-
-  .eyebrow::before,
-  .eyebrow::after {
-    content: "·";
-    margin: 0 14px;
-    color: var(--gold-soft);
-  }
-
-  h1 {
-    text-align: center;
-    font-family: 'Cinzel', serif;
-    font-weight: 600;
-    font-size: 38px;
-    line-height: 1.18;
-    letter-spacing: 0.02em;
-    color: var(--ink);
-    margin: 18px 0 14px;
-  }
-
-  .subtitle {
-    text-align: center;
-    font-style: italic;
-    font-size: 20px;
-    color: var(--ink-soft);
-    margin: 0 0 26px;
-  }
-
-  .dot-motif {
-    text-align: center;
-    color: var(--gold);
-    letter-spacing: 0.5em;
-    font-size: 14px;
-    margin: 0 0 10px;
-  }
-
-  .byline {
-    text-align: center;
-    font-family: 'Cinzel', serif;
-    font-size: 10px;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 0 0 48px;
-  }
-
-  /* ---- Body ---- */
-  p { margin: 0 0 20px; text-align: justify; hyphens: auto; }
-
-  /* Drop cap on the opening paragraph */
-  .lead::first-letter {
-    font-family: 'Cinzel', serif;
-    font-weight: 600;
-    color: var(--gold-deep);
-    float: left;
-    font-size: 64px;
-    line-height: 0.82;
-    padding: 6px 10px 0 0;
-  }
-
-  em { font-style: italic; }
-
-  /* ---- Scripture inline emphasis already handled by em; scene break ---- */
-  .ornament {
-    text-align: center;
-    color: var(--gold);
-    font-size: 20px;
-    letter-spacing: 0.4em;
-    margin: 38px 0 32px;
-  }
-
-  /* ---- Selah block ---- */
-  .selah {
-    border-left: 2px solid var(--gold-soft);
-    padding: 4px 0 4px 26px;
-    margin: 36px 0 10px;
-  }
-
-  .selah p {
-    font-style: italic;
-    color: var(--ink-soft);
-    text-align: left;
-    margin: 0 0 14px;
-  }
-
-  .selah .word {
-    font-family: 'Cinzel', serif;
-    font-style: normal;
-    font-size: 13px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--gold-deep);
-    margin: 0;
-  }
-
-  /* ---- Footer tagline ---- */
-  .tagline {
-    text-align: center;
-    font-family: 'Cinzel', serif;
-    font-size: 10px;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 64px 0 0;
-    padding-top: 28px;
-    border-top: 1px solid var(--rule);
-  }
-
-  /* ── Site nav ── */
-  nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-  nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-  nav.hw-nav a:hover{opacity:1;color:#fff;}
-  nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-  /* ── Footer ── */
-  footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-  @media (max-width: 640px) {
-    body { font-size: 19px; }
-    .page { padding: 44px 22px 60px; }
-    h1 { font-size: 29px; }
-    .subtitle { font-size: 18px; }
-    .lead::first-letter { font-size: 52px; }
-    p { text-align: left; }
-  }
+  .hw-article-body .ornament { text-align: center; color: var(--brass); font-size: 20px; letter-spacing: 0.4em; margin: 38px 0 32px; }
 </style>
 </head>
-<body>
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html" class="current">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-  <main class="page">
+<body class="hw">
 
-    <p class="eyebrow">A Reflection for Curious Minds</p>
-    <h1>The Dogs at the Perimeter</h1>
-    <p class="subtitle">A reflection on Psalm 22</p>
-    <p class="dot-motif">✦</p>
-    <p class="byline">Norm Reed</p>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
+  </div>
+</header>
 
-    <p class="lead">In the developing world you don't give much thought to dogs. But they are there. At the edge of every gathering, every market, every road out of town. Mangy, flea-ridden, skulking. Waiting for scraps. They follow the crowd because the crowd drops things, and because a crowd sometimes leaves behind what they live on.</p>
-
-    <p>I had never thought about dogs at the crucifixion. But they would have been there. They would have followed the crowd up the hill. They would have waited at the edges where the soldiers couldn't quite reach them, drawn to the blood, shooed away and circling back. Nobody invited them. Nobody could fully drive them off. They simply belong to the edges of every scene of suffering.</p>
-
-    <p>The psalmist knew these dogs. <em>For dogs surround me</em>, he prays, ringed in, and then: <em>deliver me from the power of the dog.</em> They are not the lion. The lion comes once, overwhelms, and is gone. The dogs are different. They don't strike. They wait. They win not by strength but by staying.</p>
-
-    <p>We all have these dogs. Not the great adversaries — those are rare. The dogs are the small persistent things at the perimeter. The slight that returns. The old shame. The low fear that shows up wherever there is blood in the water. None of them is the thing that kills you. All of them together wear you down.</p>
-
-    <p>And we never really expect them gone. We wish they would go, but we know they are always around. So we kick at them. We yell. We throw stones. We buy a few feet of room and they circle wider and wait. It is not nothing — it keeps the perimeter back. But it never finishes. The strength goes out and nothing is resolved.</p>
-
-    <p>Then come the days when the stones run out. Life's demands empty the hand. The dogs have not grown stronger; we have simply run down. This is how they win — by duration. They only have to outlast us.</p>
-
-    <p>The psalmist knows this from the inside. Everything around his prayer is depletion, not assault — poured out like water, the heart like wax, the strength dried up, the bones out of joint. He is not overpowered. He is spent. Which is why his prayer cannot be a battle cry. He has nothing left to fight with. <em>Deliver me</em> — pull me out — is the prayer of someone who has reached the end of his own resources and knows it.</p>
-
-    <p>There is no shame in it. The hand that has run out of stones is the hand that opens. And this is the turn — because what looks like the end of strength is not, in this psalm, a giving up. It is a giving over.</p>
-
-    <p>For this is Jesus' prayer. These are the words he reaches for on the cross — <em>my God, my God</em> — surrounded, stripped, his strength poured out, the dogs at the foot of the hill. And the prayer does not end in the pack scattered. It ends in something handed across. Not <em>make them go</em>, which we never believed. Not even <em>rescue me</em> as a demand. But a trust laid down where the stones used to be: <em>into your hands.</em></p>
-
-    <p>The exhaustion is real. The dogs are real and they are still there. But the prayer points past them — not to a hill swept clean, but to the One the prayer is addressed to. The giving-over is the whole movement. To stop driving off the perimeter ourselves and to entrust ourselves to the One who can carry us up out of its reach. Not because we have won. Because we have finally let go into hands stronger than ours.</p>
-
-    <p>And the dogs go on barking below. They always will. But the prayer has changed everything by changing direction — no longer down at the pack, but up, into keeping that holds.</p>
-
-    <p class="ornament">✦</p>
-
-    <div class="selah">
-      <p>The dogs at the edge of the road. Skulking, waiting, never quite gone. I have watched them all my life and thought nothing of them. Now I think the question was never how to drive them off. It was into whose hands I would put myself while they barked.</p>
-      <p class="word">Selah</p>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>
+      <div>Psalm 22</div>
+      <div>26 Jun 2026</div>
+      <div class="byline">Norm Reed</div>
     </div>
+    <div>
+      <h1>The Dogs at the Perimeter</h1>
+      <div class="hw-article-body">
+        <p class="subtitle">A reflection on Psalm 22</p>
 
-    <p class="tagline">Hesed Words &middot; Onesimus Foundation</p>
+        <p class="first">In the developing world you don't give much thought to dogs. But they are there. At the edge of every gathering, every market, every road out of town. Mangy, flea-ridden, skulking. Waiting for scraps. They follow the crowd because the crowd drops things, and because a crowd sometimes leaves behind what they live on.</p>
 
-  </main>
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+        <p>I had never thought about dogs at the crucifixion. But they would have been there. They would have followed the crowd up the hill. They would have waited at the edges where the soldiers couldn't quite reach them, drawn to the blood, shooed away and circling back. Nobody invited them. Nobody could fully drive them off. They simply belong to the edges of every scene of suffering.</p>
+
+        <p>The psalmist knew these dogs. <em>For dogs surround me</em>, he prays, ringed in, and then: <em>deliver me from the power of the dog.</em> They are not the lion. The lion comes once, overwhelms, and is gone. The dogs are different. They don't strike. They wait. They win not by strength but by staying.</p>
+
+        <p>We all have these dogs. Not the great adversaries &mdash; those are rare. The dogs are the small persistent things at the perimeter. The slight that returns. The old shame. The low fear that shows up wherever there is blood in the water. None of them is the thing that kills you. All of them together wear you down.</p>
+
+        <p>And we never really expect them gone. We wish they would go, but we know they are always around. So we kick at them. We yell. We throw stones. We buy a few feet of room and they circle wider and wait. It is not nothing &mdash; it keeps the perimeter back. But it never finishes. The strength goes out and nothing is resolved.</p>
+
+        <p>Then come the days when the stones run out. Life's demands empty the hand. The dogs have not grown stronger; we have simply run down. This is how they win &mdash; by duration. They only have to outlast us.</p>
+
+        <p>The psalmist knows this from the inside. Everything around his prayer is depletion, not assault &mdash; poured out like water, the heart like wax, the strength dried up, the bones out of joint. He is not overpowered. He is spent. Which is why his prayer cannot be a battle cry. He has nothing left to fight with. <em>Deliver me</em> &mdash; pull me out &mdash; is the prayer of someone who has reached the end of his own resources and knows it.</p>
+
+        <p>There is no shame in it. The hand that has run out of stones is the hand that opens. And this is the turn &mdash; because what looks like the end of strength is not, in this psalm, a giving up. It is a giving over.</p>
+
+        <p>For this is Jesus' prayer. These are the words he reaches for on the cross &mdash; <em>my God, my God</em> &mdash; surrounded, stripped, his strength poured out, the dogs at the foot of the hill. And the prayer does not end in the pack scattered. It ends in something handed across. Not <em>make them go</em>, which we never believed. Not even <em>rescue me</em> as a demand. But a trust laid down where the stones used to be: <em>into your hands.</em></p>
+
+        <p>The exhaustion is real. The dogs are real and they are still there. But the prayer points past them &mdash; not to a hill swept clean, but to the One the prayer is addressed to. The giving-over is the whole movement. To stop driving off the perimeter ourselves and to entrust ourselves to the One who can carry us up out of its reach. Not because we have won. Because we have finally let go into hands stronger than ours.</p>
+
+        <p>And the dogs go on barking below. They always will. But the prayer has changed everything by changing direction &mdash; no longer down at the pack, but up, into keeping that holds.</p>
+
+        <div class="ornament">&#10022;</div>
+
+        <div class="hw-selah">
+          <div class="rule"></div>
+          <div class="word">Selah</div>
+          <div class="rule"></div>
+        </div>
+
+        <p>The dogs at the edge of the road. Skulking, waiting, never quite gone. I have watched them all my life and thought nothing of them. Now I think the question was never how to drive them off. It was into whose hands I would put myself while they barked.</p>
+
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
+
 </body>
 </html>
