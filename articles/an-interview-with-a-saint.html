@@ -4,330 +4,189 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Interview with a Saint — Hesed Words</title>
+<meta name="description" content="My sister Jessica is a saint. On the New Testament's plural word for sainthood, and a week spent bathing a dying man in a convent in Parramatta.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-:root{
-  --parchment:#e8dfc8;
-  --parchment-page:#f3ecda;
-  --gold:#c9a84c;
-  --gold-deep:#A67C2E;
-  --gold-soft:#D9C49A;
-  --muted:#6B5C45;
-  --rule:#C8B58F;
-  --ink:#2f2921;
-}
-*{box-sizing:border-box;}
-body{
-  margin:0;
-  background:var(--parchment);
-  color:var(--ink);
-  font-family:'Cormorant Garamond',Georgia,serif;
-  font-size:1.24rem;
-  line-height:1.72;
-}
-nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-nav.hw-nav a:hover{opacity:1;color:#fff;}
-nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-
-.page{
-  max-width:44rem;
-  margin:0 auto;
-  background:var(--parchment-page);
-  padding:4rem 3.2rem 3rem;
-  box-shadow:0 0 2.5rem rgba(60,48,30,.10);
-}
-header.piece{
-  text-align:center;
-  margin-bottom:3.2rem;
-}
-header.piece .kicker{
-  font-family:'Cinzel',serif;
-  font-size:.7rem;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-  margin-bottom:1.1rem;
-}
-header.piece h1{
-  font-family:'Cinzel',serif;
-  font-weight:600;
-  font-size:2.05rem;
-  line-height:1.28;
-  margin:0 0 1.2rem;
-  color:#241f19;
-}
-header.piece .byline{
-  font-size:1.02rem;
-  font-style:italic;
-  color:var(--muted);
-  margin:0;
-}
-header.piece .rule{
-  width:4.5rem;
-  height:1px;
-  background:var(--rule);
-  margin:1.8rem auto 0;
-}
-p{margin:0 0 1.35rem;}
-
-.lede-break{
-  width:3rem;
-  height:1px;
-  background:var(--rule);
-  margin:2.4rem auto;
-  border:0;
-}
-
-.attrib{
-  font-family:'Cinzel',serif;
-  font-size:.72rem;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-  text-align:center;
-  margin:3rem 0 2.4rem;
-}
-.attrib::before,.attrib::after{
-  content:"";
-  display:block;
-  width:2.6rem;
-  height:1px;
-  background:var(--rule);
-  margin:0 auto;
-}
-.attrib::before{margin-bottom:1.1rem;}
-.attrib::after{margin-top:1.1rem;}
-
-.testimony p:first-of-type::first-letter{
-  font-family:'Cinzel',serif;
-  font-size:3.1rem;
-  line-height:.86;
-  float:left;
-  padding:.22rem .55rem 0 0;
-  color:var(--gold-deep);
-}
-
-.selah{
-  background:#f8f3e6;
-  border-top:1px solid var(--gold);
-  border-bottom:1px solid var(--gold);
-  padding:2.2rem 2.1rem 1.6rem;
-  margin:3.2rem 0;
-  font-style:italic;
-}
-.selah h2{
-  font-family:'Cinzel',serif;
-  font-weight:400;
-  font-size:.78rem;
-  letter-spacing:.26em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-  text-align:center;
-  margin:0 0 1.6rem;
-  font-style:normal;
-}
-.selah p:last-child{margin-bottom:0;}
-
-.close-rule{
-  width:3rem;
-  height:1px;
-  background:var(--rule);
-  margin:2.8rem auto;
-  border:0;
-}
-
-.disclaimer{
-  margin-top:3.6rem;
-  padding-top:1.8rem;
-  border-top:1px solid var(--rule);
-  font-size:.95rem;
-  line-height:1.62;
-  color:var(--muted);
-  font-style:italic;
-}
-.disclaimer p{margin:0 0 .9rem;}
-.disclaimer p:last-child{margin-bottom:0;}
-
-a.gloss{color:inherit;text-decoration:none;border-bottom:1px dotted var(--gold-deep);}
-a.gloss:hover{color:var(--gold-deep);}
-
-.companion{
-  font-style:italic;
-  color:var(--muted);
-  text-align:center;
-  margin:2.8rem 0 0;
-  font-size:1.05rem;
-}
-.companion a{color:var(--gold-deep);text-decoration:none;border-bottom:1px dotted var(--gold-deep);}
-.companion a:hover{color:var(--ink);}
-
-.pdf-download{
-  margin-top:2.4rem;
-  text-align:center;
-}
-.pdf-download a{
-  font-family:'Cinzel',serif;
-  font-size:.72rem;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-  text-decoration:none;
-  border:1px solid var(--rule);
-  padding:.7rem 1.5rem;
-  display:inline-block;
-  transition:background .2s,color .2s;
-}
-.pdf-download a:hover{
-  background:var(--gold-deep);
-  color:var(--parchment-page);
-  border-color:var(--gold-deep);
-}
-
-footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-@media (max-width:34rem){
-  body{font-size:1.16rem;}
-  .page{padding:2.6rem 1.5rem 2rem;}
-  header.piece h1{font-size:1.62rem;}
-  .selah{padding:1.8rem 1.3rem 1.3rem;}
-}
+  .hw-article-body hr.lede-break, .hw-article-body hr.close-rule { border: 0; height: 1px; background: var(--hairline); width: 48px; margin: 38px auto; }
+  .hw-article-body .attrib {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass);
+    text-align: center; margin: 44px 0 32px;
+  }
+  .hw-article-body .attrib::before, .hw-article-body .attrib::after { content: ""; display: block; width: 40px; height: 1px; background: var(--hairline); margin: 0 auto; }
+  .hw-article-body .attrib::before { margin-bottom: 16px; }
+  .hw-article-body .attrib::after { margin-top: 16px; }
+  .hw-article-body .testimony p:first-of-type::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
+  }
+  .hw-article-body .pdf-download { margin-top: 32px; text-align: center; }
+  .hw-article-body .pdf-download a {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+    text-decoration: none; border: 1px solid var(--hairline); padding: 10px 22px; display: inline-block; transition: background 0.2s, color 0.2s;
+  }
+  .hw-article-body .pdf-download a:hover { background: var(--brass); color: var(--paper); border-color: var(--brass); }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html">Reflections</a>
-  <a href="/articles.html" class="current">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<div class="page">
-
-<header class="piece">
-  <div class="kicker">Article</div>
-  <h1>An Interview with a Saint</h1>
-  <p class="byline">Norm Reed</p>
-  <div class="rule"></div>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a href="/reflections.html">Reflections</a>
+      <a class="current" href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
+  </div>
 </header>
 
-<p>It is a strange thing these days to call someone a saint. The word arrives already furnished. Francis of Assisi, stripping off his clothes in the square at Assisi and handing them back to his father. Teresa in Calcutta, lifting the dying out of the gutter. They are the right people to think of, and thinking of them does a curious thing — it puts sainthood at a distance, somewhere out past ordinary lives, where you and I are not.</p>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Article</div>
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>An Interview with a Saint</h1>
+      <div class="hw-article-body">
+        <p>It is a strange thing these days to call someone a saint. The word arrives already furnished. Francis of Assisi, stripping off his clothes in the square at Assisi and handing them back to his father. Teresa in Calcutta, lifting the dying out of the gutter. They are the right people to think of, and thinking of them does a curious thing &mdash; it puts sainthood at a distance, somewhere out past ordinary lives, where you and I are not.</p>
 
-<p>My sister Jessica is a saint.</p>
+        <p>My sister Jessica is a saint.</p>
 
-<p>I would not have said so growing up. She was my sister. But she took me to a Billy Graham crusade when I was nine, and I made my first step towards Jesus in a stadium I could not now find on a map.</p>
+        <p>I would not have said so growing up. She was my sister. But she took me to a Billy Graham crusade when I was nine, and I made my first step towards Jesus in a stadium I could not now find on a map.</p>
 
-<p>Years later I was in the navy, dating a girl who was not a Christian and had no interest in becoming one. She asked me, without any particular agenda, why I had not become a Christian myself. I do not know what made me answer honestly. Nobody was working on me. I said: my sister is a Christian, and I do not think I could make that commitment.</p>
+        <p>Years later I was in the navy, dating a girl who was not a Christian and had no interest in becoming one. She asked me, without any particular agenda, why I had not become a Christian myself. I do not know what made me answer honestly. Nobody was working on me. I said: my sister is a Christian, and I do not think I could make that commitment.</p>
 
-<p>I heard myself say it. I had just described the thing I was avoiding, and named the person who had made it impossible to avoid without knowing what I was turning down.</p>
+        <p>I heard myself say it. I had just described the thing I was avoiding, and named the person who had made it impossible to avoid without knowing what I was turning down.</p>
 
-<hr class="lede-break">
+        <hr class="lede-break">
 
-<p>In recent years Jessica has struggled with her health, and time with her has become something to be counted rather than assumed. On one of those occasions I asked her to tell me a story I had heard once before and never forgotten — the first time, it brought me to tears. I asked if I could record it. She said yes.</p>
+        <p>In recent years Jessica has struggled with her health, and time with her has become something to be counted rather than assumed. On one of those occasions I asked her to tell me a story I had heard once before and never forgotten &mdash; the first time, it brought me to tears. I asked if I could record it. She said yes.</p>
 
-<p>This is her account, in her own words, tidied only for reading.</p>
+        <p>This is her account, in her own words, tidied only for reading.</p>
 
-<div class="attrib">Jessica</div>
+        <div class="attrib">Jessica</div>
 
-<div class="testimony">
+        <div class="testimony">
 
-<p>A few times in my life I have felt stretched out of my comfort zone, asked to do something I would not normally do. One of those times I remember very clearly.</p>
+          <p>A few times in my life I have felt stretched out of my comfort zone, asked to do something I would not normally do. One of those times I remember very clearly.</p>
 
-<p>It was about thirty years ago. I had been overseas with my sister, and we had lived it up. I had put my faith behind me for the duration and had a wild time, and I came back to Australia very conscious of the sin in my own life. I knew what I was.</p>
+          <p>It was about thirty years ago. I had been overseas with my sister, and we had lived it up. I had put my faith behind me for the duration and had a wild time, and I came back to Australia very conscious of the sin in my own life. I knew what I was.</p>
 
-<p>The first Sunday back at church there was a guest speaker, Judith Antill, from the Anglicare AIDS Council. She had come to talk to us about people with AIDS. Thirty years ago AIDS was a major problem throughout the world. A great many people were suffering, and it was always seen as <em>the</em> sin. The worst one.</p>
+          <p>The first Sunday back at church there was a guest speaker, Judith Antill, from the Anglicare AIDS Council. She had come to talk to us about people with AIDS. Thirty years ago AIDS was a major problem throughout the world. A great many people were suffering, and it was always seen as <em>the</em> sin. The worst one.</p>
 
-<p>I sat there listening, and I felt God pressing something on me. <em>These people are no different from you. They are sinners. You are a sinner.</em></p>
+          <p>I sat there listening, and I felt God pressing something on me. <em>These people are no different from you. They are sinners. You are a sinner.</em></p>
 
-<p>She was asking whether any Christians would volunteer to train to work with people with AIDS. I thought: that is something I could do.</p>
+          <p>She was asking whether any Christians would volunteer to train to work with people with AIDS. I thought: that is something I could do.</p>
 
-<p>I went and spoke to her afterwards. I said I was interested — how could I possibly be involved with people with AIDS?</p>
+          <p>I went and spoke to her afterwards. I said I was interested &mdash; how could I possibly be involved with people with AIDS?</p>
 
-<p>She asked me whether I was sure that was what I wanted.</p>
+          <p>She asked me whether I was sure that was what I wanted.</p>
 
-<p>I said I felt God was saying to me that I was a sinner, and these people were no different from me, and they needed help. They needed Christians. They needed to hear about the love of Jesus.</p>
+          <p>I said I felt God was saying to me that I was a sinner, and these people were no different from me, and they needed help. They needed Christians. They needed to hear about the love of Jesus.</p>
 
-<p>So I rang the AIDS Council. They were running a course down in Parramatta, open to anyone who wanted to help — you did not have to be a Christian. I signed up, and then I sat with what I had done. <em>God, this is the most difficult thing you have ever asked me to do.</em> Going down to Parramatta was stepping out of my comfort zone to start with. But to go down and work with people who had AIDS — and I did not know any gay people. Not one. I had no friends who were homosexual. There was nobody up here in the mountains that I knew of. It was entirely outside anything I was used to.</p>
+          <p>So I rang the AIDS Council. They were running a course down in Parramatta, open to anyone who wanted to help &mdash; you did not have to be a Christian. I signed up, and then I sat with what I had done. <em>God, this is the most difficult thing you have ever asked me to do.</em> Going down to Parramatta was stepping out of my comfort zone to start with. But to go down and work with people who had AIDS &mdash; and I did not know any gay people. Not one. I had no friends who were homosexual. There was nobody up here in the mountains that I knew of. It was entirely outside anything I was used to.</p>
 
-<p>I turned up to the first training day. It was held in a convent in Parramatta. I walked into a room full of people from every walk of life. A number of gay men. Some people from the community who simply wanted to help.</p>
+          <p>I turned up to the first training day. It was held in a convent in Parramatta. I walked into a room full of people from every walk of life. A number of gay men. Some people from the community who simply wanted to help.</p>
 
-<p>We sat down, and a man called Philip asked us to say why we were there. He went around the circle, asking each person to share their journey and why they had volunteered.</p>
+          <p>We sat down, and a man called Philip asked us to say why we were there. He went around the circle, asking each person to share their journey and why they had volunteered.</p>
 
-<p>I was nervous the moment I heard the question, because the honest answer was that I was there because God had called me to be. I listened to the others. There was a couple, lovely people, who had decided this was something they could do — help people who were suffering, care for them. There were gay men who had lost their partners to AIDS, and who were there to give something back to their own community.</p>
+          <p>I was nervous the moment I heard the question, because the honest answer was that I was there because God had called me to be. I listened to the others. There was a couple, lovely people, who had decided this was something they could do &mdash; help people who were suffering, care for them. There were gay men who had lost their partners to AIDS, and who were there to give something back to their own community.</p>
 
-<p>My reason was different from everybody else's in the room.</p>
+          <p>My reason was different from everybody else&rsquo;s in the room.</p>
 
-<p>When it came to me I said: I am here because I think this is where Jesus would be. Jesus mixed with all sorts of people, with sinners and with lepers, and I think he would be here, among these people. I said I had come because I wanted to help people who were suffering from AIDS, and because I believed Jesus had called me to come — because he loves everybody, and he loves people who are suffering from AIDS too.</p>
+          <p>When it came to me I said: I am here because I think this is where Jesus would be. Jesus mixed with all sorts of people, with sinners and with lepers, and I think he would be here, among these people. I said I had come because I wanted to help people who were suffering from AIDS, and because I believed Jesus had called me to come &mdash; because he loves everybody, and he loves people who are suffering from AIDS too.</p>
 
-<p>The circle carried on. At the end, Philip began to summarise what everyone had said. He went through the whole room, person by person.</p>
+          <p>The circle carried on. At the end, Philip began to summarise what everyone had said. He went through the whole room, person by person.</p>
 
-<p>He left me out.</p>
+          <p>He left me out.</p>
 
-<p>I sat there thinking, I have really blown it. What I said must have sounded very odd.</p>
+          <p>I sat there thinking, I have really blown it. What I said must have sounded very odd.</p>
 
-<p>Then, right at the end, he said there was one thing he wanted to add. If anyone wanted to talk about spirituality, or wanted someone to pray for them, they should go and talk to Jessica — because she is here because she believes this is where Jesus wants her to be, and I am convinced she has a gift for this, if you would like to talk with her and pray.</p>
+          <p>Then, right at the end, he said there was one thing he wanted to add. If anyone wanted to talk about spirituality, or wanted someone to pray for them, they should go and talk to Jessica &mdash; because she is here because she believes this is where Jesus wants her to be, and I am convinced she has a gift for this, if you would like to talk with her and pray.</p>
 
-<p>We were each given a partner to work with through the week. Mine was a lovely man, a gay man who had lost his partner to AIDS. I learned how to bath him in a bed, and he had to bath me — we had to practise our bed baths on each other. I remember thinking, if only my friends could see me now. Here I am bathing a gay man in a nun's bed. We had a laugh about it, and we got on very well.</p>
+          <p>We were each given a partner to work with through the week. Mine was a lovely man, a gay man who had lost his partner to AIDS. I learned how to bath him in a bed, and he had to bath me &mdash; we had to practise our bed baths on each other. I remember thinking, if only my friends could see me now. Here I am bathing a gay man in a nun&rsquo;s bed. We had a laugh about it, and we got on very well.</p>
 
-<p>And through that week, one by one, every person in that room came and asked me to pray for them. Each one came and told me their story. Each one wanted to know whether Jesus really loved them.</p>
+          <p>And through that week, one by one, every person in that room came and asked me to pray for them. Each one came and told me their story. Each one wanted to know whether Jesus really loved them.</p>
 
-<p>I was able to say yes. He really does love you. And I was able to pray with them, and care for them, that week.</p>
+          <p>I was able to say yes. He really does love you. And I was able to pray with them, and care for them, that week.</p>
 
-<p>We visited the Red Cross. We visited the rooms where the prostitutes showered and rested between clients, and we talked with them. It was a hard week. It was nothing like the life I was used to. But the whole time I was there I felt I was there because God wanted me to be.</p>
+          <p>We visited the Red Cross. We visited the rooms where the prostitutes showered and rested between clients, and we talked with them. It was a hard week. It was nothing like the life I was used to. But the whole time I was there I felt I was there because God wanted me to be.</p>
 
-<p>It was only when I came home that it caught up with me. Well-meaning people at church said, I bet you are glad to be away from that place and back safe up in the mountains. And I stopped and thought — no. That is where God wanted me to be. And I believe he worked through me to those people, to show them he loved them.</p>
+          <p>It was only when I came home that it caught up with me. Well-meaning people at church said, I bet you are glad to be away from that place and back safe up in the mountains. And I stopped and thought &mdash; no. That is where God wanted me to be. And I believe he worked through me to those people, to show them he loved them.</p>
 
-<p>At the end of the training I was given someone to look after. It turned out to be a woman. She had contracted AIDS through a blood transfusion.</p>
+          <p>At the end of the training I was given someone to look after. It turned out to be a woman. She had contracted AIDS through a blood transfusion.</p>
 
-<p>She had been very badly abused during her life. I could not begin to understand what she had been through, but she explained it to me — the abuse, her father, what it had done to her. I listened for a long time.</p>
+          <p>She had been very badly abused during her life. I could not begin to understand what she had been through, but she explained it to me &mdash; the abuse, her father, what it had done to her. I listened for a long time.</p>
 
-<p>Years afterwards we took in a foster daughter, a street kid, who had been through very similar things. And I found I already knew something about how she had been hurt, and what her feelings would be, because that woman had taught me. I was able to help her.</p>
+          <p>Years afterwards we took in a foster daughter, a street kid, who had been through very similar things. And I found I already knew something about how she had been hurt, and what her feelings would be, because that woman had taught me. I was able to help her.</p>
 
-<p>So God takes us on these journeys, and we do not know at the time where they come from or why. We only look back, and think there was a purpose in it right from the start.</p>
+          <p>So God takes us on these journeys, and we do not know at the time where they come from or why. We only look back, and think there was a purpose in it right from the start.</p>
 
-</div>
+        </div>
 
-<div class="selah">
-  <h2>Selah</h2>
-  <p>I have spent this morning typing out my sister's words, and somewhere in the middle of it I stopped.</p>
-  <p>I have been working with prisoners and their families for years now. Men and women the community has looked at, judged, and put out of sight — that is the whole of it, really, the work and the reason for the work. I did not learn it from her. Or I did not think I had.</p>
-  <p>She was in that convent in Parramatta thirty years ago, learning to bath a dying man, among people the church of the day had already decided about. She has never once mentioned it as anything. She did not tell me it was a pattern. She just did it, and came home, and went on with her life, and let me find out about it decades later because I asked.</p>
-  <p>She gave me my first Bible. She had 2 Timothy 3:16 written inside the cover.</p>
-</div>
+        <div class="hw-selah">
+          <div class="rule"></div>
+          <div class="word">Selah</div>
+          <div class="rule"></div>
+        </div>
 
-<hr class="close-rule">
+        <p>I have spent this morning typing out my sister&rsquo;s words, and somewhere in the middle of it I stopped.</p>
 
-<p>The trouble with the word saint is that we have made it singular. One figure, held up, admired at a distance — and the distance is the point, because it lets the rest of us off.</p>
+        <p>I have been working with prisoners and their families for years now. Men and women the community has looked at, judged, and put out of sight &mdash; that is the whole of it, really, the work and the reason for the work. I did not learn it from her. Or I did not think I had.</p>
 
-<p>The New Testament will not have it. The word there is <a class="gloss" href="/glossary.html#hagioi"><em>hagioi</em></a> — holy ones, set-apart ones — and it is almost always plural. Saints at Corinth, saints at Philippi, saints at Ephesus. Not one holy person, but a room full of ordinary ones, learning it from each other, mostly badly.</p>
+        <p>She was in that convent in Parramatta thirty years ago, learning to bath a dying man, among people the church of the day had already decided about. She has never once mentioned it as anything. She did not tell me it was a pattern. She just did it, and came home, and went on with her life, and let me find out about it decades later because I asked.</p>
 
-<p>None of us is a saint alone. It is not a thing you achieve and then are. It is what happens to people who set themselves apart together and keep walking in the same direction long enough for it to show.</p>
+        <p>She gave me my first Bible. She had 2 Timothy 3:16 written inside the cover.</p>
 
-<p>Which is what she did. She walked into a room in a convent in Parramatta where she knew nobody, said the one true thing she had to say, and then spent a week bathing a man in a bed and praying with anyone who asked. She has never thought of it as remarkable. She would be embarrassed to read this.</p>
+        <hr class="close-rule">
 
-<p>My sister Jessica is a saint. Not by herself. But then, nobody is.</p>
+        <p>The trouble with the word saint is that we have made it singular. One figure, held up, admired at a distance &mdash; and the distance is the point, because it lets the rest of us off.</p>
 
-<p class="companion">A companion piece: <a href="/articles/sitting-with-a-sinner.html">Sitting with a Sinner</a>, on my other sister.</p>
+        <p>The New Testament will not have it. The word there is <a class="gloss" href="/glossary.html#hagioi"><em>hagioi</em></a> &mdash; holy ones, set-apart ones &mdash; and it is almost always plural. Saints at Corinth, saints at Philippi, saints at Ephesus. Not one holy person, but a room full of ordinary ones, learning it from each other, mostly badly.</p>
 
-<div class="disclaimer">
-<p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
-<p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
-<p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
-</div>
+        <p>None of us is a saint alone. It is not a thing you achieve and then are. It is what happens to people who set themselves apart together and keep walking in the same direction long enough for it to show.</p>
 
-<div class="pdf-download">
-  <a href="/articles/pdf/an-interview-with-a-saint.pdf">Download as PDF</a>
-</div>
+        <p class="pull">Which is what she did. She walked into a room in a convent in Parramatta where she knew nobody, said the one true thing she had to say, and then spent a week bathing a man in a bed and praying with anyone who asked. She has never thought of it as remarkable. She would be embarrassed to read this.</p>
 
-</div>
+        <p>My sister Jessica is a saint. Not by herself. But then, nobody is.</p>
 
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+        <p class="hw-companion">A companion piece: <a href="/articles/sitting-with-a-sinner.html">Sitting with a Sinner</a>, on my other sister.</p>
+
+        <div class="hw-disclaimer">
+          <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+          <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+          <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+        </div>
+
+        <div class="pdf-download">
+          <a href="/articles/pdf/an-interview-with-a-saint.pdf">Download as PDF</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 </body>
 </html>

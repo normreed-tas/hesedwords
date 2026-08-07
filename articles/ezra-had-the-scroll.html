@@ -3,382 +3,186 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ezra Had the Scroll &middot; Hesed Words</title>
+<title>Ezra Had the Scroll — Hesed Words</title>
 <meta name="description" content="The name-lists in Nehemiah 8 are not a disruption of the restoration narrative. They are its content.">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-:root{
-  --parchment:#e8dfc8;
-  --parchment-page:#f3ecda;
-  --gold:#c9a84c;
-  --gold-deep:#A67C2E;
-  --gold-soft:#D9C49A;
-  --ink:#2A2218;
-  --ink-soft:#4A3E2C;
-  --muted:#6B5C45;
-  --rule:#C8B58F;
-}
-*{box-sizing:border-box;}
-body{
-  margin:0;
-  background:var(--parchment);
-  color:var(--ink);
-  font-family:'Cormorant Garamond','Garamond',Georgia,serif;
-  font-size:20px;
-  line-height:1.68;
-  -webkit-font-smoothing:antialiased;
-}
-
-/* ── Site nav ── */
-nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-nav.hw-nav a:hover{opacity:1;color:#fff;}
-nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-/* ── Footer ── */
-footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-.page{
-  max-width:760px;
-  margin:0 auto;
-  background:var(--parchment-page);
-  padding:72px 64px 40px;
-  border-left:1px solid var(--rule);
-  border-right:1px solid var(--rule);
-}
-
-/* ── Title block ── */
-.eyebrow{
-  font-family:'Cinzel',serif;
-  font-size:11px;
-  letter-spacing:.3em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-  text-align:center;
-  margin-bottom:22px;
-}
-h1{
-  font-family:'Cinzel',serif;
-  font-weight:500;
-  font-size:44px;
-  line-height:1.15;
-  letter-spacing:.03em;
-  text-align:center;
-  margin:0 0 14px;
-  color:var(--ink);
-}
-.subtitle{
-  text-align:center;
-  font-style:italic;
-  font-size:21px;
-  color:var(--ink-soft);
-  margin:0 0 26px;
-}
-.motif{
-  text-align:center;
-  color:var(--gold);
-  letter-spacing:.6em;
-  font-size:14px;
-  margin:0 0 22px;
-}
-.byline{
-  text-align:center;
-  font-family:'Cinzel',serif;
-  font-size:10px;
-  letter-spacing:.24em;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin:0 0 52px;
-}
-
-/* ── Prologue ── */
-.prologue{
-  font-style:italic;
-  color:var(--ink-soft);
-  font-size:20px;
-  margin:0 0 48px;
-}
-
-/* ── Sections ── */
-h2{
-  font-family:'Cinzel',serif;
-  font-weight:500;
-  font-size:22px;
-  letter-spacing:.08em;
-  color:var(--ink);
-  margin:52px 0 8px;
-  padding-bottom:10px;
-  border-bottom:1px solid var(--gold-soft);
-}
-p{margin:0 0 20px;}
-
-.section-open::first-letter{
-  font-family:'Cinzel',serif;
-  font-size:56px;
-  line-height:.86;
-  float:left;
-  padding:6px 10px 0 0;
-  color:var(--gold-deep);
-}
-
-/* ── Scripture block ── */
-blockquote.scripture{
-  margin:32px 0;
-  padding:4px 0 4px 26px;
-  border-left:3px solid var(--gold);
-  font-size:21px;
-  color:var(--ink-soft);
-}
-blockquote.scripture p{margin:0 0 8px;}
-blockquote.scripture .ref{
-  font-family:'Cinzel',serif;
-  font-size:10px;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin:0;
-}
-
-/* ── Name lists ── */
-.names{
-  font-size:19px;
-  color:var(--ink-soft);
-  margin:0 0 20px;
-}
-
-/* ── Pull quote ── */
-.pull{
-  margin:44px 0;
-  padding:22px 0;
-  border-top:1px solid var(--gold-soft);
-  border-bottom:1px solid var(--gold-soft);
-  text-align:center;
-  font-family:'Cinzel',serif;
-  font-size:19px;
-  letter-spacing:.05em;
-  line-height:1.5;
-  color:var(--gold-deep);
-}
-
-/* ── Divider ── */
-.divider{
-  text-align:center;
-  color:var(--gold);
-  letter-spacing:.6em;
-  font-size:14px;
-  margin:44px 0;
-}
-
-/* ── Warrant note ── */
-.warrant{
-  margin:32px 0;
-  padding:16px 22px;
-  background:#efe6cf;
-  border-left:2px solid var(--gold-soft);
-  font-style:italic;
-  font-size:17px;
-  color:var(--muted);
-  line-height:1.6;
-}
-.warrant p{margin:0;}
-
-/* ── Prayer ── */
-.prayer{
-  margin:52px 0 40px;
-  text-align:center;
-  font-style:italic;
-  font-size:21px;
-  color:var(--ink-soft);
-  line-height:1.75;
-}
-.prayer p{margin:0 0 18px;}
-.prayer .amen{
-  font-family:'Cinzel',serif;
-  font-style:normal;
-  font-size:12px;
-  letter-spacing:.28em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-  margin-top:26px;
-}
-
-/* ── AI acknowledgment ── */
-.ai-note{
-  margin:64px 0 0;
-  padding-top:26px;
-  border-top:1px solid var(--rule);
-  font-style:italic;
-  font-size:15px;
-  line-height:1.65;
-  color:var(--muted);
-}
-.ai-note p{margin:0 0 12px;}
-.ai-note .label{
-  font-family:'Cinzel',serif;
-  font-style:normal;
-  font-size:10px;
-  letter-spacing:.24em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-  margin-bottom:14px;
-}
-
-/* ── Mobile ── */
-@media (max-width:640px){
-  body{font-size:18px;}
-  .page{padding:44px 22px 28px;border-left:none;border-right:none;}
-  h1{font-size:31px;}
-  .subtitle{font-size:18px;}
-  h2{font-size:19px;}
-  blockquote.scripture{font-size:19px;padding-left:18px;}
-  .pull{font-size:16px;}
-  .prayer{font-size:19px;}
-}
-
-@media print{
-  body{background:#fff;}
-  nav.hw-nav,footer.hw-foot{display:none;}
-  .page{border:none;background:#fff;max-width:none;padding:0;}
-}
+  .hw-article-body p.first::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
+  }
+  .hw-article-body .break { text-align: center; color: var(--brass); letter-spacing: 0.6em; font-size: 14px; margin: 40px 0; }
+  .hw-article-body .warrant {
+    margin: 28px 0; padding: 16px 22px; background: var(--paper-hover); border-left: 2px solid var(--hairline);
+    font-style: italic; font-size: 15px; color: var(--muted); line-height: 1.6;
+  }
+  .hw-article-body .prayer { margin: 44px 0 32px; text-align: center; font-style: italic; color: var(--muted); line-height: 1.75; }
+  .hw-article-body .prayer p { margin: 0 0 16px; }
+  .hw-article-body .prayer .amen {
+    font-family: var(--font-mono); font-style: normal; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--brass); margin-top: 22px;
+  }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html">Reflections</a>
-  <a href="/articles.html" class="current">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<div class="page">
-
-  <div class="eyebrow">A Hesed Words Article</div>
-  <h1>Ezra Had the Scroll</h1>
-  <p class="subtitle">The names we skip in Nehemiah 8</p>
-  <p class="motif">&middot; &middot; &middot;</p>
-  <p class="byline">Norm Reed</p>
-
-  <p class="prologue">Twenty-six names sit in the middle of Nehemiah 8, and most of us read straight past them. They are not a pause before the action. They are the subject of the sentence that matters most.</p>
-
-  <h2>The Speed Bump</h2>
-
-  <p class="section-open">They gathered in the square before the Water Gate, and they asked for it. That is worth pausing over. Nobody summoned them. The people said to Ezra, <em>bring the book</em> &mdash; and he brought it, and stood on a wooden platform they had built for the purpose, and read from early morning until midday to men and women and all who could understand.</p>
-
-  <p>Then the text stops for a list of names.</p>
-
-  <p class="names">Mattithiah, Shema, Anaiah, Uriah, Hilkiah, Maaseiah on his right; Pedaiah, Mishael, Malchijah, Hashum, Hashbaddanah, Zechariah, Meshullam on his left. And a second list a few verses later &mdash; Jeshua, Bani, Sherebiah, Jamin, Akkub, Shabbethai, Hodiah, Maaseiah again, Kelita, Azariah, Jozabad, Hanan, Pelaiah.</p>
-
-  <p>Twenty-six names. Most of us have never said one of them aloud. The eye slides across them the way it slides across a licence plate, and lands gratefully on the next sentence that has a verb in it.</p>
-
-  <p>I want to be honest about that reflex before I argue against it. The list <em>is</em> a speed bump. It slows the chapter to a crawl at precisely the moment the story is finding its feet. Something in us wants to get on with it &mdash; to reach the weeping, the joy of the L<span style="font-variant:small-caps;">ord</span>, the food sent to those who had none. And the names sit there, unpronounceable, refusing to move.</p>
-
-  <p>Which turns out to be the point.</p>
-
-  <h2>The Middle Verb</h2>
-
-  <p class="section-open">Verse eight is one sentence long and contains the entire chapter.</p>
-
-  <blockquote class="scripture">
-    <p>They read from the book, from the Law of God, clearly, and they gave the sense, so that the people understood the reading.</p>
-    <p class="ref">Nehemiah 8:8 &middot; ESV</p>
-  </blockquote>
-
-  <p>Three verbs. <em>Read.</em> <em>Gave the sense.</em> <em>Understood.</em></p>
-
-  <p>Take them in order, because the order is doing work. The first verb belongs to Ezra on his platform. The third belongs to the crowd. And between them &mdash; bridging them, without which the first never reaches the third &mdash; sits the middle verb.</p>
-
-  <p><em>They gave the sense.</em></p>
-
-  <p>Who is <em>they</em>? The text has just told us. Jeshua, Bani, Sherebiah, Jamin, Akkub, Shabbethai, Hodiah, Maaseiah, Kelita, Azariah, Jozabad, Hanan, Pelaiah. The list we skipped is not a pause before the action. It is the subject of the sentence that matters most.</p>
-
-  <p>This is why the names are there. Not to slow us down for the sake of it, and not &mdash; as we sometimes tell ourselves &mdash; because ancient writers simply liked lists. They are there because the middle verb has to have a subject, and the subject has to have a name. <em>Giving the sense</em> is not a principle. It is not a value or a commitment or a ministry philosophy. It is thirteen men walking down off a platform and into a crowd, and standing close enough to a family to be heard.</p>
-
-  <div class="pull">Ezra had the scroll.<br>The Levites had the people.</div>
-
-  <p>We are inclined to rank these. The scroll is the higher office; the explaining is the servant work, the follow-up, what happens after the real event. But the sentence will not let us. Reading without sense-giving does not produce understanding. It produces a man on a platform, reading for six hours, to a crowd who go home unchanged and hungry.</p>
-
-  <h2>The Wall and the List</h2>
-
-  <p class="section-open">Five chapters earlier there is another list.</p>
-
-  <p>Nehemiah 3 is a wall built out of names. Eliashib and his brothers built the Sheep Gate. The men of Jericho built next to him. Zaccur son of Imri built next to them. The sons of Hassenaah built the Fish Gate; they laid its beams and set its doors, its bolts and its bars. On it goes, section by section, gate by gate, forty-two paragraphs of masonry with a name attached to every stretch.</p>
-
-  <p>And most of us skip that chapter too.</p>
-
-  <p>Set the two lists side by side and something opens up. Nehemiah 3: names attached to sections of wall. Nehemiah 8: names attached to sections of Scripture. Same literary move, five chapters apart &mdash; and the second one tells you what the first one was for.</p>
-
-  <p>Because the wall was never the restoration. It was the precondition. You cannot gather a people in a square if the square is rubble and the enemy walks in whenever he likes. The stones bought a place to stand. But a city with a wall and no Word is a fortified emptiness, and Nehemiah &mdash; who of all people had earned the right to admire his own masonry &mdash; knew it.</p>
-
-  <p>So the book performs the same gesture twice, deliberately. Here are the people who built the wall. Here are the people who opened the Book. Two lists, two labours, and the text refuses to tell you which one mattered more. It simply puts them in order, and lets you notice that the wall comes first and the Word comes last.</p>
-
-  <div class="warrant">
-    <p>The structural parallel between the two lists is visible on the page and does not depend on any particular theological frame. A reader who rejects everything else here can still see that Nehemiah builds by naming.</p>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a href="/reflections.html">Reflections</a>
+      <a class="current" href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
   </div>
+</header>
 
-  <h2>Who Is Not on the Platform</h2>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Article</div>
+      <div>Nehemiah 8</div>
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>Ezra Had the Scroll</h1>
+      <div class="hw-article-body">
+        <p class="verse">The names we skip in Nehemiah 8</p>
 
-  <p class="section-open">Read the platform list again and notice who is missing.</p>
+        <p>Twenty-six names sit in the middle of Nehemiah 8, and most of us read straight past them. They are not a pause before the action. They are the subject of the sentence that matters most.</p>
 
-  <p>Twenty-six names between verses four and seven. Nehemiah is not one of them. The governor &mdash; the man who wept in Susa, who inspected the ruins by night, who stood down Sanballat and armed the builders and put his own name on the book &mdash; is not standing beside Ezra when the scroll is opened. He is somewhere in the crowd.</p>
+        <h2>The Speed Bump</h2>
 
-  <p>He surfaces once, in verse nine, and only to stop the people crying.</p>
+        <p class="first">They gathered in the square before the Water Gate, and they asked for it. That is worth pausing over. Nobody summoned them. The people said to Ezra, <em>bring the book</em> &mdash; and he brought it, and stood on a wooden platform they had built for the purpose, and read from early morning until midday to men and women and all who could understand.</p>
 
-  <p>I do not want to make more of this than the text does. Nehemiah is not renouncing anything; there is no speech, no gesture, nothing marked. He simply is not on the platform. But the silence is loud in a book that has spent seven chapters watching him take charge of everything. The wall was his. The Word is not.</p>
+        <p>Then the text stops for a list of names.</p>
 
-  <p>There is a kind of leader who cannot let go of the front. Having built the thing, he must also open it, bless it, explain it, and be seen doing so. Nehemiah &mdash; whose competence is the engine of the entire first half of the book &mdash; steps back into the crowd on the day that actually matters, and lets a scribe and thirteen Levites do what he cannot do.</p>
+        <p>Mattithiah, Shema, Anaiah, Uriah, Hilkiah, Maaseiah on his right; Pedaiah, Mishael, Malchijah, Hashum, Hashbaddanah, Zechariah, Meshullam on his left. And a second list a few verses later &mdash; Jeshua, Bani, Sherebiah, Jamin, Akkub, Shabbethai, Hodiah, Maaseiah again, Kelita, Azariah, Jozabad, Hanan, Pelaiah.</p>
 
-  <p>That is not modesty. It is knowing what the wall was for.</p>
+        <p>Twenty-six names. Most of us have never said one of them aloud. The eye slides across them the way it slides across a licence plate, and lands gratefully on the next sentence that has a verb in it.</p>
 
-  <h2>The Last Few Feet</h2>
+        <p>I want to be honest about that reflex before I argue against it. The list <em>is</em> a speed bump. It slows the chapter to a crawl at precisely the moment the story is finding its feet. Something in us wants to get on with it &mdash; to reach the weeping, the joy of the Lord, the food sent to those who had none. And the names sit there, unpronounceable, refusing to move.</p>
 
-  <p class="section-open">So we come back to the names, and they have changed.</p>
+        <p>Which turns out to be the point.</p>
 
-  <p>Shabbethai. Hodiah. Pelaiah. I still cannot pronounce them with any confidence, and it no longer matters. What matters is where they were standing. Not on the platform where the reading was done and the record was made. Down among the people, close enough to be interrupted, close enough for a farmer to say <em>I don&rsquo;t follow</em> and be answered.</p>
+        <h2>The Middle Verb</h2>
 
-  <p>The reading was public. The understanding was not. Understanding happened in ones and twos, at the edges of the crowd, in the ordinary voice of a man who had come down off the platform to get within earshot of somebody&rsquo;s family.</p>
+        <p class="first">Verse eight is one sentence long and contains the entire chapter.</p>
 
-  <p>This is the part of the work that leaves no record. Ezra&rsquo;s reading is dated, located, and described. What Hodiah said to whoever was standing in front of him is gone. We have the name and nothing else &mdash; no words, no outcome, no measure of whether he did it well. The text keeps the name and loses the sentence.</p>
+        <p class="verse">They read from the book, from the Law of God, clearly, and they gave the sense, so that the people understood the reading. <em>Nehemiah 8:8</em></p>
 
-  <p>I have come to think that is the more honest arrangement. Most of what carries the Word the last few feet is like this. It is not preserved. It is not evaluated. It happens in a room, or across a table, or in a visit that lasts an hour and is over, and nobody writes it down, and it is the thing without which none of the rest arrives.</p>
+        <p>Three verbs. <em>Read.</em> <em>Gave the sense.</em> <em>Understood.</em></p>
 
-  <p>The scroll goes on the platform. The sense goes into the crowd. And the crowd is where people actually live &mdash; which is to say, where they are hungry, where they weep when they hear it, where somebody has to be sent home with food because they have none.</p>
+        <p>Take them in order, because the order is doing work. The first verb belongs to Ezra on his platform. The third belongs to the crowd. And between them &mdash; bridging them, without which the first never reaches the third &mdash; sits the middle verb.</p>
 
-  <p class="divider">&middot; &middot; &middot;</p>
+        <p><em>They gave the sense.</em></p>
 
-  <p>Ezra had the scroll. The Levites had the people.</p>
+        <p>Who is <em>they</em>? The text has just told us. Jeshua, Bani, Sherebiah, Jamin, Akkub, Shabbethai, Hodiah, Maaseiah, Kelita, Azariah, Jozabad, Hanan, Pelaiah. The list we skipped is not a pause before the action. It is the subject of the sentence that matters most.</p>
 
-  <p>Both are named. Only one is remembered. Neither is optional.</p>
+        <p>This is why the names are there. Not to slow us down for the sake of it, and not &mdash; as we sometimes tell ourselves &mdash; because ancient writers simply liked lists. They are there because the middle verb has to have a subject, and the subject has to have a name. <em>Giving the sense</em> is not a principle. It is not a value or a commitment or a ministry philosophy. It is thirteen men walking down off a platform and into a crowd, and standing close enough to a family to be heard.</p>
 
-  <div class="prayer">
-    <p>Lord, we have wanted the platform.<br>
-    We have wanted the scroll in our hands and the crowd before us,<br>
-    and we have called that serving you.</p>
+        <p class="pull">Ezra had the scroll.<br>The Levites had the people.</p>
 
-    <p>Teach us the middle verb.<br>
-    Teach us to come down off the platform<br>
-    and stand close enough to be interrupted &mdash;<br>
-    close enough that one family hears,<br>
-    close enough to be asked the question again.</p>
+        <p>We are inclined to rank these. The scroll is the higher office; the explaining is the servant work, the follow-up, what happens after the real event. But the sentence will not let us. Reading without sense-giving does not produce understanding. It produces a man on a platform, reading for six hours, to a crowd who go home unchanged and hungry.</p>
 
-    <p>You have never needed our names.<br>
-    You have only ever needed our feet.</p>
+        <h2>The Wall and the List</h2>
 
-    <p class="amen">Amen</p>
+        <p class="first">Five chapters earlier there is another list.</p>
+
+        <p>Nehemiah 3 is a wall built out of names. Eliashib and his brothers built the Sheep Gate. The men of Jericho built next to him. Zaccur son of Imri built next to them. The sons of Hassenaah built the Fish Gate; they laid its beams and set its doors, its bolts and its bars. On it goes, section by section, gate by gate, forty-two paragraphs of masonry with a name attached to every stretch.</p>
+
+        <p>And most of us skip that chapter too.</p>
+
+        <p>Set the two lists side by side and something opens up. Nehemiah 3: names attached to sections of wall. Nehemiah 8: names attached to sections of Scripture. Same literary move, five chapters apart &mdash; and the second one tells you what the first one was for.</p>
+
+        <p>Because the wall was never the restoration. It was the precondition. You cannot gather a people in a square if the square is rubble and the enemy walks in whenever he likes. The stones bought a place to stand. But a city with a wall and no Word is a fortified emptiness, and Nehemiah &mdash; who of all people had earned the right to admire his own masonry &mdash; knew it.</p>
+
+        <p>So the book performs the same gesture twice, deliberately. Here are the people who built the wall. Here are the people who opened the Book. Two lists, two labours, and the text refuses to tell you which one mattered more. It simply puts them in order, and lets you notice that the wall comes first and the Word comes last.</p>
+
+        <div class="warrant">
+          The structural parallel between the two lists is visible on the page and does not depend on any particular theological frame. A reader who rejects everything else here can still see that Nehemiah builds by naming.
+        </div>
+
+        <h2>Who Is Not on the Platform</h2>
+
+        <p class="first">Read the platform list again and notice who is missing.</p>
+
+        <p>Twenty-six names between verses four and seven. Nehemiah is not one of them. The governor &mdash; the man who wept in Susa, who inspected the ruins by night, who stood down Sanballat and armed the builders and put his own name on the book &mdash; is not standing beside Ezra when the scroll is opened. He is somewhere in the crowd.</p>
+
+        <p>He surfaces once, in verse nine, and only to stop the people crying.</p>
+
+        <p>I do not want to make more of this than the text does. Nehemiah is not renouncing anything; there is no speech, no gesture, nothing marked. He simply is not on the platform. But the silence is loud in a book that has spent seven chapters watching him take charge of everything. The wall was his. The Word is not.</p>
+
+        <p>There is a kind of leader who cannot let go of the front. Having built the thing, he must also open it, bless it, explain it, and be seen doing so. Nehemiah &mdash; whose competence is the engine of the entire first half of the book &mdash; steps back into the crowd on the day that actually matters, and lets a scribe and thirteen Levites do what he cannot do.</p>
+
+        <p>That is not modesty. It is knowing what the wall was for.</p>
+
+        <h2>The Last Few Feet</h2>
+
+        <p class="first">So we come back to the names, and they have changed.</p>
+
+        <p>Shabbethai. Hodiah. Pelaiah. I still cannot pronounce them with any confidence, and it no longer matters. What matters is where they were standing. Not on the platform where the reading was done and the record was made. Down among the people, close enough to be interrupted, close enough for a farmer to say <em>I don&rsquo;t follow</em> and be answered.</p>
+
+        <p>The reading was public. The understanding was not. Understanding happened in ones and twos, at the edges of the crowd, in the ordinary voice of a man who had come down off the platform to get within earshot of somebody&rsquo;s family.</p>
+
+        <p>This is the part of the work that leaves no record. Ezra&rsquo;s reading is dated, located, and described. What Hodiah said to whoever was standing in front of him is gone. We have the name and nothing else &mdash; no words, no outcome, no measure of whether he did it well. The text keeps the name and loses the sentence.</p>
+
+        <p>I have come to think that is the more honest arrangement. Most of what carries the Word the last few feet is like this. It is not preserved. It is not evaluated. It happens in a room, or across a table, or in a visit that lasts an hour and is over, and nobody writes it down, and it is the thing without which none of the rest arrives.</p>
+
+        <p>The scroll goes on the platform. The sense goes into the crowd. And the crowd is where people actually live &mdash; which is to say, where they are hungry, where they weep when they hear it, where somebody has to be sent home with food because they have none.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>Ezra had the scroll. The Levites had the people.</p>
+
+        <p>Both are named. Only one is remembered. Neither is optional.</p>
+
+        <div class="prayer">
+          <p>Lord, we have wanted the platform.<br>
+          We have wanted the scroll in our hands and the crowd before us,<br>
+          and we have called that serving you.</p>
+
+          <p>Teach us the middle verb.<br>
+          Teach us to come down off the platform<br>
+          and stand close enough to be interrupted &mdash;<br>
+          close enough that one family hears,<br>
+          close enough to be asked the question again.</p>
+
+          <p>You have never needed our names.<br>
+          You have only ever needed our feet.</p>
+
+          <p class="amen">Amen</p>
+        </div>
+
+        <div class="hw-disclaimer">
+          <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+          <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+          <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+        </div>
+
+      </div>
+    </div>
   </div>
+</article>
 
-  <div class="ai-note">
-    <p class="label">A Note on Method</p>
-    <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
-    <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
-    <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
   </div>
-
-</div>
-
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+</footer>
 
 </body>
 </html>
