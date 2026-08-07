@@ -1,250 +1,97 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>I Shall Be Satisfied — Hesedwords</title>
-  <meta name="description" content="A reflection on Psalm 17:15 — and the difference between a prediction and a choice.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --parchment:     #FAF5E8;
-      --parchment-mid: #F2EAD4;
-      --gold:          #A67C2E;
-      --gold-border:   #C8B58F;
-      --gold-rule:     #D9C49A;
-      --ink:           #2A2218;
-      --ink-mid:       #4A3E2C;
-      --ink-light:     #6B5C45;
-      --cinzel:        'Cinzel', 'Palatino Linotype', Georgia, serif;
-      --cormorant:     'Cormorant Garamond', 'Garamond', Georgia, serif;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: var(--parchment);
-      color: var(--ink);
-      font-family: var(--cormorant);
-      font-size: 20px;
-      line-height: 1.78;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── Site nav ── */
-    nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-    nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-    nav.hw-nav a:hover{opacity:1;color:#fff;}
-    nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-
-    /* ── Reflection wrapper ── */
-    .reflection-wrap {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 64px 40px 90px;
-    }
-
-    /* ── Title block ── */
-    .reflection-eyebrow {
-      font-family: var(--cinzel);
-      font-size: 10px;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: var(--gold);
-      text-align: center;
-      margin-bottom: 22px;
-    }
-    .reflection-title {
-      font-family: var(--cinzel);
-      font-size: 36px;
-      font-weight: 500;
-      letter-spacing: 0.03em;
-      color: var(--ink);
-      text-align: center;
-      line-height: 1.2;
-      margin-bottom: 18px;
-    }
-    .reflection-subtitle {
-      font-family: var(--cormorant);
-      font-style: italic;
-      font-size: 19px;
-      color: var(--ink-mid);
-      text-align: center;
-      line-height: 1.45;
-      margin-bottom: 28px;
-    }
-    .reflection-ornament {
-      text-align: center;
-      color: var(--gold);
-      font-size: 14px;
-      letter-spacing: 0.7em;
-      margin: 0 0 20px;
-    }
-    .reflection-byline {
-      font-family: var(--cinzel);
-      font-size: 10px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      text-align: center;
-      margin-bottom: 56px;
-    }
-
-    /* ── Body ── */
-    .reflection-body p {
-      margin-bottom: 1.45em;
-      font-size: 20px;
-      line-height: 1.78;
-      color: var(--ink);
-    }
-
-    /* ── Drop cap ── */
-    .drop-cap::first-letter {
-      font-family: var(--cinzel);
-      font-size: 4.4em;
-      font-weight: 400;
-      float: left;
-      line-height: 0.76;
-      margin: 0.1em 0.12em 0 0;
-      color: var(--gold);
-    }
-
-    /* ── Scripture block ── */
-    .scripture-block {
-      border-left: 3px solid var(--gold);
-      padding: 14px 20px 14px 28px;
-      margin: 30px 0;
-      background: rgba(166, 124, 46, 0.04);
-      border-radius: 0 2px 2px 0;
-    }
-    .scripture-block p {
-      font-style: italic;
-      font-size: 19px !important;
-      color: var(--ink-mid) !important;
-      margin-bottom: 0 !important;
-      line-height: 1.65 !important;
-    }
-    .scripture-ref {
-      display: block;
-      font-family: var(--cinzel);
-      font-size: 9.5px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-top: 12px;
-      text-align: right;
-    }
-
-    /* ── Article link ── */
-    .article-link {
-      border-top: 1px solid var(--gold-rule);
-      margin-top: 52px;
-      padding-top: 36px;
-      text-align: center;
-    }
-    .article-link p {
-      font-family: var(--cinzel);
-      font-size: 10px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      margin-bottom: 12px !important;
-    }
-    .article-link a {
-      font-family: var(--cormorant);
-      font-style: italic;
-      font-size: 19px;
-      color: var(--gold);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-rule);
-      padding-bottom: 2px;
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .article-link a:hover {
-      color: var(--ink-mid);
-      border-bottom-color: var(--ink-mid);
-    }
-
-    /* ── Footer ── */
-    footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-    /* ── Mobile ── */
-    @media (max-width: 640px) {
-      .reflection-wrap { padding: 44px 24px 64px; }
-      .reflection-title { font-size: 26px; }
-      .reflection-subtitle { font-size: 17px; }
-      .reflection-body p { font-size: 18px; }
-      .scripture-block p { font-size: 17px !important; }
-      .drop-cap::first-letter { font-size: 3.8em; }
-    }
-
-    /* ── Print ── */
-    @media print {
-      .hw-nav, .hw-foot { display: none; }
-      body { background: white; }
-      .reflection-wrap { padding: 0; max-width: 100%; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I Shall Be Satisfied — Psalm 17 — Hesed Words</title>
+<meta name="description" content="A reflection on Psalm 17:15 — and the difference between a prediction and a choice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
+<style>
+  .hw-article-body p.first::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
+  }
+  .hw-article-body .read-more {
+    margin-top: 44px; padding: 26px 30px; background: var(--paper-hover); border-left: 3px solid var(--brass);
+  }
+  .hw-article-body .read-more .label {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 10px;
+  }
+  .hw-article-body .read-more a { font-family: var(--font-mono); font-size: 12px; color: var(--oxblood); border-bottom: 1px solid var(--hairline); }
+  .hw-article-body .read-more a:hover { border-bottom-color: var(--oxblood); }
+</style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html" class="current">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
+  </div>
+</header>
 
-  <main class="reflection-wrap">
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>
+      <div>Psalm 17</div>
+      <div>Jun 2026</div>
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>I Shall Be Satisfied</h1>
+      <div class="hw-article-body">
+        <p class="first">There is a verb in this psalm I keep turning over, the way you turn a stone in your pocket without quite deciding to put it down.</p>
 
-    <header>
-      <p class="reflection-eyebrow">A Hesedwords Reflection</p>
-      <h1 class="reflection-title">I Shall Be Satisfied</h1>
-      <p class="reflection-subtitle">A reflection on Psalm 17:15</p>
-      <p class="reflection-ornament">✦ &nbsp; ✦ &nbsp; ✦</p>
-      <p class="reflection-byline">Norm Reed &middot; June 2026</p>
-    </header>
+        <p>David is being hunted. Men who wish him dead are circling, and the maddening detail is that they are thriving while they do it &mdash; full houses, full quivers, nothing in their circumstances suggesting they have anything to answer for. He could ask God to even the score. He asks for something else.</p>
 
-    <article class="reflection-body">
+        <p class="verse">You fill their womb with treasure; they are satisfied with children, and they leave their abundance to their infants. As for me, I shall behold your face in righteousness; when I awake, I shall be satisfied with your likeness. <em>Psalm 17:14&ndash;15</em></p>
 
-      <p class="drop-cap">There is a verb in this psalm I keep turning over, the way you turn a stone in your pocket without quite deciding to put it down.</p>
+        <p>Satisfied. The same word, twice, in two verses. Their bellies are full &mdash; <em>sava</em>. He will be full &mdash; <em>sava</em> &mdash; of something else entirely. I had always read that as a tidy contrast and moved on. It is only lately that I have stopped to ask what kind of statement &ldquo;I shall be satisfied&rdquo; actually is.</p>
 
-      <p>David is being hunted. Men who wish him dead are circling, and the maddening detail is that they are thriving while they do it &mdash; full houses, full quivers, nothing in their circumstances suggesting they have anything to answer for. He could ask God to even the score. He asks for something else.</p>
+        <p>Because it is not quite the plain future it looks like in English. The verb carries an extra letter in the Hebrew &mdash; a small grammatical flourish that turns it from prediction into resolve. Not <em>this will happen to me</em> so much as <em>I have decided this is what will fill me</em>. David is not forecasting his own contentment. He is choosing, in the middle of a circumstance that gives him every reason to choose otherwise, what he will let satisfy him.</p>
 
-      <div class="scripture-block">
-        <p>You fill their womb with treasure; they are satisfied with children, and they leave their abundance to their infants. As for me, I shall behold your face in righteousness; when I awake, I shall be satisfied with your likeness.</p>
-        <span class="scripture-ref">Psalm 17:14&ndash;15 &middot; ESV</span>
+        <p>I notice how much of my own praying has been the first kind and not the second. Reporting a hoped-for outcome rather than declaring an aimed-at one. There is a difference between asking God to make me content and telling him what I have decided will content me &mdash; and the second is harder, because it commits you before the circumstances have cooperated.</p>
+
+        <p>The other word worth sitting with is <em>likeness</em> &mdash; <em>temunah</em>. It is not a common word. It is the word used of what Moses alone was shown of God, and the word used to explain why Israel saw none of it at Horeb, only heard a voice. David is reaching, quietly, for something that was supposed to be exceptional. He does not ask to be told about God. He asks to see what Moses saw.</p>
+
+        <p class="pull">I find I want to make David&rsquo;s choice and not just admire it. To decide, ahead of whatever circumstance is doing the hunting at the time, what I will let fill me. Not the full house. The face.</p>
+
+        <p>There is one more word in the verse I have not let go of &mdash; <em>when I awake</em>. It sent me further than I expected.</p>
+
+        <div class="read-more">
+          <span class="label">There is more &mdash; if you want to follow it further</span>
+          <a href="/articles/not-finished-waking.html">Not Finished Waking &rarr;</a>
+        </div>
+
       </div>
+    </div>
+  </div>
+</article>
 
-      <p>Satisfied. The same word, twice, in two verses. Their bellies are full &mdash; <em>sava</em>. He will be full &mdash; <em>sava</em> &mdash; of something else entirely. I had always read that as a tidy contrast and moved on. It is only lately that I have stopped to ask what kind of statement &ldquo;I shall be satisfied&rdquo; actually is.</p>
-
-      <p>Because it is not quite the plain future it looks like in English. The verb carries an extra letter in the Hebrew &mdash; a small grammatical flourish that turns it from prediction into resolve. Not <em>this will happen to me</em> so much as <em>I have decided this is what will fill me</em>. David is not forecasting his own contentment. He is choosing, in the middle of a circumstance that gives him every reason to choose otherwise, what he will let satisfy him.</p>
-
-      <p>I notice how much of my own praying has been the first kind and not the second. Reporting a hoped-for outcome rather than declaring an aimed-at one. There is a difference between asking God to make me content and telling him what I have decided will content me &mdash; and the second is harder, because it commits you before the circumstances have cooperated.</p>
-
-      <p>The other word worth sitting with is <em>likeness</em> &mdash; <em>temunah</em>. It is not a common word. It is the word used of what Moses alone was shown of God, and the word used to explain why Israel saw none of it at Horeb, only heard a voice. David is reaching, quietly, for something that was supposed to be exceptional. He does not ask to be told about God. He asks to see what Moses saw.</p>
-
-      <p>I find I want to make David&rsquo;s choice and not just admire it. To decide, ahead of whatever circumstance is doing the hunting at the time, what I will let fill me. Not the full house. The face.</p>
-
-      <p>There is one more word in the verse I have not let go of &mdash; <em>when I awake</em>. It sent me further than I expected.</p>
-
-      <div class="article-link">
-        <p>There is more &mdash; if you want to follow it further</p>
-        <a href="/articles/not-finished-waking.html">
-          Not Finished Waking &nbsp;&rarr;
-        </a>
-      </div>
-
-    </article>
-
-  </main>
-
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 </body>
 </html>
