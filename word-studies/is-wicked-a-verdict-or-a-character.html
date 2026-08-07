@@ -7,142 +7,135 @@
 <meta name="description" content="A word study on rasha' — the Hebrew word behind 'wicked', and the courtroom English lost.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-:root{
-  --parchment:#e8dfc8;
-  --parchment-page:#f3ecda;
-  --gold:#c9a84c;
-  --gold-deep:#A67C2E;
-  --gold-soft:#D9C49A;
-  --muted:#6B5C45;
-  --rule:#C8B58F;
-  --ink:#2b2419;
-}
-*{box-sizing:border-box;}
-body{margin:0;background:var(--parchment);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:1.24rem;line-height:1.72;}
-
-nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-nav.hw-nav a:hover{opacity:1;color:#fff;}
-nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-
-.wrap{max-width:39rem;margin:0 auto;padding:3.4rem 1.5rem 1rem;background:var(--parchment-page);}
-@media(min-width:46rem){.wrap{padding:4.6rem 3.6rem 1rem;margin-top:2.6rem;box-shadow:0 1px 40px rgba(60,45,20,.10);}}
-
-.kicker{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);text-align:center;margin-bottom:1.4rem;}
-.hebrew{font-size:3.1rem;line-height:1.1;text-align:center;color:var(--gold-deep);margin:0 0 .35rem;direction:rtl;}
-.translit{font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);text-align:center;margin:0 0 1.8rem;}
-h1{font-family:'Cinzel',serif;font-weight:600;font-size:1.72rem;line-height:1.3;text-align:center;margin:0 0 1.5rem;}
-.rule-orn{width:4.5rem;height:1px;background:var(--rule);margin:0 auto 2.4rem;}
-.byline{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-align:center;margin:-1.75rem 0 2.6rem;}
-
-p{margin:0 0 1.28rem;}
-h2{font-family:'Cinzel',serif;font-weight:600;font-size:.86rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin:2.9rem 0 1.25rem;}
-.scripture{font-style:italic;color:var(--muted);margin:1.7rem 0;padding-left:1.15rem;border-left:2px solid var(--gold-soft);}
-
-a.gloss{color:inherit;text-decoration:none;border-bottom:1px dotted var(--gold-deep);}
-a.gloss:hover{color:var(--gold-deep);}
-
-.crosslink{border:1px solid var(--rule);background:var(--parchment);padding:1.4rem 1.5rem;margin:3rem 0 1rem;font-size:1.06rem;}
-.crosslink p{margin:0 0 .55rem;}
-.crosslink p:last-child{margin:0;}
-.crosslink .lbl{font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);display:block;margin-bottom:.75rem;}
-.crosslink a{color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold-soft);}
-.crosslink a:hover{border-bottom-color:var(--gold-deep);}
-
-.disclaimer{border-top:1px solid var(--rule);margin-top:3.2rem;padding-top:1.7rem;font-size:.98rem;color:var(--muted);}
-.disclaimer p{margin:0 0 .85rem;}
-
-footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+  .hw-article-body .word-heading { text-align: center; margin-bottom: 40px; }
+  .hw-article-body .word-heading .lang { font-family: var(--font-heb); font-size: 34px; color: var(--muted); direction: rtl; margin: 0 0 6px; }
+  .hw-article-body .word-heading .translit { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); margin: 0; }
+  .hw-article-body h2 {
+    font-family: var(--font-mono); font-weight: 500; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--brass); margin: 44px 0 18px;
+  }
+  .hw-article-body .crosslink { border: 1px solid var(--hairline); background: var(--paper-hover); padding: 22px 24px; margin: 40px 0 16px; }
+  .hw-article-body .crosslink p { margin: 0 0 8px; }
+  .hw-article-body .crosslink p:last-child { margin: 0; }
+  .hw-article-body .crosslink .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 10px; }
+  .hw-article-body .crosslink a { color: var(--oxblood); text-decoration: none; border-bottom: 1px solid var(--hairline); }
+  .hw-article-body .crosslink a:hover { border-bottom-color: var(--oxblood); }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a class="current" href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<div class="wrap">
-
-  <div class="kicker">Word Study &middot; Hebrew</div>
-  <div class="hebrew">רָשָׁע</div>
-  <div class="translit">rasha&rsquo;</div>
-  <h1>Is &ldquo;Wicked&rdquo; a Verdict or a Character?</h1>
-  <div class="rule-orn"></div>
-  <div class="byline">Norm Reed</div>
-
-  <p>My grandchildren use <em>wicked</em> to mean excellent. That skateboard trick was wicked. That meal was wicked. The word has been hollowed out and refilled with its opposite, which is the sort of thing English does when nobody is watching.</p>
-
-  <p>That drift is recent and obvious enough to be harmless. The older one is neither.</p>
-
-  <p>Ask most readers what <em>wicked</em> means in the Bible and they will describe a kind of person. Someone cruel, or corrupt, or given over to evil — a settled character, identifiable by what they are. The word names a type. You can picture them.</p>
-
-  <p>The Hebrew behind it does not start there. It starts in a courtroom.</p>
-
-  <h2>The Pair</h2>
-
-  <p><a class="gloss" href="/glossary.html#rasha"><em>Rasha&rsquo;</em></a> comes as half of a pair. Its opposite is <a class="gloss" href="/glossary.html#tzaddiq"><em>tzaddiq</em></a>, and the two words belong together the way plaintiff and defendant do.</p>
-
-  <p>Neither begins as a description of moral quality. <em>Tzaddiq</em> is the one who is in the right — whose case stands, who is vindicated when the matter is examined. <em>Rasha&rsquo;</em> is the one in the wrong: the guilty party, the one against whom the verdict goes. The words answer a question that has been put to somebody. Which way did it fall?</p>
-
-  <p>This is why the pair appears so often in contexts of judgement rather than character. They are not two kinds of people. They are two outcomes.</p>
-
-  <p>And a verdict, unlike a character trait, requires someone to deliver it.</p>
-
-  <h2>The Evidence Is in the Verbs</h2>
-
-  <p>Deuteronomy 25:1 sets out what a court is for: when there is a dispute and the parties come before the judges, they are to <em>justify the righteous and condemn the wicked</em>. Both halves of that sentence are verbs formed from the two nouns. The judges <em>tzaddiq</em> the <em>tzaddiq</em> and <em>rasha&rsquo;</em> the <em>rasha&rsquo;</em> — they declare which is which. The words are not descriptions the judges happen to apply. They are the finding.</p>
-
-  <p>Solomon prays the same way at the dedication of the temple. <em>Condemn the guilty… and vindicate the righteous</em> (1 Kings 8:32) — asking God to do at the highest bench what the local judges do at the gate.</p>
-
-  <p>And Exodus 23:7 shows what happens when the machinery fails: <em>I will not acquit the wicked.</em> The whole force of that warning depends on <em>rasha&rsquo;</em> meaning the one who is actually guilty. A court can get it wrong. God will not.</p>
-
-  <p>Three texts, three courtrooms. This is where the word lives.</p>
-
-  <h2>How a Verdict Becomes a Type</h2>
-
-  <p>But that is not the whole picture, and it would be dishonest to stop there.</p>
-
-  <p>Open the Psalms or Proverbs and <em>rasha&rsquo;</em> behaves differently. It is no longer a finding delivered in a particular case. It has become a standing description of a kind of person — one who plots against the righteous, who borrows and does not repay, whose way perishes. Proverbs sets the <em>rasha&rsquo;</em> against the <em>tzaddiq</em> line after line as two settled types, two roads, two ends.</p>
-
-  <p>The shift is real and worth naming rather than explaining away.</p>
-
-  <p>What has happened, I think, is not that the word changed its meaning but that the courtroom got larger. If God is the judge, then the verdict is not confined to one dispute at one gate. It is a standing assessment of a life. The wisdom writers are not abandoning the forensic sense; they are extending it to its widest possible jurisdiction. The <em>rasha&rsquo;</em> in Proverbs is still someone against whom a finding has gone. The bench has simply moved.</p>
-
-  <p>What the English word lost, then, was not the character sense. English kept that. What English lost was the courtroom that produced it — and with it, the awareness that somebody had to declare the verdict, and that somebody could get it wrong.</p>
-
-  <h2>So: Verdict or Character?</h2>
-
-  <p>Verdict first, and character second — the character is what a verdict looks like when it has been extended across a whole life. But the order matters, because the order is what English dropped.</p>
-
-  <p>If <em>wicked</em> is fundamentally a character trait, it is something you can identify by looking. You inspect a person, you assess what they are, you apply the label. That is roughly how the word functions in ordinary use, and it is how most of us read it in Scripture without noticing we are doing it.</p>
-
-  <p>If <em>wicked</em> is fundamentally a verdict, then someone is always doing the declaring. And a declaration can be made wrongly. It can be made by a court that has been paid, or that is not listening, or that decided before the hearing began. Exodus 23:7 exists because this happens.</p>
-
-  <p>Which is why the psalm that puts the question most sharply puts it to the judges. Psalm 58 opens by asking whether those who decree are decreeing rightly — and then names them, of all things, <em>rasha&rsquo;</em>. The ones who deliver the verdict have had the verdict delivered against them.</p>
-
-  <div class="crosslink">
-    <span class="lbl">Where this goes next</span>
-    <p><a href="/articles/what-did-jesus-call-wicked.html">What Did Jesus Call Wicked?</a> — Psalm 82, the seven woes, and the same address delivered in person.</p>
-    <p>And the reflection this came out of: <a href="/reflections/what-is-wicked-in-this-story.html">What Is Wicked in This Story?</a></p>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a class="current" href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
   </div>
+</header>
 
-  <div class="disclaimer">
-    <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
-    <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
-    <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Word Study</div>
+      <div>Hebrew</div>
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>Is &ldquo;Wicked&rdquo; a Verdict or a Character?</h1>
+      <div class="hw-article-body">
+        <div class="word-heading">
+          <p class="lang">רָשָׁע</p>
+          <p class="translit">rasha&rsquo;</p>
+        </div>
+
+        <p>My grandchildren use <em>wicked</em> to mean excellent. That skateboard trick was wicked. That meal was wicked. The word has been hollowed out and refilled with its opposite, which is the sort of thing English does when nobody is watching.</p>
+
+        <p>That drift is recent and obvious enough to be harmless. The older one is neither.</p>
+
+        <p>Ask most readers what <em>wicked</em> means in the Bible and they will describe a kind of person. Someone cruel, or corrupt, or given over to evil &mdash; a settled character, identifiable by what they are. The word names a type. You can picture them.</p>
+
+        <p>The Hebrew behind it does not start there. It starts in a courtroom.</p>
+
+        <h2>The Pair</h2>
+
+        <p><a class="gloss" href="/glossary.html#rasha"><em>Rasha&rsquo;</em></a> comes as half of a pair. Its opposite is <a class="gloss" href="/glossary.html#tzaddiq"><em>tzaddiq</em></a>, and the two words belong together the way plaintiff and defendant do.</p>
+
+        <p>Neither begins as a description of moral quality. <em>Tzaddiq</em> is the one who is in the right &mdash; whose case stands, who is vindicated when the matter is examined. <em>Rasha&rsquo;</em> is the one in the wrong: the guilty party, the one against whom the verdict goes. The words answer a question that has been put to somebody. Which way did it fall?</p>
+
+        <p>This is why the pair appears so often in contexts of judgement rather than character. They are not two kinds of people. They are two outcomes.</p>
+
+        <p>And a verdict, unlike a character trait, requires someone to deliver it.</p>
+
+        <h2>The Evidence Is in the Verbs</h2>
+
+        <p>Deuteronomy 25:1 sets out what a court is for: when there is a dispute and the parties come before the judges, they are to <em>justify the righteous and condemn the wicked</em>. Both halves of that sentence are verbs formed from the two nouns. The judges <em>tzaddiq</em> the <em>tzaddiq</em> and <em>rasha&rsquo;</em> the <em>rasha&rsquo;</em> &mdash; they declare which is which. The words are not descriptions the judges happen to apply. They are the finding.</p>
+
+        <p>Solomon prays the same way at the dedication of the temple. <em>Condemn the guilty&hellip; and vindicate the righteous</em> (1 Kings 8:32) &mdash; asking God to do at the highest bench what the local judges do at the gate.</p>
+
+        <p>And Exodus 23:7 shows what happens when the machinery fails: <em>I will not acquit the wicked.</em> The whole force of that warning depends on <em>rasha&rsquo;</em> meaning the one who is actually guilty. A court can get it wrong. God will not.</p>
+
+        <p>Three texts, three courtrooms. This is where the word lives.</p>
+
+        <h2>How a Verdict Becomes a Type</h2>
+
+        <p>But that is not the whole picture, and it would be dishonest to stop there.</p>
+
+        <p>Open the Psalms or Proverbs and <em>rasha&rsquo;</em> behaves differently. It is no longer a finding delivered in a particular case. It has become a standing description of a kind of person &mdash; one who plots against the righteous, who borrows and does not repay, whose way perishes. Proverbs sets the <em>rasha&rsquo;</em> against the <em>tzaddiq</em> line after line as two settled types, two roads, two ends.</p>
+
+        <p>The shift is real and worth naming rather than explaining away.</p>
+
+        <p>What has happened, I think, is not that the word changed its meaning but that the courtroom got larger. If God is the judge, then the verdict is not confined to one dispute at one gate. It is a standing assessment of a life. The wisdom writers are not abandoning the forensic sense; they are extending it to its widest possible jurisdiction. The <em>rasha&rsquo;</em> in Proverbs is still someone against whom a finding has gone. The bench has simply moved.</p>
+
+        <p>What the English word lost, then, was not the character sense. English kept that. What English lost was the courtroom that produced it &mdash; and with it, the awareness that somebody had to declare the verdict, and that somebody could get it wrong.</p>
+
+        <h2>So: Verdict or Character?</h2>
+
+        <p>Verdict first, and character second &mdash; the character is what a verdict looks like when it has been extended across a whole life. But the order matters, because the order is what English dropped.</p>
+
+        <p>If <em>wicked</em> is fundamentally a character trait, it is something you can identify by looking. You inspect a person, you assess what they are, you apply the label. That is roughly how the word functions in ordinary use, and it is how most of us read it in Scripture without noticing we are doing it.</p>
+
+        <p>If <em>wicked</em> is fundamentally a verdict, then someone is always doing the declaring. And a declaration can be made wrongly. It can be made by a court that has been paid, or that is not listening, or that decided before the hearing began. Exodus 23:7 exists because this happens.</p>
+
+        <p class="pull">Which is why the psalm that puts the question most sharply puts it to the judges. Psalm 58 opens by asking whether those who decree are decreeing rightly &mdash; and then names them, of all things, <em>rasha&rsquo;</em>. The ones who deliver the verdict have had the verdict delivered against them.</p>
+
+        <div class="crosslink">
+          <span class="lbl">Where this goes next</span>
+          <p><a href="/articles/what-did-jesus-call-wicked.html">What Did Jesus Call Wicked?</a> &mdash; Psalm 82, the seven woes, and the same address delivered in person.</p>
+          <p>And the reflection this came out of: <a href="/reflections/what-is-wicked-in-this-story.html">What Is Wicked in This Story?</a></p>
+        </div>
+
+        <div class="hw-disclaimer">
+          <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+          <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+          <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+        </div>
+
+      </div>
+    </div>
   </div>
+</article>
 
-</div>
-
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 </body>
 </html>
