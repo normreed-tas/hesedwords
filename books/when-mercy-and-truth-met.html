@@ -1,993 +1,486 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>When Mercy and Truth Met — Norm Reed</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-  <style>
-    /* ── CSS variables ── */
-    :root {
-      --parchment: #e8dfc8;
-      --parchment-page: #f3ecda;
-      --parchment-light: #faf6ed;
-      --gold: #c9a84c;
-      --gold-deep: #A67C2E;
-      --gold-soft: #D9C49A;
-      --muted: #6B5C45;
-      --rule: #C8B58F;
-      --ink: #2A2218;
-      --ink-light: #4A3E2C;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When Mercy and Truth Met — Hesed Words</title>
+<meta name="description" content="A theological exploration of Psalm 85:10–13 — mercy, truth, righteousness and peace, traced through Scripture, medieval allegory, and the Onesimus Foundation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
+<style>
+  .hw-article-body p.first::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
+  }
 
-    /* ── Reset ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  .hw-article-body .toc { margin: 40px 0; padding: 26px 28px; background: var(--paper-hover); border-left: 3px solid var(--brass); }
+  .hw-article-body .toc h2 {
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--brass);
+    margin: 0 0 16px; border: none; padding: 0;
+  }
+  .hw-article-body .toc ol { list-style: none; margin: 0; padding: 0; }
+  .hw-article-body .toc li { font-family: var(--font-mono); font-size: 13px; margin-bottom: 8px; }
+  .hw-article-body .toc li a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--hairline); }
+  .hw-article-body .toc li a:hover { color: var(--oxblood); border-bottom-color: var(--oxblood); }
+  .hw-article-body .toc li.toc-sub { font-family: var(--font-serif); font-style: italic; font-size: 14px; color: var(--muted); margin-left: 20px; }
 
-    /* ── Site nav ── */
-    nav.hw-nav {
-      background: #1f1b16;
-      font-family: 'Cinzel', serif;
-      font-size: .78rem;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      display: flex;
-      justify-content: center;
-      gap: 2.2rem;
-      padding: 1.05rem 1rem;
-      flex-wrap: wrap;
-    }
-    nav.hw-nav a {
-      color: #f5edd6;
-      text-decoration: none;
-      opacity: .82;
-      transition: opacity .2s;
-    }
-    nav.hw-nav a:hover { opacity: 1; color: #fff; }
-    nav.hw-nav a.current {
-      opacity: 1;
-      border-bottom: 1px solid #b8922c;
-      padding-bottom: .15rem;
-    }
+  .hw-article-body .chapter-heading { margin: 56px 0 24px; padding-bottom: 14px; border-bottom: 1px solid var(--hairline); }
+  .hw-article-body .chapter-heading .chapter-label {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--brass);
+    display: block; margin-bottom: 8px;
+  }
+  .hw-article-body .chapter-heading h2 { font-family: var(--font-serif); font-weight: 400; font-size: 30px; color: var(--ink); margin: 0; }
 
-    /* ── Footer ── */
-    footer.hw-foot {
-      text-align: center;
-      font-family: 'Cinzel', serif;
-      font-size: .7rem;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: #8a6d2b;
-      padding: 2.5rem 1rem 3.5rem;
-      opacity: .8;
-    }
+  .hw-article-body h3.section {
+    font-family: var(--font-mono); font-weight: 500; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink); margin: 40px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--hairline);
+  }
+  .hw-article-body h4.subsection {
+    font-family: var(--font-mono); font-weight: 500; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass); margin: 28px 0 10px;
+  }
 
-    /* ── Body ── */
-    body {
-      background: var(--parchment);
-      color: var(--ink);
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.2rem;
-      line-height: 1.75;
-    }
+  .hw-article-body .break { text-align: center; color: var(--brass); letter-spacing: 0.6em; font-size: 14px; margin: 40px 0; }
 
-    /* ── Page wrapper ── */
-    .page-wrap {
-      max-width: 780px;
-      margin: 0 auto;
-      background: var(--parchment-page);
-      padding: 4rem 3.5rem 5rem;
-      border-left: 1px solid var(--rule);
-      border-right: 1px solid var(--rule);
-    }
+  .hw-article-body .story-section {
+    background: var(--paper-hover); border: 1px solid var(--hairline); padding: 30px 34px; margin: 32px 0;
+  }
+  .hw-article-body .story-section .story-title { font-family: var(--font-serif); font-size: 22px; text-align: center; color: var(--ink); margin-bottom: 4px; }
+  .hw-article-body .story-section .story-subtitle { font-style: italic; font-size: 15px; color: var(--muted); text-align: center; margin-bottom: 26px; }
+  .hw-article-body .story-section .story-gap { margin-top: 20px; }
 
-    /* ── Title block ── */
-    .title-block {
-      text-align: center;
-      padding: 3rem 0 2.5rem;
-      border-bottom: 2px solid var(--gold);
-      margin-bottom: 3rem;
-    }
-    .title-block .eyebrow {
-      font-family: 'Cinzel', serif;
-      font-size: .72rem;
-      letter-spacing: .32em;
-      text-transform: uppercase;
-      color: var(--gold-deep);
-      margin-bottom: 1.4rem;
-    }
-    .title-block h1 {
-      font-family: 'Cinzel', serif;
-      font-size: 2.6rem;
-      font-weight: 500;
-      letter-spacing: .04em;
-      line-height: 1.2;
-      color: var(--ink);
-      margin-bottom: .8rem;
-    }
-    .title-block .subtitle {
-      font-style: italic;
-      font-size: 1.25rem;
-      color: var(--ink-light);
-      margin-bottom: 1.8rem;
-    }
-    .title-block .ornament {
-      color: var(--gold);
-      font-size: 1.1rem;
-      letter-spacing: .5rem;
-      margin-bottom: 1.4rem;
-      display: block;
-    }
-    .title-block .byline {
-      font-family: 'Cinzel', serif;
-      font-size: .72rem;
-      letter-spacing: .28em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
+  .hw-article-body .definition-box { background: var(--paper-hover); border-left: 3px solid var(--brass); padding: 18px 22px; margin: 20px 0; }
+  .hw-article-body .definition-box .word {
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass); margin-bottom: 6px;
+  }
+  .hw-article-body .definition-box p { margin-bottom: 0; }
 
-    /* ── Opening psalm quote ── */
-    .psalm-opening {
-      text-align: center;
-      font-style: italic;
-      font-size: 1.15rem;
-      line-height: 1.9;
-      color: var(--ink-light);
-      margin: 0 0 3.5rem;
-      padding: 2rem 2.5rem;
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid var(--rule);
-      background: var(--parchment-light);
-    }
-    .psalm-opening .ref {
-      font-style: normal;
-      font-family: 'Cinzel', serif;
-      font-size: .65rem;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      color: var(--gold-deep);
-      display: block;
-      margin-top: 1rem;
-    }
+  .hw-article-body .epigraph {
+    margin: 0 0 30px; padding: 20px 24px; border-left: 3px solid var(--brass); background: var(--paper-hover); font-style: italic; color: var(--muted);
+  }
+  .hw-article-body .epigraph .attribution {
+    display: block; font-style: normal; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--brass); margin-top: 10px;
+  }
 
-    /* ── Table of contents ── */
-    .toc {
-      margin: 0 0 4rem;
-      padding: 2rem 2.5rem;
-      background: var(--parchment-light);
-      border-left: 3px solid var(--gold);
-    }
-    .toc h2 {
-      font-family: 'Cinzel', serif;
-      font-size: .8rem;
-      letter-spacing: .28em;
-      text-transform: uppercase;
-      color: var(--gold-deep);
-      margin-bottom: 1.4rem;
-    }
-    .toc ol {
-      padding-left: 1.2rem;
-    }
-    .toc li {
-      font-family: 'Cinzel', serif;
-      font-size: .85rem;
-      letter-spacing: .06em;
-      line-height: 1.5;
-      color: var(--ink);
-      margin-bottom: .5rem;
-    }
-    .toc li a {
-      color: var(--ink);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-soft);
-      transition: color .2s, border-color .2s;
-    }
-    .toc li a:hover {
-      color: var(--gold-deep);
-      border-bottom-color: var(--gold-deep);
-    }
-    .toc li.toc-sub {
-      font-size: .78rem;
-      color: var(--muted);
-      margin-left: 1.2rem;
-    }
+  .hw-article-body .coda { text-align: center; margin: 40px 0 0; font-style: italic; color: var(--muted); line-height: 2; }
 
-    /* ── Section headings ── */
-    .chapter-heading {
-      margin: 5rem 0 2rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--rule);
-    }
-    .chapter-heading .chapter-label {
-      font-family: 'Cinzel', serif;
-      font-size: .65rem;
-      letter-spacing: .32em;
-      text-transform: uppercase;
-      color: var(--gold-deep);
-      display: block;
-      margin-bottom: .6rem;
-    }
-    .chapter-heading h2 {
-      font-family: 'Cinzel', serif;
-      font-size: 1.7rem;
-      font-weight: 500;
-      letter-spacing: .03em;
-      color: var(--ink);
-      line-height: 1.25;
-    }
-
-    h3.section {
-      font-family: 'Cinzel', serif;
-      font-size: 1rem;
-      font-weight: 500;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--ink);
-      margin: 2.8rem 0 1rem;
-      padding-bottom: .4rem;
-      border-bottom: 1px solid var(--gold-soft);
-    }
-
-    h4.subsection {
-      font-family: 'Cinzel', serif;
-      font-size: .82rem;
-      font-weight: 400;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--gold-deep);
-      margin: 2rem 0 .8rem;
-    }
-
-    /* ── Body paragraphs ── */
-    p {
-      margin-bottom: 1.2rem;
-      text-align: justify;
-      hyphens: auto;
-    }
-    p + p { text-indent: 1.5em; }
-    p + p.no-indent { text-indent: 0; }
-
-    /* ── Block quote / scripture ── */
-    blockquote {
-      margin: 1.8rem 0;
-      padding: .8rem 0 .8rem 1.6rem;
-      border-left: 3px solid var(--gold);
-      font-style: italic;
-      font-size: 1.1rem;
-      line-height: 1.75;
-      color: var(--ink-light);
-    }
-    blockquote .ref {
-      display: block;
-      font-style: normal;
-      font-family: 'Cinzel', serif;
-      font-size: .62rem;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--gold-deep);
-      margin-top: .6rem;
-    }
-
-    /* ── Epigraph ── */
-    .epigraph {
-      margin: 0 0 2.5rem;
-      padding: 1.4rem 1.8rem;
-      border-left: 3px solid var(--gold);
-      background: var(--parchment-light);
-      font-style: italic;
-      font-size: 1.1rem;
-      line-height: 1.75;
-      color: var(--ink-light);
-    }
-    .epigraph .attribution {
-      display: block;
-      font-style: normal;
-      font-family: 'Cinzel', serif;
-      font-size: .62rem;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--gold-deep);
-      margin-top: .7rem;
-    }
-
-    /* ── Drop cap ── */
-    .drop-cap::first-letter {
-      font-family: 'Cinzel', serif;
-      font-size: 4rem;
-      font-weight: 600;
-      color: var(--gold-deep);
-      float: left;
-      line-height: .82;
-      margin: .1rem .25rem 0 0;
-      padding: 0;
-    }
-
-    /* ── Rule ── */
-    .rule {
-      border: none;
-      border-top: 1px solid var(--rule);
-      margin: 2.5rem 0;
-    }
-
-    .rule-ornament {
-      text-align: center;
-      color: var(--gold);
-      font-size: .9rem;
-      letter-spacing: .5rem;
-      margin: 2.5rem 0;
-    }
-
-    /* ── Story section (the retelling) ── */
-    .story-section {
-      background: var(--parchment-light);
-      border: 1px solid var(--rule);
-      padding: 2.5rem 3rem;
-      margin: 2.5rem 0;
-    }
-    .story-section .story-title {
-      font-family: 'Cinzel', serif;
-      font-size: 1.3rem;
-      font-weight: 500;
-      letter-spacing: .04em;
-      text-align: center;
-      color: var(--ink);
-      margin-bottom: .5rem;
-    }
-    .story-section .story-subtitle {
-      font-style: italic;
-      font-size: .95rem;
-      color: var(--muted);
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .story-section p { font-size: 1.1rem; }
-    .story-section p + p { text-indent: 1.5em; }
-    .story-section .story-gap { margin: 1.4rem 0 0; }
-
-    /* ── Definition box ── */
-    .definition-box {
-      background: var(--parchment-light);
-      border-left: 3px solid var(--gold);
-      padding: 1.4rem 1.8rem;
-      margin: 1.8rem 0;
-    }
-    .definition-box .word {
-      font-family: 'Cinzel', serif;
-      font-size: .82rem;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--gold-deep);
-      margin-bottom: .4rem;
-    }
-    .definition-box p { font-size: 1.05rem; margin-bottom: 0; }
-    .definition-box p + p { text-indent: 0; margin-top: .6rem; }
-
-    /* ── AI disclaimer ── */
-    .ai-disclaimer {
-      margin-top: 4rem;
-      padding: 1.2rem 1.6rem;
-      border-top: 1px solid var(--rule);
-      font-size: .85rem;
-      color: var(--muted);
-      font-style: italic;
-      line-height: 1.6;
-    }
-
-    /* ── Final coda ── */
-    .coda {
-      text-align: center;
-      margin: 3rem 0 0;
-      font-style: italic;
-      font-size: 1.2rem;
-      color: var(--ink-light);
-      line-height: 2;
-    }
-    .coda p { text-indent: 0; }
-
-    /* ── Responsive ── */
-    @media (max-width: 680px) {
-      .page-wrap { padding: 2.5rem 1.4rem 3.5rem; }
-      .title-block h1 { font-size: 1.9rem; }
-      .story-section { padding: 1.8rem 1.4rem; }
-    }
-
-    @media print {
-      nav.hw-nav, footer.hw-foot { display: none; }
-      .page-wrap { border: none; padding: 0; }
-      body { background: white; }
-    }
-  </style>
+  .hw-article-body .download-bar { text-align: center; margin: 32px 0; }
+  .hw-article-body .dl-link {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+    text-decoration: none; border: 1px solid var(--hairline); padding: 9px 22px; display: inline-block;
+  }
+  .hw-article-body .dl-link:hover { background: var(--paper-hover); }
+</style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html" class="current">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<div class="page-wrap">
-
-  <!-- ── TITLE BLOCK ── -->
-  <div class="title-block">
-    <p class="eyebrow">A Theological Exploration</p>
-    <h1>When Mercy and Truth Met</h1>
-    <p class="subtitle">A Reading of Psalm 85:10&ndash;13</p>
-    <span class="ornament">&middot; &middot; &middot;</span>
-    <p class="byline">Norm Reed</p>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a class="current" href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
   </div>
+</header>
 
-  <!-- ── OPENING PSALM ── -->
-  <div class="psalm-opening">
-    Steadfast love and faithfulness meet;<br>
-    righteousness and peace kiss each other.<br>
-    Faithfulness springs up from the ground,<br>
-    and righteousness looks down from the sky.<br>
-    Yes, the Lord will give what is good,<br>
-    and our land will yield its increase.<br>
-    Righteousness will go before him<br>
-    and make his footsteps a way.<br>
-    <span class="ref">Psalm 85:10&ndash;13 &middot; ESV</span>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Book</div>
+      <div>Psalm 85:10&ndash;13</div>
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>When Mercy and Truth Met</h1>
+      <div class="hw-article-body">
+        <p class="verse">A Reading of Psalm 85:10&ndash;13</p>
+
+        <p class="verse">Steadfast love and faithfulness meet; righteousness and peace kiss each other. Faithfulness springs up from the ground, and righteousness looks down from the sky. Yes, the Lord will give what is good, and our land will yield its increase. Righteousness will go before him and make his footsteps a way. <em>Psalm 85:10&ndash;13</em></p>
+
+        <nav class="toc">
+          <h2>Contents</h2>
+          <ol>
+            <li><a href="#preface">Preface</a></li>
+            <li><a href="#chapter-1">Chapter One &mdash; The Text and Its Tradition</a></li>
+            <li class="toc-sub"><a href="#four-hebrew-words">The Four Hebrew Words</a></li>
+            <li class="toc-sub"><a href="#john-114">John 1:14 &mdash; The Fulfilment</a></li>
+            <li class="toc-sub"><a href="#tradition">How the Tradition Has Read This Passage</a></li>
+            <li><a href="#chapter-2">Chapter Two &mdash; The Four Daughters of God</a></li>
+            <li><a href="#chapter-3">Chapter Three &mdash; William Langland and Piers Plowman</a></li>
+            <li class="toc-sub"><a href="#retelling">The Argument at the Gates of Hell &mdash; A Retelling</a></li>
+            <li><a href="#chapter-4">Chapter Four &mdash; Defining Righteousness</a></li>
+            <li><a href="#chapter-5">Chapter Five &mdash; Glory: Satisfaction, Not Tension</a></li>
+            <li><a href="#chapter-6">Chapter Six &mdash; The Book of Job</a></li>
+            <li><a href="#chapter-7">Chapter Seven &mdash; Righteousness Through Scripture</a></li>
+            <li><a href="#chapter-8">Chapter Eight &mdash; The Weight of Glory</a></li>
+            <li><a href="#chapter-9">Chapter Nine &mdash; The Church as the Answer</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#postscript">Postscript &mdash; Psalm 89:14</a></li>
+            <li><a href="#appendix">Appendix: Key Sources</a></li>
+          </ol>
+        </nav>
+
+        <div class="download-bar">
+          <a href="when-mercy-and-truth-met.pdf" class="dl-link">&#8595; Download PDF</a>
+        </div>
+
+        <div id="preface" class="chapter-heading">
+          <span class="chapter-label">Preface</span>
+          <h2>Preface</h2>
+        </div>
+
+        <p class="first">This document records a theological conversation exploring one of the most profound passages in the Hebrew Psalter &mdash; Psalm 85:10&ndash;13 &mdash; and traces its fulfilment through the Gospels, its dramatisation in medieval English literature, and its implications for a theology of righteousness, glory, and the nature of God himself.</p>
+
+        <p>The conversation moves through several related territories: the biblical text and its Hebrew vocabulary; the commentary tradition from Augustine through Spurgeon; the remarkable medieval allegory of the Four Daughters of God; William Langland&rsquo;s dramatisation in <em>Piers Plowman</em>; the book of Job as a drama redefining righteousness from within relationship; the question of how this definition holds across the whole canon of Scripture; and finally, the embodiment of this theology in the life of a small church in Risdon Vale, Tasmania, and the Onesimus Foundation it gave birth to.</p>
+
+        <p>The central thesis that emerges is this: the glory of God &mdash; what John says we &lsquo;beheld&rsquo; in Christ, full of grace and truth &mdash; is not the management of a tension between divine attributes, but their simultaneous and complete satisfaction. This is not merely what God does. It is who God is. And it is the shape into which the redeemed life, and the redeemed community, is being formed.</p>
+
+        <p>The conversation is preserved here as closely as possible to the form in which it unfolded &mdash; an organic, cumulative exploration rather than a systematic treatise. Its incompleteness at certain points is deliberate: these are places where the theological work remains genuinely open, and where the reader is invited to continue. The publication stands as it is. It does not require a summary. It asks to be read whole.</p>
+
+        <div class="chapter-heading" id="chapter-1">
+          <span class="chapter-label">Chapter One</span>
+          <h2>The Text and Its Tradition</h2>
+        </div>
+
+        <h3 id="four-hebrew-words" class="section">The Four Hebrew Words</h3>
+
+        <p class="first">The passage that anchors this entire exploration presents four Hebrew words that carry the theological weight of the psalm. They are among the most significant in the entire Old Testament vocabulary of God&rsquo;s character.</p>
+
+        <div class="definition-box"><p class="word">Hesed</p><p>Steadfast love, covenant love, mercy. The word describes God&rsquo;s unbreakable, loyal, active love toward his covenant people. It is the love that does not let go.</p></div>
+        <div class="definition-box"><p class="word">Emet</p><p>Faithfulness, truth, reliability. The word describes the utter trustworthiness of God &mdash; that he is what he says he is, and will do what he has promised.</p></div>
+        <div class="definition-box"><p class="word">Tsedeq</p><p>Righteousness. This is the word we will examine most carefully. Its range of meaning extends far beyond moral conformity to a standard, reaching into the relational heart of how God orders all things.</p></div>
+        <div class="definition-box"><p class="word">Shalom</p><p>Peace, wholeness, flourishing. Not merely the absence of conflict, but the positive presence of everything that ought to be.</p></div>
+
+        <p>These four words do not describe four separate attributes that happen to coexist. The psalm presents them as persons &mdash; moving toward one another, meeting, embracing. <em>Hesed</em> and <em>emet</em> meet. <em>Tsedeq</em> and <em>shalom</em> kiss. The imagery is deliberate and arresting: these are not abstract qualities held in divine balance. They are living realities that belong together, that have been separated by human sin and brokenness, and whose reunion is the content of salvation.</p>
+
+        <h3 id="john-114" class="section">John 1:14 &mdash; The Fulfilment</h3>
+
+        <p>The connection between Psalm 85:10 and John 1:14 is not accidental. When John writes &lsquo;the Word became flesh and dwelt among us, and we have seen his glory, glory as of the only Son from the Father, full of grace and truth,&rsquo; he is reaching directly into the vocabulary of this psalm.</p>
+
+        <p>John&rsquo;s &lsquo;grace and truth&rsquo; &mdash; <em>charis kai aletheia</em> in the Greek &mdash; is almost certainly a deliberate rendering of <em>hesed ve-emet</em>, the very pair that leads the psalm&rsquo;s quartet. John is saying: what the psalmist foresaw &mdash; the meeting of steadfast love and faithfulness &mdash; we have seen. We beheld it. It took a face.</p>
+
+        <p>The word John uses for &lsquo;beheld&rsquo; is <em>etheasametha</em> &mdash; not a glance, but sustained, attentive, contemplative gazing. The disciples did not glimpse the glory. They gazed at it. And what they gazed at was not a balancing act between competing attributes, but a <em>pleroma</em> &mdash; a fullness &mdash; in which grace and truth are simultaneously and completely present. Neither diminished in order to make room for the other. Both entire. That is what struck them as glory.</p>
+
+        <h3 id="tradition" class="section">How the Tradition Has Read This Passage</h3>
+
+        <h4 class="subsection">Augustine</h4>
+        <p>Augustine reads verse 9&rsquo;s promise that &lsquo;glory may dwell in our land&rsquo; as a direct prophecy of the Incarnation. When he arrives at verse 10, he reads the meeting of mercy and truth as the resolution of a divine tension that could only be solved by God becoming flesh. His key insight is that mercy is the origin and source of all God&rsquo;s promises, from which issues the righteousness offered by the gospel, while from that righteousness proceeds the peace obtained by faith when God justifies freely. The sequence matters: mercy &rarr; righteousness &rarr; peace. Not three separate things, but a single saving logic that unfolds.</p>
+
+        <h4 class="subsection">Calvin</h4>
+        <p>Calvin reads the psalm primarily as a reflection on Israel&rsquo;s restoration after exile, but notes that the faithful &lsquo;lifted up their eyes&rsquo; to the Messiah when their faith needed encouragement. His treatment recognises a dual fulfilment &mdash; the immediate covenant restoration and the eschatological one &mdash; while preserving Augustine&rsquo;s insight about the sequence.</p>
+
+        <h4 class="subsection">Spurgeon &mdash; The Treasury of David</h4>
+        <p>Spurgeon works at two levels simultaneously. He acknowledges the immediate and primary meaning &mdash; the people now made willing to forsake sin find peace granted to them at once &mdash; but insists that the inner sense is Christ Jesus, the reconciling Word. For Spurgeon, in him the attributes of God unite in glad unanimity in the salvation of guilty men, meeting and embracing in such a manner as else were inconceivable.</p>
+
+        <p>The Treasury also preserves a remarkable comment from George Horne: &lsquo;Mercy and peace are on one side; truth and righteousness on the other. Truth requires righteousness; mercy calls for peace. They meet together on the way; one going to make inquisition for sin, the other to plead for reconciliation. Having met, their differences are adjusted; and their mutual claims blended together in one common interest &mdash; on which peace and righteousness immediately embrace.&rsquo; Where did they meet? In Christ Jesus. When were they reconciled? When he poured out his life on Calvary.</p>
+
+        <div class="chapter-heading" id="chapter-2">
+          <span class="chapter-label">Chapter Two</span>
+          <h2>The Four Daughters of God</h2>
+        </div>
+
+        <p class="first">One of the most remarkable facts about the reception of Psalm 85:10 is that it generated an entire tradition of allegorical interpretation running from an eleventh-century Jewish Midrash &mdash; in which Truth, Justice, Mercy and Peace were described as the four standards of the Throne of God &mdash; through to medieval English drama and beyond.</p>
+
+        <p>The motif became known as &lsquo;the Four Daughters of God.&rsquo; The four attributes of verse 10 were personified as four celestial women who, following the Fall of Adam and Eve, found themselves in conflict. Truth and Righteousness argued that God&rsquo;s declared word must stand &mdash; &lsquo;the soul that sins shall die&rsquo; &mdash; while Mercy and Peace pleaded for forgiveness and restoration. Their disagreement could only be resolved by an act that satisfied all four simultaneously.</p>
+
+        <h3 class="section">Hugh of St Victor and Bernard of Clairvaux</h3>
+        <p>The most important early developers of the allegory were Hugh of St Victor (c. 1096&ndash;1141) and Bernard of Clairvaux (1090&ndash;1153). Bernard further popularised it in sermons on the Annunciation, adapting it to Anselm&rsquo;s satisfaction theory from <em>Cur Deus Homo</em>.</p>
+
+        <p>In Bernard&rsquo;s version, the daughters convene in conflict over sinful humanity&rsquo;s fate: Mercy and Peace advocate forgiveness, while Truth and Righteousness demand satisfaction for sin&rsquo;s debt. The dispute culminates in Christ&rsquo;s voluntary atonement &mdash; the one act that can reconcile all four. As one commentator in the Treasury puts it: &lsquo;These four divine attributes parted at the fall of Adam and met again at the birth of Christ. Now there is no religion on earth, except the Christian, which can satisfy the demands of all these claimants, and restore a union between them.&rsquo;</p>
+
+        <h3 class="section">The Spatial Drama of Verse 11</h3>
+        <p>Verse 11 adds a vertical dimension to the horizontal drama: &lsquo;Faithfulness springs up from the ground, and righteousness looks down from the sky.&rsquo; The patristic tradition read this as depicting the Incarnation geometrically: heaven bending toward earth, earth reaching toward heaven, and the meeting point being the person of Christ. Truth springing up from the earth was associated with the Nativity &mdash; Truth laid in a manger while Righteousness looks down on Bethlehem.</p>
+
+        <p>This is where the connection to John 1:14 deepens further: &lsquo;the Word became flesh and dwelt among us&rsquo; is precisely this downward movement of righteousness from heaven, while &lsquo;full of grace and truth&rsquo; is the <em>hesed ve-emet</em> pair now made visible, tangible, historical.</p>
+
+        <div class="chapter-heading" id="chapter-3">
+          <span class="chapter-label">Chapter Three</span>
+          <h2>William Langland and Piers Plowman</h2>
+        </div>
+
+        <p class="first">William Langland&rsquo;s <em>Piers Plowman</em>, written in Middle English between approximately 1360 and 1386, is one of the greatest works of English literature of the Middle Ages. Langland was writing at a moment when the institutional Church was visibly corrupt, the gap between rich and poor was savage, and ordinary people were angry. The Four Daughters scene is not escapism &mdash; it is Langland saying: beneath all this disorder, there is a deeper reality in which Righteousness and Peace have already kissed. The cosmic drama is the ground of earthly hope.</p>
+
+        <h3 class="section">Passus 18 &mdash; The Dramatic Scene</h3>
+        <p>Will &mdash; the dreamer, whose name carries its own allegorical weight &mdash; falls asleep during Palm Sunday and the poem shifts register entirely. Christ approaches Jerusalem jousting as Piers Plowman: &lsquo;This gentleman Jesus will joust in Piers&rsquo; arms, in his helmet and armor called human shape.&rsquo; The divine condescends into the creature. The Incarnation is a tournament.</p>
+
+        <p>Then in the darkness between the Crucifixion and the Resurrection &mdash; on Holy Saturday &mdash; the Four Daughters appear. Out of the west, Mercy comes walking toward Hell &mdash; meek, gentle, full of hope. Out of the east, Truth comes walking westward &mdash; straight, clear-eyed, unafraid. Their debate reaches an impasse. The argument is not resolved by logic but by event &mdash; the Harrowing of Hell. Christ descends, breaks the gates, and the souls flood out.</p>
+
+        <p class="verse">At the dawn of Easter morning, these damsels danced, until the bells rang in the resurrection.</p>
+
+        <p>The dreamer Will woke up and called his wife and daughter to come reverently to the Cross at Easter. Which is Langland&rsquo;s way of saying: the cosmic drama has a personal address.</p>
+
+        <div id="retelling" class="story-section">
+          <p class="story-title">The Argument at the Gates of Hell</p>
+          <p class="story-subtitle"><em>After William Langland&rsquo;s Piers Plowman, Passus 18</em></p>
+
+          <p>It was the darkest night the world had ever known.</p>
+          <p>The sky had gone black at noon. The ground had shaken. And the man they called the Son of God was dead &mdash; nailed to a cross outside the city walls, then taken down and sealed in a tomb with a great stone.</p>
+          <p>Nobody knew what would happen next.</p>
+          <p class="story-gap">In that darkness, four sisters found each other on a lonely road. They were not ordinary women. They were something older than women &mdash; old as creation itself, old as the first word God ever spoke. Their names were <strong>Mercy</strong>, <strong>Truth</strong>, <strong>Righteousness</strong>, and <strong>Peace</strong>.</p>
+          <p>They had not walked together for a very long time.</p>
+          <p>Mercy came from the west, moving toward the gates of Hell. Her face was gentle, her voice soft. She was the one who always wanted to forgive. Truth came from the east. She walked straight, looked you in the eye, and never said anything she didn&rsquo;t mean.</p>
+          <p>They nearly bumped into each other in the dark.</p>
+          <p class="story-gap">&lsquo;Mercy!&rsquo; said Truth. &lsquo;What is that strange light over the gates of Hell? What is happening?&rsquo;</p>
+          <p>Mercy smiled &mdash; and it was a smile full of something she&rsquo;d been waiting a long time to say.</p>
+          <p>&lsquo;A child was born,&rsquo; she said. &lsquo;A very particular child. Born of a woman, but more than a man. He has just died on a cross. And I believe &mdash; I <em>know</em> &mdash; that death is about to be turned inside out.&rsquo;</p>
+          <p class="story-gap">Now their two sisters arrived &mdash; Righteousness, stern and straight-backed, and Peace, who moved quietly and carried a letter.</p>
+          <p>&lsquo;Let <em>everyone</em> out?&rsquo; said Righteousness. &lsquo;That is not how this works. God himself made the rule: <em>the soul that sins shall die.</em> The gates of Hell were shut, and they were shut <em>justly.</em>&rsquo;</p>
+          <p>&lsquo;I&rsquo;m not saying it wasn&rsquo;t just,&rsquo; said Mercy. &lsquo;I&rsquo;m saying something <em>has</em> been done. The punishment was real. The death was real. But it was borne by One who did not owe it. The debt was paid not by erasure but by substitution. Righteousness is not cheated. It is <em>satisfied</em>. Completely. Paid in full.&rsquo;</p>
+          <p class="story-gap">Truth had been quiet. Now she spoke: &lsquo;And what about me? I am the one who speaks what is real. And the real thing that was spoken was: <em>they shall die.</em> Words mean things. A promise is a promise.&rsquo;</p>
+          <p>Peace stepped forward and held out the letter. It was from Love. It said: <em>I have not broken my word. I have kept it in a way no one expected. Every word I spoke was true. But I bore it myself. Now come &mdash; open your eyes.</em></p>
+          <p>Truth read the letter twice. Then she looked up. Something in her face had changed. Not softened exactly. But <em>completed.</em> As if she had been half a sentence for a very long time, and had just heard the second half.</p>
+          <p class="story-gap">A sound came from the gates of Hell. Not a knock &mdash; a <em>blow.</em> Then a voice, resonant and absolute:</p>
+          <p class="verse">&lsquo;Lift up your heads, O gates! And the King of Glory shall come in.&rsquo;</p>
+          <p>The gates didn&rsquo;t open. They <em>shattered.</em> And out they came &mdash; Adam and Eve, Abraham, Moses, the prophets, all the ones who had lived and hoped and waited without knowing quite what they were waiting for.</p>
+          <p class="story-gap">And then &mdash; because it was now Sunday morning, and the birds had started, and the light was coming up gold over the hill &mdash; Peace began to laugh. Then Mercy. Then, slowly, with a dignity she couldn&rsquo;t quite suppress, Righteousness. And Truth &mdash; Truth smiled, which on her face was worth more than anyone else&rsquo;s laughter.</p>
+          <p>And they danced. They danced until the bells rang.</p>
+          <p class="story-gap">Somewhere in the city, a man named Will woke up. He shook his wife awake.</p>
+          <p>&lsquo;Mercy and Truth finally agreed,&rsquo; he said. &lsquo;And when they did &mdash; Peace kissed Righteousness. And everything that was locked got opened.&rsquo;</p>
+        </div>
+
+        <div class="chapter-heading" id="chapter-4">
+          <span class="chapter-label">Chapter Four</span>
+          <h2>Defining Righteousness</h2>
+        </div>
+
+        <p class="first">The instinctive definition of righteousness is moral correctness &mdash; conformity to a standard. On this reading, righteousness is a measuring rod, and the question it always asks is: have you measured up? That definition is not wrong exactly. But in the light of Psalm 85 it is drastically incomplete &mdash; and the incompleteness distorts everything downstream.</p>
+
+        <h3 class="section">What the Psalm Shows Us</h3>
+        <p>Look at who Righteousness is paired with in the psalm. Steadfast love is paired with faithfulness &mdash; that pairing makes intuitive sense. Love and faithfulness belong together naturally.</p>
+        <p>But then: <em>Righteousness kisses Peace.</em></p>
+        <p>That is the pairing that stops you. If righteousness were simply a measuring rod, you would not expect its natural partner to be <em>shalom.</em> You would expect judgment, or retribution. Peace would be what happens <em>after</em> righteousness has finished its work and withdrawn. But the psalm puts them together. Kissing. Inseparable. Which means the psalm is telling us that righteousness, properly understood, is not opposed to peace &mdash; it <em>produces</em> peace.</p>
+
+        <h3 class="section">The Hebrew &mdash; Tsedeq / Tsedaqah</h3>
+        <p>The Hebrew word <em>tsedeq</em> carries a meaning significantly wider than moral correctness. At its root it describes <em>right relationship</em> &mdash; things being as they ought to be between persons. Not conformity to an abstract standard, but the wholeness of a relationship in which each party gives the other what they are owed, what they need, what love requires.</p>
+        <p>In the Old Testament, God&rsquo;s righteousness is frequently his <em>saving</em> righteousness &mdash; his faithfulness to the covenant, his action to restore what has been broken. Isaiah uses <em>tsedaqah</em> almost interchangeably with salvation. That is startling if righteousness simply means moral demand. It makes perfect sense if righteousness means the restoration of right relationship.</p>
+
+        <h3 class="section">The Cross as the Definition</h3>
+        <p>At the Cross, what is God doing? He is making right everything that is wrong &mdash; not by ignoring the wrongness, but by entering fully into its consequences and bearing them. He is restoring right relationship between himself and humanity at the cost of himself.</p>
+        <p>That is righteousness. Not the cold application of a standard. Not the mechanical execution of a penalty. But the passionate commitment of God to the restoration of right relationship, pursued at infinite cost, resulting in peace.</p>
+        <p class="pull">And John, standing in the light of all this, looks at Jesus and says: we beheld his glory &mdash; full of grace and truth. Grace is <em>hesed</em> made flesh. Truth is <em>emet</em> made flesh. And the glory is the sight of a God whose righteousness is not his threat but his gift &mdash; the gift of right relationship, freely given, at the cost of everything.</p>
+
+        <div class="chapter-heading" id="chapter-5">
+          <span class="chapter-label">Chapter Five</span>
+          <h2>Glory &mdash; Satisfaction, Not Tension</h2>
+        </div>
+
+        <p class="first">The word <em>tension</em> is too weak &mdash; and potentially misleading. Tension implies a standoff, a managed compromise, two forces kept in equilibrium by sheer power. That would make God&rsquo;s glory a kind of perpetual balancing act &mdash; impressive, perhaps, but essentially unstable. A God holding attributes in tension is a God who hasn&rsquo;t quite resolved his own nature. But that isn&rsquo;t what John sees.</p>
+
+        <h3 class="section">Satisfaction Rather Than Tension</h3>
+        <p>To satisfy a claim is not to silence it or override it. It is to meet it fully &mdash; to give it everything it requires until it has nothing left to demand. When Righteousness is satisfied, she doesn&rsquo;t retreat defeated. She rests. She has received what she was always asking for. When Mercy is satisfied, she doesn&rsquo;t compromise. She has been able to give fully what she always wanted to give.</p>
+        <p>The glory is not that God overpowered his own justice with his love, or softened his truth with grace. The glory is that in the Incarnation and the Cross, every attribute received its complete fulfilment &mdash; simultaneously, in the same event, in the same person. This is why the sisters dance in Langland. Not because one of them won. Because all of them did.</p>
+
+        <h3 class="section">Glory as the Revelation of What God Is</h3>
+        <p>A God who merely found a clever solution to tension between his attributes would be displaying <em>wisdom.</em> But wisdom is something you exercise. It is a capacity brought to bear on a problem. What John is pointing to is something deeper. The <em>pleroma</em> of grace and truth in Christ is not God solving a problem. It is God <em>showing himself.</em> The Incarnation and the Cross are not divine problem-solving &mdash; they are divine self-disclosure.</p>
+        <p>Moses asked to see God&rsquo;s glory in Exodus 33. God passed before him and proclaimed: &lsquo;The Lord, the Lord, a God merciful and gracious, slow to anger, and abounding in steadfast love and faithfulness.&rsquo; The attributes. Together. That is the glory. John is saying: what Moses heard proclaimed, we saw embodied. The proclamation became a person.</p>
+
+        <h3 class="section">Righteousness Evidenced by Fruit</h3>
+        <p>As faith &mdash; which James says is evidenced by our works &mdash; so too is righteousness evidenced by fruit. If righteousness is the restoration of right relationship, then it cannot be invisible. Right relationship always takes shape. It produces a particular kind of fruit, a particular way of being present to others.</p>
+        <p>And the psalm itself tells us what that fruit looks like: <em>the Lord will give what is good, and our land will yield its increase. Righteousness will go before him and make his footsteps a way.</em> Abundance. Things grow. Life flourishes. Creation responds. This is the Hebrew way of describing <em>shalom</em> made visible in the material world.</p>
+
+        <div class="chapter-heading" id="chapter-6">
+          <span class="chapter-label">Chapter Six</span>
+          <h2>The Book of Job</h2>
+        </div>
+
+        <p class="first">The drama of Job turns on Satan&rsquo;s question in Job 1:9 &mdash; &lsquo;Does Job fear God for nothing?&rsquo; It is a question not about Job&rsquo;s behaviour but about the nature of the relationship itself. Satan&rsquo;s accusation is essentially this: the relationship is transactional. Job is righteous because it pays. Remove the reward and the righteousness collapses. God&rsquo;s answer is to permit the testing &mdash; because the nature of genuine relationship cannot be demonstrated abstractly. It can only be proved from within the relationship under pressure.</p>
+
+        <h3 class="section">What the Friends Get Wrong</h3>
+        <p>The friends &mdash; Eliphaz, Bildad, Zophar &mdash; are not heretics. They say true things about God. What is wrong is the <em>location</em> of their definition. They are defining righteousness from <em>outside</em> the relationship &mdash; as observers constructing a system, applying it mechanically, forcing both Job and God to conform to it. Their righteousness is a map. Job is on the actual terrain.</p>
+        <p>God rebukes them for it. Not for their theology in the abstract, but for what their theology did &mdash; it placed a system above a person, a definition above a relationship, a map above the living God who refuses to be reduced to one.</p>
+
+        <h3 class="section">Job&rsquo;s Righteousness &mdash; Declared from Within Relationship</h3>
+        <p>God declares Job righteous before the testing begins &mdash; not as a reward for performance, but as a description of a relationship already existing. When the testing comes, what Job does is exactly what a person in genuine relationship does: he protests, he argues, he demands an answer, he refuses comfortable lies, he stays in the conversation.</p>
+        <p>He does not perform piety. He insists on the reality of the relationship even when the relationship feels absent. That is righteousness proved. Not moral perfection. Not doctrinal correctness. The refusal to let go of God even when God seems to have let go of him.</p>
+        <p>Which is a definition of righteousness that only makes sense from <em>inside</em> the relationship.</p>
+
+        <h3 class="section">The Religious Problem Jesus Came to Address</h3>
+        <p>The Pharisees are, in a profound sense, the friends of Job. Learned, serious, devout men who say true things about God &mdash; but whose theology has been constructed from outside the relationship. The living God has been replaced by his own law. The map has swallowed the terrain.</p>
+        <p>Jesus comes not to abolish the law but to restore the relationship within which the law was always meant to be understood. He reintroduces God as Father. And in doing so he regrounds righteousness in relationship rather than system.</p>
+        <p>The Father-Son relationship is itself then tested: the wilderness, Gethsemane, the Cross. &lsquo;My God, my God, why have you forsaken me?&rsquo; is Job&rsquo;s protest taken to its ultimate depth. And what the Resurrection declares is what God declared over Job: <em>this one is righteous.</em> The relationship was real. It held. It proved itself from within.</p>
+
+        <div class="chapter-heading" id="chapter-7">
+          <span class="chapter-label">Chapter Seven</span>
+          <h2>Righteousness Through Scripture</h2>
+        </div>
+
+        <h3 class="section">The Old Testament</h3>
+        <p class="first">The first person called righteous in Scripture is Noah &mdash; &lsquo;Noah walked with God.&rsquo; Righteousness is immediately relational, located in an ongoing walk. Then Abraham: &lsquo;Abraham believed God, and it was counted to him as righteousness&rsquo; &mdash; before the law, before circumcision. Righteousness here is the right ordering of Abraham&rsquo;s relationship with God through trust. Not achievement. Relational alignment.</p>
+        <p>Isaiah uses <em>tsedaqah</em> almost interchangeably with salvation. Isaiah 45:8 &mdash; &lsquo;let the skies pour down righteousness; let the earth open, that salvation and righteousness may bear fruit.&rsquo; They fall together like rain. This is not the language of a measuring rod. It is the language of a life-giving force.</p>
+        <p>Psalm 31:1 &mdash; &lsquo;In your righteousness deliver me.&rsquo; Righteousness here is the ground of rescue, not judgment. This usage runs throughout the Psalter. God&rsquo;s righteousness is consistently the basis of his people&rsquo;s hope, not their fear.</p>
+
+        <h3 class="section">The New Testament</h3>
+        <p>Romans 1:17 &mdash; &lsquo;the righteousness of God is revealed.&rsquo; Revealed &mdash; <em>apokalyptetai.</em> The righteousness of God is not being demanded in the gospel. It is being disclosed. It is an unveiling of what God is like. Romans 3:21-26: God put Christ forward as a propitiation &lsquo;to show his righteousness&rsquo; &mdash; so that he might be just and the justifier. The Cross demonstrates that God is the kind of God who restores right relationship at infinite cost to himself.</p>
+        <p>Matthew 5:6 &mdash; &lsquo;Blessed are those who hunger and thirst for righteousness.&rsquo; If righteousness is merely moral correctness, hungering for it is a strange image. But if righteousness is the restoration of right relationship &mdash; the world as it ought to be &mdash; then hungering for it makes profound sense. It is the deepest longing of the image-bearer in a broken world.</p>
+        <p>2 Corinthians 5:21 &mdash; &lsquo;so that in him we might become the righteousness of God.&rsquo; We do not merely receive righteousness as a verdict. We <em>become</em> the righteousness of God. We become the embodiment of restored right relationship &mdash; what God always intended human beings to be in relation to himself and each other.</p>
+
+        <h3 class="section">The Forensic Dimension &mdash; An Important Precision</h3>
+        <p>The relational definition does not mean righteousness is soft or that it bypasses the moral demand. The reason the sisters had to kiss rather than one simply surrendering is that the moral demand is real. The forensic and the relational are not competing definitions but different aspects of the same reality seen from different angles.</p>
+        <p>The verdict of justification is not an abstract legal fiction &mdash; it is the judge himself entering the dock in our place. What makes the verdict more than a legal technicality is precisely that it is the Father giving the Son, the Son bearing the wrath, the Spirit applying the benefit. It is relationship &mdash; Trinitarian relationship &mdash; that gives the forensic act its saving weight.</p>
+
+        <div class="chapter-heading" id="chapter-8">
+          <span class="chapter-label">Chapter Eight</span>
+          <h2>The Weight of Glory</h2>
+        </div>
+
+        <p class="first">The four sisters of Psalm 85 are not only a description of what God is and what the Cross achieves. They are a description of what the redeemed life grows into. The righteousness that God gives in Christ begins to produce in the one who receives it the very qualities that the psalm names &mdash; steadfast love, faithfulness, peace. We are not just recipients of the kiss. We are being formed, slowly, into people in whom these things are no longer in tension in us either.</p>
+
+        <h3 class="section">2 Corinthians 3 &mdash; The Mechanism of Transformation</h3>
+        <p>Paul describes the transformation as a process of beholding &mdash; &lsquo;we all, with unveiled face, beholding the glory of the Lord, are being transformed into the same image from one degree of glory to another.&rsquo;</p>
+        <p>The mechanism of transformation is contemplation. We look at the glory &mdash; the <em>pleroma</em> of grace and truth that John beheld in Christ &mdash; and in the looking we are changed. Not by effort or achievement but by sustained, attentive gazing at the One in whom righteousness and peace have kissed. The fruit of righteousness is not produced by striving. It is produced by beholding.</p>
+
+        <h3 class="section">Romans 8 &mdash; The Cosmic Scope</h3>
+        <p>The restoration of right relationship is not only personal and individual. It is cosmic. Romans 8:18-25 describes creation itself groaning &mdash; waiting for the revealing of the sons of God and the redemption of our bodies. When righteousness and peace finally kiss without separation, the land will yield its increase not metaphorically but literally. Creation will be what it was always meant to be.</p>
+
+        <h3 class="section">The Fully Formed Definition</h3>
+        <p class="verse">The faithfulness of a relationship with God that holds under testing &mdash; that refuses to be replaced by system, performance, or reward &mdash; and that proves itself precisely at the point where it costs everything.</p>
+        <p>That is what Job demonstrated in part. That is what Jesus demonstrated completely and on behalf of all. And that is what Paul means when he says we become the righteousness of God in Christ. We are drawn into the Son&rsquo;s relationship with the Father. We are given the Spirit of adoption who cries <em>Abba.</em></p>
+        <p>Righteousness is not a standard we meet. It is a relationship we inhabit. And it is proved &mdash; as Job proved it, as Jesus proved it &mdash; not in the absence of testing but through it.</p>
+
+        <div class="chapter-heading" id="chapter-9">
+          <span class="chapter-label">Chapter Nine</span>
+          <h2>The Church as the Answer</h2>
+        </div>
+
+        <div class="epigraph">
+          The church, you see, is not peripheral to the world; the world is peripheral to the church. The church is Christ&rsquo;s body, in which he speaks and acts, by which he fills everything with his presence.
+          <span class="attribution">Ephesians 1:23 &middot; Eugene Peterson, The Message</span>
+        </div>
+
+        <h3 class="section">Responding to the Critique</h3>
+        <p class="first">A thoughtful critic of this publication noted, with justice, that its theology remained largely in the realm of what he called &lsquo;heavenly geography&rsquo; &mdash; that the kiss of Mercy and Truth, compellingly traced from Psalm 85 through Langland to the Cross and to Job, had not yet fully arrived on the ground. He asked how this theology informs restorative justice in a broken system &mdash; specifically in Tasmania, specifically in the work of the Onesimus Foundation.</p>
+        <p>This chapter is the response. But it begins by reframing the question &mdash; because the gap the critic identified is not primarily a gap between theory and practice. It is a gap in the presentation of a story that has already been lived. The theology did not need to be applied. It needed to be recognised. What happened at Risdon Vale &mdash; the houses built beside the prison, the screens arranged for video calls, the chairs pulled up to the desks of children whose fathers were in custody &mdash; was not a justice program awaiting theological justification. It was the church being what the church was always, eternally, cosmically intended to be.</p>
+
+        <h3 class="section">Ephesians 1 &mdash; The Eternal Purpose</h3>
+        <p>Paul&rsquo;s letter to the Ephesians opens with one of the most compressed and expansive theological statements in the entire New Testament. Before he describes what the church does, he describes what the church is &mdash; and he traces that identity not to Pentecost, not to the Resurrection, not even to the Incarnation, but to <em>before the foundation of the world.</em></p>
+        <p>The church was not a response to human failure. It was not Plan B, improvised when the creation went wrong. It was the intended form of the answer &mdash; the community in which the fullness of God&rsquo;s purpose for human beings would take shape. The kiss of Mercy and Truth that Psalm 85 anticipates, that the Cross enacts, that Langland dramatises &mdash; its intended embodiment in history was always the church. Not an abstract concept, not a theological idea in search of application, but a community of people drawn into the Son&rsquo;s relationship with the Father, called to make that relationship visible in the world.</p>
+        <p>Eugene Peterson captures the force of Paul&rsquo;s vision: the church is not peripheral to the world; the world is peripheral to the church. This is not institutional arrogance. It is a statement about the location of the world&rsquo;s healing. The world does not know where its restoration is coming from. The church, when it is being what it is called to be, is the place where that restoration becomes visible, tangible, and available.</p>
+
+        <h3 class="section">The Fullness That Fills Everything</h3>
+        <p>The word Paul uses at the end of Ephesians 1 is <em>pleroma</em> &mdash; fullness. It is the same word John uses in 1:14 &mdash; <em>full</em> of grace and truth &mdash; describing what the disciples beheld in the Incarnate Word. The <em>pleroma</em> concentrated in the person of Jesus &mdash; the perfect, simultaneous fullness of grace and truth, mercy and righteousness &mdash; is now, through the Spirit, the calling and character of the church. The church exists to be the ongoing embodiment of that fullness. Not to manage the tension between mercy and truth, but to be the community in which they have already kissed and in which the fruit of that kiss becomes visible in the world.</p>
+
+        <h3 class="section">Philemon and Onesimus &mdash; The New Testament&rsquo;s Case Study</h3>
+        <p>The choice of name for the foundation at Risdon Vale is not incidental. It is a theological declaration.</p>
+        <p>The letter to Philemon is the New Testament&rsquo;s most concentrated case study in exactly what this publication has been exploring. Paul is mediating between two people in a broken relationship &mdash; Onesimus, the runaway slave, and Philemon, the wronged master. Paul does not tell Philemon that the wrong doesn&rsquo;t matter. He acknowledges the legitimate claim: &lsquo;If he has wronged you or owes you anything, charge that to my account.&rsquo; Truth is not bypassed. The debt is real. But Paul does not let truth have the final word. He appeals to love, to the new relationship created in Christ, to the fact that Onesimus is now more than a slave &mdash; a dear brother, both in the flesh and in the Lord.</p>
+        <p>Righteousness in this letter is not the enforcement of the master&rsquo;s rights. It is the restoration of right relationship in which both men are held by something larger than the categories that previously defined them. The letter ends without telling us what Philemon decided. The silence is deliberate. A genuine invitation holds the risk of rejection. The church at Risdon Vale named its foundation after that dynamic &mdash; understanding itself to be doing what Paul asked of Philemon: receiving back those who had been separated, across every barrier of stigma and system and locked gate, as dear brothers and sisters. Charging the debt to its own account. Refreshing hearts.</p>
+
+        <h3 class="section">The Incarcerated Self &mdash; Theology on the Ground</h3>
+        <p>Dr Elizabeth Robinson, Principal of Kingston High School in Tasmania, wrote of a twelve-year-old boy named John whose father had been incarcerated five weeks earlier. His presenting problem, when he came to her office bruised and sobbing with rage, was a combination lock. His actual problem was a severed relationship with his father that no institution in the system was funded or designed to restore.</p>
+        <p>What Robinson did &mdash; pulling up a chair, listening, assembling a team, navigating ten people and six documents over two weeks &mdash; she describes in terms of relational pedagogy and trauma-informed practice. These are the correct frameworks for her professional context. But what she was also doing was enacting the theology of Psalm 85. She stepped into the gap between the system&rsquo;s verdict &mdash; incarcerated, separated, managed &mdash; and the person&rsquo;s actual humanity and actual relationships. She did not bypass the system&rsquo;s requirements. She met them, one bureaucratic step at a time, until the gates opened.</p>
+        <p>Mercy does not ignore Truth&rsquo;s demands. She satisfies them. And when the gates shattered &mdash; when John finally visited his father &mdash; something in the incarcerated self was set free.</p>
+        <p>Robinson&rsquo;s thesis title is itself a theological statement: &lsquo;Pedagogy of Being Present: An Inquiry into the Unconditional Communion of Listening.&rsquo; Unconditional communion. That is <em>hesed.</em> That is the steadfast love that does not let go even when the one it loves is storming across a courtyard with a bruised hand.</p>
+        <p>The Onesimus Foundation, and the small church at Risdon Vale that gave it birth, recognised that John was not the only child in that situation. More than one in four prisoners in Australia are parents. Each carries an incarcerated self &mdash; a relationship severed, a story that cannot be told, a gap between where they are and where they need to be that no system is designed to close. The church built houses for families visiting the prison. It arranged video calls into the cells. It enabled prisoners to attend funerals of loved ones. It brought children through the gates on Kids Days to run toward their mothers.</p>
+        <p>This is not social work with a theological veneer. This is the church being the church &mdash; the body through which Christ speaks and acts and fills the gap between mercy and truth with his own presence.</p>
+
+        <h3 class="section">The Early Church &mdash; The Precedent</h3>
+        <p>What happened at Risdon Vale has a precedent that goes back to the first century. The early church in the Roman world did not merely teach a theology of restored relationship. It demonstrated one &mdash; across the most savage social divisions of its age. Slave and free sat at the same table. Jew and Gentile shared the same bread. The wealthy sold property for distribution to those in need. Prisoners were visited. The sick were cared for at personal risk.</p>
+        <p>Tertullian reports that pagans said of the Christians: &lsquo;See how they love one another.&rsquo; That was not a sentiment. It was a witness. The theological novelty of Christianity was inseparable from its social novelty. The kiss of Mercy and Truth was not an abstract doctrine held in the minds of believers. It was a visible, observable fact that required explanation.</p>
+        <p>The Onesimus Foundation is in that lineage &mdash; not because it is large or well-funded, but because it is doing what the church has always done when it takes seriously the God whose Son said: <em>I was in prison and you came to me.</em></p>
+
+        <h3 class="section">Not Peripheral &mdash; Central</h3>
+        <p>The bridge between the theology of this publication and the specific justice issues being navigated in Tasmania does not run from theology to practice. It runs from practice to theology &mdash; from the houses built and the chairs pulled up and the gates opened &mdash; back to the psalm that described it, the allegory that dramatised it, the Cross that grounded it, and the letter to the Ephesians that named its eternal origin.</p>
+        <p>The church at Risdon Vale did not read Psalm 85 and decide to build a house for prisoners&rsquo; families. It built the house because it had been grasped by the God of Psalm 85 &mdash; the God in whom mercy and truth meet, in whom righteousness and peace kiss. The theology is the retrospective account of what faithful communities have always done when they live in the light of that God.</p>
+        <p>The church is not peripheral to the world. It is the community around which the world&rsquo;s healing is organised, whether the world knows it or not. Its centrality is not the centrality of power or influence or institutional reach. It is the centrality of the body through which Christ speaks and acts and by which he fills everything with his presence &mdash; the <em>pleroma</em> of grace and truth &mdash; made visible in a suburb of Hobart, one chair pulled up at a time.</p>
+
+        <div class="chapter-heading" id="conclusion">
+          <span class="chapter-label">Conclusion</span>
+          <h2>Where the Exploration Points</h2>
+        </div>
+
+        <p class="first">This conversation began with four Hebrew words in a psalm and ended with a boy running through prison gates. The journey was not a series of loosely connected observations but a single developing argument. It is worth stating that argument plainly.</p>
+        <p>The glory of God revealed in Christ is not the management of a tension between his attributes but their simultaneous and complete satisfaction. Mercy is not restrained by Truth. Truth is not compromised by Mercy. Righteousness is not opposed to Peace. In the person of Jesus &mdash; and in the event of the Cross and Resurrection &mdash; each attribute receives its full and complete expression. All four sisters dance.</p>
+        <p>This satisfaction is not merely what God does. It is who God is. The Incarnation and the Cross do not reveal a God who found a clever solution to a difficult problem. They reveal a God whose very nature is this &mdash; the perfect, eternal, mutual indwelling of love and truth, righteousness and peace. What Moses heard proclaimed in the cleft of the rock, John saw embodied in a person. The proclamation became flesh.</p>
+        <p>And this same glory &mdash; this character of God &mdash; is the shape into which the redeemed life and the redeemed community is being formed. We are not merely the recipients of the kiss between righteousness and peace. We are being slowly conformed to the One in whom they have already and permanently kissed. The fruit of that conformity is what the psalm describes: a land that yields its increase, a righteousness that goes before and makes a way.</p>
+        <p>The weight of glory that presses on us &mdash; the longing Lewis describes, the <em>Sehnsucht</em> that cannot be satisfied by any earthly thing &mdash; is nothing less than the pull of this reality. We are made for the God whose nature is the satisfaction of all his attributes simultaneously. And we will not rest until we are fully at home in him.</p>
+
+        <div class="coda">
+          <p>Not held in tension. Satisfied.</p>
+          <p>Not peripheral. Central.</p>
+        </div>
+
+        <div class="chapter-heading" id="postscript">
+          <span class="chapter-label">Postscript</span>
+          <h2>Psalm 89:14 &mdash; A Companion Text</h2>
+        </div>
+
+        <p class="verse">Righteousness and justice are the foundation of your throne; steadfast love and faithfulness go before you. <em>Psalm 89:14</em></p>
+
+        <p class="first">The same four attributes. But the image is entirely different from Psalm 85, and the difference is theologically significant.</p>
+        <p>In Psalm 85, the four attributes are persons walking toward each other across a darkened landscape &mdash; dynamic, relational, moving. Their meeting is an event. Something happens when they embrace.</p>
+        <p>In Psalm 89:14 they are <em>architectural.</em> They are not meeting &mdash; they are <em>foundational.</em> Righteousness and justice are not policies God adopts or strategies he deploys. They are the very structure upon which his throne rests. You cannot have the throne without them. Remove them and there is no reign &mdash; only chaos or tyranny.</p>
+        <p>And <em>hesed</em> and <em>emet</em> go before him &mdash; they are heralds, preceding every divine act, announcing what kind of God is coming before he arrives.</p>
+
+        <h3 class="section">What the Two Psalms Say Together</h3>
+        <p>Together the two psalms are saying something that neither says alone. Psalm 85 shows the dynamic meeting &mdash; the moment of reconciliation, the kiss, the event of salvation. Psalm 89 shows the eternal ground of that meeting &mdash; these attributes are not brought into alignment at the Cross as though they were previously in conflict. They are the permanent structure of who God is.</p>
+        <p>The Cross is not God finding a solution to a problem his own nature created. It is God acting in perfect, unimpeded accordance with the foundations of his own throne.</p>
+        <p>This deepens the &lsquo;satisfaction not tension&rsquo; thesis at its root. We argued that the glory of God is not the management of a tension between attributes but their simultaneous satisfaction. Psalm 89:14 shows why there was never ultimately a tension at all &mdash; except from the creaturely side of the event. From within the divine throne room, righteousness and justice and steadfast love and faithfulness have always been the foundation. They were never in competition.</p>
+        <p>The Cross does not resolve a divine dilemma. It reveals a divine nature that was never in dilemma.</p>
+
+        <h3 class="section">The Lament Context</h3>
+        <p>Psalm 89 makes this even more striking because of where the verse sits. The psalm opens with magnificent praise of God&rsquo;s covenant faithfulness to David &mdash; and then, from verse 38, plunges into anguished lament: &lsquo;But now you have cast off and rejected, you are full of wrath against your anointed.&rsquo; The Davidic covenant appears broken. The throne appears abandoned.</p>
+        <p>And yet verse 14 stands at the centre of the praise section as an immovable declaration: <em>righteousness and justice are the foundation of your throne.</em> The psalmist is doing precisely what Job does &mdash; holding God to his own character in the midst of apparent abandonment. The foundation has not shifted even when the superstructure appears to have collapsed.</p>
+        <p>Which means Psalm 89 is itself a drama of righteousness proved within relationship under testing &mdash; the whole community of faith doing what Job did individually: refusing to let go of the God whose throne is founded on these things, even when his acts seem to contradict them.</p>
+
+        <h3 class="section">The Herald Image</h3>
+        <p>Psalm 85:13 ends: <em>Righteousness will go before him and make his footsteps a way.</em> Righteousness as herald. Psalm 89:14 has <em>hesed</em> and <em>emet</em> going before him as heralds. Both psalms use this procession image &mdash; but with different members of the quartet leading.</p>
+        <p>Read together they suggest that all four go before him. The whole character of God precedes every divine act, announcing what is coming, preparing the way. Which is itself an Advent image &mdash; and perhaps why these psalms have been read liturgically in that season.</p>
+        <p>What goes before God into the world? Everything he is. And what he is, is exactly what John beheld: full of grace and truth. The herald and the fullness are the same.</p>
+
+        <div class="chapter-heading" id="appendix">
+          <span class="chapter-label">Appendix</span>
+          <h2>Key Sources and Further Reading</h2>
+        </div>
+
+        <h3 class="section">Primary Biblical Texts</h3>
+        <p>Psalm 85:10&ndash;13; Psalm 89:14; Exodus 33:14; Exodus 34:6&ndash;7; Job 1:1&ndash;2:10; Job 38&ndash;41; Isaiah 45:8; Isaiah 51:5&ndash;6; Matthew 5:3&ndash;12; John 1:1&ndash;18; Romans 1:17; Romans 3:21&ndash;26; Romans 8:18&ndash;25; 2 Corinthians 3:18; 2 Corinthians 5:21; Philemon 1:1&ndash;25; Ephesians 1:1&ndash;23; James 2:14&ndash;26.</p>
+
+        <h3 class="section">Commentators and Theologians</h3>
+        <p><strong>Augustine</strong> &mdash; Exposition on Psalm 85 (available at newadvent.org/fathers). Augustine&rsquo;s reading of the four attributes as the content of God&rsquo;s glory is foundational to the entire tradition.</p>
+        <p><strong>Anselm of Canterbury</strong> &mdash; Cur Deus Homo. The satisfaction theory of atonement that underlies the Four Daughters allegory.</p>
+        <p><strong>Bernard of Clairvaux</strong> &mdash; Sermo primus de annuntiatione dominica. The sermon that popularised the Four Daughters allegory in its mature form.</p>
+        <p><strong>Calvin, John</strong> &mdash; Commentary on the Psalms. Calvin&rsquo;s dual-fulfilment reading provides an important methodological framework.</p>
+        <p><strong>Spurgeon, Charles H.</strong> &mdash; The Treasury of David. Invaluable for its compilation of commentary on Psalm 85, particularly the observations of George Horne.</p>
+
+        <h3 class="section">Literary and Contemporary Sources</h3>
+        <p><strong>Langland, William</strong> &mdash; Piers Plowman, B-Text, Passus 18 (c. 1377&ndash;79). The climactic dramatisation of the Four Daughters debate and the Harrowing of Hell.</p>
+        <p><strong>Lewis, C.S.</strong> &mdash; The Weight of Glory (1941). Lewis&rsquo;s sermon on glory as the ground of human longing provides an important contemporary complement to the biblical and medieval material.</p>
+        <p><strong>Peterson, Eugene H.</strong> &mdash; Introduction to Job in The Message (NavPress, 2002). Peterson&rsquo;s framing of Job as a drama about righteousness defined within relationship rather than outside it is particularly illuminating.</p>
+        <p><strong>Robinson, Elizabeth</strong> &mdash; &lsquo;The Incarcerated Self: Using the Power of Listening in Creating Space for Freedom and Healing.&rsquo; Professional Educator, Volume 23, 2020. A case study in relational pedagogy that embodies the theology of tsedeq in a Tasmanian school context.</p>
+        <p><strong>Reed, Norm</strong> &mdash; Churchill Fellowship Report, 2014. An investigation into international approaches to maintaining family and community relationships with people in prison, undertaken on behalf of the Onesimus Foundation, Tasmania.</p>
+
+        <div class="hw-disclaimer">
+          <p>This publication was developed in theological conversation with an AI assistant. The biblical exegesis, the theological argument, the pastoral judgements, and the connections to the Onesimus Foundation&rsquo;s work are the author&rsquo;s own. The AI assisted in research, drafting, and structure.</p>
+        </div>
+
+        <div class="download-bar">
+          <a href="when-mercy-and-truth-met.pdf" class="dl-link">Download PDF</a>
+        </div>
+
+      </div>
+    </div>
   </div>
+</article>
 
-  <!-- ── TABLE OF CONTENTS ── -->
-  <div class="toc">
-    <h2>Contents</h2>
-    <ol>
-      <li><a href="#preface">Preface</a></li>
-      <li><a href="#chapter-1">The Text and Its Tradition</a></li>
-      <li class="toc-sub"><a href="#four-hebrew-words">The Four Hebrew Words</a></li>
-      <li class="toc-sub"><a href="#john-114">John 1:14 &mdash; The Fulfilment</a></li>
-      <li class="toc-sub"><a href="#tradition">How the Tradition Has Read This Passage</a></li>
-      <li><a href="#chapter-2">The Four Daughters of God</a></li>
-      <li><a href="#chapter-3">William Langland and Piers Plowman</a></li>
-      <li class="toc-sub"><a href="#retelling">The Argument at the Gates of Hell &mdash; A Retelling</a></li>
-      <li><a href="#chapter-4">Defining Righteousness</a></li>
-      <li><a href="#chapter-5">Glory &mdash; Satisfaction, Not Tension</a></li>
-      <li><a href="#chapter-6">The Book of Job</a></li>
-      <li><a href="#chapter-7">Righteousness Through Scripture</a></li>
-      <li><a href="#chapter-8">The Weight of Glory</a></li>
-      <li><a href="#chapter-9">The Church as the Answer</a></li>
-      <li><a href="#conclusion">Conclusion</a></li>
-      <li><a href="#postscript">Postscript &mdash; Psalm 89:14</a></li>
-      <li><a href="#appendix">Appendix: Key Sources</a></li>
-    </ol>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
   </div>
-
-  <!-- ══════════════════════════════════════════════════ -->
-  <!-- PREFACE -->
-  <!-- ══════════════════════════════════════════════════ -->
-  <div id="preface" class="chapter-heading">
-    <span class="chapter-label">Preface</span>
-    <h2>Preface</h2>
-  </div>
-
-  <p class="drop-cap">This document records a theological conversation exploring one of the most profound passages in the Hebrew Psalter &mdash; Psalm 85:10&ndash;13 &mdash; and traces its fulfilment through the Gospels, its dramatisation in medieval English literature, and its implications for a theology of righteousness, glory, and the nature of God himself.</p>
-
-  <p>The conversation moves through several related territories: the biblical text and its Hebrew vocabulary; the commentary tradition from Augustine through Spurgeon; the remarkable medieval allegory of the Four Daughters of God; William Langland&rsquo;s dramatisation in <em>Piers Plowman</em>; the book of Job as a drama redefining righteousness from within relationship; the question of how this definition holds across the whole canon of Scripture; and finally, the embodiment of this theology in the life of a small church in Risdon Vale, Tasmania, and the Onesimus Foundation it gave birth to.</p>
-
-  <p>The central thesis that emerges is this: the glory of God &mdash; what John says we &lsquo;beheld&rsquo; in Christ, full of grace and truth &mdash; is not the management of a tension between divine attributes, but their simultaneous and complete satisfaction. This is not merely what God does. It is who God is. And it is the shape into which the redeemed life, and the redeemed community, is being formed.</p>
-
-  <p>The conversation is preserved here as closely as possible to the form in which it unfolded &mdash; an organic, cumulative exploration rather than a systematic treatise. Its incompleteness at certain points is deliberate: these are places where the theological work remains genuinely open, and where the reader is invited to continue. The publication stands as it is. It does not require a summary. It asks to be read whole.</p>
-
-  <hr class="rule">
-
-  <!-- ══════════════════════════════════════════════════ -->
-  <!-- CHAPTER 1 -->
-  <!-- ══════════════════════════════════════════════════ -->
-  <div id="chapter-1" class="chapter-heading">
-    <span class="chapter-label">Chapter One</span>
-    <h2>The Text and Its Tradition</h2>
-  </div>
-
-  <h3 id="four-hebrew-words" class="section">The Four Hebrew Words</h3>
-
-  <p class="drop-cap">The passage that anchors this entire exploration presents four Hebrew words that carry the theological weight of the psalm. They are among the most significant in the entire Old Testament vocabulary of God&rsquo;s character.</p>
-
-  <div class="definition-box">
-    <p class="word">Hesed</p>
-    <p>Steadfast love, covenant love, mercy. The word describes God&rsquo;s unbreakable, loyal, active love toward his covenant people. It is the love that does not let go.</p>
-  </div>
-
-  <div class="definition-box">
-    <p class="word">Emet</p>
-    <p>Faithfulness, truth, reliability. The word describes the utter trustworthiness of God &mdash; that he is what he says he is, and will do what he has promised.</p>
-  </div>
-
-  <div class="definition-box">
-    <p class="word">Tsedeq</p>
-    <p>Righteousness. This is the word we will examine most carefully. Its range of meaning extends far beyond moral conformity to a standard, reaching into the relational heart of how God orders all things.</p>
-  </div>
-
-  <div class="definition-box">
-    <p class="word">Shalom</p>
-    <p>Peace, wholeness, flourishing. Not merely the absence of conflict, but the positive presence of everything that ought to be.</p>
-  </div>
-
-  <p>These four words do not describe four separate attributes that happen to coexist. The psalm presents them as persons &mdash; moving toward one another, meeting, embracing. <em>Hesed</em> and <em>emet</em> meet. <em>Tsedeq</em> and <em>shalom</em> kiss. The imagery is deliberate and arresting: these are not abstract qualities held in divine balance. They are living realities that belong together, that have been separated by human sin and brokenness, and whose reunion is the content of salvation.</p>
-
-  <h3 id="john-114" class="section">John 1:14 &mdash; The Fulfilment</h3>
-
-  <p>The connection between Psalm 85:10 and John 1:14 is not accidental. When John writes &lsquo;the Word became flesh and dwelt among us, and we have seen his glory, glory as of the only Son from the Father, full of grace and truth,&rsquo; he is reaching directly into the vocabulary of this psalm.</p>
-
-  <p>John&rsquo;s &lsquo;grace and truth&rsquo; &mdash; <em>charis kai aletheia</em> in the Greek &mdash; is almost certainly a deliberate rendering of <em>hesed ve-emet</em>, the very pair that leads the psalm&rsquo;s quartet. John is saying: what the psalmist foresaw &mdash; the meeting of steadfast love and faithfulness &mdash; we have seen. We beheld it. It took a face.</p>
-
-  <p>The word John uses for &lsquo;beheld&rsquo; is <em>etheasametha</em> &mdash; not a glance, but sustained, attentive, contemplative gazing. The disciples did not glimpse the glory. They gazed at it. And what they gazed at was not a balancing act between competing attributes, but a <em>pleroma</em> &mdash; a fullness &mdash; in which grace and truth are simultaneously and completely present. Neither diminished in order to make room for the other. Both entire. That is what struck them as glory.</p>
-
-  <h3 id="tradition" class="section">How the Tradition Has Read This Passage</h3>
-
-  <h4 class="subsection">Augustine</h4>
-
-  <p>Augustine reads verse 9&rsquo;s promise that &lsquo;glory may dwell in our land&rsquo; as a direct prophecy of the Incarnation. When he arrives at verse 10, he reads the meeting of mercy and truth as the resolution of a divine tension that could only be solved by God becoming flesh. His key insight is that mercy is the origin and source of all God&rsquo;s promises, from which issues the righteousness offered by the gospel, while from that righteousness proceeds the peace obtained by faith when God justifies freely. The sequence matters: mercy &rarr; righteousness &rarr; peace. Not three separate things, but a single saving logic that unfolds.</p>
-
-  <h4 class="subsection">Calvin</h4>
-
-  <p>Calvin reads the psalm primarily as a reflection on Israel&rsquo;s restoration after exile, but notes that the faithful &lsquo;lifted up their eyes&rsquo; to the Messiah when their faith needed encouragement. His treatment recognises a dual fulfilment &mdash; the immediate covenant restoration and the eschatological one &mdash; while preserving Augustine&rsquo;s insight about the sequence.</p>
-
-  <h4 class="subsection">Spurgeon &mdash; The Treasury of David</h4>
-
-  <p>Spurgeon works at two levels simultaneously. He acknowledges the immediate and primary meaning &mdash; the people now made willing to forsake sin find peace granted to them at once &mdash; but insists that the inner sense is Christ Jesus, the reconciling Word. For Spurgeon, in him the attributes of God unite in glad unanimity in the salvation of guilty men, meeting and embracing in such a manner as else were inconceivable.</p>
-
-  <p>The Treasury also preserves a remarkable comment from George Horne: &lsquo;Mercy and peace are on one side; truth and righteousness on the other. Truth requires righteousness; mercy calls for peace. They meet together on the way; one going to make inquisition for sin, the other to plead for reconciliation. Having met, their differences are adjusted; and their mutual claims blended together in one common interest &mdash; on which peace and righteousness immediately embrace.&rsquo; Where did they meet? In Christ Jesus. When were they reconciled? When he poured out his life on Calvary.</p>
-
-  <hr class="rule">
-
-  <!-- ══════════════════════════════════════════════════ -->
-  <!-- CHAPTER 2 -->
-  <!-- ══════════════════════════════════════════════════ -->
-  <div id="chapter-2" class="chapter-heading">
-    <span class="chapter-label">Chapter Two</span>
-    <h2>The Four Daughters of God</h2>
-  </div>
-
-  <p class="drop-cap">One of the most remarkable facts about the reception of Psalm 85:10 is that it generated an entire tradition of allegorical interpretation running from an eleventh-century Jewish Midrash &mdash; in which Truth, Justice, Mercy and Peace were described as the four standards of the Throne of God &mdash; through to medieval English drama and beyond.</p>
-
-  <p>The motif became known as &lsquo;the Four Daughters of God.&rsquo; The four attributes of verse 10 were personified as four celestial women who, following the Fall of Adam and Eve, found themselves in conflict. Truth and Righteousness argued that God&rsquo;s declared word must stand &mdash; &lsquo;the soul that sins shall die&rsquo; &mdash; while Mercy and Peace pleaded for forgiveness and restoration. Their disagreement could only be resolved by an act that satisfied all four simultaneously.</p>
-
-  <h3 class="section">Hugh of St Victor and Bernard of Clairvaux</h3>
-
-  <p>The most important early developers of the allegory were Hugh of St Victor (c. 1096&ndash;1141) and Bernard of Clairvaux (1090&ndash;1153). Bernard further popularised it in sermons on the Annunciation, adapting it to Anselm&rsquo;s satisfaction theory from <em>Cur Deus Homo</em>.</p>
-
-  <p>In Bernard&rsquo;s version, the daughters convene in conflict over sinful humanity&rsquo;s fate: Mercy and Peace advocate forgiveness, while Truth and Righteousness demand satisfaction for sin&rsquo;s debt. The dispute culminates in Christ&rsquo;s voluntary atonement &mdash; the one act that can reconcile all four. As one commentator in the Treasury puts it: &lsquo;These four divine attributes parted at the fall of Adam and met again at the birth of Christ. Now there is no religion on earth, except the Christian, which can satisfy the demands of all these claimants, and restore a union between them.&rsquo;</p>
-
-  <h3 class="section">The Spatial Drama of Verse 11</h3>
-
-  <p>Verse 11 adds a vertical dimension to the horizontal drama: &lsquo;Faithfulness springs up from the ground, and righteousness looks down from the sky.&rsquo; The patristic tradition read this as depicting the Incarnation geometrically: heaven bending toward earth, earth reaching toward heaven, and the meeting point being the person of Christ. Truth springing up from the earth was associated with the Nativity &mdash; Truth laid in a manger while Righteousness looks down on Bethlehem.</p>
-
-  <p>This is where the connection to John 1:14 deepens further: &lsquo;the Word became flesh and dwelt among us&rsquo; is precisely this downward movement of righteousness from heaven, while &lsquo;full of grace and truth&rsquo; is the <em>hesed ve-emet</em> pair now made visible, tangible, historical.</p>
-
-  <hr class="rule">
-
-  <!-- ══════════════════════════════════════════════════ -->
-  <!-- CHAPTER 3 -->
-  <!-- ══════════════════════════════════════════════════ -->
-  <div id="chapter-3" class="chapter-heading">
-    <span class="chapter-label">Chapter Three</span>
-    <h2>William Langland and Piers Plowman</h2>
-  </div>
-
-  <p class="drop-cap">William Langland&rsquo;s <em>Piers Plowman</em>, written in Middle English between approximately 1360 and 1386, is one of the greatest works of English literature of the Middle Ages. Langland was writing at a moment when the institutional Church was visibly corrupt, the gap between rich and poor was savage, and ordinary people were angry. The Four Daughters scene is not escapism &mdash; it is Langland saying: beneath all this disorder, there is a deeper reality in which Righteousness and Peace have already kissed. The cosmic drama is the ground of earthly hope.</p>
-
-  <h3 class="section">Passus 18 &mdash; The Dramatic Scene</h3>
-
-  <p>Will &mdash; the dreamer, whose name carries its own allegorical weight &mdash; falls asleep during Palm Sunday and the poem shifts register entirely. Christ approaches Jerusalem jousting as Piers Plowman: &lsquo;This gentleman Jesus will joust in Piers&rsquo; arms, in his helmet and armor called human shape.&rsquo; The divine condescends into the creature. The Incarnation is a tournament.</p>
-
-  <p>Then in the darkness between the Crucifixion and the Resurrection &mdash; on Holy Saturday &mdash; the Four Daughters appear. Out of the west, Mercy comes walking toward Hell &mdash; meek, gentle, full of hope. Out of the east, Truth comes walking westward &mdash; straight, clear-eyed, unafraid. Their debate reaches an impasse. The argument is not resolved by logic but by event &mdash; the Harrowing of Hell. Christ descends, breaks the gates, and the souls flood out.</p>
-
-  <blockquote>
-    At the dawn of Easter morning, these damsels danced, until the bells rang in the resurrection.
-  </blockquote>
-
-  <p>The dreamer Will woke up and called his wife and daughter to come reverently to the Cross at Easter. Which is Langland&rsquo;s way of saying: the cosmic drama has a personal address.</p>
-
-  <div id="retelling" class="story-section">
-    <p class="story-title">The Argument at the Gates of Hell</p>
-    <p class="story-subtitle"><em>After William Langland&rsquo;s Piers Plowman, Passus 18</em></p>
-
-    <p class="drop-cap">It was the darkest night the world had ever known.</p>
-
-    <p>The sky had gone black at noon. The ground had shaken. And the man they called the Son of God was dead &mdash; nailed to a cross outside the city walls, then taken down and sealed in a tomb with a great stone.</p>
-
-    <p>Nobody knew what would happen next.</p>
-
-    <p class="story-gap">In that darkness, four sisters found each other on a lonely road. They were not ordinary women. They were something older than women &mdash; old as creation itself, old as the first word God ever spoke. Their names were <strong>Mercy</strong>, <strong>Truth</strong>, <strong>Righteousness</strong>, and <strong>Peace</strong>.</p>
-
-    <p>They had not walked together for a very long time.</p>
-
-    <p>Mercy came from the west, moving toward the gates of Hell. Her face was gentle, her voice soft. She was the one who always wanted to forgive. Truth came from the east. She walked straight, looked you in the eye, and never said anything she didn&rsquo;t mean.</p>
-
-    <p>They nearly bumped into each other in the dark.</p>
-
-    <p class="story-gap">&lsquo;Mercy!&rsquo; said Truth. &lsquo;What is that strange light over the gates of Hell? What is happening?&rsquo;</p>
-
-    <p>Mercy smiled &mdash; and it was a smile full of something she&rsquo;d been waiting a long time to say.</p>
-
-    <p>&lsquo;A child was born,&rsquo; she said. &lsquo;A very particular child. Born of a woman, but more than a man. He has just died on a cross. And I believe &mdash; I <em>know</em> &mdash; that death is about to be turned inside out.&rsquo;</p>
-
-    <p class="story-gap">Now their two sisters arrived &mdash; Righteousness, stern and straight-backed, and Peace, who moved quietly and carried a letter.</p>
-
-    <p>&lsquo;Let <em>everyone</em> out?&rsquo; said Righteousness. &lsquo;That is not how this works. God himself made the rule: <em>the soul that sins shall die.</em> The gates of Hell were shut, and they were shut <em>justly.</em>&rsquo;</p>
-
-    <p>&lsquo;I&rsquo;m not saying it wasn&rsquo;t just,&rsquo; said Mercy. &lsquo;I&rsquo;m saying something <em>has</em> been done. The punishment was real. The death was real. But it was borne by One who did not owe it. The debt was paid not by erasure but by substitution. Righteousness is not cheated. It is <em>satisfied</em>. Completely. Paid in full.&rsquo;</p>
-
-    <p class="story-gap">Truth had been quiet. Now she spoke: &lsquo;And what about me? I am the one who speaks what is real. And the real thing that was spoken was: <em>they shall die.</em> Words mean things. A promise is a promise.&rsquo;</p>
-
-    <p>Peace stepped forward and held out the letter. It was from Love. It said: <em>I have not broken my word. I have kept it in a way no one expected. Every word I spoke was true. But I bore it myself. Now come &mdash; open your eyes.</em></p>
-
-    <p>Truth read the letter twice. Then she looked up. Something in her face had changed. Not softened exactly. But <em>completed.</em> As if she had been half a sentence for a very long time, and had just heard the second half.</p>
-
-    <p class="story-gap">A sound came from the gates of Hell. Not a knock &mdash; a <em>blow.</em> Then a voice, resonant and absolute:</p>
-
-    <blockquote>&lsquo;Lift up your heads, O gates! And the King of Glory shall come in.&rsquo;</blockquote>
-
-    <p>The gates didn&rsquo;t open. They <em>shattered.</em> And out they came &mdash; Adam and Eve, Abraham, Moses, the prophets, all the ones who had lived and hoped and waited without knowing quite what they were waiting for.</p>
-
-    <p class="story-gap">And then &mdash; because it was now Sunday morning, and the birds had started, and the light was coming up gold over the hill &mdash; Peace began to laugh. Then Mercy. Then, slowly, with a dignity she couldn&rsquo;t quite suppress, Righteousness. And Truth &mdash; Truth smiled, which on her face was worth more than anyone else&rsquo;s laughter.</p>
-
-    <p>And they danced. They danced until the bells rang.</p>
-
-    <p class="story-gap">Somewhere in the city, a man named Will woke up. He shook his wife awake.</p>
-
-    <p>&lsquo;Mercy and Truth finally agreed,&rsquo; he said. &lsquo;And when they did &mdash; Peace kissed Righteousness. And everything that was locked got opened.&rsquo;</p>
-  </div>
-
-  <hr class="rule">
-
-  <!-- ══════════════════════════════════════════════════ -->
-  <!-- CHAPTER 4 -->
-  <!-- ══════════════════════════════════════════════════ -->
-  <div id="chapter-4" class="chapter-heading">
-    <span class="chapter-label">Chapter Four</span>
-    <h2>Defining Righteousness</h2>
-  </div>
-
-  <p class="drop-cap">The instinctive definition of righteousness is moral correctness &mdash; conformity to a standard. On this reading, righteousness is a measuring rod, and the question it always asks is: have you measured up? That definition is not wrong exactly. But in the light of Psalm 85 it is drastically incomplete &mdash; and the incompleteness distorts everything downstream.</p>
-
-  <h3 class="section">What the Psalm Shows Us</h3>
-
-  <p>Look at who Righteousness is paired with in the psalm. Steadfast love is paired with faithfulness &mdash; that pairing makes intuitive sense. Love and faithfulness belong together naturally.</p>
-
-  <p>But then: <em>Righteousness kisses Peace.</em></p>
-
-  <p>That is the pairing that stops you. If righteousness were simply a measuring rod, you would not expect its natural partner to be <em>shalom.</em> You would expect judgment, or retribution. Peace would be what happens <em>after</em> righteousness has finished its work and withdrawn. But the psalm puts them together. Kissing. Inseparable. Which means the psalm is telling us that righteousness, properly understood, is not opposed to peace &mdash; it <em>produces</em> peace.</p>
-
-  <h3 class="section">The Hebrew &mdash; Tsedeq / Tsedaqah</h3>
-
-  <p>The Hebrew word <em>tsedeq</em> carries a meaning significantly wider than moral correctness. At its root it describes <em>right relationship</em> &mdash; things being as they ought to be between persons. Not conformity to an abstract standard, but the wholeness of a relationship in which each party gives the other what they are owed, what they need, what love requires.</p>
-
-  <p>In the Old Testament, God&rsquo;s righteousness is frequently his <em>saving</em> righteousness &mdash; his faithfulness to the covenant, his action to restore what has been broken. Isaiah uses <em>tsedaqah</em> almost interchangeably with salvation. That is startling if righteousness simply means moral demand. It makes perfect sense if righteousness means the restoration of right relationship.</p>
-
-  <h3 class="section">The Cross as the Definition</h3>
-
-  <p>At the Cross, what is God doing? He is making right everything that is wrong &mdash; not by ignoring the wrongness, but by entering fully into its consequences and bearing them. He is restoring right relationship between himself and humanity at the cost of himself.</p>
-
-  <p>That is righteousness. Not the cold application of a standard. Not the mechanical execution of a penalty. But the passionate commitment of God to the restoration of right relationship, pursued at infinite cost, resulting in peace.</p>
-
-  <p>And John, standing in the light of all this, looks at Jesus and says: we beheld his glory &mdash; full of grace and truth. Grace is <em>hesed</em> made flesh. Truth is <em>emet</em> made flesh. And the glory is the sight of a God whose righteousness is not his threat but his gift &mdash; the gift of right relationship, freely given, at the cost of everything.</p>
-
-  <hr class="rule">
-
-  <!-- ══════════════════════════════════════════════════ -->
-  <!-- CHAPTER 5 -->
-  <!-- ══════════════════════════════════════════════════ -->
-  <div id="chapter-5" class="chapter-heading">
-    <span class="chapter-label">Chapter Five</span>
-    <h2>Glory &mdash; Satisfaction, Not Tension</h2>
-  </div>
-
-  <p class="drop-cap">The word <em>tension</em> is too weak &mdash; and potentially misleading. Tension implies a standoff, a managed compromise, two forces kept in equilibrium by sheer power. That would make God&rsquo;s glory a kind of perpetual balancing act &mdash; impressive, perhaps, but essentially unstable. A God holding attributes in tension is a God who hasn&rsquo;t quite resolved his own nature. But that isn&rsquo;t what John sees.</p>
-
-  <h3 class="section">Satisfaction Rather Than Tension</h3>
-
-  <p>To satisfy a claim is not to silence it or override it. It is to meet it fully &mdash; to give it everything it requires until it has nothing left to demand. When Righteousness is satisfied, she doesn&rsquo;t retreat defeated. She rests. She has received what she was always asking for. When Mercy is satisfied, she doesn&rsquo;t compromise. She has been able to give fully what she always wanted to give.</p>
-
-  <p>The glory is not that God overpowered his own justice with his love, or softened his truth with grace. The glory is that in the Incarnation and the Cross, every attribute received its complete fulfilment &mdash; simultaneously, in the same event, in the same person. This is why the sisters dance in Langland. Not because one of them won. Because all of them did.</p>
-
-  <h3 class="section">Glory as the Revelation of What God Is</h3>
-
-  <p>A God who merely found a clever solution to tension between his attributes would be displaying <em>wisdom.</em> But wisdom is something you exercise. It is a capacity brought to bear on a problem. What John is pointing to is something deeper. The <em>pleroma</em> of grace and truth in Christ is not God solving a problem. It is God <em>showing himself.</em> The Incarnation and the Cross are not divine problem-solving &mdash; they are divine self-disclosure.</p>
-
-  <p>Moses asked to see God&rsquo;s glory in Exodus 33. God passed before him and proclaimed: &lsquo;The Lord, the Lord, a God merciful and gracious, slow to anger, and abounding in steadfast love and faithfulness.&rsquo; The attributes. Together. That is the glory. John is saying: what Moses heard proclaimed, we saw embodied. The proclamation became a person.</p>
-
-  <h3 class="section">Righteousness Evidenced by Fruit</h3>
-
-  <p>As faith &mdash; which James says is evidenced by our works &mdash; so too is righteousness evidenced by fruit. If righteousness is the restoration of right relationship, then it cannot be invisible. Right relationship always takes shape. It produces a particular kind of fruit, a particular way of being present to others.</p>
-
-  <p>And the psalm itself tells us what that fruit looks like: <em>the Lord will give what is good, and our land will yield its increase. Righteousness will go before him and make his footsteps a way.</em> Abundance. Things grow. Life flourishes. Creation responds. This is the Hebrew way of describing <em>shalom</em> made visible in the material world.</p>
-
-  <hr class="rule">
-
-  <!-- ══════════════════════════════════════════════════ -->
-  <!-- CHAPTER 6 -->
-  <!-- ══════════════════════════════════════════════════ -->
-  <div id="chapter-6" class="chapter-heading">
-    <span class="chapter-label">Chapter Six</span>
-    <h2>The Book of Job</h2>
-  </div>
-
-  <p class="drop-cap">The drama of Job turns on Satan&rsquo;s question in Job 1:9 &mdash; &lsquo;Does Job fear God for nothing?&rsquo; It is a question not about Job&rsquo;s behaviour but about the nature of the relationship itself. Satan&rsquo;s accusation is essentially this: the relationship is transactional. Job is righteous because it pays. Remove the reward and the righteousness collapses. God&rsquo;s answer is to permit the testing &mdash; because the nature of genuine relationship cannot be demonstrated abstractly. It can only be proved from within the relationship under pressure.</p>
-
-  <h3 class="section">What the Friends Get Wrong</h3>
-
-  <p>The friends &mdash; Eliphaz, Bildad, Zophar &mdash; are not heretics. They say true things about God. What is wrong is the <em>location</em> of their definition. They are defining righteousness from <em>outside</em> the relationship &mdash; as observers constructing a system, applying it mechanically, forcing both Job and God to conform to it. Their righteousness is a map. Job is on the actual terrain.</p>
-
-  <p>God rebukes them for it. Not for their theology in the abstract, but for what their theology did &mdash; it placed a system above a person, a definition above a relationship, a map above the living God who refuses to be reduced to one.</p>
-
-  <h3 class="section">Job&rsquo;s Righteousness &mdash; Declared from Within Relationship</h3>
-
-  <p>God declares Job righteous before the testing begins &mdash; not as a reward for performance, but as a description of a relationship already existing. When the testing comes, what Job does is exactly what a person in genuine relationship does: he protests, he argues, he demands an answer, he refuses comfortable lies, he stays in the conversation.</p>
-
-  <p>He does not perform piety. He insists on the reality of the relationship even when the relationship feels absent. That is righteousness proved. Not moral perfection. Not doctrinal correctness. The refusal to let go of God even when God seems to have let go of him.</p>
-
-  <p>Which is a definition of righteousness that only makes sense from <em>inside</em> the relationship.</p>
-
-  <h3 class="section">The Religious Problem Jesus Came to Address</h3>
-
-  <p>The Pharisees are, in a profound sense, the friends of Job. Learned, serious, devout men who say true things about God &mdash; but whose theology has been constructed from outside the relationship. The living God has been replaced by his own law. The map has swallowed the terrain.</p>
-
-  <p>Jesus comes not to abolish the law but to restore the relationship within which the law was always meant to be understood. He reintroduces God as Father. And in doing so he regrounds righteousness in relationship rather than system.</p>
-
-  <p>The Father-Son relationship is itself then tested: the wilderness, Gethsemane, the Cross. &lsquo;My God, my God, why have you forsaken me?&rsquo; is Job&rsquo;s protest taken to its ultimate depth. And what the Resurrection declares is what God declared over Job: <em>this one is righteous.</em> The relationship was real. It held. It proved itself from within.</p>
-
-  <hr class="rule">
-
-  <!-- ══════════════════════════════════════════════════ -->
-  <!-- CHAPTER 7 -->
-  <!-- ══════════════════════════════════════════════════ -->
-  <div id="chapter-7" class="chapter-heading">
-    <span class="chapter-label">Chapter Seven</span>
-    <h2>Righteousness Through Scripture</h2>
-  </div>
-
-  <h3 class="section">The Old Testament</h3>
-
-  <p class="drop-cap">The first person called righteous in Scripture is Noah &mdash; &lsquo;Noah walked with God.&rsquo; Righteousness is immediately relational, located in an ongoing walk. Then Abraham: &lsquo;Abraham believed God, and it was counted to him as righteousness&rsquo; &mdash; before the law, before circumcision. Righteousness here is the right ordering of Abraham&rsquo;s relationship with God through trust. Not achievement. Relational alignment.</p>
-
-  <p>Isaiah uses <em>tsedaqah</em> almost interchangeably with salvation. Isaiah 45:8 &mdash; &lsquo;let the skies pour down righteousness; let the earth open, that salvation and righteousness may bear fruit.&rsquo; They fall together like rain. This is not the language of a measuring rod. It is the language of a life-giving force.</p>
-
-  <p>Psalm 31:1 &mdash; &lsquo;In your righteousness deliver me.&rsquo; Righteousness here is the ground of rescue, not judgment. This usage runs throughout the Psalter. God&rsquo;s righteousness is consistently the basis of his people&rsquo;s hope, not their fear.</p>
-
-  <h3 class="section">The New Testament</h3>
-
-  <p>Romans 1:17 &mdash; &lsquo;the righteousness of God is revealed.&rsquo; Revealed &mdash; <em>apokalyptetai.</em> The righteousness of God is not being demanded in the gospel. It is being disclosed. It is an unveiling of what God is like. Romans 3:21-26: God put Christ forward as a propitiation &lsquo;to show his righteousness&rsquo; &mdash; so that he might be just and the justifier. The Cross demonstrates that God is the kind of God who restores right relationship at infinite cost to himself.</p>
-
-  <p>Matthew 5:6 &mdash; &lsquo;Blessed are those who hunger and thirst for righteousness.&rsquo; If righteousness is merely moral correctness, hungering for it is a strange image. But if righteousness is the restoration of right relationship &mdash; the world as it ought to be &mdash; then hungering for it makes profound sense. It is the deepest longing of the image-bearer in a broken world.</p>
-
-  <p>2 Corinthians 5:21 &mdash; &lsquo;so that in him we might become the righteousness of God.&rsquo; We do not merely receive righteousness as a verdict. We <em>become</em> the righteousness of God. We become the embodiment of restored right relationship &mdash; what God always intended human beings to be in relation to himself and each other.</p>
-
-  <h3 class="section">The Forensic Dimension &mdash; An Important Precision</h3>
-
-  <p>The relational definition does not mean righteousness is soft or that it bypasses the moral demand. The reason the sisters had to kiss rather than one simply surrendering is that the moral demand is real. The forensic and the relational are not competing definitions but different aspects of the same reality seen from different angles.</p>
-
-  <p>The verdict of justification is not an abstract legal fiction &mdash; it is the judge himself entering the dock in our place. What makes the verdict more than a legal technicality is precisely that it is the Father giving the Son, the Son bearing the wrath, the Spirit applying the benefit. It is relationship &mdash; Trinitarian relationship &mdash; that gives the forensic act its saving weight.</p>
-
-  <hr class="rule">
-
-  <!-- ══════════════════════════════════════════════════ -->
-  <!-- CHAPTER 8 -->
-  <!-- ══════════════════════════════════════════════════ -->
-  <div id="chapter-8" class="chapter-heading">
-    <span class="chapter-label">Chapter Eight</span>
-    <h2>The Weight of Glory</h2>
-  </div>
-
-  <p class="drop-cap">The four sisters of Psalm 85 are not only a description of what God is and what the Cross achieves. They are a description of what the redeemed life grows into. The righteousness that God gives in Christ begins to produce in the one who receives it the very qualities that the psalm names &mdash; steadfast love, faithfulness, peace. We are not just recipients of the kiss. We are being formed, slowly, into people in whom these things are no longer in tension in us either.</p>
-
-  <h3 class="section">2 Corinthians 3 &mdash; The Mechanism of Transformation</h3>
-
-  <p>Paul describes the transformation as a process of beholding &mdash; &lsquo;we all, with unveiled face, beholding the glory of the Lord, are being transformed into the same image from one degree of glory to another.&rsquo;</p>
-
-  <p>The mechanism of transformation is contemplation. We look at the glory &mdash; the <em>pleroma</em> of grace and truth that John beheld in Christ &mdash; and in the looking we are changed. Not by effort or achievement but by sustained, attentive gazing at the One in whom righteousness and peace have kissed. The fruit of righteousness is not produced by striving. It is produced by beholding.</p>
-
-  <h3 class="section">Romans 8 &mdash; The Cosmic Scope</h3>
-
-  <p>The restoration of right relationship is not only personal and individual. It is cosmic. Romans 8:18-25 describes creation itself groaning &mdash; waiting for the revealing of the sons of God and the redemption of our bodies. When righteousness and peace finally kiss without separation, the land will yield its increase not metaphorically but literally. Creation will be what it was always meant to be.</p>
-
-  <h3 class="section">The Fully Formed Definition</h3>
-
-  <blockquote>
-    The faithfulness of a relationship with God that holds under testing &mdash; that refuses to be replaced by system, performance, or reward &mdash; and that proves itself precisely at the point where it costs everything.
-  </blockquote>
-
-  <p>That is what Job demonstrated in part. That is what Jesus demonstrated completely and on behalf of all. And that is what Paul means when he says we become the righteousness of God in Christ. We are drawn into the Son&rsquo;s relationship with the Father. We are given the Spirit of adoption who cries <em>Abba.</em></p>
-
-  <p>Righteousness is not a standard we meet. It is a relationship we inhabit. And it is proved &mdash; as Job proved it, as Jesus proved it &mdash; not in the absence of testing but through it.</p>
-
-  <hr class="rule">
-
-  <!-- ══════════════════════════════════════════════════ -->
-  <!-- CHAPTER 9 -->
-  <!-- ══════════════════════════════════════════════════ -->
-  <div id="chapter-9" class="chapter-heading">
-    <span class="chapter-label">Chapter Nine</span>
-    <h2>The Church as the Answer</h2>
-  </div>
-
-  <div class="epigraph">
-    The church, you see, is not peripheral to the world; the world is peripheral to the church. The church is Christ&rsquo;s body, in which he speaks and acts, by which he fills everything with his presence.
-    <span class="attribution">Ephesians 1:23 &middot; Eugene Peterson, The Message</span>
-  </div>
-
-  <h3 class="section">Responding to the Critique</h3>
-
-  <p class="drop-cap">A thoughtful critic of this publication noted, with justice, that its theology remained largely in the realm of what he called &lsquo;heavenly geography&rsquo; &mdash; that the kiss of Mercy and Truth, compellingly traced from Psalm 85 through Langland to the Cross and to Job, had not yet fully arrived on the ground. He asked how this theology informs restorative justice in a broken system &mdash; specifically in Tasmania, specifically in the work of the Onesimus Foundation.</p>
-
-  <p>This chapter is the response. But it begins by reframing the question &mdash; because the gap the critic identified is not primarily a gap between theory and practice. It is a gap in the presentation of a story that has already been lived. The theology did not need to be applied. It needed to be recognised. What happened at Risdon Vale &mdash; the houses built beside the prison, the screens arranged for video calls, the chairs pulled up to the desks of children whose fathers were in custody &mdash; was not a justice program awaiting theological justification. It was the church being what the church was always, eternally, cosmically intended to be.</p>
-
-  <h3 class="section">Ephesians 1 &mdash; The Eternal Purpose</h3>
-
-  <p>Paul&rsquo;s letter to the Ephesians opens with one of the most compressed and expansive theological statements in the entire New Testament. Before he describes what the church does, he describes what the church is &mdash; and he traces that identity not to Pentecost, not to the Resurrection, not even to the Incarnation, but to <em>before the foundation of the world.</em></p>
-
-  <p>The church was not a response to human failure. It was not Plan B, improvised when the creation went wrong. It was the intended form of the answer &mdash; the community in which the fullness of God&rsquo;s purpose for human beings would take shape. The kiss of Mercy and Truth that Psalm 85 anticipates, that the Cross enacts, that Langland dramatises &mdash; its intended embodiment in history was always the church. Not an abstract concept, not a theological idea in search of application, but a community of people drawn into the Son&rsquo;s relationship with the Father, called to make that relationship visible in the world.</p>
-
-  <p>Eugene Peterson captures the force of Paul&rsquo;s vision: the church is not peripheral to the world; the world is peripheral to the church. This is not institutional arrogance. It is a statement about the location of the world&rsquo;s healing. The world does not know where its restoration is coming from. The church, when it is being what it is called to be, is the place where that restoration becomes visible, tangible, and available.</p>
-
-  <h3 class="section">The Fullness That Fills Everything</h3>
-
-  <p>The word Paul uses at the end of Ephesians 1 is <em>pleroma</em> &mdash; fullness. It is the same word John uses in 1:14 &mdash; <em>full</em> of grace and truth &mdash; describing what the disciples beheld in the Incarnate Word. The <em>pleroma</em> concentrated in the person of Jesus &mdash; the perfect, simultaneous fullness of grace and truth, mercy and righteousness &mdash; is now, through the Spirit, the calling and character of the church. The church exists to be the ongoing embodiment of that fullness. Not to manage the tension between mercy and truth, but to be the community in which they have already kissed and in which the fruit of that kiss becomes visible in the world.</p>
-
-  <h3 class="section">Philemon and Onesimus &mdash; The New Testament&rsquo;s Case Study</h3>
-
-  <p>The choice of name for the foundation at Risdon Vale is not incidental. It is a theological declaration.</p>
-
-  <p>The letter to Philemon is the New Testament&rsquo;s most concentrated case study in exactly what this publication has been exploring. Paul is mediating between two people in a broken relationship &mdash; Onesimus, the runaway slave, and Philemon, the wronged master. Paul does not tell Philemon that the wrong doesn&rsquo;t matter. He acknowledges the legitimate claim: &lsquo;If he has wronged you or owes you anything, charge that to my account.&rsquo; Truth is not bypassed. The debt is real. But Paul does not let truth have the final word. He appeals to love, to the new relationship created in Christ, to the fact that Onesimus is now more than a slave &mdash; a dear brother, both in the flesh and in the Lord.</p>
-
-  <p>Righteousness in this letter is not the enforcement of the master&rsquo;s rights. It is the restoration of right relationship in which both men are held by something larger than the categories that previously defined them. The letter ends without telling us what Philemon decided. The silence is deliberate. A genuine invitation holds the risk of rejection. The church at Risdon Vale named its foundation after that dynamic &mdash; understanding itself to be doing what Paul asked of Philemon: receiving back those who had been separated, across every barrier of stigma and system and locked gate, as dear brothers and sisters. Charging the debt to its own account. Refreshing hearts.</p>
-
-  <h3 class="section">The Incarcerated Self &mdash; Theology on the Ground</h3>
-
-  <p>Dr Elizabeth Robinson, Principal of Kingston High School in Tasmania, wrote of a twelve-year-old boy named John whose father had been incarcerated five weeks earlier. His presenting problem, when he came to her office bruised and sobbing with rage, was a combination lock. His actual problem was a severed relationship with his father that no institution in the system was funded or designed to restore.</p>
-
-  <p>What Robinson did &mdash; pulling up a chair, listening, assembling a team, navigating ten people and six documents over two weeks &mdash; she describes in terms of relational pedagogy and trauma-informed practice. These are the correct frameworks for her professional context. But what she was also doing was enacting the theology of Psalm 85. She stepped into the gap between the system&rsquo;s verdict &mdash; incarcerated, separated, managed &mdash; and the person&rsquo;s actual humanity and actual relationships. She did not bypass the system&rsquo;s requirements. She met them, one bureaucratic step at a time, until the gates opened.</p>
-
-  <p>Mercy does not ignore Truth&rsquo;s demands. She satisfies them. And when the gates shattered &mdash; when John finally visited his father &mdash; something in the incarcerated self was set free.</p>
-
-  <p>Robinson&rsquo;s thesis title is itself a theological statement: &lsquo;Pedagogy of Being Present: An Inquiry into the Unconditional Communion of Listening.&rsquo; Unconditional communion. That is <em>hesed.</em> That is the steadfast love that does not let go even when the one it loves is storming across a courtyard with a bruised hand.</p>
-
-  <p>The Onesimus Foundation, and the small church at Risdon Vale that gave it birth, recognised that John was not the only child in that situation. More than one in four prisoners in Australia are parents. Each carries an incarcerated self &mdash; a relationship severed, a story that cannot be told, a gap between where they are and where they need to be that no system is designed to close. The church built houses for families visiting the prison. It arranged video calls into the cells. It enabled prisoners to attend funerals of loved ones. It brought children through the gates on Kids Days to run toward their mothers.</p>
-
-  <p>This is not social work with a theological veneer. This is the church being the church &mdash; the body through which Christ speaks and acts and fills the gap between mercy and truth with his own presence.</p>
-
-  <h3 class="section">The Early Church &mdash; The Precedent</h3>
-
-  <p>What happened at Risdon Vale has a precedent that goes back to the first century. The early church in the Roman world did not merely teach a theology of restored relationship. It demonstrated one &mdash; across the most savage social divisions of its age. Slave and free sat at the same table. Jew and Gentile shared the same bread. The wealthy sold property for distribution to those in need. Prisoners were visited. The sick were cared for at personal risk.</p>
-
-  <p>Tertullian reports that pagans said of the Christians: &lsquo;See how they love one another.&rsquo; That was not a sentiment. It was a witness. The theological novelty of Christianity was inseparable from its social novelty. The kiss of Mercy and Truth was not an abstract doctrine held in the minds of believers. It was a visible, observable fact that required explanation.</p>
-
-  <p>The Onesimus Foundation is in that lineage &mdash; not because it is large or well-funded, but because it is doing what the church has always done when it takes seriously the God whose Son said: <em>I was in prison and you came to me.</em></p>
-
-  <h3 class="section">Not Peripheral &mdash; Central</h3>
-
-  <p>The bridge between the theology of this publication and the specific justice issues being navigated in Tasmania does not run from theology to practice. It runs from practice to theology &mdash; from the houses built and the chairs pulled up and the gates opened &mdash; back to the psalm that described it, the allegory that dramatised it, the Cross that grounded it, and the letter to the Ephesians that named its eternal origin.</p>
-
-  <p>The church at Risdon Vale did not read Psalm 85 and decide to build a house for prisoners&rsquo; families. It built the house because it had been grasped by the God of Psalm 85 &mdash; the God in whom mercy and truth meet, in whom righteousness and peace kiss. The theology is the retrospective account of what faithful communities have always done when they live in the light of that God.</p>
-
-  <p>The church is not peripheral to the world. It is the community around which the world&rsquo;s healing is organised, whether the world knows it or not. Its centrality is not the centrality of power or influence or institutional reach. It is the centrality of the body through which Christ speaks and acts and by which he fills everything with his presence &mdash; the <em>pleroma</em> of grace and truth &mdash; made visible in a suburb of Hobart, one chair pulled up at a time.</p>
-
-  <hr class="rule">
-
-  <!-- ══════════════════════════════════════════════════ -->
-  <!-- CONCLUSION -->
-  <!-- ══════════════════════════════════════════════════ -->
-  <div id="conclusion" class="chapter-heading">
-    <span class="chapter-label">Conclusion</span>
-    <h2>Where the Exploration Points</h2>
-  </div>
-
-  <p class="drop-cap">This conversation began with four Hebrew words in a psalm and ended with a boy running through prison gates. The journey was not a series of loosely connected observations but a single developing argument. It is worth stating that argument plainly.</p>
-
-  <p>The glory of God revealed in Christ is not the management of a tension between his attributes but their simultaneous and complete satisfaction. Mercy is not restrained by Truth. Truth is not compromised by Mercy. Righteousness is not opposed to Peace. In the person of Jesus &mdash; and in the event of the Cross and Resurrection &mdash; each attribute receives its full and complete expression. All four sisters dance.</p>
-
-  <p>This satisfaction is not merely what God does. It is who God is. The Incarnation and the Cross do not reveal a God who found a clever solution to a difficult problem. They reveal a God whose very nature is this &mdash; the perfect, eternal, mutual indwelling of love and truth, righteousness and peace. What Moses heard proclaimed in the cleft of the rock, John saw embodied in a person. The proclamation became flesh.</p>
-
-  <p>And this same glory &mdash; this character of God &mdash; is the shape into which the redeemed life and the redeemed community is being formed. We are not merely the recipients of the kiss between righteousness and peace. We are being slowly conformed to the One in whom they have already and permanently kissed. The fruit of that conformity is what the psalm describes: a land that yields its increase, a righteousness that goes before and makes a way.</p>
-
-  <p>The weight of glory that presses on us &mdash; the longing Lewis describes, the <em>Sehnsucht</em> that cannot be satisfied by any earthly thing &mdash; is nothing less than the pull of this reality. We are made for the God whose nature is the satisfaction of all his attributes simultaneously. And we will not rest until we are fully at home in him.</p>
-
-  <div class="coda">
-    <p>Not held in tension. Satisfied.</p>
-    <p>Not peripheral. Central.</p>
-  </div>
-
-  <hr class="rule">
-
-  <!-- ══════════════════════════════════════════════════ -->
-  <!-- POSTSCRIPT -->
-  <!-- ══════════════════════════════════════════════════ -->
-  <div id="postscript" class="chapter-heading">
-    <span class="chapter-label">Postscript</span>
-    <h2>Psalm 89:14 &mdash; A Companion Text</h2>
-  </div>
-
-  <blockquote>
-    Righteousness and justice are the foundation of your throne; steadfast love and faithfulness go before you.
-    <span class="ref">Psalm 89:14 &middot; ESV</span>
-  </blockquote>
-
-  <p class="drop-cap">The same four attributes. But the image is entirely different from Psalm 85, and the difference is theologically significant.</p>
-
-  <p>In Psalm 85, the four attributes are persons walking toward each other across a darkened landscape &mdash; dynamic, relational, moving. Their meeting is an event. Something happens when they embrace.</p>
-
-  <p>In Psalm 89:14 they are <em>architectural.</em> They are not meeting &mdash; they are <em>foundational.</em> Righteousness and justice are not policies God adopts or strategies he deploys. They are the very structure upon which his throne rests. You cannot have the throne without them. Remove them and there is no reign &mdash; only chaos or tyranny.</p>
-
-  <p>And <em>hesed</em> and <em>emet</em> go before him &mdash; they are heralds, preceding every divine act, announcing what kind of God is coming before he arrives.</p>
-
-  <h3 class="section">What the Two Psalms Say Together</h3>
-
-  <p>Together the two psalms are saying something that neither says alone. Psalm 85 shows the dynamic meeting &mdash; the moment of reconciliation, the kiss, the event of salvation. Psalm 89 shows the eternal ground of that meeting &mdash; these attributes are not brought into alignment at the Cross as though they were previously in conflict. They are the permanent structure of who God is.</p>
-
-  <p>The Cross is not God finding a solution to a problem his own nature created. It is God acting in perfect, unimpeded accordance with the foundations of his own throne.</p>
-
-  <p>This deepens the &lsquo;satisfaction not tension&rsquo; thesis at its root. We argued that the glory of God is not the management of a tension between attributes but their simultaneous satisfaction. Psalm 89:14 shows why there was never ultimately a tension at all &mdash; except from the creaturely side of the event. From within the divine throne room, righteousness and justice and steadfast love and faithfulness have always been the foundation. They were never in competition.</p>
-
-  <p>The Cross does not resolve a divine dilemma. It reveals a divine nature that was never in dilemma.</p>
-
-  <h3 class="section">The Lament Context</h3>
-
-  <p>Psalm 89 makes this even more striking because of where the verse sits. The psalm opens with magnificent praise of God&rsquo;s covenant faithfulness to David &mdash; and then, from verse 38, plunges into anguished lament: &lsquo;But now you have cast off and rejected, you are full of wrath against your anointed.&rsquo; The Davidic covenant appears broken. The throne appears abandoned.</p>
-
-  <p>And yet verse 14 stands at the centre of the praise section as an immovable declaration: <em>righteousness and justice are the foundation of your throne.</em> The psalmist is doing precisely what Job does &mdash; holding God to his own character in the midst of apparent abandonment. The foundation has not shifted even when the superstructure appears to have collapsed.</p>
-
-  <p>Which means Psalm 89 is itself a drama of righteousness proved within relationship under testing &mdash; the whole community of faith doing what Job did individually: refusing to let go of the God whose throne is founded on these things, even when his acts seem to contradict them.</p>
-
-  <h3 class="section">The Herald Image</h3>
-
-  <p>Psalm 85:13 ends: <em>Righteousness will go before him and make his footsteps a way.</em> Righteousness as herald. Psalm 89:14 has <em>hesed</em> and <em>emet</em> going before him as heralds. Both psalms use this procession image &mdash; but with different members of the quartet leading.</p>
-
-  <p>Read together they suggest that all four go before him. The whole character of God precedes every divine act, announcing what is coming, preparing the way. Which is itself an Advent image &mdash; and perhaps why these psalms have been read liturgically in that season.</p>
-
-  <p>What goes before God into the world? Everything he is. And what he is, is exactly what John beheld: full of grace and truth. The herald and the fullness are the same.</p>
-
-  <hr class="rule">
-
-  <!-- ══════════════════════════════════════════════════ -->
-  <!-- APPENDIX -->
-  <!-- ══════════════════════════════════════════════════ -->
-  <div id="appendix" class="chapter-heading">
-    <span class="chapter-label">Appendix</span>
-    <h2>Key Sources and Further Reading</h2>
-  </div>
-
-  <h3 class="section">Primary Biblical Texts</h3>
-
-  <p>Psalm 85:10&ndash;13; Psalm 89:14; Exodus 33:14; Exodus 34:6&ndash;7; Job 1:1&ndash;2:10; Job 38&ndash;41; Isaiah 45:8; Isaiah 51:5&ndash;6; Matthew 5:3&ndash;12; John 1:1&ndash;18; Romans 1:17; Romans 3:21&ndash;26; Romans 8:18&ndash;25; 2 Corinthians 3:18; 2 Corinthians 5:21; Philemon 1:1&ndash;25; Ephesians 1:1&ndash;23; James 2:14&ndash;26.</p>
-
-  <h3 class="section">Commentators and Theologians</h3>
-
-  <p><strong>Augustine</strong> &mdash; Exposition on Psalm 85 (available at newadvent.org/fathers). Augustine&rsquo;s reading of the four attributes as the content of God&rsquo;s glory is foundational to the entire tradition.</p>
-
-  <p><strong>Anselm of Canterbury</strong> &mdash; Cur Deus Homo. The satisfaction theory of atonement that underlies the Four Daughters allegory.</p>
-
-  <p><strong>Bernard of Clairvaux</strong> &mdash; Sermo primus de annuntiatione dominica. The sermon that popularised the Four Daughters allegory in its mature form.</p>
-
-  <p><strong>Calvin, John</strong> &mdash; Commentary on the Psalms. Calvin&rsquo;s dual-fulfilment reading provides an important methodological framework.</p>
-
-  <p><strong>Spurgeon, Charles H.</strong> &mdash; The Treasury of David. Invaluable for its compilation of commentary on Psalm 85, particularly the observations of George Horne.</p>
-
-  <h3 class="section">Literary and Contemporary Sources</h3>
-
-  <p><strong>Langland, William</strong> &mdash; Piers Plowman, B-Text, Passus 18 (c. 1377&ndash;79). The climactic dramatisation of the Four Daughters debate and the Harrowing of Hell.</p>
-
-  <p><strong>Lewis, C.S.</strong> &mdash; The Weight of Glory (1941). Lewis&rsquo;s sermon on glory as the ground of human longing provides an important contemporary complement to the biblical and medieval material.</p>
-
-  <p><strong>Peterson, Eugene H.</strong> &mdash; Introduction to Job in The Message (NavPress, 2002). Peterson&rsquo;s framing of Job as a drama about righteousness defined within relationship rather than outside it is particularly illuminating.</p>
-
-  <p><strong>Robinson, Elizabeth</strong> &mdash; &lsquo;The Incarcerated Self: Using the Power of Listening in Creating Space for Freedom and Healing.&rsquo; Professional Educator, Volume 23, 2020. A case study in relational pedagogy that embodies the theology of tsedeq in a Tasmanian school context.</p>
-
-  <p><strong>Reed, Norm</strong> &mdash; Churchill Fellowship Report, 2014. An investigation into international approaches to maintaining family and community relationships with people in prison, undertaken on behalf of the Onesimus Foundation, Tasmania.</p>
-
-  <div class="ai-disclaimer">
-    This publication was developed in theological conversation with an AI assistant. The biblical exegesis, the theological argument, the pastoral judgements, and the connections to the Onesimus Foundation&rsquo;s work are the author&rsquo;s own. The AI assisted in research, drafting, and structure.
-  </div>
-
-</div><!-- /.page-wrap -->
-
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+</footer>
 
 </body>
 </html>
