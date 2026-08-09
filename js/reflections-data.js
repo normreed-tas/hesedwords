@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Kept Anyway",
+    date:     "2026-08-09",
+    url:      "/reflections/kept-anyway.html",
+    summary:  "A reflection on 1 Chronicles 4:9–10 — Jabez, the nine chapters of genealogy nobody reads, and what it means to be remembered before anyone writes it down.",
+    scripture: ["1 Chronicles 4:9-10"],
+    themes:   ["zakar", "remembrance", "genealogy", "Jabez", "prayer"]
+  },
+  {
     title:    "God Alone",
     date:     "2026-08-08",
     url:      "/reflections/god-alone.html",
