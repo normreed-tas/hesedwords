@@ -1,344 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="That Day — A narrative meditation on Simon of Cyrene and the cross. By Norm Reed."/>
-<meta name="author" content="Norm Reed"/>
-<title>That Day — Norm Reed</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>That Day — Hesed Words</title>
+<meta name="description" content="That Day — A narrative meditation on Simon of Cyrene and the cross.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
-
-*, *::before, *::after { box-sizing: border-box; }
-
-/*
- * BACKGROUND FIX — parchment lives on <html>, not on body or any container.
- * This ensures the tint fills the full viewport width (no white side-borders).
- */
-html {
-    background: #FAF7F2;
-    min-height: 100%;
-    margin: 0; padding: 0;
-}
-body {
-    background: transparent;
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 19px;
-    line-height: 1.75;
-    color: #2A1D08;
-    margin: 0; padding: 0;
-}
-
-/* ── Site nav ── */
-nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-nav.hw-nav a:hover{opacity:1;color:#fff;}
-nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-
-/* ── Book page container ── */
-.book-page {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 0 32px 80px;
-}
-
-/* ── Cover ── */
-.book-cover {
-    text-align: center;
-    padding: 66px 0 52px;
-}
-.cover-rule {
-    width: 120px;
-    height: 1.5pt;
-    background: #C4A55A;
-    margin: 0 auto;
-}
-.cover-rule.top { margin-bottom: 2em; }
-.cover-rule.bottom { margin-top: 2em; }
-.cover-genre {
-    font-family: 'Cinzel', serif;
-    font-size: 9.5px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: #B8943A;
-    margin-bottom: 1.2em;
-}
-.cover-title {
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    font-size: 44px;
-    color: #2A1D08;
-    letter-spacing: 0.08em;
-    line-height: 1.1;
-    margin: 0 0 0.45em;
-}
-.cover-dots {
-    color: #B8943A;
-    font-size: 1.1em;
-    letter-spacing: 0.45em;
-    margin: 0.4em 0 1em;
-}
-.cover-author {
-    font-family: 'Cinzel', serif;
-    font-size: 12.5px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #4A3010;
-    margin-bottom: 0.4em;
-}
-.cover-publisher {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 12px;
-    color: #8b7355;
-}
-
-/* ── PDF download ── */
-.download-bar {
-    text-align: center;
-    margin: 0 0 3.5em;
-}
-.dl-link {
-    font-family: 'Cinzel', serif;
-    font-size: 9.5px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #B8943A;
-    text-decoration: none;
-    border: 1px solid #E0D4B8;
-    padding: 9px 22px;
-    display: inline-block;
-}
-.dl-link:hover { background: #E0D4B8; }
-
-/* ── Opening statement ── */
-.opening-stmt {
-    font-style: italic;
-    font-size: 1.16em;
-    color: #4A3010;
-    text-indent: 0;
-    margin-bottom: 1.8em;
-    line-height: 1.65;
-}
-
-/* ── Body paragraphs ── */
-.body {
-    text-indent: 1.4em;
-    margin: 0 0 0.3em;
-    text-align: justify;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-}
-.body.first { text-indent: 0; }
-
-/* ── Drop cap ── */
-.dc {
-    font-family: 'Cinzel', serif;
-    font-weight: 400;
-    font-size: 3.5em;
-    color: #B8943A;
-    float: left;
-    line-height: 0.80;
-    margin: 0.07em 0.06em 0 0;
-}
-
-/* ── Cross motif ── */
-.cross-motif {
-    font-family: 'Cinzel', serif;
-    font-size: 1.05em;
-    letter-spacing: 0.1em;
-    color: #B8943A;
-    text-align: center;
-    text-indent: 0;
-    margin: 2em 0;
-}
-
-/* ── Narrative ending (THE BEGINNING) ── */
-.narrative-end {
-    text-align: center;
-    margin: 3.5em 0 3em;
-}
-.end-rule {
-    width: 90px;
-    height: 1.5pt;
-    background: #C4A55A;
-    margin: 0.75em auto;
-}
-.end-text {
-    font-family: 'Cinzel', serif;
-    font-size: 1.1em;
-    letter-spacing: 0.18em;
-    color: #B8943A;
-    text-indent: 0;
-    margin: 0;
-}
-
-/* ── Site footer ── */
-.site-footer {
-    border-top: 1px solid #E0D4B8;
-    text-align: center;
-    padding: 36px 32px;
-    max-width: 680px;
-    margin: 2em auto 0;
-}
-.footer-tag {
-    font-family: 'Cinzel', serif;
-    font-size: 9px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: #B8943A;
-    margin-bottom: 0.5em;
-}
-.footer-copy {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 11px;
-    color: #8b7355;
-}
-
-/* ── Responsive ── */
-@media (max-width: 600px) {
-    body { font-size: 17px; }
-    .book-page { padding: 0 20px 60px; }
-    .cover-title { font-size: 32px; }
-    .site-nav { padding: 15px 20px; }
-    .nav-links { gap: 1.2em; }
-    .dc { font-size: 3em; }
-}
-
-@media print {
-    .site-nav, .download-bar, .site-footer { display: none; }
-    html { background: transparent; }
-    body { font-size: 11pt; }
-}
-
+  .hw-article-body .opening-stmt { font-style: italic; font-size: 22px; color: var(--muted); margin-bottom: 30px; }
+  .hw-article-body p.first::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
+  }
+  .hw-article-body .cross-motif {
+    font-family: var(--font-mono); font-size: 15px; letter-spacing: 0.1em; color: var(--brass); text-align: center; margin: 32px 0;
+  }
+  .hw-article-body .narrative-end { text-align: center; margin: 56px 0 40px; }
+  .hw-article-body .end-rule { width: 90px; height: 1px; background: var(--hairline); margin: 14px auto; }
+  .hw-article-body .end-text { font-family: var(--font-mono); font-size: 15px; letter-spacing: 0.18em; color: var(--brass); margin: 0; }
+  .hw-article-body .download-bar { text-align: center; margin: 0 0 40px; }
+  .hw-article-body .dl-link {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+    text-decoration: none; border: 1px solid var(--hairline); padding: 9px 22px; display: inline-block;
+  }
+  .hw-article-body .dl-link:hover { background: var(--paper-hover); }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html" class="current">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<div class="book-page">
-
-  <header class="book-cover">
-    <div class="cover-rule top"></div>
-    <div class="cover-genre">A Narrative Meditation</div>
-    <h1 class="cover-title">That Day</h1>
-    <div class="cover-dots">&#10086; &#10086; &#10086;</div>
-    <div class="cover-author">Norm Reed</div>
-    <div class="cover-publisher">The Onesimus Foundation &middot; Hobart, Tasmania</div>
-    <div class="cover-rule bottom"></div>
-  </header>
-
-  <div class="download-bar">
-    <a href="/books/pdf/that-day.pdf" class="dl-link">&#8595; Download PDF</a>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a class="current" href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
   </div>
+</header>
 
-  <main>
-<p class="opening-stmt"><strong>It was just another Sunday.</strong></p>
-<p class="body first"><span class="dc">F</span>or almost 18 years now I had been gathering with the brethren on the first day of the week. It had become a habit. A practice. A routine. Something that defined my life. And sitting here this morning trying to concentrate on what is being said I find my thoughts wandering. Flashing back to when it all started.</p>
-<p class="body">18 years. It seemed such a long time ago and yet it only seemed like yesterday. But so much has happened since. We’ve moved. Our family has grown. Values have changed.</p>
-<p class="body">I’m different. In fact we all are.</p>
-<p class="body">What did he say? Quickly my thoughts are brought back to the present and my eyes focus on the speaker. They don’t focus as well as they used to. He’s a bit blurred but the familiar face of Alexander is well embedded in my memory. I can see every detail of his visage in my mind’s eye. His wrinkled brow, his twisted nose, his wiry unkempt hair that always looks the same. Black. Still as black as the day he was born.</p>
-<p class="body">But oh how he’s changed. We’ve all changed.</p>
-<p class="cross-motif">“... the cross!”</p>
-<p class="body">Words that had been floating, wafting along like a dandelion blowing gently on the warm gentle breeze, are suddenly arrested. Stop, caught, snagged on the branch of my memories. Plucked from the deep recesses of the past.</p>
-<p class="cross-motif">“The Cross!”.</p>
-<p class="body">The words spoken so softly echo in a rising crescendo of my thoughts. Like the pounding on a drum. Soft, slowly, jarring, pounding, thundering. “The Cross!”</p>
-<p class="body">It’s not just another Sunday. No day is ever just another Sunday. There has never been “just another Sunday”. There never can be. It’s the same every Sunday. I’m taken back to that day. Collared, chained in my memories. Anchored in my soul. To that day.</p>
-<p class="body">I know we’ve all got stories. Those seated next to me, those gathered here today have all got stories to tell. Alexander, my son, has his own journey to recount. But mine is different. I’ve stood many times in meetings such as these and told my tale. To young and old and people from all walks of life. But the story of my journey, of my walk is different. It is special.</p>
-<p class="body">It is marked by “The Cross!”</p>
-<p class="body">It was 18 years ago I first saw the cross. 18 years ago I was coming into the city. It had been a long journey and I was conscious that finding a place to stay wasn’t going to be easy. It was busy. People everywhere, and my thoughts were very much about getting through the crowd and making sure I got a bed before dark.</p>
-<p class="body">And then I saw it. “The Cross”. At first it was only a shadowy image that flickered in the distance as it moved bumpily up the hill. Pulsating as it inched its way upwards protruding momentarily above the crowd that pressed round about to form a growling, mocking gauntlet of shame.</p>
-<p class="body">Converging on the path from the narrow laneway our paths were to cross. To intersect.</p>
-<p class="body">&#x27;Intersect&#x27; is a geometrical term. It describes when one line crosses another. When one line cuts across or through another. It divides the line. It separates one side from the other. At the point of crossing there are two clear distinct parts.</p>
-<p class="body">That defines my life. From that moment. Things would never be the same. My life would forever be defined from that moment in time that I saw the cross. Life before and life after the cross.</p>
-<p class="body">Coming into the city that day I had life worked out. Things fitted nicely into place thank you very much. I knew where I was going and I knew how I was going to get there. I wasn’t wealthy as such but I had a secure job and I had what I needed to make a success of my life. I had a loving wife and my boys, Alexander and Rufus, were the promise of a secure future and a guarantee of a good life into my retirement. Things were going pretty well.</p>
-<p class="body">But that day changed everything.</p>
-<p class="body">I jostled my way into the growing throng of spectators intent on pushing through in search of a place to rest and freshen up after my long journey that brought me to Jerusalem that morning. There was a strange feeling in the air. A foreboding. Like the time before a storm. The rumble of the crowd echoed down the narrow lane like thunder heralding a torrential flood. The crack of whips piercing the din and causing the hair to rise on the back of the neck, the fists to clench and the grinding of the teeth in the vicarious anticipation of skin being ripped from the body.</p>
-<p class="body">I emerged through the crowd exactly on time. A divine appointment. Have you ever noticed that with God? Nothing is ever by accident. We’re always hurrying. Always trying to make up time. To catch up to where we should be. Little did I realise how wrong I could be.</p>
-<p class="body">Because that day I stumbled onto an appointment with eternity. To an event in history around which time itself would revolve. A day that had been laid out in intricate detail before the foundation of the world itself had been laid. This was no accident. This was no chance encounter.</p>
-<p class="body">It took me a while to take it all in. The panorama. The noise. The crowd. The soldiers. The man. The face.</p>
-<p class="body">There are so many things I remember about that day. Things which I’ve lived over and over again in my mind. But one thing above all others is the moment that I saw His face.</p>
-<p class="body">I could never forget it. I don’t know exactly what it was. Because it wasn’t one thing but a combination of many. Like the tiny tile fragments of a mosaic meticulously placed to form a masterpiece of beauty. The face. Each time I stand to hear the priestly blessing, “The Lord bless you and keep you, the Lord make His face shine upon you…” I see that face.</p>
-<p class="body">Like Alexander’s I have come to know every intricate detail of the face I saw that day. Bruised, lacerated, disfigured, dirty …bloody… Congealed blood, mixing with the dirt and grime that had been stirred up by the crowd and soldiers who played out their parts in this choreographed drama of heaven. The blood, baked hard in a series of channels which had flowed from the head where the roughly made crown of thorns had been thrust deeply into the skull.</p>
-<p class="body">The blood. Smeared across the nose and oozing from engorged lips which had been smashed between teeth and fists in the gory prelude played out in this pathetic pantomime.</p>
-<p class="body">The man. The face. The eyes! There was something about His eyes. To this day I can’t tell you the colour of His eyes. I’ve tossed and turned on my bed at night trying to remember and play out the scene over and over and over again in my mind. But I can’t for the life of me remember. I’ve never seen eyes like those I saw that day.</p>
-<p class="body">It would be wrong to say that his eyes were penetrating because that would imply they were invasive. They weren’t. They were inviting. It has been said that the eyes are the window of the soul. And looking into those eyes that day was almost hypnotic. Time stopped. One got transported out of confusion and chaos into peace itself. I was lost. Into another place and time. It seemed as though for a millisecond of time I entered eternity. The past, the future and the present all congealed into a space where time had no meaning and all that mattered was being.</p>
-<p class="body">I’ve heard it said that at the centre of some great storms there is a peace, a rest. An eerie place where the rush and bustle, frenetic cadence and desolation subside into a calm and tranquillity that defies description. For the first time in my life I was at rest.</p>
-<p class="cross-motif">“The cross! The cross! ….”</p>
-<p class="body">Being lifted up by the scruff of my neck I found myself being dragged out of eternity and flung back into the harsh reality and living nightmare into which I had been thrust. “The Cross!... take it up..”</p>
-<p class="body">Instantly the culmination of recent events came flooding back. My gaze focused on the cross that lay awkwardly straddling the crumpled body of the stranger in front of me. “Take it up…” I flinched with the crack of the whip that struck the cobblestones beside me and ricocheted into my thigh. Quickly to prevent a more telling blow of the whip I ungainly lunged over the stranger to grasp this barbaric symbol of torture from his crumpled body.</p>
-<p class="body">“You carry it ….”</p>
-<p class="body">It never ceases to amaze me how much has changed. I remember how I felt when first I received that command. “Take up the cross, carry it…..follow him...” Everything inside of me rose up in rebellion. How dare they..! Who are they to tell me...! Don’t they know who I am..! What right do they have to tell me to do this…! Thoughts that raced through my mind.</p>
-<p class="body">Little did I know how those words, those commands would come to define my life. Today I would jump at the opportunity. Today I’d be first in line. I’ve changed. I’ve learned to see differently since that day. To see God’s invitation thinly veiled in the impositions of daily life. To see the opportunities and privileges which often arrived disguised in unjust abuse or punishment.</p>
-<p class="cross-motif">The Cross!</p>
-<p class="body">I’d seen many crosses over the years. They frequently signpost the major thoroughfares throughout the empire. A constant reminder of who’s in control. Who had the last say. An icon of fear and an ever present threat to all who live under the dominance of Rome.</p>
-<p class="body">What had this man done that led him on this journey up the Via Dolorosa? Who was this man and why did he have to die? What were his sins?</p>
-<p class="body">Tossing these thoughts around in my mind I clumsily manhandled the cross lifting it from the back of the stranger and awkwardly draping it across my right shoulder. It was difficult to grasp at first and I was afraid of getting blood on my hands. But it soon became apparent that this would be impossible. Blood coated the cross. Blood was everywhere.</p>
-<p class="body">My clothes were relatively new and while they weren’t my best they were my travelling clothes and I’d only brought one change with me on this journey. But even those, wrapped as a bundle around my waist, were going to be soiled. I tried hard to avoid the blood but by the time I finished my journey that day I was covered in it.</p>
-<p class="body">Slowly the stranger struggled to his feet and turned to look at me. It was a look that I would see once more before he died. Just before his final breath. He didn’t speak to me. But those eyes spoke. “Thank You!” In the midst of all that he was going through this man seemed more concerned about me than himself. “Thank You!” Here I am, everything inside of me screaming out injustice, and this man says thank you!</p>
-<p class="body">It’s so hard to describe that day. The thoughts, emotions, the memories. Everything that seemed important was turned on its head. Even the cross, as heavy as it was, more than the weight of a man himself, did not seem to be the burden that I expected. It didn’t make any sense at the time. But from the moment I hoisted it into position it sat relatively comfortably on my shoulder and seemed quite light.</p>
-<p class="body">It took some time to make it to Golgotha. The crowd lined the way. They were an unusual bunch and quite different to what I expected. I had heard about crucifixions in the past and seen a couple personally. I’d observed firsthand the way people took the opportunity to abuse and shame those being condemned to die. But this crowd was different. Sure, there were those who were there to gloat about the punishment and hurl insults and refuse on this man and the other two condemned to die. But what I found strange was that it was the religious leaders who seemed to have turned out in force to decry this man while the riff-raff, the poor and beggars seemed to lament his impending death. You’d normally expect that of the victim’s family but here in this crowd there seemed to be a genuine deep remorse. Some in tears.</p>
-<p class="body">And yet as this man limped up the path he turned his head to look at different ones and it was almost as though there was an immediate transformation in appearance. It reminded me of observing the passage of a cloud that had been preventing the direct sunlight from shining on the ground being blown away. That cold, dark, grey wintry world would instantly morph into a bright, light and colourful world filled with opportunities and life. Faces would light up and tears would dry up as different ones looked into those eyes that a few moments earlier had ensnared me.</p>
-<p class="body">Who was this man?</p>
-<p class="body">What had he done to deserve such a horrid punishment?</p>
-<p class="body">“Jesus!” It came from a man a little ahead of me. “Jesus, Jesus, Jesus….” He called out louder now. He was a small man. Barely the height of a teenager. He shouldered his way through the crowd. Well dressed in total contrast to most along the way. His presence seemed to bring the scorn of those around him but he pushed through to the front of the crowd seeking to gain the attention of the man whose cross I carried.</p>
-<p class="body">Jesus! I’d heard of that name. Jehovah saves! I’d heard rumours of this man. They said he was a worker of miracles. Apparently it was said he had even caused lame men to walk and people born blind receive their sight. Jehovah saves!</p>
-<p class="body">How inappropriate that name seems now. Trudging up this hill. Beaten, bruised. Condemned to die. Jehovah saves. How far from the truth. He would only be a little over 30 and still have many more years to live out. Yet there is something about this man that is different. I’ve only known him for the shortest of times, I’ve never spoken to him or he to me, yet if Jehovah were to save just one man — surely this is the man he should save.</p>
-<p class="body">Behind me I could hear the gathering crowd. Women crying in much the same way they often do at a funeral procession. I wondered who was in the crowd. Jesus&#x27; mother, sisters, friends. Oh how this must be a difficult time for them. All the hopes of the future could be dashed and snatched away. Not just by death but death as a criminal. Despised. Rejected.</p>
-<p class="body">But then he stopped. Jesus stopped. Turned around. And he spoke. I heard later that he said almost nothing in the preceding hours. Beaten, tortured, threatened and whipped, but he’d said nothing. But now he speaks. Not out of compulsion but out of compassion.</p>
-<p class="body">I’d come to learn that most of what Jesus had done was driven by compassion. The working of his miracles, the healing of the sick, his sermons and parables. He cared. He genuinely cared. He was different from other rabbis. He sought neither position nor prominence. Apparently he frequently told those he healed to be quiet and tell no one. He didn’t seek to draw attention to himself.</p>
-<p class="body">He’d said nothing and then all of a sudden looked over at me and spoke .... “Daughters of Jerusalem….”</p>
-<p class="body">I’d heard that phrase before. Where was it? How could I forget? As a young man I’d waited to read that book. Forbidden to me until I was married. The first time I eagerly devoured it. It raised more questions than it answered but it has, particularly in recent years, been a song that I’ve sought out often. It’s no wonder that it’s called the song of songs. It’s rich in meaning, deep in imagery.</p>
-<p class="body">Daughters of Jerusalem. Six times in that short sonnet the author addresses the Daughters of Jerusalem. Six times the bridegroom and his bride to be call on the Daughters of Jerusalem, and now this man, this Jesus, turns and calls on the Daughters of Jerusalem. How strange it was. From a love story of a man and woman come the refrains of a man on his way to die.</p>
-<p class="body">A love story. That’s what those words reminded me of. It wasn’t just the words but the way they were said. Like the final words of a dying man to his wife and lover of many years. They were parting words. I’ve seen it on a number of occasions when I’ve been privileged to be with a friend and his family as he nears his final days. Words that gather up and capture the memories and feeling of a lifetime and fling them forth as a reminder of times past but more as a certainty of the promise of a future that is going to be alright. A future not founded on wishful thinking but cemented firm in a love that is not confined by time and place.</p>
-<p class="body">These words were not accidental. These were final words rooted deep in the beat and rhythm of a song written many years before. These words conjure images of love. They tell a story that should not be read until one is ready. Passionate. Deep and eternal. They cry out.</p>
-<p class="body">Daughters of Jerusalem... “Don’t weep for me…”</p>
-<p class="body">And like the words of a dying man these words also showed a concern for the future. They contained a warning. A foreboding. A realisation that life will continue for those who remain. That the comforts of today will dissipate in the waves of anger and retribution that will arise in the future.</p>
-<p class="body">Jesus spoke forcefully now. As a father to a daughter who was about to leave home. Words which would echo long after the parting. Words which would bring comfort. Not the comfort of nice platitudes and warm embraces but the comfort needed by a person confused, troubled and lost at night. The comfort provided by a speck of light to sailors who are lost in inky blackness and toiling frantically to avoid being smashed onto the rocks where thunderous waves heighten despair and threaten destruction.</p>
-<p class="body">These are words of assurance. Prophetic words. Words which tell it as it is. They don’t hold back. They don’t pretend. They make it plain. And it is not going to be good.</p>
-<p class="body">I’ve often retraced the journey up the hill that day. I’ve played out the events in my mind recalling each step as I followed close on the heels of Jesus. It was a narrow way hemmed in by the buildings that opened out as we passed through the gate that only a short while earlier I entered. The procession then veered off the main road up a well-worn track to what I later was to learn was called Golgotha.</p>
-<p class="body">It was this later part of the journey that remains the most vivid in my memory. It’s the part that I find myself revisiting most when I think about that day. It’s the part of the journey where I had time. Time to think. Time to reflect. Time to ask questions. Although the drama of the day continued to play out all about me my mind began to settle. The swirling commotion and stirred up frenzy of noise and bustle began to settle as my thoughts sedimented and regained a semblance of order.</p>
-<p class="body">I became aware. Aware that the script for this drama had been written long before I’d set out on the journey to Jerusalem and that I was merely a spectator in something much bigger than I could fully understand. Like all Jewish children I’d been well schooled in our traditions and regularly went to bed at night with my father telling me tales of our ancestors and how God would miraculously intervene and deliver us. I loved the stories of David defeating Goliath or Gideon taking on the Midianites with only 300 men. As a young boy I’d often gather with my friends and bring to life these bedtime stories as we acted out the part of some great hero of the past.</p>
-<p class="body">But not all stories were comforting. Some were hard to understand. Some were difficult to accept. And while it is true all of them should have helped us to understand God there was one story in particular that I struggled with. It’s a story that didn’t make sense. A story that scared me. I don’t think I ever shared with anyone how I felt when I read that story. It was a story that helped define us as a people and often told as we recounted the exploits of the patriarchs. But it scared me. And it’s this story that came flashing back to me shortly after we arrived at the summit of the mount that day.</p>
-<p class="body">By the time we reached the top the soldiers had already taken one of the condemned men and were wrestling him to the ground. He was well aware of what was about to happen to him and you could see the fear in his eyes as he struggled to pull away from the grip of the soldiers. But these men were experienced warriors. And a blow to the body quickly brought the criminal into submission as they lay him on the cross that had a few moments earlier been flung to the ground. His writhing and whimpering however was of no avail as two burly legionaries kneeled on his arms and another raised the mallet to drive home the nail pinning the victim’s hand to the crossbeam.</p>
-<p class="body">A blood-curdling scream rang out across the hilltop and the soldiers shifted their attention to the other arm which they set to secure in like manner. It was a horrid punishment. The sense of fear was palpable and it was not just the pain of the nails but the realisation that this was the end. That there was no reprieve. There was no mercy. Nothing. And all that remained was an agonising death.</p>
-<p class="body">By this time, I’d been commanded to let go of the cross and I was pushed roughly to the side. I stepped back relieved to be free and walk unburdened. The blood had congealed in between my fingers and I reached down to grasp a handful of dirt which I massaged in my hands to absorb the sticky fluid which glazed the palms. It would take me days to remove all the blood from my person. It had become deeply ingrained in my skin and entrenched under my fingernails. To this day whenever I look at my hands I see the image of his blood. Back then all I wanted to do was wash it off. How little did I know that for the briefest of time I had cradled in my hands the most precious substance in the universe.</p>
-<p class="body">I thought about getting away. Running as far from the scene as possible. Of continuing my journey and finding the rest that I had been seeking when I entered the city earlier that morning. But then it hit me. I became aware.</p>
-<p class="body">My Cross. The one I had carried for this Jesus lay on the ground and the soldiers turned their attention to him. It was his turn. Time for him to be nailed to the cross. To be placed on this altar of pain and torture. Jesus didn’t behave like the other criminal. He didn’t struggle. He didn’t fight. He didn’t whimper. He complied. It wasn’t necessary for the soldiers to hold him down or wrestle him to the floor. He willingly laid down. He placed himself on the cross. You could see he was in pain. It was obvious that the gouges and lacerations on his back were causing him immense pain. But he didn’t struggle.</p>
-<p class="body">He lay there. His hands laid out with his palms upwards ready. Inviting. You could see this had caught the Centurion off guard. He wasn’t expecting this. You could tell by the look on his face that he was troubled. Not worried but troubled. For the first time he realised he was not the one in control. He had not seen this before. A man willing and ready to die. A man willing to be bound and accepting of his death. A man who was not afraid to die.</p>
-<p class="body">He’d seen many men die. He’d fought in many battles and stood waiting before advancing into an uncertain future. He cradled in his arms those who were facing their final moments but never had he seen one such as this man face death and do so with such a peace.</p>
-<p class="body">I saw it in Jesus&#x27; face. The same peace I saw when I first saw him. In this whole series of tumultuous happenings there had been one thing that had remained constant. The peace that this man exuded. In the din, the rush, the noise, the screams, it shouted out. It was louder than the smashing of the hammers driving the nails into the hands of the criminals and louder than the screams which echoed down the valley.</p>
-<p class="body">I pulled back to join the others that gathered around this gaudy execution site. I felt a tap on the shoulder as a youngish man, hugging a woman whom I presumed to be his mother, said “thank you for carrying his cross”. I was taken back at first to be associated with the friend of a criminal but when I looked into his face I glimpsed something of the same sense of tranquillity that I’d seen in Jesus.</p>
-<p class="body">Returning my gaze to the drama being played out, my childhood story came flooding back to me. It was the story of Abraham taking his son Isaac to the mountain to be sacrificed. What had always troubled me about that story was that God would call on Abraham to offer his son Isaac as a sacrifice. While typically much was said about Abraham and his great faith I was always troubled by Isaac and what it meant for him to allow his father to offer him up as a sacrifice. In my childhood imagination I had often journeyed with Abraham up that mountain. I’d thought about the journey. Of leaving the servants, taking the wood and walking up the hill with Abraham. Of asking about the sacrifice. Of building the altar. And I’d often wonder what took place as Abraham bound his son and placed him on the altar.</p>
-<p class="body">That’s what scared me about this story. Because Isaac allowed his father to bind him and place him upon the altar. I could never do that. I know that Abraham is always rightly held out as being the father of our nation and his faith held up as a model as to how we should worship God. But what about Isaac? Did he try to run away? Did he fight when his father approached him and started to bind him? Did he struggle?</p>
-<p class="body">I could never really imagine what Isaac did; however, there was something about this Jesus that reminded me of Isaac. And in an instant of time I understood. I became aware. Aware that this Jesus showed me how Isaac would have responded. This Jesus was the perfect son that I never could be.</p>
-<p class="body">In one of the strangest coincidences it also dawned on me at that time that this drama was unfolding on a mountain in the region of Moriah. Could this be the very place where many years earlier Isaac himself made the journey which only a short time earlier I had walked? Isaac carrying the wood onto which he was to be laid.</p>
-<p class="body">In some ways I could identify with Isaac. It was a long walk up the hill that day. Not in distance and time. But in space. In the places you go when your mind wanders. When in the briefest of moments, you find yourself thrust into worlds where thoughts and imaginations play out and milliseconds elongate in months. A space where the &#x27;what ifs&#x27; and &#x27;could bes&#x27; become the fears you dread and the hopes you aspire to.</p>
-<p class="body">My thoughts captured the images of a lifetime and played them out in vivid detail as I trudged wearily up that hill one foot in front of the other. Images of my childhood and my parents. Images of my family. Images of my wife. And images of Alexander and Rufus.</p>
-<p class="body">And the thoughts. The dialogue. The conversations you have with yourself. Where you reason and argue with yourself. Justifying your actions. Condoning your sins and condemning others.</p>
-<p class="body">I could identify with Isaac. Carrying the cross that day I could imagine him wondering where this was all leading. I could identify with the other men carrying their crosses. The thought had certainly crossed my mind: “What if this was me facing my final moments?” What if this cross were to become the instrument of my death?</p>
-<p class="body">It was easy to justify myself that day that I was better than the men with whom I kept company. After all they had been found guilty by a legitimate court and sentenced to a punishment fitting their crime. But these men were criminals. Guilty. Condemned.</p>
-<p class="body">However, if the truth were to be known I was not really any better than those with whom I journeyed. I’d made some monumental mistakes in my life. If I was honest with myself, I had to acknowledge that this cross really could be mine. It was a sobering thought as I walked up that hill that day, that I deserved to be here, but someone else was going to pay the punishment.</p>
-<p class="body">I could identify with Isaac. Yet I had one hope. This man. This Jesus. It is not my cross, but his.</p>
-<div class="narrative-end"><div class="end-rule"></div><p class="end-text">THE BEGINNING</p><div class="end-rule"></div></div>
-  </main>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Book</div>
+      <div>Narrative Meditation</div>
+      <div class="byline">Norm Reed</div>
+      <div>Onesimus Foundation, Hobart</div>
+    </div>
+    <div>
+      <h1>That Day</h1>
+      <div class="hw-article-body">
 
-</div>
+        <div class="download-bar">
+          <a href="/books/pdf/that-day.pdf" class="dl-link">&#8595; Download PDF</a>
+        </div>
 
-<footer class="site-footer">
-  <div class="footer-tag">hesedwords.com &middot; The Onesimus Foundation</div>
-  <div class="footer-copy">&copy; Norm Reed &middot; All rights reserved &middot; 2026</div>
+        <p class="opening-stmt"><strong>It was just another Sunday.</strong></p>
+        <p class="first">For almost 18 years now I had been gathering with the brethren on the first day of the week. It had become a habit. A practice. A routine. Something that defined my life. And sitting here this morning trying to concentrate on what is being said I find my thoughts wandering. Flashing back to when it all started.</p>
+        <p>18 years. It seemed such a long time ago and yet it only seemed like yesterday. But so much has happened since. We&rsquo;ve moved. Our family has grown. Values have changed.</p>
+        <p>I&rsquo;m different. In fact we all are.</p>
+        <p>What did he say? Quickly my thoughts are brought back to the present and my eyes focus on the speaker. They don&rsquo;t focus as well as they used to. He&rsquo;s a bit blurred but the familiar face of Alexander is well embedded in my memory. I can see every detail of his visage in my mind&rsquo;s eye. His wrinkled brow, his twisted nose, his wiry unkempt hair that always looks the same. Black. Still as black as the day he was born.</p>
+        <p>But oh how he&rsquo;s changed. We&rsquo;ve all changed.</p>
+        <p class="cross-motif">&ldquo;&hellip; the cross!&rdquo;</p>
+        <p>Words that had been floating, wafting along like a dandelion blowing gently on the warm gentle breeze, are suddenly arrested. Stop, caught, snagged on the branch of my memories. Plucked from the deep recesses of the past.</p>
+        <p class="cross-motif">&ldquo;The Cross!&rdquo;.</p>
+        <p>The words spoken so softly echo in a rising crescendo of my thoughts. Like the pounding on a drum. Soft, slowly, jarring, pounding, thundering. &ldquo;The Cross!&rdquo;</p>
+        <p>It&rsquo;s not just another Sunday. No day is ever just another Sunday. There has never been &ldquo;just another Sunday&rdquo;. There never can be. It&rsquo;s the same every Sunday. I&rsquo;m taken back to that day. Collared, chained in my memories. Anchored in my soul. To that day.</p>
+        <p>I know we&rsquo;ve all got stories. Those seated next to me, those gathered here today have all got stories to tell. Alexander, my son, has his own journey to recount. But mine is different. I&rsquo;ve stood many times in meetings such as these and told my tale. To young and old and people from all walks of life. But the story of my journey, of my walk is different. It is special.</p>
+        <p>It is marked by &ldquo;The Cross!&rdquo;</p>
+        <p>It was 18 years ago I first saw the cross. 18 years ago I was coming into the city. It had been a long journey and I was conscious that finding a place to stay wasn&rsquo;t going to be easy. It was busy. People everywhere, and my thoughts were very much about getting through the crowd and making sure I got a bed before dark.</p>
+        <p>And then I saw it. &ldquo;The Cross&rdquo;. At first it was only a shadowy image that flickered in the distance as it moved bumpily up the hill. Pulsating as it inched its way upwards protruding momentarily above the crowd that pressed round about to form a growling, mocking gauntlet of shame.</p>
+        <p>Converging on the path from the narrow laneway our paths were to cross. To intersect.</p>
+        <p>&lsquo;Intersect&rsquo; is a geometrical term. It describes when one line crosses another. When one line cuts across or through another. It divides the line. It separates one side from the other. At the point of crossing there are two clear distinct parts.</p>
+        <p>That defines my life. From that moment. Things would never be the same. My life would forever be defined from that moment in time that I saw the cross. Life before and life after the cross.</p>
+        <p>Coming into the city that day I had life worked out. Things fitted nicely into place thank you very much. I knew where I was going and I knew how I was going to get there. I wasn&rsquo;t wealthy as such but I had a secure job and I had what I needed to make a success of my life. I had a loving wife and my boys, Alexander and Rufus, were the promise of a secure future and a guarantee of a good life into my retirement. Things were going pretty well.</p>
+        <p>But that day changed everything.</p>
+        <p>I jostled my way into the growing throng of spectators intent on pushing through in search of a place to rest and freshen up after my long journey that brought me to Jerusalem that morning. There was a strange feeling in the air. A foreboding. Like the time before a storm. The rumble of the crowd echoed down the narrow lane like thunder heralding a torrential flood. The crack of whips piercing the din and causing the hair to rise on the back of the neck, the fists to clench and the grinding of the teeth in the vicarious anticipation of skin being ripped from the body.</p>
+        <p>I emerged through the crowd exactly on time. A divine appointment. Have you ever noticed that with God? Nothing is ever by accident. We&rsquo;re always hurrying. Always trying to make up time. To catch up to where we should be. Little did I realise how wrong I could be.</p>
+        <p>Because that day I stumbled onto an appointment with eternity. To an event in history around which time itself would revolve. A day that had been laid out in intricate detail before the foundation of the world itself had been laid. This was no accident. This was no chance encounter.</p>
+        <p>It took me a while to take it all in. The panorama. The noise. The crowd. The soldiers. The man. The face.</p>
+        <p>There are so many things I remember about that day. Things which I&rsquo;ve lived over and over again in my mind. But one thing above all others is the moment that I saw His face.</p>
+        <p>I could never forget it. I don&rsquo;t know exactly what it was. Because it wasn&rsquo;t one thing but a combination of many. Like the tiny tile fragments of a mosaic meticulously placed to form a masterpiece of beauty. The face. Each time I stand to hear the priestly blessing, &ldquo;The Lord bless you and keep you, the Lord make His face shine upon you&hellip;&rdquo; I see that face.</p>
+        <p>Like Alexander&rsquo;s I have come to know every intricate detail of the face I saw that day. Bruised, lacerated, disfigured, dirty &hellip;bloody&hellip; Congealed blood, mixing with the dirt and grime that had been stirred up by the crowd and soldiers who played out their parts in this choreographed drama of heaven. The blood, baked hard in a series of channels which had flowed from the head where the roughly made crown of thorns had been thrust deeply into the skull.</p>
+        <p>The blood. Smeared across the nose and oozing from engorged lips which had been smashed between teeth and fists in the gory prelude played out in this pathetic pantomime.</p>
+        <p>The man. The face. The eyes! There was something about His eyes. To this day I can&rsquo;t tell you the colour of His eyes. I&rsquo;ve tossed and turned on my bed at night trying to remember and play out the scene over and over and over again in my mind. But I can&rsquo;t for the life of me remember. I&rsquo;ve never seen eyes like those I saw that day.</p>
+        <p>It would be wrong to say that his eyes were penetrating because that would imply they were invasive. They weren&rsquo;t. They were inviting. It has been said that the eyes are the window of the soul. And looking into those eyes that day was almost hypnotic. Time stopped. One got transported out of confusion and chaos into peace itself. I was lost. Into another place and time. It seemed as though for a millisecond of time I entered eternity. The past, the future and the present all congealed into a space where time had no meaning and all that mattered was being.</p>
+        <p>I&rsquo;ve heard it said that at the centre of some great storms there is a peace, a rest. An eerie place where the rush and bustle, frenetic cadence and desolation subside into a calm and tranquillity that defies description. For the first time in my life I was at rest.</p>
+        <p class="cross-motif">&ldquo;The cross! The cross! &hellip;.&rdquo;</p>
+        <p>Being lifted up by the scruff of my neck I found myself being dragged out of eternity and flung back into the harsh reality and living nightmare into which I had been thrust. &ldquo;The Cross!&hellip; take it up..&rdquo;</p>
+        <p>Instantly the culmination of recent events came flooding back. My gaze focused on the cross that lay awkwardly straddling the crumpled body of the stranger in front of me. &ldquo;Take it up&hellip;&rdquo; I flinched with the crack of the whip that struck the cobblestones beside me and ricocheted into my thigh. Quickly to prevent a more telling blow of the whip I ungainly lunged over the stranger to grasp this barbaric symbol of torture from his crumpled body.</p>
+        <p>&ldquo;You carry it &hellip;.&rdquo;</p>
+        <p>It never ceases to amaze me how much has changed. I remember how I felt when first I received that command. &ldquo;Take up the cross, carry it&hellip;..follow him...&rdquo; Everything inside of me rose up in rebellion. How dare they..! Who are they to tell me...! Don&rsquo;t they know who I am..! What right do they have to tell me to do this&hellip;! Thoughts that raced through my mind.</p>
+        <p>Little did I know how those words, those commands would come to define my life. Today I would jump at the opportunity. Today I&rsquo;d be first in line. I&rsquo;ve changed. I&rsquo;ve learned to see differently since that day. To see God&rsquo;s invitation thinly veiled in the impositions of daily life. To see the opportunities and privileges which often arrived disguised in unjust abuse or punishment.</p>
+        <p class="cross-motif">The Cross!</p>
+        <p>I&rsquo;d seen many crosses over the years. They frequently signpost the major thoroughfares throughout the empire. A constant reminder of who&rsquo;s in control. Who had the last say. An icon of fear and an ever present threat to all who live under the dominance of Rome.</p>
+        <p>What had this man done that led him on this journey up the Via Dolorosa? Who was this man and why did he have to die? What were his sins?</p>
+        <p>Tossing these thoughts around in my mind I clumsily manhandled the cross lifting it from the back of the stranger and awkwardly draping it across my right shoulder. It was difficult to grasp at first and I was afraid of getting blood on my hands. But it soon became apparent that this would be impossible. Blood coated the cross. Blood was everywhere.</p>
+        <p>My clothes were relatively new and while they weren&rsquo;t my best they were my travelling clothes and I&rsquo;d only brought one change with me on this journey. But even those, wrapped as a bundle around my waist, were going to be soiled. I tried hard to avoid the blood but by the time I finished my journey that day I was covered in it.</p>
+        <p>Slowly the stranger struggled to his feet and turned to look at me. It was a look that I would see once more before he died. Just before his final breath. He didn&rsquo;t speak to me. But those eyes spoke. &ldquo;Thank You!&rdquo; In the midst of all that he was going through this man seemed more concerned about me than himself. &ldquo;Thank You!&rdquo; Here I am, everything inside of me screaming out injustice, and this man says thank you!</p>
+        <p>It&rsquo;s so hard to describe that day. The thoughts, emotions, the memories. Everything that seemed important was turned on its head. Even the cross, as heavy as it was, more than the weight of a man himself, did not seem to be the burden that I expected. It didn&rsquo;t make any sense at the time. But from the moment I hoisted it into position it sat relatively comfortably on my shoulder and seemed quite light.</p>
+        <p>It took some time to make it to Golgotha. The crowd lined the way. They were an unusual bunch and quite different to what I expected. I had heard about crucifixions in the past and seen a couple personally. I&rsquo;d observed firsthand the way people took the opportunity to abuse and shame those being condemned to die. But this crowd was different. Sure, there were those who were there to gloat about the punishment and hurl insults and refuse on this man and the other two condemned to die. But what I found strange was that it was the religious leaders who seemed to have turned out in force to decry this man while the riff-raff, the poor and beggars seemed to lament his impending death. You&rsquo;d normally expect that of the victim&rsquo;s family but here in this crowd there seemed to be a genuine deep remorse. Some in tears.</p>
+        <p>And yet as this man limped up the path he turned his head to look at different ones and it was almost as though there was an immediate transformation in appearance. It reminded me of observing the passage of a cloud that had been preventing the direct sunlight from shining on the ground being blown away. That cold, dark, grey wintry world would instantly morph into a bright, light and colourful world filled with opportunities and life. Faces would light up and tears would dry up as different ones looked into those eyes that a few moments earlier had ensnared me.</p>
+        <p>Who was this man?</p>
+        <p>What had he done to deserve such a horrid punishment?</p>
+        <p>&ldquo;Jesus!&rdquo; It came from a man a little ahead of me. &ldquo;Jesus, Jesus, Jesus&hellip;.&rdquo; He called out louder now. He was a small man. Barely the height of a teenager. He shouldered his way through the crowd. Well dressed in total contrast to most along the way. His presence seemed to bring the scorn of those around him but he pushed through to the front of the crowd seeking to gain the attention of the man whose cross I carried.</p>
+        <p>Jesus! I&rsquo;d heard of that name. Jehovah saves! I&rsquo;d heard rumours of this man. They said he was a worker of miracles. Apparently it was said he had even caused lame men to walk and people born blind receive their sight. Jehovah saves!</p>
+        <p>How inappropriate that name seems now. Trudging up this hill. Beaten, bruised. Condemned to die. Jehovah saves. How far from the truth. He would only be a little over 30 and still have many more years to live out. Yet there is something about this man that is different. I&rsquo;ve only known him for the shortest of times, I&rsquo;ve never spoken to him or he to me, yet if Jehovah were to save just one man &mdash; surely this is the man he should save.</p>
+        <p>Behind me I could hear the gathering crowd. Women crying in much the same way they often do at a funeral procession. I wondered who was in the crowd. Jesus&rsquo; mother, sisters, friends. Oh how this must be a difficult time for them. All the hopes of the future could be dashed and snatched away. Not just by death but death as a criminal. Despised. Rejected.</p>
+        <p>But then he stopped. Jesus stopped. Turned around. And he spoke. I heard later that he said almost nothing in the preceding hours. Beaten, tortured, threatened and whipped, but he&rsquo;d said nothing. But now he speaks. Not out of compulsion but out of compassion.</p>
+        <p>I&rsquo;d come to learn that most of what Jesus had done was driven by compassion. The working of his miracles, the healing of the sick, his sermons and parables. He cared. He genuinely cared. He was different from other rabbis. He sought neither position nor prominence. Apparently he frequently told those he healed to be quiet and tell no one. He didn&rsquo;t seek to draw attention to himself.</p>
+        <p>He&rsquo;d said nothing and then all of a sudden looked over at me and spoke .... &ldquo;Daughters of Jerusalem&hellip;.&rdquo;</p>
+        <p>I&rsquo;d heard that phrase before. Where was it? How could I forget? As a young man I&rsquo;d waited to read that book. Forbidden to me until I was married. The first time I eagerly devoured it. It raised more questions than it answered but it has, particularly in recent years, been a song that I&rsquo;ve sought out often. It&rsquo;s no wonder that it&rsquo;s called the song of songs. It&rsquo;s rich in meaning, deep in imagery.</p>
+        <p>Daughters of Jerusalem. Six times in that short sonnet the author addresses the Daughters of Jerusalem. Six times the bridegroom and his bride to be call on the Daughters of Jerusalem, and now this man, this Jesus, turns and calls on the Daughters of Jerusalem. How strange it was. From a love story of a man and woman come the refrains of a man on his way to die.</p>
+        <p>A love story. That&rsquo;s what those words reminded me of. It wasn&rsquo;t just the words but the way they were said. Like the final words of a dying man to his wife and lover of many years. They were parting words. I&rsquo;ve seen it on a number of occasions when I&rsquo;ve been privileged to be with a friend and his family as he nears his final days. Words that gather up and capture the memories and feeling of a lifetime and fling them forth as a reminder of times past but more as a certainty of the promise of a future that is going to be alright. A future not founded on wishful thinking but cemented firm in a love that is not confined by time and place.</p>
+        <p>These words were not accidental. These were final words rooted deep in the beat and rhythm of a song written many years before. These words conjure images of love. They tell a story that should not be read until one is ready. Passionate. Deep and eternal. They cry out.</p>
+        <p>Daughters of Jerusalem... &ldquo;Don&rsquo;t weep for me&hellip;&rdquo;</p>
+        <p>And like the words of a dying man these words also showed a concern for the future. They contained a warning. A foreboding. A realisation that life will continue for those who remain. That the comforts of today will dissipate in the waves of anger and retribution that will arise in the future.</p>
+        <p>Jesus spoke forcefully now. As a father to a daughter who was about to leave home. Words which would echo long after the parting. Words which would bring comfort. Not the comfort of nice platitudes and warm embraces but the comfort needed by a person confused, troubled and lost at night. The comfort provided by a speck of light to sailors who are lost in inky blackness and toiling frantically to avoid being smashed onto the rocks where thunderous waves heighten despair and threaten destruction.</p>
+        <p>These are words of assurance. Prophetic words. Words which tell it as it is. They don&rsquo;t hold back. They don&rsquo;t pretend. They make it plain. And it is not going to be good.</p>
+        <p>I&rsquo;ve often retraced the journey up the hill that day. I&rsquo;ve played out the events in my mind recalling each step as I followed close on the heels of Jesus. It was a narrow way hemmed in by the buildings that opened out as we passed through the gate that only a short while earlier I entered. The procession then veered off the main road up a well-worn track to what I later was to learn was called Golgotha.</p>
+        <p>It was this later part of the journey that remains the most vivid in my memory. It&rsquo;s the part that I find myself revisiting most when I think about that day. It&rsquo;s the part of the journey where I had time. Time to think. Time to reflect. Time to ask questions. Although the drama of the day continued to play out all about me my mind began to settle. The swirling commotion and stirred up frenzy of noise and bustle began to settle as my thoughts sedimented and regained a semblance of order.</p>
+        <p>I became aware. Aware that the script for this drama had been written long before I&rsquo;d set out on the journey to Jerusalem and that I was merely a spectator in something much bigger than I could fully understand. Like all Jewish children I&rsquo;d been well schooled in our traditions and regularly went to bed at night with my father telling me tales of our ancestors and how God would miraculously intervene and deliver us. I loved the stories of David defeating Goliath or Gideon taking on the Midianites with only 300 men. As a young boy I&rsquo;d often gather with my friends and bring to life these bedtime stories as we acted out the part of some great hero of the past.</p>
+        <p>But not all stories were comforting. Some were hard to understand. Some were difficult to accept. And while it is true all of them should have helped us to understand God there was one story in particular that I struggled with. It&rsquo;s a story that didn&rsquo;t make sense. A story that scared me. I don&rsquo;t think I ever shared with anyone how I felt when I read that story. It was a story that helped define us as a people and often told as we recounted the exploits of the patriarchs. But it scared me. And it&rsquo;s this story that came flashing back to me shortly after we arrived at the summit of the mount that day.</p>
+        <p>By the time we reached the top the soldiers had already taken one of the condemned men and were wrestling him to the ground. He was well aware of what was about to happen to him and you could see the fear in his eyes as he struggled to pull away from the grip of the soldiers. But these men were experienced warriors. And a blow to the body quickly brought the criminal into submission as they lay him on the cross that had a few moments earlier been flung to the ground. His writhing and whimpering however was of no avail as two burly legionaries kneeled on his arms and another raised the mallet to drive home the nail pinning the victim&rsquo;s hand to the crossbeam.</p>
+        <p>A blood-curdling scream rang out across the hilltop and the soldiers shifted their attention to the other arm which they set to secure in like manner. It was a horrid punishment. The sense of fear was palpable and it was not just the pain of the nails but the realisation that this was the end. That there was no reprieve. There was no mercy. Nothing. And all that remained was an agonising death.</p>
+        <p>By this time, I&rsquo;d been commanded to let go of the cross and I was pushed roughly to the side. I stepped back relieved to be free and walk unburdened. The blood had congealed in between my fingers and I reached down to grasp a handful of dirt which I massaged in my hands to absorb the sticky fluid which glazed the palms. It would take me days to remove all the blood from my person. It had become deeply ingrained in my skin and entrenched under my fingernails. To this day whenever I look at my hands I see the image of his blood. Back then all I wanted to do was wash it off. How little did I know that for the briefest of time I had cradled in my hands the most precious substance in the universe.</p>
+        <p>I thought about getting away. Running as far from the scene as possible. Of continuing my journey and finding the rest that I had been seeking when I entered the city earlier that morning. But then it hit me. I became aware.</p>
+        <p>My Cross. The one I had carried for this Jesus lay on the ground and the soldiers turned their attention to him. It was his turn. Time for him to be nailed to the cross. To be placed on this altar of pain and torture. Jesus didn&rsquo;t behave like the other criminal. He didn&rsquo;t struggle. He didn&rsquo;t fight. He didn&rsquo;t whimper. He complied. It wasn&rsquo;t necessary for the soldiers to hold him down or wrestle him to the floor. He willingly laid down. He placed himself on the cross. You could see he was in pain. It was obvious that the gouges and lacerations on his back were causing him immense pain. But he didn&rsquo;t struggle.</p>
+        <p>He lay there. His hands laid out with his palms upwards ready. Inviting. You could see this had caught the Centurion off guard. He wasn&rsquo;t expecting this. You could tell by the look on his face that he was troubled. Not worried but troubled. For the first time he realised he was not the one in control. He had not seen this before. A man willing and ready to die. A man willing to be bound and accepting of his death. A man who was not afraid to die.</p>
+        <p>He&rsquo;d seen many men die. He&rsquo;d fought in many battles and stood waiting before advancing into an uncertain future. He cradled in his arms those who were facing their final moments but never had he seen one such as this man face death and do so with such a peace.</p>
+        <p>I saw it in Jesus&rsquo; face. The same peace I saw when I first saw him. In this whole series of tumultuous happenings there had been one thing that had remained constant. The peace that this man exuded. In the din, the rush, the noise, the screams, it shouted out. It was louder than the smashing of the hammers driving the nails into the hands of the criminals and louder than the screams which echoed down the valley.</p>
+        <p>I pulled back to join the others that gathered around this gaudy execution site. I felt a tap on the shoulder as a youngish man, hugging a woman whom I presumed to be his mother, said &ldquo;thank you for carrying his cross&rdquo;. I was taken back at first to be associated with the friend of a criminal but when I looked into his face I glimpsed something of the same sense of tranquillity that I&rsquo;d seen in Jesus.</p>
+        <p>Returning my gaze to the drama being played out, my childhood story came flooding back to me. It was the story of Abraham taking his son Isaac to the mountain to be sacrificed. What had always troubled me about that story was that God would call on Abraham to offer his son Isaac as a sacrifice. While typically much was said about Abraham and his great faith I was always troubled by Isaac and what it meant for him to allow his father to offer him up as a sacrifice. In my childhood imagination I had often journeyed with Abraham up that mountain. I&rsquo;d thought about the journey. Of leaving the servants, taking the wood and walking up the hill with Abraham. Of asking about the sacrifice. Of building the altar. And I&rsquo;d often wonder what took place as Abraham bound his son and placed him on the altar.</p>
+        <p>That&rsquo;s what scared me about this story. Because Isaac allowed his father to bind him and place him upon the altar. I could never do that. I know that Abraham is always rightly held out as being the father of our nation and his faith held up as a model as to how we should worship God. But what about Isaac? Did he try to run away? Did he fight when his father approached him and started to bind him? Did he struggle?</p>
+        <p>I could never really imagine what Isaac did; however, there was something about this Jesus that reminded me of Isaac. And in an instant of time I understood. I became aware. Aware that this Jesus showed me how Isaac would have responded. This Jesus was the perfect son that I never could be.</p>
+        <p>In one of the strangest coincidences it also dawned on me at that time that this drama was unfolding on a mountain in the region of Moriah. Could this be the very place where many years earlier Isaac himself made the journey which only a short time earlier I had walked? Isaac carrying the wood onto which he was to be laid.</p>
+        <p>In some ways I could identify with Isaac. It was a long walk up the hill that day. Not in distance and time. But in space. In the places you go when your mind wanders. When in the briefest of moments, you find yourself thrust into worlds where thoughts and imaginations play out and milliseconds elongate in months. A space where the &lsquo;what ifs&rsquo; and &lsquo;could bes&rsquo; become the fears you dread and the hopes you aspire to.</p>
+        <p>My thoughts captured the images of a lifetime and played them out in vivid detail as I trudged wearily up that hill one foot in front of the other. Images of my childhood and my parents. Images of my family. Images of my wife. And images of Alexander and Rufus.</p>
+        <p>And the thoughts. The dialogue. The conversations you have with yourself. Where you reason and argue with yourself. Justifying your actions. Condoning your sins and condemning others.</p>
+        <p>I could identify with Isaac. Carrying the cross that day I could imagine him wondering where this was all leading. I could identify with the other men carrying their crosses. The thought had certainly crossed my mind: &ldquo;What if this was me facing my final moments?&rdquo; What if this cross were to become the instrument of my death?</p>
+        <p>It was easy to justify myself that day that I was better than the men with whom I kept company. After all they had been found guilty by a legitimate court and sentenced to a punishment fitting their crime. But these men were criminals. Guilty. Condemned.</p>
+        <p>However, if the truth were to be known I was not really any better than those with whom I journeyed. I&rsquo;d made some monumental mistakes in my life. If I was honest with myself, I had to acknowledge that this cross really could be mine. It was a sobering thought as I walked up that hill that day, that I deserved to be here, but someone else was going to pay the punishment.</p>
+        <p>I could identify with Isaac. Yet I had one hope. This man. This Jesus. It is not my cross, but his.</p>
+
+        <div class="narrative-end">
+          <div class="end-rule"></div>
+          <p class="end-text">THE BEGINNING</p>
+          <div class="end-rule"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
 </footer>
 
 </body>
