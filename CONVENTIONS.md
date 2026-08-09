@@ -1,7 +1,13 @@
-# Hesed Words — Page Conventions
+# Hesed Words — Page Conventions (Direction A)
 
 Give this file (or the fenced block below) to any assistant generating a page for
 the site, so new pages arrive matching the live site and need no nav/footer fixes.
+
+This describes the **current** design system ("Direction A" — cool bone paper, dark
+slate hero/footer, oxblood accent, brass reserved for Hebrew + numerals, Newsreader/IBM
+Plex Mono/Frank Ruhl Libre). The site was fully redesigned into this system in August
+2026; the previous Cinzel/parchment design is preserved read-only at `/old/` (see
+"The old design" below) — do not build new pages in that style.
 
 ---
 
@@ -12,40 +18,81 @@ SITE CONVENTIONS — match these exactly.
 
 BYLINE: always "Norm Reed" (never "Norman Reed").
 
+SHARED STYLESHEET: every page links the shared tokens file — do not inline a
+reimplementation of nav/footer/article CSS. Include in <head>:
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
+<body class="hw"> — the "hw" class is required; tokens.css scopes almost everything under it.
+
+Page-specific styling (drop caps, callouts, one-off boxes) goes in a <style> block in
+the page's own <head>, built from the shared CSS custom properties (--paper, --paper-hover,
+--ground, --ink, --muted, --hairline, --oxblood, --oxblood-dark, --brass, --font-serif,
+--font-mono, --font-heb) — never hardcode a hex value that already has a token.
+
 NAV — use this exact markup near the top of <body>. Add class="current" to the one
 link matching this page's section (Reflections / Articles / Word Studies / Books /
-Glossary / Resources). Do NOT include a "Contact" item.
+Glossary / Resources). Do NOT include a "Contact" or "Home" item — the wordmark is the
+home link.
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a class="current" href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
+  </div>
+</header>
 
-NAV CSS (include in the page's <style>):
-nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-nav.hw-nav a:hover{opacity:1;color:#fff;}
-nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+FOOTER — every page, last thing before </body>. Reuse verbatim (including the
+"Previous design" link, which points at the old-design snapshot):
 
-FOOTER — content pages use this single-line benediction footer, last thing before </body>:
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a><br><a href="/old/index.html">Previous design</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
-FOOTER CSS:
-footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+READING PAGES (reflection / article / word study / book chapter) — standard skeleton:
+
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Reflection</div>       <!-- or Article / Word Study / Book -->
+      <div>Psalm 62</div>                       <!-- scripture reference -->
+      <div>9 Aug 2026</div>                     <!-- date, "D Mon YYYY" -->
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>Page Title</h1>
+      <div class="hw-article-body">
+        <!-- prose: <p>, <p class="verse"> for scripture quotes, <p class="pull"> for
+             pull-quotes, <blockquote> for longer quoted passages, .hw-selah block,
+             a.gloss links -->
+      </div>
+    </div>
+  </div>
+</article>
 
 GLOSSARY LINKS (standing practice) — whenever the piece uses a Hebrew OR Greek word
 that has a glossary entry, make its FIRST mention a link to the glossary; leave every
 later mention as plain <em>. Only link words that actually exist in the glossary.
-Deep-link form (use class="gloss"):
+Deep-link form (class="gloss" is already styled by tokens.css, no extra CSS needed):
   <a class="gloss" href="/glossary.html#hesed"><em>hesed</em></a>
-Established link style — include in the page's <style>:
-  a.gloss{color:inherit;text-decoration:none;border-bottom:1px dotted var(--gold-deep);}
-  a.gloss:hover{color:var(--gold-deep);}
 The href fragment is the word's transliteration, letters only; the glossary's
 hash-matcher resolves it against the term id (seed_<slug>) or transliteration, so
 #mishpat opens seed_mishpat. Confirmed slugs include:
@@ -61,16 +108,27 @@ transliterated word — scope exception since the whole point of its companion a
 that "Ruth" is the standing picture of hesed).
 NOTE: this list has previously fallen out of sync with the actual glossary — if a word looks
 plausible but isn't listed here, grep glossary.html for its slug before assuming it needs
-seeding. A prior upload brief wrongly assumed 8 of 9 candidate words were missing when they
-already existed.
+seeding.
 If unsure of a slug, still use the natural transliteration — the glossary matches
 on the transliteration, so close spellings resolve.
 
-AI DISCLAIMER — articles and word studies carry this block near the end (reflections
-usually do not). Reuse verbatim:
+AI DISCLAIMER — articles, word studies, and books carry this block near the end of
+the .hw-article-body (reflections usually do not). Reuse verbatim inside a
+<div class="hw-disclaimer">:
 <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
 <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
 <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+(Adjust "reflections" to "this story" / "this book" etc. where the piece calls for it —
+see books/who-would-have-thought.html for a book-appropriate variant.)
+
+COPYRIGHT — before hosting or quoting any third-party text (not Norm's own writing),
+check whether the author is public domain. Confirmed public domain sources already on
+the site: James Hudson Taylor (d. 1905), Bernard of Clairvaux (12th c.), C.H. Spurgeon
+(d. 1892). Authors who died after 1955 or so are very likely still in copyright — do
+NOT host their full text. Instead: a resource-card description, one short attributed
+quote (a sentence, not a paragraph), and a link out to a legitimate third-party page
+about the work (never a URL you can't verify — ask the maintainer for one, don't invent
+it). See resources.html's "The Weight of Glory" (C.S. Lewis) card for the pattern.
 
 DO NOT create a card or landing-page/manifest entry yourself — just build the page.
 The card copy and manifest entry are added separately by the maintainer.
@@ -85,91 +143,91 @@ The card copy and manifest entry are added separately by the maintainer.
   transient Pages issue — push an empty commit to re-trigger:
   `git commit --allow-empty -m "Trigger Pages redeploy"; git push`
   If it stalls in "Queued" for many minutes, cancel and push an empty commit.
-- **Home page panels:** a new **psalm** reflection updates the *Psalms* panel; any other
-  reflection updates the *Current Reading* panel (`index.html`, `.daily-reflection`).
-- **Reflections listing** is generated from the `ARTICLES` manifest, which now lives in
-  `js/reflections-data.js` (loaded via `<script src>` by `reflections.html`) — NOT inline in the
-  page anymore. Edit that file when adding a reflection, newest first.
-- **Word Studies listing** is generated from the `STUDIES` manifest, which now lives in
-  `js/word-studies-data.js` (loaded via `<script src>` by `word-studies.html`). Each study: add
-  one object (id `ws-slug`, `lang` "hebrew"/"greek", plus `date`, `scripture[]`, `themes[]` —
-  added for the combined home-page index, not used by the word-studies page itself).
-- **Handout PDFs** that are only meant to be reached from inside an article get no card.
-- **Combined home-page index** (site-wide Browse Everything, below the hub cards) reads from
-  FOUR shared files in `js/`: `reflections-data.js`, `word-studies-data.js`, `articles-data.js`,
-  `books-data.js`. The first two are the single source of truth for their own pages (see above).
-  The last two (`articles-data.js`, `books-data.js`) are metadata MIRRORS — `articles.html` and
-  `books.html` remain hand-written HTML cards, unchanged. **Whenever you add a new article or
-  book card by hand, also add a matching entry to the corresponding `-data.js` file** (title,
-  url, date, scripture[], themes[], summary) or it won't appear in the combined index. Books
-  spanning many chapters (e.g. a set of Psalms) get a single light representative scripture
-  anchor (first chapter), not every chapter enumerated — see Songs for the Road.
-- **RSS:** `feed.xml` at the repo root is the reflections feed (linked from the home page via
-  `follow.html`). When adding a new reflection, also add one `<item>` at the TOP of the list:
+- **Branches:** `main` is the live Direction A site. `old-site` is a frozen snapshot of
+  the previous design, kept as a full backup — do not develop on it. A static copy of
+  that same old design also lives at `/old/` inside `main` (its internal links are
+  rewritten to stay under `/old/`), purely so a human can browse the previous design
+  live at hesedwords.com/old/ for comparison. Don't add new content to `/old/` — it's a
+  frozen comparison copy, not a second live site.
+- **Home page panels:** `index.html`'s "Current reading" ledger (`#current-reading`,
+  built from `.hw-row` blocks) should have its newest entry updated whenever a new
+  reflection is published — add a new `.hw-row` at the top.
+- **Reflections listing** is generated from the `ARTICLES` manifest in
+  `js/reflections-data.js` (loaded via `<script src>` by `reflections.html`) — NOT
+  inline in the page. Edit that file when adding a reflection, newest first.
+- **Word Studies listing** is generated from the `STUDIES` manifest in
+  `js/word-studies-data.js` (loaded via `<script src>` by `word-studies.html`). Each
+  study: one object (id `ws-slug`, `lang` "hebrew"/"greek", plus `date`, `scripture[]`,
+  `themes[]` — used by the combined home-page index).
+- **Combined home-page index** (site-wide "Browse everything" grid on `index.html`,
+  powered by `js/browse.js`) reads from FOUR files in `js/`: `reflections-data.js`,
+  `word-studies-data.js`, `articles-data.js`, `books-data.js`. The first two are the
+  single source of truth for their own listing pages (see above). The last two are
+  metadata MIRRORS — `articles.html` and `books.html` remain hand-written HTML cards.
+  **Whenever you add a new article or book card by hand, also add a matching entry to
+  the corresponding `-data.js` file** (title, url, date, scripture[], themes[], summary)
+  or it won't appear in the combined index. Do not rename the class names `browse-*`
+  used in `css/tokens.css` — `js/browse.js` injects markup against those exact selectors.
+- **RSS:** `feed.xml` at the repo root is the reflections feed (linked from the home
+  page via `follow.html`). When adding a new reflection, add one `<item>` at the TOP:
   title, absolute link + guid (same URL), pubDate in RFC-822 form (e.g.
-  `Fri, 24 Jul 2026 06:00:00 +1000`), an `<enclosure>` + `<media:thumbnail>` pair pointing at
-  `https://hesedwords.com/images/feed-banner.png` (every item reuses this one site graphic — see
-  below), and a one-sentence description (reuse the manifest summary, shortened). Keep roughly
-  the 15 most recent items; drop the oldest when adding.
-- **Feed images:** `images/feed-banner.png` (1200×630) is the reusable graphic attached to every
-  RSS item via `<enclosure>`/`<media:thumbnail>`, and `images/feed-icon.png` (512×512) is the
-  feed's own icon, set once in `feed.xml`'s channel-level `<image>` block — readers like Inoreader
-  show this instead of a generic placeholder avatar. Both were rendered from throwaway HTML via
-  `npx playwright screenshot --viewport-size=W,H file:///path/to.html out.png` (Playwright's
-  Chromium must be installed first: `npx playwright install chromium`). Neither file is
-  reflection-specific — don't regenerate per upload; only touch them if the site's visual identity
-  changes.
-- **In-page PDF link:** articles with a companion PDF need a "Download as PDF" link on the
-  article page itself (a `.pdf-download` block after the AI disclaimer, before `</div>`), not
-  just on the articles.html listing card. Easy to drop when building a new article page — check
-  for it explicitly.
+  `Sun, 09 Aug 2026 06:00:00 +1000`), an `<enclosure>` + `<media:thumbnail>` pair
+  pointing at `https://hesedwords.com/images/feed-banner.png`, and a one-sentence
+  description (reuse the manifest summary, shortened). Keep roughly the 15–16 most
+  recent items; drop the oldest when adding.
+- **Feed images:** `images/feed-banner.png` (1200×630) and `images/feed-icon.png`
+  (512×512) are reused site-wide in `feed.xml` — don't regenerate per upload.
+- **In-page PDF link:** articles/books with a companion PDF need a download link on the
+  page itself, styled per the page's own palette (see `.hw-disclaimer`-adjacent blocks
+  in converted articles), not just on the listing card.
+- **Resource pages** (`resources/*.html`) intentionally keep the OLD Cinzel/parchment
+  styling, not Direction A — they're public-domain classical texts, and the older look
+  suits reprinted historical material. `resources.html` itself (the index/listing page)
+  IS Direction A, using `.resource-card`. Do not convert the individual resource reading
+  pages to Direction A unless specifically asked.
 
 ## Established patterns for long-form / paired pieces
 
-These are not fixed classes shared across a stylesheet — this site has no shared CSS file, and
-every page styles itself inline. Treat what follows as a documented pattern to reproduce
-per-page, not a rule that a class name must match exactly.
-
-- **Numeral-and-interlude sections** (for articles long enough to need markers — not shorter
-  pieces, not reflections): sections are centred Roman numerals in Cinzel small caps
-  (`h2.numeral`). An interlude breaks the sequence by name instead of number — heading word in
-  Cinzel small caps with an italic subtitle beneath (`h2.interlude > span`), signalling a change
-  of register and marking it as outside the argument's progression. See
-  `articles/reading-daniel-without-arithmetic.html` for a full example.
-- **Footnotes:** superscript numeral (`sup.fn`) immediately after punctuation in the text; notes
-  collected in a ruled block (`.notes`) at the foot of the article, above the AI disclaimer,
-  numbered per-article from 1. Reserved for citing sources, never for asides — if it's saying
-  something rather than citing something, it belongs in the prose.
-- **Cross-links between companion pieces:** where an article and a reflection are written as a
-  pair, each links to the other near the end of the body. Two variants are in live use — an
-  inline italic sentence (`.companion`, e.g. `articles/nobody-left-to-say-no.html`) and a boxed
-  callout (`.crosslink`, e.g. `articles/reading-daniel-without-arithmetic.html`). Either is fine;
-  match whichever the piece's tone suits. Both are screen-only — strip from any print/PDF copy.
-- **Selah block** (reflections): a personal, italicised aside set off from the surrounding prose,
-  usually with gold rules top and bottom on a slightly lighter background and a small centred
-  "Selah" heading. Every reflection that uses one restyles it locally to match that page's
-  palette — there is no single canonical version to copy verbatim; see any recent reflection
-  (e.g. `reflections/those-who-know-their-god.html`) for a representative example.
-- **Pull-quotes** (reflections and articles): a lifted sentence set large in the body, gold-ruled
-  or unruled to suit the page's own palette — styled per-page like everything else here, no shared
-  class (`.pullquote` is a per-page convention, not a shared stylesheet rule). Rules of use:
-  maximum two or three per piece; never lifted from a Selah block; never placed on the same screen
-  as its own occurrence in the prose — set it further down (or, if it foreshadows a later
-  paragraph, well ahead of that paragraph) so the repetition reads as a bridge, not an echo.
-  Reserve for sentences carrying the piece's actual argument, not for decoration. See
-  `reflections/god-alone.html` for two working examples, one placed after the material that leads
-  to it, one placed ahead of the paragraph where the sentence itself lands.
+- **Selah block**: `<div class="hw-selah">` with `.rule` / `.word` / `.rule` children —
+  already fully styled by tokens.css, no per-page CSS needed. Use for a personal,
+  reflective pause in a reflection.
+- **Pull-quotes**: `<p class="pull">` — already styled (large italic, dark ink). Rules
+  of use: maximum two or three per piece; never lifted from a Selah block; never placed
+  on the same screen as its own occurrence in the prose — set it further down (or ahead,
+  if it foreshadows) so the repetition reads as a bridge, not an echo. Reserve for
+  sentences carrying the piece's actual argument, not for decoration.
+- **Scripture quotes**: `<p class="verse">` for a short quoted line inline in prose
+  (oxblood left border, italic); `<blockquote>` (page-local CSS, border-left +
+  italic + muted color) for a longer quoted passage set off from the text — see
+  `reflections/kept-anyway.html` for a worked example of both used together (epigraph
+  as blockquote, single citation line as `.verse`).
+- **Footnotes**: superscript numeral (`sup.fn`, already styled) immediately after
+  punctuation in the text; notes collected in `.hw-notes` (already styled) at the foot
+  of the article, above the AI disclaimer, numbered per-article from 1.
+- **Cross-links between companion pieces**: `.hw-companion` (already styled, italic
+  muted line with an oxblood link) for a single inline sentence pointing to a paired
+  article/reflection.
+- **Books / long-form works** — establish a page-local `<style>` for structural
+  components as needed (`.toc`, `.chapter-heading`, `.part-divider`, `.callout`,
+  `.definition-box`, etc.), built from the shared CSS variables. There is no single
+  fixed "book template" — each book's one-off components should still key off
+  `--brass`/`--oxblood`/`--hairline`/`--font-mono` so they read as the same site. See
+  `books/he-has-told-you.html` for the fullest example of this pattern, and
+  `books/who-would-have-thought.html` for an example of deliberately deviating from the
+  site's default type size (larger body text, ragged-right) for a younger readership —
+  a legitimate page-local override when the audience calls for it.
 
 ## PDF companions
 
-Companion PDFs are produced outside this repo's normal edit/preview/deploy loop (currently by a
-separate Claude session working from a Word-style manuscript) and arrive here as a finished file
-plus the article HTML, both to be uploaded together — the maintainer's job is to link them, not
-to generate them. Notes for whoever generates them:
-- Render from a nav/footer-stripped copy of the article, not via `@media print` rules on the live
-  page — background suppression and elements like the cross-link box are unreliable that way.
-- Strip from the print copy: site nav, site footer, any `.companion`/`.crosslink` box, the
-  in-page `.pdf-download` block.
-- White page background, not parchment — parchment reads muddy on paper and costs ink.
-- A translation note (e.g. a memory verse quoted in older wording where the rest of the piece
-  uses ESV) counts as a footnote — mark the exception at first occurrence.
+Companion PDFs are produced outside this repo's normal edit/preview/deploy loop and
+arrive as a finished file plus the article HTML, both to be uploaded together — the
+maintainer's job is to link them, not generate them. Notes for whoever generates them:
+- Render from a nav/footer-stripped copy of the article, not via `@media print` rules on
+  the live page — background suppression and elements like the cross-link box are
+  unreliable that way.
+- Strip from the print copy: site nav, site footer, any `.hw-companion` box, the
+  in-page PDF-download block.
+- White page background, not the site's paper tone — it reads muddy on paper and costs
+  ink.
+- A translation note (e.g. a memory verse quoted in older wording where the rest of the
+  piece uses ESV) counts as a footnote — mark the exception at first occurrence.
