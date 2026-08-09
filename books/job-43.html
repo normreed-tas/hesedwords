@@ -1,1270 +1,676 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Job 43 — The Unwritten Last Chapter | Norm Reed | Hesed Words</title>
-  <meta name="description" content="A work of theological imagination. The book of Job ends without revealing what happened when the divine court reconvened. Job 43 is an attempt to write that scene.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
-
-  <style>
-    /* ─── Tokens ─────────────────────────────────────────────────── */
-    :root {
-      --parchment:      #FAF5E8;
-      --parchment-mid:  #F3EBD4;
-      --parchment-deep: #E8DEC1;
-      --gold:           #A67C2E;
-      --gold-light:     #C8A85A;
-      --gold-rule:      #D9C49A;
-      --ink:            #2A2218;
-      --ink-mid:        #4A3E2C;
-      --ink-light:      #6B5C45;
-      --ink-faint:      #8C7D68;
-      --max-width:      720px;
-    }
-
-    /* ─── Reset & Base ───────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html {
-      background: var(--parchment);
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 19px;
-      line-height: 1.75;
-      color: var(--ink);
-      background: var(--parchment);
-    }
-
-    /* ─── Site nav ────────────────────────────────────────────── */
-    nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;position:sticky;top:0;z-index:100;}
-    nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-    nav.hw-nav a:hover{opacity:1;color:#fff;}
-    nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-
-    /* ─── Book Cover ─────────────────────────────────────────────── */
-    .book-cover {
-      background: var(--parchment-mid);
-      border-bottom: 1px solid var(--gold-rule);
-      padding: 80px 32px 72px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .book-cover::before {
-      content: '';
-      position: absolute;
-      top: 20px; left: 20px; right: 20px; bottom: 20px;
-      border: 1px solid var(--gold-rule);
-      pointer-events: none;
-    }
-
-    .book-cover__eyebrow {
-      font-family: 'Cinzel', serif;
-      font-size: 10px;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      margin-bottom: 48px;
-    }
-
-    .book-cover__glyph {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 72px;
-      color: var(--gold-rule);
-      line-height: 1;
-      margin-bottom: 28px;
-      opacity: 0.6;
-    }
-
-    .book-cover__rule {
-      width: 40px;
-      height: 1px;
-      background: var(--gold);
-      margin: 0 auto 36px;
-    }
-
-    .book-cover__title {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(36px, 6vw, 58px);
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      color: var(--ink);
-      line-height: 1.15;
-      margin-bottom: 20px;
-    }
-
-    .book-cover__subtitle {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: 22px;
-      color: var(--ink-mid);
-      margin-bottom: 40px;
-    }
-
-    .book-cover__rule2 {
-      width: 40px;
-      height: 1px;
-      background: var(--gold-rule);
-      margin: 0 auto 36px;
-    }
-
-    .book-cover__scripture {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: 19px;
-      color: var(--ink-mid);
-      line-height: 1.7;
-      margin-bottom: 10px;
-    }
-
-    .book-cover__ref {
-      font-family: 'Cinzel', serif;
-      font-size: 10px;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 56px;
-    }
-
-    .book-cover__author {
-      font-family: 'Cinzel', serif;
-      font-size: 12px;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--ink);
-      margin-bottom: 10px;
-    }
-
-    .book-cover__publisher {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 15px;
-      color: var(--ink-faint);
-    }
-
-    /* ─── TOC ────────────────────────────────────────────────────── */
-    .toc {
-      max-width: var(--max-width);
-      margin: 64px auto 0;
-      padding: 0 32px 48px;
-      border-bottom: 1px solid var(--gold-rule);
-    }
-
-    .toc__heading {
-      font-family: 'Cinzel', serif;
-      font-size: 10px;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 28px;
-    }
-
-    .toc__list {
-      list-style: none;
-    }
-
-    .toc__list li {
-      border-bottom: 1px solid var(--parchment-deep);
-    }
-
-    .toc__list a {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 10px 0;
-      text-decoration: none;
-      color: var(--ink-mid);
-      font-size: 17px;
-      transition: color 0.2s;
-    }
-
-    .toc__list a:hover { color: var(--gold); }
-
-    .toc__list a .toc__label { font-style: italic; }
-
-    .toc__list a .toc__chapter {
-      font-family: 'Cinzel', serif;
-      font-size: 9px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      margin-left: 16px;
-      white-space: nowrap;
-    }
-
-    .toc__list a:hover .toc__chapter { color: var(--gold); }
-
-    /* ─── Main Reading Content ───────────────────────────────────── */
-    .book-content {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 32px 80px;
-    }
-
-    /* ─── Chapter Headings ───────────────────────────────────────── */
-    .chapter {
-      margin-top: 72px;
-      padding-top: 64px;
-      border-top: 1px solid var(--gold-rule);
-    }
-
-    .chapter:first-child {
-      border-top: none;
-      margin-top: 56px;
-    }
-
-    .chapter__number {
-      font-family: 'Cinzel', serif;
-      font-size: 10px;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
-      display: block;
-    }
-
-    .chapter__title {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(22px, 4vw, 30px);
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      color: var(--ink);
-      line-height: 1.25;
-      margin-bottom: 36px;
-    }
-
-    /* Before We Begin & Closing Note — no chapter number */
-    .chapter--preface .chapter__title,
-    .chapter--closing .chapter__title {
-      font-size: 22px;
-    }
-
-    /* ─── Job 43 fictional section ───────────────────────────────── */
-    .chapter--fictional {
-      background: var(--parchment-mid);
-      border: 1px solid var(--gold-rule);
-      margin-left: -24px;
-      margin-right: -24px;
-      padding: 48px 48px 40px;
-      border-radius: 1px;
-      margin-top: 64px;
-    }
-
-    .chapter--fictional .chapter__number {
-      color: var(--ink-faint);
-    }
-
-    .chapter--fictional .chapter__title {
-      font-size: 26px;
-    }
-
-    /* ─── Witness Subheadings ────────────────────────────────────── */
-    .witness-heading {
-      font-family: 'Cinzel', serif;
-      font-size: 16px;
-      font-weight: 400;
-      letter-spacing: 0.12em;
-      color: var(--ink);
-      margin: 52px 0 24px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--gold-rule);
-    }
-
-    /* ─── Body Text ──────────────────────────────────────────────── */
-    .book-content p {
-      margin-bottom: 1.4em;
-      font-weight: 300;
-    }
-
-    .book-content p + p { text-indent: 0; }
-
-    /* Drop cap on first para of each chapter */
-    .chapter > p:first-of-type::first-letter,
-    .chapter > .chapter__title + p::first-letter {
-      font-family: 'Cinzel', serif;
-      font-size: 4.2em;
-      font-weight: 500;
-      color: var(--gold);
-      float: left;
-      line-height: 0.78;
-      margin-right: 6px;
-      margin-top: 6px;
-    }
-
-    /* ─── Scripture Blocks ───────────────────────────────────────── */
-    .scripture {
-      border-left: 3px solid var(--gold);
-      padding: 16px 0 16px 28px;
-      margin: 32px 0;
-      font-style: italic;
-      font-weight: 300;
-      color: var(--ink-mid);
-      line-height: 1.8;
-    }
-
-    .scripture cite {
-      display: block;
-      margin-top: 10px;
-      font-family: 'Cinzel', serif;
-      font-style: normal;
-      font-size: 10px;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    /* ─── Pull Quotes ────────────────────────────────────────────── */
-    .pull-quote {
-      text-align: center;
-      padding: 32px 0;
-      margin: 32px 0;
-      border-top: 1px solid var(--gold-rule);
-      border-bottom: 1px solid var(--gold-rule);
-    }
-
-    .pull-quote p {
-      font-style: italic;
-      font-size: 22px;
-      font-weight: 300;
-      color: var(--ink-mid);
-      line-height: 1.6;
-      margin-bottom: 0 !important;
-    }
-
-    /* ─── Inline emphasis ────────────────────────────────────────── */
-    em { font-style: italic; }
-    strong { font-weight: 500; }
-
-    /* ─── Section Divider ────────────────────────────────────────── */
-    .divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin: 44px 0;
-      color: var(--gold-rule);
-    }
-
-    .divider span {
-      font-size: 6px;
-      letter-spacing: 8px;
-      color: var(--gold);
-    }
-
-    .divider::before,
-    .divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--gold-rule);
-    }
-
-    /* ─── Blake Illustration Captions ───────────────────────────── */
-    .blake-caption {
-      text-align: center;
-      margin: 40px 0;
-      padding: 20px;
-      border: 1px solid var(--parchment-deep);
-      background: var(--parchment-mid);
-    }
-
-    .blake-caption p {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 14px;
-      color: var(--ink-faint);
-      margin-bottom: 4px !important;
-    }
-
-    .blake-caption small {
-      font-family: 'Cinzel', serif;
-      font-size: 9px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold-rule);
-    }
-
-    /* ─── Closing Footer ─────────────────────────────────────────── */
-    .book-footer {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 32px 80px;
-      border-top: 1px solid var(--gold-rule);
-    }
-
-    .book-footer__rule {
-      margin: 48px auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .book-footer__rule span {
-      font-family: 'Cinzel', serif;
-      font-size: 9px;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    .book-footer__rule::before,
-    .book-footer__rule::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--gold-rule);
-    }
-
-    .book-footer__attribution {
-      text-align: center;
-    }
-
-    .book-footer__attribution p {
-      font-family: 'Cinzel', serif;
-      font-size: 10px;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      line-height: 2;
-    }
-
-    .ai-acknowledgment {
-      margin-top: 48px;
-      padding: 28px 32px;
-      border: 1px solid var(--gold-rule);
-      background: var(--parchment-mid);
-    }
-
-    .ai-acknowledgment p {
-      font-style: italic;
-      font-size: 14px;
-      color: var(--ink-faint);
-      line-height: 1.7;
-      margin-bottom: 10px !important;
-    }
-
-    .ai-acknowledgment p:last-child { margin-bottom: 0 !important; }
-
-    /* ─── Site Footer ────────────────────────────────────────────── */
-    .site-footer {
-      background: var(--ink);
-      padding: 32px;
-      text-align: center;
-    }
-
-    .site-footer p {
-      font-family: 'Cinzel', serif;
-      font-size: 10px;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--gold-rule);
-    }
-
-    /* ─── Responsive ─────────────────────────────────────────────── */
-    @media (max-width: 640px) {
-      .book-cover { padding: 56px 24px 52px; }
-      .book-cover::before { top: 14px; left: 14px; right: 14px; bottom: 14px; }
-      .book-cover__title { font-size: 32px; }
-      .toc { padding: 0 20px 36px; margin-top: 48px; }
-      .book-content { padding: 0 20px 60px; }
-      .chapter { margin-top: 52px; padding-top: 44px; }
-      .chapter--fictional { margin-left: -16px; margin-right: -16px; padding: 32px 28px; }
-    }
-
-    @page {
-      size: A4;
-      margin: 0;
-    }
-
-    @media print {
-      html, body {
-        background: var(--parchment);
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-      .hw-nav, .toc, .site-footer { display: none; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job 43 — The Unwritten Last Chapter — Hesed Words</title>
+<meta name="description" content="A work of theological imagination. The book of Job ends without revealing what happened when the divine court reconvened. Job 43 is an attempt to write that scene.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
+<style>
+  .hw-article-body p.first::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
+  }
+
+  .hw-article-body .toc { margin: 40px 0; padding: 26px 28px; background: var(--paper-hover); border-left: 3px solid var(--brass); }
+  .hw-article-body .toc h2 {
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); margin: 0 0 18px;
+  }
+  .hw-article-body .toc ul { list-style: none; margin: 0; padding: 0; }
+  .hw-article-body .toc li { display: flex; justify-content: space-between; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--hairline); gap: 16px; }
+  .hw-article-body .toc li:last-child { border-bottom: none; }
+  .hw-article-body .toc li a { color: var(--ink); text-decoration: none; font-style: italic; flex: 1; }
+  .hw-article-body .toc li a:hover { color: var(--oxblood); }
+  .hw-article-body .toc .toc-chapter { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+
+  .hw-article-body .chapter-heading { margin: 56px 0 24px; padding-bottom: 14px; border-bottom: 1px solid var(--hairline); }
+  .hw-article-body .chapter-heading .chapter-label {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--brass);
+    display: block; margin-bottom: 8px;
+  }
+  .hw-article-body .chapter-heading h2 { font-family: var(--font-serif); font-weight: 400; font-size: 30px; color: var(--ink); margin: 0; }
+
+  .hw-article-body .chapter--fictional { background: var(--paper-hover); border: 1px solid var(--hairline); padding: 36px 40px; margin-top: 48px; }
+
+  .hw-article-body h3.witness-heading {
+    font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.1em; color: var(--ink); margin: 40px 0 16px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--hairline);
+  }
+
+  .hw-article-body .break { text-align: center; color: var(--brass); letter-spacing: 0.6em; font-size: 14px; margin: 36px 0; }
+
+  .hw-article-body .blake-caption {
+    text-align: center; margin: 36px 0; padding: 18px; border: 1px solid var(--hairline); background: var(--paper-hover);
+  }
+  .hw-article-body .blake-caption p { font-style: italic; font-size: 14px; color: var(--muted); margin-bottom: 4px; }
+  .hw-article-body .blake-caption small {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass);
+  }
+
+  .hw-article-body .book-footer__rule {
+    display: flex; align-items: center; justify-content: center; gap: 10px; margin: 40px 0 20px;
+  }
+  .hw-article-body .book-footer__rule span { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--brass); }
+  .hw-article-body .book-footer__rule::before, .hw-article-body .book-footer__rule::after { content: ''; flex: 1; height: 1px; background: var(--hairline); }
+  .hw-article-body .book-footer__attribution { text-align: center; }
+  .hw-article-body .book-footer__attribution p {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); line-height: 2;
+  }
+</style>
 </head>
-<body>
+<body class="hw">
 
-  <nav class="hw-nav">
-    <a href="/index.html">Home</a>
-    <a href="/reflections.html">Reflections</a>
-    <a href="/articles.html">Articles</a>
-    <a href="/word-studies.html">Word Studies</a>
-    <a href="/books.html" class="current">Books</a>
-    <a href="/glossary.html">Glossary</a>
-    <a href="/resources.html">Resources</a>
-  </nav>
-
-  <!-- Book Cover -->
-  <div class="book-cover" id="top">
-    <p class="book-cover__eyebrow">Hesed Words &nbsp;·&nbsp; Theological Imagination</p>
-    <div class="book-cover__glyph">⚖</div>
-    <div class="book-cover__rule"></div>
-    <h1 class="book-cover__title">JOB&nbsp;43</h1>
-    <p class="book-cover__subtitle">The Unwritten Last Chapter</p>
-    <div class="book-cover__rule2"></div>
-    <p class="book-cover__scripture">&#8220;I know that my redeemer lives,<br>and at the last he will stand upon the earth.&#8221;</p>
-    <p class="book-cover__ref">Job 19 &middot; 25</p>
-    <p class="book-cover__author">Norm Reed</p>
-    <p class="book-cover__publisher">Onesimus Foundation</p>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a class="current" href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
   </div>
-
-  <!-- Table of Contents -->
-  <nav class="toc" aria-label="Table of contents">
-    <p class="toc__heading">Contents</p>
-    <ul class="toc__list">
-      <li>
-        <a href="#before-we-begin">
-          <span class="toc__label">Before We Begin</span>
-          <span class="toc__chapter">Preface</span>
-        </a>
-      </li>
-      <li>
-        <a href="#chapter-one">
-          <span class="toc__label">The Transcript</span>
-          <span class="toc__chapter">Chapter One</span>
-        </a>
-      </li>
-      <li>
-        <a href="#chapter-two">
-          <span class="toc__label">The Ash Heap</span>
-          <span class="toc__chapter">Chapter Two</span>
-        </a>
-      </li>
-      <li>
-        <a href="#chapter-three">
-          <span class="toc__label">The Whirlwind</span>
-          <span class="toc__chapter">Chapter Three</span>
-        </a>
-      </li>
-      <li>
-        <a href="#chapter-four">
-          <span class="toc__label">The Names</span>
-          <span class="toc__chapter">Chapter Four</span>
-        </a>
-      </li>
-      <li>
-        <a href="#chapter-five">
-          <span class="toc__label">The Closing Court</span>
-          <span class="toc__chapter">Chapter Five</span>
-        </a>
-      </li>
-      <li>
-        <a href="#job-43">
-          <span class="toc__label">Job 43</span>
-          <span class="toc__chapter">The Imagined Chapter</span>
-        </a>
-      </li>
-      <li>
-        <a href="#closing-note">
-          <span class="toc__label">A Closing Note</span>
-          <span class="toc__chapter">Afterword</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!--  BOOK CONTENT                                                  -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <main class="book-content">
-
-    <!-- ── BEFORE WE BEGIN ─────────────────────────────────────────── -->
-    <section class="chapter chapter--preface" id="before-we-begin">
-      <h2 class="chapter__title">Before We Begin</h2>
-
-      <p>Most people who read the book of Job come away with the same feeling.</p>
-      <p>It isn&rsquo;t fair.</p>
-      <p>Not just what happened to Job — the losses, the ash heap, the friends with their pre-assembled theology, the body that became a country he no longer recognised. Those are unfair enough. But underneath the suffering is something that strikes most careful readers as a deeper unfairness, one that is harder to name but impossible to ignore once you have seen it.</p>
-      <p>Job never knew there was a court.</p>
-      <p>The proceedings that determined the entire course of his suffering — the wager, the question, the terms of the test — were conducted without his knowledge, in a room he could not enter, in a language he could not hear. He was the subject of the case and he was not invited to attend. He sat on his ash heap demanding an explanation that never came in the form he asked for, preparing a legal brief for a courtroom that never convened, calling for a signature from a silence that offered nothing but a whirlwind.</p>
-      <p>And then the book ends.</p>
-      <p>The hedge is restored. The daughters are beautiful. The herds multiply. Job lives to see four generations and dies old and full of days. It is a real ending. But it leaves something unresolved that the restoration cannot quite reach. The question Job kept asking — why, and by whose authority, and where is the justice in this — never receives a direct answer. The whirlwind blows the question open but does not close it. And the court scene that set everything in motion is never revisited. We are present at the prosecution. We are not present at the verdict.</p>
-      <p>Job was not either.</p>
-      <p>I have wondered for a long time what that final scene might have looked like. When the sons of God gathered again and presented themselves before the LORD and the Adversary came among them — what was said? How was the wager settled? Did God draw the Adversary&rsquo;s attention to his servant Job one more time? And if so, what did the Adversary have left to say?</p>
-      <p>What if there was a Job 43?</p>
-      <p>What would it contain?</p>
-      <p>This book is an attempt to answer that question. But in attempting it I discovered something I had not expected. The closing court scene cannot be written with only two characters. The prosecution had two parties — God and the Adversary, the question asked and the terms set. But the defence, it turns out, requires witnesses. And the witnesses are not fictional. They are people whose names we can say. People who lived the Job narrative under their own names, in their own centuries, on their own ash heaps — and who answered the Adversary&rsquo;s question not with argument but with the testimony of their lives.</p>
-      <p>I should say clearly what kind of writing this is. The title names it honestly: this is the unwritten chapter — meaning it is not recovered scripture, not new revelation, not an attempt to add to the canon. It is theological imagination in the tradition of midrash: taking the story seriously enough to ask what it implies, and then following the implication where it leads. The closing court scene I attempt is a construction, not a transcript. But it is built from real materials — from the text of Job, from the testimony of history, and from twenty centuries of Christian reflection on what the book means. I have tried to be honest throughout about where exegesis ends and imagination begins.</p>
-      <p>And there is one more thing the closing court scene requires.</p>
-      <p>A defence attorney.</p>
-      <p>Not an appointed advocate. Someone with standing in the court that no appointment could confer — the standing of the <em>go&rsquo;el</em>, the kinsman redeemer, the one who takes up the cause of the family member who has lost everything because the bond of blood gives him both the right and the obligation.</p>
-      <p>Job declared him from the ash heap. Before the whirlwind. Before the restoration. Before any evidence was available except the broken-open knowing that sits below understanding in the place where the creature is most essentially itself.</p>
-
-      <blockquote class="scripture">
-        <em>I know that my redeemer lives.</em>
-      </blockquote>
-
-      <p>He did not know, when he said it, that it was the first testimony of the defence.</p>
-      <p>He does now.</p>
-      <p>This is the account of what happened in the room Job was never invited into.</p>
-      <p>It turns out the verdict was worth waiting for.</p>
-
-      <div class="blake-caption">
-        <p>&#8220;Satan Before the Throne of God&#8221;</p>
-        <small>William Blake &mdash; Illustrations of the Book of Job, Plate 3 (1825) &mdash; Public Domain</small>
-      </div>
-    </section>
-
-    <!-- ── CHAPTER ONE ─────────────────────────────────────────────── -->
-    <section class="chapter" id="chapter-one">
-      <span class="chapter__number">Chapter One</span>
-      <h2 class="chapter__title">The Transcript</h2>
-
-      <p>I want to begin with something that has always struck me as one of the most extraordinary literary devices in all of ancient literature.</p>
-      <p>The book of Job opens in a courtroom that Job does not know exists.</p>
-      <p>Think about that for a moment. The man at the centre of the entire narrative — the one whose life is about to be dismantled, whose children will die, whose body will become a country he no longer recognises, whose friends will arrive with their theology pre-assembled and their conclusions already reached — that man has no idea that any of this has been discussed. Decided. Set in motion by a wager made in a room he cannot enter, in a language he cannot hear, between parties he has no knowledge of.</p>
-      <p>He wakes up one morning as a man of extraordinary blessing and reputation. He has sons and daughters. He has flocks beyond counting. He has the respect of the elders who fall silent when he approaches and the princes who wait for his word before they speak. He has spent his life doing what he understood to be right — rising early to offer sacrifices for his children, just in case they had sinned in the night in the chambers of their hearts, because that is the kind of man he is. Attentive to the moral texture of things. Careful. Thorough.</p>
-      <p>And somewhere above the ordinary sky of his ordinary morning, a court is in session.</p>
-      <p>He does not know.</p>
-      <p>This is not incidental to the story. It is the story. The gap between what is happening in the council and what Job experiences on the ash heap is where everything that matters in the book of Job actually lives. It is the gap between the question being asked about him and the question he is asking about himself. It is, I want to argue, the gap that the whole of human history has been trying to close — the gap between the suffering that is experienced at ground level and the purposes that are being worked out above it, in a room we cannot enter, in proceedings we have not been invited to observe.</p>
-      <p>We have been given the transcript.</p>
-      <p>That is what the opening chapters of Job are. A transcript of proceedings conducted without the knowledge of the man they most concern.</p>
-      <p>Let us read it carefully. Because everything that follows — Job&rsquo;s rage and his grief and his magnificent legal brief and the whirlwind and the restoration and the closing court scene that the book does not give us — everything depends on understanding what was actually said in that room, and what it cost, and what question was being asked that required all of it by way of answer.</p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>The transcript begins with a gathering.</p>
-
-      <blockquote class="scripture">
-        <em>Again there was a day when the sons of God came to present themselves before the LORD, and the Adversary also came among them to present himself before the LORD.</em>
-      </blockquote>
-
-      <p>The word <em>again</em> is important. This is not the first such gathering. The divine council meets. It has always met. The sons of God — the heavenly assembly, the court of the one who made heaven and earth — present themselves before the LORD in the way that a court assembles when the judge takes his seat. There is order here. There is formality. This is not chaos. It is, in its own register, the most orderly room imaginable.</p>
-      <p>And the Adversary comes with them.</p>
-      <p>I want to say something about the Adversary that often gets lost in subsequent theology. In the opening chapters of Job he is not yet the fully developed Satan of later Christian tradition — the embodiment of evil, the enemy of souls, the father of lies. He is something at once more precise and more disturbing than that. He is a member of the court. He has a function. His title — the satan, with the definite article in Hebrew — is not a name but an office. He is the accuser, the prosecuting counsel, the one whose vocation within the divine assembly is to test the claims that are made and expose what is actually true beneath the surface of things.</p>
-      <p>He is, in other words, a professional.</p>
-      <p>And professionals ask professional questions. That is what they are for.</p>
-      <p>The LORD opens the proceedings.</p>
-
-      <blockquote class="scripture"><em>From where have you come?</em></blockquote>
-
-      <p>And the Adversary answers with the precision of the one whose vocation is traversing.</p>
-
-      <blockquote class="scripture"><em>From going to and fro on the earth, and from walking up and down on it.</em></blockquote>
-
-      <p>This is not evasion. Walking is what he does. He moves through the world with the particular attentiveness of the one whose job is to notice what is actually there rather than what the inhabitants of a place imagine or hope or claim to be there. He has few illusions about the creature. He has seen what people are like when they think no one is watching. He is not cynical exactly — cynicism is a posture, and he is too professional for postures. He is simply accurate. Or so he believes.</p>
-
-      <blockquote class="scripture"><em>Have you considered my servant Job?</em></blockquote>
-
-      <p>The question comes from the LORD. And here the transcript does something remarkable. God draws the Adversary&rsquo;s attention to Job. Not the other way around. The prosecution does not begin with the Adversary identifying a target. It begins with the LORD himself placing his servant Job before the court&rsquo;s attention.</p>
-
-      <blockquote class="scripture">
-        <em>There is none like him on the earth — a blameless and upright man, who fears God and turns away from evil.</em>
-      </blockquote>
-
-      <p>Four things. Blameless. Upright. Fears God. Turns away from evil. This is the LORD&rsquo;s own assessment of his servant, offered without qualification, to the one whose professional vocation is to find the qualification.</p>
-      <p>And the Adversary — being a professional — finds it.</p>
-
-      <blockquote class="scripture"><em>Does Job fear God for nothing?</em></blockquote>
-
-      <p>Five words in English. In Hebrew, even fewer. But they are among the most important words in the entire canon of Scripture because they identify, with prosecutorial precision, the question that the whole of human history is going to be required to answer.</p>
-      <p>Does the creature fear God for nothing?</p>
-      <p>Is the faith of the man — any man, Job standing for all of them — is it genuine love freely given? Or is it the calculation of the creature who has received much and calls his gratitude by the name of devotion? Is it the worship of the one who is, or the worship of what the one who is provides?</p>
-
-      <blockquote class="scripture">
-        <em>Have you not put a hedge around him and his house and all that he has, on every side? You have blessed the work of his hands, and his possessions have increased in the land. But stretch out your hand and touch all that he has, and he will curse you to your face.</em>
-      </blockquote>
-
-      <p>The Adversary&rsquo;s argument is precise and it is fair. He is not lying. He is not inventing. He is observing. Job has been blessed. The correlation between his goodness and his flourishing has been consistent for long enough that — even without Job&rsquo;s awareness, even without any conscious calculation on Job&rsquo;s part — a structure has formed. He has been a good man and good things have happened to him. But the question — the real question, the one the Adversary is professionally obligated to put to this court — is whether the relationship would survive the removal of the goods.</p>
-      <p>Remove the hedge, he says. Then we will see what the man actually trusts.</p>
-      <p>The question is real. The court treats it as real. And the LORD enters the wager.</p>
-
-      <blockquote class="scripture">
-        <em>Behold, all that he has is in your hand. Only against him do not stretch out your hand.</em>
-      </blockquote>
-
-      <p>What passed in the council before that answer came the transcript does not record. What I can tell you is that when the answer came it came with a weight that the subsequent narrative does nothing to lighten. The LORD handed his servant to the Adversary&rsquo;s investigation. He did it knowing what it would cost. He did it because the question was real and the only way to answer a real question is with real evidence — and real evidence in this case meant a real man on a real ash heap with real grief and a silence that was not, from Job&rsquo;s side of things, offering any explanation.</p>
-      <p>He did it, I have come to believe, because he already knew what the answer would be.</p>
-      <p>Not because the outcome was rigged. Because he knew his servant. And because he knew something else — something the transcript of the opening court scene does not yet reveal, something that the Adversary&rsquo;s question, for all its professional precision, had not accounted for.</p>
-      <p>The question assumed the court had two parties.</p>
-      <p>It did not.</p>
-      <p>But we are not yet at the closing scene. We are still at the beginning. And the beginning requires us to sit with the fact that the man on the ash heap does not know the transcript exists. He does not know the question has been asked. He does not know that the silence he is experiencing is not absence but the particular quality of restraint that belongs to the one who knows the answer is coming and will not shortcut the process by which it arrives.</p>
-      <p>Job wakes up one morning as a man of extraordinary blessing.</p>
-      <p>He does not know that above the ordinary sky of his ordinary morning, a question has been put that his life is about to answer.</p>
-      <p>He does not know that he is not only the subject of the proceedings.</p>
-      <p>He is, without knowing it, the first witness for the defence.</p>
-    </section>
-
-    <!-- ── CHAPTER TWO ─────────────────────────────────────────────── -->
-    <section class="chapter" id="chapter-two">
-      <span class="chapter__number">Chapter Two</span>
-      <h2 class="chapter__title">The Ash Heap</h2>
-
-      <p>I want to tell you what Job did not do.</p>
-      <p>He did not curse God.</p>
-      <p>I say that first because it is the thing the Adversary predicted he would do, and because it is the thing that — if you have ever sat on your own ash heap, if you have ever known the particular quality of silence that descends when everything you understood about your life turns out to be less permanent than you thought — you will understand was not as simple an achievement as it sounds.</p>
-      <p>Not cursing God when everything is gone is not the same thing as not wanting to. Job wanted to. He came close to the edge of many things in those days and nights on the ash heap and he was honest enough — or perhaps simply too exhausted to be otherwise — to say so out loud. He wished he had never been born. He called the day of his birth a darkness. He said things about the silence of heaven that were not careful and not measured and not the kind of thing you would say if you were performing faith for an audience.</p>
-      <p>But he did not curse God.</p>
-      <p>And the reason he did not — the reason underneath the reason, the thing that held him at the edge without letting him go over it — is the most important thing in the book.</p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>The losses came in sequence and the sequence was its own cruelty.</p>
-      <p>A messenger arrived. The oxen and donkeys had been taken. While that messenger was still speaking another arrived. Fire had fallen from heaven and burned the sheep. While that messenger was still speaking another arrived. The Chaldeans had taken the camels. While that messenger was still speaking — the text insists on this, will not let the reader look away from the accumulation — a fourth messenger arrived.</p>
-      <p>His sons and daughters were dead. All of them.</p>
-      <p>The text gives us Job&rsquo;s response with the economy of the truly devastating.</p>
-
-      <blockquote class="scripture">
-        <em>Then Job arose and tore his robe and shaved his head and fell on the ground and worshipped.</em>
-      </blockquote>
-
-      <p>He worshipped.</p>
-
-      <blockquote class="scripture">
-        <em>Naked I came from my mother&rsquo;s womb, and naked shall I return. The LORD gave, and the LORD has taken away; blessed be the name of the LORD.</em>
-      </blockquote>
-
-      <p>I have read those words hundreds of times. I have read them at bedsides and gravesides. And I want to say something about them that is not often said.</p>
-      <p>They are not the words of a man who is fine.</p>
-      <p>They are the words of a man who is not fine and who is choosing, in the moment of not being fine, to orient himself toward something that the losses have not touched. Not because the losses are not real. But because underneath the grief and running deeper than it is something that the Sabeans and the fire and the Chaldeans and the great wind have not been able to reach. Something that was there before the hedge and remains when the hedge is gone.</p>
-      <p>The text notes — and this is the detail the whole first round of the wager turns on — <em>in all this Job did not sin or charge God with wrong.</em></p>
-      <p>Round one to Job.</p>
-      <p>But the Adversary is not finished.</p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>The court reconvenes. The LORD again draws the Adversary&rsquo;s attention to his servant Job.</p>
-
-      <blockquote class="scripture">
-        <em>Have you considered my servant Job? He still holds fast his integrity, although you incited me against him to destroy him without reason.</em>
-      </blockquote>
-
-      <p>That phrase — <em>without reason</em> — is worth pausing over. The Hebrew is <em>chinnam</em> — the same word the Adversary used in his original question. Does Job fear God for nothing — <em>chinnam</em>? And now the LORD uses it back. You incited me against him for nothing. The word the Adversary had aimed at Job&rsquo;s worship rebounds.</p>
-      <p>But the Adversary has a second question.</p>
-
-      <blockquote class="scripture">
-        <em>Skin for skin. All that a man has he will give for his life. But stretch out your hand and touch his bone and his flesh, and he will curse you to your face.</em>
-      </blockquote>
-
-      <p>The first test had removed what Job had. The second test will touch what Job is. His body. The physical self. The skin and bone and flesh in which a life is lived. Because the Adversary understands — and he is not wrong about this — that there is a level of physical suffering at which the philosophical convictions of even the most genuine faith begin to feel abstract.</p>
-
-      <blockquote class="scripture"><em>Behold, he is in your hand. Only spare his life.</em></blockquote>
-
-      <p>And so Job loses the last thing. His body becomes a foreign country. From the sole of his foot to the crown of his head he is covered in loathsome sores and he takes a piece of broken pottery to scrape himself and sits in the ashes.</p>
-      <p>His wife looks at him.</p>
-
-      <blockquote class="scripture"><em>Do you still hold fast your integrity? Curse God and die.</em></blockquote>
-
-      <p>She is not a villain. She is a woman who has lost her children and her security and is now watching her husband sit in ashes and she has reached the end of what she can bear. Curse God and die. At least it would be honest. At least it would be over.</p>
-      <p>Job&rsquo;s answer to her is the last measured thing he will say for a very long time.</p>
-
-      <blockquote class="scripture"><em>Shall we receive good from God, and shall we not receive evil?</em></blockquote>
-
-      <p>And then the friends arrive.</p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>I want to be careful about the friends.</p>
-      <p>Eliphaz and Bildad and Zophar are not stupid men. They are not cruel men. They are, in their own way, trying to help. And when they first arrive — when they see Job from a distance and do not recognise him, and raise their voices and weep, and tear their robes and throw dust on their heads — in that first moment they do the one thing that genuine comfort requires and that most people, faced with suffering they cannot explain, find almost impossible to sustain.</p>
-      <p>They sit with him.</p>
-      <p>Seven days and seven nights they sit on the ground with him and no one speaks a word because they see that his suffering is very great.</p>
-      <p>Seven days of silence.</p>
-      <p>That is not nothing. That is, in fact, everything. The ministry of presence — the willingness to be in the room with suffering without rushing to explain it or fix it or place it in a theological framework that makes it bearable for the observer — that is perhaps the most demanding thing one human being can offer another. And the friends, to their credit, manage it for seven days.</p>
-      <p>Then Job opens his mouth.</p>
-      <p>And everything changes.</p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>What comes out of Job&rsquo;s mouth when he finally speaks is not careful. It is the raw voice of a man who has been sitting in ashes for seven days with the silence of heaven pressing down on him and the questions multiplying in the dark without answers.</p>
-      <p>He curses the day he was born. He asks why he did not die at birth. He asks why light is given to a man whose way is hidden, whom God has hedged in.</p>
-      <p>That last phrase stops me every time. Whom God has hedged in. The same word — hedge — that the Adversary used in the opening court scene. The hedge that the Adversary said protected Job from the test. Now Job experiences it not as protection but as enclosure. He cannot see past it. He cannot understand what is happening inside it. He is hedged in by a silence he cannot interpret and a God who is apparently watching all of it and saying nothing.</p>
-      <p>He does not know that the hedge has been removed.</p>
-      <p>He feels, from the inside, as if it has been made smaller.</p>
-      <p>The friends respond with what they have. Which is theology.</p>
-      <p>Three men. Three versions of the same argument. Each one a slightly different arrangement of the same furniture in the same room. The room is the theology of retribution — the belief that the universe operates on a moral ledger, that suffering indicates debt, that the restoration of right standing with God will produce the restoration of circumstances. It is tidy. It is logical. It is, as a complete account of how God relates to the creature, catastrophically insufficient.</p>
-      <p>Job knows this. Not because he has a better theology. Because he has an ash heap.</p>
-      <p>The man on the ash heap always knows things about the room that the men sitting comfortably inside it do not. He can feel the walls. He can feel where the ceiling is. And he can tell you, with the authority of the person whose body is the measuring instrument, that the room is not big enough to contain what is actually happening to him.</p>
-      <p>So Job argues back. Magnificently. Furiously. With the full force of a man who has spent a lifetime thinking carefully about God and justice and is now applying that carefully developed mind to his own devastation with nothing left to lose.</p>
-      <p>He tells them their proverbs are proverbs of ashes.</p>
-      <p>He tells them he would speak to the Almighty and desires to argue his case with God.</p>
-      <p>He tells them that he knows they are worthless physicians — that if they would only keep silent it would be their wisdom.</p>
-      <p>And then — in the middle of all of it, in the middle of the rage and the grief and the magnificent argument — something happens that I have never been able to read without stopping.</p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>It is chapter nineteen. Job is in full flight — the argument is building, the case is being assembled, the brief is taking shape. He has described himself as a man from whom his brothers and companions have withdrawn, whom his servants do not answer, whose breath is strange to his wife, who is loathed by little children.</p>
-      <p>He has said: <em>Oh that my words were written. Oh that they were inscribed in a book. Oh that with an iron pen and lead they were engraved in the rock forever.</em></p>
-      <p>He wants the record to exist. He wants what is happening to him to be documented — not lost, not dissolved into the silence, not forgotten when the circumstances eventually change.</p>
-      <p>And then.</p>
-      <p>Right there. In the middle of the ashes and the grief and the engraved record of everything he has lost.</p>
-
-      <blockquote class="scripture">
-        <em>For I know that my redeemer lives, and at the last he will stand upon the earth. And after my skin has been thus destroyed, yet in my flesh I shall see God, whom I shall see for myself, and my eyes shall behold, and not another. My heart faints within me.</em>
-        <cite>Job 19 · 25–27</cite>
-      </blockquote>
-
-      <p><em>I know that my redeemer lives.</em></p>
-      <p>Five words that have no business being in this chapter. No business being spoken by this man in these circumstances with this evidence available to him. He is on the ash heap. The hedge is gone. The children are dead. The body is ruined. The friends have offered their theology and he has seen through it and the silence of heaven has not broken and there is no whirlwind yet and no restoration yet and nothing — nothing in the observable facts of his situation — that warrants this declaration.</p>
-      <p>And yet he makes it.</p>
-      <p><em>I know.</em> Not I hope. Not I believe. Not I am trying to maintain. <em>I know.</em> The Hebrew is <em>yada</em> — the knowing that is not merely intellectual assent but the deep, bone-level certainty of the one who has encountered something that cannot be unfound. The knowing that persists below understanding.</p>
-      <p><em>My redeemer lives.</em> The word is <em>go&rsquo;el</em> — the kinsman redeemer. The one who has both the right and the obligation to step in when the family member has lost everything. The one whose bond to the suffering person is not contractual but constitutional — woven into the nature of the relationship, prior to any circumstance, not contingent on any outcome.</p>
-      <p>Job does not yet know who he is talking about.</p>
-      <p>He will not know — not fully, not with the face and the name and the wounds — for centuries after his death. He is speaking from the ash heap into a future he cannot see, declaring a redeemer he cannot yet identify, on the basis of a knowing that has no current evidence to support it.</p>
-      <p>This is the most extraordinary moment in the book of Job.</p>
-      <p>Because Job has just done something the Adversary&rsquo;s question did not account for.</p>
-      <p>The Adversary predicted that when the hedge was removed the worship would fail. That the calculation underneath would be exposed and the cursing would begin.</p>
-      <p>What he did not predict was this.</p>
-      <p>That when the hedge was removed, Job would declare a redeemer.</p>
-      <p>Not argue for one. Not reason toward one. Not maintain belief in one as an act of disciplined theological will. Declare one. From the ash heap. Before the whirlwind. Before the restoration. Before any evidence was available except the broken-open knowing that sits below understanding in the place where the creature is most essentially itself.</p>
-      <p>The Adversary had asked whether Job fears God for nothing.</p>
-      <p>Job, from the ash heap, answered.</p>
-      <p>He did not know it was an answer to a courtroom question.</p>
-      <p>He only knew what he knew.</p>
-      <p>And what he knew — from the ash heap, in the dark, before the whirlwind — was the first testimony of the defence.</p>
-      <p>The defence had not yet even been called.</p>
-    </section>
-
-    <!-- ── CHAPTER THREE ────────────────────────────────────────────── -->
-    <section class="chapter" id="chapter-three">
-      <span class="chapter__number">Chapter Three</span>
-      <h2 class="chapter__title">The Whirlwind</h2>
-
-      <div class="blake-caption">
-        <p>&#8220;The Lord Answering Job Out of the Whirlwind&#8221;</p>
-        <small>William Blake &mdash; Illustrations of the Book of Job, Plate 13 (1825) &mdash; Public Domain</small>
-      </div>
-
-      <p>I want to begin with what God did not say.</p>
-      <p>Because what God did not say in the whirlwind is, in its own way, as important as what he did say. And what he did not say is the thing that every reader of Job arrives at the whirlwind expecting to hear.</p>
-      <p>He did not explain.</p>
-      <p>He did not say — Job, here is what happened. There was a court. There was a question. The Adversary asked whether your faith was transactional and I entered a wager and the wager required the removal of the hedge and I want you to know that it was not arbitrary, that it was not punishment, that the silence you have been living inside was not absence but the particular quality of restraint that belongs to the one who knows the answer is coming and will not shortcut the process by which it arrives.</p>
-      <p>He did not say any of that.</p>
-      <p>He said: <em>Where were you when I laid the foundation of the earth?</em></p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>Before the whirlwind there is something that needs to be named.</p>
-      <p>Job prepares a brief.</p>
-      <p>Not metaphorically. With the full seriousness of a man who has spent a lifetime watching justice administered at the gate, who understands the forms and the procedures, who knows what a legal document requires and is prepared to produce one. He assembles his case. He organises his arguments. He lists, with meticulous care, every charge that could be brought against him and answers each one in turn.</p>
-      <p><em>If I have walked with falsehood — let me be weighed in a just balance.</em></p>
-      <p><em>If my step has turned aside from the way — let what I have sown grow for another.</em></p>
-      <p><em>If I have rejected the cause of my servant — what then shall I do when God rises up?</em></p>
-      <p><em>If I have withheld anything that the poor desired — if I have eaten my morsel alone and the fatherless has not eaten of it.</em></p>
-      <p>The brief goes on. It is thorough. It is the document of a man who has examined his life with complete honesty and found it, by every standard he knows how to apply, to be clean. And at the end of it Job does something audacious.</p>
-      <p>He signs it.</p>
-
-      <div class="pull-quote">
-        <p><em>Here is my signature. Let the Almighty answer me.</em></p>
-      </div>
-
-      <p>Five words of such compressed intensity that they have echoed through three thousand years of theology without losing their charge. <em>Here is my signature</em> — the ancient legal formula by which a man staked his name and his honour on the truth of his testimony. <em>Let the Almighty answer me</em> — the demand that the one who has been silent through all of this now enter the proceedings as a respondent.</p>
-      <p>He wants the courtroom.</p>
-      <p>He has always wanted the courtroom.</p>
-      <p>And what arrives instead is a whirlwind.</p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>The whirlwind is not a punishment. It is not God losing patience with Job&rsquo;s questions and deciding to put him in his place with a display of overwhelming power. That reading — which is common, and which has caused a great deal of damage across the centuries — fundamentally misreads what is happening.</p>
-      <p>The whirlwind is an answer.</p>
-      <p>Not the answer Job asked for. The answer Job needed. And the difference between those two things is the theological centre of the entire book.</p>
-      <p>Job asked for a verdict. He asked for the charges to be read and the defence to be heard and the judgment to be delivered in a form he could understand and respond to. He asked for the courtroom because the courtroom was the largest room he knew.</p>
-      <p>And God blew the room open.</p>
-      <p>Not to humiliate him. To show him that the room was too small. The courtroom of human justice, for all its genuine importance, is an anteroom. A preliminary. The whirlwind is God saying: come and see the room where reality gets constituted. And then showing it to him.</p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <blockquote class="scripture">
-        <em>Where were you when I laid the foundation of the earth? Tell me, if you have understanding. Who determined its measurements — surely you know.</em>
-      </blockquote>
-
-      <p>The questions begin. And they do not stop. They come in a cascade — not randomly but with the precise accumulation of a teacher who is not humiliating the student but expanding the student&rsquo;s understanding of the size of what they are studying.</p>
-      <p><em>Where were you when the morning stars sang together and all the sons of God shouted for joy?</em></p>
-      <p><em>Have you entered into the springs of the sea, or walked in the recesses of the deep?</em></p>
-      <p><em>Can you bind the chains of the Pleiades or loose the belt of Orion?</em></p>
-      <p>The questions are not rhetorical in the dismissive sense. They are designed to do something to Job. Not crush him. Reorient him. To take the man who has been standing in the anteroom demanding the verdict and walk him, question by question, into the full size of the building.</p>
-      <p>The building is very large.</p>
-      <p>Larger than the courtroom. Larger than the theology of the friends. Larger than the legal brief, signed and waiting. Larger than any framework Job had brought to the ash heap with him.</p>
-      <p>And then — after the whirlwind has asked its questions — Job speaks.</p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>What Job says is the hinge on which the whole book turns.</p>
-
-      <blockquote class="scripture">
-        <em>I had heard of you by the hearing of the ear, but now my eye sees you.</em>
-        <cite>Job 42 · 5</cite>
-      </blockquote>
-
-      <p>That is it. That is the resolution. Not the answer to the brief. Not the explanation of the suffering. Not the theological account of why the hedge was removed.</p>
-      <p>Just this. <em>I had heard. Now I see.</em></p>
-      <p>Before the whirlwind Job had a theology. A good theology — more honest than his friends&rsquo;, more rigorous, more willing to sit with the genuine difficulty of what he was experiencing without reaching for premature resolution. But it was still a theology. A set of propositions about God, carefully assembled, rigorously maintained.</p>
-      <p>What the whirlwind gave him was not a better theology.</p>
-      <p>It gave him God.</p>
-      <p>And the difference between those two things is the difference between the hearing of the ear and the seeing of the eye. Between the report and the presence. Between the map and the territory.</p>
-      <p><em>I had heard of you. Now my eye sees you.</em></p>
-      <p>Job does not say: now I understand. He does not say: now the pieces fit together. He says: <em>I see you.</em></p>
-      <p>The brief is not answered. It is overwhelmed. The courtroom is not adjudicated. It is abandoned — not because the questions it contained were wrong, but because something has arrived that makes the courtroom feel like the wrong venue for what is actually at stake.</p>
-      <p>Job repents. Not of the things the friends accused him of — the text is careful about this, and God will shortly make it explicit that Job spoke what was right and the friends did not. Job repents of the smallness of the room. Of the framework that was too small for what was happening to him, too small for the one he was addressing, too small for the love that was present in the silence that he had experienced as absence.</p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>Then something happens that is almost always passed over too quickly in the rush toward the restoration.</p>
-      <p>God speaks to the friends.</p>
-
-      <blockquote class="scripture">
-        <em>My anger burns against you and against your two friends, for you have not spoken of me what is right, as my servant Job has.</em>
-      </blockquote>
-
-      <p>This is extraordinary. The friends who maintained the orthodox theology — who defended God&rsquo;s justice, who insisted on the moral order of the universe — these friends are told that they did not speak what was right. And Job — who raged and tore his robe and demanded the courtroom and said things about the silence of heaven that were not careful — Job spoke what was right.</p>
-      <p>Why?</p>
-      <p>Because Job spoke <em>to</em> God. The friends spoke <em>about</em> God. And in the economy of the relationship between the creature and the creator, the one who speaks to — even in rage, even in demand, even in the grief-soaked language of the ash heap — is closer to the truth than the one who speaks about, however correctly, from a safe theological distance.</p>
-      <p>The friends kept God at the length of a proposition.</p>
-      <p>Job would not let him go.</p>
-      <p>Even in the argument. Even in the brief. Even in the demand for the courtroom. Job was always, underneath everything, doing the thing that the Adversary&rsquo;s question was designed to test — he was reaching toward God rather than away from him. The rage was addressed to someone. The brief was filed with someone.</p>
-      <p><em>I know that my redeemer lives.</em></p>
-      <p>He knew it before the whirlwind. The whirlwind confirmed what he knew. What he saw with his eye was the one his bones had known was there before his eye had any evidence for it.</p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>Now I need to say something personal.</p>
-      <p>I have had my own encounter with the whirlwind.</p>
-      <p>Mine came with a cardiac event that I did not expect and almost did not survive. I was not on a literal ash heap. I was in a hospital room with machines doing what my body had stopped doing for itself and people moving with the particular efficiency of those who are working against time. There was nothing poetic about it. The fluorescent light was the same fluorescent light as every other room. The ceiling was unremarkable.</p>
-      <p>What was not unremarkable was a quality of stillness that arrived in the middle of what should have been chaos. Not the stillness of unconsciousness. The stillness of presence — pressing in from every side, unmistakeable and unearned and not contingent on anything I was doing or thinking or believing in that moment. It was simply there. As it had apparently always been there, on every road I had walked for decades without noticing the one who was walking it with me.</p>
-      <p>I had spent forty years reading the Bible carefully. I had preached from its pages and offered its words to others in their hardest moments and believed what I was offering. But there is a difference — and I understand this now in a way I could not have understood it from the outside — between the theology you carry and the reality the theology is pointing toward. Between the map and the territory. Between the hearing of the ear and the seeing of the eye.</p>
-      <p>Isaiah 46:4 found me in that room. <em>Even to your old age I am he, and to grey hairs I will carry you. I have made, and I will bear; I will carry and will save.</em> I had read those words many times. In that room I stopped reading about them and entered them. Not as a thought. As a fact about what was actually happening — had always been happening — in the specific geography of my specific life.</p>
-      <p>The cardiac event did not make me a better theologian. It made me a witness. There is a difference. Before it I could describe the country from the map. After it I had been in it. And the country turns out to be larger, stranger, more costly, and more saturated with presence than the map had been able to indicate.</p>
-      <p><em>I had heard of you by the hearing of the ear. Now my eye sees you.</em></p>
-    </section>
-
-    <!-- ── CHAPTER FOUR ─────────────────────────────────────────────── -->
-    <section class="chapter" id="chapter-four">
-      <span class="chapter__number">Chapter Four</span>
-      <h2 class="chapter__title">The Names</h2>
-
-      <p>I want to tell you about a pattern.</p>
-      <p>Not a theological abstraction. A pattern observable in history, traceable across centuries, documented in court records and church records and the accounts of eyewitnesses who had no reason to invent what they described. A pattern that repeats with the consistency of something structural — not coincidental, not the product of similar personalities or similar cultures, but the repetition of something that runs deeper than any of those explanations can reach.</p>
-      <p>Before I name the pattern, one distinction needs to be made honestly.</p>
-      <p>Job suffered in ignorance. He did not know why. He had no access to the transcript of the proceedings that determined the course of his suffering. The silence of heaven was total and the absence of explanation was the very thing that made his ash heap what it was.</p>
-      <p>The men and women I am about to describe suffered differently. They knew exactly why they were on their ash heaps. Their suffering was targeted, not mysterious. They were killed because of what they believed and what they refused to stop saying. Job&rsquo;s trial was concealed from him. Theirs was the direct consequence of a faith they held openly.</p>
-      <p>This does not make them different kinds of witnesses. It makes them witnesses to the same reality from a different angle. Job&rsquo;s question was: does the faith hold when the hedge is removed and no explanation is offered? The martyrs&rsquo; question was: does the faith hold when the hedge is removed and the cost of holding it is everything? Different circumstances. The same cosmic function. In both cases the Adversary&rsquo;s question receives the same answer.</p>
-      <p>The hedge was gone. The <em>hesed</em> remained.</p>
-      <p>That is the pattern. And it holds across both kinds of ash heap — the mysterious and the targeted, the inexplicable and the deliberate — because what it reveals is not the strength of the sufferer but the nature of what they were holding.</p>
-      <p>I want to tell you the names.</p>
-
-      <!-- Stephen -->
-      <h3 class="witness-heading">Stephen</h3>
-
-      <p>He was the first.</p>
-      <p>The charges against him were religious. He had been speaking about Jesus of Nazareth in ways that the authorities found threatening. They brought him before the council. They produced witnesses. Stephen&rsquo;s defence — recorded in Acts 7 — traces the whole history of Israel from Abraham to Solomon, demonstrating at every point that God has never been confined to the buildings and institutions his people constructed to contain him.</p>
-      <p>It is, in its own way, a brief. Carefully prepared. Thoroughly documented.</p>
-      <p>The council was not interested in the evidence.</p>
-      <p>They cast him out of the city and began to stone him.</p>
-      <p>And here the pattern asserts itself with a precision that no literary invention could improve on.</p>
-      <p>As the stones begin to fall Stephen looks up.</p>
-
-      <blockquote class="scripture">
-        <em>He, full of the Holy Spirit, gazed into heaven and saw the glory of God, and Jesus standing at the right hand of God.</em>
-        <cite>Acts 7 · 55</cite>
-      </blockquote>
-
-      <p>He saw. The same word Job used. The same movement from the hearing of the ear to the seeing of the eye. In the moment of final removal — the stones falling, the hedge gone completely — Stephen&rsquo;s eyes open to what is above the ordinary sky of his circumstances.</p>
-      <p>And what does he see?</p>
-      <p>Jesus standing.</p>
-      <p>Not seated — standing. The one who is described elsewhere as seated at the right hand of the Father is, in this moment, on his feet. As if the suffering of his servant has brought him to his feet. As if the testimony being given in the street outside Jerusalem has the full attention of the one who gave his own testimony on a cross outside the same city not long before.</p>
-      <p><em>Lord Jesus, receive my spirit.</em></p>
-      <p>And then — the detail I cannot read without stopping — Stephen kneels and cries with a loud voice: <em>Lord, do not hold this sin against them.</em></p>
-      <p>He prays for the ones who are killing him.</p>
-      <p>Not as an ethical achievement. As the natural overflow of someone who has seen what Stephen has seen — who has looked into the face of the one who said <em>Father, forgive them</em> from his own place of final removal, and in seeing that face has found that the love has gone so deep it cannot come out as anything other than intercession.</p>
-      <p>The hedge was gone. The <em>hesed</em> remained.</p>
-
-      <!-- Polycarp -->
-      <h3 class="witness-heading">Polycarp</h3>
-
-      <p>He was the bishop of Smyrna. He was eighty-six years old. He had been a Christian for all of those eighty-six years — he had known people who had known Jesus, had sat at the feet of the apostle John, had received from those who were present at the beginning the faith he was now being asked to surrender at the end.</p>
-      <p>The Romans wanted him to say two words. <em>Caesar is Lord.</em> Two words, and the old man could go home.</p>
-      <p>Polycarp looked at the proconsul and said:</p>
-
-      <blockquote class="scripture">
-        <em>Eighty-six years I have served him, and he has done me no wrong. How can I blaspheme my king who saved me?</em>
-      </blockquote>
-
-      <p>This is testimony. The testimony of a witness who has been asked a direct question and is answering it with the precision of someone who will not say something other than what is true.</p>
-      <p>Eighty-six years. The hedge had been real. The life of faith had been, across eight decades, a life in which the correlation between faithfulness and flourishing had largely held. He was not a man who had been stripped early and had nothing to lose. He was a man who had received much and was now being asked whether the receiving had been the ground of the faith or whether the faith was the ground of the receiving.</p>
-      <p><em>He has done me no wrong.</em></p>
-      <p>Five words that contain a lifetime. Not — the calculation runs in his favour. But — across eighty-six years, in the full account of everything that has happened and everything that has been given and everything that has been asked of me, the verdict of my experience is this: he has done me no wrong.</p>
-      <p>They burned him. The early account of his death — written by the church at Smyrna and preserved as one of the oldest martyr narratives in Christian history — says that the flames formed an arch around him like a ship&rsquo;s sail filled with wind, and that he was in the middle of it not like burning flesh but like bread being baked, and that a sweet aroma came from him as of incense.</p>
-      <p>Bread. Not burning. Bread.</p>
-      <p>The one who said <em>I am the bread of life.</em> Polycarp, at the moment of his final removal, smelled like the one he had served for eighty-six years.</p>
-      <p>The hedge was gone. The <em>hesed</em> remained.</p>
-
-      <!-- Jan Huss -->
-      <h3 class="witness-heading">Jan Huss</h3>
-
-      <p>He was a Czech priest and theologian. A man who had spent his life reading the Scriptures carefully and drawing conclusions from them that the institutional church of his day found inconvenient.</p>
-      <p>The Council of Constance summoned him in 1414. They promised him safe conduct. They had no intention of honouring the promise. The conclusion had been reached before the evidence was examined. Huss was given the opportunity to recant — to sign the document, say the words, preserve what remained of his life — and he refused. Not because he was inflexible. Because he had examined the charges and could not, in honesty, say that what he had taught was wrong.</p>
-      <p>They stripped him of his priestly vestments. They put a paper crown on his head with the word <em>heresiarch</em> — arch-heretic — written on it. They led him to the place of burning.</p>
-      <p>And Huss sang.</p>
-      <p>In the moment of final removal — the stake, the wood, the crowd, the paper crown, the institution of the church he had served turning its full weight against him — Huss sang. The singing was a conversation. The man with the paper crown on his head and the fire at his feet, talking to the one who was present in the flames in the way that the Adversary, who had lit them, could not be.</p>
-      <p>The hedge was gone. The song remained.</p>
-
-      <!-- William Tyndale -->
-      <h3 class="witness-heading">William Tyndale</h3>
-
-      <p>He wanted to give ordinary people the Bible in their own language. That is all. That is the whole of it.</p>
-      <p>He spent twelve years in exile, moving from city to city across Europe, working in poverty and danger, producing the New Testament translation that would eventually become the foundation of the English Bible. Scholars estimate that eighty percent of the King James Version is Tyndale&rsquo;s words. He never lived to see it. He spent his life giving a gift that he would not survive to watch being received.</p>
-      <p>He was betrayed by a man he had trusted and held in a castle near Brussels for sixteen months. He was brought out and strangled and then burned.</p>
-      <p>His last words, spoken with a loud voice according to the eyewitness account, were:</p>
-
-      <blockquote class="scripture">
-        <em>Lord, open the King of England&rsquo;s eyes.</em>
-      </blockquote>
-
-      <p>Not — Lord, vindicate me. Not — Lord, let my work survive. His last breath was a prayer for the man who had signed the warrant that ended here, in this field, with the fire and the rope.</p>
-      <p>Three years after Tyndale&rsquo;s death, the King of England authorised an English Bible — largely based on Tyndale&rsquo;s translation — to be placed in every church in England.</p>
-      <p>The prayer was answered. The man who prayed it did not live to see it. He did not need to.</p>
-      <p>The hedge was gone. The <em>hesed</em> remained.</p>
-
-      <!-- Hugh Latimer -->
-      <h3 class="witness-heading">Hugh Latimer</h3>
-
-      <p>He was seventy years old. He had been a bishop. He had spent a lifetime in the complicated, costly business of trying to hold faith and institution together — trying to speak truth to people who had the authority to make the speaking very expensive.</p>
-      <p>He was brought to Oxford with his colleague Nicholas Ridley in October 1555. They were chained to the same stake. The fire was lit.</p>
-      <p>Latimer turned to Ridley and said:</p>
-
-      <blockquote class="scripture">
-        <em>Be of good comfort, Master Ridley, and play the man. We shall this day light such a candle by God&rsquo;s grace in England as I trust shall never be put out.</em>
-      </blockquote>
-
-      <p>A candle is a small thing. It gives light by consuming itself. It cannot defend itself. And yet Latimer, with the fire at his feet, chose this image. Not despite its fragility but because of it. The candle that has been lit from the right source — lit from the flame that the Adversary cannot extinguish, lit from the <em>hesed</em> that persists when the hedge is gone — has a property its physical fragility entirely conceals.</p>
-      <p>It cannot be finally put out.</p>
-      <p>Latimer was right. The hedge was gone. The light remained.</p>
-
-      <!-- Dietrich Bonhoeffer -->
-      <h3 class="witness-heading">Dietrich Bonhoeffer</h3>
-
-      <p>He was thirty-nine years old. He had written books that would reshape twentieth-century theology. He had been engaged to be married. He had chosen, when he could have remained safely in America, to return to Germany and be present in his country during its darkest hour.</p>
-      <p>He was arrested in 1943 and spent two years in prison — writing letters and papers from his cell that are among the most searching theological documents of the twentieth century. Written not in the safety of the study but from inside the ash heap.</p>
-      <p>The order for his execution came directly from Hitler in the final weeks of the war. On the morning of April 9, 1945 — with the Allied forces days away — he was taken to the execution ground at Flossenbürg.</p>
-      <p>The camp doctor, a man with no Christian faith, recorded what he witnessed afterwards in testimony that has been widely preserved:</p>
-
-      <blockquote class="scripture">
-        <em>I saw Pastor Bonhoeffer kneeling on the floor praying fervently to God. I was most deeply moved by the way this lovable man prayed, so devout and so certain that God heard his prayer. At the place of execution, he again said a short prayer and then climbed the steps to the gallows, brave and composed. In the almost fifty years that I worked as a doctor, I have hardly ever seen a man die so entirely submissive to the will of God.</em>
-      </blockquote>
-
-      <p>Submissive to the will of God. The doctor meant it as a clinical observation. He was describing a man who had arrived somewhere — who had moved from the hearing of the ear to the seeing of the eye through the long, costly, daily discipline of choosing, in cell after cell and prayer after prayer, to orient toward the one who is there.</p>
-      <p>The hedge was gone. The peace remained.</p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>I could continue. The names do not run out.</p>
-      <p>Perpetua, twenty-two years old, nursing her infant in the prison at Carthage and writing in her diary the night before she was taken to the arena with a clarity and a peace her jailers could not account for.</p>
-      <p>Thomas More in the Tower, writing to his daughter with the particular warmth of a man who loves his family with everything he has and has chosen, at the cost of everything he has, something he loves more.</p>
-      <p>And the unnamed ones — beyond counting, beyond naming — who lived the same question in their own languages and their own centuries and arrived, each of them, at the same place Job arrived at before the whirlwind. The declaration below understanding. The knowing that persisted when everything else was taken.</p>
-      <p>Each one: the hedge gone. The <em>hesed</em> remaining.</p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>Now I want to say something about what this means for the Adversary&rsquo;s question.</p>
-      <p>The Adversary was not asking a trivial question. He was bringing to the divine council the most serious charge that can be brought against faith: that it is ultimately self-interested. That the creature&rsquo;s worship of the creator is, at its root, the calculation of the one who has received much and calls the gratitude devotion.</p>
-      <p>It is a serious charge. It deserves a serious answer.</p>
-      <p>And the answer — accumulated across twenty centuries, witness by witness, name by name, ash heap by ash heap — is not a philosophical argument. You cannot answer a charge about the nature of love with a philosophical argument. Love submits to evidence. To testimony. To the account of the witness who was present in the place where the question was put in its most concentrated form and can tell the court what they found there.</p>
-      <p>Stephen found Jesus standing.</p>
-      <p>Polycarp found eighty-six years of faithfulness that smelled of bread.</p>
-      <p>Huss found a song.</p>
-      <p>Tyndale found a prayer for his enemy.</p>
-      <p>Latimer found a candle that would not go out.</p>
-      <p>Bonhoeffer found a peace that the camp doctor could not explain.</p>
-      <p>Job found a living redeemer, declared from the ash heap before the whirlwind, in the dark, with no evidence available except the broken-open knowing that sits below understanding in the place where the creature is most essentially itself.</p>
-      <p>They all found the same thing.</p>
-      <p>Not the hedge. What the hedge had always been a shadow of. The <em>hesed</em> — the covenant love that is not contingent on the covenant&rsquo;s visible blessings, that runs deeper than the framework built to describe it and persists when the framework is blown open by the whirlwind.</p>
-      <p>The love that surpasses knowledge.</p>
-      <p>The thing that Paul prayed in Ephesians 3 that the community would know — not understand, <em>know</em>, with the <em>yada</em> knowing that is not intellectual assent but the bone-level certainty of the one who has encountered something that cannot be unfound.</p>
-      <p>The Adversary asked the question.</p>
-      <p>The witnesses answered it with their lives.</p>
-      <p>And the answer is not a proposition. It is a name. Many names.</p>
-      <p>Stephen. Polycarp. Huss. Tyndale. Latimer. Bonhoeffer. And the man from Uz who began it — sitting on his ash heap with his broken pottery, declaring into the dark what he could not yet see, the first iteration of a pattern that would take twenty centuries and counting to fully answer.</p>
-
-      <div class="pull-quote">
+</header>
+
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Book</div>
+      <div>Job 19:25</div>
+      <div class="byline">Norm Reed</div>
+      <div>Onesimus Foundation</div>
+    </div>
+    <div>
+      <h1>Job 43</h1>
+      <div class="hw-article-body">
+        <p class="verse">The Unwritten Last Chapter</p>
+
+        <p class="verse">&ldquo;I know that my redeemer lives, and at the last he will stand upon the earth.&rdquo; <em>Job 19 &middot; 25</em></p>
+
+        <nav class="toc">
+          <h2>Contents</h2>
+          <ul>
+            <li><a href="#before-we-begin">Before We Begin</a><span class="toc-chapter">Preface</span></li>
+            <li><a href="#chapter-one">The Transcript</a><span class="toc-chapter">Chapter One</span></li>
+            <li><a href="#chapter-two">The Ash Heap</a><span class="toc-chapter">Chapter Two</span></li>
+            <li><a href="#chapter-three">The Whirlwind</a><span class="toc-chapter">Chapter Three</span></li>
+            <li><a href="#chapter-four">The Names</a><span class="toc-chapter">Chapter Four</span></li>
+            <li><a href="#chapter-five">The Closing Court</a><span class="toc-chapter">Chapter Five</span></li>
+            <li><a href="#job-43">Job 43</a><span class="toc-chapter">The Imagined Chapter</span></li>
+            <li><a href="#closing-note">A Closing Note</a><span class="toc-chapter">Afterword</span></li>
+          </ul>
+        </nav>
+
+        <div class="chapter-heading" id="before-we-begin">
+          <h2>Before We Begin</h2>
+        </div>
+
+        <p>Most people who read the book of Job come away with the same feeling.</p>
+        <p>It isn&rsquo;t fair.</p>
+        <p>Not just what happened to Job &mdash; the losses, the ash heap, the friends with their pre-assembled theology, the body that became a country he no longer recognised. Those are unfair enough. But underneath the suffering is something that strikes most careful readers as a deeper unfairness, one that is harder to name but impossible to ignore once you have seen it.</p>
+        <p>Job never knew there was a court.</p>
+        <p>The proceedings that determined the entire course of his suffering &mdash; the wager, the question, the terms of the test &mdash; were conducted without his knowledge, in a room he could not enter, in a language he could not hear. He was the subject of the case and he was not invited to attend. He sat on his ash heap demanding an explanation that never came in the form he asked for, preparing a legal brief for a courtroom that never convened, calling for a signature from a silence that offered nothing but a whirlwind.</p>
+        <p>And then the book ends.</p>
+        <p>The hedge is restored. The daughters are beautiful. The herds multiply. Job lives to see four generations and dies old and full of days. It is a real ending. But it leaves something unresolved that the restoration cannot quite reach. The question Job kept asking &mdash; why, and by whose authority, and where is the justice in this &mdash; never receives a direct answer. The whirlwind blows the question open but does not close it. And the court scene that set everything in motion is never revisited. We are present at the prosecution. We are not present at the verdict.</p>
+        <p>Job was not either.</p>
+        <p>I have wondered for a long time what that final scene might have looked like. When the sons of God gathered again and presented themselves before the LORD and the Adversary came among them &mdash; what was said? How was the wager settled? Did God draw the Adversary&rsquo;s attention to his servant Job one more time? And if so, what did the Adversary have left to say?</p>
+        <p>What if there was a Job 43?</p>
+        <p>What would it contain?</p>
+        <p>This book is an attempt to answer that question. But in attempting it I discovered something I had not expected. The closing court scene cannot be written with only two characters. The prosecution had two parties &mdash; God and the Adversary, the question asked and the terms set. But the defence, it turns out, requires witnesses. And the witnesses are not fictional. They are people whose names we can say. People who lived the Job narrative under their own names, in their own centuries, on their own ash heaps &mdash; and who answered the Adversary&rsquo;s question not with argument but with the testimony of their lives.</p>
+        <p>I should say clearly what kind of writing this is. The title names it honestly: this is the unwritten chapter &mdash; meaning it is not recovered scripture, not new revelation, not an attempt to add to the canon. It is theological imagination in the tradition of midrash: taking the story seriously enough to ask what it implies, and then following the implication where it leads. The closing court scene I attempt is a construction, not a transcript. But it is built from real materials &mdash; from the text of Job, from the testimony of history, and from twenty centuries of Christian reflection on what the book means. I have tried to be honest throughout about where exegesis ends and imagination begins.</p>
+        <p>And there is one more thing the closing court scene requires.</p>
+        <p>A defence attorney.</p>
+        <p>Not an appointed advocate. Someone with standing in the court that no appointment could confer &mdash; the standing of the <em>go&rsquo;el</em>, the kinsman redeemer, the one who takes up the cause of the family member who has lost everything because the bond of blood gives him both the right and the obligation.</p>
+        <p>Job declared him from the ash heap. Before the whirlwind. Before the restoration. Before any evidence was available except the broken-open knowing that sits below understanding in the place where the creature is most essentially itself.</p>
+        <p class="verse"><em>I know that my redeemer lives.</em></p>
+        <p>He did not know, when he said it, that it was the first testimony of the defence.</p>
+        <p>He does now.</p>
+        <p>This is the account of what happened in the room Job was never invited into.</p>
+        <p>It turns out the verdict was worth waiting for.</p>
+
+        <div class="blake-caption">
+          <p>&ldquo;Satan Before the Throne of God&rdquo;</p>
+          <small>William Blake &mdash; Illustrations of the Book of Job, Plate 3 (1825) &mdash; Public Domain</small>
+        </div>
+
+        <div class="chapter-heading" id="chapter-one">
+          <span class="chapter-label">Chapter One</span>
+          <h2>The Transcript</h2>
+        </div>
+
+        <p class="first">I want to begin with something that has always struck me as one of the most extraordinary literary devices in all of ancient literature.</p>
+        <p>The book of Job opens in a courtroom that Job does not know exists.</p>
+        <p>Think about that for a moment. The man at the centre of the entire narrative &mdash; the one whose life is about to be dismantled, whose children will die, whose body will become a country he no longer recognises, whose friends will arrive with their theology pre-assembled and their conclusions already reached &mdash; that man has no idea that any of this has been discussed. Decided. Set in motion by a wager made in a room he cannot enter, in a language he cannot hear, between parties he has no knowledge of.</p>
+        <p>He wakes up one morning as a man of extraordinary blessing and reputation. He has sons and daughters. He has flocks beyond counting. He has the respect of the elders who fall silent when he approaches and the princes who wait for his word before they speak. He has spent his life doing what he understood to be right &mdash; rising early to offer sacrifices for his children, just in case they had sinned in the night in the chambers of their hearts, because that is the kind of man he is. Attentive to the moral texture of things. Careful. Thorough.</p>
+        <p>And somewhere above the ordinary sky of his ordinary morning, a court is in session.</p>
+        <p>He does not know.</p>
+        <p>This is not incidental to the story. It is the story. The gap between what is happening in the council and what Job experiences on the ash heap is where everything that matters in the book of Job actually lives. It is the gap between the question being asked about him and the question he is asking about himself. It is, I want to argue, the gap that the whole of human history has been trying to close &mdash; the gap between the suffering that is experienced at ground level and the purposes that are being worked out above it, in a room we cannot enter, in proceedings we have not been invited to observe.</p>
+        <p>We have been given the transcript.</p>
+        <p>That is what the opening chapters of Job are. A transcript of proceedings conducted without the knowledge of the man they most concern.</p>
+        <p>Let us read it carefully. Because everything that follows &mdash; Job&rsquo;s rage and his grief and his magnificent legal brief and the whirlwind and the restoration and the closing court scene that the book does not give us &mdash; everything depends on understanding what was actually said in that room, and what it cost, and what question was being asked that required all of it by way of answer.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>The transcript begins with a gathering.</p>
+        <p class="verse"><em>Again there was a day when the sons of God came to present themselves before the LORD, and the Adversary also came among them to present himself before the LORD.</em></p>
+        <p>The word <em>again</em> is important. This is not the first such gathering. The divine council meets. It has always met. The sons of God &mdash; the heavenly assembly, the court of the one who made heaven and earth &mdash; present themselves before the LORD in the way that a court assembles when the judge takes his seat. There is order here. There is formality. This is not chaos. It is, in its own register, the most orderly room imaginable.</p>
+        <p>And the Adversary comes with them.</p>
+        <p>I want to say something about the Adversary that often gets lost in subsequent theology. In the opening chapters of Job he is not yet the fully developed Satan of later Christian tradition &mdash; the embodiment of evil, the enemy of souls, the father of lies. He is something at once more precise and more disturbing than that. He is a member of the court. He has a function. His title &mdash; the satan, with the definite article in Hebrew &mdash; is not a name but an office. He is the accuser, the prosecuting counsel, the one whose vocation within the divine assembly is to test the claims that are made and expose what is actually true beneath the surface of things.</p>
+        <p>He is, in other words, a professional.</p>
+        <p>And professionals ask professional questions. That is what they are for.</p>
+        <p>The LORD opens the proceedings.</p>
+        <p class="verse"><em>From where have you come?</em></p>
+        <p>And the Adversary answers with the precision of the one whose vocation is traversing.</p>
+        <p class="verse"><em>From going to and fro on the earth, and from walking up and down on it.</em></p>
+        <p>This is not evasion. Walking is what he does. He moves through the world with the particular attentiveness of the one whose job is to notice what is actually there rather than what the inhabitants of a place imagine or hope or claim to be there. He has few illusions about the creature. He has seen what people are like when they think no one is watching. He is not cynical exactly &mdash; cynicism is a posture, and he is too professional for postures. He is simply accurate. Or so he believes.</p>
+        <p class="verse"><em>Have you considered my servant Job?</em></p>
+        <p>The question comes from the LORD. And here the transcript does something remarkable. God draws the Adversary&rsquo;s attention to Job. Not the other way around. The prosecution does not begin with the Adversary identifying a target. It begins with the LORD himself placing his servant Job before the court&rsquo;s attention.</p>
+        <p class="verse"><em>There is none like him on the earth &mdash; a blameless and upright man, who fears God and turns away from evil.</em></p>
+        <p>Four things. Blameless. Upright. Fears God. Turns away from evil. This is the LORD&rsquo;s own assessment of his servant, offered without qualification, to the one whose professional vocation is to find the qualification.</p>
+        <p>And the Adversary &mdash; being a professional &mdash; finds it.</p>
+        <p class="verse"><em>Does Job fear God for nothing?</em></p>
+        <p>Five words in English. In Hebrew, even fewer. But they are among the most important words in the entire canon of Scripture because they identify, with prosecutorial precision, the question that the whole of human history is going to be required to answer.</p>
+        <p>Does the creature fear God for nothing?</p>
+        <p>Is the faith of the man &mdash; any man, Job standing for all of them &mdash; is it genuine love freely given? Or is it the calculation of the creature who has received much and calls his gratitude by the name of devotion? Is it the worship of the one who is, or the worship of what the one who is provides?</p>
+        <p class="verse"><em>Have you not put a hedge around him and his house and all that he has, on every side? You have blessed the work of his hands, and his possessions have increased in the land. But stretch out your hand and touch all that he has, and he will curse you to your face.</em></p>
+        <p>The Adversary&rsquo;s argument is precise and it is fair. He is not lying. He is not inventing. He is observing. Job has been blessed. The correlation between his goodness and his flourishing has been consistent for long enough that &mdash; even without Job&rsquo;s awareness, even without any conscious calculation on Job&rsquo;s part &mdash; a structure has formed. He has been a good man and good things have happened to him. But the question &mdash; the real question, the one the Adversary is professionally obligated to put to this court &mdash; is whether the relationship would survive the removal of the goods.</p>
+        <p>Remove the hedge, he says. Then we will see what the man actually trusts.</p>
+        <p>The question is real. The court treats it as real. And the LORD enters the wager.</p>
+        <p class="verse"><em>Behold, all that he has is in your hand. Only against him do not stretch out your hand.</em></p>
+        <p>What passed in the council before that answer came the transcript does not record. What I can tell you is that when the answer came it came with a weight that the subsequent narrative does nothing to lighten. The LORD handed his servant to the Adversary&rsquo;s investigation. He did it knowing what it would cost. He did it because the question was real and the only way to answer a real question is with real evidence &mdash; and real evidence in this case meant a real man on a real ash heap with real grief and a silence that was not, from Job&rsquo;s side of things, offering any explanation.</p>
+        <p>He did it, I have come to believe, because he already knew what the answer would be.</p>
+        <p>Not because the outcome was rigged. Because he knew his servant. And because he knew something else &mdash; something the transcript of the opening court scene does not yet reveal, something that the Adversary&rsquo;s question, for all its professional precision, had not accounted for.</p>
+        <p>The question assumed the court had two parties.</p>
+        <p>It did not.</p>
+        <p>But we are not yet at the closing scene. We are still at the beginning. And the beginning requires us to sit with the fact that the man on the ash heap does not know the transcript exists. He does not know the question has been asked. He does not know that the silence he is experiencing is not absence but the particular quality of restraint that belongs to the one who knows the answer is coming and will not shortcut the process by which it arrives.</p>
+        <p>Job wakes up one morning as a man of extraordinary blessing.</p>
+        <p>He does not know that above the ordinary sky of his ordinary morning, a question has been put that his life is about to answer.</p>
+        <p>He does not know that he is not only the subject of the proceedings.</p>
+        <p class="pull">He is, without knowing it, the first witness for the defence.</p>
+
+        <div class="chapter-heading" id="chapter-two">
+          <span class="chapter-label">Chapter Two</span>
+          <h2>The Ash Heap</h2>
+        </div>
+
+        <p class="first">I want to tell you what Job did not do.</p>
+        <p>He did not curse God.</p>
+        <p>I say that first because it is the thing the Adversary predicted he would do, and because it is the thing that &mdash; if you have ever sat on your own ash heap, if you have ever known the particular quality of silence that descends when everything you understood about your life turns out to be less permanent than you thought &mdash; you will understand was not as simple an achievement as it sounds.</p>
+        <p>Not cursing God when everything is gone is not the same thing as not wanting to. Job wanted to. He came close to the edge of many things in those days and nights on the ash heap and he was honest enough &mdash; or perhaps simply too exhausted to be otherwise &mdash; to say so out loud. He wished he had never been born. He called the day of his birth a darkness. He said things about the silence of heaven that were not careful and not measured and not the kind of thing you would say if you were performing faith for an audience.</p>
+        <p>But he did not curse God.</p>
+        <p>And the reason he did not &mdash; the reason underneath the reason, the thing that held him at the edge without letting him go over it &mdash; is the most important thing in the book.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>The losses came in sequence and the sequence was its own cruelty.</p>
+        <p>A messenger arrived. The oxen and donkeys had been taken. While that messenger was still speaking another arrived. Fire had fallen from heaven and burned the sheep. While that messenger was still speaking another arrived. The Chaldeans had taken the camels. While that messenger was still speaking &mdash; the text insists on this, will not let the reader look away from the accumulation &mdash; a fourth messenger arrived.</p>
+        <p>His sons and daughters were dead. All of them.</p>
+        <p>The text gives us Job&rsquo;s response with the economy of the truly devastating.</p>
+        <p class="verse"><em>Then Job arose and tore his robe and shaved his head and fell on the ground and worshipped.</em></p>
+        <p>He worshipped.</p>
+        <p class="verse"><em>Naked I came from my mother&rsquo;s womb, and naked shall I return. The LORD gave, and the LORD has taken away; blessed be the name of the LORD.</em></p>
+        <p>I have read those words hundreds of times. I have read them at bedsides and gravesides. And I want to say something about them that is not often said.</p>
+        <p>They are not the words of a man who is fine.</p>
+        <p>They are the words of a man who is not fine and who is choosing, in the moment of not being fine, to orient himself toward something that the losses have not touched. Not because the losses are not real. But because underneath the grief and running deeper than it is something that the Sabeans and the fire and the Chaldeans and the great wind have not been able to reach. Something that was there before the hedge and remains when the hedge is gone.</p>
+        <p>The text notes &mdash; and this is the detail the whole first round of the wager turns on &mdash; <em>in all this Job did not sin or charge God with wrong.</em></p>
+        <p>Round one to Job.</p>
+        <p>But the Adversary is not finished.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>The court reconvenes. The LORD again draws the Adversary&rsquo;s attention to his servant Job.</p>
+        <p class="verse"><em>Have you considered my servant Job? He still holds fast his integrity, although you incited me against him to destroy him without reason.</em></p>
+        <p>That phrase &mdash; <em>without reason</em> &mdash; is worth pausing over. The Hebrew is <em>chinnam</em> &mdash; the same word the Adversary used in his original question. Does Job fear God for nothing &mdash; <em>chinnam</em>? And now the LORD uses it back. You incited me against him for nothing. The word the Adversary had aimed at Job&rsquo;s worship rebounds.</p>
+        <p>But the Adversary has a second question.</p>
+        <p class="verse"><em>Skin for skin. All that a man has he will give for his life. But stretch out your hand and touch his bone and his flesh, and he will curse you to your face.</em></p>
+        <p>The first test had removed what Job had. The second test will touch what Job is. His body. The physical self. The skin and bone and flesh in which a life is lived. Because the Adversary understands &mdash; and he is not wrong about this &mdash; that there is a level of physical suffering at which the philosophical convictions of even the most genuine faith begin to feel abstract.</p>
+        <p class="verse"><em>Behold, he is in your hand. Only spare his life.</em></p>
+        <p>And so Job loses the last thing. His body becomes a foreign country. From the sole of his foot to the crown of his head he is covered in loathsome sores and he takes a piece of broken pottery to scrape himself and sits in the ashes.</p>
+        <p>His wife looks at him.</p>
+        <p class="verse"><em>Do you still hold fast your integrity? Curse God and die.</em></p>
+        <p>She is not a villain. She is a woman who has lost her children and her security and is now watching her husband sit in ashes and she has reached the end of what she can bear. Curse God and die. At least it would be honest. At least it would be over.</p>
+        <p>Job&rsquo;s answer to her is the last measured thing he will say for a very long time.</p>
+        <p class="verse"><em>Shall we receive good from God, and shall we not receive evil?</em></p>
+        <p>And then the friends arrive.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>I want to be careful about the friends.</p>
+        <p>Eliphaz and Bildad and Zophar are not stupid men. They are not cruel men. They are, in their own way, trying to help. And when they first arrive &mdash; when they see Job from a distance and do not recognise him, and raise their voices and weep, and tear their robes and throw dust on their heads &mdash; in that first moment they do the one thing that genuine comfort requires and that most people, faced with suffering they cannot explain, find almost impossible to sustain.</p>
+        <p>They sit with him.</p>
+        <p>Seven days and seven nights they sit on the ground with him and no one speaks a word because they see that his suffering is very great.</p>
+        <p>Seven days of silence.</p>
+        <p>That is not nothing. That is, in fact, everything. The ministry of presence &mdash; the willingness to be in the room with suffering without rushing to explain it or fix it or place it in a theological framework that makes it bearable for the observer &mdash; that is perhaps the most demanding thing one human being can offer another. And the friends, to their credit, manage it for seven days.</p>
+        <p>Then Job opens his mouth.</p>
+        <p>And everything changes.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>What comes out of Job&rsquo;s mouth when he finally speaks is not careful. It is the raw voice of a man who has been sitting in ashes for seven days with the silence of heaven pressing down on him and the questions multiplying in the dark without answers.</p>
+        <p>He curses the day he was born. He asks why he did not die at birth. He asks why light is given to a man whose way is hidden, whom God has hedged in.</p>
+        <p>That last phrase stops me every time. Whom God has hedged in. The same word &mdash; hedge &mdash; that the Adversary used in the opening court scene. The hedge that the Adversary said protected Job from the test. Now Job experiences it not as protection but as enclosure. He cannot see past it. He cannot understand what is happening inside it. He is hedged in by a silence he cannot interpret and a God who is apparently watching all of it and saying nothing.</p>
+        <p>He does not know that the hedge has been removed.</p>
+        <p>He feels, from the inside, as if it has been made smaller.</p>
+        <p>The friends respond with what they have. Which is theology.</p>
+        <p>Three men. Three versions of the same argument. Each one a slightly different arrangement of the same furniture in the same room. The room is the theology of retribution &mdash; the belief that the universe operates on a moral ledger, that suffering indicates debt, that the restoration of right standing with God will produce the restoration of circumstances. It is tidy. It is logical. It is, as a complete account of how God relates to the creature, catastrophically insufficient.</p>
+        <p>Job knows this. Not because he has a better theology. Because he has an ash heap.</p>
+        <p>The man on the ash heap always knows things about the room that the men sitting comfortably inside it do not. He can feel the walls. He can feel where the ceiling is. And he can tell you, with the authority of the person whose body is the measuring instrument, that the room is not big enough to contain what is actually happening to him.</p>
+        <p>So Job argues back. Magnificently. Furiously. With the full force of a man who has spent a lifetime thinking carefully about God and justice and is now applying that carefully developed mind to his own devastation with nothing left to lose.</p>
+        <p>He tells them their proverbs are proverbs of ashes.</p>
+        <p>He tells them he would speak to the Almighty and desires to argue his case with God.</p>
+        <p>He tells them that he knows they are worthless physicians &mdash; that if they would only keep silent it would be their wisdom.</p>
+        <p>And then &mdash; in the middle of all of it, in the middle of the rage and the grief and the magnificent argument &mdash; something happens that I have never been able to read without stopping.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>It is chapter nineteen. Job is in full flight &mdash; the argument is building, the case is being assembled, the brief is taking shape. He has described himself as a man from whom his brothers and companions have withdrawn, whom his servants do not answer, whose breath is strange to his wife, who is loathed by little children.</p>
+        <p>He has said: <em>Oh that my words were written. Oh that they were inscribed in a book. Oh that with an iron pen and lead they were engraved in the rock forever.</em></p>
+        <p>He wants the record to exist. He wants what is happening to him to be documented &mdash; not lost, not dissolved into the silence, not forgotten when the circumstances eventually change.</p>
+        <p>And then.</p>
+        <p>Right there. In the middle of the ashes and the grief and the engraved record of everything he has lost.</p>
+        <p class="verse"><em>For I know that my redeemer lives, and at the last he will stand upon the earth. And after my skin has been thus destroyed, yet in my flesh I shall see God, whom I shall see for myself, and my eyes shall behold, and not another. My heart faints within me.</em> <cite>Job 19 &middot; 25&ndash;27</cite></p>
         <p><em>I know that my redeemer lives.</em></p>
+        <p>Five words that have no business being in this chapter. No business being spoken by this man in these circumstances with this evidence available to him. He is on the ash heap. The hedge is gone. The children are dead. The body is ruined. The friends have offered their theology and he has seen through it and the silence of heaven has not broken and there is no whirlwind yet and no restoration yet and nothing &mdash; nothing in the observable facts of his situation &mdash; that warrants this declaration.</p>
+        <p>And yet he makes it.</p>
+        <p><em>I know.</em> Not I hope. Not I believe. Not I am trying to maintain. <em>I know.</em> The Hebrew is <em>yada</em> &mdash; the knowing that is not merely intellectual assent but the deep, bone-level certainty of the one who has encountered something that cannot be unfound. The knowing that persists below understanding.</p>
+        <p><em>My redeemer lives.</em> The word is <em>go&rsquo;el</em> &mdash; the kinsman redeemer. The one who has both the right and the obligation to step in when the family member has lost everything. The one whose bond to the suffering person is not contractual but constitutional &mdash; woven into the nature of the relationship, prior to any circumstance, not contingent on any outcome.</p>
+        <p>Job does not yet know who he is talking about.</p>
+        <p>He will not know &mdash; not fully, not with the face and the name and the wounds &mdash; for centuries after his death. He is speaking from the ash heap into a future he cannot see, declaring a redeemer he cannot yet identify, on the basis of a knowing that has no current evidence to support it.</p>
+        <p>This is the most extraordinary moment in the book of Job.</p>
+        <p>Because Job has just done something the Adversary&rsquo;s question did not account for.</p>
+        <p>The Adversary predicted that when the hedge was removed the worship would fail. That the calculation underneath would be exposed and the cursing would begin.</p>
+        <p>What he did not predict was this.</p>
+        <p>That when the hedge was removed, Job would declare a redeemer.</p>
+        <p>Not argue for one. Not reason toward one. Not maintain belief in one as an act of disciplined theological will. Declare one. From the ash heap. Before the whirlwind. Before the restoration. Before any evidence was available except the broken-open knowing that sits below understanding in the place where the creature is most essentially itself.</p>
+        <p>The Adversary had asked whether Job fears God for nothing.</p>
+        <p>Job, from the ash heap, answered.</p>
+        <p>He did not know it was an answer to a courtroom question.</p>
+        <p>He only knew what he knew.</p>
+        <p>And what he knew &mdash; from the ash heap, in the dark, before the whirlwind &mdash; was the first testimony of the defence.</p>
+        <p>The defence had not yet even been called.</p>
+
+        <div class="chapter-heading" id="chapter-three">
+          <span class="chapter-label">Chapter Three</span>
+          <h2>The Whirlwind</h2>
+        </div>
+
+        <div class="blake-caption">
+          <p>&ldquo;The Lord Answering Job Out of the Whirlwind&rdquo;</p>
+          <small>William Blake &mdash; Illustrations of the Book of Job, Plate 13 (1825) &mdash; Public Domain</small>
+        </div>
+
+        <p class="first">I want to begin with what God did not say.</p>
+        <p>Because what God did not say in the whirlwind is, in its own way, as important as what he did say. And what he did not say is the thing that every reader of Job arrives at the whirlwind expecting to hear.</p>
+        <p>He did not explain.</p>
+        <p>He did not say &mdash; Job, here is what happened. There was a court. There was a question. The Adversary asked whether your faith was transactional and I entered a wager and the wager required the removal of the hedge and I want you to know that it was not arbitrary, that it was not punishment, that the silence you have been living inside was not absence but the particular quality of restraint that belongs to the one who knows the answer is coming and will not shortcut the process by which it arrives.</p>
+        <p>He did not say any of that.</p>
+        <p>He said: <em>Where were you when I laid the foundation of the earth?</em></p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>Before the whirlwind there is something that needs to be named.</p>
+        <p>Job prepares a brief.</p>
+        <p>Not metaphorically. With the full seriousness of a man who has spent a lifetime watching justice administered at the gate, who understands the forms and the procedures, who knows what a legal document requires and is prepared to produce one. He assembles his case. He organises his arguments. He lists, with meticulous care, every charge that could be brought against him and answers each one in turn.</p>
+        <p><em>If I have walked with falsehood &mdash; let me be weighed in a just balance.</em></p>
+        <p><em>If my step has turned aside from the way &mdash; let what I have sown grow for another.</em></p>
+        <p><em>If I have rejected the cause of my servant &mdash; what then shall I do when God rises up?</em></p>
+        <p><em>If I have withheld anything that the poor desired &mdash; if I have eaten my morsel alone and the fatherless has not eaten of it.</em></p>
+        <p>The brief goes on. It is thorough. It is the document of a man who has examined his life with complete honesty and found it, by every standard he knows how to apply, to be clean. And at the end of it Job does something audacious.</p>
+        <p>He signs it.</p>
+        <p class="pull"><em>Here is my signature. Let the Almighty answer me.</em></p>
+        <p>Five words of such compressed intensity that they have echoed through three thousand years of theology without losing their charge. <em>Here is my signature</em> &mdash; the ancient legal formula by which a man staked his name and his honour on the truth of his testimony. <em>Let the Almighty answer me</em> &mdash; the demand that the one who has been silent through all of this now enter the proceedings as a respondent.</p>
+        <p>He wants the courtroom.</p>
+        <p>He has always wanted the courtroom.</p>
+        <p>And what arrives instead is a whirlwind.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>The whirlwind is not a punishment. It is not God losing patience with Job&rsquo;s questions and deciding to put him in his place with a display of overwhelming power. That reading &mdash; which is common, and which has caused a great deal of damage across the centuries &mdash; fundamentally misreads what is happening.</p>
+        <p>The whirlwind is an answer.</p>
+        <p>Not the answer Job asked for. The answer Job needed. And the difference between those two things is the theological centre of the entire book.</p>
+        <p>Job asked for a verdict. He asked for the charges to be read and the defence to be heard and the judgment to be delivered in a form he could understand and respond to. He asked for the courtroom because the courtroom was the largest room he knew.</p>
+        <p>And God blew the room open.</p>
+        <p>Not to humiliate him. To show him that the room was too small. The courtroom of human justice, for all its genuine importance, is an anteroom. A preliminary. The whirlwind is God saying: come and see the room where reality gets constituted. And then showing it to him.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p class="verse"><em>Where were you when I laid the foundation of the earth? Tell me, if you have understanding. Who determined its measurements &mdash; surely you know.</em></p>
+        <p>The questions begin. And they do not stop. They come in a cascade &mdash; not randomly but with the precise accumulation of a teacher who is not humiliating the student but expanding the student&rsquo;s understanding of the size of what they are studying.</p>
+        <p><em>Where were you when the morning stars sang together and all the sons of God shouted for joy?</em></p>
+        <p><em>Have you entered into the springs of the sea, or walked in the recesses of the deep?</em></p>
+        <p><em>Can you bind the chains of the Pleiades or loose the belt of Orion?</em></p>
+        <p>The questions are not rhetorical in the dismissive sense. They are designed to do something to Job. Not crush him. Reorient him. To take the man who has been standing in the anteroom demanding the verdict and walk him, question by question, into the full size of the building.</p>
+        <p>The building is very large.</p>
+        <p>Larger than the courtroom. Larger than the theology of the friends. Larger than the legal brief, signed and waiting. Larger than any framework Job had brought to the ash heap with him.</p>
+        <p>And then &mdash; after the whirlwind has asked its questions &mdash; Job speaks.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>What Job says is the hinge on which the whole book turns.</p>
+        <p class="verse"><em>I had heard of you by the hearing of the ear, but now my eye sees you.</em> <cite>Job 42 &middot; 5</cite></p>
+        <p>That is it. That is the resolution. Not the answer to the brief. Not the explanation of the suffering. Not the theological account of why the hedge was removed.</p>
+        <p>Just this. <em>I had heard. Now I see.</em></p>
+        <p>Before the whirlwind Job had a theology. A good theology &mdash; more honest than his friends&rsquo;, more rigorous, more willing to sit with the genuine difficulty of what he was experiencing without reaching for premature resolution. But it was still a theology. A set of propositions about God, carefully assembled, rigorously maintained.</p>
+        <p>What the whirlwind gave him was not a better theology.</p>
+        <p>It gave him God.</p>
+        <p>And the difference between those two things is the difference between the hearing of the ear and the seeing of the eye. Between the report and the presence. Between the map and the territory.</p>
+        <p><em>I had heard of you. Now my eye sees you.</em></p>
+        <p>Job does not say: now I understand. He does not say: now the pieces fit together. He says: <em>I see you.</em></p>
+        <p>The brief is not answered. It is overwhelmed. The courtroom is not adjudicated. It is abandoned &mdash; not because the questions it contained were wrong, but because something has arrived that makes the courtroom feel like the wrong venue for what is actually at stake.</p>
+        <p>Job repents. Not of the things the friends accused him of &mdash; the text is careful about this, and God will shortly make it explicit that Job spoke what was right and the friends did not. Job repents of the smallness of the room. Of the framework that was too small for what was happening to him, too small for the one he was addressing, too small for the love that was present in the silence that he had experienced as absence.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>Then something happens that is almost always passed over too quickly in the rush toward the restoration.</p>
+        <p>God speaks to the friends.</p>
+        <p class="verse"><em>My anger burns against you and against your two friends, for you have not spoken of me what is right, as my servant Job has.</em></p>
+        <p>This is extraordinary. The friends who maintained the orthodox theology &mdash; who defended God&rsquo;s justice, who insisted on the moral order of the universe &mdash; these friends are told that they did not speak what was right. And Job &mdash; who raged and tore his robe and demanded the courtroom and said things about the silence of heaven that were not careful &mdash; Job spoke what was right.</p>
+        <p>Why?</p>
+        <p>Because Job spoke <em>to</em> God. The friends spoke <em>about</em> God. And in the economy of the relationship between the creature and the creator, the one who speaks to &mdash; even in rage, even in demand, even in the grief-soaked language of the ash heap &mdash; is closer to the truth than the one who speaks about, however correctly, from a safe theological distance.</p>
+        <p>The friends kept God at the length of a proposition.</p>
+        <p>Job would not let him go.</p>
+        <p>Even in the argument. Even in the brief. Even in the demand for the courtroom. Job was always, underneath everything, doing the thing that the Adversary&rsquo;s question was designed to test &mdash; he was reaching toward God rather than away from him. The rage was addressed to someone. The brief was filed with someone.</p>
+        <p><em>I know that my redeemer lives.</em></p>
+        <p>He knew it before the whirlwind. The whirlwind confirmed what he knew. What he saw with his eye was the one his bones had known was there before his eye had any evidence for it.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>Now I need to say something personal.</p>
+        <p>I have had my own encounter with the whirlwind.</p>
+        <p>Mine came with a cardiac event that I did not expect and almost did not survive. I was not on a literal ash heap. I was in a hospital room with machines doing what my body had stopped doing for itself and people moving with the particular efficiency of those who are working against time. There was nothing poetic about it. The fluorescent light was the same fluorescent light as every other room. The ceiling was unremarkable.</p>
+        <p>What was not unremarkable was a quality of stillness that arrived in the middle of what should have been chaos. Not the stillness of unconsciousness. The stillness of presence &mdash; pressing in from every side, unmistakeable and unearned and not contingent on anything I was doing or thinking or believing in that moment. It was simply there. As it had apparently always been there, on every road I had walked for decades without noticing the one who was walking it with me.</p>
+        <p>I had spent forty years reading the Bible carefully. I had preached from its pages and offered its words to others in their hardest moments and believed what I was offering. But there is a difference &mdash; and I understand this now in a way I could not have understood it from the outside &mdash; between the theology you carry and the reality the theology is pointing toward. Between the map and the territory. Between the hearing of the ear and the seeing of the eye.</p>
+        <p>Isaiah 46:4 found me in that room. <em>Even to your old age I am he, and to grey hairs I will carry you. I have made, and I will bear; I will carry and will save.</em> I had read those words many times. In that room I stopped reading about them and entered them. Not as a thought. As a fact about what was actually happening &mdash; had always been happening &mdash; in the specific geography of my specific life.</p>
+        <p>The cardiac event did not make me a better theologian. It made me a witness. There is a difference. Before it I could describe the country from the map. After it I had been in it. And the country turns out to be larger, stranger, more costly, and more saturated with presence than the map had been able to indicate.</p>
+        <p><em>I had heard of you by the hearing of the ear. Now my eye sees you.</em></p>
+
+        <div class="chapter-heading" id="chapter-four">
+          <span class="chapter-label">Chapter Four</span>
+          <h2>The Names</h2>
+        </div>
+
+        <p class="first">I want to tell you about a pattern.</p>
+        <p>Not a theological abstraction. A pattern observable in history, traceable across centuries, documented in court records and church records and the accounts of eyewitnesses who had no reason to invent what they described. A pattern that repeats with the consistency of something structural &mdash; not coincidental, not the product of similar personalities or similar cultures, but the repetition of something that runs deeper than any of those explanations can reach.</p>
+        <p>Before I name the pattern, one distinction needs to be made honestly.</p>
+        <p>Job suffered in ignorance. He did not know why. He had no access to the transcript of the proceedings that determined the course of his suffering. The silence of heaven was total and the absence of explanation was the very thing that made his ash heap what it was.</p>
+        <p>The men and women I am about to describe suffered differently. They knew exactly why they were on their ash heaps. Their suffering was targeted, not mysterious. They were killed because of what they believed and what they refused to stop saying. Job&rsquo;s trial was concealed from him. Theirs was the direct consequence of a faith they held openly.</p>
+        <p>This does not make them different kinds of witnesses. It makes them witnesses to the same reality from a different angle. Job&rsquo;s question was: does the faith hold when the hedge is removed and no explanation is offered? The martyrs&rsquo; question was: does the faith hold when the hedge is removed and the cost of holding it is everything? Different circumstances. The same cosmic function. In both cases the Adversary&rsquo;s question receives the same answer.</p>
+        <p>The hedge was gone. The <em>hesed</em> remained.</p>
+        <p>That is the pattern. And it holds across both kinds of ash heap &mdash; the mysterious and the targeted, the inexplicable and the deliberate &mdash; because what it reveals is not the strength of the sufferer but the nature of what they were holding.</p>
+        <p>I want to tell you the names.</p>
+
+        <h3 class="witness-heading">Stephen</h3>
+        <p>He was the first.</p>
+        <p>The charges against him were religious. He had been speaking about Jesus of Nazareth in ways that the authorities found threatening. They brought him before the council. They produced witnesses. Stephen&rsquo;s defence &mdash; recorded in Acts 7 &mdash; traces the whole history of Israel from Abraham to Solomon, demonstrating at every point that God has never been confined to the buildings and institutions his people constructed to contain him.</p>
+        <p>It is, in its own way, a brief. Carefully prepared. Thoroughly documented.</p>
+        <p>The council was not interested in the evidence.</p>
+        <p>They cast him out of the city and began to stone him.</p>
+        <p>And here the pattern asserts itself with a precision that no literary invention could improve on.</p>
+        <p>As the stones begin to fall Stephen looks up.</p>
+        <p class="verse"><em>He, full of the Holy Spirit, gazed into heaven and saw the glory of God, and Jesus standing at the right hand of God.</em> <cite>Acts 7 &middot; 55</cite></p>
+        <p>He saw. The same word Job used. The same movement from the hearing of the ear to the seeing of the eye. In the moment of final removal &mdash; the stones falling, the hedge gone completely &mdash; Stephen&rsquo;s eyes open to what is above the ordinary sky of his circumstances.</p>
+        <p>And what does he see?</p>
+        <p>Jesus standing.</p>
+        <p>Not seated &mdash; standing. The one who is described elsewhere as seated at the right hand of the Father is, in this moment, on his feet. As if the suffering of his servant has brought him to his feet. As if the testimony being given in the street outside Jerusalem has the full attention of the one who gave his own testimony on a cross outside the same city not long before.</p>
+        <p><em>Lord Jesus, receive my spirit.</em></p>
+        <p>And then &mdash; the detail I cannot read without stopping &mdash; Stephen kneels and cries with a loud voice: <em>Lord, do not hold this sin against them.</em></p>
+        <p>He prays for the ones who are killing him.</p>
+        <p>Not as an ethical achievement. As the natural overflow of someone who has seen what Stephen has seen &mdash; who has looked into the face of the one who said <em>Father, forgive them</em> from his own place of final removal, and in seeing that face has found that the love has gone so deep it cannot come out as anything other than intercession.</p>
+        <p>The hedge was gone. The <em>hesed</em> remained.</p>
+
+        <h3 class="witness-heading">Polycarp</h3>
+        <p>He was the bishop of Smyrna. He was eighty-six years old. He had been a Christian for all of those eighty-six years &mdash; he had known people who had known Jesus, had sat at the feet of the apostle John, had received from those who were present at the beginning the faith he was now being asked to surrender at the end.</p>
+        <p>The Romans wanted him to say two words. <em>Caesar is Lord.</em> Two words, and the old man could go home.</p>
+        <p>Polycarp looked at the proconsul and said:</p>
+        <p class="verse"><em>Eighty-six years I have served him, and he has done me no wrong. How can I blaspheme my king who saved me?</em></p>
+        <p>This is testimony. The testimony of a witness who has been asked a direct question and is answering it with the precision of someone who will not say something other than what is true.</p>
+        <p>Eighty-six years. The hedge had been real. The life of faith had been, across eight decades, a life in which the correlation between faithfulness and flourishing had largely held. He was not a man who had been stripped early and had nothing to lose. He was a man who had received much and was now being asked whether the receiving had been the ground of the faith or whether the faith was the ground of the receiving.</p>
+        <p><em>He has done me no wrong.</em></p>
+        <p>Five words that contain a lifetime. Not &mdash; the calculation runs in his favour. But &mdash; across eighty-six years, in the full account of everything that has happened and everything that has been given and everything that has been asked of me, the verdict of my experience is this: he has done me no wrong.</p>
+        <p>They burned him. The early account of his death &mdash; written by the church at Smyrna and preserved as one of the oldest martyr narratives in Christian history &mdash; says that the flames formed an arch around him like a ship&rsquo;s sail filled with wind, and that he was in the middle of it not like burning flesh but like bread being baked, and that a sweet aroma came from him as of incense.</p>
+        <p>Bread. Not burning. Bread.</p>
+        <p>The one who said <em>I am the bread of life.</em> Polycarp, at the moment of his final removal, smelled like the one he had served for eighty-six years.</p>
+        <p>The hedge was gone. The <em>hesed</em> remained.</p>
+
+        <h3 class="witness-heading">Jan Huss</h3>
+        <p>He was a Czech priest and theologian. A man who had spent his life reading the Scriptures carefully and drawing conclusions from them that the institutional church of his day found inconvenient.</p>
+        <p>The Council of Constance summoned him in 1414. They promised him safe conduct. They had no intention of honouring the promise. The conclusion had been reached before the evidence was examined. Huss was given the opportunity to recant &mdash; to sign the document, say the words, preserve what remained of his life &mdash; and he refused. Not because he was inflexible. Because he had examined the charges and could not, in honesty, say that what he had taught was wrong.</p>
+        <p>They stripped him of his priestly vestments. They put a paper crown on his head with the word <em>heresiarch</em> &mdash; arch-heretic &mdash; written on it. They led him to the place of burning.</p>
+        <p>And Huss sang.</p>
+        <p>In the moment of final removal &mdash; the stake, the wood, the crowd, the paper crown, the institution of the church he had served turning its full weight against him &mdash; Huss sang. The singing was a conversation. The man with the paper crown on his head and the fire at his feet, talking to the one who was present in the flames in the way that the Adversary, who had lit them, could not be.</p>
+        <p>The hedge was gone. The song remained.</p>
+
+        <h3 class="witness-heading">William Tyndale</h3>
+        <p>He wanted to give ordinary people the Bible in their own language. That is all. That is the whole of it.</p>
+        <p>He spent twelve years in exile, moving from city to city across Europe, working in poverty and danger, producing the New Testament translation that would eventually become the foundation of the English Bible. Scholars estimate that eighty percent of the King James Version is Tyndale&rsquo;s words. He never lived to see it. He spent his life giving a gift that he would not survive to watch being received.</p>
+        <p>He was betrayed by a man he had trusted and held in a castle near Brussels for sixteen months. He was brought out and strangled and then burned.</p>
+        <p>His last words, spoken with a loud voice according to the eyewitness account, were:</p>
+        <p class="verse"><em>Lord, open the King of England&rsquo;s eyes.</em></p>
+        <p>Not &mdash; Lord, vindicate me. Not &mdash; Lord, let my work survive. His last breath was a prayer for the man who had signed the warrant that ended here, in this field, with the fire and the rope.</p>
+        <p>Three years after Tyndale&rsquo;s death, the King of England authorised an English Bible &mdash; largely based on Tyndale&rsquo;s translation &mdash; to be placed in every church in England.</p>
+        <p>The prayer was answered. The man who prayed it did not live to see it. He did not need to.</p>
+        <p>The hedge was gone. The <em>hesed</em> remained.</p>
+
+        <h3 class="witness-heading">Hugh Latimer</h3>
+        <p>He was seventy years old. He had been a bishop. He had spent a lifetime in the complicated, costly business of trying to hold faith and institution together &mdash; trying to speak truth to people who had the authority to make the speaking very expensive.</p>
+        <p>He was brought to Oxford with his colleague Nicholas Ridley in October 1555. They were chained to the same stake. The fire was lit.</p>
+        <p>Latimer turned to Ridley and said:</p>
+        <p class="verse"><em>Be of good comfort, Master Ridley, and play the man. We shall this day light such a candle by God&rsquo;s grace in England as I trust shall never be put out.</em></p>
+        <p>A candle is a small thing. It gives light by consuming itself. It cannot defend itself. And yet Latimer, with the fire at his feet, chose this image. Not despite its fragility but because of it. The candle that has been lit from the right source &mdash; lit from the flame that the Adversary cannot extinguish, lit from the <em>hesed</em> that persists when the hedge is gone &mdash; has a property its physical fragility entirely conceals.</p>
+        <p>It cannot be finally put out.</p>
+        <p>Latimer was right. The hedge was gone. The light remained.</p>
+
+        <h3 class="witness-heading">Dietrich Bonhoeffer</h3>
+        <p>He was thirty-nine years old. He had written books that would reshape twentieth-century theology. He had been engaged to be married. He had chosen, when he could have remained safely in America, to return to Germany and be present in his country during its darkest hour.</p>
+        <p>He was arrested in 1943 and spent two years in prison &mdash; writing letters and papers from his cell that are among the most searching theological documents of the twentieth century. Written not in the safety of the study but from inside the ash heap.</p>
+        <p>The order for his execution came directly from Hitler in the final weeks of the war. On the morning of April 9, 1945 &mdash; with the Allied forces days away &mdash; he was taken to the execution ground at Flossenb&uuml;rg.</p>
+        <p>The camp doctor, a man with no Christian faith, recorded what he witnessed afterwards in testimony that has been widely preserved:</p>
+        <p class="verse"><em>I saw Pastor Bonhoeffer kneeling on the floor praying fervently to God. I was most deeply moved by the way this lovable man prayed, so devout and so certain that God heard his prayer. At the place of execution, he again said a short prayer and then climbed the steps to the gallows, brave and composed. In the almost fifty years that I worked as a doctor, I have hardly ever seen a man die so entirely submissive to the will of God.</em></p>
+        <p>Submissive to the will of God. The doctor meant it as a clinical observation. He was describing a man who had arrived somewhere &mdash; who had moved from the hearing of the ear to the seeing of the eye through the long, costly, daily discipline of choosing, in cell after cell and prayer after prayer, to orient toward the one who is there.</p>
+        <p>The hedge was gone. The peace remained.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>I could continue. The names do not run out.</p>
+        <p>Perpetua, twenty-two years old, nursing her infant in the prison at Carthage and writing in her diary the night before she was taken to the arena with a clarity and a peace her jailers could not account for.</p>
+        <p>Thomas More in the Tower, writing to his daughter with the particular warmth of a man who loves his family with everything he has and has chosen, at the cost of everything he has, something he loves more.</p>
+        <p>And the unnamed ones &mdash; beyond counting, beyond naming &mdash; who lived the same question in their own languages and their own centuries and arrived, each of them, at the same place Job arrived at before the whirlwind. The declaration below understanding. The knowing that persisted when everything else was taken.</p>
+        <p>Each one: the hedge gone. The <em>hesed</em> remaining.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>Now I want to say something about what this means for the Adversary&rsquo;s question.</p>
+        <p>The Adversary was not asking a trivial question. He was bringing to the divine council the most serious charge that can be brought against faith: that it is ultimately self-interested. That the creature&rsquo;s worship of the creator is, at its root, the calculation of the one who has received much and calls the gratitude devotion.</p>
+        <p>It is a serious charge. It deserves a serious answer.</p>
+        <p>And the answer &mdash; accumulated across twenty centuries, witness by witness, name by name, ash heap by ash heap &mdash; is not a philosophical argument. You cannot answer a charge about the nature of love with a philosophical argument. Love submits to evidence. To testimony. To the account of the witness who was present in the place where the question was put in its most concentrated form and can tell the court what they found there.</p>
+        <p>Stephen found Jesus standing.</p>
+        <p>Polycarp found eighty-six years of faithfulness that smelled of bread.</p>
+        <p>Huss found a song.</p>
+        <p>Tyndale found a prayer for his enemy.</p>
+        <p>Latimer found a candle that would not go out.</p>
+        <p>Bonhoeffer found a peace that the camp doctor could not explain.</p>
+        <p>Job found a living redeemer, declared from the ash heap before the whirlwind, in the dark, with no evidence available except the broken-open knowing that sits below understanding in the place where the creature is most essentially itself.</p>
+        <p>They all found the same thing.</p>
+        <p>Not the hedge. What the hedge had always been a shadow of. The <em>hesed</em> &mdash; the covenant love that is not contingent on the covenant&rsquo;s visible blessings, that runs deeper than the framework built to describe it and persists when the framework is blown open by the whirlwind.</p>
+        <p>The love that surpasses knowledge.</p>
+        <p>The thing that Paul prayed in Ephesians 3 that the community would know &mdash; not understand, <em>know</em>, with the <em>yada</em> knowing that is not intellectual assent but the bone-level certainty of the one who has encountered something that cannot be unfound.</p>
+        <p>The Adversary asked the question.</p>
+        <p>The witnesses answered it with their lives.</p>
+        <p>And the answer is not a proposition. It is a name. Many names.</p>
+        <p>Stephen. Polycarp. Huss. Tyndale. Latimer. Bonhoeffer. And the man from Uz who began it &mdash; sitting on his ash heap with his broken pottery, declaring into the dark what he could not yet see, the first iteration of a pattern that would take twenty centuries and counting to fully answer.</p>
+        <p class="pull"><em>I know that my redeemer lives.</em></p>
+        <p>He knew before he saw. They all knew before they saw.</p>
+        <p>The defence had its witnesses.</p>
+        <p>It was unimpeachable.</p>
+
+        <div class="chapter-heading" id="chapter-five">
+          <span class="chapter-label">Chapter Five</span>
+          <h2>The Closing Court</h2>
+        </div>
+
+        <p class="first">I want to return to where we began.</p>
+        <p>The book of Job opens in a courtroom that Job does not know exists. The prosecution makes its case. The wager is entered. The hedge comes down. And Job &mdash; sitting on his ash heap with no knowledge that any of this has been set in motion above the ordinary sky of his ordinary suffering &mdash; does not curse God.</p>
+        <p>He declares a living redeemer instead.</p>
+        <p>We have followed the implications of that declaration across twenty centuries and through the testimony of men and women who repeated it under their own names without knowing they were repeating it. The pattern has held. The evidence is in.</p>
+        <p>Now the court reconvenes.</p>
+
+        <div class="chapter-heading chapter--fictional" id="job-43">
+          <span class="chapter-label">The Imagined Chapter</span>
+          <h2>Job 43</h2>
+        </div>
+
+        <p>Again there was a day when the sons of God came to present themselves before the LORD, and the Adversary also came among them to present himself before the LORD.</p>
+        <p>But this day was not as the former day.</p>
+        <p>The Adversary stood. He had always been precise. He would be precise now.</p>
+        <p><em>The charge before this court is the one I put at the beginning. Does the creature fear God for nothing? Is the faith of the man &mdash; any man, the man in Uz standing for all of them &mdash; is it genuine love freely given, or the calculation of the creature protecting its own interests? I submitted that the hedge was the foundation. Remove it and the worship fails. I have been gathering evidence toward the answer ever since.</em></p>
+        <p>He paused.</p>
+        <p><em>I am informed that the defence will call witnesses.</em></p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>Then he rose.</p>
+        <p>Not the way the Adversary rose &mdash; with the precision of the professional, the bearing of the one whose authority derives from his office. He rose the way a man rises who has earned the right to stand in this room through means no office could confer.</p>
+        <p>The wounds were visible.</p>
+        <p>The Adversary looked at them and said nothing. Because the wounds were the standing. The wounds were the argument. He was the <em>go&rsquo;el</em> &mdash; the kinsman redeemer &mdash; the one who steps in when the family member has lost everything, whose bond to the suffering person is not contractual but constitutional, woven into the nature of the relationship before any circumstance arose to test it.</p>
+        <p>He had taken on the kinship deliberately. Had entered the same earth, breathed the same air, felt the hedge removed from him more completely than from any witness he was about to call. Had gone to the place of absolute abandonment and in that place, still not cursed.</p>
+        <p><em>Father, forgive them.</em></p>
+        <p>The Adversary had been present at that death. He had waited for the curse. It had not come.</p>
+        <p>The <em>go&rsquo;el</em> looked at the court and said:</p>
+        <p><em>The defence calls its first witness. Job of Uz.</em></p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>The man who stood was not the man of chapter one.</p>
+        <p>That man had worn his righteousness like a garment &mdash; beautifully, genuinely, but with the confidence of one whose integrity had always been publicly confirmed. The man who stood now had been through the fire that burns the garment away and finds what is underneath. He was not diminished by it. He was more fully himself &mdash; the way gold comes from the furnace not lesser but purer.</p>
+        <p><em>Tell the court what you found when the hedge was gone.</em></p>
+        <p><em>I found that I could not stop addressing him. Even in the rage. Even in the grief. Even in the brief I prepared and signed and called for a signature in response to. Everything I said was said to someone. I never stopped believing he was there. And in chapter nineteen &mdash; in the middle of the ash heap, before the whirlwind, before anything had changed &mdash; something broke open in me that I could not account for. Something below understanding. I declared a living redeemer. I did not know his name. I knew he was there.</em></p>
+        <p><em>Did you understand it?</em></p>
+        <p><em>No. But the whirlwind came and understanding was no longer the point. I saw him. And the seeing was not the answer to the brief. The brief was a room I had built because I needed somewhere to put what was happening to me. The whirlwind blew the room open. What I had called justice turned out to be an anteroom. I had been asking for the verdict and what arrived was the judge himself.</em></p>
+        <p>Job looked at the wounds.</p>
+        <p><em>I see him now. It is him. It was always him.</em></p>
+        <p>The <em>go&rsquo;el</em> looked at the court.</p>
+        <p><em>The defence calls the remaining witnesses.</em></p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>And so they came.</p>
+        <p>Not slowly, not with ceremony, but with the accumulating momentum of evidence that has already been gathered and needs now only to be named.</p>
+        <p>Stephen &mdash; who saw the heavens open as the stones fell and prayed for the ones throwing them. The worship remained when the hedge was gone.</p>
+        <p>Polycarp &mdash; eighty-six years old, who told his executioners that the one he served had done him no wrong across a lifetime of service. The faithfulness remained.</p>
+        <p>Huss &mdash; who sang at the fire in Constance when everything else had been stripped away.</p>
+        <p>Tyndale &mdash; who prayed for the King of England&rsquo;s eyes as the rope tightened. Love remained where curse was predicted.</p>
+        <p>Latimer &mdash; who spoke of an inextinguishable candle as the flames rose.</p>
+        <p>Bonhoeffer &mdash; who climbed the steps at Flossenb&uuml;rg without hesitation and left a camp doctor unable to explain what he had witnessed. The peace that passed understanding remained when nothing else did.</p>
+        <p>And then the unnamed ones &mdash; beyond counting, beyond naming &mdash; who had lived the same question in their own languages and their own centuries and arrived, each of them, at the same place Job arrived at before the whirlwind.</p>
+        <p>Each one: the hedge gone. The <em>hesed</em> remaining.</p>
+        <p>The <em>go&rsquo;el</em> stood before them all and said simply:</p>
+        <p><em>The charge assumed that faith is transactional at its root. The witnesses have testified from the place where the hedge was fully gone &mdash; where there was nothing left to protect, no interest left to calculate. They have told the court what they found there. Not the hedge. The one the hedge was always a shadow of. The hesed that preceded it and outlasted it. The love that surpasses knowledge.</em></p>
+        <p>He looked at the Adversary.</p>
+        <p><em>The defence rests.</em></p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>The Adversary stood for a long time without speaking.</p>
+        <p>He had walked the earth for a very long time. He had been present at every hedge removal, every ash heap, every moment the question was put in its most concentrated form. He had waited, each time, for the curse.</p>
+        <p>It had not come. Not once.</p>
+        <p>He had built the defence case in all his traversing without knowing he was building it. Every hedge removed had produced another witness. Every ash heap had generated another testimony. He had been, without intending it, the instrument of the answer&rsquo;s collection.</p>
+        <p>He looked at the wounds on the <em>go&rsquo;el</em>.</p>
+        <p>This was the witness he had not accounted for. The one whose hedge had been removed most completely &mdash; who had gone to absolute abandonment and had not cursed, had prayed instead, had gone into the ground like a seed and come out the other side with the wounds still visible and the life undeniable and the standing in this court unimpeachable.</p>
+        <p>The <em>go&rsquo;el</em> was not only the defence attorney.</p>
+        <p>He was the final answer to the question.</p>
+        <p>The Adversary had asked whether any creature fears God for nothing. Here was the one who had given everything, received the removal of everything, and on the far side of everything still had this. Still had the relationship. Still had the love. The <em>hesed</em> running not despite the wounds but through them.</p>
+        <p>He opened his mouth.</p>
+        <p>And closed it.</p>
+        <p>There was nothing left to say. Not because he had been humiliated. Because the evidence was in and it was unimpeachable and a professional does not argue against a verdict the evidence has returned. The question had been put in good faith. The answer had been gathered across twenty centuries by his own activity. The case was closed.</p>
+        <p>He gathered what remained of his brief. He turned and left the court in the manner of a prosecutor who has received a verdict he did not expect and has the professional integrity to accept it.</p>
+        <p>The record does not say that he returned.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>Into the silence came the sound that had been building beneath the proceedings all along.</p>
+        <p>It began with Job. Not with the brief. With the sound of the one who has moved from the hearing of the ear to the seeing of the eye and found, in the seeing, the one his bones had known was there before his eyes had evidence for it.</p>
+        <p>The witnesses joined him. Stephen and Polycarp and Huss and Tyndale and Latimer and Bonhoeffer and the ten thousand named and unnamed who had taken the stand &mdash; all of them, together, saying the thing that none of them had adequate words for on their individual ash heaps but which the court, now assembled, could finally hold in full.</p>
+        <p>Not a verdict. Not a settlement. Not the answer to any brief.</p>
+        <p><em>Worthy is the Lamb who was slain.</em></p>
+        <p>The <em>go&rsquo;el</em> stood among them &mdash; not above them, among them &mdash; the wounds visible, the wounds not diminished by the glory but its source. The <em>hesed</em> flowing through them like oil down a beard, like dew falling where it has no business falling, like a harvest coming home in the arms of the one who went out weeping with the seed.</p>
+        <p>And Job was saying it.</p>
+        <p>The man who had prepared the most careful brief in the history of human suffering, who had signed it and demanded a signature in response &mdash; Job was saying it. Not because the brief had been answered in the terms he asked for. Because the one the brief had always been addressed to was standing in front of him with the wounds showing and the love undeniable.</p>
+        <p>The brief was not answered.</p>
+        <p>It was fulfilled.</p>
+        <p>The justice Job had demanded turned out to be not a verdict delivered from a bench but a person &mdash; standing in the court, among the witnesses, with the marks of the answer still visible in his hands.</p>
+        <p class="pull"><em>Worthy. Worthy. Worthy.</em></p>
+        <p>The record, which has no final page, simply continues.</p>
+
+        <div class="blake-caption">
+          <p>&ldquo;Job and His Daughters&rdquo;</p>
+          <small>William Blake &mdash; Illustrations of the Book of Job, Plate 21 (1825) &mdash; Public Domain</small>
+        </div>
+
+        <div class="chapter-heading" id="closing-note">
+          <h2>A Closing Note</h2>
+        </div>
+
+        <p class="first">I have spent most of my working life alongside people who are sitting on their own ash heaps without knowing there is a court.</p>
+        <p>Families separated by incarceration. Children carrying consequences they did not choose. Men and women trying to make meaning out of injustice without the framework that would allow them to name what they are doing or where it is going. They are reaching toward something they have not been given words for. The reaching is real. The love that persists across barriers designed to destroy it is real.</p>
+        <p>What they have not yet received is the name of the one their reaching is reaching toward.</p>
+        <p>I cannot answer for the church as a whole what that means.</p>
+        <p>I can only answer for myself.</p>
+        <p>I can visit.</p>
+        <p>I can go into the room. I can sit at the table. I can carry the name and the story and the knowledge of the <em>go&rsquo;el</em> &mdash; the one who took on the kinship so that no room, however designed for separation, could finally separate &mdash; into the visiting room simply by being in it.</p>
+        <p>The <em>go&rsquo;el</em> did not observe the ash heap from a distance. He entered it.</p>
+        <p>I am not the <em>go&rsquo;el</em>. I am at best one of the servants standing in the house by night &mdash; keeping a small flame burning, available to be present where the presence is needed.</p>
+        <p>But I can visit.</p>
+        <p>And in the visiting &mdash; in the simple, costly, unheroic act of going to the room and sitting down &mdash; something of his own visitation becomes, however faintly, visible.</p>
+        <p>He came to the ones who did not know his name.</p>
+        <p>He still does.</p>
+        <p>Sometimes through people who do.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>The book of Job ends with restoration &mdash; the daughters, the herds, the long life, the death old and full of days. It is a real ending. But it is not the final ending. The final ending is the one the book does not write &mdash; the closing court, the witnesses, the <em>go&rsquo;el</em> rising, the sound that fills the room when the Adversary has nothing left to say.</p>
+        <p>I have tried to write it here.</p>
+        <p>Not because I have seen it. Because Job declared it from his ash heap before he had seen it, and the declaration turned out to be the most accurate thing in the book.</p>
+        <p class="verse"><em>I know that my redeemer lives.</em> <cite>Job 19 &middot; 25</cite></p>
+        <p>He does.</p>
+        <p>The court is still in session. The witnesses are still being called. Somewhere tonight, on ash heaps whose addresses I do not know, people are declaring &mdash; without the words, without the framework, in the only language the ash heap makes available &mdash; the same reality Job declared.</p>
+        <p>The <em>go&rsquo;el</em> hears every one of them.</p>
+        <p>He is already standing.</p>
+
+        <div class="book-footer__rule"><span>Finis</span></div>
+        <div class="book-footer__attribution">
+          <p>A Work of Theological Imagination</p>
+          <p>Norm Reed &middot; Onesimus Foundation</p>
+        </div>
+
+        <div class="hw-disclaimer">
+          <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+          <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+          <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+        </div>
+
       </div>
-
-      <p>He knew before he saw. They all knew before they saw.</p>
-      <p>The defence had its witnesses.</p>
-      <p>It was unimpeachable.</p>
-    </section>
-
-    <!-- ── CHAPTER FIVE ─────────────────────────────────────────────── -->
-    <section class="chapter" id="chapter-five">
-      <span class="chapter__number">Chapter Five</span>
-      <h2 class="chapter__title">The Closing Court</h2>
-
-      <p>I want to return to where we began.</p>
-      <p>The book of Job opens in a courtroom that Job does not know exists. The prosecution makes its case. The wager is entered. The hedge comes down. And Job — sitting on his ash heap with no knowledge that any of this has been set in motion above the ordinary sky of his ordinary suffering — does not curse God.</p>
-      <p>He declares a living redeemer instead.</p>
-      <p>We have followed the implications of that declaration across twenty centuries and through the testimony of men and women who repeated it under their own names without knowing they were repeating it. The pattern has held. The evidence is in.</p>
-      <p>Now the court reconvenes.</p>
-    </section>
-
-    <!-- ── JOB 43 — THE IMAGINED CHAPTER ──────────────────────────── -->
-    <section class="chapter chapter--fictional" id="job-43">
-      <span class="chapter__number">The Imagined Chapter</span>
-      <h2 class="chapter__title">Job 43</h2>
-
-      <p>Again there was a day when the sons of God came to present themselves before the LORD, and the Adversary also came among them to present himself before the LORD.</p>
-      <p>But this day was not as the former day.</p>
-      <p>The Adversary stood. He had always been precise. He would be precise now.</p>
-      <p><em>The charge before this court is the one I put at the beginning. Does the creature fear God for nothing? Is the faith of the man — any man, the man in Uz standing for all of them — is it genuine love freely given, or the calculation of the creature protecting its own interests? I submitted that the hedge was the foundation. Remove it and the worship fails. I have been gathering evidence toward the answer ever since.</em></p>
-      <p>He paused.</p>
-      <p><em>I am informed that the defence will call witnesses.</em></p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>Then he rose.</p>
-      <p>Not the way the Adversary rose — with the precision of the professional, the bearing of the one whose authority derives from his office. He rose the way a man rises who has earned the right to stand in this room through means no office could confer.</p>
-      <p>The wounds were visible.</p>
-      <p>The Adversary looked at them and said nothing. Because the wounds were the standing. The wounds were the argument. He was the <em>go&rsquo;el</em> — the kinsman redeemer — the one who steps in when the family member has lost everything, whose bond to the suffering person is not contractual but constitutional, woven into the nature of the relationship before any circumstance arose to test it.</p>
-      <p>He had taken on the kinship deliberately. Had entered the same earth, breathed the same air, felt the hedge removed from him more completely than from any witness he was about to call. Had gone to the place of absolute abandonment and in that place, still not cursed.</p>
-      <p><em>Father, forgive them.</em></p>
-      <p>The Adversary had been present at that death. He had waited for the curse. It had not come.</p>
-      <p>The <em>go&rsquo;el</em> looked at the court and said:</p>
-      <p><em>The defence calls its first witness. Job of Uz.</em></p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>The man who stood was not the man of chapter one.</p>
-      <p>That man had worn his righteousness like a garment — beautifully, genuinely, but with the confidence of one whose integrity had always been publicly confirmed. The man who stood now had been through the fire that burns the garment away and finds what is underneath. He was not diminished by it. He was more fully himself — the way gold comes from the furnace not lesser but purer.</p>
-      <p><em>Tell the court what you found when the hedge was gone.</em></p>
-      <p><em>I found that I could not stop addressing him. Even in the rage. Even in the grief. Even in the brief I prepared and signed and called for a signature in response to. Everything I said was said to someone. I never stopped believing he was there. And in chapter nineteen — in the middle of the ash heap, before the whirlwind, before anything had changed — something broke open in me that I could not account for. Something below understanding. I declared a living redeemer. I did not know his name. I knew he was there.</em></p>
-      <p><em>Did you understand it?</em></p>
-      <p><em>No. But the whirlwind came and understanding was no longer the point. I saw him. And the seeing was not the answer to the brief. The brief was a room I had built because I needed somewhere to put what was happening to me. The whirlwind blew the room open. What I had called justice turned out to be an anteroom. I had been asking for the verdict and what arrived was the judge himself.</em></p>
-      <p>Job looked at the wounds.</p>
-      <p><em>I see him now. It is him. It was always him.</em></p>
-      <p>The <em>go&rsquo;el</em> looked at the court.</p>
-      <p><em>The defence calls the remaining witnesses.</em></p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>And so they came.</p>
-      <p>Not slowly, not with ceremony, but with the accumulating momentum of evidence that has already been gathered and needs now only to be named.</p>
-      <p>Stephen — who saw the heavens open as the stones fell and prayed for the ones throwing them. The worship remained when the hedge was gone.</p>
-      <p>Polycarp — eighty-six years old, who told his executioners that the one he served had done him no wrong across a lifetime of service. The faithfulness remained.</p>
-      <p>Huss — who sang at the fire in Constance when everything else had been stripped away.</p>
-      <p>Tyndale — who prayed for the King of England&rsquo;s eyes as the rope tightened. Love remained where curse was predicted.</p>
-      <p>Latimer — who spoke of an inextinguishable candle as the flames rose.</p>
-      <p>Bonhoeffer — who climbed the steps at Flossenbürg without hesitation and left a camp doctor unable to explain what he had witnessed. The peace that passed understanding remained when nothing else did.</p>
-      <p>And then the unnamed ones — beyond counting, beyond naming — who had lived the same question in their own languages and their own centuries and arrived, each of them, at the same place Job arrived at before the whirlwind.</p>
-      <p>Each one: the hedge gone. The <em>hesed</em> remaining.</p>
-      <p>The <em>go&rsquo;el</em> stood before them all and said simply:</p>
-      <p><em>The charge assumed that faith is transactional at its root. The witnesses have testified from the place where the hedge was fully gone — where there was nothing left to protect, no interest left to calculate. They have told the court what they found there. Not the hedge. The one the hedge was always a shadow of. The hesed that preceded it and outlasted it. The love that surpasses knowledge.</em></p>
-      <p>He looked at the Adversary.</p>
-      <p><em>The defence rests.</em></p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>The Adversary stood for a long time without speaking.</p>
-      <p>He had walked the earth for a very long time. He had been present at every hedge removal, every ash heap, every moment the question was put in its most concentrated form. He had waited, each time, for the curse.</p>
-      <p>It had not come. Not once.</p>
-      <p>He had built the defence case in all his traversing without knowing he was building it. Every hedge removed had produced another witness. Every ash heap had generated another testimony. He had been, without intending it, the instrument of the answer&rsquo;s collection.</p>
-      <p>He looked at the wounds on the <em>go&rsquo;el</em>.</p>
-      <p>This was the witness he had not accounted for. The one whose hedge had been removed most completely — who had gone to absolute abandonment and had not cursed, had prayed instead, had gone into the ground like a seed and come out the other side with the wounds still visible and the life undeniable and the standing in this court unimpeachable.</p>
-      <p>The <em>go&rsquo;el</em> was not only the defence attorney.</p>
-      <p>He was the final answer to the question.</p>
-      <p>The Adversary had asked whether any creature fears God for nothing. Here was the one who had given everything, received the removal of everything, and on the far side of everything still had this. Still had the relationship. Still had the love. The <em>hesed</em> running not despite the wounds but through them.</p>
-      <p>He opened his mouth.</p>
-      <p>And closed it.</p>
-      <p>There was nothing left to say. Not because he had been humiliated. Because the evidence was in and it was unimpeachable and a professional does not argue against a verdict the evidence has returned. The question had been put in good faith. The answer had been gathered across twenty centuries by his own activity. The case was closed.</p>
-      <p>He gathered what remained of his brief. He turned and left the court in the manner of a prosecutor who has received a verdict he did not expect and has the professional integrity to accept it.</p>
-      <p>The record does not say that he returned.</p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>Into the silence came the sound that had been building beneath the proceedings all along.</p>
-      <p>It began with Job. Not with the brief. With the sound of the one who has moved from the hearing of the ear to the seeing of the eye and found, in the seeing, the one his bones had known was there before his eyes had evidence for it.</p>
-      <p>The witnesses joined him. Stephen and Polycarp and Huss and Tyndale and Latimer and Bonhoeffer and the ten thousand named and unnamed who had taken the stand — all of them, together, saying the thing that none of them had adequate words for on their individual ash heaps but which the court, now assembled, could finally hold in full.</p>
-      <p>Not a verdict. Not a settlement. Not the answer to any brief.</p>
-      <p><em>Worthy is the Lamb who was slain.</em></p>
-      <p>The <em>go&rsquo;el</em> stood among them — not above them, among them — the wounds visible, the wounds not diminished by the glory but its source. The <em>hesed</em> flowing through them like oil down a beard, like dew falling where it has no business falling, like a harvest coming home in the arms of the one who went out weeping with the seed.</p>
-      <p>And Job was saying it.</p>
-      <p>The man who had prepared the most careful brief in the history of human suffering, who had signed it and demanded a signature in response — Job was saying it. Not because the brief had been answered in the terms he asked for. Because the one the brief had always been addressed to was standing in front of him with the wounds showing and the love undeniable.</p>
-      <p>The brief was not answered.</p>
-      <p>It was fulfilled.</p>
-      <p>The justice Job had demanded turned out to be not a verdict delivered from a bench but a person — standing in the court, among the witnesses, with the marks of the answer still visible in his hands.</p>
-
-      <div class="pull-quote">
-        <p><em>Worthy. Worthy. Worthy.</em></p>
-      </div>
-
-      <p>The record, which has no final page, simply continues.</p>
-
-      <div class="blake-caption">
-        <p>&#8220;Job and His Daughters&#8221;</p>
-        <small>William Blake &mdash; Illustrations of the Book of Job, Plate 21 (1825) &mdash; Public Domain</small>
-      </div>
-    </section>
-
-    <!-- ── A CLOSING NOTE ─────────────────────────────────────────── -->
-    <section class="chapter chapter--closing" id="closing-note">
-      <h2 class="chapter__title">A Closing Note</h2>
-
-      <p>I have spent most of my working life alongside people who are sitting on their own ash heaps without knowing there is a court.</p>
-      <p>Families separated by incarceration. Children carrying consequences they did not choose. Men and women trying to make meaning out of injustice without the framework that would allow them to name what they are doing or where it is going. They are reaching toward something they have not been given words for. The reaching is real. The love that persists across barriers designed to destroy it is real.</p>
-      <p>What they have not yet received is the name of the one their reaching is reaching toward.</p>
-      <p>I cannot answer for the church as a whole what that means.</p>
-      <p>I can only answer for myself.</p>
-      <p>I can visit.</p>
-      <p>I can go into the room. I can sit at the table. I can carry the name and the story and the knowledge of the <em>go&rsquo;el</em> — the one who took on the kinship so that no room, however designed for separation, could finally separate — into the visiting room simply by being in it.</p>
-      <p>The <em>go&rsquo;el</em> did not observe the ash heap from a distance. He entered it.</p>
-      <p>I am not the <em>go&rsquo;el</em>. I am at best one of the servants standing in the house by night — keeping a small flame burning, available to be present where the presence is needed.</p>
-      <p>But I can visit.</p>
-      <p>And in the visiting — in the simple, costly, unheroic act of going to the room and sitting down — something of his own visitation becomes, however faintly, visible.</p>
-      <p>He came to the ones who did not know his name.</p>
-      <p>He still does.</p>
-      <p>Sometimes through people who do.</p>
-
-      <div class="divider"><span>· · ·</span></div>
-
-      <p>The book of Job ends with restoration — the daughters, the herds, the long life, the death old and full of days. It is a real ending. But it is not the final ending. The final ending is the one the book does not write — the closing court, the witnesses, the <em>go&rsquo;el</em> rising, the sound that fills the room when the Adversary has nothing left to say.</p>
-      <p>I have tried to write it here.</p>
-      <p>Not because I have seen it. Because Job declared it from his ash heap before he had seen it, and the declaration turned out to be the most accurate thing in the book.</p>
-
-      <blockquote class="scripture">
-        <em>I know that my redeemer lives.</em>
-        <cite>Job 19 · 25</cite>
-      </blockquote>
-
-      <p>He does.</p>
-      <p>The court is still in session. The witnesses are still being called. Somewhere tonight, on ash heaps whose addresses I do not know, people are declaring — without the words, without the framework, in the only language the ash heap makes available — the same reality Job declared.</p>
-      <p>The <em>go&rsquo;el</em> hears every one of them.</p>
-      <p>He is already standing.</p>
-    </section>
-
-  </main><!-- /book-content -->
-
-  <!-- ─── Footer ─────────────────────────────────────────────────── -->
-  <div class="book-footer">
-    <div class="book-footer__rule">
-      <span>Finis</span>
-    </div>
-    <div class="book-footer__attribution">
-      <p>A Work of Theological Imagination</p>
-      <p>Norm Reed &nbsp;·&nbsp; Onesimus Foundation</p>
-      <p>Hesed Words</p>
-    </div>
-
-    <div class="ai-acknowledgment" style="margin-top:48px;">
-      <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
-      <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
-      <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
     </div>
   </div>
+</article>
 
-  <footer class="site-footer">
-    <p>Hesed Words &nbsp;·&nbsp; Norm Reed &nbsp;·&nbsp; Onesimus Foundation &mdash; Theological Reflections</p>
-  </footer>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 </body>
 </html>
