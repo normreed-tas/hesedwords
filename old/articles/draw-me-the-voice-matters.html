@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Draw Me! The Voice Matters — Hesedwords</title>
+  <meta name="description" content="Song of Songs 1:2&ndash;4 traces desire as it moves from report, to address, to request &mdash; and asks why the asking itself matters.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --parchment:     #FAF5E8;
+      --parchment-mid: #F2EAD4;
+      --gold:          #A67C2E;
+      --gold-light:    #C8A84B;
+      --gold-border:   #C8B58F;
+      --gold-rule:     #D9C49A;
+      --ink:           #2A2218;
+      --ink-mid:       #4A3E2C;
+      --ink-light:     #6B5C45;
+      --cinzel:        'Cinzel', 'Palatino Linotype', Georgia, serif;
+      --cormorant:     'Cormorant Garamond', 'Garamond', Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: var(--cormorant);
+      font-size: 20px;
+      line-height: 1.78;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Site nav ── */
+    nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+    nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+    nav.hw-nav a:hover{opacity:1;color:#fff;}
+    nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+
+    /* ── Article wrapper ── */
+    .article-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 40px 90px;
+    }
+
+    /* ── Title block ── */
+    .article-eyebrow {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 22px;
+    }
+    .article-title {
+      font-family: var(--cinzel);
+      font-size: 38px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+    .article-subtitle {
+      font-family: var(--cormorant);
+      font-style: italic;
+      font-size: 21px;
+      color: var(--ink-mid);
+      text-align: center;
+      line-height: 1.45;
+      margin-bottom: 28px;
+    }
+    .article-ornament {
+      text-align: center;
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 0.7em;
+      margin: 0 0 20px;
+    }
+    .article-byline {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    /* ── Body ── */
+    .article-body p {
+      margin-bottom: 1.45em;
+      font-size: 20px;
+      line-height: 1.78;
+      color: var(--ink);
+    }
+
+    /* ── Drop cap ── */
+    .drop-cap::first-letter {
+      font-family: var(--cinzel);
+      font-size: 4.4em;
+      font-weight: 400;
+      float: left;
+      line-height: 0.76;
+      margin: 0.1em 0.12em 0 0;
+      color: var(--gold);
+    }
+
+    /* ── Section headings ── */
+    .article-body h2 {
+      font-family: var(--cinzel);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin: 56px 0 22px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--gold-rule);
+    }
+
+    /* ── Scripture blocks ── */
+    .scripture-block {
+      border-left: 3px solid var(--gold);
+      padding: 14px 20px 14px 28px;
+      margin: 30px 0;
+      background: rgba(166, 124, 46, 0.04);
+      border-radius: 0 2px 2px 0;
+    }
+    .scripture-block p {
+      font-style: italic;
+      font-size: 19px !important;
+      color: var(--ink-mid) !important;
+      margin-bottom: 0 !important;
+      line-height: 1.65 !important;
+    }
+    .scripture-ref {
+      display: block;
+      font-family: var(--cinzel);
+      font-size: 9.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 12px;
+      text-align: right;
+    }
+
+    /* ── Hebrew inline ── */
+    .heb { font-style: normal; color: var(--ink-mid); }
+
+    /* ── Warrant note ── */
+    .warrant {
+      font-size: 16px;
+      color: var(--ink-light);
+      background: rgba(166, 124, 46, 0.05);
+      border-left: 2px solid var(--gold-border);
+      padding: 12px 18px;
+      margin: 26px 0;
+      line-height: 1.6;
+    }
+    .warrant span {
+      font-family: var(--cinzel);
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ── Scene break ── */
+    .scene-break {
+      text-align: center;
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: 0.7em;
+      margin: 34px 0 30px;
+    }
+
+    /* ── Closing line ── */
+    .closing-line {
+      border-top: 1px solid var(--gold-rule);
+      margin-top: 48px;
+      padding-top: 34px;
+    }
+    .closing-line p {
+      font-family: var(--cinzel);
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 0 !important;
+    }
+
+    /* ── AI acknowledgment ── */
+    .ai-acknowledgment {
+      border-top: 1px solid var(--gold-rule);
+      margin-top: 64px;
+      padding-top: 32px;
+    }
+    .ai-acknowledgment p {
+      font-style: italic;
+      font-size: 15px !important;
+      color: var(--ink-light) !important;
+      line-height: 1.65 !important;
+      margin-bottom: 0.9em !important;
+    }
+    .ai-acknowledgment p:last-child { margin-bottom: 0 !important; }
+
+    /* ── PDF download ── */
+    .pdf-download {
+      text-align: center;
+      margin-top: 44px;
+    }
+    .pdf-download a {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-rule);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .pdf-download a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+    /* ── Footer ── */
+    footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+    /* ── Mobile ── */
+    @media (max-width: 640px) {
+      .article-wrap { padding: 44px 24px 64px; }
+      .article-title { font-size: 27px; }
+      .article-subtitle { font-size: 18px; }
+      .article-body p { font-size: 18px; }
+      .scripture-block p { font-size: 17px !important; }
+      .warrant { font-size: 15px; }
+      .drop-cap::first-letter { font-size: 3.8em; }
+    }
+
+    /* ── Print ── */
+    @media print {
+      .hw-nav, .hw-foot, .pdf-download { display: none; }
+      body { background: white; }
+      .article-wrap { padding: 0; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html">Reflections</a>
+  <a href="/old/articles.html" class="current">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+  <main class="article-wrap">
+
+    <header>
+      <p class="article-eyebrow">A Hesedwords Article</p>
+      <h1 class="article-title">Draw Me! The Voice Matters</h1>
+      <p class="article-subtitle">Song of Songs 1:2&ndash;4 traces desire as it learns to speak &mdash; from report, to address, to a request small enough to be answered</p>
+      <p class="article-ornament">✦ &nbsp; ✦ &nbsp; ✦</p>
+      <p class="article-byline">Norm Reed &middot; July 2026</p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="scripture-block">
+        <p>Let him kiss me with the kisses of his mouth! For your love is better than wine; your anointing oils are fragrant; your name is oil poured out; therefore virgins love you. Draw me after you; let us run. The king has brought me into his chambers.</p>
+        <span class="scripture-ref">Song of Songs 1:2&ndash;4 &middot; ESV</span>
+      </div>
+
+      <p class="drop-cap">She begins by speaking about him.</p>
+
+      <p>&ldquo;Let him kiss me with the kisses of his mouth&rdquo; &mdash; third person, a wish spoken into the air rather than to the one who could grant it. It reads almost like she&rsquo;s rehearsing the words before she can say them to his face.</p>
+
+      <p>Then, mid-sentence, without warning, the grammar turns. &ldquo;For your love is better than wine.&rdquo; <em>His</em> love has become <em>your</em> love. She is no longer describing him. She is speaking to him.</p>
+
+      <p>Verse 3 stays there, in that address &mdash; your oils, your name &mdash; and builds through it. But watch how it ends: &ldquo;therefore the virgins love you.&rdquo; She is still speaking to him, but what she says is now a fact about other people. Their love, reported. General, plural, safe.</p>
+
+      <p>Then verse 4 breaks the pattern a third time, and this break is different from the first two. The first two were about <em>who</em> she&rsquo;s speaking to. This one is about what speech is being asked to do.</p>
+
+      <p><span class="heb">Mashkeni</span> &mdash; draw me. Not a description. Not even, any longer, praise. A request &mdash; and a request is a harder thing than either. Longing can stay shapeless forever, an ache with no edges, wanted without ever being <em>named</em>. To ask is to have done that work first: to have taken the wanting and pressed it down into one word small enough to be answered, or refused. She has not just found her voice. She has found what to ask for.</p>
+
+      <p>Report. Address. Petition. Three verses, three kinds of speech, each one costing more than the last.</p>
+
+      <h2>The Word She Uses</h2>
+
+      <p><a href="/old/glossary.html#mashak"><span class="heb">Mashak</span></a> is not a delicate word. It&rsquo;s the word for drawing a bow taut. For hauling water up from a well by the rope. For pulling a body from a pit &mdash; Joseph&rsquo;s brothers used it, drawing him up out of the ground before they sold him. It&rsquo;s even the word for a sound held long: the ram&rsquo;s horn at Sinai, its blast drawn out until the people could approach the mountain.</p>
+
+      <p>It is a word about force applied to something that cannot move itself.</p>
+
+      <p>She knew this when she chose it.</p>
+
+      <p>Two other uses matter more than the rest. &ldquo;I have loved you with an everlasting love,&rdquo; God tells Israel through Jeremiah; &ldquo;therefore with lovingkindness I have drawn you&rdquo; &mdash; <a href="/old/glossary.html#hesed"><span class="heb">hesed</span></a>, covenant love, and the same verb the bride uses, in almost the same shape. And Hosea: &ldquo;I drew them with cords of a man, with bands of love&rdquo; &mdash; God again, drawing a people who could not draw themselves toward him.</p>
+
+      <p>The bride is not inventing a metaphor. She is stepping into a sentence God has already spoken, twice, about his own people. When she asks to be drawn, she is asking for the thing Israel was given and did not ask for. She is asking, by name, for <span class="heb">hesed</span>.</p>
+
+      <h2>After, Not To</h2>
+
+      <p>She does not say, &ldquo;Draw me to you.&rdquo; She says, &ldquo;Draw me after you.&rdquo;</p>
+
+      <p>The difference is not small. To be drawn <em>to</em> him would be to arrive &mdash; pulled in, held, done. But &ldquo;after&rdquo; is the language of a path, not a position. It&rsquo;s the phrase Deuteronomy uses again and again for covenant loyalty: to <em>walk after</em> the Lord your God. It&rsquo;s Elijah&rsquo;s challenge on Carmel, when Israel stood silent between two altars &mdash; if the Lord is God, follow <em>after</em> him; if Baal, follow him. To go after is not to arrive somewhere. It&rsquo;s to belong to someone, and to keep moving because of it.</p>
+
+      <p>So her request is not for rest. It&rsquo;s for motion she cannot generate on her own &mdash; to be drawn, and then, drawn, to walk. Bernard of Clairvaux noticed this too, six centuries before either of us: had she said &ldquo;draw me to you,&rdquo; he wrote, he&rsquo;d have read it as a plea for arrival. But &ldquo;after&rdquo; asks for something harder &mdash; grace enough to follow, not merely to be brought near.</p>
+
+      <p>She is not asking to be possessed. She is asking to be put in motion, after him, for as long as after lasts.</p>
+
+      <p>It&rsquo;s the same word Jesus used, centuries later, when God stepped onto the stage in person and found a ragamuffin handful of fishermen and said it to their faces: <em>Follow me.</em> Motion, not just arrival &mdash; the same shape as her plea. Only now it isn&rsquo;t a plea. It&rsquo;s him speaking first.</p>
+
+      <h2>What He Asks of the Blind Man</h2>
+
+      <p>There&rsquo;s another moment like this one, later in the story &mdash; a different book, a different voice, the same pattern underneath.</p>
+
+      <p>A blind man is shouting by the road. Bartimaeus. Everyone around him already knows what he needs &mdash; it&rsquo;s obvious, it&rsquo;s been obvious his whole life. Jesus stops anyway, and asks him directly: &ldquo;What do you want me to do for you?&rdquo;</p>
+
+      <p>He could have just healed him. The need was plain enough. But first, he makes the man say it.</p>
+
+      <p>Maybe that&rsquo;s part of what asking does. It&rsquo;s not just that Jesus needs the information. It&rsquo;s that something happens in the man himself when he has to take everything he wants and press it down into one sentence. &ldquo;Let me receive my sight.&rdquo; Small words for a whole life.</p>
+
+      <p>The bride does the same thing, centuries earlier, in her own kind of dark. She doesn&rsquo;t just wait to be noticed. She says the word. <em>Draw me.</em></p>
+
+      <p>Wanting isn&rsquo;t enough, in either story. It has to become an ask.</p>
+
+      <div class="warrant">
+        <span>Warrant &mdash; reading within frame</span><br>
+        The pairing of the bride&rsquo;s plea with Bartimaeus&rsquo;s cry (Mark 10:46&ndash;52) holds within this reading of desire-becoming-request; it is not a verbal or textual echo between the two passages, only a shared pattern. Offered as illumination, not as proof that the Gospel writer had this verse in view.
+      </div>
+
+      <h2>The Plea, Left Open</h2>
+
+      <p>She has asked. That&rsquo;s as far as this verse goes.</p>
+
+      <p>What the asking becomes &mdash; the running, the shared joy, the chambers of the king &mdash; belongs to what comes next, not to this moment. Verse 4 doesn&rsquo;t answer her. It just lets her ask.</p>
+
+      <p>That might be the real weight of &ldquo;draw me.&rdquo; Not the certainty that it worked. Just this: she stopped describing him, and stopped speaking about him to other people, and said what she actually wanted, straight to his face.</p>
+
+      <p>Report became address. Address became plea. That&rsquo;s the whole movement of these three verses &mdash; and maybe the only movement that matters, before anything else can happen.</p>
+
+      <div class="closing-line">
+        <p>The voice really does matter!</p>
+      </div>
+
+      <div class="ai-acknowledgment">
+        <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+        <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+        <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+      </div>
+
+    </article>
+
+    <div class="pdf-download">
+      <a href="/old/articles/pdf/draw-me-the-voice-matters.pdf" target="_blank" rel="noopener">Download as PDF</a>
+    </div>
+
+  </main>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Not Finished Waking — Hesedwords</title>
+  <meta name="description" content="What Job and David staked everything on, before either of them had proof — and what it gives a pastor standing at a graveside.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --parchment:     #FAF5E8;
+      --parchment-mid: #F2EAD4;
+      --gold:          #A67C2E;
+      --gold-light:    #C8A84B;
+      --gold-border:   #C8B58F;
+      --gold-rule:     #D9C49A;
+      --ink:           #2A2218;
+      --ink-mid:       #4A3E2C;
+      --ink-light:     #6B5C45;
+      --cinzel:        'Cinzel', 'Palatino Linotype', Georgia, serif;
+      --cormorant:     'Cormorant Garamond', 'Garamond', Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: var(--cormorant);
+      font-size: 20px;
+      line-height: 1.78;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Site nav ── */
+    nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+    nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+    nav.hw-nav a:hover{opacity:1;color:#fff;}
+    nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+
+    /* ── Article wrapper ── */
+    .article-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 40px 90px;
+    }
+
+    /* ── Title block ── */
+    .article-eyebrow {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 22px;
+    }
+    .article-title {
+      font-family: var(--cinzel);
+      font-size: 38px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+    .article-subtitle {
+      font-family: var(--cormorant);
+      font-style: italic;
+      font-size: 21px;
+      color: var(--ink-mid);
+      text-align: center;
+      line-height: 1.45;
+      margin-bottom: 28px;
+    }
+    .article-ornament {
+      text-align: center;
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 0.7em;
+      margin: 0 0 20px;
+    }
+    .article-byline {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    /* ── Body ── */
+    .article-body p {
+      margin-bottom: 1.45em;
+      font-size: 20px;
+      line-height: 1.78;
+      color: var(--ink);
+    }
+
+    /* ── Drop cap ── */
+    .drop-cap::first-letter {
+      font-family: var(--cinzel);
+      font-size: 4.4em;
+      font-weight: 400;
+      float: left;
+      line-height: 0.76;
+      margin: 0.1em 0.12em 0 0;
+      color: var(--gold);
+    }
+
+    /* ── Section headings ── */
+    .article-body h2 {
+      font-family: var(--cinzel);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin: 56px 0 22px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--gold-rule);
+    }
+
+    /* ── Scripture blocks ── */
+    .scripture-block {
+      border-left: 3px solid var(--gold);
+      padding: 14px 20px 14px 28px;
+      margin: 30px 0;
+      background: rgba(166, 124, 46, 0.04);
+      border-radius: 0 2px 2px 0;
+    }
+    .scripture-block p {
+      font-style: italic;
+      font-size: 19px !important;
+      color: var(--ink-mid) !important;
+      margin-bottom: 0 !important;
+      line-height: 1.65 !important;
+    }
+    .scripture-ref {
+      display: block;
+      font-family: var(--cinzel);
+      font-size: 9.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 12px;
+      text-align: right;
+    }
+
+    /* ── AI acknowledgment ── */
+    .ai-acknowledgment {
+      border-top: 1px solid var(--gold-rule);
+      margin-top: 64px;
+      padding-top: 32px;
+    }
+    .ai-acknowledgment p {
+      font-style: italic;
+      font-size: 15px !important;
+      color: var(--ink-light) !important;
+      line-height: 1.65 !important;
+      margin-bottom: 0.9em !important;
+    }
+    .ai-acknowledgment p:last-child { margin-bottom: 0 !important; }
+
+    /* ── PDF download ── */
+    .pdf-download {
+      text-align: center;
+      margin-top: 44px;
+    }
+    .pdf-download a {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-rule);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .pdf-download a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+    /* ── Footer ── */
+    footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+    /* ── Mobile ── */
+    @media (max-width: 640px) {
+      .article-wrap { padding: 44px 24px 64px; }
+      .article-title { font-size: 27px; }
+      .article-subtitle { font-size: 18px; }
+      .article-body p { font-size: 18px; }
+      .scripture-block p { font-size: 17px !important; }
+      .drop-cap::first-letter { font-size: 3.8em; }
+    }
+
+    /* ── Print ── */
+    @media print {
+      .hw-nav, .hw-foot, .pdf-download { display: none; }
+      body { background: white; }
+      .article-wrap { padding: 0; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html">Reflections</a>
+  <a href="/old/articles.html" class="current">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+  <main class="article-wrap">
+
+    <header>
+      <p class="article-eyebrow">A Hesedwords Article</p>
+      <h1 class="article-title">Not Finished Waking</h1>
+      <p class="article-subtitle">What Job and David staked everything on, before either of them had proof — and what it gives a pastor standing at a graveside</p>
+      <p class="article-ornament">✦ &nbsp; ✦ &nbsp; ✦</p>
+      <p class="article-byline">Norm Reed &middot; June 2026</p>
+    </header>
+
+    <article class="article-body">
+
+      <!-- Opening — no section heading -->
+      <p class="drop-cap">You learn fairly quickly that nothing you say at a funeral will make the loss smaller. You learn it less quickly, but you learn it, that most of the phrases handed to you for the occasion are not actually comfort &mdash; they are distance. <em>She is in a better place. Time heals. He is not suffering anymore.</em> True, some of them, in their own register. But said to a person staring at a coffin, they function less like balm and more like a hand on the shoulder, steering toward the door.</p>
+      <p>What the room actually needs is harder to supply. Not an explanation of why this happened. Not a reframing that makes the grief feel premature, as if the bereaved have simply not yet arrived at the proper theological vantage point. What the room needs is something solid enough to lean on that does not ask the grief to apologise for itself first.</p>
+      <p>This is the place most funeral language quietly fails. It tries to resolve what it should be holding.</p>
+      <p>There is an old habit, in the pastoral guild, of reaching for resurrection too early and too thin &mdash; stating it as information to be accepted rather than a hope that cost someone everything to speak. Said that way, it lands as one more fact competing with the fact of the body in the room. The family does not need to be told that death is not real. They need something that has already stood where they are standing and did not flinch.</p>
+      <p>Two men did, long before the resurrection had a name.</p>
+
+      <!-- Section 1 -->
+      <h2>Two Men on the Floor</h2>
+      <p class="drop-cap">Job&rsquo;s situation needs no embellishing. Everything is gone &mdash; children, wealth, health, the regard of his own wife. He sits in ash with a piece of broken pottery, scraping his skin, and the silence of heaven has not broken. His friends, to their credit, sit with him in that silence for seven days before either side speaks. Then Job opens his mouth, and what comes out is not measured. He curses the day of his birth. He wants his case written down, inscribed in rock, so that what is happening to him is not lost to time the way his children already have been.</p>
+      <p>And then, with no warning and no evidence to support it, in the middle of that exact speech:</p>
+      <div class="scripture-block">
+        <p>For I know that my Redeemer lives, and at the last he will stand upon the earth. And after my skin has been thus destroyed, yet in my flesh I shall see God, whom I myself will see, and my eyes shall behold, and not another.</p>
+        <span class="scripture-ref">Job 19:25&ndash;27 &middot; ESV</span>
+      </div>
+      <p>Not <em>I hope</em>. Not <em>I am trying to believe</em>. The Hebrew is <em>yada</em> &mdash; the kind of knowing that sits underneath argument, not on top of it. He says it with nothing in his circumstances to justify it. The hedge is still down. The whirlwind has not come. He says it anyway.</p>
+      <p>David&rsquo;s ruin is a different shape, but the same floor. Psalm 17 opens as a legal plea &mdash; hear a just cause, attend to my cry. He is surrounded by people actively trying to kill him, and the psalm does not pretend otherwise. Worse, the men doing it are thriving.</p>
+      <div class="scripture-block">
+        <p>You fill their womb with treasure; they are satisfied with children, and they leave their abundance to their infants. As for me, I shall behold your face in righteousness; when I awake, I shall be satisfied with your likeness.</p>
+        <span class="scripture-ref">Psalm 17:14&ndash;15 &middot; ESV</span>
+      </div>
+      <p>David could have asked God to even the score &mdash; more wealth, more safety, a longer life than his enemies get. He does not. He says something stranger: that none of what they have is what he wants. What he wants, when this is over, is to see God&rsquo;s face.</p>
+      <p>Neither man&rsquo;s circumstances changed before he spoke. That is the detail worth sitting with before going further. The declaration came first. The evidence &mdash; if it ever came at all &mdash; came after.</p>
+
+      <!-- Section 2 -->
+      <h2>One Word, Said by Both</h2>
+      <p class="drop-cap">The verb is <em>chazah</em> &mdash; to behold, to gaze on directly. Job says it: <em>in my flesh I shall see God.</em> David says it: <em>I shall behold your face.</em> Same root. Same first-person form. Two men who have nothing else in common &mdash; different centuries, different griefs, different reasons for being on the floor &mdash; reaching for the identical word to name what they are actually after.</p>
+      <p>It is worth noticing what they are not saying. Neither man asks for the pain to end, or the record set straight, or his name cleared before his accusers. Job does not even ask for his children back. What both of them name, when pressed to their absolute limit, is a face. Not a concept. Not a state of being. A person, looked at directly.</p>
+      <p>Job underlines it twice in one breath &mdash; <em>whom I myself will see, and my eyes shall behold, and not another.</em> Not a report passed to him. His own eyes. David&rsquo;s version carries the same weight in a quieter key &mdash; he opens the psalm with an emphatic <em>I</em>, setting himself apart from the men who are satisfied with what fills a house. He will take a face. Let them keep their sons.</p>
+      <p>This is the place a pastor can stand without flinching, and it is worth saying plainly: most of what we offer a grieving family, even with good intentions, stays at the level of report. <em>She is with the Lord now. He is at peace.</em> True enough, probably. But report is not what either of these men were after, and it is not, in the end, what grief is actually asking for either. Grief is not asking to be told a fact about the deceased&rsquo;s location. It is asking whether the person it loved is still being looked at &mdash; directly, by name, by someone who knows them.</p>
+      <p>Job and David did not get an explanation for their suffering. They got the conviction that they would, eventually, be seen and see in return. That is a thinner promise than most funeral language pretends to offer, and somehow a sturdier one.</p>
+
+      <!-- Section 3 -->
+      <h2>Asleep, Not Gone</h2>
+      <p class="drop-cap">David&rsquo;s seeing comes with a timestamp: <em>when I awake.</em> The Hebrew is <em>b&rsquo;haqitz</em>, from the root <em>qitz</em> &mdash; to wake from sleep. Read on its own, in a psalm about being hunted by enemies, it could mean nothing more than tomorrow morning. But the same root surfaces in the one Old Testament passage that names resurrection without ambiguity.</p>
+      <div class="scripture-block">
+        <p>And many of those who sleep in the dust of the earth shall awake, some to everlasting life, and some to shame and everlasting contempt.</p>
+        <span class="scripture-ref">Daniel 12:2 &middot; ESV</span>
+      </div>
+      <p>Same root, same verb. Once that is in view, David&rsquo;s &ldquo;when I awake&rdquo; stops sounding like an alarm clock and starts sounding like a grave.</p>
+      <p>Job had already said the harder version of the same thing without the soft word. <em>After my skin has been thus destroyed, yet in my flesh I shall see God.</em> He does not call it sleep. He calls it what it plainly is &mdash; the body gone, the seeing still to come. David&rsquo;s language is gentler, but reaching for the same shape of hope: an interruption, not an ending.</p>
+      <p>This is where the church&rsquo;s old habit of calling the dead &ldquo;asleep&rdquo; stops being a euphemism and starts being a claim. Paul writes about those who have fallen asleep the way someone uses a word they did not invent and know the weight of. He is standing in a line that runs back through Daniel&rsquo;s dust and David&rsquo;s <em>haqitz</em> &mdash; people who looked at a body that had stopped, and refused to call it the last word on that person.</p>
+      <p>It matters, pastorally, that the word is sleep and not silence. Sleep is not absence. It is a state someone is held in, on the way to something else. Nobody at a graveside needs to be told their loved one is now nothing. What this thread offers, carefully and without overstating it, is the older and stranger claim &mdash; that the one in the ground is asleep in the specific sense Daniel meant it, the sense that has a waking built into the word itself.</p>
+
+      <!-- Section 4 -->
+      <h2>Whose Waking Already Happened</h2>
+      <p class="drop-cap">Job and David said what they said without proof. That is the part worth not rushing past. <em>Yada</em> &mdash; Job&rsquo;s knowing &mdash; was knowing without evidence, spoken into a silence that did not answer back for chapters. David&rsquo;s <em>echezeh</em> was a resolve, not a report. Both men staked their hope on a seeing that had not happened yet, on a waking still to come.</p>
+      <p>Then it happened to someone, and it was witnessed.</p>
+      <div class="scripture-block">
+        <p>But in fact Christ has been raised from the dead, the firstfruits of those who have fallen asleep.</p>
+        <span class="scripture-ref">1 Corinthians 15:20 &middot; ESV</span>
+      </div>
+      <p>Paul&rsquo;s word for it is <em>firstfruits</em> &mdash; not a metaphor for general possibility but a specific agricultural term: the first sheaf cut from a harvest, offered as evidence and guarantee that the rest of the field is coming behind it. The same word &mdash; asleep &mdash; Job and David were reaching toward without yet being able to use it that way.</p>
+      <p>This is the difference between a conviction and a guarantee, and it is not a small one to hold at a graveside. Job believed without seeing. The disciples saw. Thomas put his hand in the wound. The women at the tomb were sent specifically to go and tell, because what had happened to them was not a private intuition but a fact with witnesses. <em>My own eyes shall behold, and not another</em> &mdash; Job&rsquo;s defiant insistence on direct seeing, decades before he could have imagined it would be answered this literally, in a body, to people who knew the man and recognised his face.</p>
+      <p>What changes, after the resurrection, is not the hope itself. Job and David already had the shape of it exactly right &mdash; a face, a waking, not an ending. What changes is that someone has already gone through it and come back, which means the waking they were both staking everything on is no longer a hope reaching forward into the dark. It has a guarantee, the same way the firstfruits guarantees the harvest, not by resembling it but by being the first part of the same crop.</p>
+
+      <!-- Section 5 -->
+      <h2>At the Graveside</h2>
+      <p class="drop-cap">Not a script. That is the first thing to say about all of this. None of it should arrive in the room as a Hebrew lesson. The family in front of you does not need to learn the word <em>chazah</em>. They need to be met by someone who has done the work of believing this is true, and lets that belief shape the room without performing it.</p>
+      <p>Lean into the order Job&rsquo;s story actually follows. Seven days of silence came before a single word of hope. If the family is still in the seven days &mdash; if the wound is too fresh for anything but presence &mdash; give them the presence. Do not reach for the resurrection too early just because you are uncomfortable in the silence. Job&rsquo;s friends earned the right to speak by sitting first.</p>
+      <p>When the moment for hope does come, let it be specific. Not &ldquo;she is in a better place&rdquo; &mdash; a phrase that could mean anything and therefore comforts no one in particular. Something closer to what Job and David actually said: she will be seen, and she will see. Not absorbed into peace in the abstract. Looked at, by name, by someone who knows her. That is a harder thing to say and a truer one, and grieving people can tell the difference even if they could not name why.</p>
+      <p>Say &ldquo;asleep&rdquo; if you say it, and mean what Daniel meant by it &mdash; not a softer word for gone, but a word with a waking built into it. Do not explain the etymology. Just do not use the word as decoration either. Let your own conviction about what it means do the work underneath the sentence.</p>
+      <p>And hold the harvest image lightly but firmly when you get to Christ. Not &ldquo;he showed us it is possible&rdquo; &mdash; that leaves the family checking whether they believe hard enough. Closer to: the first part of the crop is already in, which means the rest of it is already coming, whether anyone in the room manages to feel it today or not. Firstfruits does not depend on the field&rsquo;s faith. It depends on what was cut and carried in already.</p>
+      <p>None of this makes the coffin smaller. Job did not get his children back. The ache a funeral sits with is real, and nothing in this material asks anyone to skip past it. What it offers instead is what Job and David had, before either of them had any right to it &mdash; the conviction that the one being grieved has not stopped being seen, and is not finished waking.</p>
+
+      <!-- AI Acknowledgment -->
+      <div class="ai-acknowledgment">
+        <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+        <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+        <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+      </div>
+
+    </article>
+
+    <div class="pdf-download">
+      <a href="/old/articles/pdf/not-finished-waking.pdf" target="_blank" rel="noopener">Download as PDF</a>
+    </div>
+
+  </main>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>

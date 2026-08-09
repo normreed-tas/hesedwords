@@ -1,0 +1,660 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Called in Righteousness — hesedwords</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;500;600&family=Cormorant+SC:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+
+/* ── RESET & BASE ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --parchment:    #FAF5E8;
+  --parchment-dk: #F0E8D0;
+  --gold:         #A67C2E;
+  --gold-lt:      #C8A84B;
+  --gold-rule:    #D9C49A;
+  --ink:          #2A2218;
+  --ink-md:       #4A3E2C;
+  --ink-lt:       #6B5C45;
+  --ink-xl:       #8C7A5E;
+  --serif:        'Cormorant Garamond', 'Garamond', Georgia, serif;
+  --display:      'Cinzel', serif;
+  --sc:           'Cormorant SC', 'Cormorant Garamond', serif;
+}
+
+html { font-size: 18px; }
+
+body {
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAVIGATION ───────────────────────────────────────── */
+nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+nav.hw-nav a:hover{opacity:1;color:#fff;}
+nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+
+/* ── TITLE BLOCK ──────────────────────────────────────── */
+.title-block {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 40px 48px;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--display);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+  display: block;
+}
+
+.eyebrow-rule {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 20px;
+}
+
+h1.article-title {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(28px, 4vw, 42px);
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.subtitle {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 19px;
+  color: var(--ink-md);
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+/* Three-dot ornament */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 20px;
+}
+.ornament__dot {
+  width: 4px;
+  height: 4px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+.ornament__dot--lg {
+  width: 6px;
+  height: 6px;
+}
+
+.byline {
+  font-family: var(--display);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-lt);
+}
+
+/* ── ARTICLE BODY ─────────────────────────────────────── */
+.article-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+}
+
+/* Prologue */
+.prologue {
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink-md);
+  line-height: 1.72;
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--gold-rule);
+}
+
+/* Body paragraphs */
+p {
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--ink);
+  margin-bottom: 22px;
+}
+
+/* Section headings */
+.section-heading {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  margin: 52px 0 6px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gold-rule);
+}
+
+/* Drop cap — first paragraph of each major section */
+.drop-cap::first-letter {
+  font-family: var(--display);
+  font-size: 4.2em;
+  font-weight: 600;
+  color: var(--gold);
+  float: left;
+  line-height: 0.78;
+  margin: 6px 10px 0 0;
+  padding: 0;
+}
+
+/* Scripture block */
+.scripture-block {
+  margin: 32px 0;
+  padding: 20px 28px 20px 32px;
+  border-left: 2.5px solid var(--gold);
+  background: var(--parchment-dk);
+}
+.scripture-block p {
+  font-style: italic;
+  font-size: 17px;
+  color: var(--ink-md);
+  margin-bottom: 8px;
+}
+.scripture-block p:last-child { margin-bottom: 0; }
+.scripture-ref {
+  font-family: var(--sc);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  display: block;
+  margin-top: 10px;
+}
+
+/* Hebrew inline */
+.hebrew {
+  font-size: 1.05em;
+  font-style: italic;
+  color: var(--ink-md);
+}
+
+/* Pull quote */
+.pull-quote {
+  margin: 40px 0;
+  padding: 24px 0;
+  border-top: 1px solid var(--gold-rule);
+  border-bottom: 1px solid var(--gold-rule);
+  text-align: center;
+}
+.pull-quote p {
+  font-style: italic;
+  font-size: 21px;
+  color: var(--ink-md);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Ornamental divider between movements */
+.movement-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 44px auto;
+}
+.movement-divider__line {
+  flex: 1;
+  max-width: 80px;
+  height: 0.5px;
+  background: var(--gold-rule);
+}
+.movement-divider__dot {
+  width: 4px;
+  height: 4px;
+  background: var(--gold);
+  transform: rotate(45deg);
+}
+
+/* Reflective questions */
+.questions {
+  margin: 48px 0 32px;
+  padding: 28px 32px;
+  border-left: 2px solid var(--gold-rule);
+  background: rgba(200,168,75,0.06);
+}
+.questions__label {
+  font-family: var(--display);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+  display: block;
+}
+.questions ol {
+  padding-left: 20px;
+}
+.questions ol li {
+  font-style: italic;
+  font-size: 17px;
+  color: var(--ink-md);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+.questions ol li:last-child { margin-bottom: 0; }
+
+/* ── POSTER DOWNLOAD SECTION ─────────────────────────── */
+.poster-download {
+  margin: 52px 0 40px;
+  padding: 32px 36px;
+  border: 1px solid var(--gold-rule);
+  background: var(--parchment-dk);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.poster-download__thumb {
+  flex-shrink: 0;
+  width: 72px;
+  height: 100px;
+  background: #e8dfc8;
+  border: 1px solid var(--gold-rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.poster-download__thumb::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 0.5px solid rgba(140,95,30,0.30);
+}
+
+.poster-download__thumb-inner {
+  font-family: var(--serif);
+  font-size: 9px;
+  font-style: italic;
+  color: rgba(74,46,10,0.65);
+  text-align: center;
+  line-height: 1.4;
+  padding: 4px;
+}
+
+.poster-download__body {
+  flex: 1;
+}
+
+.poster-download__label {
+  font-family: var(--display);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.poster-download__title {
+  font-family: var(--display);
+  font-size: 18px;
+  color: var(--ink);
+  margin-bottom: 8px;
+  letter-spacing: 0.03em;
+}
+
+.poster-download__desc {
+  font-style: italic;
+  font-size: 15px;
+  color: var(--ink-md);
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+.poster-download__link {
+  display: inline-block;
+  font-family: var(--display);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 9px 20px;
+  border: 1px solid var(--ink);
+  transition: all 0.2s ease;
+}
+.poster-download__link:hover {
+  background: var(--ink);
+  color: var(--parchment);
+}
+
+/* ── AI ACKNOWLEDGMENT ───────────────────────────────── */
+.ai-acknowledgment {
+  margin: 56px 0 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--gold-rule);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-xl);
+  line-height: 1.65;
+}
+.ai-acknowledgment p { margin-bottom: 8px; font-size: 14px; color: var(--ink-xl); }
+.ai-acknowledgment p:last-child { margin-bottom: 0; }
+
+/* ── FOOTER ───────────────────────────────────────────── */
+.site-footer {
+  background: var(--ink);
+  padding: 28px 40px;
+  text-align: center;
+}
+.site-footer__tagline {
+  font-family: var(--sc);
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────── */
+@media (max-width: 640px) {
+  .title-block { padding: 44px 24px 36px; }
+  .article-body { padding: 0 24px 60px; }
+  h1.article-title { font-size: 28px; }
+  .poster-download { flex-direction: column; gap: 20px; }
+  .poster-download__thumb { width: 100%; height: 80px; }
+}
+
+/* ── PRINT ────────────────────────────────────────────── */
+@media print {
+  .hw-nav, .site-footer { display: none; }
+  .article-body { padding: 0; }
+  .poster-download { page-break-inside: avoid; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html" class="current">Reflections</a>
+  <a href="/old/articles.html">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+<!-- Title Block -->
+<header class="title-block">
+  <span class="eyebrow">A Hesedwords Reflection</span>
+  <div class="eyebrow-rule"></div>
+  <h1 class="article-title">Called in Righteousness</h1>
+  <p class="subtitle">A reflection on Isaiah 42 : 6</p>
+  <div class="ornament">
+    <div class="ornament__dot"></div>
+    <div class="ornament__dot ornament__dot--lg"></div>
+    <div class="ornament__dot"></div>
+  </div>
+  <span class="byline">Norm Reed &middot; 1 May 2026</span>
+</header>
+
+<!-- Article Body -->
+<main class="article-body">
+
+  <!-- Prologue -->
+  <p class="prologue">
+    What follows began not with a commentary but with an admission.
+    I have sat with the word <em>righteousness</em> for over forty years of ministry —
+    preaching it, teaching it, building theology on it — and never quite trusting
+    that I understood it.
+  </p>
+
+  <!-- Movement 1 — The Admission -->
+  <p class="drop-cap">
+    I have never really understood the word righteousness.
+  </p>
+
+  <p>
+    That is not a comfortable thing for a pastor to say. The word is everywhere.
+    It runs through the Psalms and the prophets, through Paul's letters, through the
+    Sermon on the Mount. Jesus names it alongside the kingdom of God — <em>seek first
+    the kingdom of God and his righteousness.</em> It is not a marginal term.
+    It may be the most important term.
+  </p>
+
+  <p>
+    And yet something has never felt right about the way the tradition handed it to me.
+  </p>
+
+  <div class="movement-divider">
+    <div class="movement-divider__line"></div>
+    <div class="movement-divider__dot"></div>
+    <div class="movement-divider__dot" style="background:var(--gold-lt); width:6px; height:6px;"></div>
+    <div class="movement-divider__dot"></div>
+    <div class="movement-divider__line"></div>
+  </div>
+
+  <!-- Movement 2 — The Problem -->
+  <p class="drop-cap">
+    The word that shaped me was a legal word.
+  </p>
+
+  <p>
+    Righteousness meant right standing before God. It meant moral conformity to a
+    divine standard. It meant the status of the believer declared righteous through faith.
+    These are not wrong ideas. But somewhere in the translation — Hebrew to Greek,
+    Greek to Latin, Latin to English — something was quietly lost.
+  </p>
+
+  <p>
+    The Hebrew word is <span class="hebrew">tzedakah</span>. And <span class="hebrew">tzedakah</span>
+    is not primarily a legal word. It is a relational word. It describes what a relationship
+    looks like when it is working as it was designed to — when each party is being
+    what the bond requires them to be. A king is righteous when he governs in ways
+    that sustain the community he is responsible for. A judge is righteous when he
+    rules in ways that restore broken relationship between parties. God is righteous
+    precisely in his saving acts. Not despite them. Because of them.
+  </p>
+
+  <p>
+    The saving <em>is</em> the righteous thing to do.
+  </p>
+
+  <p>
+    This is why the Psalms can speak of God's righteousness and his salvation in
+    the same breath without any sense of tension. They are not two different things.
+    They are the same reality named from two angles.
+  </p>
+
+  <div class="movement-divider">
+    <div class="movement-divider__line"></div>
+    <div class="movement-divider__dot"></div>
+    <div class="movement-divider__dot" style="background:var(--gold-lt); width:6px; height:6px;"></div>
+    <div class="movement-divider__dot"></div>
+    <div class="movement-divider__line"></div>
+  </div>
+
+  <!-- Movement 3 — The Phrase -->
+  <p class="drop-cap">
+    I was reading Isaiah 42 when three words stopped me.
+  </p>
+
+  <div class="scripture-block">
+    <p>I am the <span style="font-variant:small-caps">Lord</span>; I have called you in righteousness;
+    I will take hold of your hand and keep you; I will give you as a covenant to the people,
+    as a light to the nations.</p>
+    <span class="scripture-ref">Isaiah 42 : 6 · ESV</span>
+  </div>
+
+  <p>
+    Three Hebrew words: <span class="hebrew">qerā'tîkā betsèdeq</span>. I called you.
+    In righteousness. The small preposition <span class="hebrew">be-</span> is
+    doing the weight-bearing work. It means <em>in</em>, or <em>within</em>, or <em>from</em>.
+    The call does not arise from the servant's merit. It does not arise from any external
+    pressure on God. It arises from <em>within his own relational-righteous character.</em>
+  </p>
+
+  <p>
+    God does not call the righteous. He calls <em>from within</em> his own righteousness.
+  </p>
+
+  <p>
+    This felt like a key turning in a lock I had been carrying for a long time
+    without knowing what it opened.
+  </p>
+
+  <div class="pull-quote">
+    <p>God does not call the righteous.<br>He calls from within his own righteousness.</p>
+  </div>
+
+  <div class="movement-divider">
+    <div class="movement-divider__line"></div>
+    <div class="movement-divider__dot"></div>
+    <div class="movement-divider__dot" style="background:var(--gold-lt); width:6px; height:6px;"></div>
+    <div class="movement-divider__dot"></div>
+    <div class="movement-divider__line"></div>
+  </div>
+
+  <!-- Movement 4 — The Formulation -->
+  <p class="drop-cap">
+    I found myself trying to say it simply.
+  </p>
+
+  <p>
+    God desires relationship. Righteousness describes the sort of relationship
+    God has. God actively seeks to address the lack of righteousness in those he
+    seeks relationship with. And he establishes the means.
+  </p>
+
+  <p>Each move is load-bearing.</p>
+
+  <p>
+    The first says something about God's nature — not that he wants relationship
+    in addition to being who he is, but that relationship is what his nature looks
+    like in motion. The second says righteousness is not a standard applied to the
+    relationship from outside. It describes the quality of the relationship itself.
+    The third names what God does about the gap — he moves toward it, takes it
+    seriously, and does something about it from his side. The fourth says the means
+    is not a mechanism or a transaction. It is a person.
+  </p>
+
+  <p>
+    Which is why Isaiah 42:6 ends where it ends: <em>I will give you as a covenant
+    to the people, as a light to the nations.</em> Not one who brings the light.
+    One who <em>is</em> the light.
+  </p>
+
+  <div class="movement-divider">
+    <div class="movement-divider__line"></div>
+    <div class="movement-divider__dot"></div>
+    <div class="movement-divider__dot" style="background:var(--gold-lt); width:6px; height:6px;"></div>
+    <div class="movement-divider__dot"></div>
+    <div class="movement-divider__line"></div>
+  </div>
+
+  <!-- Movement 5 — Why It Matters -->
+  <p class="drop-cap">
+    I have spent many years working alongside people who carry the weight
+    of being defined by their deficit.
+  </p>
+
+  <p>
+    People in prison. Their families waiting outside. Children who have grown up
+    with a parent on the other side of a barrier. The question that drives the work
+    is not primarily <em>what did they do?</em> The question is <em>what is the
+    relationship that has been severed, and what would it take to restore it?</em>
+  </p>
+
+  <p>
+    That is a <span class="hebrew">tzedakah</span> question.
+  </p>
+
+  <p>
+    When I read Isaiah 42:6 now, I do not read it primarily as a text about
+    the Messiah, or about Israel, or about a distant theological category called
+    righteousness. I read it as the ground of the work. The call to the servant
+    issues from within God's own relational-righteous character. The servant is
+    given not as a message but as a means. And the means is personal — a held
+    hand, a kept life, a covenant embodied.
+  </p>
+
+  <p>
+    The bruised reed and the smouldering wick in the verses just before this
+    phrase are not illustrations. They are the address list.
+  </p>
+
+  <!-- Reflective Questions -->
+  <div class="questions">
+    <span class="questions__label">For Reflection</span>
+    <ol>
+      <li>
+        Where have you understood righteousness primarily as your standing
+        before God, rather than as the character of God's relationship moving
+        toward you?
+      </li>
+      <li>
+        What would change in the way you read the prophets if righteousness
+        were heard as a relational word rather than a legal one?
+      </li>
+      <li>
+        Who in your community is defined primarily by their deficit?
+        What does it mean that God calls <em>from within his righteousness</em>
+        toward that deficit?
+      </li>
+    </ol>
+  </div>
+
+  <!-- Poster Download -->
+  <div class="poster-download">
+    <div class="poster-download__thumb">
+      <div class="poster-download__thumb-inner">בְצֶדֶק<br><br><span style="font-size:7px; letter-spacing:0.08em;">POSTER</span></div>
+    </div>
+    <div class="poster-download__body">
+      <span class="poster-download__label">Companion Poster</span>
+      <div class="poster-download__title">In Righteousness I Have Called You</div>
+      <p class="poster-download__desc">
+        A typographic meditation on the Hebrew phrase <em>betsèdeq</em>
+        from Isaiah 42 : 6. Suitable for printing at A4.
+      </p>
+      <a class="poster-download__link" href="/old/reflections/called-in-righteousness.pdf" target="_blank" rel="noopener">
+        Download Poster (PDF)
+      </a>
+    </div>
+  </div>
+
+  <!-- AI Acknowledgment -->
+  <div class="ai-acknowledgment">
+    <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+    <p>During the development of this piece, AI became a conversation partner. It challenged assumptions, tested arguments, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+    <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p class="site-footer__tagline">Hesedwords &middot; Words shaped by covenant love</p>
+</footer>
+
+</body>
+</html>

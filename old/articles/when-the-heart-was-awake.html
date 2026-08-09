@@ -1,0 +1,501 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When the Heart Was Awake — Norm Reed</title>
+  <meta name="description" content="A reflection on desire, distraction, and the love that pursues — drawn from the Song of Songs, Romans 7, and 1 John 5:21.">
+  <meta name="author" content="Norm Reed">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       HESEDWORDS.COM — ARTICLE TEMPLATE
+       When the Heart Was Awake
+       Norm Reed · 2026
+       ============================================================ */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --parchment:    #FAF5E8;
+      --ink:          #2A2218;
+      --ink-secondary:#4A3E2C;
+      --ink-muted:    #6B5C45;
+      --gold:         #A67C2E;
+      --gold-light:   #C8B58F;
+      --gold-pale:    #D9C49A;
+      --scripture-bg: #F4EDD6;
+    }
+
+    html {
+      font-size: 18px;
+      background: var(--parchment);
+      color: var(--ink);
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', 'Garamond', Georgia, serif;
+      line-height: 1.75;
+      background: var(--parchment);
+      color: var(--ink);
+    }
+
+    /* --- Nav --- */
+    nav.hw-nav {
+      background: #1f1b16;
+      font-family: 'Cinzel', serif;
+      font-size: .78rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      gap: 2.2rem;
+      padding: 1.05rem 1rem;
+      flex-wrap: wrap;
+    }
+    nav.hw-nav a { color: #f5edd6; text-decoration: none; opacity: .82; transition: opacity .2s; }
+    nav.hw-nav a:hover { opacity: 1; color: #fff; }
+    nav.hw-nav a.current { opacity: 1; border-bottom: 1px solid #b8922c; padding-bottom: .15rem; }
+
+    /* --- Page container --- */
+    .page {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 72px 36px 96px;
+    }
+
+    /* --- Title block --- */
+    .title-block {
+      text-align: center;
+      margin-bottom: 56px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--gold-pale);
+    }
+
+    .eyebrow {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    .article-title {
+      font-family: 'Cinzel', serif;
+      font-weight: 500;
+      font-size: 2.4rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      line-height: 1.18;
+      margin-bottom: 18px;
+    }
+
+    .article-subtitle {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--ink-secondary);
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+
+    .ornament {
+      display: block;
+      color: var(--gold);
+      font-size: 1rem;
+      letter-spacing: 0.55em;
+      margin-bottom: 24px;
+    }
+
+    .byline {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    /* --- Prologue --- */
+    .prologue {
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink-secondary);
+      margin-bottom: 56px;
+      padding: 0 12px;
+      line-height: 1.8;
+    }
+
+    .prologue p { margin-bottom: 1.2em; }
+    .prologue p:last-child { margin-bottom: 0; }
+
+    /* --- Section headings --- */
+    .section-heading {
+      font-family: 'Cinzel', serif;
+      font-weight: 500;
+      font-size: 1.05rem;
+      letter-spacing: 0.1em;
+      color: var(--ink);
+      text-align: center;
+      margin: 72px 0 8px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--gold-pale);
+    }
+
+    .section-label {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.32em;
+      color: var(--gold);
+      margin-bottom: 10px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    /* --- Body text --- */
+    .body-text p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--ink);
+      margin-bottom: 1.45em;
+      text-align: justify;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+    }
+
+    .body-text p:last-child { margin-bottom: 0; }
+
+    /* Drop cap */
+    .drop-cap::first-letter {
+      font-family: 'Cinzel', serif;
+      font-size: 3.6em;
+      font-weight: 600;
+      color: var(--gold);
+      float: left;
+      line-height: 0.82;
+      margin-right: 0.07em;
+      margin-top: 0.06em;
+    }
+
+    /* --- Scripture block --- */
+    .scripture {
+      margin: 28px 0 32px;
+      padding: 20px 24px 18px 28px;
+      border-left: 3px solid var(--gold);
+      background: var(--scripture-bg);
+      border-radius: 0 2px 2px 0;
+    }
+
+    .scripture p {
+      font-style: italic;
+      font-size: 0.97rem;
+      color: var(--ink-secondary);
+      line-height: 1.75;
+      margin-bottom: 0.4em;
+      text-align: left;
+    }
+
+    .scripture p:last-of-type { margin-bottom: 0; }
+
+    .scripture .reference {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-style: normal;
+      font-size: 9px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 12px;
+    }
+
+    /* --- Pull quote --- */
+    .pull-quote {
+      margin: 44px 0;
+      padding: 24px 0;
+      border-top: 1px solid var(--gold-pale);
+      border-bottom: 1px solid var(--gold-pale);
+      text-align: center;
+    }
+
+    .pull-quote p {
+      font-style: italic;
+      font-size: 1.25rem;
+      color: var(--ink-secondary);
+      line-height: 1.55;
+      margin: 0;
+      text-align: center !important;
+    }
+
+    /* --- Divider --- */
+    .divider {
+      text-align: center;
+      color: var(--gold);
+      font-size: 1rem;
+      letter-spacing: 0.55em;
+      margin: 56px 0 48px;
+    }
+
+    /* --- Acknowledgment --- */
+    .acknowledgment {
+      margin-top: 88px;
+      padding-top: 28px;
+      border-top: 1px solid var(--gold-pale);
+      font-style: italic;
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+      line-height: 1.65;
+    }
+
+    .acknowledgment p { margin-bottom: 0.6em; }
+    .acknowledgment p:last-child { margin-bottom: 0; }
+
+    /* --- Tagline --- */
+    .tagline {
+      text-align: center;
+      margin-top: 44px;
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* --- Scripture references footer --- */
+    .scripture-refs {
+      margin-top: 32px;
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-align: center;
+      line-height: 2;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 640px) {
+      .page { padding: 44px 22px 68px; }
+      .article-title { font-size: 1.75rem; }
+      .article-subtitle { font-size: 1.05rem; }
+      .section-heading { font-size: 0.95rem; margin-top: 52px; }
+      .drop-cap::first-letter { font-size: 3em; }
+      .pull-quote p { font-size: 1.1rem; }
+      .scripture { padding: 16px 18px 14px 22px; }
+    }
+
+    /* --- Print --- */
+    @media print {
+      body { background: white; }
+      .page { max-width: 100%; padding: 0; }
+      .scripture { background: #F4EDD6; -webkit-print-color-adjust: exact; }
+      .pull-quote { page-break-inside: avoid; }
+      .section-heading { page-break-after: avoid; }
+      nav.hw-nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html">Reflections</a>
+  <a href="/old/articles.html" class="current">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+<div class="page">
+
+  <!-- ============================================================
+       TITLE BLOCK
+       ============================================================ -->
+  <header class="title-block">
+    <span class="eyebrow">A Hesedwords Article</span>
+    <h1 class="article-title">When the Heart Was Awake</h1>
+    <p class="article-subtitle">Desire, distraction, and the love that pursues</p>
+    <span class="ornament">· · ·</span>
+    <span class="byline">Norm Reed &middot; 2026</span>
+  </header>
+
+  <!-- ============================================================
+       PROLOGUE
+       ============================================================ -->
+  <div class="prologue">
+    <p>There is a sentence buried in the middle of the Song of Songs that I find almost unbearable in its honesty.</p>
+    <p><em>I slept, but my heart was awake.</em></p>
+    <p>She knew who was at the door. She heard the voice she had longed for. This is the woman who, only pages earlier, had opened her garden with everything she had &mdash; calling the winds to blow, throwing wide what was hers, crying <em>let my beloved come to his garden.</em> That desire was real. It produced a genuine invitation.</p>
+    <p>And now she is in bed.</p>
+  </div>
+
+  <!-- ============================================================
+       BODY
+       ============================================================ -->
+  <div class="body-text">
+
+    <!-- ============================================================
+         SECTION ONE
+         ============================================================ -->
+    <h2 class="section-heading">
+      <span class="section-label">One</span>
+      The Arc of Desire
+    </h2>
+
+    <p class="drop-cap">The Song of Songs opens with desire in its purest form: <em>Let him kiss me with the kisses of his mouth.</em> No qualification. No condition. No competition. Just the whole person reaching toward the one it wants. And through the chapters that follow, that desire matures &mdash; from longing into belonging, from belonging into offering.</p>
+
+    <p>Track the movement. In chapter 1, the woman reaches for what hasn&rsquo;t yet arrived. By chapter 2, the covenant is established: <em>I am my beloved&rsquo;s and my beloved is mine.</em> She is known and knows. But by chapter 4, something more has happened. The desire that began as reaching has become complete self-giving. She doesn&rsquo;t just want him to come; she invites every wind to blow fragrance outward, she opens the garden entirely, she calls him in.</p>
+
+    <div class="scripture">
+      <p>Awake, O north wind, and come, O south wind! Blow upon my garden, let its spices flow. Let my beloved come to his garden and eat its choicest fruits.</p>
+      <span class="reference">Song of Songs 4:16 &middot; ESV</span>
+    </div>
+
+    <p>This is <em>da&rsquo;at</em> in its fullest motion &mdash; not passive reception but active, surrendered opening. The desire that began as longing has become invitation. Longing, belonging, offering: this is the arc.</p>
+
+    <p>And then chapter 5 arrives. And she cannot be bothered to get out of bed.</p>
+
+    <p>We might be tempted to read this as inconsistency, as the Song catching itself in a contradiction. But I think it is the Song being precise about something we would rather not examine: that deep, genuine, covenant-shaped desire &mdash; even mature desire, even desire that has produced real self-giving &mdash; is not insulated from the present. The longing that is real at depth can be overridden, at least for a moment, by what is comfortable and close at hand.</p>
+
+    <!-- ============================================================
+         SECTION TWO
+         ============================================================ -->
+    <h2 class="section-heading">
+      <span class="section-label">Two</span>
+      The Warm Bed and the Present Idol
+    </h2>
+
+    <p class="drop-cap">Chapter 5, verses 2 and 3 are not the portrait of someone who has fallen out of love. She tells us explicitly: <em>I slept, but my heart was awake.</em> The desire was still there. She heard him. She recognised his voice. She knew exactly who was at the door.</p>
+
+    <p>But something overrode it &mdash; not a rival love, not a temptation to another Beloved. Something smaller. The inconvenience of getting up. <em>I had put off my garment; how could I put it on? I had bathed my feet; how could I soil them?</em> Two sentences of self-justification that are exquisitely, painfully ordinary. The warm bed. The clean feet. The effort required to open the door.</p>
+
+    <div class="pull-quote">
+      <p>The warm bed is not wicked. The bathed feet are not sinful. But they held her at the door, while the Beloved stood outside it.</p>
+    </div>
+
+    <p>John understood this. His final word to the churches &mdash; so brief it reads almost like an afterthought, at the end of a letter entirely about love &mdash; was not a doctrinal summary or a closing benediction. It was a warning:</p>
+
+    <div class="scripture">
+      <p>Little children, keep yourselves from idols.</p>
+      <span class="reference">1 John 5:21 &middot; ESV</span>
+    </div>
+
+    <p>We imagine idols as dramatic rivals. But the Song&rsquo;s portrait suggests they are more often just what fills the present: whatever occupies the space between the soul and its deepest desire, comfortable to remain with, requiring nothing. An idol is not necessarily a false god. It is anything that proves more immediately present than the true one.</p>
+
+    <p>C.S. Lewis named this with characteristic precision. We are not creatures who desire too much. We are creatures who are far too easily satisfied &mdash; <em>like an ignorant child who wants to go on making mud pies in a slum because he cannot imagine what is meant by the offer of a holiday at the sea.</em> The mud pies are not wicked in themselves. They are simply absurdly insufficient compared to what is being offered. And they are present, while the sea is not.</p>
+
+    <p>The woman&rsquo;s warm bed is the mud pie. Her washed feet are the mud pie. They held her where she was while the Beloved stood at the door.</p>
+
+    <!-- ============================================================
+         SECTION THREE
+         ============================================================ -->
+    <h2 class="section-heading">
+      <span class="section-label">Three</span>
+      Paul Names the Structure
+    </h2>
+
+    <p class="drop-cap">Paul names the anatomy of this experience in Romans 7 with surgical honesty. This is not the portrait of a man who doesn&rsquo;t love God. It is the portrait of a man who loves God and still finds himself held by the immediate.</p>
+
+    <div class="scripture">
+      <p>I do not understand my own actions. For I do not do what I want, but I do the very thing I hate&hellip; For I have the desire to do what is right, but not the ability to carry it out.</p>
+      <span class="reference">Romans 7:15, 18 &middot; ESV</span>
+    </div>
+
+    <p>The Greek word Paul uses for <em>desire</em> is <em>thel&omacr;</em> &mdash; to will, to want. Paul has the <em>thel&omacr;</em> for the good. The wanting is genuinely present. But something else &mdash; what he calls &ldquo;the law of sin in my members&rdquo; &mdash; is more immediately active and wins.</p>
+
+    <p>Two laws at war. Not between desire and no-desire, but between <em>deep desire</em> and <em>present desire.</em> The law of his mind &mdash; where the deeper, reflective, covenant-shaped longing lives &mdash; delights in God&rsquo;s law. The law of his members &mdash; the immediate, bodily, present-tense pull &mdash; does the opposite. The woman in Song 5 has both operating at once. Her heart was awake. Her body was warm and comfortable.</p>
+
+    <p>What this reveals is something uncomfortable about the quality of desire: not whether it is real, but whether it is <em>organising</em> &mdash; whether it is the desire that relativises all others, the one that everything else in us bends around. Paul describes what organising desire looks like in Philippians 3:</p>
+
+    <div class="scripture">
+      <p>I count everything as loss because of the surpassing worth of knowing Christ Jesus my Lord.</p>
+      <span class="reference">Philippians 3:8 &middot; ESV</span>
+    </div>
+
+    <p>Not the absence of other desires. The finding of them negligible by comparison. When desire reaches that organising depth, the mud pies look like mud pies.</p>
+
+    <p>The Song and Romans 7 are both honest enough to show us what it looks like when it hasn&rsquo;t reached that depth yet &mdash; when the desire is real but not yet organising. When the present comfort still wins.</p>
+
+    <!-- ============================================================
+         SECTION FOUR
+         ============================================================ -->
+    <h2 class="section-heading">
+      <span class="section-label">Four</span>
+      The Love That Kindles
+    </h2>
+
+    <p class="drop-cap">But here is where the Song does something that mere diagnosis cannot. It does not leave us with the closed door and the empty porch.</p>
+
+    <p>Go back to chapter 5, verse 1 &mdash; just before the failure. The Bridegroom speaks. He has arrived in response to her invitation from chapter 4. He came. He gathered. He ate and drank. And then &mdash; and this is where the verse opens into something larger than the two of them &mdash; a voice breaks into the poem:</p>
+
+    <div class="scripture">
+      <p>I came to my garden, my sister, my bride; I gathered my myrrh with my spice, I ate my honeycomb with my honey, I drank my wine with my milk.</p>
+      <p>Eat, friends, drink, and be drunk with love.</p>
+      <span class="reference">Song of Songs 5:1 &middot; ESV</span>
+    </div>
+
+    <p>The Jewish and Christian traditions have long heard that final invitation as something other than the Bridegroom&rsquo;s own voice. It is the voice that presides over the feast &mdash; the divine voice, breaking into the poem, extending the invitation beyond the two in the garden to all who would receive it. Not merely <em>drink</em>. <em>Be drunk.</em> Be so full of this love that it changes the way you perceive and move.</p>
+
+    <p>The answer to the woman&rsquo;s failure is not a demand for stronger resolve. It is an invitation to a deeper intoxication. And the one extending that invitation is not waiting to see if she will generate sufficient desire from within herself.</p>
+
+    <p>He has already come. Already gathered. Already eaten and drunk. He came leaping over mountains in chapter 2. He knocked at the door in chapter 5. And in chapter 8, the love he brings is defined as <em>shalhevet Yah</em> &mdash; the very flame of the LORD:</p>
+
+    <div class="scripture">
+      <p>Set me as a seal upon your heart, as a seal upon your arm, for love is strong as death, jealousy is fierce as the grave. Its flashes are flashes of fire, the very flame of the <span style="font-variant: small-caps;">Lord</span>.</p>
+      <span class="reference">Song of Songs 8:6 &middot; ESV</span>
+    </div>
+
+    <p>This is not a human love calibrated to the quality of our response. This is divine fire. The <em>hesed</em> that is strong as death, fierce as the grave, burning with God&rsquo;s own heat.</p>
+
+    <p>Paul&rsquo;s cry in Romans 7:24 &mdash; <em>Who will deliver me from this body of death?</em> &mdash; is answered not in Romans 7 but in Romans 8. The answer is not stronger will. It is the Spirit &mdash; who makes present what was abstract, who brings near what was distant, who kindles desire from within rather than demanding it from without.</p>
+
+    <p>And this is precisely what happens in the Song. What revives the woman after her failure is not a renewed resolution. It is the thrill:</p>
+
+    <div class="scripture">
+      <p>My beloved put his hand to the latch, and my heart was thrilled within me.</p>
+      <span class="reference">Song of Songs 5:4 &middot; ESV</span>
+    </div>
+
+    <p>A presence. A gesture. A memory of who he is. She rose &mdash; not because she decided to want him more, but because something kindled.</p>
+
+    <div class="divider">· · ·</div>
+
+    <p>The question this whole passage puts to us is not whether we desire God. The Song assumes that we do. The question is what we do when the present has dimmed what was vivid, when the immediate has overridden the deep, when the warm bed holds us while the Beloved stands at the door.</p>
+
+    <p>John&rsquo;s warning is real: keep yourselves from idols. The struggle is real. The warm bed wins more often than we care to admit. But the comfort beneath the warning &mdash; the comfort beneath the whole Song &mdash; is that the love we are struggling to keep hold of is also, and more fundamentally, keeping hold of us.</p>
+
+    <p>He came to his garden. He gathered, he ate, he drank. And his hand is still at the latch.</p>
+
+    <p><em>Hesed</em> does not wait for us to want it enough. It kindles the wanting. It always has.</p>
+
+  </div><!-- /body-text -->
+
+  <!-- ============================================================
+       SCRIPTURE REFERENCES
+       ============================================================ -->
+  <div class="scripture-refs">
+    Song of Songs 1:2 &middot; 4:16 &middot; 5:1&ndash;4 &middot; 8:6&ndash;7 &nbsp;&middot;&nbsp; Romans 7:14&ndash;8:4 &nbsp;&middot;&nbsp; 1 John 5:21 &nbsp;&middot;&nbsp; Hosea 6:4 &nbsp;&middot;&nbsp; Philippians 3:8
+  </div>
+
+  <!-- ============================================================
+       AI ACKNOWLEDGMENT
+       ============================================================ -->
+  <div class="acknowledgment">
+    <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+    <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+    <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+  </div>
+
+  <!-- ============================================================
+       SITE TAGLINE
+       ============================================================ -->
+  <div class="tagline">
+    <span>Hesedwords.com &middot; Written for the road</span>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>

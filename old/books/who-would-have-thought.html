@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who Would Have Thought — Hesed Words</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --parchment:#e8dfc8;
+    --parchment-light:#FAF5E8;
+    --ink:#2A2218;
+    --ink-soft:#4A3E2C;
+    --gold:#c9a84c;
+    --gold-deep:#A67C2E;
+    --gold-soft:#D9C49A;
+    --rule:#C8B58F;
+  }
+
+  *{box-sizing:border-box;}
+
+  html{ -webkit-text-size-adjust:100%; }
+
+  body{
+    margin:0;
+    background:var(--parchment);
+    color:var(--ink);
+    font-family:'Cormorant Garamond','Garamond',Georgia,serif;
+    font-size:20px;
+    line-height:1.7;
+  }
+
+  /* ---------- page frame ---------- */
+  .page{
+    max-width:760px;
+    margin:0 auto;
+    background:#fdfbf4;
+    border-left:1px solid var(--rule);
+    border-right:1px solid var(--rule);
+    padding:0 64px 80px;
+  }
+
+  /* ---------- cover ---------- */
+  .cover{
+    text-align:center;
+    padding:90px 0 80px;
+    border-bottom:1px solid var(--gold-soft);
+    margin-bottom:60px;
+  }
+  .eyebrow{
+    font-family:'Cinzel',serif;
+    font-size:12px;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-bottom:48px;
+  }
+  .roundel{
+    width:90px;height:90px;
+    margin:0 auto 44px;
+    border:1px solid var(--gold-soft);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold-deep);
+    font-size:34px;
+    line-height:1;
+  }
+  .cover .short-rule{
+    width:46px;height:1px;background:var(--gold-deep);
+    margin:0 auto 40px;opacity:0.6;
+  }
+  .cover h1{
+    font-family:'Cinzel',serif;
+    font-weight:600;
+    font-size:40px;
+    letter-spacing:0.04em;
+    line-height:1.18;
+    margin:0 0 18px;
+    color:var(--ink);
+  }
+  .cover .subtitle{
+    font-style:italic;
+    font-size:22px;
+    color:var(--ink-soft);
+    margin:0 0 44px;
+  }
+  .cover .epigraph{
+    font-style:italic;
+    font-size:18px;
+    color:var(--ink-soft);
+    line-height:1.6;
+    margin:0 auto 12px;
+    max-width:420px;
+  }
+  .cover .epigraph-ref{
+    font-family:'Cinzel',serif;
+    font-size:11px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-bottom:48px;
+  }
+  .cover .byline{
+    font-family:'Cinzel',serif;
+    font-size:12px;
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  .cover .foundation{
+    font-style:italic;
+    font-size:14px;
+    color:var(--gold-deep);
+  }
+
+  /* ---------- psalm page ---------- */
+  .psalm{
+    margin:0 auto 56px;
+    max-width:560px;
+    text-align:left;
+  }
+  .psalm h2{
+    font-family:'Cinzel',serif;
+    font-weight:500;
+    font-size:28px;
+    letter-spacing:0.05em;
+    text-align:center;
+    color:var(--ink);
+    margin:0 0 8px;
+  }
+  .psalm .psalm-rule{
+    width:46px;height:1px;background:var(--gold);
+    margin:0 auto 36px;
+  }
+  .psalm .stanza{
+    margin:0 0 22px;
+  }
+  .psalm .stanza p{
+    margin:0;
+    font-size:19px;
+    line-height:1.55;
+    color:var(--ink);
+  }
+  .psalm .jov{
+    font-family:'Cinzel',serif;
+    font-size:11px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-top:30px;
+    font-style:normal;
+  }
+
+  .section-divider{
+    text-align:center;
+    color:var(--gold);
+    letter-spacing:0.5em;
+    font-size:16px;
+    margin:48px 0;
+    padding-left:0.5em;
+  }
+
+  /* ---------- story body ---------- */
+  .story{ margin-top:8px; }
+  .story p{
+    margin:0 0 18px;
+    text-align:justify;
+    hyphens:auto;
+    -webkit-hyphens:auto;
+  }
+  /* first paragraph of the book: drop cap, no indent */
+  .story .opening-first::first-letter{
+    font-family:'Cinzel',serif;
+    font-size:58px;
+    line-height:0.78;
+    float:left;
+    padding:6px 10px 0 0;
+    color:var(--gold-deep);
+    font-weight:600;
+  }
+  .story p.first{ text-indent:0; }
+  /* indent successive paragraphs lightly for book feel */
+  .story p + p{ text-indent:1.4em; }
+  .story p.first + p{ text-indent:1.4em; }
+
+  /* paragraphs that are purely an italic interior line, centered, no indent */
+  .interior{
+    text-align:center !important;
+    text-indent:0 !important;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:22px 0 !important;
+  }
+
+  .epilogue-head{
+    text-align:center;
+    font-family:'Cinzel',serif;
+    font-size:15px;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin:8px 0 30px;
+  }
+
+  .end-mark{
+    text-align:center;
+    color:var(--gold);
+    font-size:18px;
+    margin:44px 0 10px;
+  }
+
+  /* ---------- acknowledgment ---------- */
+  .ack{
+    margin-top:64px;
+    padding-top:34px;
+    border-top:1px solid var(--gold-soft);
+    font-style:italic;
+    font-size:16px;
+    color:var(--ink-soft);
+    line-height:1.7;
+  }
+  .ack p{ margin:0 0 14px; text-align:left; text-indent:0; }
+  .ack .ack-label{
+    font-family:'Cinzel',serif;
+    font-style:normal;
+    font-size:11px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-bottom:18px;
+  }
+
+  /* ── Site nav ── */
+  nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+  nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+  nav.hw-nav a:hover{opacity:1;color:#fff;}
+  nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+
+  /* ── Footer ── */
+  footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:680px){
+    body{ font-size:18px; }
+    .page{ padding:0 26px 56px; border-left:none; border-right:none; }
+    .cover{ padding:54px 0 50px; }
+    .cover h1{ font-size:30px; }
+    .cover .subtitle{ font-size:19px; }
+    .story p{ text-align:left; }
+    .story .opening-first::first-letter{ font-size:48px; }
+  }
+
+  /* ---------- print / PDF ---------- */
+  @media print{
+    @page{
+      size:A5;
+      margin:18mm 16mm 20mm;
+    }
+    html,body{
+      background:#fff !important;
+    }
+    body{ font-size:11.5pt; line-height:1.6; }
+    .page{
+      max-width:none;
+      margin:0;
+      padding:0;
+      border:none;
+      background:#fff !important;
+    }
+    .cover{
+      min-height:calc(100vh - 38mm);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      border-bottom:none;
+      page-break-after:always;
+      padding:0;
+      margin:0;
+    }
+    .cover h1{ font-size:26pt; }
+    .psalm{ page-break-after:always; }
+    .psalm h2{ font-size:17pt; margin-bottom:4px; }
+    .psalm .psalm-rule{ margin-bottom:14pt; }
+    .psalm .stanza{ margin-bottom:7pt; }
+    .psalm .stanza p{ font-size:9.5pt; line-height:1.28; }
+    .psalm .jov{ margin-top:10pt; }
+    .ack{ page-break-before:auto; }
+    .section-divider{ margin:26pt 0; }
+    .story p{ orphans:2; widows:2; }
+    .epilogue-head{ page-break-before:avoid; }
+  }
+</style>
+</head>
+<body>
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html">Reflections</a>
+  <a href="/old/articles.html">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html" class="current">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+<div class="page">
+
+  <!-- ============ COVER ============ -->
+  <header class="cover">
+    <div class="eyebrow">Hesed Words &middot; A Story for Younger Readers</div>
+    <div class="roundel">&#10022;</div>
+    <div class="short-rule"></div>
+    <h1>Who Would<br>Have Thought</h1>
+    <p class="subtitle">a story</p>
+    <p class="epigraph">&ldquo;The directions of the Lord are right;<br>they make your heart glad.&rdquo;</p>
+    <p class="epigraph-ref">Psalm 19 &middot; 8</p>
+    <div class="byline">Norm Reed</div>
+    <div class="foundation">Onesimus Foundation &mdash; Theological Reflections</div>
+  </header>
+
+  <!-- ============ PSALM ============ -->
+  <section class="psalm">
+    <h2>Psalm 19</h2>
+    <div class="psalm-rule"></div>
+
+    <div class="stanza">
+      <p>The skies are telling how great God is.</p>
+      <p>Look up &mdash; the whole bright dome of them is showing what his hands have made.</p>
+      <p>Day after day, they keep speaking.</p>
+      <p>Night after night, they keep showing.</p>
+      <p>There are no words in it. No voice. Nothing you could actually hear.</p>
+      <p>And yet it goes out everywhere, to the ends of the earth.</p>
+    </div>
+
+    <div class="stanza">
+      <p>High up he has pitched a tent for the sun,</p>
+      <p>and the sun comes out like a bridegroom on his wedding morning,</p>
+      <p>like a runner at the start of a race, glad to run it.</p>
+      <p>It rises at one end of the sky and crosses to the other,</p>
+      <p>and nothing is hidden from its heat.</p>
+    </div>
+
+    <div class="stanza">
+      <p>God&rsquo;s teaching is perfect; it brings you back to life.</p>
+      <p>What God says can be trusted; it makes a simple person wise.</p>
+      <p>God&rsquo;s directions are right; they make your heart glad.</p>
+      <p>God&rsquo;s commands are clear; they help you see.</p>
+      <p>Standing in awe of God is clean, and it lasts for ever.</p>
+      <p>The way God decides things is true, and fair, all the way through.</p>
+    </div>
+
+    <div class="stanza">
+      <p>All of it is worth more than gold &mdash; than the purest, heaviest gold.</p>
+      <p>It is sweeter than honey, than honey straight from the comb.</p>
+    </div>
+
+    <div class="stanza">
+      <p>It is how I am warned.</p>
+      <p>It is how I am kept.</p>
+    </div>
+
+    <div class="stanza">
+      <p>But who can see their own mistakes?</p>
+      <p>Forgive the ones I don&rsquo;t even know I&rsquo;m making.</p>
+      <p>And keep me from doing wrong on purpose &mdash;</p>
+      <p>don&rsquo;t let it get a hold on me.</p>
+      <p>Then I&rsquo;ll be clean, and clear of the worst.</p>
+    </div>
+
+    <div class="stanza">
+      <p>Let the words of my mouth and the thoughts of my heart</p>
+      <p>be pleasing to you, Lord.</p>
+      <p>You are my rock.</p>
+      <p>You are the one who brings me back.</p>
+    </div>
+
+    <p class="jov">JOV &mdash; Jess&rsquo;s Own Version</p>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <main class="story">
+
+    <p class="opening-first first">The phone lit up again. Maya, this time. Three photos: the beach, somebody&rsquo;s feet in the sand, a chip shop with a queue out the door. <em>wish u were here!!</em> with the little crying-laughing face that didn&rsquo;t mean anyone was crying.</p>
+    <p>Jess put the phone face-down on the duvet and looked at the ceiling.</p>
+    <p>It was Tuesday. Or it might have been Wednesday. The holidays had gone soft in the middle, the way they did, so the days stopped having edges. Everyone was gone. Maya at the coast. Priya at her cousins&rsquo;. The whole group scattered to places with better light, and the group chat just a slow drip of other people&rsquo;s good time, arriving on her ceiling-staring afternoon like postcards from a country she hadn&rsquo;t been invited to.</p>
+    <p>Downstairs, the telly murmured. That meant Gran was awake.</p>
+    <p>Jess didn&rsquo;t move.</p>
+    <p>In an hour, maybe less, she&rsquo;d go down and do the things. The medicine tablets in their little plastic days-of-the-week box. The kettle. The sitting with Gran while the afternoon show did its shouting and Gran watched it without really watching, her hands folded, asking the same two questions she always asked. <em>Are your mum and dad at work, love?</em> Yes, Gran. <em>And school&rsquo;s finished, is it?</em> It&rsquo;s the holidays, Gran. And then again, twenty minutes later, the same two, in the same order, like a song with only one verse.</p>
+    <p>She loved her gran. She did. That wasn&rsquo;t the thing.</p>
+    <p>The thing was that she couldn&rsquo;t say what the thing was.</p>
+    <p>It wasn&rsquo;t being bored, though she was. Bored was Sunday-afternoon, nothing-on, ordinary. This was underneath bored. This was the feeling that the whole week was a long grey corridor and she could see all the way to the end of it and it was just more corridor, and then the week after, and that she would do the tablets and the kettle and the sitting, and nobody would notice whether she did them well or badly or at all, and the photos would keep arriving, and she would keep lying here.</p>
+    <p>She picked the phone back up. Put it down again without looking.</p>
+    <p>There was a thought she&rsquo;d been having lately. It came on the empty afternoons, when there was nothing to do and nowhere to be, and it wasn&rsquo;t loud. It was quiet. It just said, in a calm and reasonable sort of way, <em>what&rsquo;s the actual point of you</em> &mdash; and the worst part wasn&rsquo;t that it was cruel. The worst part was that it sounded <em>true.</em> It sounded like it was simply telling her something obvious, the way you&rsquo;d tell someone it was raining.</p>
+    <p>She didn&rsquo;t have a name for that thought. She didn&rsquo;t know you were allowed to argue with it. It felt less like a feeling and more like a fact she&rsquo;d only just noticed &mdash; the way you might suddenly notice the hum of the fridge and then not be able to un-hear it.</p>
+    <p>Downstairs, the telly laughed at something. Gran wouldn&rsquo;t have laughed. Gran would be sitting with her hands folded, waiting, the way she waited for everything now.</p>
+    <p>Jess swung her legs off the bed. The carpet was warm where the sun had been lying on it all afternoon, a long stripe of it across the floor, and she stood in the warm part for a second without meaning to, the heat coming up through her feet, and she couldn&rsquo;t have told you why she stood there, only that she did, before she went down to do the things.</p>
+
+    <div class="section-divider">&#10022;</div>
+
+    <p class="first">Sunday came the way Sundays did, whether you wanted them or not.</p>
+    <p>Jess sat in the third row from the back, which was where they always sat, between her mum and the gap where her dad would sit once he&rsquo;d finished doing whatever he did at the back with the sound system. Gran was at the end of the row in the chair they kept for her, handbag on her lap with both hands on top of it like she was guarding it.</p>
+    <p>Jess wasn&rsquo;t listening. She&rsquo;d got good at this &mdash; the sitting-still face, the eyes-forward face, while the actual her went somewhere else entirely. She was thinking about nothing, mostly. The way the light came through the window on the left and made a coloured shape on the carpet that moved if you watched it long enough. Whether Maya was back yet. The grey corridor of the week behind her and the grey corridor of the week ahead, with only this hour stuck in the middle of it like a held breath.</p>
+    <p>The pastor was a kind man with glasses he was always pushing up. He talked for a while. Jess didn&rsquo;t follow it. And then he stopped talking, and there was the shuffle and settle of everyone bowing their heads, and she bowed hers too because that&rsquo;s what you did, and he prayed.</p>
+    <p>She wasn&rsquo;t listening to that either. Not at first.</p>
+    <p>And then she was.</p>
+    <p>&ldquo;Let the words of my mouth,&rdquo; the pastor said, in the slightly different voice he used for praying, slower, like the words weighed more, &ldquo;and the meditation of my heart, be acceptable in your sight, O Lord &mdash; my rock, and my redeemer.&rdquo;</p>
+    <p>Jess opened her eyes.</p>
+    <p>She didn&rsquo;t know why. Something in it had reached across the room and put a hand on her, lightly, the way you&rsquo;d touch someone&rsquo;s shoulder to get them to turn round. <em>The meditation of my heart.</em> She turned the words over. She didn&rsquo;t entirely know what <em>meditation</em> meant &mdash; something to do with thinking, the thinking you did when you weren&rsquo;t trying to, the thinking that just <em>happened</em> &mdash; and <em>heart</em> she understood, and putting them together gave her something she didn&rsquo;t have words for but recognised completely, the way you recognise a smell from when you were small.</p>
+    <p>The meditation of her heart. The thinking that just happened. The empty-afternoon thinking. The thought that told her the point of her.</p>
+    <p class="interior">Be acceptable.</p>
+    <p>She didn&rsquo;t know what that meant either, not really, but it landed somewhere under her ribs and stayed there. Acceptable to who? In whose sight? She&rsquo;d been lying on her bed all week with the meditation of her heart going round and round saying <em>what&rsquo;s the point of you</em>, and here was the pastor asking &mdash; for what? For different thinking? For the thinking to be <em>allowed</em> to be looked at? For someone to look at it and not turn away?</p>
+    <p>The prayer had already moved on. The pastor was thanking God for something, the congregation was murmuring along, and the moment was closing over like water. But Jess sat with her eyes open now, not going anywhere else, here in the third row from the back, holding a sentence she hadn&rsquo;t been meant to catch.</p>
+    <p class="interior">My rock and my redeemer.</p>
+    <p>She didn&rsquo;t know what a redeemer was. She made a note of it, somewhere, the way you note a word you mean to look up and usually don&rsquo;t.</p>
+    <p>But she thought, in the smallest voice, almost not a thought at all: <em>I&rsquo;d like to know where that came from.</em></p>
+    <p>And beside her, Gran sat with her hands folded on her handbag, her lips barely moving, somewhere else entirely &mdash; somewhere with better light, maybe, a country Jess hadn&rsquo;t been invited to. Gran wasn&rsquo;t following the book. She didn&rsquo;t need to. Whatever the pastor had reached for, Gran already had it, folded up small and kept close, the way she kept everything now.</p>
+    <p>Jess looked at her for a moment, and didn&rsquo;t know what she was looking at.</p>
+    <p>Then she faced front again, holding a sentence she hadn&rsquo;t been meant to catch.</p>
+
+    <div class="section-divider">&#10022;</div>
+
+    <p class="first">The Bibles in the house were Gran&rsquo;s.</p>
+    <p>There were three of them, and Jess found them on the Monday, in the bottom of the cabinet in Gran&rsquo;s room while Gran slept in the chair downstairs with the telly going. She hadn&rsquo;t planned to look. She&rsquo;d gone in to find the spare blanket and there they were, stacked, and she&rsquo;d remembered the sentence before she&rsquo;d remembered deciding to.</p>
+    <p>The biggest one was enormous and smelled of dust and something sweeter underneath, and the print was tiny and ran in two columns, and the words were all <em>thee</em> and <em>thou</em> and <em>hath</em>. She sat on the edge of Gran&rsquo;s bed with it open on her knees and no idea where to start. There were a lot of pages. She didn&rsquo;t know it was called Psalms or that there were a hundred and fifty of them or that they had numbers. She just knew the pastor had said a thing about the words of his mouth, and she started turning pages looking for it the way you&rsquo;d look for a face in a crowd.</p>
+    <p>It took a long time. The afternoon moved across the floor.</p>
+    <p>She nearly gave up twice. And then &mdash; because the big columns were impossible and her eyes kept sliding off them &mdash; she remembered her phone.</p>
+    <p>She typed it in the way she&rsquo;d heard it. <em>let the words of my mouth and the meditation of my heart.</em></p>
+    <p>It came up straight away. <em>Psalm 19, verse 14.</em> There was a little number, and you could tap it, and it gave you the whole thing, and best of all there was a button that changed the words. The first version it showed her was the <em>thee</em> and <em>thou</em> kind, the same closed thing as Gran&rsquo;s big book. But the button gave her others. She tapped through them, and somewhere in the middle the words went suddenly clear, like wiping fog off the inside of a window with your sleeve &mdash;</p>
+    <p class="interior">May these words of my mouth and this thinking in my heart be pleasing to you.</p>
+    <p>She read it twice. <em>This thinking in my heart.</em> That was the meditation. That was the round-and-round. Somebody three thousand years ago &mdash; she didn&rsquo;t know it was three thousand, but it felt old, it felt older than Gran &mdash; somebody that long ago had the round-and-round thinking too, and instead of lying on a bed with it, had said it out loud, to God, like handing someone a tangled thing and asking them to look at it.</p>
+    <p>You were allowed to do that.</p>
+    <p>That was the part that stopped her. You were <em>allowed.</em> The thought on the empty afternoons, the calm reasonable one telling her the point of her &mdash; you didn&rsquo;t have to just lie there and let it talk. You could pick it up and show it to someone. <em>Is this true? Is this acceptable? Will you look at it?</em></p>
+    <p>She scrolled up to see what came before.</p>
+    <p>And there were these strange small lines, stacked, all built the same way, and at first they slid past her the way the columns had. Something about <em>law</em> and <em>testimony</em>. They sounded like school. She almost scrolled away.</p>
+    <p>But one of them caught.</p>
+    <p class="interior">The precepts of the Lord are right, giving joy to the heart.</p>
+    <p>Jess stopped.</p>
+    <p>She read it again. <em>Giving joy to the heart.</em></p>
+    <p>She didn&rsquo;t care, just then, what <em>precepts</em> were. The other half was the thing. Somewhere in this old stacked list of lines there was one that named the exact hole in her &mdash; not the boredom, not the photos, not the corridor &mdash; the thing <em>underneath</em> all that, the down she couldn&rsquo;t say. Joy to the heart. She had been trying for a week to remember what that even felt like. She&rsquo;d been watching other people&rsquo;s joy arrive on her ceiling in little squares and she hadn&rsquo;t been able to find her own anywhere, and she&rsquo;d started to think maybe she&rsquo;d never really had it, maybe it was a thing other people got and she&rsquo;d missed, and here was a line three thousand years old that talked about it like it was <em>available.</em> Like it came from somewhere. Like there was a place it was kept.</p>
+    <p class="interior">Giving joy to the heart.</p>
+    <p>She sat very still on the edge of Gran&rsquo;s bed with the dust and the sweetness in the air and the big closed book beside her and the small clear words in her hand, and for the first time all week the round-and-round went quiet, because she was reading instead, and what she was reading seemed to be about her.</p>
+    <p>Downstairs the telly laughed. Gran slept on.</p>
+    <p>Jess looked at the stacked lines &mdash; six of them, she could see now, six little rungs &mdash; and thought: <em>what are the others.</em></p>
+
+    <div class="section-divider">&#10022;</div>
+
+    <p class="first">She went looking for the others that night, in bed, with the phone bright in the dark and the house asleep.</p>
+    <p>She&rsquo;d written the verse number on the back of her hand in biro so she wouldn&rsquo;t lose it. Psalm 19. She found it again and read the six rungs slowly this time, top to bottom, and most of them still slid past &mdash; <em>testimony</em>, <em>statutes</em>, words that belonged to a world she didn&rsquo;t live in. But she&rsquo;d learned the trick now. You ignored the hard front half of each line and you looked at what it <em>did.</em> Each line was built the same way: here&rsquo;s a thing God said, and here&rsquo;s what it does to a person. It was the second half that was about her.</p>
+    <p>So she read them for the second halves, like reading only the answers.</p>
+    <p class="interior">Reviving the soul.</p>
+    <p>She didn&rsquo;t know <em>soul</em> exactly but she knew <em>reviving</em>, because of the posters at school, the ones about the recovery position and the dummy you pressed on, BRING THEM BACK. Reviving was for someone who&rsquo;d stopped. Someone who&rsquo;d gone under and needed bringing up. She lay there and thought, with a kind of quiet shock, <em>that&rsquo;s me, though. That&rsquo;s the feeling-really-down, the going-under-without-drowning, the lying-here.</em> She hadn&rsquo;t known there was a word for it that wasn&rsquo;t a bad word. She&rsquo;d thought down was just what she was. The line said down was something you could be <em>brought back from.</em></p>
+    <p class="interior">Making wise the simple.</p>
+    <p>This one she almost skipped, because <em>simple</em> sounded like an insult, and then she read it again and understood it the other way &mdash; simple like <em>new</em>, like <em>doesn&rsquo;t know yet</em>, like <em>missed the lesson everyone else was in.</em> That was a feeling she knew exactly. The feeling that everyone else had been handed a manual for how to be a person and hers had got lost, and they all knew things she didn&rsquo;t and she was just pretending, day to day, hoping no one would ask her the question she couldn&rsquo;t answer. The line said the simple one &mdash; the one without the manual &mdash; could be made wise. Not <em>was</em> stupid. Could be <em>made</em> wise. There was a difference and the difference was everything.</p>
+    <p>She lay with the phone on her chest for a bit, in the dark.</p>
+    <p>It was a strange thing, to be found out by a list. To read something old and stacked and churchy-looking and have it turn round and describe the inside of you, item by item, things you&rsquo;d never said out loud, things you&rsquo;d half thought no one else had ever felt. She&rsquo;d come looking for the joy one. She hadn&rsquo;t expected the list to <em>know</em> her.</p>
+    <p>She went back to the joy one and read it again because it was hers &mdash; <em>giving joy to the heart</em> &mdash; and this time she noticed it didn&rsquo;t say <em>will make you happy.</em> It said the heart could be <em>given</em> joy, the way you&rsquo;re given a present, from outside, by someone. Joy wasn&rsquo;t something she had to manufacture out of an empty afternoon with nothing in it. It came from somewhere. It was given. She&rsquo;d been trying to squeeze it out of herself like the last of the toothpaste and the line was telling her she&rsquo;d been looking in the wrong place the whole time &mdash; not inside the down, <em>outside</em> it, held out, offered.</p>
+    <p>Then she got to the fourth one, and the fourth one was the one that turned the lock.</p>
+    <p class="interior">Enlightening the eyes.</p>
+    <p>She read it and didn&rsquo;t think much of it at first. Eyes. Seeing. Fine. But it wouldn&rsquo;t leave her alone, and she lay there in the dark turning it over, and slowly it came open.</p>
+    <p>The thought. The calm one. The one that came when there was nothing to do and told her <em>what&rsquo;s the point of you</em> &mdash; quietly, reasonably, like it was only telling her something obvious.</p>
+    <p>She&rsquo;d believed it because it <em>sounded</em> true. It hadn&rsquo;t shouted, hadn&rsquo;t lied in any obvious way. It had just stated things, quietly, like facts. And she&rsquo;d taken them as facts because she couldn&rsquo;t see anything to argue with.</p>
+    <p>That was the thing. She&rsquo;d been seeing in the dark.</p>
+    <p>In the dark you can&rsquo;t tell a true thing from a thing that&rsquo;s only sitting there saying it&rsquo;s true. They look the same. You need light to tell the difference.</p>
+    <p class="interior">Enlightening the eyes.</p>
+    <p>She sat up in bed.</p>
+    <p>It was the first time it had ever occurred to her &mdash; really occurred, not as a thought but as something she felt go <em>click</em> &mdash; that the thought might simply be wrong. Not cruel-but-honest. Just wrong. Lying, in a calm voice.</p>
+    <p>And she saw why she&rsquo;d never caught it. She&rsquo;d been trying to judge the thought from inside the same empty afternoon it came from. Checking it with the same tired seeing that had handed it to her in the first place.</p>
+    <p>You couldn&rsquo;t do that. You couldn&rsquo;t catch your own thinking out using the very thinking that had gone wrong.</p>
+    <p>You needed light from somewhere else. From outside.</p>
+    <p class="interior">Enlightening the eyes.</p>
+    <p>It was such a relief that it almost wasn&rsquo;t &mdash; almost tipped over into something that prickled her eyes &mdash; because if the seeing was the problem, then the things she&rsquo;d seen weren&rsquo;t true, and <em>what&rsquo;s the point of you</em> wasn&rsquo;t a fact she&rsquo;d discovered, it was just a thing she&rsquo;d been unable to see past. The corridor wasn&rsquo;t grey. She&rsquo;d been looking at it in no light. There might be a whole week in there, in colour, that she simply hadn&rsquo;t been able to see.</p>
+    <p>She didn&rsquo;t get to the last two rungs that night. <em>Pure, enduring for ever</em> and <em>true, and altogether righteous</em> &mdash; she&rsquo;d find them later, and they&rsquo;d matter, but not now. Now she lay back down with the phone gone dark on her chest and her eyes open in the proper dark, the ordinary night-time dark that isn&rsquo;t the same as the other dark at all, and she thought about light, and about being brought back, and about a joy that came from somewhere and was held out, and she did not hear the calm thought at all, because for once she wasn&rsquo;t alone in the dark with it. She had a stack of six old lines, four of which she now half understood, and they were on her side, and they had known her before she&rsquo;d said a word.</p>
+    <p>On the back of her hand the biro had smudged. Psalm 19. She&rsquo;d write it again in the morning.</p>
+
+    <div class="section-divider">&#10022;</div>
+
+    <p class="first">The change didn&rsquo;t come all at once, and it didn&rsquo;t come the way she expected.</p>
+    <p>She&rsquo;d half thought &mdash; without putting it into words &mdash; that she&rsquo;d wake up the next morning fixed. That she&rsquo;d found the secret and now the week would turn bright and she&rsquo;d feel the joy the line had promised, handed to her like a present, first thing, with the curtains opened.</p>
+    <p>It wasn&rsquo;t like that.</p>
+    <p>She woke up and the morning was just a morning. Grey light, the same ceiling, Maya already posting from somewhere with a pool. The down was still there, sitting where it always sat. For a moment she thought the whole thing had been nonsense &mdash; a feeling she&rsquo;d had in the dark with a bright phone, gone now, like a dream you can&rsquo;t hold on to.</p>
+    <p>But something <em>was</em> different, and it took her till the afternoon to work out what.</p>
+    <p>It wasn&rsquo;t that she felt better. It was that she didn&rsquo;t quite <em>believe</em> the down any more. It was still there &mdash; but now there was a small gap between her and it, a little daylight, and in the gap she could <em>look</em> at it instead of just being inside it. <em>Is that true, though?</em> she found herself thinking, when the what&rsquo;s-the-point thought came round on its usual track. <em>Or is that just the dark talking?</em></p>
+    <p>She&rsquo;d never asked it a question before. You could ask it a question. That changed something, asking.</p>
+    <p>It was Gran, though, where she saw it most.</p>
+    <p>She took the medicine tablets in after lunch, the little box with its seven doors, and she&rsquo;d done this every day for weeks with a kind of locked-up resentment, the unfairness of it sitting in her chest &mdash; <em>why me, why my holiday, why is this my job</em> &mdash; and she set the box down on the arm of Gran&rsquo;s chair and went to do the kettle and stopped.</p>
+    <p>Because she&rsquo;d looked at Gran. Actually looked, instead of seeing the duty.</p>
+    <p>Gran had her hands folded on the handbag she didn&rsquo;t need indoors, and she was watching the window, not the telly, the light on her face, and she looked &mdash; Jess didn&rsquo;t have the word for a moment and then she did &mdash; she looked <em>patient.</em> Not bored. Not waiting-to-die, the way Jess had darkly assumed. Patient, like someone who knew something, who&rsquo;d had it folded up small and kept close, the way she kept everything now.</p>
+    <p class="interior">Are your mum and dad at work, love?</p>
+    <p>Yes, Gran.</p>
+    <p class="interior">And school&rsquo;s finished, is it?</p>
+    <p>It&rsquo;s the holidays, Gran.</p>
+    <p>And the same as always &mdash; and not the same at all, because this time Jess heard it differently. Gran wasn&rsquo;t asking because she&rsquo;d forgotten. Or she was, but that wasn&rsquo;t the whole of it. She was asking because she liked to know where her people were. She was keeping them close the only way the day allowed. The two questions weren&rsquo;t a broken song with one verse. They were Gran saying, over and over in the only words she had left to hand: <em>you&rsquo;re here, and I&rsquo;m glad.</em></p>
+    <p>Jess sat down beside her instead of going to do the kettle.</p>
+    <p>She didn&rsquo;t say anything. She just sat, the way Gran sat, and looked at the window where the light was, and for a little while the two of them were quiet together, and it wasn&rsquo;t a grey corridor at all. It was an afternoon. With her gran. With the sun coming in.</p>
+    <p>It didn&rsquo;t last, of course.</p>
+    <p>By the evening the old thinking had crept back &mdash; Maya posted a whole group of them at the beach, six girls, somebody&rsquo;s birthday, and Jess wasn&rsquo;t in a single frame, and the what&rsquo;s-the-point came round hard, harder than it had in days, and for an hour she lay on her bed and believed it again, all of it, the corridor grey from end to end.</p>
+    <p>But this time, somewhere underneath, she knew it was the dark talking. She didn&rsquo;t <em>feel</em> it was the dark talking &mdash; feeling said the dark was simply right &mdash; but she <em>knew</em> it, the way you know the sun&rsquo;s still there behind cloud even when you can&rsquo;t see it. And knowing it, without feeling it, turned out to be enough to get her through the hour. She didn&rsquo;t have to win the argument. She only had to remember there <em>was</em> an argument, that the thought wasn&rsquo;t a fact, that she&rsquo;d seen daylight once and it was real even when it was hidden.</p>
+    <p>She fell asleep before she&rsquo;d sorted it out.</p>
+    <p>In the morning the gap was there again. A little daylight. And the down, when it came, came smaller.</p>
+
+    <div class="section-divider">&#10022;</div>
+
+    <p class="first">The last two rungs were waiting for her.</p>
+    <p>She&rsquo;d never gone back for them &mdash; <em>pure, enduring for ever</em> and <em>true, and altogether righteous</em> &mdash; and on the Thursday, with the gap holding and the down come smaller three mornings running, she opened the phone and read the whole six again, top to bottom, and this time none of them slid past.</p>
+    <p>She read them slowly, the way you&rsquo;d eat something you wanted to last.</p>
+    <p>And just underneath, before the verse about her own mouth, there were two more lines she&rsquo;d skipped right over the first night, too busy hunting, and they stopped her now completely.</p>
+    <p class="interior">More precious than gold, it said. Than much pure gold.</p>
+    <p class="interior">Sweeter than honey, than honey from the comb.</p>
+    <p>Jess sat with that.</p>
+    <p>She thought about the photos. The whole week of them, arriving on her ceiling &mdash; the beach, the pool, the six girls at somebody&rsquo;s birthday, the chip shop with the queue. She&rsquo;d wanted to be in them so badly it had hollowed her out. She&rsquo;d lain there measuring her grey week against their bright ones and come up empty every time, and the measuring had been half of what made the down so heavy.</p>
+    <p>And the strange thing &mdash; the thing she turned over now &mdash; was that she didn&rsquo;t want them the same way any more.</p>
+    <p>It wasn&rsquo;t that the beach looked bad. It was that she&rsquo;d found something that made the wanting go quiet. Something the photos couldn&rsquo;t have given her even if she&rsquo;d been in every single one. Because you could be at the beach with all your friends and still have the what&rsquo;s-the-point thought come round on its track at night, in the dark, and not know you were allowed to argue with it. The girls in the photos might have it too. Being in the picture didn&rsquo;t fix the thing the line had fixed.</p>
+    <p>She&rsquo;d have traded the whole week, on Monday, to be somewhere else. And here it was Thursday, and she wouldn&rsquo;t. Not because the week had got better. Because <em>she</em> had &mdash; her seeing had &mdash; and what she&rsquo;d found in the grey corridor was worth more than the bright places she&rsquo;d envied, the way gold is worth more than the foil it looks like from far off.</p>
+    <p>More precious than gold. Sweeter than honey.</p>
+    <p>She understood it now. It wasn&rsquo;t a thing you were told. It was a thing that turned out to be true once you&rsquo;d been hungry enough to taste it.</p>
+    <p>She wanted to keep it.</p>
+    <p>That was the feeling that arrived, clear and sudden, on the Thursday afternoon: she wanted to <em>keep</em> this, to not lose it the way you lose a dream, to have it somewhere she&rsquo;d see it. Not on the phone, where everything scrolled away. Somewhere that stayed.</p>
+    <p>She found paper &mdash; proper paper, from the back of an old pad &mdash; and her good pens, the ones she didn&rsquo;t let her little cousins near. And she sat at the desk by her window, in the warm part of the afternoon, and she made it.</p>
+    <p>She did the words first, in her best hand, slow, getting the letters right. She didn&rsquo;t copy the <em>thee-and-thou</em> one. She did it her way, the way it had come clear on the phone, the way it was hers now:</p>
+    <p class="interior">Let the words of my mouth and the thoughts of my heart be pleasing to you, Lord. You are my rock. You are the one who brings me back.</p>
+    <p>She&rsquo;d looked up <em>redeemer</em> in the end. It had a lot of long explanations, but underneath them all it seemed to mean someone who comes and gets you. Someone who pays whatever it takes to bring you back from where you&rsquo;ve ended up. <em>The one who brings me back.</em> She liked that better than the word. It was what had happened.</p>
+    <p>Then she drew around the words. Not much &mdash; she wasn&rsquo;t trying to be clever. A border. Some light coming in from a corner, the way it did across her carpet in the afternoons. And down at the bottom, small, so you&rsquo;d only see it if you looked: <em>Psalm 19.</em></p>
+    <p>She held it up when it was done. It wasn&rsquo;t perfect. One line of letters ran slightly uphill. But it was hers, every bit of it, the words and the looking-up and the bringing-back, and she got the tape and stuck it on the wall beside her bed, where her eyes would land on it first thing, before the phone, before the ceiling, before anything.</p>
+    <p>Where the light would reach it in the morning.</p>
+
+    <div class="section-divider">&#10022;</div>
+
+    <p class="epilogue-head">Epilogue</p>
+
+    <p class="first">The next Sunday she sat in the third row from the back, between her mum and the gap where her dad would sit once he&rsquo;d sorted the sound, with Gran at the end of the row in her chair, handbag on her lap, both hands on top of it.</p>
+    <p>Everything was the same. The same light through the same window, the coloured shape on the carpet that moved if you watched it. The same shuffle and settle. The same kind man pushing his glasses up.</p>
+    <p>Everything was the same, and she was not.</p>
+    <p>She&rsquo;d made a second poster. A smaller one, on the Saturday, the same words in the same slow careful hand, the light coming in from the corner. She had it folded in her pocket now and she&rsquo;d been holding the edge of it through most of the service, not really listening again &mdash; but a different not-listening this time, an easy one, the not-listening of someone who&rsquo;s somewhere quiet inside rather than somewhere grey.</p>
+    <p>When it was over and people were standing and gathering their things and the hum of after-church filled the room, she went up the side, against the flow, to where the pastor stood near the front saying his goodbyes.</p>
+    <p>She waited till there was a gap. Then she held it out.</p>
+    <p>&ldquo;I made you this,&rdquo; she said.</p>
+    <p>He took it, and unfolded it, and looked. She watched him read it &mdash; his eyes going along the lines, the slight uphill row, the light in the corner, <em>Psalm 19</em> small at the bottom. She didn&rsquo;t know what she was waiting for. Some flicker, maybe. Some sign that he knew.</p>
+    <p>&ldquo;Oh, that&rsquo;s lovely, Jess,&rdquo; he said. He smiled at her, a kind, ordinary smile, already half turning to the next person waiting. &ldquo;Thank you. Did you do the lettering yourself? That&rsquo;s really nice.&rdquo;</p>
+    <p>&ldquo;Yeah,&rdquo; she said. &ldquo;I did it myself.&rdquo;</p>
+    <p>&ldquo;Lovely. You should keep that up.&rdquo; And he pushed his glasses back up his nose, and the next person had his hand out, and that was that.</p>
+    <p>He&rsquo;d put it in his jacket pocket. He had no idea.</p>
+    <p>He&rsquo;d prayed a sentence, three Sundays ago, in the slightly different voice he used for praying &mdash; the same sentence he&rsquo;d probably prayed a hundred times, that he&rsquo;d say again next week without thinking, words of his mouth, meditation of his heart &mdash; and he had no way of knowing that it had gone out across the room and landed on one bored girl in the third row who wasn&rsquo;t even listening, and turned her clean around. He didn&rsquo;t know about the dim afternoons or the box of medicine tablets or the thought that came in the dark. He didn&rsquo;t know about Gran&rsquo;s two questions heard new, or the gap, or the daylight, or the honey, or the long slow climb of one quiet week. He&rsquo;d never know. He&rsquo;d handed her something without knowing his hands were full, and she&rsquo;d taken it, and it had brought her back.</p>
+    <p>She walked back down the side of the church to where Gran was waiting in her chair.</p>
+    <p>&ldquo;Ready, Gran?&rdquo;</p>
+    <p class="interior">Are your mum and dad here, love?</p>
+    <p>&ldquo;They&rsquo;re just getting the car.&rdquo;</p>
+    <p>Gran nodded, and gathered her handbag, and let Jess take her arm, and the two of them went out together into the ordinary light, which was only the sun, which had been there the whole time, doing its work whether or not anyone in the building had thought to look up.</p>
+
+    <div class="end-mark">&#10022;</div>
+
+    <!-- ============ ACKNOWLEDGMENT ============ -->
+    <div class="ack">
+      <p class="ack-label">A note on the writing</p>
+      <p>This story did not begin with artificial intelligence. It began with years of ministry, reading, prayer, suffering, and conversation.</p>
+      <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+      <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+    </div>
+
+  </main>
+
+</div>
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+</body>
+</html>

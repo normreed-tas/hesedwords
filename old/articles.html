@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles — Hesed Words</title>
+<meta name="description" content="Pastoral and theological articles by Norm Reed. Scripture, justice, and the formation of the church.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --parchment:#f4ecd8;
+    --parchment-deep:#ece1c7;
+    --parchment-mid:#f0e6ce;
+    --ink:#1f1b16;
+    --ink-soft:#3a332a;
+    --ink-light:#4a3218;
+    --gold:#b08d3f;
+    --gold-deep:#8a6d2b;
+    --border:#c8a96e;
+    --border-light:#ddc48a;
+    --rule:#d8c9a3;
+    --shadow:rgba(30,21,8,0.18);
+    --maxw:52rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:radial-gradient(ellipse at top,#f7f0de 0%,var(--parchment) 55%,var(--parchment-deep) 100%) fixed;
+    color:var(--ink);
+    font-family:"Cormorant Garamond",Georgia,serif;
+    font-size:1.15rem;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ── Nav ── */
+  nav.hw-nav{
+    background:var(--ink);
+    font-family:"Cinzel",serif;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    display:flex;
+    justify-content:center;
+    gap:2.2rem;
+    padding:1.05rem 1rem;
+    flex-wrap:wrap;
+  }
+  nav.hw-nav a{color:var(--parchment);text-decoration:none;opacity:.82;transition:opacity .2s;}
+  nav.hw-nav a:hover{opacity:1;color:#fff;}
+  nav.hw-nav a.current{opacity:1;border-bottom:1px solid var(--gold);padding-bottom:.15rem;}
+
+  /* ── Header ── */
+  .section-header{
+    text-align:center;
+    padding:4rem 1.5rem 2.8rem;
+    max-width:var(--maxw);
+    margin:0 auto;
+  }
+  .section-eyebrow{
+    font-family:"Cinzel",serif;
+    font-size:.72rem;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-bottom:1rem;
+  }
+  .section-title{
+    font-family:"Cinzel",serif;
+    font-weight:500;
+    font-size:clamp(1.8rem,4vw,2.8rem);
+    color:var(--ink);
+    margin-bottom:1.2rem;
+    letter-spacing:.04em;
+  }
+  .section-rule{
+    width:3rem;
+    height:1px;
+    background:var(--gold);
+    margin:.8rem auto 1.6rem;
+  }
+  .section-desc{
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:1.1rem;
+    max-width:36rem;
+    margin:0 auto;
+  }
+
+  hr.rule-line{
+    border:0;
+    border-top:1px solid var(--rule);
+    max-width:var(--maxw);
+    margin:0 auto 2.4rem;
+  }
+
+  /* ── Article listing ── */
+  .listing{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 1.5rem 5rem;
+  }
+  .article-card{
+    display:grid;
+    grid-template-columns:7rem 1fr;
+    gap:0 2rem;
+    border-top:1px solid var(--rule);
+    padding:2rem 0;
+    text-decoration:none;
+    color:var(--ink);
+    transition:background .2s;
+  }
+  .article-card:last-of-type{border-bottom:1px solid var(--rule);}
+  .card-date{
+    font-family:"Cinzel",serif;
+    font-size:.68rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    padding-top:.35rem;
+    line-height:1.5;
+  }
+  .card-title{
+    font-family:"Cinzel",serif;
+    font-weight:500;
+    font-size:1.25rem;
+    line-height:1.25;
+    margin:0 0 .6rem;
+    transition:color .2s;
+  }
+  .article-card:hover .card-title{color:var(--gold-deep);}
+  .card-summary{
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0 0 .7rem;
+    font-size:1rem;
+  }
+  .card-ref{
+    font-family:"Cinzel",serif;
+    font-size:.64rem;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+  .card-ref::before{content:"✦ ";opacity:.6;}
+
+  /* Coming soon card */
+  .article-card.soon{opacity:.5;cursor:default;pointer-events:none;}
+
+  /* PDF link */
+  .card-pdf{
+    display:block;
+    font-family:"Cinzel",serif;
+    font-size:.65rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    text-decoration:none;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:2px;
+    margin-top:.5rem;
+    width:fit-content;
+    transition:color .2s,border-color .2s;
+  }
+  .card-pdf:hover{color:var(--gold);border-bottom-color:var(--gold);}
+
+  footer.hw-foot{
+    text-align:center;
+    font-family:"Cinzel",serif;
+    font-size:.7rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    padding:2.5rem 1rem 3.5rem;
+    opacity:.8;
+  }
+
+  @media(max-width:600px){
+    .article-card{grid-template-columns:1fr;gap:.4rem;}
+    .card-date{padding-top:0;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html">Reflections</a>
+  <a href="/old/articles.html" class="current">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+<header class="section-header">
+  <p class="section-eyebrow">Hesed Words</p>
+  <h1 class="section-title">Articles</h1>
+  <div class="section-rule"></div>
+  <p class="section-desc">Longer pastoral and theological writing — the questions that take more than a morning to work through.</p>
+</header>
+
+<hr class="rule-line">
+
+<div class="listing">
+
+  <a href="/old/articles/sitting-with-a-sinner.html" class="article-card">
+    <div class="card-date">August 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">Sitting with a Sinner</h2>
+      <p class="card-summary">A companion to An Interview with a Saint. My sister Ruth calls herself the black sheep of the family &mdash; and has quietly been the backbone of a church and a prison ministry for over a decade, without ever filing any of it under a category. On the two words we keep in our pockets for people, and the one Jesus refused to be embarrassed by.</p>
+      <span class="card-ref">Luke 15 &nbsp;·&nbsp; Norm Reed</span>
+      <a href="/old/articles/sitting-with-a-sinner.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <a href="/old/articles/an-interview-with-a-saint.html" class="article-card">
+    <div class="card-date">August 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">An Interview with a Saint</h2>
+      <p class="card-summary">The word arrives already furnished &mdash; Francis, Teresa, held at a distance so the rest of us are let off. The New Testament's word for saint, <em>hagioi</em>, is almost always plural: not one figure but a room full of ordinary ones. A recorded conversation with the author's sister Jessica, about a week spent training to care for people with AIDS thirty years ago, and what it means that nobody is a saint alone.</p>
+      <span class="card-ref">Romans 1:7 &middot; Philippians 1:1 &nbsp;·&nbsp; Norm Reed</span>
+      <a href="/old/articles/pdf/an-interview-with-a-saint.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <a href="/old/articles/measured-and-immeasurable.html" class="article-card">
+    <div class="card-date">August 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">Measured, and Immeasurable</h2>
+      <p class="card-summary">A young man in Zechariah's second vision goes out to survey Jerusalem, and is stopped &mdash; the city will not hold still to be measured. What that reversal of the demolition-line has to do with a burned man in a prison visits room, a tablet with a poor signal, and the sentence that took fourteen years to get truer rather than easier: <em>grace is not grace if you don't know the offence.</em></p>
+      <span class="card-ref">Zechariah 1&ndash;2 &middot; Ephesians 3 &nbsp;·&nbsp; Norm Reed</span>
+      <a href="/old/articles/pdf/measured-and-immeasurable.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <a href="/old/articles/vows.html" class="article-card">
+    <div class="card-date">August 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">The Vow That Is Not a Payment</h2>
+      <p class="card-summary">Most vows to God are made in a car park or a waiting room, and they all have the same shape: <em>if you get me out of this, I will</em> &mdash; which assumes a trade. The obligation is real; what is misplaced is what the obligation is <em>for</em>. On what a <em>neder</em> was, why Ecclesiastes warns against making one lightly, and what Jesus was actually objecting to.</p>
+      <span class="card-ref">Psalm 61 &middot; Ecclesiastes 5 &middot; Matthew 5 &nbsp;·&nbsp; Norm Reed</span>
+      <a href="/old/articles/pdf/vows.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <a href="/old/articles/what-did-jesus-call-wicked.html" class="article-card">
+    <div class="card-date">August 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">What Did Jesus Call Wicked?</h2>
+      <p class="card-summary">Psalm 58 is a psalm most Christians have never heard read aloud. Read alongside Psalm 82 and Matthew 23, it turns out to be saying what the gospel says &mdash; that authority given to protect the vulnerable, turned and used against them, has a name. Not a text the gospel improved on. A text that says what the gospel says.</p>
+      <span class="card-ref">Psalm 58 &middot; Matthew 23 &nbsp;·&nbsp; Norm Reed</span>
+      <a href="/old/articles/pdf/what-did-jesus-call-wicked.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <a href="/old/articles/is-there-no-hesed-in-john.html" class="article-card">
+    <div class="card-date">August 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">Is There No Hesed in John?</h2>
+      <p class="card-summary">The Greek word the Septuagint reaches for when translating hesed never appears in John's Gospel &mdash; not once in twenty-one chapters. But grace and truth, said twice in four verses at the very start, are almost certainly hesed we'emet in Greek clothing. The word doesn't go missing. It gets spent, once, and then John makes us watch it for twenty chapters.</p>
+      <span class="card-ref">John 1:14&ndash;17 &nbsp;·&nbsp; Norm Reed</span>
+      <a href="/old/articles/pdf/is-there-no-hesed-in-john.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <a href="/old/articles/reading-daniel-without-arithmetic.html" class="article-card">
+    <div class="card-date">July 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">Reading Daniel Without Arithmetic</h2>
+      <p class="card-summary">Daniel 11&ndash;12 has cost the church more peace than almost anything else in the Old Testament. Four broad readings, each guarding something real, and not one of them defending a date. The book itself says who reads it rightly &mdash; not the one with the best chronology, but the one being refined.</p>
+      <span class="card-ref">Daniel 11&ndash;12 &nbsp;·&nbsp; Norm Reed</span>
+      <a href="/old/articles/pdf/reading-daniel-without-arithmetic.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <a href="/old/articles/nobody-left-to-say-no.html" class="article-card">
+    <div class="card-date">July 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">Nobody Left to Say No</h2>
+      <p class="card-summary">Nebuchadnezzar on the roof of his palace, Howard Hughes in a sealed hotel room, Naaman in the Jordan, and a preacher buried in a pine box built by prisoners. Pride does not announce itself &mdash; it sounds, from the inside, like accuracy. The only real test is whether anyone is still able to tell you the truth, and whether you would listen.</p>
+      <span class="card-ref">Daniel 4 &nbsp;·&nbsp; Norm Reed</span>
+      <a href="/old/articles/pdf/nobody-left-to-say-no.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <a href="/old/articles/spot-the-difference.html" class="article-card">
+    <div class="card-date">July 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">Spot the Difference</h2>
+      <p class="card-summary">Psalm 14 and Psalm 53 are almost the same psalm &mdash; same opening, same verdict, same ache at the end. Two lines have gone missing from the middle of Psalm 53: the company God is with, and the place the poor could hide. The same cry goes up out of Zion, with nowhere else to look.</p>
+      <span class="card-ref">Psalm 14 &amp; Psalm 53 &nbsp;·&nbsp; Norm Reed</span>
+      <a href="/old/articles/pdf/spot-the-difference.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <a href="/old/articles/draw-me-the-voice-matters.html" class="article-card">
+    <div class="card-date">July 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">Draw Me! The Voice Matters</h2>
+      <p class="card-summary">Song of Songs 1:2&ndash;4 traces desire as it learns to speak &mdash; from report, to address, to a request small enough to be answered. Mashak is not a delicate word: it is the word for drawing a bow taut, for hauling a body from a pit. She is not inventing a metaphor. She is asking, by name, for hesed.</p>
+      <span class="card-ref">Song of Songs 1:2&ndash;4 &nbsp;·&nbsp; Norm Reed</span>
+      <a href="/old/articles/pdf/draw-me-the-voice-matters.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <a href="/old/articles/psalm-45-meekness.html" class="article-card">
+    <div class="card-date">July 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">Meekness</h2>
+      <p class="card-summary">Psalm 45 and the strange word at its centre. A King rides out in majesty for truth and righteousness — and meekness, sitting between two words about power where it should not be. Not softness, but power that refuses to grasp.</p>
+      <span class="card-ref">Psalm 45 &nbsp;·&nbsp; Norm Reed</span>
+      <a href="/old/articles/pdf/psalm-45-meekness.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <a href="/old/articles/ezra-had-the-scroll.html" class="article-card">
+    <div class="card-date">July 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">Ezra Had the Scroll</h2>
+      <p class="card-summary">Twenty-six names sit in the middle of Nehemiah 8, and most of us read straight past them. They are not a pause before the action — they are the subject of the sentence that matters most.</p>
+      <span class="card-ref">Nehemiah 8 &nbsp;·&nbsp; Norm Reed</span>
+      <a href="/old/articles/pdf/ezra-had-the-scroll.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <a href="/old/articles/until-we-reach-psalm-83.html" class="article-card">
+    <div class="card-date">July 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">Learning to Pray by Praying the Psalms — Until We Reach Psalm 83</h2>
+      <p class="card-summary">We say the Psalms will teach us to pray. Then the ground gives way.</p>
+      <span class="card-ref">Psalm 83 &nbsp;·&nbsp; Norm Reed</span>
+      <a href="/old/articles/pdf/until-we-reach-psalm-83.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <a href="/old/articles/the-song-begins-in-longing.html" class="article-card">
+    <div class="card-date">June 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">The Song Begins in Longing</h2>
+      <p class="card-summary">Why the greatest of all songs opens not with the kiss but with the wanting of it — a close reading of Song of Songs 1:1. The grammar that lurches from third person to second, the doubled kiss the Hebrew refuses to simplify, and the time the poem declines to fix.</p>
+      <span class="card-ref">Song of Songs 1:1 &nbsp;·&nbsp; Norm Reed</span>
+    </div>
+  </a>
+
+  <a href="/old/articles/not-finished-waking.html" class="article-card">
+    <div class="card-date">June 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">Not Finished Waking</h2>
+      <p class="card-summary">What Job and David staked everything on before either of them had proof — and what it gives a pastor standing at a graveside. Six movements from the ash heap to the resurrection, and the one word both men reached for when pressed to the floor.</p>
+      <span class="card-ref">Job 19:25–27 &nbsp;·&nbsp; Psalm 17:15 &nbsp;·&nbsp; Norm Reed</span>
+      <a href="/old/articles/pdf/not-finished-waking.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <a href="/old/articles/he-does-not-afflict-from-his-heart.html" class="article-card">
+    <div class="card-date">June 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">He Does Not Afflict From His Heart</h2>
+      <p class="card-summary">What Jeremiah reveals about the God who interrupts his own judgment. The grief behind the oracle, the ancient paths of Jeremiah 6:16, and the sentence from Lamentations that changes everything about how we read the prophets.</p>
+      <span class="card-ref">Jeremiah &nbsp;·&nbsp; Lamentations 3:32–33 &nbsp;·&nbsp; Norm Reed</span>
+      <a href="/old/articles/pdf/he-does-not-afflict-from-his-heart.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <a href="/old/articles/jesus-as-leader.html" class="article-card">
+    <div class="card-date">June 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">Jesus as Leader</h2>
+      <p class="card-summary">If we take the gospels seriously as the description of how Jesus actually conducted his ministry, does the leadership he modelled map onto the formation the contemporary church offers its pastors? Five movements, two weekly calendars, and the questions that don't go away.</p>
+      <span class="card-ref">A Hesedwords Reflection &nbsp;·&nbsp; Norm Reed</span>
+      <a href="/old/articles/pdf/jesus-as-leader.pdf" class="card-pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Download PDF</a>
+    </div>
+  </a>
+
+  <a href="/old/articles/when-the-heart-was-awake.html" class="article-card">
+    <div class="card-date">June 2026</div>
+    <div class="card-body">
+      <h2 class="card-title">When the Heart Was Awake</h2>
+      <p class="card-summary">The arc of desire in the Song of Songs — from longing into belonging into open-handed offering — and what interrupts it. The warm bed, the idol as ordinary comfort, Paul's anatomy of the divided self in Romans 7, and the hesed that kindles what we cannot work up in ourselves.</p>
+      <span class="card-ref">Song of Songs 5 &nbsp;·&nbsp; Romans 7 &nbsp;·&nbsp; Norm Reed</span>
+    </div>
+  </a>
+
+  <div class="article-card soon">
+    <div class="card-date">Coming Soon</div>
+    <div class="card-body">
+      <h2 class="card-title">I Will Carry You</h2>
+      <p class="card-summary">On nasa and sabal — the difference between the idols we must carry and the God who carries us.</p>
+      <span class="card-ref">Isaiah 46:4</span>
+    </div>
+  </div>
+
+</div>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>

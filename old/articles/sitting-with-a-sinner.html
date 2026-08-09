@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sitting with a Sinner — Hesed Words</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parchment:#e8dfc8;
+  --parchment-page:#f3ecda;
+  --gold:#c9a84c;
+  --gold-deep:#A67C2E;
+  --gold-soft:#D9C49A;
+  --muted:#6B5C45;
+  --rule:#C8B58F;
+  --ink:#2f2921;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--parchment);
+  color:var(--ink);
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:1.24rem;
+  line-height:1.72;
+}
+nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+nav.hw-nav a:hover{opacity:1;color:#fff;}
+nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+.page{
+  max-width:44rem;
+  margin:0 auto;
+  background:var(--parchment-page);
+  padding:4rem 3.2rem 3rem;
+  box-shadow:0 0 2.5rem rgba(60,48,30,.10);
+}
+header.piece{
+  text-align:center;
+  margin-bottom:3.2rem;
+}
+header.piece .kicker{
+  font-family:'Cinzel',serif;
+  font-size:.7rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  margin-bottom:1.1rem;
+}
+header.piece h1{
+  font-family:'Cinzel',serif;
+  font-weight:600;
+  font-size:2.05rem;
+  line-height:1.28;
+  margin:0 0 .7rem;
+  color:#241f19;
+}
+header.piece .subtitle{
+  font-size:1.16rem;
+  font-style:italic;
+  color:var(--muted);
+  margin:0 0 1.2rem;
+}
+header.piece .byline{
+  font-size:1.02rem;
+  font-style:italic;
+  color:var(--muted);
+  margin:0;
+}
+header.piece .rule{
+  width:4.5rem;
+  height:1px;
+  background:var(--rule);
+  margin:1.8rem auto 0;
+}
+p{margin:0 0 1.35rem;}
+.body p:first-of-type::first-letter{
+  font-family:'Cinzel',serif;
+  font-size:3.1rem;
+  line-height:.86;
+  float:left;
+  padding:.22rem .55rem 0 0;
+  color:var(--gold-deep);
+}
+.beat{margin:0 0 1.35rem;}
+.dream{
+  margin:2.2rem 0 2.4rem;
+  padding:0 0 0 1.6rem;
+  border-left:2px solid var(--gold-soft);
+  font-style:italic;
+  color:#3a3227;
+}
+.dream p:last-child{margin-bottom:0;}
+.attrib{
+  font-family:'Cinzel',serif;
+  font-size:.72rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  text-align:center;
+  margin:3rem 0 2.4rem;
+}
+.attrib::before,.attrib::after{
+  content:"";
+  display:block;
+  width:2.6rem;
+  height:1px;
+  background:var(--rule);
+  margin:0 auto;
+}
+.attrib::before{margin-bottom:1.1rem;}
+.attrib::after{margin-top:1.1rem;}
+.selah{
+  background:#f8f3e6;
+  border-top:1px solid var(--gold);
+  border-bottom:1px solid var(--gold);
+  padding:2.2rem 2.1rem 1.6rem;
+  margin:3.2rem 0;
+  font-style:italic;
+}
+.selah h2{
+  font-family:'Cinzel',serif;
+  font-weight:400;
+  font-size:.78rem;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  text-align:center;
+  margin:0 0 1.6rem;
+  font-style:normal;
+}
+.selah p:last-child{margin-bottom:0;}
+.close-rule{
+  width:3rem;
+  height:1px;
+  background:var(--rule);
+  margin:2.8rem auto;
+  border:0;
+}
+.companion{
+  font-style:italic;
+  color:var(--muted);
+  text-align:center;
+  margin:2.8rem 0 0;
+  font-size:1.05rem;
+}
+.companion a{color:var(--gold-deep);text-decoration:none;border-bottom:1px dotted var(--gold-deep);}
+.companion a:hover{color:var(--ink);}
+.disclaimer{
+  margin-top:3.6rem;
+  padding-top:1.8rem;
+  border-top:1px solid var(--rule);
+  font-size:.95rem;
+  line-height:1.62;
+  color:var(--muted);
+  font-style:italic;
+}
+.disclaimer p{margin:0 0 .9rem;}
+.disclaimer p:last-child{margin-bottom:0;}
+a.gloss{color:inherit;text-decoration:none;border-bottom:1px dotted var(--gold-deep);}
+a.gloss:hover{color:var(--gold-deep);}
+.pdf-download{
+  margin-top:2.4rem;
+  text-align:center;
+}
+.pdf-download a{
+  font-family:'Cinzel',serif;
+  font-size:.72rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  text-decoration:none;
+  border:1px solid var(--rule);
+  padding:.7rem 1.5rem;
+  display:inline-block;
+  transition:background .2s,color .2s;
+}
+.pdf-download a:hover{
+  background:var(--gold-deep);
+  color:var(--parchment-page);
+  border-color:var(--gold-deep);
+}
+footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+@media (max-width:34rem){
+  body{font-size:1.16rem;}
+  .page{padding:2.6rem 1.5rem 2rem;}
+  header.piece h1{font-size:1.62rem;}
+  .selah{padding:1.8rem 1.3rem 1.3rem;}
+  .dream{padding-left:1.1rem;}
+}
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html">Reflections</a>
+  <a href="/old/articles.html" class="current">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+<div class="page">
+
+  <header class="piece">
+    <div class="kicker">Article</div>
+    <h1>Sitting with a Sinner</h1>
+    <p class="subtitle">My other sister</p>
+    <p class="byline">Norm Reed</p>
+    <div class="rule"></div>
+  </header>
+
+  <div class="body">
+
+    <p>It is a strange thing to call someone a sinner. Stranger than calling them a saint, because at least <em>saint</em> is meant kindly.</p>
+
+    <p>A label does more than define. It forms a picture. Say <em>saint</em> and something assembles immediately — a face, a posture, a manner. Say <em>sinner</em> and something assembles just as fast, and it is not the same face.</p>
+
+    <p>Neither picture is a person. It is a word we use about people whose character we have already settled.</p>
+
+    <p>I wrote about my sister Jessica recently and called her a saint. Then I found myself wondering what my other sister would make of it.</p>
+
+    <p>My sister Ruth is a sinner. That is her word, not mine. Black sheep of the family, she has said, and said it cheerfully.</p>
+
+    <p>I should say straight away that this is not a ranking. It is not a demotion, and it is not a comparison in which one sister comes off better. But I should also say that I am more like Ruth than I am like Jessica. I have been told this by people who knew all three of us, and they were not paying me a compliment.</p>
+
+    <p>Ruth and her husband moved to Hobart nearly twelve years ago and have lived on the church property since. She has been the support underneath everything I have done here, in the church and in the prison, and I would not have managed half of it without her. In many ways she has been the backbone of the church, though nobody has ever put it in those words to her face and I doubt she would accept them.</p>
+
+    <p>What she does is difficult to write down, because it is not a programme and it does not have a name.</p>
+
+    <p>She visits people in hospital. She drives someone to an appointment they could not otherwise get to. She rings people — not to check a list, but because she was thinking of them. She prays for people, regularly, by name. When our mother died she took it upon herself to hold the wider family together, and she has sent birthday cards ever since to our children, and then to our children's children.</p>
+
+    <p>Ruth is eighty. Almost nobody believes it, and she has had her own reasons to slow down and has not taken any of them.</p>
+
+    <p>The thing I have noticed, watching her, is that none of this is filed anywhere. The rest of us keep compartments. There is church, and there is family, and there is the community, and there is whatever we would call ministry, and we know at any given moment which one we are operating in. Ruth appears never to have been issued with them. A card to a grandchild, a lift for a neighbour, a hospital visit for someone from church, a phone call to somebody she met once — she moves between these without any change of manner, because to her they are not four things.</p>
+
+    <p>When I first became involved in the prison, she took on making Kids' Days work. There were days when we had a hundred children coming through across three days to see a parent inside. She simply made it work. We do not run them now. But that is what she does. She makes it work.</p>
+
+    <p>If you put any of this to her in these terms, she would say something dismissive and change the subject.</p>
+
+    <p>Some years ago Ruth had a dream.</p>
+
+    <div class="dream">
+      <p>I was in a room with a group of people, teaching some kind of craft. They were noisy, laughing, some smoking, some taking drugs, little children racing around on little push bikes. Most of the people had either studs, tattoos or spiky hairdos.</p>
+      <p>When a bell rang everyone got up and started walking to the door. I looked around the room and there was a mess everywhere, bits of paper and all sorts of stuff all over the floor. In my dream I felt either angry or dismayed. As they were leaving I called out, &ldquo;Where do you think you are going and leaving me all this mess?&rdquo; As the last person, a man with a leather jacket, with studs and tats all over him, was going down the stairs, he turned around and said, &ldquo;To church, where do you think?&rdquo;</p>
+      <p>I woke up. But strangely enough I wasn't angry or dismayed, but kind of relieved. Happy.</p>
+    </div>
+
+    <p>Some time after that she started a card-making group on Monday mornings in the church café. People from church came. People from the community came, and after a while it stopped being obvious which was which.</p>
+
+    <p class="beat">Then one Monday morning she looked up from the table.</p>
+
+    <p class="beat">Studs. Tattoos. Spiked hair. Mess on the floor.</p>
+
+    <p>They were the people in her dream.</p>
+
+    <div class="selah">
+      <h2>Selah</h2>
+      <p>I did not have to decide which word to use for Ruth.</p>
+      <p>I wrote about Jessica and the word <em>saint</em> was simply there, waiting. Then I thought about Ruth and a different word was waiting, just as ready. I had not weighed them. I had not sat down one afternoon and sorted my own sisters into categories. The categories were already in me, and they had done the work without asking.</p>
+      <p>That is not a discovery I enjoyed making, sitting where I sit. I have spent years arguing that the men and women I visit are not the word the community has put on them. And I had two words in my pocket the whole time.</p>
+      <p>The pictures were not wrong, exactly. That is what makes them so hard to put down — a label carries enough resemblance to feel earned. But a resemblance is where you stop looking, and neither of my sisters is the size of the word I had ready for her.</p>
+      <p>There was another word available. It had been in front of me since the day she was born. <a class="gloss" href="/old/glossary.html#ruth">Ruth</a> is the woman in scripture who stays — not out of duty, since she had none, and not for advantage, since there was none to be had. She stays because staying is what she does. It is the standing picture of <a class="gloss" href="/old/glossary.html#hesed"><em>hesed</em></a> in the whole of the Old Testament, and it is my sister's name, and it should have occurred to me.</p>
+    </div>
+
+    <p>The religious leaders of the first century had the same two words. The only real difference is that they said theirs out loud.</p>
+
+    <p>There is a complaint made against Jesus, more than once, by people who thought it was devastating. <em>This man receives sinners and eats with them.</em> A friend of tax collectors and sinners. They did not need to build the case; they thought the words alone would finish him.</p>
+
+    <p>He never denied it. He never once said they had the facts wrong. What he disputed was that it was a problem.</p>
+
+    <p>Jessica read what I wrote about her and pushed back. She is not a saint, she said. She is a sinner who has come to understand how much Jesus has done for her. I expect Ruth will read this and make some remark about which sister got the better word, and about who my favourite is.</p>
+
+    <p>Neither of them is my favourite. But if Jesus had a favourite — and the accusation is that he did — he chose sinners every time, to the considerable annoyance of everyone who had the other word ready.</p>
+
+    <p>Which puts us all in reasonable company.</p>
+
+    <hr class="close-rule">
+
+    <p>So perhaps the best definition of a saint is someone who sits with sinners. Jesus did.</p>
+
+    <p>And on a Monday morning in a church café in Hobart, so does an eighty-year-old woman with a pile of card and a pair of scissors, who has never once thought of it as anything.</p>
+
+    <p class="companion">A companion piece to <a href="/old/articles/an-interview-with-a-saint.html">An Interview with a Saint</a>.</p>
+
+  </div>
+
+  <div class="disclaimer">
+    <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+    <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+    <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+  </div>
+
+  <div class="pdf-download">
+    <a href="/old/articles/pdf/sitting-with-a-sinner.pdf">Download as PDF</a>
+  </div>
+
+</div>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>

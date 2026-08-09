@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Third That Survived — Hesed Words</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parchment:#e8dfc8;
+  --parchment-page:#f3ecda;
+  --gold:#c9a84c;
+  --gold-deep:#A67C2E;
+  --gold-soft:#D9C49A;
+  --muted:#6B5C45;
+  --rule:#C8B58F;
+  --ink:#2A2218;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--parchment);
+  color:var(--ink);
+  font-family:'Cormorant Garamond','Garamond',Georgia,serif;
+  font-size:1.28rem;
+  line-height:1.72;
+}
+
+/* ── Site nav ── */
+nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+nav.hw-nav a:hover{opacity:1;color:#fff;}
+nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+/* ── Footer ── */
+footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+.page{
+  max-width:720px;
+  margin:0 auto;
+  padding:3.5rem 1.5rem 1rem;
+  background:var(--parchment-page);
+}
+@media(min-width:640px){
+  .page{padding:4.5rem 3.2rem 1.5rem;margin-top:2.2rem;margin-bottom:2.2rem;box-shadow:0 2px 30px rgba(42,34,24,.10);}
+}
+
+.eyebrow{
+  font-family:'Cinzel',serif;
+  font-size:.72rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  text-align:center;
+  margin-bottom:1.4rem;
+}
+h1{
+  font-family:'Cinzel',serif;
+  font-weight:500;
+  font-size:2.5rem;
+  line-height:1.15;
+  letter-spacing:.02em;
+  text-align:center;
+  margin:0 0 1rem;
+  color:var(--ink);
+}
+.anchor-ref{
+  text-align:center;
+  font-style:italic;
+  font-size:1.15rem;
+  color:var(--muted);
+  margin:0 0 2.2rem;
+}
+.byline{
+  text-align:center;
+  font-family:'Cinzel',serif;
+  font-size:.66rem;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:2.6rem;
+}
+
+.divider{
+  text-align:center;
+  color:var(--gold);
+  letter-spacing:.7em;
+  font-size:1rem;
+  margin:2.4rem 0;
+  user-select:none;
+}
+
+p{margin:0 0 1.3rem;}
+
+.scripture{
+  border-left:3px solid var(--gold);
+  padding:.2rem 0 .2rem 1.6rem;
+  margin:2rem 0;
+  font-style:italic;
+  color:#3a3020;
+}
+.scripture .ref{
+  display:block;
+  font-style:normal;
+  font-family:'Cinzel',serif;
+  font-size:.66rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  margin-top:.7rem;
+}
+
+.selah{
+  border-left:3px solid var(--gold-soft);
+  background:rgba(201,168,76,.055);
+  padding:1.6rem 1.6rem 1.4rem 1.8rem;
+  margin:2.8rem 0;
+}
+.selah .selah-mark{
+  font-family:'Cinzel',serif;
+  font-size:.72rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  margin-bottom:1.1rem;
+}
+.selah p{margin-bottom:1.1rem;}
+.selah p:last-child{margin-bottom:0;}
+
+.prayer{
+  font-style:italic;
+  color:#3a3020;
+  margin:1.4rem 0 0;
+  white-space:pre-line;
+  line-height:1.65;
+}
+
+.proclaim{
+  margin-top:1.6rem;
+  padding-top:1.4rem;
+  border-top:1px solid var(--gold-soft);
+  font-weight:600;
+  font-style:italic;
+  color:var(--ink);
+}
+.proclaim .ref{
+  display:block;
+  font-weight:400;
+  font-style:normal;
+  font-family:'Cinzel',serif;
+  font-size:.62rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  margin-top:.6rem;
+}
+
+@media(max-width:640px){
+  body{font-size:1.18rem;}
+  h1{font-size:1.95rem;}
+}
+</style>
+</head>
+<body>
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html" class="current">Reflections</a>
+  <a href="/old/articles.html">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+<div class="page">
+
+  <div class="eyebrow">A Hesed Words Reflection</div>
+  <h1>The Third That Survived</h1>
+  <p class="anchor-ref">Ezekiel 7</p>
+  <div class="byline">Norm Reed</div>
+
+  <div class="scripture">
+    An end! The end has come upon the four corners of the land. Now the end is upon you, and I will send my anger against you&hellip; They cast their silver into the streets, and their gold is like an unclean thing. Their silver and gold are not able to deliver them in the day of the wrath of the LORD.
+    <span class="ref">Ezekiel 7:2&ndash;3, 19</span>
+  </div>
+
+  <p>I came to Ezekiel 7 and could not read it as history.</p>
+
+  <p>The end has come. The four corners of the land. Disaster upon disaster, the streets full of the slain, silver flung into the gutter because it cannot buy bread. I read it and the pictures came unbidden &mdash; the ones everyone my age carries, the black-and-white ones, the ditches and the shoes and the faces at the wire. Much of Jeremiah and Lamentations and Ezekiel could have been captioned onto those photographs and no one would have known the words were twenty-five centuries old.</p>
+
+  <p>I did not go looking for that. It rose off the page on its own.</p>
+
+  <div class="divider">&middot; &middot; &middot;</div>
+
+  <p>For a while I thought the point was how well the ancient words fit a modern horror. It isn&rsquo;t. The point runs the other direction. These books will not stay in their century, and they will not stay in someone else&rsquo;s.</p>
+
+  <p>Someone said the one thing we learn from history is that we do not learn from history. Ezekiel knew it before it was an adage. He was not writing a report on a siege that had already happened; he was writing to people who could not yet see the one bearing down on them. And the unsettling thing &mdash; the thing that made me put the Bible down &mdash; was the slow turn of the accusing finger. These books are not describing <em>them</em>. They are asking about <em>me</em>. Am I, in any way that would matter to God, different from the people carried off to Babylon?</p>
+
+  <p>I want them to be dusty. Manuscripts of a former period, safely dead. They are not.</p>
+
+  <p>They are God&rsquo;s voice, and it is still speaking, because the Spirit who breathed through Ezekiel has not fallen silent. That is the whole difference. Not literature that happens to echo down the years &mdash; the living voice, still convicting, still concerning itself with sin and righteousness and judgment. That is why chapter 7 can turn and read me. The One who spoke it is not finished speaking.</p>
+
+  <div class="divider">&middot; &middot; &middot;</div>
+
+  <p>But here is what I did not expect the chapter to teach me.</p>
+
+  <p>Two chapters earlier the city is divided into thirds. A third to the plague, a third to the sword, a third scattered to the wind. And it is the scattered third &mdash; the ones who <em>lived</em> &mdash; who still need the prophet. Survival did not answer their questions. It handed them a new one: what do we do now, with having come through the fire?</p>
+
+  <p>The people of the exile were given a way to carry that question when they could not feel their way through it. An appointed remembering. A day to sit on the ground with the ruins in their mouths &mdash; and then, weeks on, the same calendar turning them toward <em>Comfort, comfort my people</em>. The grief was not left to find its own way to hope. The practice carried it there. Sometimes it is only the theology that holds you when the world has fallen apart &mdash; you do not wait until you feel it; you come on the appointed day, and the day does the work.</p>
+
+  <p>And I have that too. I have the table.</p>
+
+  <p>I come to communion and both things are in my hands at once. The bread that says something was broken, and broke it &mdash; my own sin, no different from theirs, the consequence real and not softened. And the same bread saying it is not the last word.</p>
+
+  <div class="scripture">
+    The steadfast love of the LORD never ceases; his mercies never come to an end; they are new every morning; great is your faithfulness.
+    <span class="ref">Lamentations 3:22&ndash;23</span>
+  </div>
+
+  <p>Hesed, in the morning, after the night that earned the dark.</p>
+
+  <p>I am not different from the exiles. That is the first truth, and the table makes me say it. But my sins do not have the final word over me &mdash; that is the second, and the table puts it in my hand before I have finished confessing the first. Judgment and mercy, held in one act, on the appointed day, whether or not I can feel my way to either.</p>
+
+  <div class="selah">
+    <div class="selah-mark">Selah</div>
+    <p>I found myself in the story before I meant to. That is the strange thing I keep turning over. I read Ezekiel and the pictures came, and I did not have to reach for them &mdash; the slain in the street, the silver thrown away, the faces I have seen in photographs. I saw <em>them</em> in an instant. I cannot imagine anyone who lived through that horror failing to see themselves in Ezekiel&rsquo;s words.</p>
+
+    <p>And then I notice: I can see myself in their story faster than I can see myself in my own. The exile is legible to me. My sin is not. I read the indictment and my first instinct is that it is about someone else, some other people, some darker century. It takes me longer &mdash; it takes the Spirit &mdash; to feel the finger turn and rest on me.</p>
+
+    <p>So this morning I will go and hold the bread, and drink the cup. And I already know I will do it half-seeing. The question is not whether I am worthy of the table; the table has never waited on that. The question is whether my eyes will be open when I hold it &mdash; open to the sin that made it necessary, and open, in the same moment, to the grace held out in my two hands.</p>
+
+    <p class="prayer">Open my eyes, Lord.
+To the sin I am slow to see in myself and quick to see in others.
+And to the mercy I hold in the bread and the cup &mdash;
+new every morning, and this morning too.
+Let me not take it half-seeing.
+Amen.</p>
+
+    <p class="proclaim">For as often as you eat this bread and drink the cup, you proclaim the Lord&rsquo;s death until he comes.
+    <span class="ref">1 Corinthians 11:26</span></p>
+  </div>
+
+</div>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+</body>
+</html>

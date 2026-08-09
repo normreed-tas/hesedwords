@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our God-Sponsored Projects — Hesed Words</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parchment:#e8dfc8;
+  --parchment-page:#f3ecda;
+  --gold:#c9a84c;
+  --gold-deep:#A67C2E;
+  --gold-soft:#D9C49A;
+  --muted:#6B5C45;
+  --rule:#C8B58F;
+  --ink:#2c2418;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--parchment);
+  color:var(--ink);
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.24rem;
+  line-height:1.72;
+}
+/* ── Site nav ── */
+nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+nav.hw-nav a:hover{opacity:1;color:#fff;}
+nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+/* ── Footer ── */
+footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+.page{
+  max-width:720px;
+  margin:0 auto;
+  background:var(--parchment-page);
+  padding:4.5rem 3.2rem 3rem;
+  box-shadow:0 0 60px rgba(60,45,20,.10);
+}
+@media(max-width:640px){
+  .page{padding:3rem 1.5rem 2rem;}
+  body{font-size:1.15rem;}
+}
+header.piece{
+  text-align:center;
+  margin-bottom:3rem;
+}
+header.piece h1{
+  font-family:'Cinzel',serif;
+  font-weight:600;
+  font-size:2.15rem;
+  line-height:1.25;
+  letter-spacing:.02em;
+  color:var(--ink);
+  margin:0 0 1.1rem;
+}
+header.piece .subtitle{
+  font-style:italic;
+  font-size:1.2rem;
+  color:var(--muted);
+  margin:0;
+}
+header.piece .rule{
+  width:70px;height:1px;
+  background:var(--gold);
+  margin:1.8rem auto 0;
+}
+.selah{
+  border-left:3px solid var(--gold);
+  padding:.2rem 0 .2rem 1.6rem;
+  margin:2.5rem 0 3rem;
+  font-style:italic;
+  color:#463a26;
+}
+.selah p{margin:0 0 1.1rem;}
+.selah p:last-child{margin-bottom:0;}
+.selah .word{
+  display:block;
+  font-family:'Cinzel',serif;
+  font-style:normal;
+  font-size:.8rem;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  margin-top:1.6rem;
+}
+h2.section{
+  font-family:'Cinzel',serif;
+  font-weight:500;
+  font-size:1.32rem;
+  letter-spacing:.03em;
+  color:var(--ink);
+  margin:3.2rem 0 .4rem;
+  padding-bottom:.7rem;
+  border-bottom:1px solid var(--rule);
+}
+p{margin:0 0 1.35rem;}
+em{font-style:italic;}
+a.gloss{color:inherit;text-decoration:none;border-bottom:1px dotted var(--gold-deep);}
+a.gloss:hover{color:var(--gold-deep);}
+.lyric{
+  text-align:center;
+  font-style:italic;
+  font-size:1.32rem;
+  color:var(--gold-deep);
+  margin:2rem 0;
+  line-height:1.6;
+}
+.spine{
+  font-size:1.32rem;
+  line-height:1.6;
+  color:#3a2f1d;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  padding:1.6rem 0;
+  margin:2.4rem 0;
+  text-align:center;
+}
+.closing-only{
+  text-align:center;
+  font-family:'Cinzel',serif;
+  font-size:1.15rem;
+  letter-spacing:.14em;
+  color:var(--gold-deep);
+  margin:2.4rem 0 0;
+}
+.postscript{
+  margin-top:3rem;
+  padding-top:1.6rem;
+  border-top:1px solid var(--rule);
+  font-size:1.05rem;
+  font-style:italic;
+  color:var(--muted);
+}
+.postscript a{color:var(--gold-deep);text-decoration:none;border-bottom:1px dotted var(--gold-deep);}
+.postscript a:hover{color:var(--ink);}
+.credit{
+  margin-top:3.5rem;
+  padding-top:1.6rem;
+  border-top:1px solid var(--rule);
+  font-size:1.02rem;
+  font-style:italic;
+  color:var(--muted);
+  text-align:center;
+}
+.byline{
+  text-align:center;
+  font-family:'Cinzel',serif;
+  font-size:.82rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  margin-top:2.6rem;
+}
+</style>
+</head>
+<body>
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html" class="current">Reflections</a>
+  <a href="/old/articles.html">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+<div class="page">
+  <header class="piece">
+    <h1>Our God-Sponsored Projects</h1>
+    <p class="subtitle">A reflection on Ezra–Nehemiah</p>
+    <div class="rule"></div>
+  </header>
+  <div class="selah">
+    <p>I put the song on myself. That is the part I need to tell you first — no one plays it for me, I reach for it, the way you reach for a word you need to hear again.</p>
+    <p>The first time it found me I was not looking to be found. There had been affirmation around the work at the prison — good words, the kind you repeat to yourself on the drive home — and I was, if I am honest, warming my hands at them. Then the line came. <em>I don't want to leave a legacy.</em> And I wept, because I heard in it the thing I had been quietly wanting and had not named: I did want to leave one. I wanted my name on the good that was happening.</p>
+    <p>So now I play it on purpose. In the quiet of the morning I put it on and I make the words my own, not because they are already true of me but because I want them to become true. <em>I don't want to leave a legacy.</em> It is a prayer I am praying toward, not from.</p>
+    <p>And this morning, with the song still in the room, I turned to Nehemiah — and found him praying the other way. <em>Remember me, O my God, for good.</em> Remember what I have done.</p>
+    <p>Two prayers, and I know both of them. One I am reaching for. The other is the one my hands already know how to pray.</p>
+    <span class="word">Selah</span>
+  </div>
+  <h2 class="section">What men finished</h2>
+  <p>Ezra and Nehemiah were one book once, and reading them you can feel why. They are a single long account of a return that keeps needing to be renewed — wall, temple, and hardest of all, people. And they are books of achievement. That is their grammar. Foundations laid, altars rebuilt, walls raised in fifty-two days, a covenant signed, the guilty marriages dissolved, the builders registered family by family. Things done. You can almost hear the ribbon cut at the end of each chapter.</p>
+  <p>There is a sound at the beginning of it all that I cannot get out of my ears. When the temple foundation was laid, the people made a noise — and it could not be sorted. The young shouted for joy. The old, who remembered the first house, wept aloud. And the two sounds were so mixed that no one could tell the shouting from the weeping, and the noise was heard far off.</p>
+  <p>That is the sound every finished thing makes. Joy and grief in the same breath. Something built, and something already lost mourned in the same moment. The achievement is shadowed before the walls even rise. This is only the second temple; the old men know it is not the first. And the book seems to know, at its very foundation, that what men build does not stay built.</p>
+  <p>There was a truer word spoken at that foundation, if you listen for it. Before the weeping and the shouting blurred together, the singers praised God with the old line: <em>he is good; his <a class="gloss" href="/old/glossary.html#hesed">hesed</a> toward Israel endures forever.</em> His covenant faithfulness, named aloud at the foundation stone. That is the one thing in these two books that will actually endure — and it is spoken once, at the start, and then the noise of building closes over it. The book opens on God's faithfulness and ends on a man's résumé. Somewhere between the foundation and the final chapter, the story stops being about the One who keeps and becomes about the men who build.</p>
+  <p>It does not stay built. Read to the end and you find the wall breached by neglect the moment Nehemiah leaves for Babylon. The Sabbath sold. The mixed marriages back. The covenant signed in chapter nine broken by chapter thirteen. Everything accomplished, and almost nothing kept.</p>
+  <p>And here is Nehemiah at the close of it, a good man — prayerful, courageous, a man who would not even take the food allowance his office entitled him to. He reaches the end of his labour and prays: <em>remember me, O my God, for good.</em> Remember what I have done.</p>
+  <p>I will not stand over him. I have no window into his heart, and the one heart I can honestly examine is my own. But I know that prayer from the inside. It is the drift I feel in myself — the slow turning of a thing that began as gift into a thing I own. God gives the work. Somewhere along the way I forget who gave it. I attach my name. I begin to need the good to be <em>my</em> good, remembered as mine. Nehemiah is not the villain of this. He is the mirror. I look at his last prayer and I see my own hands folding.</p>
+  <h2 class="section">What everyone was talking about</h2>
+  <p>There is a scene at the end of the Sermon on the Mount that says the same thing, but says it from the far end of time.</p>
+  <p>Jesus pictures the last judgment, and a crowd strutting up to him with their record in hand. <em>Master, we preached the message. We ran the demons off. Our God-sponsored projects had everyone talking.</em> Peterson's phrase is almost unbearable, because it is exactly right — <em>everyone talking.</em> The sound heard far off. The affirmation you warm your hands at.</p>
+  <p>And the terrible thing is that Jesus does not dispute the record. He does not say the projects were fake or the preaching hollow. He says something worse. <em>All you did was use me to make yourselves important. I never knew you.</em></p>
+  <p>Never <em>knew</em> you. Not — you did too little. The works were real. What was missing was underneath the works: the knowing. The relationship the whole thing was supposed to grow from. They had the résumé and lacked the root. And a work severed from its root will keep growing for a while, and look magnificent, and then it will not hold — because it was never held by the One it was meant to be rooted in.</p>
+  <p>It begins as <em>he gave me this.</em> It ends as <em>look what I did.</em> Somewhere in between, the gift forgets the Giver — and the work everyone was talking about turns out to have been about us all along.</p>
+  <h2 class="section">What God is building</h2>
+  <p>Set Jesus against these two books and something turns over.</p>
+  <p>In their grammar of achievement, he builds nothing. No wall, no temple, no reform enacted, no registry of works. Measured by Ezra and Nehemiah he leaves no legacy at all — his life ends not with a finished wall but with an execution, the total collapse of anything you could photograph and admire. Nehemiah asks to be remembered for the good he has done. Jesus, at the same kind of ending, asks his Father to forgive the people doing it to him.</p>
+  <p>And yet he says, <em>I will build my church.</em> But look at the tense of it, and at where he stands when he says it. Not built-and-departed, leaving a work to fray in his absence — which is Nehemiah's whole tragedy, the reforms unravelling the moment he is gone. Jesus does not leave. <em>I am with you always.</em> The building holds because the builder is still building, still present, still spending himself into it. The wall failed in Nehemiah's absence. The church cannot fail that way, because there is no absence.</p>
+  <p>He is not building. He <em>is</em> building. Present, unfinished, ongoing. And that — I have come to think — is the whole secret. The moment a thing is finished it can begin to fall, like everything in these two books. What Jesus is making is not finished, and so it is not yet a legacy to crumble. The unfinishedness is the security. He builds by being spent, and he has not stopped, and he has not left.</p>
+  <div class="spine">Ezra–Nehemiah records what men finished and could not keep. Jesus is building what he has not finished and therefore cannot lose.</div>
+  <h2 class="section">Only Jesus</h2>
+  <p>So this morning I reached for the song.</p>
+  <p>I read Nehemiah asking to be remembered, and I felt my own hands folding into the same prayer — the one they already know — and I did not want to pray it. So I put the words in my mouth that I would rather mean.</p>
+  <p class="lyric">I don't want to leave a legacy.<br>I don't care if they remember me.<br>Only Jesus.</p>
+  <p>I am praying it toward, not from. My hands still know the other prayer. But I think I finally understand why these are the truer words — not because it is noble to want to be forgotten, but because there is one name that remembrance is safe with. One name the work will hold under, when my name would only shadow it like weeping mixed into the joy. God has been faithful under every crumbling project in those two long books, quietly, the one durable thing beneath all the personalities and all the walls — and his faithfulness has never had a truer name than this one.</p>
+  <p>Remember me for the good I have done, prayed Nehemiah. I understand him. I am him.</p>
+  <p>But I would rather pray the other thing, and mean it one day.</p>
+  <p class="closing-only">Only Jesus.</p>
+  <p class="postscript"><em>Note: On rereading Nehemiah in light of this reflection, I've come to understand the prayer differently. See <a href="/old/reflections/see-me-trying.html">See Me Trying</a> for further reflection on what Nehemiah's repeated plea — "Remember for my good, O my God" — might actually be asking of God.</em></p>
+  <p class="byline">Norm Reed</p>
+  <p class="credit">The lines <em>&ldquo;I don't want to leave a legacy&hellip; only Jesus&rdquo;</em> are from &ldquo;Only Jesus&rdquo; by Casting Crowns.</p>
+</div>
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+</body>
+</html>

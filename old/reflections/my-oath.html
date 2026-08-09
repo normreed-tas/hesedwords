@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Oath — and What It Really Means | Hesedwords</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --parchment:      #FAF5E8;
+      --parchment-tint: rgba(166,124,46,0.05);
+      --gold:           #A67C2E;
+      --gold-light:     #C8A84B;
+      --gold-rule:      #D9C49A;
+      --ink:            #2A2218;
+      --ink-mid:        #4A3E2C;
+      --ink-light:      #6B5C45;
+      --border:         #C8B58F;
+    }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 20px;
+      line-height: 1.75;
+    }
+
+    /* ── Site nav ── */
+    nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+    nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+    nav.hw-nav a:hover{opacity:1;color:#fff;}
+    nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+
+    /* ── Page wrapper ─────────────────────────── */
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 72px 40px 96px;
+    }
+
+    /* ── Title block ──────────────────────────── */
+    .eyebrow {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 44px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.15;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    .subtitle {
+      font-style: italic;
+      font-size: 22px;
+      color: var(--ink-mid);
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .ornament {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 0.55em;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .byline {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 52px;
+    }
+
+    /* ── Prologue ─────────────────────────────── */
+    .prologue {
+      font-style: italic;
+      font-size: 20px;
+      color: var(--ink-mid);
+      border-bottom: 1px solid var(--gold-rule);
+      padding-bottom: 44px;
+      margin-bottom: 0;
+    }
+    .prologue p + p { margin-top: 1em; }
+
+    /* ── Section headings ─────────────────────── */
+    h2 {
+      font-family: 'Cinzel', serif;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-top: 56px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--gold);
+    }
+
+    /* ── Body text ────────────────────────────── */
+    .body { margin-top: 28px; }
+    .body p + p { margin-top: 1.1em; }
+
+    /* ── Drop cap ─────────────────────────────── */
+    .drop::first-letter {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 4.6em;
+      color: var(--gold);
+      float: left;
+      line-height: 0.78;
+      margin-right: 0.07em;
+      margin-top: 0.08em;
+    }
+
+    /* ── Scripture block ──────────────────────── */
+    .scripture {
+      margin: 28px 0;
+      padding: 18px 24px 18px 22px;
+      border-left: 3px solid var(--gold);
+      background: var(--parchment-tint);
+    }
+    .scripture p {
+      font-style: italic;
+      font-size: 19px;
+      color: var(--ink-mid);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .scripture p:last-of-type { margin-bottom: 0; }
+    .scripture .ref {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 10px;
+    }
+
+    /* ── Hebrew ───────────────────────────────── */
+    em.h {
+      font-style: italic;
+      color: var(--ink-mid);
+    }
+
+    /* ── Footer ── */
+    footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+    /* ── Responsive ───────────────────────────── */
+    @media (max-width: 640px) {
+      .wrap { padding: 48px 24px 72px; }
+      h1 { font-size: 28px; }
+      .subtitle { font-size: 19px; }
+      h2 { font-size: 13px; }
+      body { font-size: 18px; }
+    }
+
+    @media print {
+      nav { display: none; }
+      .wrap { padding: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html" class="current">Reflections</a>
+  <a href="/old/articles.html">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+  <div class="wrap">
+
+    <!-- ── Title block ── -->
+    <span class="eyebrow">A Hesedwords Reflection</span>
+    <h1>My Oath &mdash; and What It Really Means</h1>
+    <span class="subtitle">A reflection on Jeremiah 4:2</span>
+    <span class="ornament">&middot; &middot; &middot;</span>
+    <span class="byline">Norm Reed &middot; June 2026</span>
+
+    <!-- ── Prologue ── -->
+    <div class="prologue">
+      <p>I have been a Justice of the Peace for many years. I have watched people place their hand on a Bible and swear to tell the truth. I have administered statutory declarations and witnessed signatures that carry legal weight.</p>
+      <p>I have never, until today, stopped to ask where it all came from.</p>
+    </div>
+
+    <!-- ── Section 1 ── -->
+    <h2>The Formula</h2>
+    <div class="body">
+      <p class="drop">The court oath in its classic form is a formula. Words arranged in a particular order, spoken aloud, before a witness.</p>
+      <div class="scripture">
+        <p>I swear by Almighty God that the evidence I shall give will be the truth, the whole truth, and nothing but the truth.</p>
+      </div>
+      <p>The formula works &mdash; legally &mdash; when the words are spoken correctly. What happens inside the person speaking them is, in a legal sense, not the court&rsquo;s business. The formula has been satisfied. The record shows: oath administered.</p>
+      <p>I have been part of that moment many times. Pen on paper. Words spoken. Done.</p>
+      <p>Jeremiah has questions about this.</p>
+    </div>
+
+    <!-- ── Section 2 ── -->
+    <h2>The Prophet&rsquo;s Conditions</h2>
+    <div class="body">
+      <p class="drop">I was reading through Jeremiah today when I stopped at chapter four, verse two.</p>
+      <div class="scripture">
+        <p>&ldquo;And if you swear, &lsquo;As the LORD lives,&rsquo; in truth, in justice, and in righteousness&hellip;&rdquo;</p>
+        <span class="ref">Jeremiah 4:2</span>
+      </div>
+      <p>The phrase <em>&ldquo;As the LORD lives&rdquo;</em> is an ancient oath formula &mdash; <em class="h">chai-YHWH</em> in Hebrew. It appears dozens of times across the Old Testament. It is the most solemn swearing available: grounding the oath in the existence of God himself. Nothing more fundamental could be invoked.</p>
+      <p>But Jeremiah adds three conditions.</p>
+      <p><em class="h">Emet.</em> Truth &mdash; but not merely accurate words. The Hebrew means reliability, integrity, the quality of being a person whose yes means yes. It shares its root with the word we say at the end of every prayer: amen. The solid thing.</p>
+      <p><em class="h">Mishpat.</em> Justice &mdash; the restoration of right relationship. Not the cold arm of the law but the active work of setting things right between people.</p>
+      <p><em class="h">Tzedakah.</em> Righteousness &mdash; not a legal verdict but a movement toward whoever is missing from the circle. God&rsquo;s own word for the impulse that goes looking for the one who has been left out.</p>
+      <p>The prophet&rsquo;s point is devastating in its simplicity. You can say <em class="h">chai-YHWH</em> &mdash; <em>&ldquo;as the LORD lives&rdquo;</em> &mdash; perfectly. You can have the formula word-perfect. And it can still be empty.</p>
+      <p>The oath is only as real as the person swearing it.</p>
+      <p>One chapter later, Jeremiah shows us what this looks like in practice.</p>
+      <div class="scripture">
+        <p>&ldquo;Though they say, &lsquo;As the LORD lives,&rsquo; yet they swear falsely.&rdquo;</p>
+        <span class="ref">Jeremiah 5:2</span>
+      </div>
+      <p>The right words. The wrong life. The oath hollowed out from within.</p>
+    </div>
+
+    <!-- ── Section 3 ── -->
+    <h2>Superman and the Ancient Triad</h2>
+    <div class="body">
+      <p class="drop">There is a phrase from American popular culture &mdash; the old television series where Superman stood for &ldquo;Truth, Justice, and the American Way.&rdquo;</p>
+      <p>The phrase was added in the 1950s. But the triad it echoes &mdash; <em class="h">emet, mishpat, tzedakah</em> &mdash; is 2,600 years older. Jeremiah wrote it in the sixth century before Christ.</p>
+      <p>And Jeremiah&rsquo;s version is richer.</p>
+      <p>Superman&rsquo;s justice upholds the law. Jeremiah&rsquo;s <em class="h">tzedakah</em> goes looking for the person the law forgot. Superman&rsquo;s truth is about accurate reporting. Jeremiah&rsquo;s <em class="h">emet</em> is about the character of the one in the room. The American Way offers a cultural standard. Jeremiah offers something that no culture can contain.</p>
+      <p>The echo is charming. The original is better.</p>
+    </div>
+
+    <!-- ── Section 4 ── -->
+    <h2>My Oath &mdash; and What It Really Means</h2>
+    <div class="body">
+      <p class="drop">I come back to my own role.</p>
+      <p>When I administer an oath, I am doing something more than witnessing a legal formula. I am standing at the intersection of two things: the ancient conviction that truth-telling is a sacred act, and the stubborn human tendency to perform the form while abandoning the substance.</p>
+      <p>Jeremiah&rsquo;s triad is not a checklist for the person swearing. It is a description of character. The oath does not produce integrity. It reveals it. Or fails to.</p>
+      <p>Which means the most important question I can ask, as a JP, is not whether the words were spoken correctly. The question Jeremiah presses on me is this: <em>am I the kind of person before whom an oath means something?</em></p>
+      <p>Do I carry enough <em class="h">emet</em> &mdash; enough personal reliability &mdash; that my presence in the room adds weight to the side of truth? Is there enough <em class="h">mishpat</em> in my way of living that my witness to another&rsquo;s declaration is more than a signature? Does <em class="h">tzedakah</em> &mdash; the movement toward those the system has forgotten &mdash; shape how I hold this role?</p>
+      <p>There is a detail at the end of Jeremiah 4:2 I find quietly astonishing. The verse ends: <em>&ldquo;then nations shall bless themselves in him, and in him shall they glory.&rdquo;</em> That is the Abrahamic promise &mdash; Genesis 12:3 echoing through the oath. An oath sworn well, in truth and justice and righteousness, is never merely a private transaction. It has a witness bigger than the courtroom.</p>
+      <p>I knew what the words of the oath meant.</p>
+      <p>I am still learning what it means to be a person who swears them.</p>
+    </div>
+
+    <!-- ── Footer ── -->
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+  </div>
+
+</body>
+</html>

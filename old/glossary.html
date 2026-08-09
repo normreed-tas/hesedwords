@@ -1,0 +1,900 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Glossary of Hebrew and Greek Words — Hesed Words</title>
+<meta name="description" content="Twenty-two seed terms from the biblical vocabulary — covenant, justice, mercy, wisdom, presence, trust — traced across the full canon." />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cormorant+SC:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --parchment:      #f5edd6;
+    --parchment-dark: #e8d8b0;
+    --parchment-mid:  #eedfc0;
+    --ink:            #2a1f0e;
+    --ink-light:      #5a3e1b;
+    --ink-faint:      #8a6d45;
+    --accent:         #8b3a0f;
+    --accent-light:   #c0622a;
+    --gold:           #b8922c;
+    --gold-light:     #d4ac4a;
+    --border:         #c8a96e;
+    --border-light:   #ddc48a;
+    --shadow:         rgba(42,31,14,0.15);
+
+    --cat-covenant: #5a3e7a;
+    --cat-justice:  #6b1e1e;
+    --cat-love:     #7a3520;
+    --cat-wisdom:   #1e4a3a;
+    --cat-presence: #1e3560;
+    --cat-trust:    #4a3e10;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--parchment-dark);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 16px;
+    /* Adjust height offset below to match your site header height */
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 20%, rgba(184,146,44,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 80%, rgba(139,58,15,0.06) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ─── App shell ─── */
+  /* If your site header is fixed/sticky, change height to calc(100vh - [header height]) */
+  .app {
+    display: flex;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ─── Sidebar ─── */
+  .sidebar {
+    width: 300px;
+    min-width: 280px;
+    background: linear-gradient(180deg, #e8d4a0 0%, #dfc896 50%, #e5d4a8 100%);
+    border-right: 2px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 4px 0 20px var(--shadow);
+  }
+
+  .sidebar-header {
+    padding: 22px 20px 16px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, rgba(184,146,44,0.15), rgba(139,58,15,0.08));
+  }
+  .sidebar-title {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .sidebar-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ink);
+    font-style: italic;
+    line-height: 1.2;
+  }
+  .term-count {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px;
+    color: var(--ink-faint);
+    margin-top: 4px;
+  }
+
+  /* ─── Search ─── */
+  .search-wrap {
+    padding: 14px 16px 10px;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .search-box {
+    width: 100%;
+    background: rgba(245,237,214,0.8);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 8px 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14.5px;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .search-box::placeholder { color: var(--ink-faint); font-style: italic; }
+  .search-box:focus { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(184,146,44,0.15); }
+
+  /* ─── Category filters ─── */
+  .cat-filters {
+    padding: 8px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .cat-btn {
+    font-family: 'Cinzel', serif;
+    font-size: 8.5px;
+    letter-spacing: 0.12em;
+    padding: 3px 8px;
+    border-radius: 2px;
+    border: 1px solid;
+    cursor: pointer;
+    transition: all 0.18s;
+    background: transparent;
+    text-transform: uppercase;
+  }
+  .cat-btn.all      { border-color: var(--border);        color: var(--ink-light);    }
+  .cat-btn.covenant { border-color: var(--cat-covenant);  color: var(--cat-covenant); }
+  .cat-btn.justice  { border-color: var(--cat-justice);   color: var(--cat-justice);  }
+  .cat-btn.love     { border-color: var(--cat-love);      color: var(--cat-love);     }
+  .cat-btn.wisdom   { border-color: var(--cat-wisdom);    color: var(--cat-wisdom);   }
+  .cat-btn.presence { border-color: var(--cat-presence);  color: var(--cat-presence); }
+  .cat-btn.trust    { border-color: var(--cat-trust);     color: var(--cat-trust);    }
+
+  .cat-btn.active { color: #fff !important; }
+  .cat-btn.all.active      { background: var(--ink-light);    border-color: var(--ink-light); }
+  .cat-btn.covenant.active { background: var(--cat-covenant); }
+  .cat-btn.justice.active  { background: var(--cat-justice);  }
+  .cat-btn.love.active     { background: var(--cat-love);     }
+  .cat-btn.wisdom.active   { background: var(--cat-wisdom);   }
+  .cat-btn.presence.active { background: var(--cat-presence); }
+  .cat-btn.trust.active    { background: var(--cat-trust);    }
+
+  /* ─── Term list ─── */
+  .term-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 6px 0;
+  }
+  .term-list::-webkit-scrollbar { width: 5px; }
+  .term-list::-webkit-scrollbar-track { background: transparent; }
+  .term-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+
+  .term-item {
+    padding: 10px 18px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(200,169,110,0.2);
+    transition: background 0.15s;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .term-item:hover { background: rgba(245,237,214,0.6); }
+  .term-item.active {
+    background: rgba(245,237,214,0.9);
+    border-left: 3px solid var(--accent);
+    padding-left: 15px;
+  }
+  .term-heb-small {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--ink);
+    direction: rtl;
+    flex-shrink: 0;
+  }
+  .term-meta-small { flex: 1; min-width: 0; }
+  .term-tr-small {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--ink-light);
+    font-style: italic;
+  }
+  .term-gloss-small {
+    font-size: 12px;
+    color: var(--ink-faint);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .cat-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .sidebar-footer {
+    padding: 12px 16px;
+    border-top: 1px solid var(--border);
+    background: rgba(200,169,110,0.12);
+  }
+  .add-btn {
+    width: 100%;
+    background: var(--accent);
+    color: #f5edd6;
+    border: none;
+    padding: 9px 0;
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+  .add-btn:hover { background: var(--accent-light); }
+
+  /* ─── Main panel ─── */
+  .main {
+    flex: 1;
+    overflow-y: auto;
+    background: var(--parchment);
+    position: relative;
+  }
+  .main::-webkit-scrollbar { width: 7px; }
+  .main::-webkit-scrollbar-track { background: var(--parchment-mid); }
+  .main::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+
+  /* ─── Empty state ─── */
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 12px;
+    color: var(--ink-faint);
+    padding: 40px;
+    text-align: center;
+  }
+  .empty-glyph {
+    font-size: 64px;
+    opacity: 0.35;
+    direction: rtl;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1;
+  }
+  .empty-state h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+  }
+  .empty-state p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--ink-faint);
+    max-width: 300px;
+  }
+
+  /* ─── Term detail ─── */
+  .term-detail { padding: 40px 50px 60px; max-width: 780px; }
+
+  .detail-header {
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .detail-cat-label {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .cat-pip { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .detail-hebrew {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--ink);
+    direction: rtl;
+    margin-bottom: 8px;
+  }
+  .detail-tr {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink-light);
+    margin-bottom: 4px;
+  }
+  .detail-gloss {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ink-faint);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .detail-section { margin-bottom: 28px; }
+  .detail-section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .detail-notes {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink);
+  }
+  .detail-thread {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ink-light);
+    font-style: italic;
+  }
+  .refs-list { display: flex; flex-wrap: wrap; gap: 7px; }
+  .ref-chip {
+    font-family: 'Cormorant SC', serif;
+    font-size: 12.5px;
+    padding: 3px 10px;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: var(--ink-light);
+    background: rgba(184,146,44,0.06);
+    letter-spacing: 0.04em;
+  }
+  .ornament {
+    text-align: center;
+    color: var(--gold);
+    font-size: 18px;
+    margin: 24px 0;
+    opacity: 0.6;
+    letter-spacing: 0.3em;
+  }
+  .detail-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 36px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-light);
+  }
+  .btn-edit {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.18s;
+  }
+  .btn-edit:hover { background: var(--gold); color: var(--parchment); }
+  .btn-delete {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    background: transparent;
+    border: 1px solid rgba(139,58,15,0.35);
+    color: var(--ink-faint);
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.18s;
+  }
+  .btn-delete:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ─── Modal ─── */
+  .modal-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(42,31,14,0.55);
+    z-index: 300;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--parchment);
+    border: 1px solid var(--border);
+    width: 90%; max-width: 580px;
+    max-height: 90vh; overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(42,31,14,0.4);
+    border-radius: 2px;
+  }
+  .modal-header {
+    padding: 20px 24px 14px;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(184,146,44,0.08), transparent);
+  }
+  .modal-title {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .modal-close {
+    background: none; border: none;
+    font-size: 22px; color: var(--ink-faint);
+    cursor: pointer; line-height: 1;
+    padding: 0 4px; transition: color 0.15s;
+  }
+  .modal-close:hover { color: var(--accent); }
+  .modal-body { padding: 22px 24px; }
+
+  .form-row { margin-bottom: 16px; }
+  .form-row label {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 5px;
+  }
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    width: 100%;
+    background: rgba(245,237,214,0.7);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 8px 11px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+    resize: vertical;
+  }
+  .form-row input:focus,
+  .form-row select:focus,
+  .form-row textarea:focus { border-color: var(--gold); }
+  .form-row textarea { min-height: 80px; }
+  .form-hint { font-size: 11px; color: var(--ink-faint); font-style: italic; margin-top: 3px; }
+  .form-row.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  .modal-footer {
+    padding: 14px 24px 20px;
+    border-top: 1px solid var(--border-light);
+    display: flex; gap: 10px;
+    justify-content: flex-end;
+  }
+  .btn-cancel {
+    font-family: 'Cinzel', serif;
+    font-size: 9px; letter-spacing: 0.18em;
+    padding: 9px 20px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--ink-faint);
+    cursor: pointer; border-radius: 2px;
+    text-transform: uppercase; transition: all 0.18s;
+  }
+  .btn-cancel:hover { border-color: var(--ink-faint); color: var(--ink); }
+  .btn-save {
+    font-family: 'Cinzel', serif;
+    font-size: 9px; letter-spacing: 0.18em;
+    padding: 9px 22px;
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    color: #f5edd6;
+    cursor: pointer; border-radius: 2px;
+    text-transform: uppercase; transition: background 0.2s;
+  }
+  .btn-save:hover { background: var(--accent-light); border-color: var(--accent-light); }
+
+  /* ─── Status bar ─── */
+  .status-bar {
+    position: fixed;
+    bottom: 20px; right: 24px;
+    background: var(--ink); color: var(--parchment);
+    padding: 8px 18px; border-radius: 2px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px; font-style: italic;
+    opacity: 0; transform: translateY(8px);
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 400; pointer-events: none;
+  }
+  .status-bar.show { opacity: 1; transform: translateY(0); }
+
+  /* ── Site nav ── */
+  nav.hw-nav {
+    background: #1f1b16;
+    font-family: 'Cinzel', serif;
+    font-size: .78rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    gap: 2.2rem;
+    padding: 1.05rem 1rem;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  }
+  nav.hw-nav a { color: #f5edd6; text-decoration: none; opacity: .82; transition: opacity .2s; }
+  nav.hw-nav a:hover { opacity: 1; color: #fff; }
+  nav.hw-nav a.current { opacity: 1; border-bottom: 1px solid #b8922c; padding-bottom: .15rem; }
+
+  /* ─── Mobile: stack the list above the definition, let the page scroll ─── */
+  @media (max-width: 700px) {
+    body { height: auto; overflow: auto; }
+    .app { flex-direction: column; height: auto; }
+    .sidebar {
+      width: 100%; min-width: 0;
+      border-right: none;
+      border-bottom: 2px solid var(--border);
+      box-shadow: 0 4px 18px var(--shadow);
+    }
+    .term-list { flex: none; max-height: 40vh; overflow-y: auto; }
+    .main { flex: none; width: 100%; overflow: visible; }
+    .term-detail { padding: 26px 18px 44px; max-width: none; }
+    .empty-state { padding: 40px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html">Reflections</a>
+  <a href="/old/articles.html">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html" class="current">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+<div class="app">
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-title">Hesed Words</div>
+      <div class="sidebar-subtitle">Glossary of Hebrew<br>and Greek Words</div>
+      <div class="term-count" id="term-count">Loading…</div>
+    </div>
+    <div class="search-wrap">
+      <input class="search-box" id="search-input" type="text" placeholder="Search terms…" autocomplete="off" />
+    </div>
+    <div class="cat-filters" id="cat-filters">
+      <button class="cat-btn all active" data-cat="all">All</button>
+      <button class="cat-btn covenant" data-cat="covenant">Covenant</button>
+      <button class="cat-btn justice" data-cat="justice">Justice</button>
+      <button class="cat-btn love" data-cat="love">Love</button>
+      <button class="cat-btn wisdom" data-cat="wisdom">Wisdom</button>
+      <button class="cat-btn presence" data-cat="presence">Presence</button>
+      <button class="cat-btn trust" data-cat="trust">Trust</button>
+    </div>
+    <div class="term-list" id="term-list"></div>
+    <div class="sidebar-footer">
+      <button class="add-btn" onclick="openModal(null)">+ Add New Term</button>
+    </div>
+  </div>
+
+  <div class="main" id="main-panel">
+    <div class="empty-state" id="empty-state">
+      <div class="empty-glyph">אֱמוּנָה</div>
+      <h2>Select a Term</h2>
+      <p>Choose a word from the list to explore its meaning, canonical thread, and theological significance.</p>
+    </div>
+    <div class="term-detail" id="term-detail" style="display:none;"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay" onclick="handleModalOverlayClick(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="modal-title">Add Term</div>
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row two-col">
+        <div>
+          <label>Hebrew</label>
+          <input id="f-heb" type="text" placeholder="e.g. חֶסֶד" dir="rtl" />
+        </div>
+        <div>
+          <label>Transliteration</label>
+          <input id="f-tr" type="text" placeholder="e.g. hesed" />
+        </div>
+      </div>
+      <div class="form-row two-col">
+        <div>
+          <label>Gloss</label>
+          <input id="f-gl" type="text" placeholder="Short definition" />
+        </div>
+        <div>
+          <label>Category</label>
+          <select id="f-cat">
+            <option value="covenant">Covenant</option>
+            <option value="justice">Justice / Righteousness</option>
+            <option value="love">Love / Mercy</option>
+            <option value="wisdom">Wisdom / Knowledge</option>
+            <option value="presence">Presence / Rest</option>
+            <option value="trust">Trust / Faith</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <label>Theological Notes</label>
+        <textarea id="f-notes" placeholder="Extended theological reflection…"></textarea>
+      </div>
+      <div class="form-row">
+        <label>Canonical Thread</label>
+        <textarea id="f-thread" placeholder="How the term moves through Torah → Prophets → Writings → NT…" style="min-height:70px;"></textarea>
+      </div>
+      <div class="form-row">
+        <label>Scripture References</label>
+        <input id="f-refs" type="text" placeholder="e.g. Exod 34:6, Hos 6:6, Mic 6:8, John 1:14" />
+        <div class="form-hint">Comma-separated</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+      <button class="btn-save" onclick="saveEntry()">Save Term</button>
+    </div>
+  </div>
+</div>
+
+<div class="status-bar" id="status-bar"></div>
+
+<script>
+const SEED_ENTRIES = [
+  { id:'seed_shamar', hebrew:'שָׁמַר', transliteration:'shamar', gloss:'to keep, guard, watch', category:'covenant', notes:'The covenant verb. Used of God keeping covenant (Deut 7:9), the priest keeping the sacred service, the human keeping commandments. In Psalm 121, the Psalms of Ascent hinge on this word: "he who keeps Israel will neither slumber nor sleep." The keeper–kept relationship between God and creature is the covenant\'s operative grammar.', thread:'Torah: Gen 2:15, keeping the garden — the first human vocation. Deuteronomy: keeping commandments as covenant response. Psalms 121: the LORD as keeper of Israel, repeated six times. NT: John 17:12 — Jesus has kept those given to him, using the same verb in its Greek equivalent (tēreō).', refs:['Gen 2:15','Deut 7:9','Ps 121:4–8','John 17:12'] },
+  { id:'seed_tzanea', hebrew:'צְנֵעַ לֶכֶת', transliteration:'tzanea lekhet', gloss:'to walk humbly', category:'covenant', notes:'The third term of Micah 6:8. Not a personality disposition but a covenantal posture: walking with God, at God\'s pace, in God\'s way, rather than one\'s own. The humble walk is the covenantal grammar of life oriented toward God. In Jesus it reaches its depth at Gethsemane: "not my will but yours."', thread:'Micah 6:8 — the third and governing requirement. Deut 10:12 — "walk in all his ways." Luke 22:42 — Gethsemane as the ultimate tzanea lekhet. Matt 4:1–11 — each temptation refused is a refusal to walk one\'s own way.', refs:['Mic 6:8','Deut 10:12','Luke 22:42','Matt 4:1–11'] },
+  { id:'seed_higgid', hebrew:'הִגִּיד לְךָ', transliteration:'higgid lekha', gloss:'he has told you', category:'covenant', notes:'The opening declaration of Micah 6:8 — not a new requirement but a canonical retrospective. The whole weight of Torah, prophecy, wisdom and narrative is gathered in this phrase. Its force is both accusation and mercy: you already knew; here it is again, compressed into three words.', thread:'Micah 6:8 — the announcement that precedes the summary. Deut 6:5 — the prior telling through Torah. Ps 50:6 — God himself declares. The whole canonical retrospective: Torah, Prophets, Wisdom, Narrative had all been saying the same thing.', refs:['Mic 6:8','Deut 6:5','Ps 50:6','Isa 1:17'] },
+  { id:'seed_yachad', hebrew:'יַחַד', transliteration:'yachad', gloss:'together, unity', category:'covenant', notes:'The covenantal togetherness. Psalm 133 — "how good and pleasant it is when brothers dwell in yachad" — is the Psalm of Ascent that names the goal directly. It is not uniformity but organic unity, like oil running down the beard of Aaron, like dew descending on Hermon — a unity that is fertile, priestly, and covenant-keeping.', thread:'Ps 133:1 — brothers dwelling in yachad as a Psalm of Ascent destination. Ps 34:3 — "let us magnify the LORD together." John 17:21–23 — Jesus prays for the unity of his disciples as participation in the trinitarian yachad. Eph 4:3 — the unity of the Spirit to be kept.', refs:['Ps 133:1','Ps 34:3','John 17:21','Eph 4:3'] },
+  { id:'seed_nachalah', hebrew:'נַחֲלָה', transliteration:'nachalah', gloss:'inheritance, portion', category:'covenant', notes:'The gift that cannot be earned, only received. The nachalah is the portion God assigns — land, community, covenant relationship, the Lord himself (Ps 16:5). It is received with open hands or not at all. The Jubilee restores nachalah to those who have lost it; the gospel announces a nachalah reserved in heaven.', thread:'Numbers/Deuteronomy — tribal land portions as nachalah. Ps 16:5–6 — the LORD himself as portion and nachalah. Ps 128:3 — household as living nachalah. 1 Pet 1:4 — an imperishable inheritance reserved in heaven. Eph 1:11 — inheritance (klēronomia) in Christ.', refs:['Ps 16:5','Ps 128:3','1 Pet 1:4','Eph 1:11'] },
+  { id:'seed_mishpat', hebrew:'מִשְׁפָּט', transliteration:'mishpat', gloss:'justice, right order, covenant claim', category:'justice', notes:'Not punishment but restoration. Mishpat is the act that restores right relationship where it has been broken — returning what was taken, releasing what was wrongly held, vindicating the wrongly accused. The da\'at → hesed → mishpat architecture means mishpat is the outward social form of covenant knowing and loving.', thread:'Amos 5:24 — "let mishpat roll down like waters." Isa 1:17 — "learn to do good; seek mishpat." Mic 6:8 — the first term of the triad. Matt 25:31–46 — mishpat as the criterion of the final judgment.', refs:['Amos 5:24','Isa 1:17','Mic 6:8','Matt 25:40'] },
+  { id:'seed_tzedakah', hebrew:'צְדָקָה', transliteration:'tzedakah / tsedeq', gloss:'righteousness, relational restoration', category:'justice', notes:'Not legal conformity but relational restoration. God\'s tzedakah is his movement toward the deficit in those he seeks relationship with. Isaiah 42:6 characterises God\'s act of calling, not the servant\'s moral status. Psalm 85:10 holds the great promise: tzedakah and shalom shall meet — the divine attributes simultaneously satisfied in Christ.', thread:'Gen 15:6 — Abram\'s faith reckoned as tzedakah. Ps 85:10 — tzedakah and shalom kiss each other. Isa 42:6; 45:8 — God\'s tzedakah as the ground of salvation. Rom 3:21–26 — God\'s dikaiosynē revealed in Christ.', refs:['Gen 15:6','Ps 85:10','Isa 42:6','Isa 45:8','Rom 3:21'] },
+  { id:'seed_shub', hebrew:'שׁוּב שְׁבוּת', transliteration:'shub shebut', gloss:'restoration of fortunes, the great turning', category:'justice', notes:'The double-shub formula of covenant restoration. When Job turns toward his accusers with intercession rather than retaliation, "the LORD restored the fortunes of Job" (Job 42:10). The capacity to intercede for those who wronged you is itself the first form of the turning.', thread:'Jer 30–33 — the Book of Consolation as the great shub shebut. Ps 85:1 — "you restored the fortunes of Jacob." Job 42:10 — Job\'s intercession for his friends as the hinge. Luke 15 — the returning prodigal as shub made flesh.', refs:['Job 42:10','Ps 85:1','Jer 30:3','Luke 15:24'] },
+  { id:'seed_hesed', hebrew:'חֶסֶד', transliteration:'hesed', gloss:'covenant love, steadfast love, loyalty', category:'love', notes:'The covenant\'s operative force. Hesed is the loyalty that maintains relationship across failure, distance, and the long curve of the covenant\'s unfolding. It is never owed — it is always more than the relationship requires. Exodus 34:6 — the LORD\'s self-declaration — makes hesed constitutive of God\'s name. The cross is hesed in its most concentrated form.', thread:'Exod 34:6 — God\'s self-declaration. Hos 4:1; 6:6 — hesed\'s absence as root diagnosis. Mic 6:8 — "love hesed" as the second term. Ps 136 — hesed as the refrain of the whole history of God. John 1:14 — charis and alētheia as the Greek clothing of hesed and emet in the flesh.', refs:['Exod 34:6','Hos 6:6','Mic 6:8','Ps 136:1','John 1:14'] },
+  { id:'seed_mashak', hebrew:'מָשַׁךְ', transliteration:'mashak', gloss:'to draw — a forceful pull, not a gentle invitation', category:'love', notes:'A physical, forceful verb: drawing a bow taut, hauling water up by a rope, pulling a body from a pit. Not a beckoning but a hauling — the pull that overcomes distance rather than merely inviting across it. Jeremiah reaches for this word to explain the whole of covenant history: "with lovingkindness I have drawn you." In Song of Songs, the bride\'s opening plea borrows the same verb — "draw me," mashkeni — asking to be pulled the way water is pulled up from a well.', thread:'Jer 31:3 — with hesed I have drawn (mashak) you. Hos 11:4 — I drew them with cords of kindness. Song 1:4 — draw me (mashkeni), we will run after you. John 6:44 — the Greek helkyō, the LXX\'s own word for mashak, used of the Father drawing a person to the Son.', refs:['Jer 31:3','Hos 11:4','Song 1:4','John 6:44'] },
+  { id:'seed_chen', hebrew:'חֵן', transliteration:'chen', gloss:'grace, unconditional favour', category:'love', notes:'The gaze before any response. Chen is the favour that precedes merit, the look that constitutes the beloved before they have earned anything. "Noah found chen in the eyes of the LORD" (Gen 6:8) — not because he had performed, but because the LORD looked. The community of chen is the generative condition for safety at the site of danger.', thread:'Gen 6:8 — Noah finding chen. Ps 84:11 — no good thing withheld. Zech 12:10 — the Spirit of chen and supplication poured out. John 1:14,17 — charis (grace) as the NT clothing of chen.', refs:['Gen 6:8','Ps 84:11','Zech 12:10','John 1:16'] },
+  { id:'seed_selichah', hebrew:'סְלִיחָה', transliteration:'selichah', gloss:'forgiveness, the capacity to forgive', category:'love', notes:'Not simply the act of pardoning but the character in whom forgiveness is native. Psalm 130:4 — "with you is selichah, that you may be feared" — makes forgiveness the basis of relationship, not its reward. Selichah is not cheap because it is free — it is the costliest thing, and its costlessness to the recipient is the measure of its cost to the giver.', thread:'Ps 130:4 — selichah as the ground of awe. Dan 9:9 — "to the Lord our God belong selichot." Neh 9:17 — the character of God as the gracious and forgiving one. Matt 6:12 — "forgive us as we forgive." Luke 15 — the prodigal as selichah in narrative form.', refs:['Ps 130:4','Dan 9:9','Neh 9:17','Matt 6:12'] },
+  { id:'seed_daat', hebrew:'דַּעַת', transliteration:"da'at", gloss:'intimate knowing, covenantal knowledge', category:'wisdom', notes:'Not cognitive data but relational penetration. The da\'at of Hosea 4:1/6:6 that Israel lacks is not doctrinal information but the intimate knowing of a spouse — the knowledge that generates hesed and overflows into mishpat. John 17:3 is its fulfilment: "This is eternal life, that they know you."', thread:'Hos 4:1; 6:6 — da\'at Elohim as what Israel lacks. Isa 11:9 — the earth full of da\'at as the waters cover the sea. Jer 31:34 — they shall all know me. John 17:3 — eternal life as knowing. Phil 3:10 — Paul\'s da\'at ambition: to know him.', refs:['Hos 4:1','Hos 6:6','Isa 11:9','John 17:3','Phil 3:10'] },
+  { id:'seed_hevel', hebrew:'הֶבֶל', transliteration:'hevel', gloss:'vapour, breath, transience', category:'wisdom', notes:'The key word of Ecclesiastes. Not nihilism but honest naming of what cannot be grasped. Everything seized as ultimate — work, pleasure, wisdom, legacy — dissipates in the hand. The antidote is not more grasping but receiving life as gift, which requires hands that can open.', thread:'Eccl 1:2 — "all is hevel." Ps 39:5–6 — human life as hevel before God. Jon 2:8 — "those who cling to worthless idols forsake their hesed." Jas 4:14 — life as a vapour.', refs:['Eccl 1:2','Ps 39:5','Jon 2:8','Jas 4:14'] },
+  { id:'seed_ashrei', hebrew:'אַשְׁרֵי', transliteration:'ashrei', gloss:'blessedness, happiness of right relationship', category:'wisdom', notes:'Not a feeling but a status. Psalm 1 opens the entire Psalter with ashrei — the blessedness of the one properly aligned with the grain of creation: their delight is in Torah, their roots reach water. The Beatitudes of Matthew 5 carry the same word (makarios) — announcing the reversal of who is counted among the ashrei.', thread:'Ps 1:1 — the Psalter\'s opening word. Ps 2:12 — ashrei as the closing frame of the Ps 1–2 introduction. Ps 84:5 — "Blessed are those whose strength is in you." Matt 5:3–12 — the Beatitudes as ashrei reversals.', refs:['Ps 1:1','Ps 2:12','Ps 84:5','Matt 5:3'] },
+  { id:'seed_barak', hebrew:'בָּרַךְ', transliteration:'barak', gloss:'to bless, blessing', category:'wisdom', notes:'Both noun and verb; direction runs both ways. Creatures bless God by acknowledging who he is; God blesses creatures by giving what they need for flourishing. The Aaronic benediction — "the LORD bless you and keep you" — is the paradigmatic act: the covenant God turning his face toward the creature in favour, shining upon them, granting shalom.', thread:'Gen 12:2–3 — Abram as instrument of blessing to all nations. Num 6:24–26 — the Aaronic benediction as the covenant\'s formal blessing structure. Ps 67:1 — the Aaronic blessing extended to mission. Eph 1:3 — blessed with every spiritual blessing in Christ.', refs:['Gen 12:2','Num 6:24','Ps 67:1','Eph 1:3'] },
+  { id:'seed_menuha', hebrew:'מְנוּחָה', transliteration:'menuha', gloss:'rest, settled peace', category:'presence', notes:'Not the absence of activity but the presence of God. The menuha of Psalm 23 — "he leads me beside still waters" — is rest as a quality of the company you keep. The Psalms of Ascent use menuha as a destination: Psalm 132:8 calls the ark to "your resting place." The Sabbath is its institutional form; the Father\'s house in John 14 is its eschatological form.', thread:'Ps 23:2 — still waters as menuha. Ps 95:11 — "they shall not enter my rest" and its positive correlate. Ps 132:8,14 — the ark\'s resting place. Ruth 1:9 — "may the LORD grant you menuha." Heb 4:9–11 — entering God\'s sabbath rest.', refs:['Ps 23:2','Ps 95:11','Ps 132:8','Heb 4:9'] },
+  { id:'seed_kavod', hebrew:'כָּבוֹד', transliteration:'kavod', gloss:'glory, weight, presence', category:'presence', notes:'The word carries physical weight. Kavod is glory as heaviness, as something that presses down and fills a space. Isaiah 6:3 — "the whole earth is full of his kavod" — is a claim about the weight of presence filling creation. In Psalm 85:9 kavod is what will dwell in the land when the divine attributes meet.', thread:'Exod 33:18–23 — Moses asking to see the kavod. Isa 6:3 — "the whole earth is full of his kavod." Ps 8:5 — the human crowned with kavod and honour. Ps 85:9 — kavod dwelling in the land. John 1:14 — "we beheld his kavod." 2 Cor 3:18 — being transformed from one degree of kavod to another.', refs:['Exod 33:18','Isa 6:3','Ps 8:5','Ps 85:9','John 1:14'] },
+  { id:'seed_nefesh', hebrew:'נֶפֶשׁ', transliteration:'nefesh', gloss:'soul, self, whole person, throat, life', category:'presence', notes:'Not a spiritual component but the integrated self. The nefesh is the person in their need and desire — the throat that is parched, the whole self crying out to God. "My nefesh thirsts for you" (Ps 42:2) is not the spiritual part of a person expressing spiritual longing — it is the whole living creature reaching toward the source of life.', thread:'Gen 2:7 — Adam became a living nefesh. Ps 42:1–2 — the nefesh panting for God as a deer pants for water. Ps 103:1 — "bless the LORD, O my nefesh." Isa 53:12 — he poured out his nefesh to death. Matt 11:29 — rest for your nefesh.', refs:['Gen 2:7','Ps 42:2','Ps 103:1','Isa 53:12','Matt 11:29'] },
+  { id:'seed_shalom', hebrew:'שָׁלוֹם', transliteration:'shalom', gloss:'peace, wholeness, flourishing completeness', category:'presence', notes:'Not the absence of conflict but the presence of right relationship at every level — between God and creature, between human beings, within the self, in the fabric of the created order. Psalm 85:10 is the great promise: shalom and tzedakah meet when the divine attributes meet.', thread:'Isa 9:6–7 — the Prince of Shalom whose government increases. Num 6:26 — shalom as the benediction\'s final gift. Ps 85:10 — shalom and tzedakah kiss each other. John 14:27 — "my shalom I give you, not as the world gives." Eph 2:14 — "he himself is our shalom."', refs:['Isa 9:6','Num 6:26','Ps 85:10','John 14:27','Eph 2:14'] },
+  { id:'seed_shalem', hebrew:'שָׁלֵם', transliteration:'shalem', gloss:'to complete, to make whole; to perform a vow', category:'presence', notes:'The verb behind performing a vow, and the same root as shalom. Ordinary usage renders it discharge or repay, and that is right as far as it goes — it is the word for settling what is outstanding. But the settling in view is not the closing of an account. What is completed is not a debt but a thing arriving at what it was always for. Which is why the same root carries peace: shalom is the state, shalem is the arriving at it. A vow performed is not an invoice paid; it is a word brought to its full stature.', thread:'Ps 61:8 — performing (shalem) vows day after day, at the close of the psalm of shelter. Ps 50:14 — perform your vows to the Most High, paired with the sacrifice of thanksgiving. Ps 76:11 — make your vows and perform them. Deut 23:21 — you shall not delay to perform it. Joel 2:25 — the verb turned round, with God himself completing (shalem) the years the locust had eaten.', refs:['Ps 61:8','Ps 50:14','Ps 76:11','Deut 23:21','Joel 2:25'] },
+  { id:'seed_emunah', hebrew:'אֱמוּנָה', transliteration:'emunah', gloss:'faithfulness, trustworthiness, solidity', category:'trust', notes:'The word from which "amen" comes. Emunah is not primarily a subjective act of believing but the objective quality of being reliable — the ground that holds when you step on it. Habakkuk 2:4 — "the righteous shall live by emunah" — names the faithful-ones as those whose life is organised around what is genuinely reliable.', thread:'Exod 17:12 — Moses\'s hands held steady (emunah) while Israel prevailed. Ps 119:30 — "I have chosen the way of emunah." Hab 2:4 — the righteous live by emunah. Rom 1:17; Gal 3:11 — the just shall live by faith/emunah.', refs:['Exod 17:12','Ps 119:30','Hab 2:4','Rom 1:17'] },
+  { id:'seed_selah', hebrew:'סֶלָה', transliteration:'selah', gloss:'pause; lift up; a liturgical interlude', category:'presence', notes:'A word whose meaning is genuinely unknown — most likely a musical or liturgical direction marking a pause or interlude. The root may be salal (to lift up) or salah (to pause); the Greek translators rendered it diapsalma, an interlude, which shows they were guessing too. Whatever it was for, its observable function is to stop the reading, and to stop it somewhere in particular. The only question it leaves is: stop here and look at what?', thread:'Appears dozens of times across the Psalms and three times in Habakkuk 3, always mid-poem. Ps 39:5, 11 place it twice on hevel (a mere breath), stopping the reader before the fact of how brief he is. Hab 3:3, 9, 13 set it into the prophet\'s vision of God coming in power.', refs:['Ps 39:5','Ps 39:11','Ps 3:2','Hab 3:3'] },
+  { id:'seed_yada', hebrew:'יָדַע · דַּעַת', transliteration:'yada / da\'at', gloss:'to know — by experience and relationship, not by information alone', category:'wisdom', notes:'Biblical knowing is not the storing of facts but contact with the thing itself. Yada is the verb ("Adam knew his wife"); da\'at is the noun. To know God, in this register, is nearer to intimacy and covenant loyalty than to correct belief — which is why Jeremiah can say that to know God is to do justice for the poor. The opposite of da\'at is not ignorance but self-deception.', thread:'Gen 4:1 — yada as the language of intimacy. Hos 6:6 — God desires da\'at elohim, knowledge of God, more than sacrifice. Jer 22:16 — "he judged the cause of the poor; is not this to know me?" Isa 11:9 — the earth full of the da\'at of the LORD. John 17:3 — eternal life is to know the Father and the Son.', refs:['Gen 4:1','Hos 6:6','Jer 22:16','John 17:3'] },
+  { id:'seed_emet', hebrew:'אֱמֶת', transliteration:'emet', gloss:'truth, firmness, reliability', category:'trust', notes:'From the same root as emunah (aman, to be firm). Emet is not truth as abstract correctness but truth as firmness — that which will hold, will not give way, can be leaned on. It travels through Scripture bound to hesed: the pair hesed ve-emet, steadfast love and faithfulness, is how God declares his own name.', thread:'Exod 34:6 — the LORD, abounding in hesed ve-emet. Ps 25:10 — all the paths of the LORD are hesed and emet. Ps 85:10 — hesed and emet meet together. John 1:14 — grace and truth, the Greek clothing of hesed ve-emet, in the flesh.', refs:['Exod 34:6','Ps 25:10','Ps 85:10','John 1:14'] },
+  { id:'seed_paga', hebrew:'פָּגַע', transliteration:'paga', gloss:'to fall upon, strike, meet; to intercede', category:'presence', notes:'A word with a body in it. Before it ever means to intercede, it means to fall upon — to strike, to meet with force, the place where one thing comes hard against another. So intercession, in its oldest sense, is not pleading from a safe distance but stepping into the place of contact and letting the blow meet you. The Servant intercedes by being struck.', thread:'1 Sam 22:18 — the enemy fell upon (paga) the priests. Isa 59:16 — God was appalled that there was no one to interpose (paga). Isa 53:12 — the Servant made intercession (paga) for the transgressors. Rom 8:34 — Christ, who intercedes for us.', refs:['1 Sam 22:18','Isa 59:16','Isa 53:12','Rom 8:34'] },
+  { id:'seed_argos', hebrew:'ἀργός', transliteration:'argos (Greek)', gloss:'without work; idle, barren, unproductive', category:'wisdom', notes:'Greek, not Hebrew: a-ergon, "without work." Not merely careless but workless — a field left unsown, a labourer not yet hired, a word that carries nothing and does nothing. The thread through its uses is not chatter but barrenness: to be argos is to take up room and yield nothing. So the idle word we answer for is the workless one.', thread:'Matt 12:36 — every idle (argos) word will be brought to account. Matt 20:3, 6 — labourers standing idle in the marketplace. 1 Tim 5:13 — learning to be idle. 2 Pet 1:8 — the graces that keep us from being idle and unfruitful.', refs:['Matt 12:36','Matt 20:3','1 Tim 5:13','2 Pet 1:8'] },
+  { id:'seed_taam', hebrew:'טָעַם', transliteration:'ta\'am', gloss:'to taste; to discern by taking in', category:'presence', notes:'To taste — the tongue on the thing itself — and, in a second sense the English mislays, to discern, to test something by taking it in. It is knowledge by contact. "Taste and see that the LORD is good" reverses the order we expect: you do not verify God from a safe distance and then approach; you approach, you take him in, and that is how the seeing comes.', thread:'1 Sam 14:29 — Jonathan tasted the honey and his eyes brightened. Ps 34:8 — taste and see that the LORD is good. Prov 31:18 — she perceives that her merchandise is good. 1 Pet 2:3 — if indeed you have tasted that the Lord is good.', refs:['1 Sam 14:29','Ps 34:8','Prov 31:18','1 Pet 2:3'] },
+  { id:'seed_nashaq', hebrew:'נָשַׁק', transliteration:'nashaq', gloss:'to kiss — in affection, homage, or allegiance', category:'love', notes:'The same act carries intimacy and allegiance. Nashaq is the kiss of love — "let him kiss me with the kisses of his mouth" — and the kiss of homage, the sign that one belongs to a king: "kiss the Son." To kiss is to draw near and to submit at once. Even fidelity to a false god was measured by it: the mouths that have not kissed Baal.', thread:'Gen 27:26 — Isaac: come near and kiss me. Song 1:2 — let him kiss me with the kisses of his mouth. Ps 2:12 — kiss the Son. 1 Kgs 19:18 — the seven thousand whose mouths have not kissed Baal. Luke 7:45 — she has not ceased to kiss my feet.', refs:['Song 1:2','Ps 2:12','1 Kgs 19:18','Luke 7:45'] },
+  { id:'seed_sava', hebrew:'שָׂבַע', transliteration:'sava', gloss:'to be satisfied, filled, to have enough', category:'presence', notes:'To be filled to the point of enough — of bread, and of the soul. The word can turn either way: the belly satisfied and forgetting God, or the soul satisfied by God himself. Psalm 17 sets it at its highest — "I shall be satisfied with your likeness when I awake" — the appetite finally answered, and answered by his face rather than by the world\'s provision.', thread:'Deut 8:10 — you shall eat and be full (sava), and bless the LORD. Ps 17:15 — I shall be satisfied with your likeness. Ps 63:5 — my soul is satisfied as with rich food. Ps 103:5 — who satisfies you with good.', refs:['Deut 8:10','Ps 17:15','Ps 63:5','Ps 103:5'] },
+  { id:'seed_sakal', hebrew:'סָכָל', transliteration:'sakal', gloss:'to act foolishly; the senseless, godless fool', category:'wisdom', notes:'Not the simple or the merely ignorant, but the one who acts against what he knows — folly as a bent of the will, not a gap in information. Scripture\'s sharpest form: a people wise to do evil, but without the da\'at to do good. This fool is the near neighbour of the man with no fear of God before his eyes.', thread:'1 Sam 13:13 — "you have done foolishly," Samuel to Saul. 2 Sam 24:10 — David: I have done very foolishly. Jer 4:22 — my people are foolish (sakal), they have not known me; wise to do evil, but to do good they have no knowledge. Eccl 7:17 — be not foolish; why should you die before your time?', refs:['1 Sam 13:13','Jer 4:22','Eccl 7:17'] },
+  { id:'seed_anavah', hebrew:'עֲנָוָה', transliteration:'anavah', gloss:'meekness, humility, lowliness — power that refuses to grasp', category:'wisdom', notes:'Not softness, and not weakness. Anavah is the strength that will not seize. It is the noun behind anav, the word used of Moses — "the meekest man on the face of the earth" — the same Moses who stood before Pharaoh and did not flinch. In Psalm 45 it sits, jarringly, in the middle of a war-line, between truth and righteousness, as one of the three things for which the King rides out: the King who wins is a King who will not grasp, and the winning is not separable from the manner of it. Jesus takes the word onto his own lips — "I am meek and lowly in heart" — and calls it the yoke that gives rest.', thread:'Num 12:3 — Moses, meeker (anav) than all men on the face of the earth. Ps 45:4 — the King rides out for truth, anavah, and righteousness. Zeph 2:3 — "seek anavah; perhaps you will be hidden in the day of the LORD\'s anger." Matt 11:29 — "I am gentle and lowly in heart." Matt 5:5 — "blessed are the meek, for they shall inherit the earth."', refs:['Num 12:3','Ps 45:4','Zeph 2:3','Matt 11:29'] },
+  { id:'seed_gibbor', hebrew:'גִּבּוֹר', transliteration:'gibbor', gloss:'mighty one, warrior, champion — strength that settles the matter', category:'justice', notes:'The word for a warrior or champion, the man you send out when the matter will be settled by force. In Psalm 45 it is laid on the King — "gird your sword, O gibbor" — and sits oddly beside the grace poured on his lips: he is speaker and fighter at once, and the psalm does not think these are in tension. Goliath was a gibbor of the Philistines; the boy who faced him was not, and the contrast is the point. Most striking of all, Isaiah lays the same word on the child to be born: El Gibbor, Mighty God.', thread:'Ps 45:3 — "gird your sword upon your thigh, O gibbor." 1 Sam 17:4 — the gibbor of Gath, brought down by a stone. Isa 9:6 — the child called El Gibbor, Mighty God. Zeph 3:17 — "the LORD your God in your midst, a gibbor who saves."', refs:['Ps 45:3','1 Sam 17:4','Isa 9:6','Zeph 3:17'] },
+  { id:'seed_rachash', hebrew:'רָחַשׁ', transliteration:'rachash', gloss:'to overflow, stir, boil up — the heart welling over', category:'wisdom', notes:'A hapax legomenon — it appears only once in the whole Hebrew Bible, at the head of Psalm 45, which makes it hard to pin down. The lexicons reach for stirring, boiling, seething — something moving in a vessel that will not stay still. It is not the language of a man sitting down to compose, but of a man overtaken: "my heart rachash-es a pleasing theme," and his tongue becomes the pen of a ready scribe, racing to get down what is welling up faster than he can hold it.', thread:'Ps 45:1 — the sole occurrence; the poet overflowing before the King. Cf. Ps 39:3 — "my heart was hot within me; while I was musing the fire burned"; the same involuntary welling. Cf. Matt 12:34 — "out of the abundance of the heart the mouth speaks."', refs:['Ps 45:1','Ps 39:3','Matt 12:34'] },
+  { id:'seed_batach', hebrew:'בָּטַח', transliteration:'batach', gloss:'to trust, to lean weight upon', category:'trust', notes:'The physical register of the word matters: batach is the act of leaning one\'s weight against something, trusting it to hold. Its opposite is false trust — the prophets catalogue the wrong trust-objects: Egypt, Assyria, chariots, city walls, human strength. Proverbs 3:5 — "trust in the LORD with all your heart / lean not on your own understanding."', thread:'Prov 3:5 — batach in the LORD vs. leaning on your own understanding. Isa 31:1 — woe to those who trust in Egypt. Ps 125:1 — those who trust in the LORD are like Zion. Jer 17:5,7 — cursed trust-in-humans vs. blessed trust-in-the-LORD. Ps 52:7–8 — the compact instance of the contrast: both objects sit in the same psalm, under the same verb — “trusted in the abundance of his riches” (v.7) and “I trust in the steadfast love of God” (v.8). Elsewhere the contrast is spread across chapters; here it is two lines and the whole pattern is visible at once. Phil 4:7 — the peace of God as pepoitha (Greek batach).', refs:['Prov 3:5','Ps 125:1','Jer 17:5','Jer 17:7','Ps 52:7','Ps 52:8','Phil 4:7'] },
+  { id:'seed_qavah', hebrew:'קָוָה', transliteration:'qavah', gloss:'to wait, to hope, to strain toward', category:'trust', notes:'The word carries the image of a cord being pulled taut. Qavah is not passive waiting but the taut expectancy of a creature oriented toward what it knows is coming. "Those who wait (qavah) for the LORD shall renew their strength" (Isa 40:31) — the waiting is itself the source of the renewed capacity, not merely a precondition for it.', thread:'Isa 40:31 — those who wait for the LORD renewing their strength. Ps 27:14 — the double imperative of waiting. Ps 130:5–6 — "I wait for the LORD, my soul waits, more than watchmen wait for the morning." Lam 3:25 — the LORD is good to those who wait. Rom 8:25 — hope that waits with endurance.', refs:['Isa 40:31','Ps 27:14','Ps 130:5','Lam 3:25','Rom 8:25'] },
+
+  { id:'seed_sod', hebrew:'סוֹד', transliteration:'sod', gloss:'intimate friendship, inner council', category:'wisdom', notes:'The word beneath Psalm 25:14 — \"the sod of the LORD is for those who fear him.\" Sod is not general friendship but the inner circle, the place of full disclosure, where the host\'s purposes are made known to the guest. Job names its loss as the deepest wound: \"when the sod of God was over my tent\" (Job 29:4). What Job lost was not comfort or prosperity but the intimate company of God — the friendship in which everything was transparent. The go\'el cry of Job 19:25 is reached by following the logic of sod to its ultimate conclusion: the relationship cannot end, therefore the redeemer lives.', thread:'Ps 25:14 — the sod of the LORD as the covenant gift to those who fear him. Job 29:4 — sod as what was lost, the deepest wound beneath all Job\'s suffering. Amos 3:7 — God does nothing without revealing his sod to his servants the prophets. John 15:15 — Jesus\'s redefinition: no longer servants but friends, because he has made known everything the Father told him.', refs:['Ps 25:14','Job 29:4','Amos 3:7','John 15:15'] },
+
+  { id:'seed_goel', hebrew:'גֹּאֵל', transliteration:"go'el", gloss:'kinsman redeemer, advocate', category:'covenant', notes:'The one who stands for the family member who cannot stand for themselves — redeeming land, buying freedom, vindicating the wrongly accused. In Job 19:25 the cry \"I know that my redeemer lives\" is not deduced from theology but pressed out of Job by the logic of relationship: if the bond is real, then nothing — not suffering, not abandonment, not death — can terminate it. The go\'el does not summon Job upward to a heavenly court. He comes down to the dust where Job lies. The incarnation is the go\'el movement at cosmic scale.', thread:'Lev 25 — the go\'el as the structural institution of covenant community. Ruth 4 — Boaz as the go\'el who redeems across every boundary. Job 19:25 — the go\'el cry reached by the logic of relationship pressed to its ultimate conclusion. Isa 41:14; 43:14 — YHWH as go\'el of Israel. Rom 8:3 — God sending his Son into the dust, the ultimate go\'el movement.', refs:['Lev 25:25','Ruth 4:14','Job 19:25','Isa 41:14','Rom 8:3'] },
+
+  { id:'seed_hagah', hebrew:'הָגָה', transliteration:'hagah', gloss:'to murmur, meditate, turn over in the mouth', category:'wisdom', notes:'Not silent contemplation but the low, continuous sound of a person turning text over in their mouth — the murmur of a dove, the growl of a lion over its prey. Psalm 1:2 — \"on his law he hagah-s day and night\" — describes not a reading programme but a posture: the text is in the mouth, being worked, being sounded, being worn smooth. This is the Benedictine ruminatio in its Hebrew form. Writing does for hagah what meditation alone cannot always accomplish: it draws the text deeper, makes it irreversible.', thread:'Josh 1:8 — \"this Book of the Law shall not depart from your mouth; you shall hagah on it day and night.\" Ps 1:2 — hagah as the defining practice of the blessed person. Ps 19:14 — the higgayon of the heart, the murmuring meditation acceptable before God. Ps 63:6 — \"I meditate on you in the watches of the night.\"', refs:['Josh 1:8','Ps 1:2','Ps 19:14','Ps 63:6'] },
+
+  { id:'seed_nasa', hebrew:'נָשָּא / סָבַל', transliteration:'nasa / sabal', gloss:'to carry, to bear as burden or gift', category:'presence', notes:'Isaiah 46 sets up a devastating contrast. The idols of Babylon must be nasa\'d — loaded onto animals, hauled as dead weight, unable to move themselves. They are burdens their worshippers must carry. Then the inversion: YHWH declares, \"I have carried you since before your birth... even to your old age I will carry you.\" God does not need to be carried. God carries. What we hold wrongly — work, significance, outcomes, identity — becomes nasa in the wrong direction: we end up bearing it. What God holds becomes the rest of being borne.', thread:'Isa 46:1–4 — idols as dead weight vs. YHWH carrying from womb to grey hair. Isa 53:4 — the Servant nasa\'s our griefs and sabal\'s our sorrows: the carrying moves to the cross. Ps 68:19 — \"Blessed is the Lord who daily bears our burden.\" Matt 11:28–30 — \"my yoke is easy, my burden is light\": the carried life vs. the carrying life.', refs:['Isa 46:3','Isa 53:4','Ps 68:19','Matt 11:28'] },
+
+  { id:'seed_yirat', hebrew:'יִרְאַת אֲדֹנָי', transliteration:'yirat Adonai', gloss:'fear of the LORD, reverential awe', category:'trust', notes:'Not terror but orientation — the posture of a life rightly ordered toward God. Yirat Adonai is the beginning of wisdom (Prov 9:10), the condition under which sod is received (Ps 25:14). In the Psalms of Ascent it is the foundational description of the blessed person: \"Blessed is everyone who fears the LORD, who walks in his ways\" (Ps 128:1). It is not fear that drives away but fear that draws near — the recognition of who God is that reorganises everything else. The person who fears God is paradoxically the freest person, because they have nothing else to fear.', thread:'Prov 1:7; 9:10 — yirat Adonai as the beginning and foundation of wisdom. Ps 25:14 — the sod of the LORD given to those who fear him. Ps 128:1 — the blessed person as the one who fears the LORD. Isa 11:2–3 — the Spirit of yirat Adonai resting on the Servant. Luke 1:50 — \"his hesed is for those who fear him from generation to generation.\"', refs:['Prov 1:7','Ps 25:14','Ps 128:1','Isa 11:2','Luke 1:50'] },
+
+  { id:'seed_rachav', hebrew:'רָחַב', transliteration:'rachav', gloss:'spaciousness, the wide open place', category:'presence', notes:'The opposite of the tight place — the narrow, the hemmed-in, the pressed. Rachav is what God creates when he responds to the cry from distress: \"you have not handed me over to the enemy but have set my feet in a wide place\" (Ps 31:8). It is liberation before it is rest — the opening of the space in which menuha becomes possible. Psalm 4:1 — \"you have given me rachav when I was in distress\" — names spaciousness as the specific gift of the God who hears. The wide place is not the destination; it is the room in which arrival becomes possible.', thread:'Ps 4:1 — rachav as God\'s gift in response to distress. Ps 31:8 — feet set in a wide place, not handed to the enemy. Ps 118:5 — \"out of my distress I called on the LORD; the LORD answered me and set me free\" (in rachav). Isa 54:2 — \"enlarge the place of your tent.\"', refs:['Ps 4:1','Ps 31:8','Ps 118:5','Isa 54:2'] },
+
+  { id:'seed_tam', hebrew:'תָּם', transliteration:'tam', gloss:'blameless, whole, integrated', category:'covenant', notes:'The word God uses for Job before Job has said a word. \"There is none like him on the earth — a tam and upright man, who fears God and turns away from evil.\" Tam is not moral perfection but integrity — the person in whom there is no split between what is confessed and what is actual. It is relational wholeness more than ethical achievement. The enemy\'s challenge — \"does Job fear God for nothing?\" — targets whether what the word describes is genuinely free. The book\'s answer: Job\'s tam survives the stripping of every external support, which is itself the vindication of God\'s own prior assessment.', thread:'Job 1:1,8 — God\'s own declaration of Job as tam before suffering begins. Job 2:3 — God repeats the assessment after the first round of suffering. Ps 15 — the tam as the one who may dwell on God\'s holy mountain. Gen 17:1 — \"walk before me and be tam\" — God\'s founding covenant command to Abraham.', refs:['Job 1:1','Job 1:8','Ps 15:2','Gen 17:1','Ps 18:25'] },
+
+  { id:'seed_yeshua', hebrew:'יְשׁוּעָה', transliteration:'yeshua', gloss:'salvation, deliverance', category:'justice', notes:'More than rescue — yeshua is the enacted form of tzedakah hitting the ground. Isaiah 45:8 reveals the connection: righteousness (tsedeq) and yeshua do not appear sequentially but co-sprout from the same earth simultaneously. Salvation is what righteousness looks like when it lands. Every utterance of the name \"Jesus\" — Yeshua — is not merely personal identification but theological declaration: this one is the embodiment of Isaiah\'s promise, the place where tsedeq and yeshua germinate together in human flesh.', thread:'Isa 45:8 — yeshua co-sprouting with tsedeq: salvation and righteousness as simultaneous emergence. Ps 98:2 — the LORD has made known his yeshua, revealed his tzedakah in the sight of the nations. Isa 12:2 — \"God is my yeshua; I will trust and not be afraid.\" Matt 1:21 — the name as theological declaration. Luke 1:69 — a horn of yeshua raised in the house of David.', refs:['Isa 45:8','Ps 98:2','Isa 12:2','Matt 1:21','Luke 1:69'] },
+
+  { id:'seed_shuvah', hebrew:'שׁוּבָה', transliteration:'shuvah', gloss:'returning, repentance, the turn', category:'trust', notes:'From the root shuv — to turn, to return, to come back. Not merely feeling sorry but a change of direction. Isaiah 30:15 is one of the most concentrated verses in the prophetic corpus: \"In shuvah and rest you shall be saved; in quietness and trust shall be your strength.\" The turn toward God is simultaneously the turn toward rest — which means repentance and menuha are not sequential but structurally identical. The tragedy of the verse is its close: \"but you were not willing.\" The gift was available; it was refused. Shuvah is always available — that is its mercy.', thread:'Isa 30:15 — shuvah and nachat as the paired path to salvation, followed by \"but you were not willing.\" Jer 3:22 — \"Return, faithless children; I will heal your faithlessness.\" Hos 14:1 — \"Return to the LORD your God... take with you words and return.\" Luke 15:17–20 — the prodigal\'s shuvah: \"he came to himself... and arose and came to his father.\"', refs:['Isa 30:15','Jer 3:22','Hos 14:1','Luke 15:20'] },
+
+  { id:'seed_chokmah', hebrew:'חָכְמָה', transliteration:'chokmah', gloss:'wisdom — skill in living, rightly ordered', category:'wisdom', notes:'Not cleverness, and not private discernment. Chokmah first names practical skill — it is used of the craftsmen who built the tabernacle, the hands that knew how to work the metal and the cloth. It is knowledge that has passed into the fingers. Carried into the wisdom literature, it keeps that shape: wisdom is not what you have concluded but what you can do, life lived along the grain of the way God made things. Which is why chokmah cannot stay interior. Proverbs 8 has her standing in the street, calling at the gates — the public places, where justice is done or withheld. Wisdom that leaves no restoration behind it is not yet wisdom; it is opinion, held devoutly. Chokmah is the root of which mishpat is the fruit.', thread:'Exod 31:3 — Bezalel filled with chokmah for the work of the tabernacle: wisdom as skilled hands. Prov 1:7; 9:10 — the fear of the LORD as the beginning of chokmah. Prov 8:1–3 — chokmah crying aloud at the gates, in the public square. 1 Kgs 3:9–12 — Solomon asks for a listening heart to discern (mishpat), and it is named chokmah. Isa 11:2 — the Spirit of chokmah resting on the shoot from Jesse, who judges the poor with tzedeq. 1 Cor 1:24,30 — Christ as the chokmah of God; Col 2:3 — in him all the treasures of wisdom.', refs:['Exod 31:3','Prov 1:7','Prov 8:1','1 Kgs 3:9','Isa 11:2','1 Cor 1:24'] },
+  { id:'seed_zakar', hebrew:'זָכַר', transliteration:'zakar', gloss:'to remember, to call to mind, to invoke', category:'wisdom', notes:'Not passive recollection but active re-engagement — a turning of the whole self toward what is being remembered. When God zakar-s his covenant, he acts on it. When the psalmist zakar-s the LORD\'s name in the night, the remembrance is itself a form of prayer. In Psalm 119 the zakar-todah sequence is the engine of praise: remembering what God has spoken in the dark produces the thanksgiving that affliction had sealed shut. For people who have been systematically forgotten — by institutions, by family, by their own hope — the biblical claim that God zakar-s is among the most freighted promises in the canon.', thread:'Ps 77:11 — \"I will remember (zakar) the deeds of the LORD\" — the turn that breaks open a psalm of anguish. Ps 119:52,55 — zakar in the night as the path to comfort and faithfulness. Isa 49:15–16 — \"Can a mother forget her nursing child?... I have engraved you on the palms of my hands.\" Luke 23:42 — \"Jesus, remember me when you come into your kingdom.\" The oldest prayer.', refs:['Ps 77:11','Ps 119:52','Isa 49:16','Luke 23:42'] },
+
+  { id:'seed_todah', hebrew:'תּוֹדָה', transliteration:'todah', gloss:'thanksgiving, public declaration of what God has done', category:'love', notes:'Not private gratitude but public witness — todah is the act of declaring, before others, that what God has done is real and good. In Jonah 2 it is the word Jonah uses to describe what he will bring to God\'s house: a todah offering, a sacrifice of thanksgiving. The psalm he sings from the fish\'s belly is itself a todah psalm — the literary form of public declaration of deliverance. In Psalm 119 the zakar-todah movement is the mechanism by which praise is recovered: remember what God has said in the dark, and that remembrance breaks open the todah that affliction had sealed.', thread:'Jon 2:9 — \"I will sacrifice to you with the voice of todah.\" Ps 50:14,23 — \"offer to God a sacrifice of todah.\" Ps 100 — the todah psalm par excellence: enter his gates with todah. Ps 119:62 — rising at midnight to give todah because of God\'s righteous rules.', refs:['Jon 2:9','Ps 50:14','Ps 100:4','Ps 119:62'] },
+
+  { id:'seed_chanan', hebrew:'חָנַן', transliteration:'chanan', gloss:'to extend grace, to be gracious, to give freely', category:'love', notes:'The verb form of chen — not merely possessing grace but actively extending it. When the Psalms cry \"be gracious to me, O LORD\" (chonneni), the appeal is to God\'s character as the one who gives freely, who bends down toward the one who has no claim. In Psalm 123 the servant\'s eyes fixed on the master\'s hand wait for the moment of chanan — the gesture of favour toward the one who waits. The Aaronic benediction makes chanan the covenant\'s central gift: \"the LORD be gracious to you.\" Grace is not an attribute God possesses at a distance. It is something he does — a turning toward, an active extending.', thread:'Num 6:25 — \"the LORD be gracious (yachon) to you\" as the Aaronic benediction\'s central movement. Ps 123:2 — the servant\'s eyes fixed on the master, waiting for chanan. Ps 51:1 — \"be gracious to me, O God, according to your hesed.\" Exod 33:19 — \"I will be gracious to whom I will be gracious.\" 2 Cor 12:9 — \"my grace is sufficient for you\": charis as the NT form of chanan.', refs:['Num 6:25','Ps 123:2','Ps 51:1','Exod 33:19','2 Cor 12:9'] },
+
+  { id:'seed_rahamim', hebrew:'רַחֲמִים', transliteration:'rahamim', gloss:'tender mercies, compassion, womb-love', category:'love', notes:'The plural form of the word for womb (rechem). To have rahamim is to love with the tender instinct of a mother for the child she carried — a visceral, bodily compassion that cannot simply decide to stop. Exodus 34:6 pairs rahamim with hesed as the twin attributes of God\'s self-declaration. Lamentations 3:22–23 makes it the centre of the book: \"his rahamim never come to an end; they are new every morning.\" The mercy that never ceases is not an abstract quality but a maternal love that renews itself like the dawn — the theological heart of the whole lament, placed in the middle of the ruins.', thread:'Exod 34:6 — rahamim listed alongside hesed in the name-declaration of God. Ps 51:1 — \"according to the abundance of your rahamim, blot out my transgressions.\" Ps 103:13 — \"as a father has rahamim for his children, so the LORD has rahamim for those who fear him.\" Lam 3:22–23 — his rahamim never come to an end; they are new every morning. Isa 49:15 — can a mother forget her nursing child? Even if she could, God\'s womb-love would not.', refs:['Exod 34:6','Ps 51:1','Ps 103:13','Lam 3:22','Isa 49:15'] },
+
+  { id:'seed_tuv', hebrew:'טוֹב', transliteration:'tuv', gloss:'goodness — the character of God before any act', category:'love', notes:'When Moses asked to see God\'s glory, what followed was the proclamation of God\'s name — and the headline was \"I will make all my goodness (tuv) pass before you.\" Tuv is not what God does but what he is at the core. It precedes action; action flows from it. Psalm 27:13 — the word David uses nowhere else about himself in this sense — centres on believing God is tuv: not merely powerful, not faithful in some general way, but good at the root. To believe in the tuv of the LORD is not a conclusion reached by argument. It is the one load-bearing conviction that keeps a person upright when everything else has gone.', thread:'Exod 33:19 — \"I will make all my goodness (tuv) pass before you\" — God\'s self-revelation as tuv. Ps 27:13 — \"I believe I will see the tuv of the LORD in the land of the living.\" Ps 31:19 — \"how great is your tuv, stored up for those who fear you.\" Ps 84:11 — \"no good thing (tuv) does he withhold from those who walk uprightly.\" Jer 31:12 — \"they shall be radiant over the tuv of the LORD.\"', refs:['Exod 33:19','Ps 27:13','Ps 31:19','Ps 84:11','Jer 31:12'] },
+
+  { id:'seed_shem', hebrew:'שֵׁם', transliteration:'shem', gloss:'name — divine self-disclosure, presence made available', category:'presence', notes:'The shem of God is not a label but a self-revelation — the character of God made available to those who invoke it. At the burning bush, God gives his name twice: I AM WHO I AM, and \"the God of Abraham, Isaac, and Jacob\" — identity located in relationship and history. Song of Songs 1:3 plays on the near-identical sound of shem (name) and shemen (oil): \"your name is shemen poured out.\" The fragrance that precedes the beloved\'s arrival is the presence his name makes available before he is seen. To call on the name is to reach toward the self-disclosure God has chosen to make. The shem is not something to know about God — it is God drawing near enough to be known.', thread:'Exod 3:14–15 — God gives his shem: I AM WHO I AM, and the LORD, the God of your fathers. Exod 34:5–6 — the LORD descends and proclaims his shem before Moses. Song 1:3 — \"your shem is shemen poured out; therefore virgins love you.\" Ps 20:1 — \"may the name of the God of Jacob protect you.\" John 17:6 — \"I have manifested your name to the people you gave me.\"', refs:['Exod 3:14','Exod 34:5','Song 1:3','Ps 20:1','John 17:6'] },
+
+  { id:'seed_derek', hebrew:'דֶּרֶךְ', transliteration:'derek', gloss:'way, road, path — the thing feet make by walking', category:'wisdom', notes:'More than a route — derek is the accumulated tread of lived direction. Its root darak means to set foot upon, to press down; derek is darak accumulated over time. Psalm 25:4 asks God to \"make me know your derakheykha\"; verse 5 follows with hadrikheni — \"make me tread them\" — the causative of the same root. The road and the treading are one word-family. You cannot simply know the derek of the LORD and not walk it; conversely, you cannot walk it alone. The prayer of Psalm 25 is the prayer of someone who knows they will choose the floor unless a hand takes the weight their nerve will not commit.', thread:'Ps 25:4–5 — know the derek; be made to tread (hadrikheni) it. Ps 119:30 — \"I have chosen the way (derek) of faithfulness.\" Prov 3:5–6 — \"in all your ways (derakheykha) acknowledge him, and he will make straight your paths.\" Isa 40:3 — \"prepare the derek of the LORD in the wilderness.\" John 14:6 — \"I am the way (hodos)\": the derek made flesh.', refs:['Ps 25:4','Ps 119:30','Prov 3:6','Isa 40:3','John 14:6'] },
+
+  { id:'seed_torah', hebrew:'תּוֹרָה', transliteration:'torah', gloss:'teaching, instruction — not law but gift', category:'wisdom', notes:'The word does not mean law in the penal sense. Its root is yarah — to throw, to point, to direct; a teacher (moreh) points the way. Torah is divine instruction in the broadest sense: the whole of what God has said to orient a life. Psalm 19:7–9 refuses the \"list of demands\" reading: the Torah is perfect, reviving the soul; sure, making wise the simple; right, rejoicing the heart; pure, enlightening the eyes. Every predicate is a gift, not a demand. The Torah does not extract from a person — it moves toward them and does them good. The same logic runs from the mountain to the sermon: Jesus does not abolish Torah but fills it full.', thread:'Ps 1:2 — the blessed person\'s delight is in the Torah, and on it they hagah day and night. Ps 19:7–9 — Torah as the gift that revives, makes wise, gladdens, illuminates. Josh 1:8 — \"this Book of the Torah shall not depart from your mouth.\" Deut 6:6 — \"these words... shall be on your lev.\" Matt 5:17 — Jesus came not to abolish the Torah but to pleroo — fill it full.', refs:['Ps 1:2','Ps 19:7','Josh 1:8','Deut 6:6','Matt 5:17'] },
+
+  { id:'seed_lev', hebrew:'לֵב', transliteration:'lev / levav', gloss:'heart — the seat of will, decision, and inner life', category:'wisdom', notes:'Not primarily the centre of emotion (as in modern usage) but the seat of intention, will, and understanding. The lev is where decisions are made and where direction is set. Lamentations 3:21 — \"this I cause to return to my lev, therefore I have hope\" — describes the deliberate act of turning the heart toward what you know to be true. The lev does not simply receive what happens to it; it can be turned, on purpose, even in the pit. Proverbs 4:23 — \"above all keeping, guard your lev, for from it flow the springs of life\" — places the lev as the governing centre of a life, requiring active protection, not passive drift.', thread:'Deut 6:5 — \"love the LORD your God with all your lev, all your soul, all your strength.\" Ps 19:14 — \"the higgayon of my lev\" — the murmuring meditation of the heart acceptable before God. Prov 4:23 — guard your lev above all keeping. Lam 3:21 — \"this I cause to return to my lev.\" Jer 31:33 — \"I will put my Torah in their lev and write it on their hearts.\"', refs:['Deut 6:5','Ps 19:14','Prov 4:23','Lam 3:21','Jer 31:33'] },
+
+  { id:'seed_eleos', hebrew:'ἔλεος', transliteration:'eleos (Greek)', gloss:'mercy — compassion that acts rather than merely feels', category:'love', notes:'The word the Septuagint translators most often reached for when rendering hesed, which makes it the natural place to look for covenant loyalty carried into the New Testament. Luke uses it freely — the Magnificat, Zechariah\'s song, the cry of the tax collector, the parable of the merciful Samaritan. Matthew uses it three times, twice quoting Hosea 6:6: \"I desire eleos, not sacrifice.\" John never uses it at all — his Gospel reaches for agapē instead.', thread:'Hos 6:6 (LXX) — eleos rendering hesed. Luke 1:50,54,58,72,78 — the Magnificat and Zechariah\'s song saturated with eleos. Matt 9:13; 12:7 — \"I desire eleos, not sacrifice,\" quoting Hosea. Luke 18:13 — the tax collector\'s cry: \"God, be merciful (hilasthēti) to me.\"', refs:['Hos 6:6','Luke 1:50','Matt 9:13','Luke 18:13'] },
+
+  { id:'seed_charis', hebrew:'χάρις', transliteration:'charis (Greek)', gloss:'grace — favour freely given to someone with no claim on it', category:'love', notes:'Paul\'s great word, carrying most of the New Testament\'s theology of gift. In John it is rare, and its weight falls almost entirely in the prologue, where it is paired with alētheia and attached to the Word becoming flesh — the Greek clothing of the Hebrew pair chen and hesed.', thread:'John 1:14,16–17 — \"full of charis and alētheia\"; \"grace upon grace.\" Eph 2:8 — \"by charis you have been saved, through faith.\" 2 Cor 12:9 — \"my charis is sufficient for you.\" Titus 2:11 — the charis of God appearing, bringing salvation.', refs:['John 1:14','John 1:17','Eph 2:8','2 Cor 12:9'] },
+
+  { id:'seed_aletheia', hebrew:'ἀλήθεια', transliteration:'alētheia (Greek)', gloss:'truth — closer to reality or reliability than to factual accuracy', category:'trust', notes:'What can be depended on rather than what is merely correct. That sense sits near the Hebrew emet, and the pairing of charis and alētheia in John\'s prologue is widely read as rendering hesed we\'emet, the covenant pair God speaks over himself in Exodus 34. To walk in alētheia is not to hold correct opinions but to stand on ground that will not give way.', thread:'Exod 34:6 (cf. LXX) — hesed we\'emet behind John\'s charis and alētheia. John 1:14,17 — \"full of grace and truth.\" John 4:24 — worship \"in spirit and alētheia.\" John 8:32 — \"the alētheia will set you free.\" John 14:6 — \"I am the way, the alētheia, and the life.\"', refs:['Exod 34:6','John 1:14','John 4:24','John 8:32','John 14:6'] },
+
+  { id:'seed_agape', hebrew:'ἀγάπη', transliteration:'agapē (Greek)', gloss:'love, understood as something done rather than something felt', category:'love', notes:'The dominant word of John\'s Gospel and letters, where its measure is not a covenant obligation but a person: \"as I have loved you.\" It overlaps with hesed without replacing it — hesed is anchored in a promise made, agapē in a love received and passed on. Where the Old Testament\'s covenant loyalty runs on the LXX\'s eleos, John\'s Gospel runs almost entirely on agapē instead, centring love on the person of Jesus rather than on the terms of a covenant.', thread:'John 13:34 — \"a new commandment... as I have loved (ēgapēsa) you, that you also love one another.\" John 15:13 — \"greater agapē has no one than this, to lay down his life.\" 1 John 4:8 — \"God is agapē.\" 1 Cor 13 — Paul\'s hymn to agapē.', refs:['John 13:34','John 15:13','1 John 4:8','1 Cor 13:4'] },
+
+  { id:'seed_rasha', hebrew:'רָשָׁע', transliteration:'rasha\'', gloss:'the guilty party — a verdict before it is a character', category:'justice', notes:'Half of a courtroom pair with tzaddiq: not two kinds of people but two outcomes of a case. Rasha\' is the one against whom judgment goes, the guilty party, the one condemned. Deuteronomy 25:1 shows the verb form in a judge\'s mouth — to rasha\' someone is to declare them guilty, not to describe their disposition. In the Wisdom literature the word widens from a single verdict to a standing description of a kind of life, but the forensic root stays underneath: a rasha\' is still someone against whom a finding has gone, on a bench that has simply gotten larger. English kept the character sense and lost the courtroom, and with it the awareness that somebody had to hand down the verdict — and could get it wrong.', thread:'Deut 25:1 — judges \"justify the righteous and condemn (rasha\') the wicked.\" 1 Kgs 8:32 — Solomon prays God will \"condemn the guilty (rasha\')... and vindicate the righteous.\" Exod 23:7 — \"I will not acquit the rasha\'.\" Ps 58:1 — the psalm asks whether the judges themselves are decreeing rightly, then names them rasha\'.', refs:['Deut 25:1','1 Kgs 8:32','Exod 23:7','Ps 58:1'] },
+
+  { id:'seed_tzaddiq', hebrew:'צַדִּיק', transliteration:'tzaddiq', gloss:'the one in the right — vindicated when the case is examined', category:'justice', notes:'The forensic twin of rasha\', from the same root as tzedakah. Tzaddiq is not primarily a moral character but a verdict: the party whose case stands, who is cleared when a dispute is judged. Deuteronomy 25:1 pairs the verb forms of both words in a single sentence — judges tzaddiq the tzaddiq and rasha\' the rasha\', declaring which is which. As with its opposite, the word widens in the Wisdom literature into a standing description of a life lived along the grain of what is right, without losing its origin as a finding handed down rather than a trait observed from outside.', thread:'Deut 25:1 — judges \"justify (tzaddiq) the righteous and condemn the wicked.\" Gen 15:6 — Abram\'s faith \"reckoned to him as tzedakah,\" the noun behind tzaddiq. Prov 4:18 — \"the path of the tzaddiq is like the light of dawn.\" Ps 1:6 — \"the LORD knows the way of the tzaddiq.\"', refs:['Deut 25:1','Gen 15:6','Prov 4:18','Ps 1:6'] },
+
+  { id:'seed_neder', hebrew:'נֶדֶר', transliteration:'neder', gloss:'vow — a voluntary promise made to God', category:'covenant', notes:'Voluntary is the first thing to notice: nothing in the law requires anyone to make one. There is no occasion on which an Israelite must vow. It is an offering of the will, made by someone under pressure who wants to say something into the pressure. Its force was nonetheless real — Numbers 30 supplies machinery for annulling a vow, which tells you it was never treated as private sentiment. And it was not discharged privately either. A neder was performed at the sanctuary, in front of people, with a thank offering and a telling: what the trouble was, and what God did. The order almost never varies — trouble, deliverance, then the telling. Which is what makes it something other than a payment: in Psalm 61 the vow is heard while the man is still at the end of the earth, and performed long after the shelter has been given.', thread:'Gen 28:20-22 — Jacob at Bethel, the vow that sounds like a negotiation. 1 Sam 1:11 — Hannah at Shiloh. Num 30 — the machinery for annulling a vow, proof that it carried weight. Deut 23:21-23 — do not delay to perform it; but not vowing at all is no sin. Eccl 5:4-5 — better not to vow than to vow and not perform. Ps 61:5,8 — heard first, performed last, the shelter sitting in between. Ps 116:14,18 — in the presence of all his people, said twice. Matt 5:33-37 — Jesus against the graded machinery of oaths, not against the vow itself.', refs:['Gen 28:20','Num 30:2','Deut 23:21','Eccl 5:4','Ps 61:5','Ps 116:14','Matt 5:33'] },
+
+  { id:'seed_hagioi', hebrew:'ἅγιοι', transliteration:'hagios / hagioi (Greek)', gloss:'holy ones, set-apart ones — almost always plural', category:'covenant', notes:'From hagios, holy or set apart, but the New Testament almost never uses it of one person alone. Paul addresses whole congregations as hagioi — the saints at Corinth, at Philippi, at Ephesus — a room of ordinary people learning to be set apart together, not a single figure held up at a distance. The word resists exactly the modern instinct to make sainthood singular and rare: it names a status conferred on a body, not an achievement reached by an individual.', thread:'Rom 1:7 — \"to all... called to be hagioi.\" 1 Cor 1:2 — \"to the church of God... called to be hagioi.\" Phil 1:1 — \"to all the hagioi in Christ Jesus... at Philippi.\" Eph 1:1 — \"to the hagioi... at Ephesus.\"', refs:['Rom 1:7','1 Cor 1:2','Phil 1:1','Eph 1:1'] },
+
+  { id:'seed_gur', hebrew:'גּוּר', transliteration:'gur', gloss:'to sojourn — a resident alien, present but without full belonging', category:'presence', notes:'Not a tourist and not a citizen. The ger is the resident alien living inside a community they did not originate from and do not fully belong to — legally present, socially other. Psalm 120 opens the Songs of Ascent with the psalmist naming their own condition this way: sojourning in Meshech, dwelling among the tents of Kedar, present but never quite home. The word carries the specific weight of an environment that will not become native no matter how long you remain in it — which is why the ascent has to begin here, in the honest naming of not-belonging, before the road toward Zion can start.', thread:'Ps 120:5 — \"woe to me, that I sojourn (gur) in Meshech.\" Gen 15:13 — Abraham\'s offspring will be ger in a land not their own. Exod 22:21 — \"you shall not wrong a sojourner (ger)... for you were sojourners in the land of Egypt.\" Lev 19:34 — the ger shall be to you as the native among you.', refs:['Ps 120:5','Gen 15:13','Exod 22:21','Lev 19:34'] },
+
+  { id:'seed_ruth', hebrew:'רוּת', transliteration:'Ruth', gloss:'the one who stays — a name that became the standing picture of hesed', category:'love', notes:'A Moabite widow with every reason to go home, and every custom of the day telling her to. She stays instead — not from duty, since she owed none, and not for advantage, since there was none to be had. Whatever the name\'s root (most likely from re\'ut, friendship, or a form of ravah, to be satisfied), it is the person rather than the etymology that fixed the meaning: in the only book of the Bible named for a woman, "Ruth" became shorthand for hesed enacted rather than defined — the covenant loyalty that keeps its word to someone who cannot compel it and has no claim on it.', thread:'Ruth 1:16-17 — "where you go I will go... your people shall be my people." Ruth 2:11-12 — Boaz names what she has done, before either of them names it hesed outright. Ruth 3:10 — Boaz: "you have made this last hesed greater than the first." Matt 1:5 — Ruth in the genealogy of Jesus, a Moabite grafted into the line.', refs:['Ruth 1:16','Ruth 2:11','Ruth 3:10','Matt 1:5'] },
+
+  { id:'seed_ak', hebrew:'אַךְ', transliteration:'ak', gloss:'a fencing word — only, alone, nothing more; puts a boundary round what follows', category:'trust', notes:'Not a word for solitude but for restriction — it takes whatever it attaches to and draws a line around it, admitting nothing else inside. English scatters it across alone, only, but, surely, depending on context, which hides how often the biblical writer is reaching for the same small word. Psalm 62 leans on it six times, twice of God in the opening verses and later of everything that is not God, so that the fence itself becomes the psalm\'s argument: put inside it, and nothing else is.', thread:'Ps 62:1-2 — "for God ak my soul waits in silence... he ak is my rock." Ps 62:9 — "those of low estate are ak a breath." Ps 39:5-6, 11 — ak repeated of the fleeting nature of a man\'s life. Ps 73:1 — "ak God is good to Israel."', refs:['Ps 62:1','Ps 62:2','Ps 62:9','Ps 39:5','Ps 73:1'] }
+];
+
+const CAT_DISPLAY = { covenant:'Covenant', justice:'Justice / Righteousness', love:'Love / Mercy', wisdom:'Wisdom / Knowledge', presence:'Presence / Rest', trust:'Trust / Faith', other:'Other' };
+const CAT_COL = { covenant:'#5a3e7a', justice:'#6b1e1e', love:'#7a3520', wisdom:'#1e4a3a', presence:'#1e3560', trust:'#4a3e10', other:'#555' };
+
+let entries=[], selectedId=null, searchQuery='', activeCategory='all', editingId=null;
+const STORAGE_KEY = 'hebrew-glossary-v1';
+
+async function loadFromStorage() {
+  try {
+    const result = await window.storage.get(STORAGE_KEY);
+    if (result && result.value) {
+      entries = JSON.parse(result.value);
+      let changed = false;
+      for (const s of SEED_ENTRIES) { if (!entries.find(e=>e.id===s.id)) { entries.push(s); changed=true; } }
+      if (changed) await saveToStorage();
+    } else { entries=[...SEED_ENTRIES]; await saveToStorage(); }
+  } catch { entries=[...SEED_ENTRIES]; }
+}
+async function saveToStorage() { try { await window.storage.set(STORAGE_KEY,JSON.stringify(entries)); } catch {} }
+
+function filteredEntries() {
+  return entries.filter(e=>{
+    if (activeCategory!=='all' && e.category!==activeCategory) return false;
+    if (!searchQuery) return true;
+    const q=searchQuery.toLowerCase();
+    return (e.transliteration||'').toLowerCase().includes(q)||(e.hebrew||'').includes(q)||(e.gloss||'').toLowerCase().includes(q)||(e.notes||'').toLowerCase().includes(q);
+  }).sort((a,b)=>(a.transliteration||'').localeCompare(b.transliteration||''));
+}
+
+function renderTermList() {
+  const list=document.getElementById('term-list'), visible=filteredEntries();
+  document.getElementById('term-count').textContent=`${entries.length} term${entries.length!==1?'s':''}${searchQuery||activeCategory!=='all'?` · ${visible.length} shown`:''}`;
+  list.innerHTML=visible.map(e=>{
+    const col=CAT_COL[e.category]||'#555';
+    return `<div class="term-item ${e.id===selectedId?'active':''}" onclick="selectTerm('${e.id}')">
+      <div class="cat-dot" style="background:${col};"></div>
+      <div class="term-meta-small"><div class="term-tr-small">${esc(e.transliteration)}</div><div class="term-gloss-small">${esc(e.gloss)}</div></div>
+      <div class="term-heb-small">${esc(e.hebrew)}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderDetail(id) {
+  const e=entries.find(x=>x.id===id); if (!e) return;
+  const col=CAT_COL[e.category]||'#555', catLabel=CAT_DISPLAY[e.category]||'Other';
+  const refs=Array.isArray(e.refs)?e.refs:(e.refs||'').split(',').map(r=>r.trim()).filter(Boolean);
+  document.getElementById('empty-state').style.display='none';
+  const d=document.getElementById('term-detail'); d.style.display='block';
+  d.innerHTML=`
+    <div class="detail-header">
+      <div class="detail-cat-label" style="color:${col};"><span class="cat-pip" style="background:${col};"></span><span style="font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.25em;">${catLabel.toUpperCase()}</span></div>
+      <div class="detail-hebrew">${esc(e.hebrew)}</div>
+      <div class="detail-tr">${esc(e.transliteration)}</div>
+      <div class="detail-gloss">${esc(e.gloss)}</div>
+    </div>
+    ${e.notes?`<div class="detail-section"><div class="detail-section-title">Theological Notes</div><div class="detail-notes">${esc(e.notes)}</div></div>`:''}
+    ${e.thread?`<div class="ornament">✦ ✦ ✦</div><div class="detail-section"><div class="detail-section-title">Canonical Thread</div><div class="detail-thread">${esc(e.thread)}</div></div>`:''}
+    ${refs.length?`<div class="detail-section"><div class="detail-section-title">Scripture References</div><div class="refs-list">${refs.map(r=>`<span class="ref-chip">${esc(r)}</span>`).join('')}</div></div>`:''}
+    <div class="detail-actions">
+      <button class="btn-edit" onclick="openModal('${e.id}')">Edit</button>
+      <button class="btn-delete" onclick="deleteEntry('${e.id}')">Delete</button>
+    </div>`;
+}
+
+function renderAll() {
+  renderTermList();
+  if (selectedId && filteredEntries().find(e=>e.id===selectedId)) renderDetail(selectedId);
+  else { selectedId=null; showEmpty(); }
+}
+function showEmpty() { document.getElementById('empty-state').style.display='flex'; document.getElementById('term-detail').style.display='none'; }
+function selectTerm(id) {
+  selectedId=id; renderTermList(); renderDetail(id);
+  document.getElementById('main-panel').scrollTop=0;
+  if (window.matchMedia('(max-width:700px)').matches) {
+    document.getElementById('term-detail').scrollIntoView({ behavior:'smooth', block:'start' });
+  }
+}
+
+document.getElementById('cat-filters').addEventListener('click',e=>{ const btn=e.target.closest('.cat-btn'); if(!btn)return; activeCategory=btn.dataset.cat; document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); renderAll(); });
+document.getElementById('search-input').addEventListener('input',e=>{ searchQuery=e.target.value; renderAll(); });
+
+function openModal(id) {
+  editingId=id||null; const e=id?entries.find(x=>x.id===id):null;
+  document.getElementById('modal-title').textContent=id?'Edit Term':'Add New Term';
+  document.getElementById('f-heb').value=e?.hebrew||''; document.getElementById('f-tr').value=e?.transliteration||'';
+  document.getElementById('f-gl').value=e?.gloss||''; document.getElementById('f-cat').value=e?.category||'covenant';
+  document.getElementById('f-notes').value=e?.notes||''; document.getElementById('f-thread').value=e?.thread||'';
+  const refs=Array.isArray(e?.refs)?e.refs:(e?.refs||'').split(',').map(r=>r.trim()).filter(Boolean);
+  document.getElementById('f-refs').value=refs.join(', ');
+  document.getElementById('modal-overlay').classList.add('open');
+}
+function closeModal() { document.getElementById('modal-overlay').classList.remove('open'); editingId=null; }
+function handleModalOverlayClick(event) { if(event.target===document.getElementById('modal-overlay'))closeModal(); }
+
+async function saveEntry() {
+  const tr=document.getElementById('f-tr').value.trim(), heb=document.getElementById('f-heb').value.trim();
+  if (!tr&&!heb) { alert('Please enter at least a transliteration or Hebrew text.'); return; }
+  const refs=document.getElementById('f-refs').value.split(',').map(r=>r.trim()).filter(Boolean);
+  const entry={ id:editingId||('u_'+Date.now()), hebrew:heb, transliteration:tr, gloss:document.getElementById('f-gl').value.trim(), category:document.getElementById('f-cat').value, notes:document.getElementById('f-notes').value.trim(), thread:document.getElementById('f-thread').value.trim(), refs, updated:Date.now() };
+  if (editingId) { entries=entries.map(e=>e.id===editingId?entry:e); showStatus('Term updated.'); }
+  else { entries.push(entry); selectedId=entry.id; showStatus('Term added.'); }
+  closeModal(); await saveToStorage(); renderAll();
+}
+async function deleteEntry(id) {
+  const e=entries.find(x=>x.id===id); if(!confirm(`Delete "${e?.transliteration||'this term'}"?`))return;
+  entries=entries.filter(x=>x.id!==id); if(selectedId===id)selectedId=null;
+  await saveToStorage(); renderAll(); showStatus('Term deleted.');
+}
+
+let stTimer;
+function showStatus(msg) { const bar=document.getElementById('status-bar'); bar.textContent=msg; bar.classList.add('show'); clearTimeout(stTimer); stTimer=setTimeout(()=>bar.classList.remove('show'),2400); }
+function esc(s) { if(!s)return''; return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+/* Deep-link support: /glossary.html#hesed opens that term.
+   Matches the hash (letters only) against a term id (seed_<slug>)
+   or any transliteration token. No match = no-op (lands at top). */
+function openFromHash() {
+  const raw = decodeURIComponent((location.hash || '').replace(/^#/, ''));
+  const slug = raw.toLowerCase().replace(/[^a-z]/g, '');
+  if (!slug) return;
+  const norm = s => (s || '').toLowerCase().replace(/[^a-z]/g, '');
+  const match =
+    entries.find(e => e.id === 'seed_' + slug) ||
+    entries.find(e => norm(e.transliteration) === slug) ||
+    entries.find(e => String(e.transliteration || '').split('/').some(t => norm(t) === slug));
+  if (match) {
+    searchQuery = ''; document.getElementById('search-input').value = '';
+    selectTerm(match.id);
+  }
+}
+window.addEventListener('hashchange', openFromHash);
+
+(async()=>{ await loadFromStorage(); renderAll(); openFromHash(); })();
+</script>
+</body>
+</html>

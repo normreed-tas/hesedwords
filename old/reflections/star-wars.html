@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Star Wars — Hesed Words</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parchment:#e8dfc8;
+  --parchment-page:#f3ecda;
+  --gold:#c9a84c;
+  --gold-deep:#A67C2E;
+  --gold-soft:#D9C49A;
+  --muted:#6B5C45;
+  --rule:#C8B58F;
+  --ink:#2A2218;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--parchment);
+  color:var(--ink);
+  font-family:'Cormorant Garamond','Garamond',Georgia,serif;
+  font-size:1.16rem;
+  line-height:1.72;
+}
+
+/* ── Site nav ── */
+nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+nav.hw-nav a:hover{opacity:1;color:#fff;}
+nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+/* ── Footer ── */
+footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+.page{
+  max-width:44rem;
+  margin:0 auto;
+  background:var(--parchment-page);
+  padding:4rem 3.4rem 3rem;
+  border-left:1px solid var(--rule);
+  border-right:1px solid var(--rule);
+}
+.eyebrow{
+  font-family:'Cinzel',serif;
+  font-size:.68rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  text-align:center;
+  margin-bottom:1.4rem;
+}
+h1{
+  font-family:'Cinzel',serif;
+  font-weight:500;
+  font-size:2.5rem;
+  letter-spacing:.04em;
+  text-align:center;
+  margin:0 0 .6rem;
+  line-height:1.18;
+}
+.ref{
+  text-align:center;
+  font-style:italic;
+  font-size:1.14rem;
+  color:var(--muted);
+  margin:0 0 2.6rem;
+}
+.ref::after{
+  content:"";
+  display:block;
+  width:4.5rem;
+  height:1px;
+  background:var(--gold);
+  margin:1.8rem auto 0;
+}
+p{margin:0 0 1.25rem;}
+.opening::first-letter{
+  font-family:'Cinzel',serif;
+  float:left;
+  font-size:3.7rem;
+  line-height:.82;
+  padding:.28rem .55rem 0 0;
+  color:var(--gold-deep);
+}
+blockquote{
+  margin:1.9rem 0;
+  padding:.2rem 0 .2rem 1.5rem;
+  border-left:2px solid var(--gold);
+  font-style:italic;
+  color:#3a3020;
+}
+blockquote p{margin:0 0 .3rem;}
+blockquote p:last-child{margin-bottom:0;}
+a.gloss{
+  color:inherit;
+  text-decoration:none;
+  border-bottom:1px dotted var(--gold-deep);
+}
+a.gloss:hover{color:var(--gold-deep);}
+.divider{
+  text-align:center;
+  color:var(--gold);
+  letter-spacing:.7em;
+  margin:2.8rem 0;
+  font-size:.9rem;
+}
+.selah{
+  border:1px solid var(--gold-soft);
+  border-left:3px solid var(--gold);
+  background:#faf5e8;
+  padding:2rem 2.2rem 1.6rem;
+  margin:3rem 0;
+}
+.selah h2{
+  font-family:'Cinzel',serif;
+  font-weight:500;
+  font-size:.78rem;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  margin:0 0 1.4rem;
+  text-align:center;
+}
+.motif{
+  text-align:center;
+  font-style:italic;
+  font-size:1.24rem;
+  color:var(--gold-deep);
+  letter-spacing:.05em;
+  margin:1.6rem 0;
+}
+.prayer{
+  margin:3rem 0 2rem;
+  text-align:center;
+  font-style:italic;
+  color:#3a3020;
+}
+.prayer p{margin:0 0 1.1rem;}
+.prayer .amen{
+  font-style:normal;
+  font-family:'Cinzel',serif;
+  font-size:.74rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  margin-top:1.6rem;
+}
+.stack{line-height:1.9;}
+.related{
+  margin-top:3.4rem;
+  padding-top:1.8rem;
+  border-top:1px solid var(--gold-soft);
+}
+.related h2{
+  font-family:'Cinzel',serif;
+  font-weight:500;
+  font-size:.72rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  margin:0 0 1.1rem;
+}
+.related ul{margin:0;padding-left:1.1rem;}
+.related li{margin-bottom:.5rem;}
+.related a{color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold-soft);}
+.related a:hover{border-bottom-color:var(--gold-deep);}
+.byline{
+  margin-top:2.6rem;
+  text-align:center;
+  font-family:'Cinzel',serif;
+  font-size:.66rem;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+@media(max-width:640px){
+  .page{padding:2.6rem 1.5rem 2rem;border-left:none;border-right:none;}
+  h1{font-size:1.95rem;}
+  body{font-size:1.08rem;}
+  .selah{padding:1.5rem 1.3rem 1.1rem;}
+}
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html" class="current">Reflections</a>
+  <a href="/old/articles.html">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+<div class="page">
+
+  <div class="eyebrow">A Hesed Words Reflection</div>
+  <h1>Star Wars</h1>
+  <p class="ref">Psalm 36:5&ndash;6</p>
+
+  <p class="opening">The psalm opens with a man you would not want to sit beside.</p>
+
+  <p>He flatters himself in his own eyes. He has stopped hating his sin &mdash; or rather, he has stopped being able to see it, which is worse. His mouth has gone to trouble and deceit; he has given up on being wise and on doing good. And at night, when the house is quiet and there is nothing left to distract him, he lies on his bed and plots.</p>
+
+  <p>David gives us four verses of this. It is not a caricature. It is a portrait, and it is drawn close.</p>
+
+  <p>And it begins with a diagnosis:</p>
+
+  <blockquote>
+    <p>There is no fear of God before his eyes.</p>
+  </blockquote>
+
+  <p>Not <em>he has broken the law</em>. Not <em>he has wronged his neighbour</em>. Something further back than either. There is nothing above him. He has come to the end of the day and there is no one over his shoulder, no one whose regard he must reckon with, and so the bed becomes a place for scheming instead of sleep. Everything in verses two to four follows from verse one. Take God out of a man&rsquo;s field of vision and this is what grows in the space.</p>
+
+  <p>Then comes verse five.</p>
+
+  <blockquote>
+    <p>Your steadfast love, O LORD, extends to the heavens.</p>
+  </blockquote>
+
+  <p>There is no transition. No <em>but</em>. No hinge. David does not tell us he is changing the subject; he simply lifts his eyes, and the psalm opens onto the sky.</p>
+
+  <p>I have read this psalm without noticing that seam. You come through those first four verses braced for the argument &mdash; for the <em>therefore</em>, for the judgment that must surely be coming down on a man like this &mdash; and instead the psalm looks up, and keeps looking, and does not come back.</p>
+
+  <div class="divider">&middot; &nbsp; &middot; &nbsp; &middot;</div>
+
+  <p>Look at what is actually in those two verses.</p>
+
+  <blockquote>
+    <p>Your steadfast love, O LORD, extends to the heavens,<br>
+    your faithfulness to the clouds.<br>
+    Your righteousness is like the mountains of God;<br>
+    your judgments are like the great deep;<br>
+    man and beast you save, O LORD.</p>
+  </blockquote>
+
+  <p>Four words. <a class="gloss" href="/old/glossary.html#hesed"><em>Hesed</em></a> &mdash; the covenant love that keeps coming when it has every reason to stop. <a class="gloss" href="/old/glossary.html#emunah"><em>Emunah</em></a> &mdash; faithfulness; the steadiness that makes the love something you can stand on rather than something you hope for. <a class="gloss" href="/old/glossary.html#tzedakah"><em>Tzedaqah</em></a> &mdash; righteousness, which in Hebrew is never a verdict handed down from a bench but God moving toward the deficit, setting right what has gone wrong. <a class="gloss" href="/old/glossary.html#mishpat"><em>Mishpat</em></a> &mdash; justice; what <em>hesed</em> looks like when it reaches the street.</p>
+
+  <p>These are the words. If you have read anything else on this site, you have met them. They are the load-bearing walls.</p>
+
+  <p>And here David does not explain them. He measures them.</p>
+
+  <p><em>Hesed</em> is given a height: the heavens. <em>Emunah</em> is given a reach: the clouds. <em>Tzedaqah</em> is given mass &mdash; <em>the mountains of God</em>, the ranges, the things that were here before us and will outlast us and cannot be moved by anything we do. And <em>mishpat</em> is given a depth: <em>tehom rabbah</em>, the great deep. That is not a decorative phrase. It is the word from the second verse of Genesis, the dark water over which the Spirit hovered before there was light. God&rsquo;s justice is given the dimensions of the thing that was there before the world.</p>
+
+  <p>Heavens down to the deep. There is no part of the created order left outside the span.</p>
+
+  <p>What David does <em>not</em> do here is the whole point. He does not argue for these words. He does not build a case. He does not connect them to the man on the bed in verse four, or tell us what they mean for him, or draw any conclusion at all. He simply states them, at full height, and moves on.</p>
+
+  <div class="selah">
+    <h2>Selah</h2>
+    <p>I was in a cinema. The screen was black, and then the words came up and went away from us into the dark, and the brass hit.</p>
+    <p class="motif">Dum. Dum. Dum. Da-da dum. Da-da dum.</p>
+    <p>I had heard music in films before. I had not, until that night, understood that the music was doing something. Not sitting under the film. Not decorating it. Doing something &mdash; carrying an idea that the pictures could not carry on their own, and carrying it in a form I would recognise every time it came back.</p>
+    <p>And it did come back. Sometimes at full brass, and I knew what it meant. Sometimes so quiet under the dialogue that I would not have caught it if I had not learned it in the opening bar. Sometimes in a minor key, slowed, when the thing it named had gone badly wrong. It was never absent. It was only ever loud or soft, major or minor, near or far.</p>
+    <p>Take the score away and the film is a set of pictures.</p>
+  </div>
+
+  <p>Psalm 36:5&ndash;6 is the bar where the orchestra stops accompanying and simply states the theme.</p>
+
+  <p>Nowhere else does Scripture do this quite so plainly. The four words are everywhere, but they are almost always melded into something &mdash; carried inside a story, or a law, or a grief, doing a second job at the same time. Hosea has <em>hesed</em>, but it arrives inside a ruined marriage, and it is unbearable there. Micah has <em>mishpat</em> and <em>hesed</em>, but they arrive as a demand at the end of an argument, and you are meant to feel the weight of them landing on you. Ruth names <em>hesed</em> three times and never once explains it &mdash; the word simply turns up in ordinary speech, spoken by people who do not know they are in a theological argument. In Judges you can barely hear it at all &mdash; four hundred years of noise, and the theme is so far down in the mix that you have to know it is there to find it.</p>
+
+  <p>And then the psalmist lifts his eyes, and for two verses the score plays it straight. No narrative. No demand. No lament. Just the four notes, at full height, given the dimensions of creation &mdash; and then the music moves on.</p>
+
+  <p>Once you have heard it stated plainly, you cannot stop hearing it. That is what a stated theme does to you. It teaches your ear.</p>
+
+  <p>So you go back through the story and it is running underneath the whole thing. It is in the coat God makes for the two of them before they leave the garden. It is in the ram in the thicket. It is in the man who will not stop coming back to a nation that will not stop leaving. It is in the prophet who is told to go and buy his wife back out of the slave market at the going rate. It is soft. It is often very soft. But it is never not there.</p>
+
+  <p>And then at the cross the whole orchestra is playing it at once, and it is in a key nobody expected.</p>
+
+  <div class="divider">&middot; &nbsp; &middot; &nbsp; &middot;</div>
+
+  <p>There is one more thing, and I did not see it for years.</p>
+
+  <p>When Paul comes to the end of his long indictment in Romans 3 &mdash; <em>none is righteous, no, not one</em> &mdash; he strings together a chain of quotations from the Psalms and the Prophets, and he closes the chain with a single line:</p>
+
+  <blockquote>
+    <p>There is no fear of God before their eyes.</p>
+  </blockquote>
+
+  <p>That is verse one of this psalm. Paul reaches into Psalm 36, and what he takes out of it is the man on the bed.</p>
+
+  <p>And then he keeps writing. Three verses later:</p>
+
+  <blockquote>
+    <p>But now the righteousness of God has been manifested.</p>
+  </blockquote>
+
+  <p><em>Dikaiosyn&#275; theou.</em> The righteousness of God. It is the Greek that carries <em>tzedaqah</em> &mdash; the word David set against the mountains.</p>
+
+  <p>I do not know what Paul intended. I am not going to tell you he was pointing his readers back to the whole psalm, because that is more than I can prove and you would be right not to take it from me. But look at the shape of it. He quotes the darkest line in the psalm, the silence before the theme comes in. And then, without a hinge, without a transition, without announcing that anything has changed &mdash; <em>but now the righteousness of God</em> &mdash; the theme comes in.</p>
+
+  <p>The same seam. In the same order. Twice.</p>
+
+  <p>He did not tell us the music had started. He just let it play.</p>
+
+  <div class="prayer">
+    <p>Lord,</p>
+    <p>You said it again and again &mdash; <em>he who has ears to hear, let him hear</em>.</p>
+    <p>I want to hear.</p>
+    <p>I want to hear and recognise the theme that runs through your word &mdash; and through everything that is going on around me. Teach me to catch the quietest note. The triangle under the noise. The line of it I would miss entirely if I had not learned it in the opening bar. And having caught it, let me follow it &mdash; through the story, through the years, through the parts where I cannot hear it at all and have to trust that it is still being played.</p>
+    <p class="stack">Your <em>hesed</em> to the heavens.<br>
+    Your faithfulness to the clouds.<br>
+    Your righteousness like the mountains.<br>
+    Your justice like the great deep.</p>
+    <p>It was never absent.</p>
+    <p class="amen">Amen</p>
+  </div>
+
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/old/reflections/have-they-no-knowledge.html">Have They No Knowledge?</a> &mdash; where the theme goes silent, and why</li>
+      <li><a href="/old/word-studies/jesus-intercessor.html"><em>paga</em> (H6293)</a> &mdash; the Servant who fills the gap</li>
+      <li><a href="/old/books/he-has-told-you.html">He Has Told You&hellip;</a> &mdash; the four words as the demand of Micah 6:8</li>
+    </ul>
+  </div>
+
+  <p class="byline">Norm Reed</p>
+
+</div>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>

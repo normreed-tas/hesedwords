@@ -1,0 +1,144 @@
+<!--
+  ============================================================
+  ARTICLE LINK CARD — Jesus as Leader
+  ============================================================
+  Paste this where you want the article to appear on your site
+  (e.g. the homepage Articles section, or an articles index page).
+
+  Assumes file paths:
+    /articles/jesus-as-leader.html
+    /articles/pdf/jesus-as-leader.pdf
+
+  The styles use the same CSS variables as the article page,
+  so they'll work alongside your existing hesedwords.com styles.
+  If your main pages don't already define these variables, the
+  inline values below provide a self-contained fallback.
+  ============================================================
+-->
+
+<a href="/old/articles/jesus-as-leader.html" class="article-card">
+  <div class="article-card__eyebrow">A Hesedwords Reflection</div>
+  <h3 class="article-card__title">Jesus as Leader</h3>
+  <p class="article-card__subtitle">Notes from a pastor&rsquo;s reflection</p>
+  <p class="article-card__excerpt">
+    If we take the gospels seriously as the description of how Jesus actually
+    conducted his ministry, does the leadership he modelled map onto the
+    formation the contemporary church offers its pastors? Five movements,
+    two weekly calendars, and the questions that don&rsquo;t go away.
+  </p>
+  <div class="article-card__meta">
+    <span class="article-card__byline">Norm Reed &middot; June 2026</span>
+    <span class="article-card__read">Read article &rarr;</span>
+  </div>
+</a>
+
+<p class="article-card__pdf-link">
+  <a href="/old/articles/pdf/jesus-as-leader.pdf" target="_blank" rel="noopener">
+    Download as PDF
+  </a>
+</p>
+
+<style>
+  .article-card {
+    display: block;
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 36px 40px 32px;
+    background: #FAF5E8;
+    border: 1px solid #C8B58F;
+    border-radius: 2px;
+    text-decoration: none;
+    color: #2A2218;
+    font-family: 'Cormorant Garamond', 'Garamond', Georgia, serif;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+
+  .article-card:hover {
+    box-shadow: 0 6px 24px rgba(166, 124, 46, 0.18);
+    transform: translateY(-2px);
+  }
+
+  .article-card__eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #A67C2E;
+    margin-bottom: 14px;
+  }
+
+  .article-card__title {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0.03em;
+    color: #2A2218;
+    margin: 0 0 6px;
+    line-height: 1.2;
+  }
+
+  .article-card__subtitle {
+    font-style: italic;
+    font-size: 18px;
+    color: #4A3E2C;
+    margin: 0 0 20px;
+  }
+
+  .article-card__excerpt {
+    font-size: 17px;
+    color: #2A2218;
+    line-height: 1.6;
+    margin: 0 0 24px;
+  }
+
+  .article-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid #D9C49A;
+  }
+
+  .article-card__byline {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #6B5C45;
+  }
+
+  .article-card__read {
+    font-style: italic;
+    font-size: 15px;
+    color: #A67C2E;
+  }
+
+  .article-card__pdf-link {
+    text-align: center;
+    margin: -20px auto 40px;
+    max-width: 720px;
+  }
+
+  .article-card__pdf-link a {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #6B5C45;
+    text-decoration: none;
+    border-bottom: 1px solid #D9C49A;
+    padding-bottom: 2px;
+  }
+
+  .article-card__pdf-link a:hover {
+    color: #A67C2E;
+    border-bottom-color: #A67C2E;
+  }
+
+  @media (max-width: 640px) {
+    .article-card { padding: 28px 24px 24px; margin: 24px 16px; }
+    .article-card__title { font-size: 24px; }
+    .article-card__excerpt { font-size: 16px; }
+    .article-card__meta { flex-direction: column; align-items: flex-start; gap: 8px; }
+  }
+</style>

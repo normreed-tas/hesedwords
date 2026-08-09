@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Follow — Hesed Words</title>
+<meta name="description" content="How to receive new Hesed Words reflections automatically, using the site's RSS feed — a simple, free way to follow without accounts or algorithms.">
+<link rel="alternate" type="application/rss+xml" title="Hesed Words — Reflections" href="/old/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parchment:#e8dfc8;
+  --parchment-page:#f3ecda;
+  --gold:#c9a84c;
+  --gold-deep:#A67C2E;
+  --gold-soft:#D9C49A;
+  --muted:#6B5C45;
+  --rule:#C8B58F;
+  --ink:#2A2218;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--parchment);
+  color:var(--ink);
+  font-family:'Cormorant Garamond','Garamond',Georgia,serif;
+  font-size:1.22rem;
+  line-height:1.72;
+}
+
+/* ── Site nav ── */
+nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+nav.hw-nav a:hover{opacity:1;color:#fff;}
+nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+/* ── Footer ── */
+footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+.page{
+  max-width:640px;
+  margin:0 auto;
+  background:var(--parchment-page);
+  padding:4rem 2.6rem 2.5rem;
+  border-left:1px solid var(--rule);
+  border-right:1px solid var(--rule);
+}
+.eyebrow{
+  font-family:'Cinzel',serif;
+  font-size:.68rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  text-align:center;
+  margin-bottom:1.4rem;
+}
+h1{
+  font-family:'Cinzel',serif;
+  font-weight:500;
+  font-size:2.1rem;
+  letter-spacing:.04em;
+  text-align:center;
+  margin:0 0 .8rem;
+  line-height:1.2;
+}
+.sub{
+  text-align:center;
+  font-style:italic;
+  color:var(--muted);
+  margin:0 0 2.4rem;
+}
+.sub::after{
+  content:"";
+  display:block;
+  width:3.5rem;height:1px;
+  background:var(--gold);
+  margin:1.8rem auto 0;
+}
+p{margin:0 0 1.3rem;}
+h2{
+  font-family:'Cinzel',serif;
+  font-weight:500;
+  font-size:1.05rem;
+  letter-spacing:.08em;
+  color:var(--gold-deep);
+  margin:2.4rem 0 .8rem;
+}
+ol{margin:0 0 1.3rem;padding-left:1.4rem;}
+ol li{margin-bottom:.7rem;}
+a{color:var(--gold-deep);text-decoration:none;border-bottom:1px dotted var(--gold-deep);}
+a:hover{color:var(--ink);}
+.feed-box{
+  margin:1.6rem 0;
+  padding:1.1rem 1.4rem;
+  background:rgba(201,168,76,.07);
+  border-left:3px solid var(--gold);
+  font-size:1.05rem;
+}
+.feed-box code{
+  font-family:Georgia,serif;
+  font-style:italic;
+  word-break:break-all;
+}
+.quiet{font-size:1.02rem;font-style:italic;color:var(--muted);}
+@media(max-width:600px){
+  .page{padding:2.6rem 1.4rem 2rem;border-left:none;border-right:none;}
+  h1{font-size:1.6rem;}
+  body{font-size:1.12rem;}
+}
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html">Reflections</a>
+  <a href="/old/articles.html">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+<div class="page">
+
+  <div class="eyebrow">Hesed Words</div>
+  <h1>How to Follow</h1>
+  <p class="sub">Receive each new reflection without accounts, algorithms, or noise.</p>
+
+  <p>New reflections appear here most mornings. If you would like them to come to you &mdash; rather than remembering to check back &mdash; the site publishes a <em>feed</em> that a small, free app can watch on your behalf. Whenever something new is posted, it simply appears in the app, like a quiet letterbox.</p>
+
+  <p>This is called RSS. It is older than social media and better behaved: no account to create, no company deciding what you see, nothing counting your clicks. You subscribe, and new pieces arrive. That is all it does.</p>
+
+  <h2>Set it up once — three steps</h2>
+
+  <ol>
+    <li><strong>Choose a reader app.</strong> Any of these are free and work well: <a href="https://feedly.com" target="_blank" rel="noopener">Feedly</a> (web, phone), <a href="https://netnewswire.com" target="_blank" rel="noopener">NetNewsWire</a> (iPhone, iPad, Mac), or <a href="https://www.inoreader.com" target="_blank" rel="noopener">Inoreader</a> (web, phone).</li>
+    <li><strong>Add this address</strong> wherever the app says <em>Add feed</em>, <em>Follow</em>, or <em>+</em>:
+      <div class="feed-box"><code>https://hesedwords.com/feed.xml</code></div>
+    </li>
+    <li><strong>That&rsquo;s it.</strong> New reflections will appear in the app as they are published, with a short summary and a link to read the full piece here.</li>
+  </ol>
+
+  <p class="quiet">In many apps you can skip step two: search for &ldquo;hesedwords.com&rdquo; inside the app and it will find the feed itself.</p>
+
+  <h2>If you get stuck</h2>
+
+  <p>Every reader app looks slightly different, but they all want the same thing: that one address above. If it isn&rsquo;t working, <a href="/old/contact.html">write to me</a> and I&rsquo;ll gladly help you set it up.</p>
+
+</div>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>

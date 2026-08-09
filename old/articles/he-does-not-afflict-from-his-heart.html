@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>He Does Not Afflict From His Heart — Hesedwords</title>
+  <meta name="description" content="What Jeremiah reveals about the God who interrupts his own judgment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --parchment:     #FAF5E8;
+      --parchment-mid: #F2EAD4;
+      --gold:          #A67C2E;
+      --gold-light:    #C8A84B;
+      --gold-border:   #C8B58F;
+      --gold-rule:     #D9C49A;
+      --ink:           #2A2218;
+      --ink-mid:       #4A3E2C;
+      --ink-light:     #6B5C45;
+      --cinzel:        'Cinzel', 'Palatino Linotype', Georgia, serif;
+      --cormorant:     'Cormorant Garamond', 'Garamond', Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: var(--cormorant);
+      font-size: 20px;
+      line-height: 1.78;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Site nav ── */
+    nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+    nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+    nav.hw-nav a:hover{opacity:1;color:#fff;}
+    nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+
+    /* ── Article wrapper ── */
+    .article-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 40px 90px;
+    }
+
+    /* ── Title block ── */
+    .article-eyebrow {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 22px;
+    }
+    .article-title {
+      font-family: var(--cinzel);
+      font-size: 38px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+    .article-subtitle {
+      font-family: var(--cormorant);
+      font-style: italic;
+      font-size: 21px;
+      color: var(--ink-mid);
+      text-align: center;
+      line-height: 1.45;
+      margin-bottom: 28px;
+    }
+    .article-ornament {
+      text-align: center;
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 0.7em;
+      margin: 0 0 20px;
+    }
+    .article-byline {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    /* ── Body ── */
+    .article-body p {
+      margin-bottom: 1.45em;
+      font-size: 20px;
+      line-height: 1.78;
+      color: var(--ink);
+    }
+
+    /* ── Drop cap ── */
+    .drop-cap::first-letter {
+      font-family: var(--cinzel);
+      font-size: 4.4em;
+      font-weight: 400;
+      float: left;
+      line-height: 0.76;
+      margin: 0.1em 0.12em 0 0;
+      color: var(--gold);
+    }
+
+    /* ── Section headings ── */
+    .article-body h2 {
+      font-family: var(--cinzel);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin: 56px 0 22px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--gold-rule);
+    }
+
+    /* ── Scripture blocks ── */
+    .scripture-block {
+      border-left: 3px solid var(--gold);
+      padding: 14px 20px 14px 28px;
+      margin: 30px 0;
+      background: rgba(166, 124, 46, 0.04);
+      border-radius: 0 2px 2px 0;
+    }
+    .scripture-block p {
+      font-style: italic;
+      font-size: 19px !important;
+      color: var(--ink-mid) !important;
+      margin-bottom: 0 !important;
+      line-height: 1.65 !important;
+    }
+    .scripture-ref {
+      display: block;
+      font-family: var(--cinzel);
+      font-size: 9.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 12px;
+      text-align: right;
+    }
+
+    /* ── AI acknowledgment ── */
+    .ai-acknowledgment {
+      border-top: 1px solid var(--gold-rule);
+      margin-top: 64px;
+      padding-top: 32px;
+    }
+    .ai-acknowledgment p {
+      font-style: italic;
+      font-size: 15px !important;
+      color: var(--ink-light) !important;
+      line-height: 1.65 !important;
+      margin-bottom: 0.9em !important;
+    }
+    .ai-acknowledgment p:last-child { margin-bottom: 0 !important; }
+
+    /* ── PDF download ── */
+    .pdf-download {
+      text-align: center;
+      margin-top: 44px;
+    }
+    .pdf-download a {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-rule);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .pdf-download a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+    /* ── Footer ── */
+    footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+    /* ── Mobile ── */
+    @media (max-width: 640px) {
+      .article-wrap { padding: 44px 24px 64px; }
+      .article-title { font-size: 27px; }
+      .article-subtitle { font-size: 18px; }
+      .article-body p { font-size: 18px; }
+      .scripture-block p { font-size: 17px !important; }
+      .drop-cap::first-letter { font-size: 3.8em; }
+    }
+
+    /* ── Print ── */
+    @media print {
+      .site-nav, .site-footer, .pdf-download { display: none; }
+      body { background: white; }
+      .article-wrap { padding: 0; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html">Reflections</a>
+  <a href="/old/articles.html" class="current">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+  <main class="article-wrap">
+
+    <header>
+      <p class="article-eyebrow">A Hesedwords Article</p>
+      <h1 class="article-title">He Does Not Afflict From His Heart</h1>
+      <p class="article-subtitle">What Jeremiah reveals about the God who interrupts his own judgment</p>
+      <p class="article-ornament">✦ &nbsp; ✦ &nbsp; ✦</p>
+      <p class="article-byline">Norm Reed &middot; June 2026</p>
+    </header>
+
+    <article class="article-body">
+
+      <!-- Opening — no section heading -->
+      <p class="drop-cap">The prophets, in our imagination, are primarily bearers of bad news. They see what others refuse to see and say it regardless of the cost. That is not wrong. But it is the surface reading.</p>
+      <p>What the prophets are most deeply doing is something else entirely.</p>
+      <p>They are the place in Scripture where God&rsquo;s own heart becomes visible. Not his judgment &mdash; his grief. The ache beneath the oracle. The longing behind the warning.</p>
+      <p>And there is no prophet where that visibility is more costly, more exposed, or more honest than Jeremiah.</p>
+
+      <!-- Section 1 -->
+      <h2>The Interruption</h2>
+      <p class="drop-cap">Jeremiah 6 is a sustained judgment oracle. The indictment of Jerusalem has been building for chapters. The charges are specific. The consequences named. And then &mdash; mid-speech, without warning &mdash; a single verse interrupts:</p>
+      <div class="scripture-block">
+        <p>Stand by the roads. Look. Ask for the ancient paths, where the good way is. Walk in them. And you will find rest for your souls.</p>
+        <span class="scripture-ref">Jeremiah 6:16a</span>
+      </div>
+      <p>Eight Hebrew words. One verse. Then the judgment speech continues.</p>
+      <p>If you are reading for disaster, you pass over that verse. Most people do. But this interruption is not incidental. It is, in miniature, the whole of Jeremiah&rsquo;s prophetic ministry.</p>
+      <p>The ancient paths &mdash; <em>netivot olam</em> &mdash; are not merely old roads. The Hebrew carries both registers: ancient and everlasting. These are paths proven across time because they are grounded in what is timelessly true. And what is promised to those who find them is not prosperity or safety. It is rest for your souls. The rest of arriving where you were made to be.</p>
+      <p>The verse ends with four words that may be the most heartbreaking in the prophetic literature.</p>
+      <div class="scripture-block">
+        <p>But they said: we will not walk in it.</p>
+        <span class="scripture-ref">Jeremiah 6:16b</span>
+      </div>
+      <p>The path was visible. The rest was available. The answer was refusal.</p>
+
+      <!-- Section 2 -->
+      <h2>The Pattern</h2>
+      <p class="drop-cap">That interruption is not a single moment. It is a structure that runs through the whole of Jeremiah.</p>
+      <p>The Hebrew word <em>shuv</em> &mdash; return, turn back &mdash; appears in Jeremiah more than in any other prophetic book. Each occurrence is a door held open. <em>Return, faithless Israel. Return, faithless children. I will heal your faithlessness.</em> Three appeals in one chapter. Then the door open again in the next, and the one after that.</p>
+      <p>This is not the voice of a God who has determined the outcome and is announcing it. This is the voice of a God who keeps offering an alternative to the thing he can see coming.</p>
+      <p><em>It doesn&rsquo;t have to be this way.</em> That is the structure beneath the oracle. That is what the interlude is always saying.</p>
+
+      <!-- Section 3 -->
+      <h2>What We Have Missed</h2>
+      <p class="drop-cap">Here is what changes everything when you see it.</p>
+      <p>We have assumed that Jeremiah is wrestling with <em>hesed</em> &mdash; the covenant lovingkindness that compels him to keep speaking to people who will not listen. And he is. The confessions in chapters 11 to 20 are the record of a man in agony about a calling he cannot escape. Chapter 20:</p>
+      <div class="scripture-block">
+        <p>There is in my heart as it were a burning fire shut up in my bones, and I am weary with holding it in, and I cannot.</p>
+        <span class="scripture-ref">Jeremiah 20:9</span>
+      </div>
+      <p>But look more carefully at what Jeremiah records from God&rsquo;s own voice.</p>
+      <div class="scripture-block">
+        <p>I have forsaken my house; I have abandoned my heritage; I have given the beloved of my soul into the hands of her enemies.</p>
+        <span class="scripture-ref">Jeremiah 12:7</span>
+      </div>
+      <p>God is lamenting the judgment he is enacting. The grief and the act are simultaneous.</p>
+      <p>And then Lamentations &mdash; Jeremiah&rsquo;s voice from the ruins of the city he spent his life trying to save &mdash; lands on a sentence that stops you:</p>
+      <div class="scripture-block">
+        <p>Though he cause grief, he will have compassion according to the abundance of his steadfast love; for he does not afflict from his heart.</p>
+        <span class="scripture-ref">Lamentations 3:32&ndash;33</span>
+      </div>
+      <p><em>He does not afflict from his heart.</em></p>
+      <p>The judgment is real. The covenant requires it. God enacts it. But the heart &mdash; the deep interior of who God is &mdash; is <em>hesed</em>. The judgment comes from faithfulness. The grief comes from love. That tension is not resolved. It is held. Openly. At cost.</p>
+      <p>This is what the prophets most deeply reveal. Not the anger of God. The wrestling of God. The divine grief that the ancient paths have been abandoned. The longing &mdash; present even in the act of judgment &mdash; that things might have been otherwise.</p>
+      <p><em>It didn&rsquo;t have to be this way</em> is not Jeremiah&rsquo;s theological reflection. It is the heart of God, becoming visible through him.</p>
+
+      <!-- Section 4 -->
+      <h2>The Counterpoint</h2>
+      <p class="drop-cap">Which makes Jonah&rsquo;s case all the more searching.</p>
+      <p>Jonah knows the theology precisely. When God relents from punishing Nineveh, Jonah quotes the divine character almost word for word:</p>
+      <div class="scripture-block">
+        <p>I knew that you are a gracious God and merciful, slow to anger and abounding in steadfast love, and relenting from disaster.</p>
+        <span class="scripture-ref">Jonah 4:2</span>
+      </div>
+      <p>He is not wrong. He has the ancient paths mapped correctly.</p>
+      <p>And he is furious that God is exactly who he said he was.</p>
+      <p>Jonah&rsquo;s problem is not insufficient theology. It is that the theology has never moved from the mind to the chest. The divine <em>hesed</em> has been accurately described and carefully kept at a distance.</p>
+      <p>Jeremiah couldn&rsquo;t hold the fire in. Jonah wouldn&rsquo;t let it in.</p>
+
+      <!-- Section 5 -->
+      <h2>The Question This Leaves</h2>
+      <p class="drop-cap"><em>Hesed</em> cannot be worked up. No amount of theological precision generates it. No discipline of religious effort produces it. It is first and always God&rsquo;s own character &mdash; the covenant lovingkindness that moves toward deficit, that reaches across the gap, that cannot remain enclosed within itself.</p>
+      <p>But it can be received. And when it is genuinely received &mdash; not catalogued but received &mdash; it does what Jeremiah found it doing in his bones. It burns. It produces something uncomfortably close to the divine grief itself. The longing that things might be otherwise. The refusal to announce judgment without first saying &mdash; there is another way. Stand here. Look. Ask.</p>
+      <p>The prophets are not primarily the voices of God&rsquo;s anger. They are the places where God&rsquo;s grief becomes audible.</p>
+      <p>The question they leave is not whether we know this.</p>
+      <p>Jonah knew it.</p>
+      <p>The question is whether we have let it in.</p>
+
+      <!-- AI Acknowledgment -->
+      <div class="ai-acknowledgment">
+        <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+        <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+        <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+      </div>
+
+    </article>
+
+    <div class="pdf-download">
+      <a href="/old/articles/pdf/he-does-not-afflict-from-his-heart.pdf" target="_blank" rel="noopener">Download as PDF</a>
+    </div>
+
+  </main>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>

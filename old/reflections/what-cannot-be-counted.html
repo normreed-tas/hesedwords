@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Cannot Be Counted — Hesed Words</title>
+  <meta name="description" content="A reflection on Ecclesiastes 1:15 and the God who holds the number. By Norm Reed.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* ─── Variables ─────────────────────────────────────────── */
+    :root {
+      --parchment:     #FAF5E8;
+      --parchment-mid: #F3ECD5;
+      --ink:           #2A2218;
+      --ink-mid:       #4A3E2C;
+      --ink-light:     #6B5C45;
+      --gold:          #A67C2E;
+      --gold-light:    #C8A95A;
+      --gold-rule:     #D9C49A;
+      --border:        #C8B58F;
+      --font-display:  'Cinzel', serif;
+      --font-body:     'Cormorant Garamond', 'Garamond', Georgia, serif;
+    }
+
+    /* ─── Reset & Base ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 18px; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-weight: 400;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Navigation ────────────────────────────────────────── */
+    nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+    nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+    nav.hw-nav a:hover{opacity:1;color:#fff;}
+    nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+
+    /* ─── Article Layout ────────────────────────────────────── */
+    .article-wrap {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 72px 40px 100px;
+    }
+
+    /* ─── Breadcrumb ────────────────────────────────────────── */
+    .breadcrumb {
+      font-family: var(--font-display);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 52px;
+    }
+
+    .breadcrumb a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .breadcrumb__sep { margin: 0 10px; color: var(--gold-rule); }
+
+    /* ─── Title Block ───────────────────────────────────────── */
+    .title-block {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .title-block__eyebrow {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .title-block__rule {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 24px;
+    }
+
+    .title-block__title {
+      font-family: var(--font-display);
+      font-size: 42px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .title-block__subtitle {
+      font-family: var(--font-body);
+      font-style: italic;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--ink-mid);
+      margin-bottom: 28px;
+      line-height: 1.4;
+    }
+
+    .title-block__ornament {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 0.5em;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .title-block__byline {
+      font-family: var(--font-display);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+
+    /* ─── Prologue ──────────────────────────────────────────── */
+    .prologue {
+      font-style: italic;
+      font-size: 19px;
+      color: var(--ink-mid);
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto 40px;
+      line-height: 1.65;
+    }
+
+    .ornament-divider {
+      text-align: center;
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 0.6em;
+      margin: 36px 0 48px;
+    }
+
+    /* ─── Section Headings ──────────────────────────────────── */
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin: 56px 0 6px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--gold-rule);
+    }
+
+    /* ─── Body Text ─────────────────────────────────────────── */
+    .article-body p {
+      font-size: 19px;
+      line-height: 1.78;
+      color: var(--ink);
+      margin-bottom: 1.4em;
+    }
+
+    .article-body p em { font-style: italic; }
+
+    /* Drop cap on first paragraph of each section */
+    .drop-cap::first-letter {
+      font-family: var(--font-display);
+      font-size: 4.2em;
+      font-weight: 500;
+      color: var(--gold);
+      float: left;
+      line-height: 0.78;
+      margin: 0.08em 0.1em 0 0;
+      padding-top: 0.04em;
+    }
+
+    /* ─── Scripture Block ───────────────────────────────────── */
+    .scripture-block {
+      border-left: 3px solid var(--gold);
+      margin: 32px 0 32px 24px;
+      padding: 16px 24px;
+      background: var(--parchment-mid);
+    }
+
+    .scripture-block p {
+      font-style: italic;
+      font-size: 20px !important;
+      color: var(--ink-mid);
+      margin-bottom: 0.4em !important;
+      line-height: 1.65 !important;
+    }
+
+    .scripture-ref {
+      font-family: var(--font-display);
+      font-size: 11px !important;
+      font-style: normal !important;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold) !important;
+      margin-top: 12px !important;
+    }
+
+    /* ─── Pull Quote ────────────────────────────────────────── */
+    .pull-quote {
+      border-top: 1px solid var(--gold-rule);
+      border-bottom: 1px solid var(--gold-rule);
+      margin: 40px 0;
+      padding: 24px 0;
+      text-align: center;
+    }
+
+    .pull-quote p {
+      font-style: italic;
+      font-size: 22px !important;
+      color: var(--ink-mid);
+      line-height: 1.55 !important;
+      margin-bottom: 0 !important;
+    }
+
+    .pull-quote p em {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    /* ─── Story Section ─────────────────────────────────────── */
+    .story-section {
+      background: var(--parchment-mid);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 40px 48px;
+      margin: 40px 0;
+    }
+
+    .story-section p {
+      font-size: 18px !important;
+      line-height: 1.75 !important;
+      margin-bottom: 1.2em !important;
+    }
+
+    .story-section p:last-child { margin-bottom: 0 !important; }
+
+    /* ─── AI Acknowledgment ─────────────────────────────────── */
+    .ai-acknowledgment {
+      border-top: 1px solid var(--gold-rule);
+      margin-top: 72px;
+      padding-top: 32px;
+    }
+
+    .ai-acknowledgment p {
+      font-style: italic;
+      font-size: 15px !important;
+      color: var(--ink-light);
+      line-height: 1.65 !important;
+      margin-bottom: 0.8em !important;
+    }
+
+    /* ─── Footer ────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--ink);
+      padding: 32px 40px;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .site-footer__tagline {
+      font-family: var(--font-display);
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+
+    /* ─── Mobile ────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .article-wrap { padding: 48px 24px 72px; }
+
+      .title-block__title { font-size: 30px; }
+      .title-block__subtitle { font-size: 17px; }
+
+      .article-body p { font-size: 17px; }
+
+      .scripture-block { margin-left: 0; padding: 14px 18px; }
+      .scripture-block p { font-size: 17px !important; }
+
+      .story-section { padding: 28px 24px; }
+      .story-section p { font-size: 17px !important; }
+
+      .pull-quote p { font-size: 19px !important; }
+    }
+
+    /* ─── Print ─────────────────────────────────────────────── */
+    @media print {
+      nav.hw-nav, .site-footer, .breadcrumb { display: none; }
+
+      body { background: white; font-size: 11pt; }
+
+      .article-wrap { padding: 0; max-width: 100%; }
+
+      .title-block__title { font-size: 28pt; }
+
+      .article-body p, .story-section p { font-size: 11pt !important; orphans: 3; widows: 3; }
+
+      .section-heading { page-break-after: avoid; }
+
+      .story-section { background: #F8F5EE; border: 1px solid #CCC; }
+
+      .drop-cap::first-letter { font-size: 3.5em; }
+
+      a { color: inherit; text-decoration: none; }
+
+      @page {
+        margin: 20mm 22mm;
+        @bottom-right {
+          content: counter(page) " of " counter(pages);
+          font-family: 'Cinzel', serif;
+          font-size: 9pt;
+          color: #A67C2E;
+          letter-spacing: 0.1em;
+        }
+        @bottom-left {
+          content: "Norm Reed  ·  hesedwords.com";
+          font-family: 'Cinzel', serif;
+          font-size: 9pt;
+          font-style: italic;
+          color: #6B5C45;
+        }
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="hw-nav">
+    <a href="/old/index.html">Home</a>
+    <a href="/old/reflections.html" class="current">Reflections</a>
+    <a href="/old/articles.html">Articles</a>
+    <a href="/old/word-studies.html">Word Studies</a>
+    <a href="/old/books.html">Books</a>
+    <a href="/old/glossary.html">Glossary</a>
+    <a href="/old/resources.html">Resources</a>
+  </nav>
+
+  <!-- Article -->
+  <main class="article-wrap" role="main">
+
+    <!-- Breadcrumb -->
+    <p class="breadcrumb">
+      <a href="/old/reflections.html">Reflections</a>
+      <span class="breadcrumb__sep">&#8250;</span>
+      What Cannot Be Counted
+    </p>
+
+    <!-- Title Block -->
+    <header class="title-block">
+      <span class="title-block__eyebrow">A Hesedwords Reflection</span>
+      <div class="title-block__rule"></div>
+      <h1 class="title-block__title">What Cannot Be Counted</h1>
+      <p class="title-block__subtitle">Ecclesiastes 1:15 and the God who holds the number</p>
+      <span class="title-block__ornament">&#8901; &nbsp; &#8901; &nbsp; &#8901;</span>
+      <p class="title-block__byline">Norm Reed &nbsp;&middot;&nbsp; June 2026</p>
+    </header>
+
+    <!-- Prologue -->
+    <p class="prologue">
+      A phrase stopped the morning&rsquo;s reading and would not move. What follows is an attempt to trace where it led.
+    </p>
+
+    <div class="ornament-divider">&#8901; &nbsp; &#8901; &nbsp; &#8901;</div>
+
+    <!-- Article Body -->
+    <div class="article-body">
+
+      <!-- Section 1 -->
+      <h2 class="section-heading">The Impossible Command</h2>
+
+      <p class="drop-cap">God takes Abraham outside on a clear night and points at the sky.</p>
+
+      <p><em>Count the stars,</em> he says, <em>if you are able.</em></p>
+
+      <p>He knows Abraham is not able. The impossibility is built into the command before it is spoken. The point is not to produce a number. The point is to produce a posture.</p>
+
+      <p>Abraham looks up. He begins. And then he stops &mdash; because there is no stopping place. He is no longer a man doing arithmetic. He is a man standing under a sky too large for arithmetic, asked to orient himself toward something that exceeds all calculation.</p>
+
+      <p>And here is the strange mercy of that moment: the uncountability is not a frustration of the promise. It is the measure of it. If Abraham could have counted the stars, the promise would have been bounded by the count. The impossibility sets it free.</p>
+
+      <p>Genesis 15:6 follows with four quiet words: <em>he believed the&nbsp;L<span style="font-size:0.8em">ORD</span>.</em></p>
+
+      <p>Not: he counted. He believed. The impossible task was the gift. It moved him from calculation to trust.</p>
+
+      <p>And even now, the stars are still being discovered. Every generation looks up and finds more than the last &mdash; new galaxies, new depths, the universe exceeding every census. The promise keeps expanding with it.</p>
+
+      <!-- Section 2 -->
+      <h2 class="section-heading">The Same Impossibility</h2>
+
+      <p class="drop-cap">Centuries later, a Teacher sits down to record what a life of wisdom has shown him.</p>
+
+      <p>His name is Qohelet. His book is Ecclesiastes &mdash; one of the most honest documents in the canon. A long-eyed look at the world as it actually is, without flinching. This book has spoken to me for a long time, but particularly since my medical event &mdash; the morning my heart stopped and God carried me through what I could not carry myself. A man who has been brought back into the world he nearly left finds that honesty bracing rather than bleak.</p>
+
+      <p>In the first chapter he writes this:</p>
+
+      <blockquote class="scripture-block">
+        <p>What is crooked cannot be made straight,</p>
+        <p>and what is lacking cannot be counted.</p>
+        <p class="scripture-ref">Ecclesiastes 1:15</p>
+      </blockquote>
+
+      <p>The same impossibility. But heard now in a completely different register.</p>
+
+      <p>Where Abraham&rsquo;s uncountable stars were the measure of a promise, the Teacher is pointing at something else beyond counting &mdash; and it is not a blessing. It is a wound.</p>
+
+      <!-- Section 3 -->
+      <h2 class="section-heading">Two Different Griefs</h2>
+
+      <p class="drop-cap">The verse holds two separate observations, and they are not the same grief.</p>
+
+      <p>What is <em>crooked</em> is at least present. You can point to it. Name it. Work at it. The grief has an object. The Hebrew behind <em>made straight</em> is the root of <em>tikkun</em> &mdash; the repair of the world. The Teacher says plainly: the crooked cannot be repaired by human wisdom. Not under the sun.</p>
+
+      <p>But the second half of the verse is harder still.</p>
+
+      <p><em>What is lacking</em> &mdash; the Hebrew word is <em>chesaron</em>, the deficit, the absence, the thing that should be there and simply is not &mdash; <em>cannot be counted.</em></p>
+
+      <p>The chesaron is a different grief from the crooked. The crooked thing is at least <em>there</em>. The chesaron is not there at all. You cannot hold an absence. You cannot dress a wound that does not exist to be dressed. There is only space &mdash; where something should have been.</p>
+
+      <p>And every absence opens into further absences. Begin counting what is missing from one life &mdash; one childhood, one marriage, one body, one congregation &mdash; and you discover the list has no floor. Each missing thing contains ten more.</p>
+
+      <p>You cannot count holes. You can only feel the wind coming through them.</p>
+
+      <!-- Section 4 -->
+      <h2 class="section-heading">Absence Without Inventory</h2>
+
+      <p class="drop-cap">I have spent much of my life in rooms full of this kind of absence. The work of the Onesimus Foundation is, in one sense, a long ministry inside what cannot be counted: the birthdays a parent missed from a prison cell, the school mornings, the ordinary Tuesday evenings, the conversations that needed to happen and never did. You cannot inventory those absences. You can only stay present inside them.</p>
+
+      <p>And my own February morning &mdash; the morning my heart stopped &mdash; was very nearly an absence beyond anyone&rsquo;s counting. All the days that would simply not have been.</p>
+
+      <p>I sat with the Teacher&rsquo;s phrase for a long while this morning, knowing what I would put after the ellipsis. And then I began to understand why he does not ask us to count.</p>
+
+      <!-- Section 5 -->
+      <h2 class="section-heading">The Permission</h2>
+
+      <p class="drop-cap">The counting was never our task.</p>
+
+      <p>Not because the absences do not matter. They matter infinitely. But we were not built to hold that number. No one is. The person who tries to count what is lacking is the person of Psalm 127 &mdash; eating the bread of anxious toil, lying awake running an inventory that has no floor. And the psalm&rsquo;s answer to that person is not a better counting method. It is: <em>he gives sleep to his beloved.</em></p>
+
+      <p>David, in Psalm 56, asks God to put his tears in a bottle &mdash; <em>are they not in your book?</em> He is asking God to count what David cannot. The lack passes from the human ledger to the divine book.</p>
+
+      <p>There is One who counts what exceeds our counting. The hairs of a head. The sparrows. The tears. And in Luke 15, three stories in a row about what is missing: the sheep, the coin, the son. The woman knows exactly &mdash; nine is not ten. The father has been watching the road long enough to see his boy <em>while he was still a great way off.</em> He had been counting every day of the absence.</p>
+
+      <div class="pull-quote">
+        <p>What is lacking cannot be counted &mdash; <em>by us.</em></p>
+      </div>
+
+      <p>And was never meant to be.</p>
+
+      <!-- Section 6 -->
+      <h2 class="section-heading">The Same God</h2>
+
+      <p class="drop-cap">And here the two impossibilities meet.</p>
+
+      <p>The chesaron &mdash; the absence, the uncountable lack &mdash; is held by the same God who took Abraham outside and pointed at the sky. The same God who is entirely comfortable with what exceeds human numbering. Who lives and works in what cannot be counted.</p>
+
+      <p>Abraham could not count the stars. He stopped trying, and he believed.</p>
+
+      <p>The stars he could not count became the measure of a promise beyond his imagining.</p>
+
+      <p>What if the things we cannot count &mdash; the lacks, the absences, the chesaron of our lives &mdash; are held within the same divine arithmetic? Not ignored. Not minimised. Held. Counted by the One for whom uncountability is not a problem but a dwelling place.</p>
+
+      <p>We stop counting the lack for the same reason Abraham stopped counting the stars.</p>
+
+      <p>Because Someone else has the number. And he has made it the measure of a promise.</p>
+
+      <!-- Section 7 -->
+      <h2 class="section-heading">A Story for the Young &mdash; and the Rest of Us</h2>
+
+      <p class="drop-cap">When I want to know whether I have actually understood something, I ask whether I could give it to a twelve-year-old. So before the morning ended, the verse became a story.</p>
+
+      <div class="story-section">
+
+        <p>Ellie&rsquo;s grandad had a jigsaw puzzle on the table in his shed. A thousand pieces. A picture of a lighthouse.</p>
+
+        <p>They&rsquo;d worked on it together every Saturday for months. Then Grandad got sick, and then he was gone, and the puzzle just sat there, half-finished, with the lid propped against the wall.</p>
+
+        <p>One Saturday, Ellie went out to the shed by herself. She decided she would finish it. For him.</p>
+
+        <p>But when she tipped out the box, she found that some of the pieces were missing. She searched the floor. Under the table. In the dusty corners. She found three. But there were still holes in the sky, and a gap right in the middle of the lighthouse door.</p>
+
+        <p>She sat there trying to work out how many pieces were missing. Was it six? Eight? But then she realised something worse. It wasn&rsquo;t really about the pieces.</p>
+
+        <p>What was missing was the way Grandad held a piece up to the light before he placed it. The way he said <em>&ldquo;ah, there you are&rdquo;</em> when one finally fit. The cup of tea going cold next to his elbow. The Saturdays themselves.</p>
+
+        <p>How do you count <em>that</em>? Every time she thought of one missing thing, it opened into ten more. You can&rsquo;t count holes. You can only feel the wind coming through them.</p>
+
+        <p>Her mum found her there and sat down beside her. She didn&rsquo;t say &ldquo;we&rsquo;ll find the pieces.&rdquo; She didn&rsquo;t say &ldquo;we&rsquo;ll buy a new puzzle.&rdquo; She just looked at the unfinished lighthouse for a long time.</p>
+
+        <p>Then she said, &ldquo;You know what Grandad would say? He&rsquo;d say God knows where every piece is. Even the ones we never find.&rdquo;</p>
+
+        <p>They left the puzzle on the table, unfinished. And somehow, that felt right. Not because it didn&rsquo;t matter &mdash; but because finishing it wasn&rsquo;t Ellie&rsquo;s job. Her job was just to remember the Saturdays, and to know that Someone bigger was keeping count of everything she couldn&rsquo;t.</p>
+
+      </div>
+
+      <p>That&rsquo;s the verse. Some things stay bent. Some things stay missing. And the wisest people aren&rsquo;t the ones who pretend they can fix it all &mdash; they&rsquo;re the ones who know who&rsquo;s holding the missing pieces.</p>
+
+      <!-- AI Acknowledgment -->
+      <div class="ai-acknowledgment">
+        <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+        <p>During the development of this piece, AI became a conversation partner. It challenged assumptions, suggested connections, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+        <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+      </div>
+
+    </div><!-- .article-body -->
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <p class="site-footer__tagline">Hesed words. Written for the road.</p>
+  </footer>
+
+</body>
+</html>

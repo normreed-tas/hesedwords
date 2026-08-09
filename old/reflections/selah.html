@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selah &middot; Hesed Words</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parchment:#e8dfc8;
+  --parchment-page:#f3ecda;
+  --gold:#c9a84c;
+  --gold-deep:#A67C2E;
+  --gold-soft:#D9C49A;
+  --ink:#2A2218;
+  --ink-soft:#4A3E2C;
+  --muted:#6B5C45;
+  --rule:#C8B58F;
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--parchment);
+  color:var(--ink);
+  font-family:'Cormorant Garamond','Garamond',Georgia,serif;
+  font-size:1.22rem;
+  line-height:1.72;
+}
+
+/* ── Site nav ── */
+nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+nav.hw-nav a:hover{opacity:1;color:#fff;}
+nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+/* ── Footer ── */
+footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+.page{
+  max-width:720px;
+  margin:0 auto;
+  background:var(--parchment-page);
+  padding:4.5rem 3.2rem 2rem;
+  border-left:1px solid var(--rule);
+  border-right:1px solid var(--rule);
+}
+
+.eyebrow{
+  font-family:'Cinzel',serif;
+  font-size:.68rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  text-align:center;
+  margin-bottom:1.6rem;
+}
+
+h1{
+  font-family:'Cinzel',serif;
+  font-weight:500;
+  font-size:2.9rem;
+  letter-spacing:.06em;
+  text-align:center;
+  margin:0 0 .4rem;
+  line-height:1.15;
+}
+
+.subtitle{
+  text-align:center;
+  font-style:italic;
+  font-size:1.28rem;
+  color:var(--ink-soft);
+  margin:0 0 1.8rem;
+}
+
+.motif{
+  text-align:center;
+  color:var(--gold);
+  letter-spacing:.9em;
+  font-size:.8rem;
+  margin:0 0 1.6rem;
+  padding-left:.9em;
+}
+
+.byline{
+  text-align:center;
+  font-family:'Cinzel',serif;
+  font-size:.7rem;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:3.4rem;
+}
+
+h2{
+  font-family:'Cinzel',serif;
+  font-weight:500;
+  font-size:1.32rem;
+  letter-spacing:.08em;
+  color:var(--ink);
+  margin:3.4rem 0 .5rem;
+  padding-bottom:.55rem;
+  border-bottom:1px solid var(--gold-soft);
+}
+
+p{margin:0 0 1.25rem;}
+
+.lede{
+  font-size:1.5rem;
+  line-height:1.55;
+  color:var(--ink);
+  margin-bottom:1.8rem;
+}
+
+.scripture{
+  border-left:2px solid var(--gold);
+  padding:.2rem 0 .2rem 1.5rem;
+  margin:1.9rem 0;
+  font-style:italic;
+  color:var(--ink-soft);
+  font-size:1.24rem;
+}
+.scripture .ref{
+  display:block;
+  margin-top:.5rem;
+  font-style:normal;
+  font-family:'Cinzel',serif;
+  font-size:.65rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+}
+
+.selah-mark{
+  font-family:'Cinzel',serif;
+  letter-spacing:.14em;
+  color:var(--gold-deep);
+  font-weight:500;
+}
+
+.warrant{
+  border-left:2px solid var(--gold-soft);
+  background:rgba(201,168,76,.06);
+  padding:.9rem 1.3rem;
+  margin:2rem 0;
+  font-size:1.02rem;
+  font-style:italic;
+  color:var(--muted);
+  line-height:1.6;
+}
+.warrant .tag{
+  display:block;
+  font-family:'Cinzel',serif;
+  font-style:normal;
+  font-size:.6rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  margin-bottom:.4rem;
+}
+
+.divider{
+  text-align:center;
+  color:var(--gold);
+  letter-spacing:.9em;
+  font-size:.75rem;
+  margin:3rem 0;
+  padding-left:.9em;
+}
+
+.coda{
+  margin-top:3.6rem;
+  padding-top:2.4rem;
+  border-top:1px solid var(--gold-soft);
+  text-align:center;
+}
+.coda p{
+  font-style:italic;
+  font-size:1.34rem;
+  color:var(--ink-soft);
+  margin-bottom:.9rem;
+}
+.coda .selah-mark{
+  font-size:1.05rem;
+  letter-spacing:.2em;
+}
+
+.sign{
+  text-align:center;
+  font-family:'Cinzel',serif;
+  font-size:.7rem;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-top:3rem;
+}
+
+em.heb{font-style:italic;}
+a.gloss{color:inherit;text-decoration:none;border-bottom:1px dotted var(--gold-deep);}
+a.gloss:hover{color:var(--gold-deep);}
+
+@media(max-width:640px){
+  body{font-size:1.12rem;}
+  .page{padding:2.6rem 1.5rem 1.5rem;border-left:none;border-right:none;}
+  h1{font-size:2.1rem;}
+  .lede{font-size:1.3rem;}
+  h2{font-size:1.14rem;}
+}
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html" class="current">Reflections</a>
+  <a href="/old/articles.html">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+<main class="page">
+
+  <div class="eyebrow">A Reflection</div>
+  <h1>Selah</h1>
+  <p class="subtitle">Psalm 39</p>
+  <div class="motif">&bull;&bull;&bull;</div>
+  <div class="byline">Norm Reed</div>
+
+  <p class="lede">Twice in Psalm 39 the reading stops.</p>
+
+  <p>I have read past it for years. You come to the end of a line, and there is a word sitting there that is not part of the sentence, and it does not tell you what to do with it, and so you do nothing with it. You keep reading. <a class="gloss" href="/old/glossary.html#selah"><em>Selah.</em></a> It is a piece of furniture in the room and you have long since stopped seeing it.</p>
+
+  <p>And then one day you see it.</p>
+
+  <p>Nobody knows what it means. That is not a failure of my study &mdash; it is the honest position, and the commentaries will tell you so. Perhaps a musical direction: a rest, an interlude, an instruction to the players. Perhaps a liturgical one: a moment to bow, a signal to the congregation. The root may be <em class="heb">salal</em>, to lift up, or <em class="heb">salah</em>, to pause. The Greek translators rendered it <em class="heb">diapsalma</em> &mdash; an interlude &mdash; which tells you they were guessing too.</p>
+
+  <p>So I cannot tell you what <em>selah</em> is.</p>
+
+  <p>But I can tell you what it does. Whatever it was for, it puts a gap in the reading where there did not have to be one. It stops you. And it stops you somewhere in particular, which is the whole of what I want to say.</p>
+
+  <p>Because if a word appears in a psalm whose only observable function is <em>stop here</em> &mdash; then the only question worth asking is: <strong>stop here and look at what?</strong></p>
+
+  <div class="warrant">
+    <span class="tag">Established</span>
+    That the meaning of <em>selah</em> is genuinely unknown is not a claim any reader will contest.
+  </div>
+
+  <h2>Where it stops you</h2>
+
+  <p>In Psalm 39 it stops you twice, and both times it stops you on the same word.</p>
+
+  <div class="scripture">
+    Surely every man stands as a mere breath. <span class="selah-mark">Selah.</span>
+    <span class="ref">Psalm 39:5, ESV</span>
+  </div>
+
+  <div class="scripture">
+    Surely all mankind is a mere breath. <span class="selah-mark">Selah.</span>
+    <span class="ref">Psalm 39:11, ESV</span>
+  </div>
+
+  <p>The word is <a class="gloss" href="/old/glossary.html#hevel"><em class="heb">hebel</em></a>. Breath. Vapour. The thing that is gone before you have finished saying its name. It is Ecclesiastes' word, and it is the psalm's verdict on you, and it is placed at both stops.</p>
+
+  <p>So the psalm is not stopping you at random. It is stopping you, twice, in front of the fact of how brief you are, and then saying nothing further &mdash; no comfort, no instruction, no next step. Just the gap.</p>
+
+  <p>And here is the thing I had not seen in all the years of reading past it: <strong>the two stops are not the same.</strong></p>
+
+  <h2>The first stop is one he takes himself</h2>
+
+  <p>He has decided to keep quiet. There are wicked men about and he will not give them the satisfaction, so he muzzles his mouth and says nothing, not even something good. And the silence turns hot. It burns in him. And when he finally breaks, what comes out is not a defence of himself and not a complaint about them. It is a request for a measurement.</p>
+
+  <div class="scripture">
+    Lord, make me know my end and what is the measure of my days; let me know how fleeting I am.
+    <span class="ref">Psalm 39:4, ESV</span>
+  </div>
+
+  <p>He asks to be told how short he is. And he is told: a handbreadth. Nothing, in front of God.</p>
+
+  <p><span class="selah-mark">Selah.</span></p>
+
+  <p>That is a man who has chosen to look. He asked for the number and he got it, and the psalm stops so he can hold it. It is sobering, but it is not yet a wound. It is arithmetic.</p>
+
+  <p>Most of us who have been given a fright have been there. You sit down and you count, and you resolve, and the resolution is genuine.</p>
+
+  <h2>The second stop is handed to him</h2>
+
+  <div class="scripture">
+    When you discipline a man with rebukes for sin, you consume like a moth what is dear to him; surely all mankind is a mere breath.
+    <span class="ref">Psalm 39:11, ESV</span>
+  </div>
+
+  <p><span class="selah-mark">Selah.</span></p>
+
+  <p>Same verdict. Identical word. Different road entirely.</p>
+
+  <p>The first time he went and got it. This time it arrives from outside, without his asking, and it comes as <em>discipline</em> rather than as information.</p>
+
+  <p>A moth in a garment. The image is exact. A moth does not attack the cloth. It works quietly, from the inside, in the dark, in the folds you do not check. And you never discover a moth &mdash; you discover a <em>hole</em>. By the time you know, the work is already done, and there was never a moment at which you could have stopped it.</p>
+
+  <p>So the second stop is not a deeper insight into how brief life is. It is a verdict on a man who thought he had already understood how brief life is, and who has been living, quietly and in good faith, as though he had.</p>
+
+  <p>That is the difference. And it is the reason I could not read past the word any more.</p>
+
+  <div class="divider">&bull;&bull;&bull;</div>
+
+  <h2>Selah</h2>
+
+  <p>I obeyed it, and this is what I found.</p>
+
+  <p>The report is nearly finished. It is a good report.</p>
+
+  <p>There is a man in it who has been out for sixteen months and now has a lease in his own name, and I wrote that paragraph slowly because I wanted to get it right.</p>
+
+  <p>But that is not the part I keep going back to.</p>
+
+  <p>The part I keep going back to is a meeting with the Minister that I did not ask for. A committee that is being formed, and a seat on it, alongside the Deputy Secretary and the Director of the prison. Doors that have opened in a sequence I could not have arranged, and did not arrange, and have not put the word <em>providence</em> anywhere near in the report, because the board can see it for themselves.</p>
+
+  <p>I was sitting in front of it, pleased, and I found the sentence.</p>
+
+  <p><em>This is what the extra time is for.</em></p>
+
+  <p>I did not say it. I did not write it down. It simply arrived, fully formed, the way sentences do when they have been waiting a while for the right moment, and I recognised it, and I sat back.</p>
+
+  <p>Because five months ago my heart stopped, and I was given the time back. And I know what I said afterwards. A friend, a pastor, told me to think of everything I could achieve now. And I said &mdash; without stopping to think, which is how I know it was true &mdash; that I did not know about achieving anything, but the gift was an opportunity to enjoy Him, and that was enough.</p>
+
+  <p>That was the anchor going down. I felt it bite.</p>
+
+  <p>And now here I am, a season on, with a good report in front of me and a good wind behind me.</p>
+
+  <p>I stood watches. A ship at anchor swings &mdash; that is not drift, that is what a ship does, and only a fool confuses the two. But you cannot tell the difference from the deck. It feels the same. The only way to know is to look at something fixed, and to look on purpose, and to be willing to find out.</p>
+
+  <p>That is what the word was asking. So I went forward to the anchor, and I took a bearing.</p>
+
+  <p>And I am not where I was.</p>
+
+  <p>The ground is not holding. It has been giving quietly, in the dark, in the folds I do not check &mdash; and I did not discover the drag. I discovered a hole.</p>
+
+  <div class="warrant">
+    <span class="tag">Reading within frame</span>
+    The ship, the anchor, the bearing. Psalm 39 has a handbreadth, a shadow, a moth. The nautical frame is mine. I keep it because it is how I actually see, and because taking a bearing is not a metaphor for stopping to look &mdash; for a man who stood watches, it is simply what stopping to look is.
+  </div>
+
+  <h2>What the pause will not do</h2>
+
+  <p>This is where I expected to correct, and I find I cannot.</p>
+
+  <p>I am still excited. The doors are still open. The sequence is still, I am fairly sure, God. I do not want to give any of it up and I do not think I am being asked to. But I cannot stop the sentence from forming. I will go into that board meeting on Wednesday night and it will form again, and I will know it, and I will still not be able to stop it.</p>
+
+  <p>And if this were a tidier piece of writing I would now tell you that <em>selah</em> is where you reset the anchor. That you stop, you notice the drift, you correct, and you are held.</p>
+
+  <p>It is not, and you are not, and the psalm will not let me say it.</p>
+
+  <p>Because look at where Psalm 39 actually ends. There is no verse in which David re-anchors. There is no scene in which he stops heaping up. He asks his question, and he answers it, and then he goes straight back under the hand &mdash; <em>remove your stroke from me; I am spent by the hostility of your hand</em> &mdash; and the last thing he says is this:</p>
+
+  <div class="scripture">
+    Look away from me, that I may smile again, before I depart and am no more.
+    <span class="ref">Psalm 39:13, ESV</span>
+  </div>
+
+  <p>That is where it leaves him. Still under it. Still <em class="heb">hebel</em>. Still asking for a relief that has not come.</p>
+
+  <p>So <em>selah</em> is not a technique. It stops you where the word is. It does not do anything about the word.</p>
+
+  <p>It does not move the ship. It tells you where the ship is.</p>
+
+  <h2>What is left</h2>
+
+  <p>Which sounds like very little, and is not.</p>
+
+  <p>Because a bearing taken in a place you did not expect to be is the only thing that will make you ask a real question. If I could have corrected, I would simply have corrected, and never asked anything. It is only when you find that you cannot &mdash; that the ground was never going to hold, that the moth has been at it for months, that the good and God-given things in front of me are perfectly capable of becoming the same old treadmill with a better view from it &mdash; it is only then that the question comes out with any weight in it.</p>
+
+  <p>And it is sitting there in the psalm, in the middle, between the two stops:</p>
+
+  <div class="scripture">
+    And now, O Lord, for what do I wait? My hope is in you.
+    <span class="ref">Psalm 39:7, ESV</span>
+  </div>
+
+  <p>He does not answer it with a purpose. He answers it with a person.</p>
+
+  <div class="warrant">
+    <span class="tag">Reading within frame</span>
+    Taking verse 7 as the hinge between the two <em>selahs</em> is our reading. The psalm does not mark it as such. It is defensible, and it is ours.
+  </div>
+
+  <p>That is all he gets. It settles nothing. He is still spent, still under the hand, still asking to be looked away from.</p>
+
+  <p>But it is the only thing standing when everything else has been found to be breath.</p>
+
+  <div class="coda">
+    <p>Surely every man stands as a mere breath.</p>
+    <p><span class="selah-mark">Selah.</span></p>
+  </div>
+
+  <div class="sign">Norm Reed</div>
+
+</main>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiss the Son — hesedwords.com</title>
+  <meta name="description" content="A reflection on Psalm 2:12 — the kiss of submission, the kiss of refuge, and the connection to Psalm 85." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Reset ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ─── Tokens ─── */
+    :root {
+      --parchment:    #FAF5E8;
+      --ink:          #2A2218;
+      --ink-mid:      #4A3E2C;
+      --ink-light:    #6B5C45;
+      --gold:         #A67C2E;
+      --gold-light:   #C8B58F;
+      --gold-pale:    #D9C49A;
+      --gold-wash:    #F3EDD8;
+      --content-w:    660px;
+      --pad:          40px;
+      --font-display: 'Cinzel', serif;
+      --font-body:    'Cormorant Garamond', 'Garamond', Georgia, serif;
+    }
+
+    html { font-size: 20px; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-weight: 400;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Page wrapper ─── */
+    .wrap {
+      max-width: var(--content-w);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+
+    /* ─── Site nav ─── */
+    nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+    nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+    nav.hw-nav a:hover{opacity:1;color:#fff;}
+    nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+
+    /* ─── Back link ─── */
+    .back-link {
+      display: inline-block;
+      margin-top: 44px;
+      font-family: var(--font-display);
+      font-size: 9.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-pale);
+      padding-bottom: 1px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .back-link:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+    /* ─── Title block ─── */
+    .title-block {
+      text-align: center;
+      padding: 52px 0 44px;
+      border-bottom: 1px solid var(--gold-pale);
+      margin-bottom: 56px;
+    }
+
+    .eyebrow-rule {
+      display: block;
+      width: 44px;
+      height: 1px;
+      background: var(--gold-pale);
+      margin: 0 auto 20px;
+    }
+
+    .eyebrow {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 9.5px;
+      letter-spacing: 0.36em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 26px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 2.5rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink-mid);
+      line-height: 1.55;
+      margin-bottom: 22px;
+    }
+
+    .ornament {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      letter-spacing: 0.55em;
+      color: var(--gold-pale);
+      margin: 16px 0;
+    }
+
+    .byline {
+      font-family: var(--font-display);
+      font-size: 9.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+
+    /* ─── Article body ─── */
+    .article-body p {
+      font-size: 1.1rem;
+      line-height: 1.9;
+      margin-bottom: 1.45em;
+      color: var(--ink);
+    }
+
+    /* Drop cap — first paragraph only */
+    .article-body .drop-cap::first-letter {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 3.6em;
+      color: var(--gold);
+      float: left;
+      line-height: 0.8;
+      margin: 0.1em 0.07em 0 0;
+      padding-top: 0.02em;
+    }
+
+    /* ─── Scripture block ─── */
+    .scripture {
+      border-left: 3px solid var(--gold-pale);
+      margin: 2.2em 0;
+      padding: 1.1em 1.6em;
+    }
+
+    .scripture p {
+      font-style: italic;
+      font-size: 1.05rem !important;
+      line-height: 1.85;
+      margin-bottom: 0.45em !important;
+      color: var(--ink-mid);
+    }
+
+    .scripture p:last-of-type { margin-bottom: 0 !important; }
+
+    .scripture .ref {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.62rem;
+      font-style: normal;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 1em;
+    }
+
+    /* ─── Ornamental section divider ─── */
+    .section-divider {
+      text-align: center;
+      margin: 2.8em 0;
+      color: var(--gold-pale);
+      font-size: 0.85rem;
+      letter-spacing: 0.65em;
+    }
+
+    /* ─── Selah block ─── */
+    .selah-block {
+      border-top: 1px solid var(--gold-pale);
+      border-bottom: 1px solid var(--gold-pale);
+      padding: 2.2em 0 1.8em;
+      margin: 3em 0 2.8em;
+    }
+
+    .selah-label {
+      display: block;
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: 1.0rem;
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      color: var(--gold);
+      margin-bottom: 1.8em;
+    }
+
+    .selah-block p {
+      font-size: 1.1rem;
+      line-height: 1.9;
+      margin-bottom: 1.45em;
+      color: var(--ink);
+    }
+
+    .selah-block p:last-of-type { margin-bottom: 0; }
+
+    /* ─── Reflective questions ─── */
+    .questions {
+      border-left: 2px solid var(--gold-pale);
+      padding: 0.6em 1.6em;
+      margin: 2.8em 0 1em;
+    }
+
+    .questions p {
+      font-style: italic;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--ink-mid);
+      margin-bottom: 0.8em;
+    }
+
+    .questions p:last-child { margin-bottom: 0; }
+
+    /* ─── AI acknowledgment ─── */
+    .ai-note {
+      margin-top: 4em;
+      padding-top: 2em;
+      border-top: 1px solid var(--gold-pale);
+    }
+
+    .ai-note p {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--ink-light);
+      line-height: 1.75;
+      margin-bottom: 0.7em;
+    }
+
+    .ai-note p:last-child { margin-bottom: 0; }
+
+    /* ─── Site footer ─── */
+    .site-footer {
+      margin-top: 5em;
+      padding: 2.2em 0 3em;
+      text-align: center;
+      border-top: 1px solid var(--gold-pale);
+    }
+
+    .site-tagline {
+      font-family: var(--font-display);
+      font-size: 9px;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ─── Mobile ─── */
+    @media (max-width: 640px) {
+      :root { --pad: 22px; }
+      html  { font-size: 18px; }
+      h1    { font-size: 1.95rem; }
+      .title-block { padding: 40px 0 34px; margin-bottom: 40px; }
+    }
+
+    /* ─── Print ─── */
+    @media print {
+      body { background: #fff; color: #000; }
+      .hw-nav, .back-link, .site-footer { display: none; }
+      .scripture { border-left-color: #aaa; }
+      .selah-block { border-color: #ccc; }
+      .article-body .drop-cap::first-letter { color: #555; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══ Site nav ═══ -->
+  <nav class="hw-nav">
+    <a href="/old/index.html">Home</a>
+    <a href="/old/reflections.html" class="current">Reflections</a>
+    <a href="/old/articles.html">Articles</a>
+    <a href="/old/word-studies.html">Word Studies</a>
+    <a href="/old/books.html">Books</a>
+    <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+  </nav>
+
+  <!-- ═══ Main content ═══ -->
+  <main>
+    <div class="wrap">
+
+      <a href="/old/reflections.html" class="back-link">&larr; All Reflections</a>
+
+      <!-- Title block -->
+      <div class="title-block">
+        <span class="eyebrow-rule"></span>
+        <span class="eyebrow">A Hesedwords Reflection</span>
+        <h1>Kiss the Son</h1>
+        <p class="subtitle">A reflection on Psalm 2:12</p>
+        <span class="ornament">• • •</span>
+        <span class="byline">Norm Reed &nbsp;&middot;&nbsp; 6 June 2026</span>
+      </div>
+
+      <!-- Article body -->
+      <article class="article-body">
+
+        <!-- Scripture -->
+        <div class="scripture">
+          <p>Why do the nations rage and the peoples plot in vain?<br />
+          The kings of the earth set themselves, and the rulers take counsel together,<br />
+          against the&nbsp;<span style="font-variant: small-caps;">Lord</span> and against his Anointed&hellip;</p>
+          <p>Now therefore, O kings, be wise; be warned, O rulers of the earth.<br />
+          Serve the&nbsp;<span style="font-variant: small-caps;">Lord</span> with fear, and rejoice with trembling.<br />
+          Kiss the Son, lest he be angry, and you perish in the way,<br />
+          for his wrath is quickly kindled.<br />
+          Blessed are all who take refuge in him.</p>
+          <span class="ref">Psalm 2:1&ndash;2, 10&ndash;12 &nbsp;(ESV)</span>
+        </div>
+
+        <p class="drop-cap">The psalm ends where you don&rsquo;t expect it to end.</p>
+
+        <p>It begins with violence barely contained. Kings conspiring. Nations in uproar. The great ones of the earth, straining against a yoke they will not wear. The imagery is of clenched fists and pulled chains. This is the old human story, told without sentiment.</p>
+
+        <p>Then the&nbsp;<span style="font-variant: small-caps;">Lord</span> responds &mdash; and the response is, of all things, laughter. Not cruelty. The laughter of one who knows what the conspirators do not: that the yoke they are straining against has already been broken, not by their effort but by a coronation they cannot undo. <em>I have set my king on Zion, my holy hill.</em> The Anointed One speaks in his own voice: <em>You are my Son; today I have begotten you.</em> The authority the nations are fighting against has already been established. The argument is over. They simply don&rsquo;t know it yet.</p>
+
+        <p>And then &mdash; the pivot. The psalm turns and addresses the raging kings directly. <em>Be wise now, therefore, O kings.</em> It could end with force. There is force here &mdash; the rod of iron, the broken pottery. But the psalm does not end there. It ends with an invitation.</p>
+
+        <p><em>Kiss the Son.</em></p>
+
+        <p>The Hebrew word is <em>nashaq.</em> To kiss. In the ancient world, this was the gesture of vassalage &mdash; the subordinate placing his lips to the hand or feet of the one whose authority he acknowledged. When a lesser king submitted to a greater, this was the bodily form that submission took. Not a romantic gesture. A political one. The transfer of allegiance made visible in flesh.</p>
+
+        <p>There is a small textual puzzle worth pausing on. The usual Hebrew word for son is <em>ben.</em> Here, the psalm uses <em>bar</em> &mdash; the Aramaic equivalent. Scholars have puzzled over this. But the psalm resolves it itself: the Son declared in verse 7 &mdash; <em>You are my Son; today I have begotten you</em> &mdash; and the Son invited in verse 12 are the same figure. The Anointed of verse 2, the Son of verse 7, the one to be kissed in verse 12: a single movement. Christian reading has always heard it this way, and the New Testament confirms it at every turn.</p>
+
+        <p>What is remarkable is the psalm&rsquo;s final word. After the threat &mdash; <em>his wrath is quickly kindled</em> &mdash; the last thing the psalm says is this: <em>Blessed are all who take refuge in him.</em> The Hebrew is <em>ashrei.</em> The same word that opens the Beatitudes. The same word that opens the entire Psalter. The deep, settled happiness of the person rightly positioned &mdash; who has found the place where they are supposed to be.</p>
+
+        <p>The nations were raging. The invitation is to stop raging and start resting. And the one they stop raging against turns out to be the one in whose shelter they find everything they were looking for.</p>
+
+        <!-- Section divider -->
+        <div class="section-divider" aria-hidden="true">&#10022; &nbsp; &#10022; &nbsp; &#10022;</div>
+
+        <p>I came to Psalm 2:12 carrying something I had noticed elsewhere &mdash; in Psalm 85, at verse 10. There, the same verb appears: <em>nashaq.</em> &ldquo;Righteousness and peace have kissed each other.&rdquo;</p>
+
+        <p>In Psalm 85, the kiss is between the divine attributes that had seemed to pull in opposite directions &mdash; <em>hesed</em> and <em>emet</em>, <em>tzedek</em> and <em>shalom</em> &mdash; steadfast love and faithfulness, righteousness and peace. The kiss is the moment they meet, not in compromise but in simultaneous satisfaction. For those who read through Christian eyes, this is the moment that arrives at the cross. It is the event that makes the universe make sense.</p>
+
+        <p>And so the verb turns twice. In Psalm 85, the divine attributes kiss <em>in</em> Christ. In Psalm 2, the creature is invited to kiss <em>him.</em> The same word, linking the cosmic event to the personal response. What God accomplishes in Christ is the very place the creature is invited to enter &mdash; through the same act, the same gesture, the same open-handed posture.</p>
+
+        <p>The two psalms need each other. Psalm 85 tells you what happened. Psalm 2 tells you how to receive it.</p>
+
+        <!-- Section divider -->
+        <div class="section-divider" aria-hidden="true">&#10022; &nbsp; &#10022; &nbsp; &#10022;</div>
+
+        <!-- Selah -->
+        <div class="selah-block">
+          <span class="selah-label">&#x2042; &nbsp; Selah &nbsp; &#x2042;</span>
+
+          <p>The kings who open Psalm 2 are not evil in any lurid sense. They are simply committed to their own terms. The straining against the yoke is the posture of anyone who has not yet believed that the one at the other end of the yoke can be trusted.</p>
+
+          <p>I know that posture from the inside.</p>
+
+          <p>There is a version of faith in which God is present as the background of a life I am still essentially running. A useful background. An important background. But background. The decisions, the direction, the management of significance &mdash; these remain, quietly, in my own hands. I call my preferences convictions and my strategies ministry, and the arrangement feels spiritual enough that I rarely examine it closely.</p>
+
+          <p>The cardiac event did not leave me many places to hide from this.</p>
+
+          <p>What I found &mdash; slowly, uncomfortably, still finding &mdash; is that the kiss of Psalm 2 is not passivity. The raging kings are not invited to drift. They are invited to <em>choose</em> &mdash; to turn the whole posture of the self toward the Son with an open-handedness that says: <em>your terms, not mine.</em> It is what the psalms elsewhere call <em>batach</em> &mdash; full weight, not half weight. Not leaning while keeping one foot on the floor in case you need to bolt. Actually leaning.</p>
+
+          <p>The weaned child of Psalm 131 has learned this. The child is not asleep. The child is quiet. There is a difference. The quietness is not the absence of desire. It is the arrival at the place where the desire is met.</p>
+
+          <p><em>Blessed are all who take refuge in him.</em></p>
+
+          <p>That is the last word of the psalm. Not the nations subdued. Not the enemies destroyed. The person who stops raging and starts resting, finding in that rest what they spent all their raging trying to find.</p>
+        </div>
+
+        <!-- Reflective questions -->
+        <div class="questions">
+          <p>What would it mean, in this particular season of your life, to kiss the Son &mdash; to stop managing the terms of your own significance and place your full weight on his?</p>
+          <p>Where is the clenched fist that hasn&rsquo;t yet become an open hand?</p>
+        </div>
+
+        <!-- AI acknowledgment -->
+        <div class="ai-note">
+          <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+          <p>During the development of this piece, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+          <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+        </div>
+
+      </article>
+    </div><!-- /.wrap -->
+  </main>
+
+  <!-- ═══ Site footer ═══ -->
+  <footer class="site-footer">
+    <span class="site-tagline">Hesedwords &nbsp;&middot;&nbsp; Words about the love that holds</span>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Measured, and Immeasurable — Hesed Words</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parchment:#e8dfc8;
+  --parchment-page:#f3ecda;
+  --gold:#c9a84c;
+  --gold-deep:#A67C2E;
+  --gold-soft:#D9C49A;
+  --muted:#6B5C45;
+  --rule:#C8B58F;
+  --ink:#2b2721;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--parchment);
+  color:var(--ink);
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:1.24rem;
+  line-height:1.72;
+}
+nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+nav.hw-nav a:hover{opacity:1;color:#fff;}
+nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+
+.wrap{
+  max-width:38rem;
+  margin:0 auto;
+  padding:3.4rem 1.5rem 1rem;
+  background:var(--parchment-page);
+}
+@media(min-width:46rem){
+  .wrap{margin:3rem auto;padding:4.2rem 4rem 1.5rem;box-shadow:0 1px 20px rgba(60,48,28,.13);}
+}
+
+header.piece{text-align:center;margin-bottom:3rem;}
+header.piece .kicker{
+  font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--gold-deep);margin:0 0 1.2rem;
+}
+header.piece h1{
+  font-family:'Cinzel',serif;font-weight:600;font-size:1.78rem;
+  line-height:1.3;letter-spacing:.03em;margin:0 0 .8rem;
+}
+header.piece .sub{
+  font-style:italic;color:var(--muted);font-size:1.08rem;margin:0;
+}
+header.piece .rule{width:3.4rem;height:1px;background:var(--rule);margin:1.6rem auto 0;}
+
+h2.numeral{
+  font-family:'Cinzel',serif;font-weight:400;font-size:.82rem;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep);
+  text-align:center;margin:3.2rem 0 1.8rem;
+}
+h2.numeral::after{
+  content:"";display:block;width:2rem;height:1px;
+  background:var(--rule);margin:.9rem auto 0;
+}
+
+p{margin:0 0 1.25rem;}
+em.scripture{font-style:italic;}
+
+sup.fn{
+  font-family:'Cormorant Garamond',serif;font-size:.72em;
+  color:var(--gold-deep);vertical-align:super;line-height:0;
+}
+sup.fn a{color:inherit;text-decoration:none;}
+
+.notes{
+  margin:3.4rem 0 0;padding-top:1.4rem;
+  border-top:1px solid var(--rule);
+  font-size:.98rem;color:var(--muted);
+}
+.notes h3{
+  font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold-deep);margin:0 0 .9rem;
+}
+.notes p{margin:0 0 .6rem;}
+
+.crosslink{
+  margin:2.8rem 0 0;padding:1.3rem 1.5rem;
+  background:rgba(201,168,76,.09);
+  border-left:2px solid var(--gold-soft);
+  font-style:italic;font-size:1.06rem;color:var(--muted);
+}
+.crosslink a{color:var(--gold-deep);text-decoration:none;border-bottom:1px dotted var(--gold-deep);}
+.crosslink a:hover{color:var(--ink);}
+
+.disclaimer{
+  margin:3rem 0 0;padding-top:1.5rem;
+  border-top:1px solid var(--rule);
+  font-size:.98rem;color:var(--muted);font-style:italic;
+}
+.disclaimer p{margin:0 0 .7rem;}
+
+.pdf-download{
+  margin:2.2rem 0 0;text-align:center;
+  font-family:'Cinzel',serif;font-size:.7rem;
+  letter-spacing:.18em;text-transform:uppercase;
+}
+.pdf-download a{
+  color:var(--gold-deep);text-decoration:none;
+  border:1px solid var(--gold-soft);padding:.6rem 1.4rem;
+  display:inline-block;transition:background .2s;
+}
+.pdf-download a:hover{background:rgba(201,168,76,.12);}
+
+.byline{
+  text-align:center;font-family:'Cinzel',serif;font-size:.7rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
+  margin:2.8rem 0 0;
+}
+
+a.gloss{color:inherit;text-decoration:none;border-bottom:1px dotted var(--gold-deep);}
+a.gloss:hover{color:var(--gold-deep);}
+
+footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html">Reflections</a>
+  <a href="/old/articles.html" class="current">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+<div class="wrap">
+
+  <header class="piece">
+    <p class="kicker">Article</p>
+    <h1>Measured, and Immeasurable</h1>
+    <p class="sub">The measure for prison ministry</p>
+    <div class="rule"></div>
+  </header>
+
+  <h2 class="numeral">I</h2>
+
+  <p>Forty years ago I worked for a hard man in Papua New Guinea.</p>
+
+  <p>He reaped where he had not sown. He was demanding and he wanted results, and by the time I had been on the field a few years he had handed me most of the running of things — authority to decide, to arrange, to hold people to what they had agreed to.</p>
+
+  <p>A group of nationals were flying to Port Moresby for a conference. They asked us to cover their airfares and said they would repay us when they arrived. He agreed, on strict condition: repaid on arrival, without exception.</p>
+
+  <p>I told him it wasn't fair. I knew how it would go. I would be the one to ask for the money. They would go over my head to him. He would tell them not to worry about it.</p>
+
+  <p>You'll delegate the responsibility to manage the affairs, I said, but you won't delegate the ability to be merciful.</p>
+
+  <p>I meant it as an accusation. I had been given the measure and told to take it, and then told where I could not stop taking it, and the stopping was the part he kept for himself. I thought I had caught him in an inconsistency.</p>
+
+  <p>It was the first time I was handed an instrument and discovered it had a limit that was not mine to set. It would not be the last.</p>
+
+  <h2 class="numeral">II</h2>
+
+  <p>There is a young man in Zechariah's second vision who goes out with a measuring cord in his hand.</p>
+
+  <p>The setting matters. This is 520 BC. The exiles are back, the temple foundations are laid and the work has stalled, and the city is still largely rubble. In the first vision the angel of the LORD asks the question the whole book turns on: <em class="scripture">how long will you have no mercy on Jerusalem?</em> Seventy years, he says. How long.</p>
+
+  <p>The answer comes in 1:16. <em class="scripture">I have returned to Jerusalem with mercy; my house shall be built in it, and the measuring line shall be stretched out over Jerusalem.</em></p>
+
+  <p>The word for mercy there is <a class="gloss" href="/old/glossary.html#rahamim"><em>rachamim</em></a> — not <a class="gloss" href="/old/glossary.html#hesed"><em>hesed</em></a>, the covenant word I usually reach for, but the one that comes from <em>rechem</em>, the womb. Gut-level compassion. The kind you feel in the body before you decide anything. God's answer to seventy years of silence is not a policy. It is a wince.</p>
+
+  <p>And then the measuring line. Which is not, in the prophets, a comforting object. Stretch a line over a city and you are usually condemning it. <em class="scripture">I will stretch over Jerusalem the line of Samaria</em> — that is 2 Kings, and it means demolition. Lamentations watches it happen: <em class="scripture">he stretched out the line, he did not withhold his hand from destroying.</em> The last time anyone had seen a cord run out over those walls, it was to mark what was coming down.</p>
+
+  <p>Now the same instrument, the same city, and the opposite verdict. Mercy picks up the demolition tool and uses it to lay out a building.</p>
+
+  <h2 class="numeral">III</h2>
+
+  <p>Then chapter two, and the young man with his cord, walking out to take the dimensions. How wide, how long. He is not doing anything wrong. He has understood the promise correctly — a line is to be stretched over Jerusalem, and here he is stretching it.</p>
+
+  <p>He is stopped. Another messenger runs to intercept him, and the reason he is given is not that his figures are off. It is that the city will not hold still to be measured. It will be inhabited as villages without walls, too many people and too much livestock for any survey to contain. And the LORD himself will be a wall of fire around it, and the glory within.</p>
+
+  <p>Every commentator notices the reversal in the instrument. Fewer notice what happens next, which is that the instrument is issued and then outgrown. The line was right. It was simply not the last word.</p>
+
+  <p>Mercy measures, and then refuses to be a limit.</p>
+
+  <p>I read that in the ordinary way, a chapter at a time on a winter morning, and it put me back at a prison door with a tablet in my hand.</p>
+
+  <h2 class="numeral">IV</h2>
+
+  <p>In 2012 I was setting up video visits at the prison — inmates connecting to their families over the internet on small tablets. This was well before anyone else was doing it. We were among the first in Australia, and years later, on my Churchill Fellowship, prisons overseas asked me how we had managed it.</p>
+
+  <p>We had permission to trial the thing, which meant borrowed Nexus tablets, Skype, and long walks through a steel building hunting for a signal.</p>
+
+  <p>One of the first visits was for a man whose family lived at the other end of the state. They would go to a church there; I would sit with him in the non-contact area — the room you have seen on television, glass down the middle, a chair either side. I made the arrangements and met him there.</p>
+
+  <p>The connection was poor and we persevered and it worked. I did not listen to the conversation beyond checking the audio was holding. He was heavily burned. He wore pressure bandages on his neck and his hands. In those days I seldom asked what a man was in for, and I did not ask.</p>
+
+  <p>I left satisfied. The trial had worked.</p>
+
+  <h2 class="numeral">V</h2>
+
+  <p>Two weeks passed before the next visit.</p>
+
+  <p>Shortly before I was due back at the prison I came across a newspaper from the north of the state, and a photograph nearly filling the front page. Two burned children. Their faces scarred, their hands bandaged.</p>
+
+  <p>I read the text underneath it and felt the nausea come up through me.</p>
+
+  <p>The man I had been sitting beside — the man I was going back to sit beside the next day — had been in a dispute with his partner. He had taken his two boys, driven off with them, and ignited a gas bottle in the car.</p>
+
+  <p>The children survived. He was burned in it too. That is why the bandages.</p>
+
+  <p>It was later proved in court. He is still in prison.</p>
+
+  <p>What I could not get past was the next day. I was going to have to walk in, set up a tablet, and sit beside this man as though I had not seen the front page.</p>
+
+  <h2 class="numeral">VI</h2>
+
+  <p>I have thought for most of my working life that almost anything is forgivable. Almost. I had never had to find the edge of that until I walked into the prison carrying a tablet, and I would have taken any excuse to be somewhere else.</p>
+
+  <p>I had it out with God on the way in. Not aloud. One of those arguments that runs entirely inside your head and is no less an argument for that.</p>
+
+  <p>How can you forgive this man. How am I supposed to sit with him and not be affected by what he has done.</p>
+
+  <p>And the answer came back — the closest I have ever come to hearing a voice.</p>
+
+  <p><em class="scripture">Norm, I know everything you have done, and I forgive you. Grace is not grace if you don't know the offence.</em></p>
+
+  <h2 class="numeral">VII</h2>
+
+  <p>I have carried that sentence for fourteen years and it has never got easier, only truer.</p>
+
+  <p>Note who has to know. God does. God is not extending mercy across a gap in the file. There is no version of this where the offence is filed away, softened, contextualised, put into perspective. The knowing is a condition of the grace. Mercy that has not looked at what it is covering is not mercy; it is ignorance, and it will not hold weight.</p>
+
+  <p>Which is why I have never been able to make this story presentable. People want it to end with the offence becoming somehow smaller. It doesn't. Two boys were burned by their father. That is exactly as large a fact after the revelation as it was before it. Nothing about that morning made it smaller. What changed was that I stopped being outside it.</p>
+
+  <p>Because the sentence has a second half, and the second half is about me. <em class="scripture">I know everything you have done, and I forgive you.</em> I had been standing at that door sorting the world into the forgivable and the exception, and I had put myself, without noticing, on the forgivable side. I was holding a measure and I had quietly left myself out of the survey.</p>
+
+  <p>I did not forgive him that morning. I am not sure that was ever mine to do, and I will come back to that. What happened was that I found out which side of the line I was standing on, and the line had already been crossed from the other direction, long before I got there.</p>
+
+  <h2 class="numeral">VIII</h2>
+
+  <p>Here is where I have to be careful, because the temptation in a piece like this is to arrive somewhere clean.</p>
+
+  <p>That morning did not resolve anything. It reorganised me. Everyone else in the story is still holding a measure, and every one of those measures is legitimate, and they do not agree.</p>
+
+  <p>The officers on that unit had almost certainly done the same arithmetic I had. They had read the same paper. And they were required to work beside him every day, to be courteous, to be professional, to be correct — without anything like the revelation I had been handed at the door. Within the constraints of their job that man could never be acceptable, and I have never once thought that was a failure on their part.</p>
+
+  <p>His sister and her husband — the people at the other end of that bad Skype connection — got tarred with it. That is what happens. The family of a man who has done something unspeakable become, in the eyes of everyone around them, the family of a man who has done something unspeakable, and they carry it in the street and at work and at their children's school. They are victims in the second way, the way that never makes the front page. Over the years they became friends of mine. They used to stay in the house we set up on the property so that families had somewhere to sleep when they came to visit someone inside.</p>
+
+  <p>I notice, writing that, how strange it looks. Our ministry exists to hold families together across a prison wall, and in this case the family is the victim. It doesn't fit — until you remember that this man has a family too, and they were the ones on the screen.</p>
+
+  <p>And the boys. And their mother. Their measure of him may never reach him, and I have no argument to put to them and would not put one if I had. If I were their father's victim I doubt I would be any different. That has to be said plainly and then left alone, because the worst thing this article could do is arrive at a mercy that requires them to move.</p>
+
+  <p>Mercy is messy. What is merciful to an offender is anathema to a victim. That is not a problem to be solved on the way to a conclusion. It is the shape of the thing.</p>
+
+  <p>Mercy defies all measures, and none of us truly understands it.</p>
+
+  <p>I don't.</p>
+
+  <h2 class="numeral">IX</h2>
+
+  <p>Paul prays, for a church he is not sure will manage it, that they might have strength to grasp the breadth and length and height and depth.</p>
+
+  <p>Of what, he doesn't say. The four dimensions sit there in the Greek with nothing attached to them; you have to reach into the next clause to find that it is the love of Christ. He gives you the measurements and withholds the noun.</p>
+
+  <p>And then he asks that they would know a love that exceeds knowing.</p>
+
+  <p>Paul is not quoting Zechariah and I am not claiming he is. The two passages sit together because I have been reading them together. That is all the connection I can claim for it. But the shape is the same shape. The instrument is issued in good faith. Then the thing being measured turns out not to be that sort of quantity.</p>
+
+  <p>Note also that he prays it for a congregation — <em class="scripture">together with all the saints.</em> Nobody holds those four dimensions alone. Peterson's rendering of Ephesians 1 puts it starkly: the church is not peripheral to the world; the world is peripheral to the church, the body in which Christ speaks and acts and fills everything with his presence.<sup class="fn"><a href="#n1" id="r1">1</a></sup> Four chapters later Paul prays that this body might grasp dimensions it cannot hold. The reason there is a church at all is that the love of God is not the sort of thing one person can display. It takes a body to put it on show, and even then only partly.</p>
+
+  <p>Which is, more or less, what I was doing in that visits room with a borrowed tablet and a poor signal. Not explaining mercy. Holding one end of it while a burned man talked to his sister.</p>
+
+  <h2 class="numeral">X</h2>
+
+  <p>There is a question underneath this article that I have not resolved and should admit to.</p>
+
+  <p>I have told this story to a room of church leaders, holding up the newspaper. Writing it down is not the same. Anyone who knows the case will know who I mean. The man is identifiable and so, therefore, are his children, who are not children now — and they are the only people in this account who never had any choice about being in it.</p>
+
+  <p>I have not asked them. I have not asked his sister either. I don't know how to ask.</p>
+
+  <p>And that is not a failure peculiar to me; it is the ordinary condition of this work. The system's answer to the problem is a wall. Separate them, and the question of what these people are to each other never has to be put. Parole conditions will keep this man away from his sons, and they should. But parole ends. One day the conditions lapse and a father and his two grown boys are in the same state, on the same street, and then what.</p>
+
+  <p>Restorative justice is the only practice I know of that walks toward that question instead of building around it, and even it cannot promise anyone an outcome.</p>
+
+  <p>I don't know what happens to this man when he gets out. He cannot hide; he will want to, and he cannot. His hands and his neck will tell anyone who looks.</p>
+
+  <h2 class="numeral">XI</h2>
+
+  <p>What I know is what I was told at a prison door with a tablet in my hand.</p>
+
+  <p>Grace is not grace if you don't know the offence. God knows mine. He knows his. He was extending his measure well past the wall society had built, and past the one I had built that morning, and I had not been asked to approve the distance.</p>
+
+  <p>It is the only thing I have found that answers any of this. And it is the thing every one of us — the officers, the sister, the boys, their father, me — will have to come into eternity holding.</p>
+
+  <div class="notes">
+    <h3>Notes</h3>
+    <p id="n1">1. Ephesians 1:22–23, <em>The Message</em>. Scripture elsewhere in this article is ESV.</p>
+  </div>
+
+  <div class="crosslink">
+    This article has a companion reflection — <a href="/old/reflections/the-one-thing-he-wouldnt-delegate.html">The One Thing He Wouldn't Delegate</a>, on the man in Papua New Guinea and the vision in Zechariah 2.
+  </div>
+
+  <div class="disclaimer">
+    <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+    <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+    <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+  </div>
+
+  <div class="pdf-download">
+    <a href="/old/articles/pdf/measured-and-immeasurable.pdf">Download as PDF</a>
+  </div>
+
+  <p class="byline">Norm Reed</p>
+
+</div>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>

@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivered to What? — Norm Reed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #f9f6f0;
+      color: #2c2416;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.22rem;
+      line-height: 1.85;
+    }
+
+    /* ── Navigation ── */
+    nav.hw-nav {
+      background: #1f1b16;
+      font-family: 'Cinzel', serif;
+      font-size: .78rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      gap: 2.2rem;
+      padding: 1.05rem 1rem;
+      flex-wrap: wrap;
+    }
+    nav.hw-nav a { color: #f5edd6; text-decoration: none; opacity: .82; transition: opacity .2s; }
+    nav.hw-nav a:hover { opacity: 1; color: #fff; }
+    nav.hw-nav a.current { opacity: 1; border-bottom: 1px solid #b8922c; padding-bottom: .15rem; }
+
+    /* ── Page ── */
+    .hw-page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 6rem;
+    }
+
+    /* ── Title block ── */
+    .hw-title-block {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 2.2rem;
+      border-bottom: 1px solid #c9a84c;
+    }
+    .hw-eyebrow {
+      display: block;
+      width: 3rem;
+      height: 2px;
+      background: #c9a84c;
+      margin: 0 auto 1.4rem;
+    }
+    .hw-title {
+      font-family: 'Cinzel', serif;
+      font-size: 2.3rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      color: #2c2416;
+      line-height: 1.2;
+      margin-bottom: .5rem;
+    }
+    .hw-ornament {
+      color: #c9a84c;
+      font-size: 1rem;
+      letter-spacing: .35em;
+      margin: .9rem 0;
+    }
+    .hw-byline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: #7a6a52;
+      letter-spacing: .06em;
+    }
+
+    /* ── Scripture block ── */
+    .hw-scripture {
+      border-left: 3px solid #c9a84c;
+      padding: 1.1rem 1.6rem;
+      margin: 2.2rem 0 2.5rem;
+      background: rgba(201,168,76,.05);
+    }
+    .hw-scripture p {
+      font-style: italic;
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #3a2e1e;
+      margin-bottom: .4rem;
+    }
+    .hw-scripture .hw-ref {
+      font-family: 'Cinzel', serif;
+      font-size: .72rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      font-style: normal;
+      display: block;
+      margin-top: .6rem;
+    }
+
+    /* ── Body ── */
+    .hw-body p {
+      margin-bottom: 1.4rem;
+    }
+
+    /* Drop cap */
+    .hw-body p.drop-cap::first-letter {
+      font-family: 'Cinzel', serif;
+      font-size: 4.4rem;
+      font-weight: 700;
+      color: #c9a84c;
+      float: left;
+      line-height: .78;
+      margin: .1em .13em -.04em 0;
+    }
+
+    /* ── Ornamental divider ── */
+    .hw-divider {
+      text-align: center;
+      color: #c9a84c;
+      font-size: .9rem;
+      letter-spacing: .45em;
+      margin: 2rem 0;
+      user-select: none;
+    }
+
+    /* ── Selah ── */
+    .hw-selah {
+      border-top: 1px solid #c9a84c;
+      border-bottom: 1px solid #c9a84c;
+      padding: 2rem 1.6rem 1.8rem;
+      margin: 3rem 0 2.5rem;
+      background: rgba(201,168,76,.03);
+    }
+    .hw-selah-title {
+      font-family: 'Cinzel', serif;
+      font-size: .75rem;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      text-align: center;
+      margin-bottom: 1.6rem;
+    }
+    .hw-selah p {
+      font-style: italic;
+      font-size: 1.15rem;
+      line-height: 1.85;
+      color: #3a2e1e;
+      margin-bottom: 1.2rem;
+    }
+    .hw-selah p:last-child { margin-bottom: 0; }
+
+    /* ── Reflective questions ── */
+    .hw-questions {
+      border-left: 2px solid rgba(201,168,76,.45);
+      padding: 1rem 1.6rem;
+      margin: 2.2rem 0;
+    }
+    .hw-questions p {
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #4a3e28;
+      margin-bottom: .9rem;
+      line-height: 1.75;
+    }
+    .hw-questions p:last-child { margin-bottom: 0; }
+
+    /* ── Footer ── */
+    footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      .hw-title { font-size: 1.75rem; }
+      .hw-page { padding: 2.2rem 1.2rem 4rem; }
+      body { font-size: 1.1rem; }
+      nav.hw-nav { gap: 1.4rem; font-size: .7rem; }
+    }
+
+  </style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html" class="current">Reflections</a>
+  <a href="/old/articles.html">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+<div class="hw-page">
+
+  <!-- Title block -->
+  <div class="hw-title-block">
+    <span class="hw-eyebrow"></span>
+    <h1 class="hw-title">Delivered to What?</h1>
+    <div class="hw-ornament">&middot; &middot; &middot;</div>
+    <p class="hw-byline">Norm Reed</p>
+  </div>
+
+  <!-- Scripture -->
+  <div class="hw-scripture">
+    <p>Will you steal, murder, commit adultery, swear falsely, make offerings to Baal,
+    and go after other gods that you have not known, and then come and stand before me
+    in this house, which is called by my name, and say, &#8220;We are delivered!&#8221;
+    &#8212; only to go on doing all these abominations? Has this house, which is called
+    by my name, become a den of robbers in your eyes? Behold, I myself have seen it,
+    declares the <span style="font-variant:small-caps">Lord</span>.</p>
+    <span class="hw-ref">Jeremiah 7:9&#8211;11 &middot; <span style="font-variant:small-caps">esv</span></span>
+  </div>
+
+  <!-- Body -->
+  <div class="hw-body">
+
+    <p class="drop-cap">Jesus walks into the temple and starts overturning tables. Coins
+    scatter across the stone floor. Doves flap out of their cages. People scramble.</p>
+
+    <p>And he shouts two things from the Bible.</p>
+
+    <p>Most people who read this story think: <em>Jesus was angry about the buying and
+    selling.</em> And that&#8217;s partly true. But there&#8217;s something much bigger
+    going on. And to see it, you need to know what he was actually quoting.</p>
+
+    <div class="hw-divider">&middot; &middot; &middot;</div>
+
+    <p>The first quote is from Isaiah: <em>&#8220;My house shall be called a house of
+    prayer for all nations.&#8221;</em></p>
+
+    <p>The second is from Jeremiah: <em>&#8220;But you have made it a den of
+    robbers.&#8221;</em></p>
+
+    <p>Two prophets. One sentence each. But both of them carry far more than they
+    appear to.</p>
+
+    <div class="hw-divider">&middot; &middot; &middot;</div>
+
+    <p>Start with Jeremiah&#8217;s line. The word we translate as &#8220;robbers&#8221;
+    is a stronger word than that in the original Hebrew. It means <em>violent
+    breakers</em> &#8212; people who smash through limits, who use force to get what
+    they want. Not pickpockets. Crash-through-the-wall people.</p>
+
+    <p>And the word translated &#8220;den&#8221; means a cave. Not a cosy den. A wild
+    cave. The kind of place where dangerous people hide.</p>
+
+    <p>Here is the picture Jeremiah is painting. A gang of violent men goes out, does
+    terrible things &#8212; stealing, cheating, hurting people. And then they come back
+    to their cave. Their hideout. The cave isn&#8217;t where the crimes happen.
+    It&#8217;s where they go afterwards to feel safe and normal again. <em>We&#8217;re
+    okay. We&#8217;re home. We&#8217;re covered.</em></p>
+
+    <p>Jeremiah says that&#8217;s what the temple had become. People were breaking every
+    commandment God had given them. And then they&#8217;d come to the temple, offer
+    their sacrifice, say their prayers &#8212; and walk out feeling <em>delivered</em>.
+    Like God had stamped their card. And then they&#8217;d go out and do it all over
+    again.</p>
+
+    <p>The temple wasn&#8217;t where the crime happened. The temple was the hideout
+    between crimes.</p>
+
+    <p>That&#8217;s what Jesus is calling out. Not the market stalls, specifically. The
+    whole <em>system</em> &#8212; where religion becomes a way of feeling safe while
+    living as though God&#8217;s covenant doesn&#8217;t matter.</p>
+
+    <div class="hw-divider">&middot; &middot; &middot;</div>
+
+    <p>Now the Isaiah quote. The temple had different sections. The further in you went,
+    the more restricted it was. At the very centre: the Holy of Holies &#8212; only the
+    High Priest, once a year. Then courts for priests, for Jewish men, for Jewish women.
+    And right on the outside edge &#8212; one court for everyone else. People from other
+    nations. People who weren&#8217;t Jewish but who wanted to pray to Israel&#8217;s
+    God. That was the one space in the whole temple where they were allowed.</p>
+
+    <p>Guess where the money-changers and dove-sellers had set up shop.</p>
+
+    <p>That court.</p>
+
+    <p>The one space for the outsiders &#8212; packed with market stalls.</p>
+
+    <p>So when Jesus quotes Isaiah &#8212; <em>a house of prayer for all nations</em>
+    &#8212; and then Jeremiah &#8212; <em>den of violent breakers</em> &#8212;
+    he&#8217;s saying: you have taken the one space that was meant for everyone, and
+    turned it into a barrier that shuts them out.</p>
+
+    <div class="hw-divider">&middot; &middot; &middot;</div>
+
+    <p>Here is the thing that every adult in that crowd would have known &#8212; and
+    that most modern readers miss entirely.</p>
+
+    <p>Jeremiah 7:11 is not a stand-alone verse. It comes from a famous sermon. And
+    everyone there knew how that sermon ended. Jeremiah had stood in the temple gate
+    and told the people: <em>if you keep on like this, I will destroy this temple the
+    same way I destroyed Shiloh.</em></p>
+
+    <p>Shiloh was a holy place God had once let the enemies level. Every Jewish person
+    knew that story. It was a warning from history.</p>
+
+    <p>So when Jesus quotes Jeremiah 7:11, the crowd doesn&#8217;t just hear verse 11.
+    They hear the whole chapter &#8212; including the ending. It&#8217;s like someone
+    standing at an ANZAC Day service and beginning: <em>They shall not grow old&#8230;</em>
+    You know the rest. You feel the weight of the whole.</p>
+
+    <p>Jesus isn&#8217;t making a complaint about commerce. He is making a prophetic
+    announcement. <em>This temple is going to be destroyed. Again.</em></p>
+
+    <p>That is why the priests immediately start planning to kill him. They didn&#8217;t
+    miss the point. They heard it clearly.</p>
+
+    <div class="hw-divider">&middot; &middot; &middot;</div>
+
+    <p>And one more thing. Jeremiah 7:11 contains a line that tends to disappear in
+    translation.</p>
+
+    <p>God says: <em>&#8220;I myself have seen it.&#8221;</em></p>
+
+    <p>The original Hebrew presses hard on the word &#8220;I.&#8221; <em>Even I, I have
+    seen it.</em> In the ancient world, the most powerful person in any court case was
+    an eyewitness. God is presenting himself as the witness who has stood in his own
+    temple and seen what has been done there.</p>
+
+    <p>When Jesus overturns the tables, he isn&#8217;t losing his temper. He is the
+    embodiment of that divine witness &#8212; the one who has seen, and who acts from
+    what he has seen.</p>
+
+    <p>And when he quotes Isaiah in the first person &#8212; <em>my house</em> &#8212;
+    he is making a claim that the priests cannot miss. Whose house is it? The one whose
+    name it carries. And if it is <em>my</em> house, then I have the authority to judge
+    what is done in it.</p>
+
+    <p><em>&#8220;By what authority are you doing these things?&#8221;</em> they ask
+    him, in the very next scene.</p>
+
+    <p>They already knew the answer. That&#8217;s why the question frightened them.</p>
+
+  </div>
+
+  <!-- Selah -->
+  <div class="hw-selah">
+    <div class="hw-selah-title">Selah</div>
+
+    <p>The image that stayed with me was not the temple. It was the road back to it.</p>
+
+    <p>Marauding bands returning to their base. The countryside behind them bearing the
+    marks of what they had done. And then &#8212; the cave. The place they came back to.
+    To breathe, to settle, to feel themselves again.</p>
+
+    <p>What they did when they got there is what I find hardest to look at.</p>
+
+    <p>They sang.</p>
+
+    <p>Not silent, guilty men slipping in the back. They came with sacrifices and songs.
+    They saw themselves as the delivered ones &#8212; victims of enemies, recipients of
+    grace, people God had rescued. The psalms were on their lips. And they meant every
+    word.</p>
+
+    <p>That is the most searching thing in Jeremiah&#8217;s indictment. Not that they
+    were pretending. But that they were not. They genuinely believed the songs. They
+    were the righteous in their own story. And from out there &#8212; from the road
+    behind them, from the people who bore the cost of what they had done &#8212; the
+    view was entirely different.</p>
+
+    <p>There is a church that sits next to a prison. I know it well.</p>
+
+    <p>And I have found myself asking &#8212; with some discomfort &#8212; whether the
+    families filing through the prison gates on visiting day feel the doors of that
+    church open to them. Whether they know they have a court there. Whether the songs
+    sung inside reach them as welcome or as distance.</p>
+
+    <p>Because those families are not strangers to God&#8217;s house. They are the ones
+    for whom the outer court was always meant. And the question God asks &#8212; the one
+    who says <em>I myself have seen it</em> &#8212; is not whether we have a programme
+    for them. It is whether they belong.</p>
+
+    <p>I have had to ask myself what we sing. And what those outside hear when we
+    sing it.</p>
+
+    <p>Jesus sees it. He always does.</p>
+  </div>
+
+  <!-- Reflective questions -->
+  <div class="hw-questions">
+    <p>Do the people on the other side of that prison fence experience the church next
+    door as a house of prayer &#8212; or as a den of the delivered?</p>
+    <p>What would it look like for the outer court to be genuinely theirs?</p>
+  </div>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</div>
+</body>
+</html>

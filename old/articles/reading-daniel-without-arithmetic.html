@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading Daniel Without Arithmetic &middot; Hesed Words</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parchment:#e8dfc8;
+  --parchment-page:#f3ecda;
+  --gold:#c9a84c;
+  --gold-deep:#A67C2E;
+  --gold-soft:#D9C49A;
+  --muted:#6B5C45;
+  --rule:#C8B58F;
+  --ink:#2A2218;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--parchment);color:var(--ink);font-family:'Cormorant Garamond','Garamond',Georgia,serif;font-size:20px;line-height:1.72;}
+
+/* ── Site nav ── */
+nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+nav.hw-nav a:hover{opacity:1;color:#fff;}
+nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+/* ── Footer ── */
+footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+.page{max-width:720px;margin:0 auto;padding:0 32px;background:var(--parchment-page);border-left:1px solid var(--rule);border-right:1px solid var(--rule);}
+.titleblock{text-align:center;padding:72px 0 12px;}
+.eyebrow{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:22px;}
+h1{font-family:'Cinzel',serif;font-weight:500;font-size:38px;letter-spacing:.03em;line-height:1.2;margin:0 0 14px;}
+.subtitle{font-style:italic;font-size:20px;color:#4A3E2C;margin:0;}
+.motif{color:var(--gold);letter-spacing:.6em;font-size:13px;margin:26px 0 18px;}
+.byline{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);}
+.prologue{font-style:italic;color:#4A3E2C;margin:38px 0 0;}
+
+hr.sect{border:0;border-top:1px solid var(--rule);margin:46px 0 34px;opacity:.7;}
+
+h2.numeral{font-family:'Cinzel',serif;font-weight:500;font-size:15px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-deep);text-align:center;margin:0 0 30px;}
+h2.interlude{font-family:'Cinzel',serif;font-weight:500;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep);text-align:center;margin:0 0 30px;}
+h2.interlude span{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;letter-spacing:.02em;text-transform:none;color:#4A3E2C;margin-top:8px;}
+
+p{margin:0 0 1.15em;}
+em.scripture{font-style:italic;}
+.lead{font-weight:600;}
+
+blockquote.verse{margin:30px 0;padding:4px 0 4px 22px;border-left:2px solid var(--gold-soft);font-style:italic;color:#3A3022;}
+
+.notes{margin-top:54px;padding-top:20px;border-top:1px solid var(--rule);font-size:16px;color:var(--muted);}
+.notes p{margin:0 0 .7em;}
+sup.fn{font-size:.65em;vertical-align:super;color:var(--gold-deep);}
+
+.crosslink{margin:44px 0 0;padding:22px 24px;background:#FAF5E8;border:1px solid var(--rule);font-style:italic;color:#4A3E2C;font-size:18px;}
+.crosslink a{color:var(--gold-deep);}
+
+.ai-note{margin:46px 0 0;padding-top:22px;border-top:1px solid var(--rule);font-style:italic;font-size:16px;color:var(--muted);}
+
+.pdf-download{text-align:center;margin-top:44px;}
+.pdf-download a{
+  font-family:'Cinzel',serif;
+  font-size:10px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--muted);
+  text-decoration:none;
+  border-bottom:1px solid var(--gold-soft);
+  padding-bottom:2px;
+  transition:color .2s,border-color .2s;
+}
+.pdf-download a:hover{color:var(--gold-deep);border-bottom-color:var(--gold-deep);}
+
+.tail{height:40px;}
+
+@media (max-width:640px){
+  body{font-size:18px;}
+  .page{padding:0 20px;}
+  h1{font-size:28px;}
+  .titleblock{padding:48px 0 8px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html">Reflections</a>
+  <a href="/old/articles.html" class="current">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+<div class="page">
+
+  <div class="titleblock">
+    <div class="eyebrow">Article</div>
+    <h1>Reading Daniel Without Arithmetic</h1>
+    <p class="subtitle">Daniel 11&ndash;12, and the half of the verse I had not learned</p>
+    <div class="motif">&#8226; &#8226; &#8226;</div>
+    <div class="byline">Norm Reed</div>
+  </div>
+
+  <hr class="sect">
+
+  <h2 class="numeral">I</h2>
+
+  <p>I was twenty-four when I came across Daniel 11:32. I was reading through the Bible and it stood out, and I did what I did in those days with verses that stood out &mdash; wrote it on a card and put it up where I would see it. <em>The people who know their God shall be strong and do exploits.</em><sup class="fn">1</sup> I could have told you nothing about the king of the north or the king of the south. I did not know the verse sat in the middle of a war.</p>
+
+  <p>What I knew was that there were people who knew God, and that they did things. I wanted to be one of them.</p>
+
+  <p>It was a good thing to want. It was also, I can see now, a want with no weight in it. I had the first half of a sentence and none of the cost of the second.</p>
+
+  <hr class="sect">
+
+  <h2 class="numeral">II</h2>
+
+  <p>The verse I had learned sits in the third of three chapters that have cost the church more peace than almost anything else in the Old Testament.</p>
+
+  <p>Daniel 11 runs to seventy-odd verses of war. Kings of the north and kings of the south advance and withdraw, marry and betray, and the detail is so exact that for the first three-quarters of the chapter readers of every persuasion agree on who is meant. Then a figure rises who magnifies himself above every god, desecrates the sanctuary, sets up the abomination that makes desolate &mdash; and the agreement ends. Some readers see Antiochus IV Epiphanes and nothing beyond him. Others see a shape that Antiochus fills first and someone else fills last.</p>
+
+  <p>Chapter 12 makes it harder rather than easier. There is a time of trouble such as never was. There is a resurrection, some to everlasting life and some to everlasting contempt. And there are numbers. A time, times, and half a time. A thousand two hundred and ninety days. A thousand three hundred and thirty-five days, with a blessing attached to whoever gets there.</p>
+
+  <p>The numbers are the trouble. They are precise enough to invite arithmetic and unanchored enough to reward it. Given a starting point, they can be made to arrive almost anywhere &mdash; and for two thousand years they have been made to arrive at the reader&rsquo;s own century, over and over, by serious people who were wrong.</p>
+
+  <p>I have no arithmetic to offer.</p>
+
+  <hr class="sect">
+
+  <h2 class="numeral">III</h2>
+
+  <p>Four broad readings have carried the weight of these chapters. Each has held serious scholars, and each is guarding something the others risk losing.</p>
+
+  <p><span class="lead">The first reads Daniel as addressed to its own moment.</span> The chapters describe the Seleucid wars and culminate in Antiochus IV, who in 167 BC stopped the sacrifice and set up an altar to Zeus in the temple. The days count out that desecration and its end. What this reading guards is the original hearers &mdash; Jews under real persecution, who were given something they could use, not a cipher for a distant century. A prophecy that meant nothing to the people who first received it is a strange kind of comfort. <em>This is the preterist reading.</em></p>
+
+  <p><span class="lead">The second reads the chapters as the church&rsquo;s long story.</span> The visions run from Daniel&rsquo;s own day forward through the rise and fall of empires, the days standing for years across the centuries. This reading dominated the Reformation and much of what followed. What it guards is providence in the long stretch &mdash; that God&rsquo;s rule is not confined to two dramatic endpoints with a silent gap between, but runs through every generation, including the dull ones. <em>This is the historicist reading.</em></p>
+
+  <p><span class="lead">The third reads the last portion as still ahead.</span> The figure at the end of chapter 11 is larger than Antiochus ever was. The trouble described is worse than anything the world has seen. And the dead have not yet risen, which is what 12:2 says will happen. So the last part of the vision must still be waiting. What this reading guards is the ending &mdash; that these chapters promise a real finish, in history, where everyone can see it, and not just a pattern that goes round again forever. <em>This is the futurist reading.</em></p>
+
+  <p><span class="lead">The fourth reads the chapters as pattern rather than schedule.</span> Antiochus is real and so is his successor and so is the one still to come; the vision shows what tyranny always does and what God always does about it. What this reading guards is the text&rsquo;s usefulness to every generation &mdash; that a believer under any regime can open Daniel and find their own situation described. <em>This is the idealist reading.</em></p>
+
+  <p>They disagree, and the disagreements are real. But notice what nobody is defending. Not one of these readings is guarding a date.</p>
+
+  <hr class="sect">
+
+  <h2 class="interlude">Interlude<span>The Man</span></h2>
+
+  <p>Before any of this, there was a boy taken from Jerusalem.</p>
+
+  <p>He was young, well-favoured, quick to learn. He was given a new name, a new language, a new library, and a place at the king&rsquo;s table. Almost everything about him was reassigned. The first thing we are told he did was decline the food.</p>
+
+  <p>It is a small thing to refuse. Nobody would have prosecuted him for eating it. He asked quietly, he asked permission, and he offered the steward a way to say yes. But it is the first thing recorded of him, and it is a decision made before anything was at stake.</p>
+
+  <p>Later a king dreamed and could not recover the dream, and every wise man in Babylon was condemned. Daniel asked for time, and the dream was given to him in the night. His first act was to bless God. His second was to go back to Arioch and ask him not to kill anyone.</p>
+
+  <p>Later still there were windows. He prayed toward Jerusalem three times a day, and had done so for years, and when a decree made it a capital offence the windows stayed open. He did not begin praying because of the edict. He did not stop. They threw him to the lions, and God shut the lions&rsquo; mouths.</p>
+
+  <p>And once, late in his life, he was reading. Jeremiah had written that the desolation of Jerusalem would last seventy years. Daniel counted. He worked it out. He had a number in front of him, and it was nearly up.</p>
+
+  <p>He did not announce a date. He turned his face to the Lord and confessed &mdash; <em>we have sinned, we have done wickedly</em>. He had been a boy in the first deportation. Whatever brought Jerusalem down, he had not done it. He said <em>we</em> anyway.</p>
+
+  <p>He was in his eighties by the time of the visions in chapters ten to twelve. He had outlasted an empire. And when the messenger came, twice, the word given to him was that he was greatly beloved &mdash; and the reason offered was not that he had understood anything. It was that he had set his heart to understand, and humbled himself.</p>
+
+  <hr class="sect">
+
+  <h2 class="numeral">IV</h2>
+
+  <p>Put the four readings side by side and the disagreement is real. But it is narrower than the noise around it suggests, and what survives the disagreement is not a residue. It is most of the substance.</p>
+
+  <p>All four hold that God rules the sequence. The chapters are relentless about this in a way that is easy to miss because it is never argued. Kings rise, and it is said of them that they rise. Kingdoms are broken and given to others. A tyrant prospers until an appointed end &mdash; <em>until the indignation is accomplished, for what is determined shall be done</em>.</p>
+
+  <p>All four hold that the wicked prosper for a season, and that the season is real. This is not a small concession. The text does not say the persecution will be brief or that it will feel survivable. It says a time of trouble such as never was. Whatever else these chapters are, they are not written for people whose circumstances are about to improve.</p>
+
+  <p>All four hold that there is a real end. They locate it differently, but none of them dissolves it. The vision does not trail off; it arrives.</p>
+
+  <p>All four hold that the dead rise. Daniel 12:2 is the clearest resurrection sentence in the Old Testament, and no reading of these chapters gets rid of it. Some to everlasting life and some to shame and everlasting contempt.</p>
+
+  <p>And all four hold that the wise are vindicated, and that the vindication is on the other side of the resurrection rather than before it. The shining of 12:3 is not a promise about how the wise will fare in chapter 11. It is a promise about what happens after they have fallen.</p>
+
+  <p>Most readers, in practice, hold more than one of these positions at once. Antiochus and a later figure; a pattern and a consummation.</p>
+
+  <hr class="sect">
+
+  <h2 class="numeral">V</h2>
+
+  <p>There is one more thing to say before the verse comes back, and the book says it about itself.</p>
+
+  <p>Daniel, at the end, does not understand. He has seen the visions and heard the numbers and he asks the obvious question &mdash; <em>my lord, what shall be the outcome of these things?</em> He is refused. Go your way, Daniel; the words are shut up and sealed until the time of the end.</p>
+
+  <p>Then the refusal is qualified, and the qualification is the sentence I keep coming back to.</p>
+
+  <blockquote class="verse">Many shall purify themselves and make themselves white and be refined, but the wicked shall act wickedly. And none of the wicked shall understand, but those who are wise shall understand.</blockquote>
+
+  <p>The book has been asked who reads it rightly, and it has answered. Not the one with the best chronology. The one being refined.</p>
+
+  <p>This is a strange thing for an apocalypse to say about itself. The church has argued over these chapters for two thousand years, and the book never set the test where we have been sitting it. Understanding is not withheld from the mathematically careless. It is withheld from the wicked.</p>
+
+  <p>Paul and Jesus both read these chapters, and neither of them does the arithmetic.</p>
+
+  <p>Paul takes the man who exalts himself above every god straight out of Daniel 11 and sets him in 2 Thessalonians. He takes the resurrection of Daniel 12:2 &mdash; some to life, some to contempt &mdash; and it stands behind everything he says about the dead in Christ.<sup class="fn">2</sup> What he never does is count. He was writing to a church agitated about timing, and he had the numbers available to him, and he answered with a person instead.</p>
+
+  <p>Jesus quotes Daniel by name. The abomination of desolation, spoken of by Daniel the prophet &mdash; and then, a few verses on, of that day and hour no one knows, not the angels, nor the Son. He takes up the chapter and declines the calculation in the same discourse.</p>
+
+  <p>Two readers closer to the text than anyone since, and both of them treat Daniel as a summons to endurance rather than a timetable.</p>
+
+  <hr class="sect">
+
+  <h2 class="numeral">VI</h2>
+
+  <p>The verse I learned has a second half, and it took me a long time to notice that the second half is where the people are.</p>
+
+  <blockquote class="verse">The people who know their God shall be strong and do exploits. And they that understand among the people shall instruct many: yet they shall fall by the sword, and by flame, by captivity, and by spoil, many days.</blockquote>
+
+  <p>The exploit is the instructing. That is what the wise do in chapter 11 &mdash; not conquest, not survival, not prediction. They teach. And then they fall.</p>
+
+  <p>There is no <em>but</em> in the Hebrew strong enough to rescue them. The falling is not the failure of the knowing; it is what the knowing costs, and the text says why &mdash; <em>to refine them, and to purify, and to make them white, until the time of the end.</em> The same words that come back in chapter 12 to describe the ones who understand.</p>
+
+  <p>Hebrews read this and said it in Greek. Through faith they conquered kingdoms, stopped the mouths of lions, quenched the power of fire. Daniel is in that sentence and so are his three friends, and neither of them is named, because the writer is not building a hall of fame. And then the sentence turns. Others were tortured, refusing to accept release. Others were mocked and flogged and chained. They were stoned, they were sawn in two, they were killed with the sword.</p>
+
+  <p>One list. One faith. The writer does not rank them.</p>
+
+  <p>That is the thing I could not have known at twenty-four, and would not have wanted. I heard <em>do exploits</em> and pictured the den &mdash; the lions with their mouths shut, the king at the pit&rsquo;s edge in the morning, the man walking out. It is a true picture. It&rsquo;s only half the story, but it&rsquo;s the half that gets told.</p>
+
+  <p>The people who know their God are strong and they act, and some of them are delivered and some of them are not, and the book does not tell you in advance which you will be. What it tells you is that the shining comes after.</p>
+
+  <p>I have known men who ran the race. Some of them are dead now. Some are still going, older than I am, still teaching whoever will sit down with them. Most of them never did anything that would look like an exploit from outside. They stayed. They kept saying the same true things to people who were not always listening, for many days, which is the phrase Daniel uses. When I read that a man who set his heart to understand was told he was greatly beloved, I do not think about chronology. I think about them.</p>
+
+  <div class="notes">
+    <p><sup class="fn">1</sup> Daniel 11:32, KJV. Scripture elsewhere in this article is quoted from the ESV unless the older wording is given.</p>
+    <p><sup class="fn">2</sup> 1 Thessalonians 4:13&ndash;17 and 1 Corinthians 15:20&ndash;23, 51&ndash;54. Neither passage cites Daniel, but both assume the two-outcome resurrection of Daniel 12:2 as settled ground.</p>
+  </div>
+
+  <div class="crosslink">
+    The personal account behind this article &mdash; what a certainty about these chapters cost between Christians &mdash; is in the reflection <a href="/old/reflections/those-who-know-their-god.html">Those Who Know Their God</a>.
+  </div>
+
+  <div class="ai-note">
+    <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+    <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+    <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+  </div>
+
+  <div class="pdf-download">
+    <a href="/old/articles/pdf/reading-daniel-without-arithmetic.pdf" target="_blank" rel="noopener">Download as PDF</a>
+  </div>
+
+  <div class="tail"></div>
+</div>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nobody Left to Say No &middot; Hesed Words</title>
+<meta name="description" content="Nebuchadnezzar on the roof of his palace, Howard Hughes in a sealed hotel room, Naaman in the Jordan, and a preacher buried in a pine box built by prisoners. An article on pride as deafness.">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parchment:#e8dfc8;
+  --parchment-page:#f3ecda;
+  --gold:#c9a84c;
+  --gold-deep:#A67C2E;
+  --gold-soft:#D9C49A;
+  --muted:#6B5C45;
+  --rule:#C8B58F;
+  --ink:#2A2218;
+  --ink-soft:#4A3E2C;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--parchment);
+  color:var(--ink);
+  font-family:'Cormorant Garamond','Garamond',Georgia,serif;
+  font-size:20px;
+  line-height:1.66;
+}
+
+/* ── Site nav ── */
+nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+nav.hw-nav a:hover{opacity:1;color:#fff;}
+nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+/* ── Footer ── */
+footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+/* ── Page ── */
+.page{
+  max-width:720px;
+  margin:0 auto;
+  background:var(--parchment-page);
+  padding:64px 56px 48px;
+  border-left:1px solid var(--rule);
+  border-right:1px solid var(--rule);
+}
+
+/* ── Title block ── */
+.eyebrow{
+  font-family:'Cinzel',serif;
+  font-size:11px;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  text-align:center;
+  margin-bottom:26px;
+}
+h1{
+  font-family:'Cinzel',serif;
+  font-weight:500;
+  font-size:40px;
+  line-height:1.18;
+  letter-spacing:.03em;
+  text-align:center;
+  margin:0 0 14px;
+  color:var(--ink);
+}
+.subtitle{
+  font-style:italic;
+  font-size:21px;
+  color:var(--ink-soft);
+  text-align:center;
+  margin:0 auto 22px;
+  max-width:34em;
+}
+.dots{
+  text-align:center;
+  color:var(--gold);
+  letter-spacing:.9em;
+  font-size:13px;
+  margin:0 0 20px;
+  padding-left:.9em;
+}
+.byline{
+  font-family:'Cinzel',serif;
+  font-size:10.5px;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--muted);
+  text-align:center;
+  margin-bottom:44px;
+}
+
+/* ── Prologue ── */
+.prologue{
+  font-style:italic;
+  color:var(--ink-soft);
+  border-top:1px solid var(--gold-soft);
+  border-bottom:1px solid var(--gold-soft);
+  padding:26px 0 24px;
+  margin:0 0 46px;
+}
+.prologue p{margin:0 0 .8em;}
+.prologue p:last-child{margin-bottom:0;}
+
+/* ── Sections ── */
+h2{
+  font-family:'Cinzel',serif;
+  font-weight:500;
+  font-size:24px;
+  letter-spacing:.055em;
+  color:var(--ink);
+  margin:56px 0 6px;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--gold-soft);
+}
+p{margin:0 0 1.15em;}
+em{font-style:italic;}
+
+p.lead::first-letter{
+  font-family:'Cinzel',serif;
+  font-size:3.4em;
+  line-height:.82;
+  float:left;
+  color:var(--gold-deep);
+  padding:.06em .12em 0 0;
+}
+
+/* ── Scripture ── */
+blockquote.scripture{
+  margin:1.7em 0;
+  padding:.2em 0 .2em 1.4em;
+  border-left:2px solid var(--gold);
+  font-style:italic;
+  color:var(--ink-soft);
+  font-size:20.5px;
+}
+blockquote.scripture p{margin:0 0 .5em;}
+blockquote.scripture .ref{
+  display:block;
+  font-style:normal;
+  font-family:'Cinzel',serif;
+  font-size:10px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-top:.6em;
+}
+
+/* ── Pull line ── */
+.pull{
+  margin:2em 0;
+  padding:.9em 0;
+  border-top:1px solid var(--gold-soft);
+  border-bottom:1px solid var(--gold-soft);
+  text-align:center;
+  font-style:italic;
+  font-size:23px;
+  color:var(--ink);
+}
+
+/* ── Personal passage ── */
+.personal{
+  background:#faf5e8;
+  border:1px solid var(--gold-soft);
+  border-radius:2px;
+  padding:30px 32px 22px;
+  margin:2.4em 0;
+}
+.personal p{margin:0 0 1.05em;}
+.personal p:last-child{margin-bottom:0;}
+
+/* ── Divider ── */
+.divider{
+  text-align:center;
+  color:var(--gold);
+  letter-spacing:.8em;
+  font-size:12px;
+  margin:2.6em 0;
+  padding-left:.8em;
+}
+
+/* ── Closing questions ── */
+.questions{
+  border-left:3px solid var(--gold-soft);
+  padding:.4em 0 .4em 1.4em;
+  margin:2.2em 0 1em;
+}
+.questions p{
+  font-style:italic;
+  font-size:22px;
+  color:var(--ink);
+  margin:0 0 .7em;
+}
+.questions p:last-child{margin-bottom:0;}
+
+/* ── Companion link ── */
+.companion{
+  margin:3.2em 0 0;
+  padding-top:1.6em;
+  border-top:1px solid var(--gold-soft);
+  font-style:italic;
+  color:var(--ink-soft);
+}
+.companion a{color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold-soft);}
+.companion a:hover{border-bottom-color:var(--gold-deep);}
+
+/* ── AI note ── */
+.ai-note{
+  margin:3.4em 0 0;
+  padding-top:1.8em;
+  border-top:1px solid var(--rule);
+  font-style:italic;
+  font-size:16.5px;
+  color:var(--muted);
+  line-height:1.6;
+}
+.ai-note p{margin:0 0 .8em;}
+.ai-note p:last-child{margin-bottom:0;}
+
+.tagline{
+  text-align:center;
+  font-family:'Cinzel',serif;
+  font-size:10px;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  margin:3em 0 0;
+}
+
+/* ── PDF download ── */
+.pdf-download{
+  text-align:center;
+  margin-top:44px;
+}
+.pdf-download a{
+  font-family:'Cinzel',serif;
+  font-size:10px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--muted);
+  text-decoration:none;
+  border-bottom:1px solid var(--gold-soft);
+  padding-bottom:2px;
+  transition:color .2s,border-color .2s;
+}
+.pdf-download a:hover{color:var(--gold-deep);border-bottom-color:var(--gold-deep);}
+
+/* ── Mobile ── */
+@media (max-width:700px){
+  body{font-size:19px;}
+  .page{padding:40px 22px 32px;border-left:none;border-right:none;}
+  h1{font-size:30px;}
+  .subtitle{font-size:19px;}
+  h2{font-size:21px;margin-top:44px;}
+  .personal{padding:22px 20px 16px;}
+  .questions p{font-size:20px;}
+  .pull{font-size:20px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html">Reflections</a>
+  <a href="/old/articles.html" class="current">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+<div class="page">
+
+  <div class="eyebrow">An Article</div>
+  <h1>Nobody Left to Say No</h1>
+  <p class="subtitle">A king on a roof, a billionaire in a sealed room, a general in a muddy river, and a preacher in a pine box</p>
+  <div class="dots">&middot;&nbsp;&middot;&nbsp;&middot;</div>
+  <div class="byline">Norm Reed</div>
+
+  <div class="prologue">
+    <p>Pride is the sin we are all confident we can recognise, and it is the only one that returns a flattering verdict every time we test ourselves for it. This article does not ask whether you are proud. It asks a smaller question, and a harder one to avoid: is there anybody left who can tell you the truth about yourself, and would you listen if they did?</p>
+  </div>
+
+  <h2>The Roof of the Palace</h2>
+
+  <p class="lead">He was out for a walk.</p>
+
+  <p>That is the first thing to notice, and it is easy to miss. The most famous act of pride in the Old Testament does not happen in a throne room. There is no crown involved, no army, no court assembled to hear a proclamation. A man is walking on the flat roof of his own house in the cool of the evening, looking out over the city, and he says something.</p>
+
+  <p>The house happened to be the royal palace of Babylon. The city was the largest in the world. But the walk was just a walk.</p>
+
+  <p>Here is what he said:</p>
+
+  <blockquote class="scripture">
+    <p>Is not this great Babylon, which I have built by my mighty power as a royal residence and for the glory of my majesty?</p>
+    <span class="ref">Daniel 4:30</span>
+  </blockquote>
+
+  <p>Read it once and it sounds like the boast of a monster. Read it twice and something uncomfortable happens. It is a perfectly reasonable sentence. He had built Babylon. This is not a lie he is telling. The walls were his, the temples were his, the terraced gardens the Greeks would later count among the wonders of the world were his. Archaeologists digging in the mud of southern Iraq have pulled up bricks stamped with his name &mdash; thousands of them, baked with the claim pressed into the clay while it was still soft. He is not exaggerating on the roof that night. He is reciting his r&eacute;sum&eacute;, and every line of it is accurate.</p>
+
+  <p>So where exactly is the sin?</p>
+
+  <p>Not in the facts. In one word, sitting quietly in the middle of the sentence, doing all the damage. <em>I.</em> Which I have built, by my mighty power, for the glory of my majesty. Three times in a single breath the man puts himself at the centre of something he did not make out of nothing, using a body he did not give himself, in a lifespan he did not set the length of. The bricks were real. The name stamped in them was the wrong name.</p>
+
+  <p>And notice how small the sentence is. Twenty-odd words, spoken aloud, possibly to nobody. If Nebuchadnezzar had been asked the next morning what he had said on the roof, he would very likely not have remembered. It was not a decision. It was not a policy. It was the sort of thing a man says when he is pleased with himself at the end of a long day and there is nobody nearby to hear it.</p>
+
+  <p>This is the trouble with pride, and the reason it is so much harder to preach about than the sins that come with a noise. Pride does not announce itself. It surfaces in an ordinary sentence about ordinary work, spoken by a man who has genuinely done the work. It sounds, from the inside, exactly like satisfaction.</p>
+
+  <div class="pull">It sounds, from the inside, like gratitude with the object left out.</div>
+
+  <p>Every reader of this article has stood on some version of that roof. A garden that has finally come good after three seasons of failure. A business that survived when others closed. A child turning out well. A congregation that grew. The sentence forms almost by itself, and it is not a wicked sentence, and it is usually not even said aloud. <em>Look what I have built.</em></p>
+
+  <p>What happened next in Babylon was extraordinary, and we will come to it. A voice, a sentence of judgment, seven periods of time, a king out in the field eating grass like an ox. It is one of the strangest passages in Scripture and there is a temptation to file it under things that happen to ancient tyrants and not to us.</p>
+
+  <p>But the walk on the roof is not strange at all. That part is Tuesday evening.</p>
+
+  <h2>Twelve Months</h2>
+
+  <p class="lead">The dream came first.</p>
+
+  <p>Before the walk on the roof there was a night when the king could not sleep. He had seen a tree &mdash; enormous, visible to the ends of the earth, birds in its branches and animals in its shade &mdash; and then he had seen a messenger come down and order it cut to the stump. He woke frightened. He sent for the wise men of Babylon and they could make nothing of it, or would not say, and finally he sent for Daniel.</p>
+
+  <p>Daniel stood there a long time without speaking. The text says he was appalled and his thoughts alarmed him, and the king had to tell him not to be afraid of the answer. Then he gave it. You are the tree. The stump is you. And he added something he had not been asked for:</p>
+
+  <blockquote class="scripture">
+    <p>Break off your sins, and show mercy to the oppressed, and it may be that your days will be lengthened.</p>
+    <span class="ref">Daniel 4:27</span>
+  </blockquote>
+
+  <p>That is a warning with a door in it. Not a sentence passed but a sentence pending, with the terms of appeal spelled out. Stop. Turn. Treat the poor differently and this may not have to happen.</p>
+
+  <p>Then comes one of the most easily skipped phrases in the book of Daniel.</p>
+
+  <p><em>At the end of twelve months.</em></p>
+
+  <p>A year. Twelve months between the warning and the roof. Three hundred and sixty-odd days in which nothing happened at all, which is exactly the problem. The dream had been vivid and Daniel had been visibly shaken and the king had heard every word. And then the sun came up on an ordinary morning and Babylon still needed governing, and the next morning too, and by the fourth or fifth month the whole business had begun to feel like something that had happened to him rather than something that was still happening.</p>
+
+  <p>We do not know what he did with that year. Scripture is silent, which is itself worth sitting with. He may have made a start. He may have shown some mercy to some of the oppressed for a while. What is certain is that the man on the roof at the end of it is not a man who has been wrestling with the warning for a year. He is entirely at ease. He is out walking in the evening, pleased with the view. If the dream crossed his mind at all as he looked out over the city, it did not slow the sentence down.</p>
+
+  <p>We tend to read that year as the story marking time. It is closer to the truth to say the year <em>is</em> the mercy. God does not answer the boast on the roof. God answers a dream twelve months earlier, in a private room, in language the man's own advisor can translate for him, with a door left open. The judgment, when it comes, is not the first thing God does. It is the fourth or fifth.</p>
+
+  <p>Which raises a question the article cannot answer for you.</p>
+
+  <p>If you were given twelve months' notice, would you know it?</p>
+
+  <p>The notice is rarely a dream. It is more often a comment from someone who loves you that you dismissed the same evening. A sermon that seemed pointed and then did not. The particular tiredness that comes from holding a position you have started to enjoy too much. A relationship that has quietly cooled and you have quietly decided is the other person's doing. None of these arrives labelled. All of them are doors.</p>
+
+  <p>And a year is long enough to forget a thing entirely, which is presumably why the mercy takes that shape. God is not interested in a frightened man behaving himself for a fortnight. The delay is what makes any turning real, and it is also what makes forgetting possible. It cuts both ways because that is what freedom costs.</p>
+
+  <p>Twelve months is a long time.</p>
+
+  <p>It is also, from the roof, no time at all.</p>
+
+  <h2>The Sealed Room</h2>
+
+  <p class="lead">He arrived at night, on a stretcher.</p>
+
+  <p>Thanksgiving Day, 1966. A private train pulled into North Las Vegas and Howard Hughes was carried off it, put into a van, and driven to the Desert Inn on the Strip, where the top two floors had been reserved for him and his entourage of Mormon aides, lawyers, and his chief of security. He was sixty. He was one of the richest men alive. For the next four years he would not once leave the suite.</p>
+
+  <p>The details of those four years are documented, and they are worth setting down plainly, without commentary.</p>
+
+  <p>He lived in a bedroom of about two hundred and fifty square feet, mostly unclothed, negotiating deals with the curtains drawn and the windows and doors sealed with tape. Despite a fear of germs that governed almost every decision he made, he did not once allow the hotel's housekeepers into the room. He watched films through the night. He ate very little, and the same things: ice cream, chocolate, milk. For long stretches he did not speak at all, communicating instead through handwritten notes, some of them barely coherent. Later there were tissue boxes worn on the feet. Clothing burned if someone nearby had been unwell. He stopped bathing. He stopped cutting his hair and his nails.</p>
+
+  <p>And here the story reaches for a particular image. In the telling that spread after his death &mdash; in newspapers, in documentaries, in the way people repeat it to each other still &mdash; Howard Hughes died with fingernails grown to three inches, curling, unclipped for years.</p>
+
+  <p>Anyone who has read the fourth chapter of Daniel will stop at that sentence.</p>
+
+  <blockquote class="scripture">
+    <p>His hair grew as long as eagles' feathers, and his nails were like birds' claws.</p>
+    <span class="ref">Daniel 4:33</span>
+  </blockquote>
+
+  <p>Two and a half thousand years apart, and the same image. The richest man in the world and the most powerful man in the world, both reduced to something with claws.</p>
+
+  <p>As it happens, the Hughes version is not reliable. The medical examiner in Houston went out of his way to correct it &mdash; there were no three-inch fingernails, he said; what lay on the table was an old man who had been bedridden a long time. The exaggeration should be let go, and this article lets it go.</p>
+
+  <p>But it is worth asking why that particular exaggeration, and not some other. Nobody invented a detail about Hughes's teeth. When the public imagination went looking for a way to picture a rich man's ruin, it reached &mdash; without knowing it was reaching &mdash; for the oldest picture available. Claws. The Babylonian king out in the wet grass with his nails grown long.</p>
+
+  <div class="divider">&middot;&nbsp;&middot;&nbsp;&middot;</div>
+
+  <p>And in the middle of those four years, this. After several weeks the Desert Inn's management asked him to leave &mdash; the penthouse suites were wanted for high-rolling gamblers over New Year's Eve. Hughes bought the hotel. Six point two million in cash and seven million in loans. He then bought the Sands, the Castaways, the New Frontier, the Landmark, the Silver Slipper, and a casino in Reno &mdash; close to a hundred million dollars in all, something near seven hundred million in today's money. Within four years he was Nevada's largest private employer, largest casino owner, largest property owner and largest holder of mining claims.</p>
+
+  <p>Read that sequence again slowly, because it is the whole point of this article.</p>
+
+  <div class="pull">He was asked to check out of a hotel, so he bought the hotel.</div>
+
+  <p>There is a version of that story that gets told as an eccentricity, a rich man's joke, and it is often told that way. It is not a joke. It is a man arranging the world so that nobody will ever again be in a position to ask him to leave a room. And that is not a symptom of illness. That is the roof of the palace.</p>
+
+  <p>Because here is where the article must be careful, and where a lot of preaching about Howard Hughes goes wrong.</p>
+
+  <p>Hughes was ill. Genuinely, severely, and by any modern reckoning treatably. What he displayed was obsessive-compulsive disorder of a very serious kind. His years at the Desert Inn are cited in the clinical literature as one of the most vivid case histories of contamination fear on record &mdash; when he finally left, staff found that the drapes had never been opened and had rotted where they hung. He was also in chronic pain. He had walked away from a plane crash in Beverly Hills in 1946 that very nearly killed him, and he came out of hospital dependent on painkillers, and he stayed dependent for the rest of his life. By the end he was injecting codeine.</p>
+
+  <p>So it will not do to say that pride made him mad. It did not. Pride is not a mental illness and mental illness is not a sin, and any article that blurs those two things has stopped telling the truth in order to make a point land.</p>
+
+  <p>But something quieter and more disturbing is true, and it survives the medical history intact.</p>
+
+  <p>Every one of us who is not Howard Hughes lives inside a set of small corrections. A wife who says you have had enough. A doctor you cannot buy. A colleague who tells you the plan is poor. A landlord who says the room is needed on Tuesday. These are not dramatic interventions. They are the ordinary friction of being an ordinary person, and they are, most of the time, the mechanism by which a life is kept roughly on the rails.</p>
+
+  <p>Hughes had removed all of it. Access to him ran through a small circle of aides who owed him their living. Not one person in the building had the standing to say no and mean it. And so the illness, which might have been interrupted in almost any other life, simply ran. There was nothing in the room to stop it.</p>
+
+  <p>That is what money did, and what fame did. It did not make him proud. It took away everything that might have corrected him.</p>
+
+  <p>He was carried out of the Desert Inn on a stretcher, down the fire escape, and flown to the Bahamas. He never came back to Las Vegas. He died on 5 April 1976 aboard a chartered jet, en route from Acapulco to a hospital in Houston. His body was so altered that his own alias was used at the morgue and the FBI had to identify him from fingerprints. He was six foot four and weighed around ninety pounds. He was malnourished and covered in bedsores. The autopsy gave kidney failure as the cause of death. X-rays found broken-off hypodermic needles in the flesh of his arms.</p>
+
+  <p>It is sadder than a horror story. A man who built aeroplanes and broke speed records across the Atlantic and the world died alone in the air, in a small compartment, at seventy, and nobody in the aircraft could say for certain who he was.</p>
+
+  <p>He had spent his last decade buying rooms so that no one could ask him to leave.</p>
+
+  <p>In the end he got a room nobody could enter.</p>
+
+  <h2>An Inconvenient Friend</h2>
+
+  <p class="lead">Fame does not make people proud.</p>
+
+  <p>This needs saying clearly, because the opposite is assumed almost everywhere, and the assumption is what keeps the reader safe. If fame causes pride, then pride is a famous person's problem, and the article can be read at a comfortable distance by anyone who has never been photographed.</p>
+
+  <p>But watch what actually happens. The unfamous man who thinks too well of himself gets told. Not by a prophet &mdash; by his wife, over the washing up. By a foreman who has heard the theory before. By a teenage son with an unimpressed expression. By a neighbour who does not care what he does for a living. He is corrected six times a week in small ways he barely registers, and the correction is so constant and so low-level that he mistakes it for the weather.</p>
+
+  <p>Take that away and nothing new appears in the man. Something old simply stops being interrupted.</p>
+
+  <p>That is what happened on the ninth floor of the Desert Inn, and it is what happened on the roof in Babylon. Neither man became proud at altitude. Both men arrived at a height where the sentence could be finished.</p>
+
+  <p>You can see the same thing in the way pop stars are described by people who knew them before. They started believing their own press. Note the shape of that phrase &mdash; not <em>they became someone else</em>, but <em>they started believing what was already being said</em>. The press was flattering before they believed it. What changed was that nobody in the room was any longer willing to be the one who disagreed, because disagreeing had become expensive.</p>
+
+  <p>Nebuchadnezzar's palace roof was, in this sense, the most dangerous place in the ancient world. Not because the height was sinful. Because from up there the city looks like an achievement, and there is nobody standing beside you who remembers what it cost other people to build it.</p>
+
+  <p>Isaiah, writing about a king of Babylon, put words to what that sounds like from the inside:</p>
+
+  <blockquote class="scripture">
+    <p>You said in your heart, &ldquo;I will ascend to heaven; above the stars of God I will set my throne on high; I will sit on the mount of assembly in the far reaches of the north; I will ascend above the heights of the clouds; I will make myself like the Most High.&rdquo;</p>
+    <span class="ref">Isaiah 14:13&ndash;14</span>
+  </blockquote>
+
+  <p>Five times, <em>I will.</em> It is the roof sentence with nothing left over it. And notice where Isaiah locates it &mdash; <em>in your heart.</em> Not in a decree, not in a speech from a balcony. This is a man talking to himself, and what he says to himself when he is alone has five verbs in it and no other people at all.</p>
+
+  <p>The church has long heard behind those verses an older fall, a rebellion before there were any kings to rebel. That reading is very old and it may well be right. But the text in front of us is about a man in Babylon, and for the purposes of this article that is better, because a cosmic prehistory is not something a reader can be implicated in and a man in Babylon is.</p>
+
+  <p>Now put the two lives side by side, and find the place where they part.</p>
+
+  <p>Nebuchadnezzar had Daniel.</p>
+
+  <p>That is the whole difference, and it is worth dwelling on how unlikely it was. Daniel was a foreigner, taken from his own country as a boy in one of Nebuchadnezzar's own deportations. He owed the king nothing but had every reason to fear him. And when the interpretation of the dream was ugly, he said it anyway &mdash; and then went further than his brief and told the most powerful man on earth to break off his sins and show mercy to the oppressed.</p>
+
+  <p>Somebody in that palace was prepared to say no.</p>
+
+  <p>Hughes had a payroll. Devoted, discreet, and entirely dependent on him. Not one of them was a bad man; several by all accounts cared for him faithfully and well. But there was not one person in that building whose livelihood would survive telling him the truth about himself, and so the truth was not told, and the curtains stayed taped shut for four years while a very ill man bought hotels.</p>
+
+  <p>It is a strange thing to say about a king who burned cities, but Nebuchadnezzar was the better provided-for of the two men. He had an inconvenient friend.</p>
+
+  <p>Which leaves a question, and it is not a comfortable one to ask in middle age or in ministry or in any settled success.</p>
+
+  <p>Who says no to you?</p>
+
+  <p>Not who could, in theory. Who does, in practice, in the last twelve months. Someone whose position does not depend on your goodwill, who has told you something about yourself you did not want to hear, and who is still in the room.</p>
+
+  <p>If the name comes slowly, that is worth noticing. If no name comes at all, you may already be higher up than is safe.</p>
+
+  <h2>Seven Times in the Jordan</h2>
+
+  <p class="lead">It is worth taking the time, occasionally, to actually listen to your own prayers.</p>
+
+  <div class="personal">
+    <p>Not long after I came to faith I was lying on my bed praying, and I became aware of the Lord prompting me. <em>What did you say?</em></p>
+    <p>It took me aback a little. I said, &ldquo;I said my prayers.&rdquo;</p>
+    <p>And the voice came again. <em>No. What did</em> you <em>say?</em></p>
+    <p>That stopped me. I went back over the words I had just used and looked at what I had actually been asking God to do. It was a defining moment, and not a comfortable one. My praying was about me. I knew perfectly well what mattered to me and I had made it clear, at length. What I had not done &mdash; what had not occurred to me to do &mdash; was ask what God might want to do in me. I was blind and deaf to it. I had been talking the whole time.</p>
+    <p>The prayer was not wicked. That is what made it worth noticing. It was a decent, sincere, reasonable prayer, and it had God positioned in it as the one who would attend to my list.</p>
+  </div>
+
+  <p>There is a man in the second book of Kings who arrives with a list.</p>
+
+  <p>Naaman commanded the army of Syria. The text calls him a great man, and he was &mdash; a soldier with victories behind him and the ear of his king. He also had leprosy. So when he heard there was a prophet in Israel who could deal with it, he went, and he went properly: letters from his king, horses, chariots, silver and gold and changes of clothing loaded up behind him. A great man travels in a manner appropriate to the request.</p>
+
+  <p>Elisha did not come out of the house.</p>
+
+  <p>He sent a servant to the door with a message. Go and wash in the Jordan seven times.</p>
+
+  <p>And Naaman was furious.</p>
+
+  <p>It is worth being clear about what made him angry, because it was not the difficulty. It was the ease. He says it himself, and the complaint is almost funny in its transparency:</p>
+
+  <blockquote class="scripture">
+    <p>I thought that he would surely come out to me and stand and call upon the name of the Lord his God, and wave his hand over the place and cure the leper.</p>
+    <span class="ref">2 Kings 5:11</span>
+  </blockquote>
+
+  <p>He had the scene composed before he set out. The prophet emerging from the house. The raised hand. The name invoked over the affected place. Something commensurate with the man making the journey.</p>
+
+  <p>That is the same thing I found on my bed. Not a bad request &mdash; a scripted one. He had decided in advance what God's help would look like, and he had got the shape of it from his own standing rather than from anything God had said.</p>
+
+  <p>Instead: a servant at the door, and a muddy provincial river.</p>
+
+  <blockquote class="scripture">
+    <p>Are not Abana and Pharpar, the rivers of Damascus, better than all the waters of Israel? Could I not wash in them and be clean?</p>
+    <span class="ref">2 Kings 5:12</span>
+  </blockquote>
+
+  <p>The rivers at home are better than this. He turns to go.</p>
+
+  <p>Notice that pride here is not stopping him from <em>doing</em> anything. It is stopping him from <em>receiving</em> something. He came to be healed and he is being healed, and the healing is arriving in a form so unimpressive that he would rather keep the leprosy than take it that way.</p>
+
+  <p>And notice who talks him round. Not the prophet. His servants &mdash; the men who saddled the horses. They come alongside him and they say, in effect: <em>if he had asked you for something hard, you would have done it. He has asked you for something small.</em></p>
+
+  <p>So the general gets down into the Jordan.</p>
+
+  <p>Once. Twice. Three times. Nobody is watching who matters, and it is muddy, and there is no change. Four. Five. The whole thing is undignified in a very particular way &mdash; not painful, not costly, just faintly ridiculous, a decorated soldier dipping himself in a brown river because an errand-boy told him to. Six. And then the seventh.</p>
+
+  <blockquote class="scripture">
+    <p>And his flesh was restored like the flesh of a little child.</p>
+    <span class="ref">2 Kings 5:14</span>
+  </blockquote>
+
+  <p>Seven times, because six would not have been enough, and because the number is not the point. The point is that the cure for the pride of a great man was a small repeated indignity with no audience.</p>
+
+  <p>That is nearly always the shape of it. We expect to be humbled by catastrophe, and sometimes people are. Far more often what God puts in front of us is something modest we consider beneath us. Apologising first, to someone who was more in the wrong. Being taught by someone younger. Neither is heroic. Both can be refused with a perfectly good argument, and the argument will be about standards rather than about pride &mdash; the rivers of Damascus really are better rivers.</p>
+
+  <p>And the servants are the ones who get him there.</p>
+
+  <p>That detail is easy to skip and it should not be. The man who dips himself seven times in the Jordan does so because the people who worked for him were willing to speak, and because he was &mdash; just &mdash; willing to hear it. Somewhere between the chariot and the water, a great man let his stable hands change his mind.</p>
+
+  <p>Nebuchadnezzar had Daniel. Naaman had his servants.</p>
+
+  <h2>Grass and Dew</h2>
+
+  <p class="lead">The sentence fell while he was still speaking.</p>
+
+  <p>That is the detail. Not the next day, not after an investigation &mdash; <em>while the words were yet in the king's mouth.</em> He was mid-boast on the roof and the voice came, and what it announced was not death but something stranger. The kingdom has departed from you. You will be driven from among men and your dwelling will be with the beasts of the field. You will eat grass like an ox. Seven periods of time will pass over you.</p>
+
+  <p>And then the text does something almost unbearable. It reports it happening, in a single verse, without emotion.</p>
+
+  <blockquote class="scripture">
+    <p>He was driven from among men and ate grass like an ox, and his body was wet with the dew of heaven till his hair grew as long as eagles' feathers, and his nails were like birds' claws.</p>
+    <span class="ref">Daniel 4:33</span>
+  </blockquote>
+
+  <p>Scripture does not tell us what those years were like from the inside, and it is a mercy that it doesn't. What it tells us is where he was: outside, in the weather. The man who had built a roof to walk on now had the dew of heaven landing on him all night with nothing between. He had said <em>my mighty power</em> and <em>my majesty</em>, and he was put out in a field until the words wore off.</p>
+
+  <p>Then this.</p>
+
+  <blockquote class="scripture">
+    <p>At the end of the days I, Nebuchadnezzar, lifted my eyes to heaven, and my reason returned to me.</p>
+    <span class="ref">Daniel 4:34</span>
+  </blockquote>
+
+  <p>Read the order of that sentence carefully, because everything the article has been working toward is in it.</p>
+
+  <p>He did not come to his senses and then look up. He looked up, and his senses came back. The lifting of the eyes is not the result of the recovery. It is the beginning of it.</p>
+
+  <p>And notice the direction. A proud man who has been humbled might reasonably be expected to look <em>inward</em> &mdash; to examine himself, to take stock, to work out where he went wrong. That is what we would counsel. It is very nearly what the modern world means by growth. Nebuchadnezzar does not do it. He looks up, away from himself entirely, at the God he had left out of his sentence on the roof, and it is in looking away from himself that he becomes sane.</p>
+
+  <p>What follows is the longest doxology any pagan king speaks in Scripture, and he means every word of it. His dominion is an everlasting dominion. He does as he pleases among the host of heaven and the inhabitants of the earth. None can stay his hand or say to him, <em>what have you done?</em></p>
+
+  <p>That last line is worth holding beside the boast on the roof. Twelve months earlier he had been the man nobody could question. Now he has found the One who actually cannot be questioned, and he is relieved.</p>
+
+  <div class="personal">
+    <p>I have had the privilege of working alongside some strong and gifted men. Genuinely gifted &mdash; leaders who accomplished significant things, and I am thankful to God for every one of them. I learned from all of them. From one or two, admittedly, I learned mainly what not to do. From others I learned by watching how they lived, and wanting it.</p>
+    <p>One of them was very strong indeed. In the early days he reminded me of the master in the parable, the one the frightened servant accuses of reaping where he had not sown and gathering where he had scattered no seed &mdash; and like that servant, I thought I had good reason to be afraid. He would hold me to account on the smallest thing.</p>
+    <p>I had him wrong.</p>
+    <p>Because the same man was quick to apologise. When he had been out of line, or had asked more than was reasonable, he said so &mdash; to me, without being pressed, and without the apology being a performance of humility.</p>
+    <p>That is what I have never forgotten, and it took me years to see what I was looking at. Humility, in him, did not mean the absence of strength. He did not become smaller or softer or less demanding. He wore his strength in a way that left other people intact. The accountability and the apology came from the same man and, I came to understand, from the same place &mdash; a depth of care that made both of them possible. He could ask a great deal of me because he was not asking it for himself.</p>
+    <p>I had assumed strength and humility were on a dial, and that you got more of one by having less of the other. He was the evidence that they are not related that way at all.</p>
+  </div>
+
+  <p>Which is exactly what happens to Nebuchadnezzar, and it is the part of the chapter almost nobody notices.</p>
+
+  <p>He does not end up diminished.</p>
+
+  <blockquote class="scripture">
+    <p>My majesty and splendour returned to me. My counsellors and my lords sought me, and I was established in my kingdom, and still more greatness was added to me.</p>
+    <span class="ref">Daniel 4:36</span>
+  </blockquote>
+
+  <p>God gives him the palace back.</p>
+
+  <p>The last thing we know about Nebuchadnezzar is that he was a great king again, in the same city, with the same walls, the same temples, the same bricks with his name stamped into them. Nothing external had changed. He could have walked out onto that roof any evening he liked and looked at all of it.</p>
+
+  <p>And presumably he did.</p>
+
+  <h2>A Pine Box from Angola</h2>
+
+  <p class="lead">Billy Graham planned his own funeral.</p>
+
+  <p>He began about ten years before he died, working on it with his family and a few close friends &mdash; which is a strange thing to spend a decade on unless you have understood something about what funerals are for. The family came to regard it as his last crusade.</p>
+
+  <p>He had reason to expect a large one. He had preached in person to more than two hundred million people. Presidents had sought his counsel for sixty years, and when the day came, a sitting president and vice-president were in the congregation, along with two former presidents earlier in the week, and media credentials issued to nearly five hundred outlets.</p>
+
+  <p>Here is what he did with all that.</p>
+
+  <p>The service was held under a tent in a car park, to look like the tent revivals he had started out in almost seventy years earlier. The Scripture read was Ephesians 2 &mdash; <em>by grace you have been saved, through faith, and this is not from yourselves, it is the gift of God, not by works, so that no one can boast.</em> Speaker after speaker turned the attention off him and onto Christ. One of them quoted Graham's own advice to preachers: people love to talk about themselves; don't talk about yourself, talk about Jesus, lift Him up.</p>
+
+  <p>The grave marker reads: <em>Preacher of the Gospel of the Lord Jesus Christ.</em> No dates of office. No list. A job description, and a common one.</p>
+
+  <p>And the casket was pine. Plywood, made by inmates at the Louisiana State Penitentiary at Angola.</p>
+
+  <p>Stop there for a moment.</p>
+
+  <p>The man who had the ear of every American president of his lifetime was buried in a box built by prisoners. Not as a stunt &mdash; Angola's inmate-built caskets are real work, made by men serving long sentences, most of whom will die inside. Somebody in that workshop planed the lid that went over Billy Graham's face. He is not likely to have been thanked publicly. He is not likely to be free.</p>
+
+  <p>That is a very long way from the roof of the palace.</p>
+
+  <p>And it is the answer to the question this article has been circling. What does the cure for pride actually look like, once it has taken? Not self-deprecation. Graham did not pretend to be small; he was, by any measure, one of the most significant religious figures of the twentieth century, and the funeral did not pretend otherwise. What he did was arrange things so that the attention passed straight through him and landed somewhere else. He used a decade of planning to make himself transparent.</p>
+
+  <p>Which brings us back to something easily skipped in Daniel 4.</p>
+
+  <p>When Daniel told the king what the dream meant and then went further than he had been asked, the remedy he prescribed was not private. It was not <em>examine yourself</em>. It was: <em>break off your sins, and show mercy to the oppressed.</em></p>
+
+  <div class="pull">The cure for pride, in the mouth of the prophet, was justice toward people with no power.</div>
+
+  <p>There is something fitting, then, in a pine box from a penitentiary. The most famous preacher of the age went into the ground in a container made by men the world has finished with &mdash; the oppressed, in Daniel's word, the ones a proud man never has to think about.</p>
+
+  <p>Three men, then, and a fourth.</p>
+
+  <p>A king who was told the truth by a foreign captive, and lost his mind, and got it back by looking up.</p>
+
+  <p>A general who was told the truth by his stable hands, and went down into a muddy river seven times, and came up with the skin of a child.</p>
+
+  <p>A billionaire who arranged his life so that nobody could tell him anything, and died at ninety pounds in a small compartment thirty thousand feet over New Mexico, unrecognisable to the men in the cabin with him.</p>
+
+  <p>And a preacher who spent ten years making sure that the last thing anybody heard at his funeral was not his name.</p>
+
+  <p>The difference between them was never talent, or wealth, or achievement, or even the sin itself. All four had that. The difference was whether there was anyone left who could say no, and whether they were willing to hear it.</p>
+
+  <p>So the question the article ends on is not <em>am I proud.</em> Everyone is. It is smaller and much harder to avoid.</p>
+
+  <div class="questions">
+    <p>Who is telling you the truth about yourself at the moment?</p>
+    <p>And when did you last go down into the river because they asked you to?</p>
+  </div>
+
+  <p class="companion">A shorter, more personal companion piece to this article &mdash; written the morning it began &mdash; is <a href="/old/reflections/pride.html">Pride</a>.</p>
+
+  <div class="ai-note">
+    <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+    <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+    <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+  </div>
+
+  <div class="tagline">Hesed Words &middot; Written for the road</div>
+
+  <div class="pdf-download">
+    <a href="/old/articles/pdf/nobody-left-to-say-no.pdf" target="_blank" rel="noopener">Download as PDF</a>
+  </div>
+
+</div>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>

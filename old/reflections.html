@@ -1,0 +1,493 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reflections — Hesed Words</title>
+<meta name="description" content="Devotional reflections on Scripture, justice, and the love that holds. By Norm Reed.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --parchment:#f4ecd8;
+    --parchment-deep:#ece1c7;
+    --ink:#1f1b16;
+    --ink-soft:#3a332a;
+    --gold:#b08d3f;
+    --gold-deep:#8a6d2b;
+    --rule:#d8c9a3;
+    --maxw:52rem;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:radial-gradient(ellipse at top,#f7f0de 0%,var(--parchment) 55%,var(--parchment-deep) 100%) fixed;
+    color:var(--ink);
+    font-family:"Cormorant Garamond",Georgia,serif;
+    font-size:1.2rem;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ── Nav ── */
+  nav.hw-nav{
+    background:var(--ink);
+    color:var(--parchment);
+    font-family:"Cinzel",serif;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    display:flex;
+    justify-content:center;
+    gap:2.2rem;
+    padding:1.05rem 1rem;
+    flex-wrap:wrap;
+  }
+  nav.hw-nav a{color:var(--parchment);text-decoration:none;opacity:.82;transition:opacity .2s;}
+  nav.hw-nav a:hover{opacity:1;color:#fff;}
+  nav.hw-nav a.current{opacity:1;border-bottom:1px solid var(--gold);padding-bottom:.15rem;}
+
+  /* ── Section header ── */
+  .section-header{
+    text-align:center;
+    padding:4rem 1.5rem 2.8rem;
+    max-width:var(--maxw);
+    margin:0 auto;
+  }
+  .haga{
+    font-family:"Cinzel",serif;
+    font-size:3.4rem;
+    line-height:1.1;
+    color:var(--gold);
+    margin:0 0 .6rem;
+    letter-spacing:.04em;
+  }
+  .section-eyebrow{
+    font-family:"Cinzel",serif;
+    font-size:.72rem;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin:0 0 1.4rem;
+  }
+  .section-desc{
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:1.15rem;
+    max-width:36rem;
+    margin:0 auto;
+  }
+
+  /* ── Divider ── */
+  .rule-line{
+    border:0;
+    border-top:1px solid var(--rule);
+    max-width:var(--maxw);
+    margin:0 auto 2.4rem;
+  }
+
+  /* ── Filters ── */
+  .filters{
+    max-width:var(--maxw);
+    margin:0 auto 2.8rem;
+    padding:0 1.5rem;
+    display:flex;
+    gap:1.2rem;
+    flex-wrap:wrap;
+    align-items:center;
+  }
+  .filters label{
+    font-family:"Cinzel",serif;
+    font-size:.68rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+  }
+  .filters select{
+    font-family:"Cormorant Garamond",serif;
+    font-size:1rem;
+    background:var(--parchment-deep);
+    border:1px solid var(--rule);
+    color:var(--ink);
+    padding:.3rem .7rem;
+    border-radius:2px;
+    cursor:pointer;
+    appearance:none;
+    -webkit-appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238a6d2b'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right .6rem center;
+    padding-right:1.8rem;
+  }
+  .filter-reset{
+    font-family:"Cinzel",serif;
+    font-size:.65rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    background:none;
+    border:1px solid var(--rule);
+    padding:.3rem .8rem;
+    cursor:pointer;
+    border-radius:2px;
+    transition:border-color .2s,color .2s;
+  }
+  .filter-reset:hover{border-color:var(--gold);color:var(--gold);}
+  .filter-break{width:100%;height:0;}
+  .filters select:disabled{opacity:.45;cursor:default;}
+  .fg{display:inline-flex;align-items:center;gap:.55rem;}
+
+  /* ── Article listing ── */
+  .listing{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 1.5rem 5rem;
+    display:flex;
+    flex-direction:column;
+    gap:0;
+  }
+  .article-card{
+    border-top:1px solid var(--rule);
+    padding:2rem 0 2rem;
+    display:grid;
+    grid-template-columns:7rem 1fr;
+    gap:0 2rem;
+  }
+  .article-card:last-child{border-bottom:1px solid var(--rule);}
+  .card-date{
+    font-family:"Cinzel",serif;
+    font-size:.68rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    padding-top:.35rem;
+    line-height:1.5;
+  }
+  .card-body{}
+  .card-title{
+    font-family:"Cinzel",serif;
+    font-weight:500;
+    font-size:1.3rem;
+    line-height:1.25;
+    margin:0 0 .6rem;
+  }
+  .card-title a{
+    color:var(--ink);
+    text-decoration:none;
+    transition:color .2s;
+  }
+  .card-title a:hover{color:var(--gold-deep);}
+  .card-summary{
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0 0 .8rem;
+    font-size:1.05rem;
+  }
+  .card-meta{
+    font-family:"Cinzel",serif;
+    font-size:.64rem;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:flex;
+    gap:1.2rem;
+    flex-wrap:wrap;
+  }
+  .card-meta span::before{
+    content:"✦ ";
+    opacity:.6;
+  }
+
+  .card-poster-link{
+    display:inline-block;
+    margin-top:.7rem;
+    font-family:"Cinzel",serif;
+    font-size:.65rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    text-decoration:none;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:2px;
+    transition:color .2s,border-color .2s;
+  }
+  .card-poster-link:hover{color:var(--gold);border-bottom-color:var(--gold);}
+
+  /* ── Empty state ── */
+  .empty{
+    text-align:center;
+    font-style:italic;
+    color:var(--ink-soft);
+    padding:3rem 0;
+    display:none;
+  }
+
+  footer.hw-foot{
+    text-align:center;
+    font-family:"Cinzel",serif;
+    font-size:.7rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    padding:2.5rem 1rem 3.5rem;
+    opacity:.8;
+  }
+
+  @media(max-width:600px){
+    .haga{font-size:2.4rem;}
+    .article-card{grid-template-columns:1fr;gap:.4rem;}
+    .card-date{padding-top:0;}
+    .filters{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html" class="current">Reflections</a>
+  <a href="/old/articles.html">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+<header class="section-header">
+  <p class="haga">הָגָה</p>
+  <p class="section-eyebrow">Devotional Reflections</p>
+  <p class="section-desc">Threading Scripture, word by word, toward the love that holds.</p>
+</header>
+
+<hr class="rule-line">
+
+<div class="filters">
+  <span class="fg"><label for="filter-book">Book</label>
+    <select id="filter-book"><option value="">All</option></select></span>
+
+  <span class="fg"><label for="filter-chapter">Chapter</label>
+    <select id="filter-chapter" disabled><option value="">All</option></select></span>
+
+  <span class="fg"><label for="filter-verse">Verse</label>
+    <select id="filter-verse" disabled><option value="">All</option></select></span>
+
+  <span class="fg"><label for="filter-theme">Theme</label>
+    <select id="filter-theme"><option value="">All</option></select></span>
+
+  <div class="filter-break"></div>
+
+  <span class="fg"><label for="filter-year">Year</label>
+    <select id="filter-year"><option value="">All</option></select></span>
+
+  <span class="fg"><label for="filter-month">Month</label>
+    <select id="filter-month">
+      <option value="">All</option>
+      <option value="1">January</option>
+      <option value="2">February</option>
+      <option value="3">March</option>
+      <option value="4">April</option>
+      <option value="5">May</option>
+      <option value="6">June</option>
+      <option value="7">July</option>
+      <option value="8">August</option>
+      <option value="9">September</option>
+      <option value="10">October</option>
+      <option value="11">November</option>
+      <option value="12">December</option>
+    </select></span>
+
+  <button class="filter-reset" onclick="resetFilters()">Clear</button>
+</div>
+
+<div class="listing" id="listing"></div>
+<p class="empty" id="empty">No reflections match those filters.</p>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+<script src="/old/js/reflections-data.js"></script>
+<script>
+/* ── Scripture reference parsing ── */
+/* "Psalm 41" -> {book:"Psalm", chapter:"41", verse:""}
+   "Ecclesiastes 1:15" -> {book:"Ecclesiastes", chapter:"1", verse:"15"}
+   "1 Corinthians 11" -> {book:"1 Corinthians", chapter:"11", verse:""}
+   "Jeremiah" -> {book:"Jeremiah", chapter:"", verse:""} */
+function parseRef(s){
+  const m = String(s).trim().match(/^(.+?)\s+(\d+)(?::(.+))?$/);
+  if(m){ return { book:m[1].trim(), chapter:m[2], verse:(m[3]||"").trim() }; }
+  return { book:String(s).trim(), chapter:"", verse:"" };
+}
+
+/* index: book -> { chapter -> Set(verses) } */
+const SCRIPTURE_INDEX = {};
+ARTICLES.forEach(a => a.scripture.forEach(s => {
+  const r = parseRef(s);
+  const book = (SCRIPTURE_INDEX[r.book] = SCRIPTURE_INDEX[r.book] || {});
+  if(r.chapter){
+    const ch = (book[r.chapter] = book[r.chapter] || new Set());
+    if(r.verse) ch.add(r.verse);
+  }
+}));
+
+function byNum(a,b){ return parseInt(a,10) - parseInt(b,10); }
+
+/* Canonical (biblical) book order, Old Testament then New Testament.
+   Book names match how they appear in this site's `scripture` arrays. */
+const BOOK_ORDER = [
+  "Genesis","Exodus","Leviticus","Numbers","Deuteronomy",
+  "Joshua","Judges","Ruth","1 Samuel","2 Samuel","1 Kings","2 Kings",
+  "1 Chronicles","2 Chronicles","Ezra","Nehemiah","Esther",
+  "Job","Psalm","Proverbs","Ecclesiastes","Song of Songs",
+  "Isaiah","Jeremiah","Lamentations","Ezekiel","Daniel",
+  "Hosea","Joel","Amos","Obadiah","Jonah","Micah","Nahum",
+  "Habakkuk","Zephaniah","Haggai","Zechariah","Malachi",
+  "Matthew","Mark","Luke","John","Acts","Romans",
+  "1 Corinthians","2 Corinthians","Galatians","Ephesians",
+  "Philippians","Colossians","1 Thessalonians","2 Thessalonians",
+  "1 Timothy","2 Timothy","Titus","Philemon","Hebrews","James",
+  "1 Peter","2 Peter","1 John","2 John","3 John","Jude","Revelation"
+];
+function byBookOrder(a, b){
+  const ia = BOOK_ORDER.indexOf(a), ib = BOOK_ORDER.indexOf(b);
+  if(ia === -1 && ib === -1) return a.localeCompare(b); // both unknown: alphabetical
+  if(ia === -1) return 1;   // unknown books sort after known ones
+  if(ib === -1) return -1;
+  return ia - ib;
+}
+
+/* ── Build filter dropdowns ── */
+function buildFilters(){
+  const themeSet = new Set();
+  const yearSet  = new Set();
+  ARTICLES.forEach(a => {
+    a.themes.forEach(t => themeSet.add(t));
+    yearSet.add(a.date.substring(0, 4));
+  });
+  populate("filter-book",  Object.keys(SCRIPTURE_INDEX).sort(byBookOrder));
+  populate("filter-theme", [...themeSet].sort());
+  populate("filter-year",  [...yearSet].sort().reverse());
+}
+
+function populate(id, values){
+  const sel = document.getElementById(id);
+  values.forEach(v => {
+    const opt = document.createElement("option");
+    opt.value = v; opt.textContent = v;
+    sel.appendChild(opt);
+  });
+}
+
+/* reset a select back to just "All"; optionally disable it */
+function resetSelect(id, disabled){
+  const sel = document.getElementById(id);
+  sel.innerHTML = '<option value="">All</option>';
+  sel.value = "";
+  sel.disabled = !!disabled;
+}
+
+/* Book chosen → repopulate Chapter, but only if that book has chapters */
+function onBookChange(){
+  const book = document.getElementById("filter-book").value;
+  resetSelect("filter-chapter", true);
+  resetSelect("filter-verse", true);
+  const chapters = book && SCRIPTURE_INDEX[book] ? Object.keys(SCRIPTURE_INDEX[book]) : [];
+  if(chapters.length){
+    populate("filter-chapter", chapters.sort(byNum));
+    document.getElementById("filter-chapter").disabled = false;
+  }
+  render();
+}
+
+/* Chapter chosen → repopulate Verse, but only if that chapter has verses */
+function onChapterChange(){
+  const book = document.getElementById("filter-book").value;
+  const chapter = document.getElementById("filter-chapter").value;
+  resetSelect("filter-verse", true);
+  const verses = (book && chapter && SCRIPTURE_INDEX[book] && SCRIPTURE_INDEX[book][chapter])
+    ? [...SCRIPTURE_INDEX[book][chapter]] : [];
+  if(verses.length){
+    populate("filter-verse", verses.sort(byNum));
+    document.getElementById("filter-verse").disabled = false;
+  }
+  render();
+}
+
+/* ── Render listing ── */
+function render(){
+  const bookF        = document.getElementById("filter-book").value;
+  const chapterF     = document.getElementById("filter-chapter").value;
+  const verseF       = document.getElementById("filter-verse").value;
+  const themeFilter  = document.getElementById("filter-theme").value;
+  const yearFilter   = document.getElementById("filter-year").value;
+  const monthFilter  = document.getElementById("filter-month").value;
+
+  const filtered = ARTICLES
+    .filter(a => {
+      if(bookF && !a.scripture.some(s => {
+        const r = parseRef(s);
+        if(r.book !== bookF) return false;
+        if(chapterF && r.chapter !== chapterF) return false;
+        if(verseF && r.verse !== verseF) return false;
+        return true;
+      })) return false;
+      if(themeFilter && !a.themes.includes(themeFilter)) return false;
+      if(yearFilter  && a.date.substring(0,4) !== yearFilter) return false;
+      if(monthFilter && parseInt(a.date.substring(5,7)) !== parseInt(monthFilter)) return false;
+      return true;
+    })
+    .sort((a,b) => b.date.localeCompare(a.date));
+
+  const listing = document.getElementById("listing");
+  const empty   = document.getElementById("empty");
+  listing.innerHTML = "";
+
+  if(filtered.length === 0){
+    empty.style.display = "block";
+    return;
+  }
+  empty.style.display = "none";
+
+  filtered.forEach(a => {
+    const d    = new Date(a.date + "T12:00:00");
+    const dateStr = d.toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"});
+    const card = document.createElement("div");
+    card.className = "article-card";
+    card.innerHTML = `
+      <div class="card-date">${dateStr}</div>
+      <div class="card-body">
+        <h2 class="card-title"><a href="${a.url}">${a.title}</a></h2>
+        <p class="card-summary">${a.summary}</p>
+        <div class="card-meta">
+          <span>${a.scripture.join(" · ")}</span>
+        </div>
+        ${a.poster ? `<a class="card-poster-link" href="${a.poster}" target="_blank" rel="noopener">View Poster →</a>` : ""}
+      </div>`;
+    listing.appendChild(card);
+  });
+}
+
+function resetFilters(){
+  document.getElementById("filter-book").value  = "";
+  resetSelect("filter-chapter", true);
+  resetSelect("filter-verse", true);
+  document.getElementById("filter-theme").value = "";
+  document.getElementById("filter-year").value  = "";
+  document.getElementById("filter-month").value = "";
+  render();
+}
+
+document.getElementById("filter-book").addEventListener("change",    onBookChange);
+document.getElementById("filter-chapter").addEventListener("change", onChapterChange);
+document.getElementById("filter-verse").addEventListener("change",   render);
+document.getElementById("filter-theme").addEventListener("change",   render);
+document.getElementById("filter-year").addEventListener("change",    render);
+document.getElementById("filter-month").addEventListener("change",   render);
+
+buildFilters();
+render();
+</script>
+</body>
+</html>

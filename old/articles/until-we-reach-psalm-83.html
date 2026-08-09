@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning to Pray by Praying the Psalms — Until We Reach Psalm 83 — Hesedwords</title>
+  <meta name="description" content="We tell people that we learn to pray by praying the Psalms. Then we reach Psalm 83 — and the ground gives way.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --parchment:     #FAF5E8;
+      --parchment-mid: #F2EAD4;
+      --gold:          #A67C2E;
+      --gold-light:    #C8A84B;
+      --gold-border:   #C8B58F;
+      --gold-rule:     #D9C49A;
+      --ink:           #2A2218;
+      --ink-mid:       #4A3E2C;
+      --ink-light:     #6B5C45;
+      --cinzel:        'Cinzel', 'Palatino Linotype', Georgia, serif;
+      --cormorant:     'Cormorant Garamond', 'Garamond', Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: var(--cormorant);
+      font-size: 20px;
+      line-height: 1.78;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Site nav ── */
+    nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+    nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+    nav.hw-nav a:hover{opacity:1;color:#fff;}
+    nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+
+    /* ── Article wrapper ── */
+    .article-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 40px 90px;
+    }
+
+    /* ── Title block ── */
+    .article-eyebrow {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 22px;
+    }
+    .article-title {
+      font-family: var(--cinzel);
+      font-size: 38px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+    .article-subtitle {
+      font-family: var(--cormorant);
+      font-style: italic;
+      font-size: 21px;
+      color: var(--ink-mid);
+      text-align: center;
+      line-height: 1.45;
+      margin-bottom: 28px;
+    }
+    .article-ornament {
+      text-align: center;
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 0.7em;
+      margin: 0 0 20px;
+    }
+    .article-byline {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    /* ── Body ── */
+    .article-body p {
+      margin-bottom: 1.45em;
+      font-size: 20px;
+      line-height: 1.78;
+      color: var(--ink);
+    }
+
+    /* ── Drop cap ── */
+    .drop-cap::first-letter {
+      font-family: var(--cinzel);
+      font-size: 4.4em;
+      font-weight: 400;
+      float: left;
+      line-height: 0.76;
+      margin: 0.1em 0.12em 0 0;
+      color: var(--gold);
+    }
+
+    /* ── Section headings ── */
+    .article-body h2 {
+      font-family: var(--cinzel);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin: 56px 0 22px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--gold-rule);
+    }
+
+    /* ── Scripture blocks ── */
+    .scripture-block {
+      border-left: 3px solid var(--gold);
+      padding: 14px 20px 14px 28px;
+      margin: 30px 0;
+      background: rgba(166, 124, 46, 0.04);
+      border-radius: 0 2px 2px 0;
+    }
+    .scripture-block p {
+      font-style: italic;
+      font-size: 19px !important;
+      color: var(--ink-mid) !important;
+      margin-bottom: 0 !important;
+      line-height: 1.65 !important;
+    }
+    .scripture-ref {
+      display: block;
+      font-family: var(--cinzel);
+      font-size: 9.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 12px;
+      text-align: right;
+    }
+
+    /* ── Hebrew inline ── */
+    .heb { font-style: normal; color: var(--ink-mid); }
+
+    /* ── Warrant note ── */
+    .warrant {
+      font-size: 16px;
+      color: var(--ink-light);
+      background: rgba(166, 124, 46, 0.05);
+      border-left: 2px solid var(--gold-border);
+      padding: 12px 18px;
+      margin: 26px 0;
+      line-height: 1.6;
+    }
+    .warrant span {
+      font-family: var(--cinzel);
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ── Scene break ── */
+    .scene-break {
+      text-align: center;
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: 0.7em;
+      margin: 34px 0 30px;
+    }
+
+    /* ── Closing questions ── */
+    .closing-questions {
+      border-top: 1px solid var(--gold-rule);
+      margin-top: 48px;
+      padding-top: 34px;
+    }
+    .closing-questions p {
+      font-style: italic;
+      font-size: 20px;
+      color: var(--ink-mid);
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 1.1em;
+    }
+
+    /* ── AI acknowledgment ── */
+    .ai-acknowledgment {
+      border-top: 1px solid var(--gold-rule);
+      margin-top: 64px;
+      padding-top: 32px;
+    }
+    .ai-acknowledgment p {
+      font-style: italic;
+      font-size: 15px !important;
+      color: var(--ink-light) !important;
+      line-height: 1.65 !important;
+      margin-bottom: 0.9em !important;
+    }
+    .ai-acknowledgment p:last-child { margin-bottom: 0 !important; }
+
+    /* ── PDF download ── */
+    .pdf-download {
+      text-align: center;
+      margin-top: 44px;
+    }
+    .pdf-download a {
+      font-family: var(--cinzel);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-rule);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .pdf-download a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+
+    /* ── Handout download (highlighted) ── */
+    .handout-download {
+      border-top: 1px solid var(--gold-rule);
+      margin-top: 56px;
+      padding-top: 34px;
+      text-align: center;
+    }
+    .handout-download .handout-note {
+      font-style: italic;
+      font-size: 18px;
+      color: var(--ink-mid);
+      line-height: 1.65;
+      max-width: 540px;
+      margin: 0 auto 26px;
+    }
+    .handout-download a {
+      display: inline-block;
+      font-family: var(--cinzel);
+      font-size: 11px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--gold);
+      background: rgba(166, 124, 46, 0.06);
+      padding: 14px 26px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .handout-download a:hover { background: var(--gold); color: #FAF5E8; }
+
+    /* ── Footer ── */
+    footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+    /* ── Mobile ── */
+    @media (max-width: 640px) {
+      .article-wrap { padding: 44px 24px 64px; }
+      .article-title { font-size: 27px; }
+      .article-subtitle { font-size: 18px; }
+      .article-body p { font-size: 18px; }
+      .scripture-block p { font-size: 17px !important; }
+      .warrant { font-size: 15px; }
+      .drop-cap::first-letter { font-size: 3.8em; }
+    }
+
+    /* ── Print ── */
+    @media print {
+      .hw-nav, .hw-foot, .pdf-download, .handout-download { display: none; }
+      body { background: white; }
+      .article-wrap { padding: 0; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html">Reflections</a>
+  <a href="/old/articles.html" class="current">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+  <main class="article-wrap">
+
+    <header>
+      <p class="article-eyebrow">A Hesedwords Article</p>
+      <h1 class="article-title">Learning to Pray by Praying the Psalms &mdash; Until We Reach Psalm 83</h1>
+      <p class="article-subtitle">A reflection on praying the Psalms, and the one that stops you</p>
+      <p class="article-ornament">&#10022; &nbsp; &#10022; &nbsp; &#10022;</p>
+      <p class="article-byline">Norm Reed &middot; July 2026</p>
+    </header>
+
+    <article class="article-body">
+
+      <div class="scripture-block">
+        <p>Fill their faces with shame, that they may seek your name, O LORD&hellip; that they may know that you alone, whose name is the LORD, are the Most High over all the earth.</p>
+        <span class="scripture-ref">Psalm 83:16, 18 &middot; ESV</span>
+      </div>
+
+      <p class="drop-cap">We tell people that we learn to pray by praying the Psalms.</p>
+
+      <p>We say it because it is true, and because it is a mercy. It means you do not have to invent your own words when you have none. It means the tradition hands you speech for grief you cannot articulate and joy you cannot contain. Pray the Psalms, we say, and you will be taught to pray.</p>
+
+      <p>And then you get to Psalm 83.</p>
+
+      <p class="scene-break">&middot; &nbsp; &middot; &nbsp; &middot;</p>
+
+      <p>Nobody warns you. You go through the book in order and the ground gives way. <em>Blow them away like tumbleweed. Burn through them like fire through a forest. Cover their faces in shame.</em> And the reader &mdash; who was told that the Psalms would teach him to pray &mdash; puts the book down and thinks: <em>I don&rsquo;t want to be taught to pray like this.</em></p>
+
+      <p>That is the honest response, and I want to say at the outset that it is not the wrong one. Discomfort here is a sign that something in you has been formed by Christ. Do not talk yourself out of it too quickly.</p>
+
+      <p>But do not talk yourself out of the psalm, either.</p>
+
+      <h2>What is hard</h2>
+
+      <p>Let us name it.</p>
+
+      <p>It is hard because it asks God for the ruin of human beings, and we have been told to love our enemies and pray for those who persecute us. It is hard because it names the enemies by name, and we would prefer our prayers to stay abstract. It is hard because &mdash; if we are honest &mdash; some part of us finds it <em>satisfying</em>, and that is worse than finding it repellent. It gives voice to something we thought we had put away.</p>
+
+      <p>And it is hard because we suspect it is not really about our enemies at all. It is about the ones we have not forgiven.</p>
+
+      <h2>What it is not saying</h2>
+
+      <p>But before we abandon it, we should be sure we have read it.</p>
+
+      <p><strong>It is not saying: let me destroy them.</strong> Read the verbs again. Every single act of destruction in this psalm belongs to God. <em>You</em> scatter. <em>You</em> pursue. <em>You</em> fill their faces with shame. The psalmist does not ask for a sword; he asks God to be God. This is not a prayer that arms the one praying. It is a prayer that <em>disarms</em> him. He is handing the whole thing over.</p>
+
+      <p>That is not a small thing. It is exactly what Paul asks of us: <em>Never avenge yourselves, but leave it to the wrath of God.</em> Not <em>there is no wrath</em> &mdash; but <em>it is not yours to administer.</em> Psalm 83 is what leaving it to God actually sounds like, when the person praying is furious.</p>
+
+      <p><strong>It is not free-floating hatred.</strong> The threat is stated: <em>let us wipe them out, that the name of Israel be remembered no more.</em> Erasure. This is the prayer of people who could cease to exist. It comes from a mouth that may not have a tomorrow.</p>
+
+      <p><strong>And it is not aiming at destruction.</strong> This is the part most readers miss, because they stop reading. The psalm&rsquo;s last movement is not ash and silence. It is this: <em>fill their faces with shame, that they may seek your name, O LORD&hellip; let them know that you alone are the Most High over all the earth.</em></p>
+
+      <p>Shame is the instrument. <strong>Knowing is the goal.</strong> The whole savage poem is reaching for a moment when the enemy turns and knows God. The door is not shut. It was never shut.</p>
+
+      <div class="warrant">
+        <span>A note on this reading</span><br>
+        This is a reading. Not everyone hears verse eighteen as an open door, and the words will carry either way. I hear it open.
+      </div>
+
+      <h2>When would it be right to pray this?</h2>
+
+      <p>When someone is genuinely cornered. And when we pray it <strong>for them</strong>.</p>
+
+      <p>For the church that meets in secret and buries its own. For the woman who left and is being hunted by the man she left. For the child in a house that is not safe. For the man carrying a rage at what was done to him that has nowhere to go &mdash; who will either swallow it until it poisons him, or act on it and destroy himself.</p>
+
+      <p>To him, Psalm 83 offers a third door. <em>Say it to God.</em> Say the whole terrible thing. And then let go of it, because you have just prayed that God would handle it, which means you have just agreed not to.</p>
+
+      <p>That is not a lesser prayer. In some seasons it may be the only prayer that keeps a man&rsquo;s hands clean.</p>
+
+      <h2>How Jesus prayed it</h2>
+
+      <p>He prayed it. He was a Jew, and it was in the book, and he prayed the book.</p>
+
+      <p>And he prayed it as someone who had been the hunted from infancy &mdash; soldiers, Egypt, the road in the dark, and later a cliff at Nazareth and a council in Jerusalem that <em>consulted together with one accord.</em> He did not have to allegorise this psalm. He was standing inside it.</p>
+
+      <p>Then something happened that we should not step past.</p>
+
+      <p><strong>The psalm&rsquo;s petition was placed in his hand, and he refused it.</strong> James and John, looking at a village that would not receive him: <em>Lord, shall we call down fire from heaven to consume them?</em> That is verse fourteen with a match in its hand. He turned and rebuked them. In the garden, with torches coming through the trees: <em>twelve legions of angels</em> &mdash; available, and declined.</p>
+
+      <p>He kept praying the psalm. <strong>He would not execute it.</strong></p>
+
+      <p>That is not editing Scripture. That is a man who actually meant the thing the psalm says. <em>God, you act &mdash; not me.</em> And he meant it all the way down, when it cost him everything to mean it.</p>
+
+      <p>And then he became its answer.</p>
+
+      <p>The psalm asks God to move against the enemies of his people. In him, God moves &mdash; and the moving is not fire on a mountain. It is a man on a hill outside a city, with the enemies of God gathered underneath him, and the wrath the psalm invited arriving, and landing, <strong>on him</strong>.</p>
+
+      <p><em>Father, forgive them; they do not know what they are doing.</em></p>
+
+      <p>Set that beside verse eighteen. The psalm&rsquo;s final ask is that they would <em>know</em>. And here is the Son, buying that knowing for them, at the price of himself.</p>
+
+      <p>He does not cancel Psalm 83.</p>
+
+      <p>He pays for it.</p>
+
+      <div class="warrant">
+        <span>A note on this reading</span><br>
+        No verse says Jesus had this psalm in mind. What I have is a psalm asking for fire, a man handed the fire twice who would not take it, and a cross where the wrath came down on the wrong head.<br><br>
+        I find it hard to unhear.
+      </div>
+
+      <h2>What we learn</h2>
+
+      <p>We learn that God can be told the truth. All of it &mdash; including the part of us that wants the fire.</p>
+
+      <p>We learn that praying our rage to God is how we let go of it. The psalm is not permission to hate. It is the mechanism by which a hating man puts the sword down, because he has just asked Someone Else to hold it.</p>
+
+      <p>We learn that the enemy is not written off. <em>Until they seek your name.</em></p>
+
+      <p>And we learn the cost of that little word <em>until</em> &mdash; which is a cross, and a man who prayed this psalm and then, with nails through his hands, prayed the rest of it.</p>
+
+      <p class="scene-break">&middot; &nbsp; &middot; &nbsp; &middot;</p>
+
+      <p>So: yes. We learn to pray by praying the Psalms.</p>
+
+      <p>Including this one.</p>
+
+      <p>Especially this one &mdash; because it is here that we find out whether we meant it when we said we would leave it with God.</p>
+
+      <div class="ai-acknowledgment">
+        <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+        <p>During the development of this article, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+        <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+      </div>
+
+    </article>
+
+    <div class="handout-download">
+      <p class="handout-note">What follows is not exegesis. It is an imagining &mdash; an attempt to stand where he stood when he prayed it. It should be read after the above, and not instead of it.</p>
+      <a href="/old/articles/pdf/jesus-prays-psalm-83.pdf" target="_blank" rel="noopener">Jesus Prays Psalm 83 &mdash; Handout (PDF)</a>
+    </div>
+
+    <div class="pdf-download">
+      <a href="/old/articles/pdf/until-we-reach-psalm-83.pdf" target="_blank" rel="noopener">Download as PDF</a>
+    </div>
+
+  </main>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>

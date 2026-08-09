@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Every Morning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --parchment:#e8dfc8;
+    --parchment-light:#f1ead7;
+    --ink:#2e2a22;
+    --ink-soft:#4a4438;
+    --gold:#c9a84c;
+    --gold-deep:#a8862f;
+    --rule:#d8c89a;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--parchment);
+    background-image:radial-gradient(ellipse at top,#efe7d2 0%,var(--parchment) 60%,#e2d8bf 100%);
+    color:var(--ink);
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-size:21px;
+    line-height:1.72;
+    padding:0;
+  }
+  .page{
+    max-width:680px;
+    margin:0 auto;
+    padding:64px 32px 96px;
+  }
+  .eyebrow{
+    text-align:center;
+    font-family:'Cinzel',serif;
+    font-size:12px;
+    letter-spacing:0.34em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin:0 0 28px;
+  }
+  .eyebrow::before,.eyebrow::after{
+    content:"";
+    display:inline-block;
+    width:34px;
+    height:1px;
+    background:var(--gold);
+    vertical-align:middle;
+    margin:0 14px 4px;
+  }
+  h1{
+    text-align:center;
+    font-family:'Cinzel',serif;
+    font-weight:500;
+    font-size:36px;
+    line-height:1.2;
+    letter-spacing:0.02em;
+    color:var(--ink);
+    margin:0 0 22px;
+  }
+  .subtitle{
+    text-align:center;
+    font-style:italic;
+    font-size:20px;
+    color:var(--ink-soft);
+    margin:0 0 18px;
+  }
+  .ornament{
+    text-align:center;
+    color:var(--gold);
+    font-size:16px;
+    letter-spacing:0.6em;
+    margin:30px 0 40px;
+  }
+  .ornament::before{content:"\2726\00a0\00a0\2726\00a0\00a0\2726";}
+  p{margin:0 0 20px;}
+  .lead{margin-top:0;}
+  .lead::first-letter{
+    float:left;
+    font-family:'Cinzel',serif;
+    font-weight:600;
+    color:var(--gold-deep);
+    font-size:66px;
+    line-height:0.82;
+    padding:6px 12px 0 0;
+  }
+  em{font-style:italic;}
+  a{color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold);transition:color .2s,border-color .2s;}
+  a:hover{color:var(--ink);border-color:var(--gold-deep);}
+  .scripture{
+    border-left:3px solid var(--gold);
+    padding:.2rem 0 .2rem 1.3rem;
+    margin:0 0 2.8rem;
+    font-style:italic;
+    font-size:1.18rem;
+    line-height:1.65;
+    color:#3a3022;
+  }
+  .scripture .ref{
+    display:block;
+    font-style:normal;
+    font-family:'Cinzel',serif;
+    font-size:.72rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-top:.7rem;
+  }
+  .standalone{
+    text-align:center;
+    font-size:22px;
+    color:var(--ink-soft);
+    margin:34px 0;
+    font-style:italic;
+  }
+  .selah{
+    margin:46px 0 30px;
+    padding:26px 32px;
+    background:rgba(201,168,76,0.07);
+    border:1px solid var(--rule);
+    border-left:3px solid var(--gold);
+  }
+  .selah .selah-head{
+    text-align:center;
+    font-family:'Cinzel',serif;
+    font-style:italic;
+    font-size:15px;
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin:0 0 18px;
+  }
+  .selah p{margin:0 0 16px;}
+  .selah p:last-child{margin-bottom:0;}
+  .prayer{
+    margin:44px 0 20px;
+    text-align:center;
+    font-style:italic;
+    font-size:20px;
+    line-height:1.5;
+    color:var(--ink-soft);
+  }
+  .prayer .amen{
+    display:block;
+    margin-top:20px;
+    font-style:italic;
+  }
+  .close{
+    text-align:center;
+    font-family:'Cinzel',serif;
+    font-weight:500;
+    font-size:22px;
+    letter-spacing:0.06em;
+    color:var(--gold-deep);
+    margin:48px 0 8px;
+  }
+  .tagline{
+    text-align:center;
+    font-family:'Cinzel',serif;
+    font-size:11px;
+    letter-spacing:0.3em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-top:72px;
+    opacity:0.8;
+  }
+  .tagline::before,.tagline::after{
+    content:"";
+    display:inline-block;
+    width:26px;
+    height:1px;
+    background:var(--gold);
+    vertical-align:middle;
+    margin:0 12px 3px;
+  }
+  /* ── Site nav ── */
+  nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+  nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;border:none;}
+  nav.hw-nav a:hover{opacity:1;color:#fff;border:none;}
+  nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+  /* ── Footer ── */
+  footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
+
+  @media(max-width:600px){
+    body{font-size:19px;}
+    .page{padding:48px 22px 72px;}
+    h1{font-size:29px;}
+    .lead::first-letter{font-size:56px;}
+    .scripture{font-size:1.05rem;}
+  }
+</style>
+</head>
+<body>
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html" class="current">Reflections</a>
+  <a href="/old/articles.html">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+  <article class="page">
+    <p class="eyebrow">A Hesedwords Reflection</p>
+    <h1>New Every Morning</h1>
+    <p class="subtitle">A reflection on Lamentations 3</p>
+    <div class="ornament"></div>
+
+    <div class="scripture">
+      This I recall to my mind, therefore I have hope.
+      <span class="ref">Lamentations 3:21</span>
+    </div>
+
+    <p class="lead">There is a man in the ruins, and for twenty verses he does not look up.</p>
+
+    <p><em>I am the man who has seen affliction.</em> He has been walled in, weighed down, driven into darkness. His bones are broken, his teeth ground on gravel, his soul bowed down within him. It is the most relentless first-person suffering in the Hebrew Bible, and Lamentations gives it no relief for twenty verses. There is no turn in his circumstances. Jerusalem is still ash. Nothing outside him has moved.</p>
+
+    <p>And then, in verse 21, something moves inside him.</p>
+
+    <p class="standalone">This I recall to my mind, therefore I have hope.</p>
+
+    <p>The Hebrew is not a feeling that arrives. It is a deliberate act: <em>z&#333;&rsquo;t &rsquo;&#257;&scaron;&icirc;b &rsquo;el-libb&icirc;</em> &mdash; &ldquo;this I cause to return to my heart.&rdquo; He turns something back. On purpose. In the pit, with the dust still on him, he chooses what to set before himself.</p>
+
+    <p>And what he turns to is this: <em>The steadfast love of the LORD never ceases; his mercies never come to an end; they are new every morning. Great is your faithfulness.</em> The <em>hesed</em> of the LORD. It sits at the exact centre of the middle chapter of the book &mdash; the theological heart of the whole lament, placed in the middle of the ruins.</p>
+
+    <p>But notice what the turn does not do. It does not end the suffering. He still says, three verses earlier, <em>remember my affliction</em>. He does not stop grieving. What follows the turn is not triumph &mdash; it is waiting. <em>The LORD is good to those who wait for him.</em> It is good to bear the yoke. Let him sit alone in silence; let him put his mouth in the dust &mdash; there may yet be hope. The turn to <em>hesed</em> produces waiting, silence, and a strange sober hope that can coexist with the dust still on his mouth. It does not close the wound. It gives him somewhere to stand while it is still open.</p>
+
+    <p>There is one more thing, easy to miss, and it changes how you read the whole chapter.</p>
+
+    <p>This is the most ordered chapter in the book. Chapters one, two, and four are acrostics &mdash; twenty-two verses, one for each letter of the Hebrew alphabet. But chapter three is a <em>triple</em> acrostic. Aleph gets three lines, beth three lines, all the way through, sixty-six verses, aleph to taw. The chapter where the man chooses what to meditate on is also the most deliberately structured chapter he wrote. The form enacts the content. When everything has collapsed, the one thing he can still do is order his lament from the first letter to the last &mdash; and turn his heart, on purpose, to <em>hesed</em>.</p>
+
+    <p>There is another man, in another deep, who shows us the same hinge running the other way.</p>
+
+    <p>Jonah, in the belly, prays a strange line: <em>those who cling to worthless idols forsake the hesed that is theirs.</em> We have <a href="/old/reflections/what-is-already-yours.html">sat with this before</a> &mdash; the strangeness that <em>hesed</em> can be <em>forsaken</em>, walked away from, let go. And here is what Lamentations lets us see about it. Perhaps forsaking <em>hesed</em> is nothing so dramatic as denying it or disproving it. Perhaps it is simply the failure to turn it back to mind &mdash; ceasing to recall it, letting it fall out of meditation, letting the worthless vapour hold your attention instead. If verse 21 is a man turning <em>hesed</em> back to his heart, forsaking is the same act refused. You do not decide against <em>hesed</em>. You just stop turning it back.</p>
+
+    <p>Which means the deliberate recall of Lamentations 3:21 is not a mood. It is a discipline. Almost a defiance. <em>This</em> I turn back to my heart.</p>
+
+    <p>These are <em>hesed</em> words &mdash; the ones you say back to yourself in the dust, on purpose, from aleph to taw, when nothing outside you has moved. The whole of this is, in a sense, the practice of that one verse: turning <em>hesed</em> back to the heart, in words.</p>
+
+    <div class="selah">
+      <p class="selah-head">Selah</p>
+      <p>On the lock screen of my phone is an image we made once, <a href="/old/reflections/what-is-already-yours.html">for Jonah</a> &mdash; the line beneath it reading <em>those who cling to worthless idols forfeit the hesed that is already theirs.</em> I put it there on purpose. It is the first thing I see, many times a day, and it is not a warning about idols so much as a reminder of what is mine. The <em>hesed</em> that is already mine.</p>
+      <p>That is my Lamentations meditation, made small enough to carry. Jonah names the loss; the phone turns it back to my heart before I have decided anything at all. It is the inoculation against the worthless vapours &mdash; not an argument against them, just <em>hesed</em>, recalled, before the vapour can have my attention.</p>
+      <p>I have not chosen a harder or a better thing than this.</p>
+    </div>
+
+    <p class="prayer">
+      Let the words of my mouth<br>
+      and the meditation of my heart<br>
+      return again to your faithfulness,<br>
+      new every morning,<br>
+      and to your steadfast love, which is mine &mdash;<br>
+      acceptable in your sight,<br>
+      O LORD, my rock and my redeemer.
+      <span class="amen">This turning is the most important choice I can make.<br>
+      Let me make it again today.</span>
+    </p>
+
+    <p class="tagline">Hesedwords</p>
+  </article>
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+</body>
+</html>

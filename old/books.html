@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Books — Hesed Words</title>
+<meta name="description" content="Published works by Norm Reed — biblical theology, canonical study, and devotional writing for the road.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --parchment:#f4ecd8;
+    --parchment-deep:#ece1c7;
+    --parchment-mid:#f0e6ce;
+    --ink:#1f1b16;
+    --ink-soft:#3a332a;
+    --ink-light:#4a3218;
+    --gold:#b08d3f;
+    --gold-deep:#8a6d2b;
+    --border:#c8a96e;
+    --border-light:#ddc48a;
+    --rule:#d8c9a3;
+    --shadow:rgba(30,21,8,0.18);
+    --accent:#8b3a0f;
+    --accent-light:#b05230;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:radial-gradient(ellipse at top,#f7f0de 0%,var(--parchment) 55%,var(--parchment-deep) 100%) fixed;
+    color:var(--ink);
+    font-family:"Cormorant Garamond",Georgia,serif;
+    font-size:1.15rem;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ── Nav ── */
+  nav.hw-nav{
+    background:var(--ink);
+    font-family:"Cinzel",serif;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    display:flex;
+    justify-content:center;
+    gap:2.2rem;
+    padding:1.05rem 1rem;
+    flex-wrap:wrap;
+  }
+  nav.hw-nav a{color:var(--parchment);text-decoration:none;opacity:.82;transition:opacity .2s;}
+  nav.hw-nav a:hover{opacity:1;color:#fff;}
+  nav.hw-nav a.current{opacity:1;border-bottom:1px solid var(--gold);padding-bottom:.15rem;}
+
+  /* ── Header ── */
+  .section-header{
+    text-align:center;
+    padding:4rem 1.5rem 2.8rem;
+    max-width:68rem;
+    margin:0 auto;
+  }
+  .section-eyebrow{
+    font-family:"Cinzel",serif;
+    font-size:.72rem;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-bottom:1rem;
+  }
+  .section-title{
+    font-family:"Cinzel",serif;
+    font-weight:500;
+    font-size:clamp(1.8rem,4vw,2.8rem);
+    color:var(--ink);
+    margin-bottom:1.2rem;
+    letter-spacing:.04em;
+  }
+  .section-rule{
+    width:3rem;
+    height:1px;
+    background:var(--gold);
+    margin:.8rem auto 1.6rem;
+  }
+  .section-desc{
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:1.1rem;
+    max-width:36rem;
+    margin:0 auto;
+  }
+
+  hr.rule-line{
+    border:0;
+    border-top:1px solid var(--rule);
+    max-width:68rem;
+    margin:0 auto 3rem;
+  }
+
+  /* ── Books grid ── */
+  .books-grid{
+    max-width:68rem;
+    margin:0 auto;
+    padding:0 5vw 5rem;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+  }
+  .book-card{
+    padding:32px 28px;
+    border:1px solid var(--border-light);
+    background:var(--parchment-mid);
+    display:flex;
+    flex-direction:column;
+    transition:all .22s;
+  }
+  .book-card:hover{
+    border-color:var(--border);
+    box-shadow:0 4px 20px var(--shadow);
+    transform:translateY(-3px);
+  }
+  .book-card-label{
+    font-family:"Cinzel",serif;
+    font-size:.68rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:12px;
+  }
+  .book-card-title{
+    font-family:"Cinzel",serif;
+    font-weight:500;
+    font-size:1.25rem;
+    letter-spacing:.03em;
+    color:var(--ink);
+    line-height:1.25;
+    margin-bottom:8px;
+  }
+  .book-card-subtitle{
+    font-style:italic;
+    font-size:.98rem;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+  }
+  .book-card-rule{
+    width:2rem;
+    height:1px;
+    background:var(--gold);
+    margin-bottom:18px;
+  }
+  .book-card-desc{
+    font-size:.98rem;
+    line-height:1.75;
+    color:var(--ink-light);
+    flex:1;
+    margin-bottom:24px;
+  }
+  .book-card-link{
+    font-family:"Cinzel",serif;
+    font-size:.68rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--accent);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    padding-bottom:2px;
+    transition:color .2s,border-color .2s;
+    width:fit-content;
+  }
+  .book-card-link+.book-card-link{margin-top:.6rem;}
+  .book-card-link:hover{color:var(--accent-light);border-bottom-color:var(--accent-light);}
+
+  /* Coming soon card */
+  .book-card.soon{opacity:.55;}
+  .book-card.soon .book-card-link{pointer-events:none;color:var(--gold-deep);}
+
+  footer.hw-foot{
+    text-align:center;
+    font-family:"Cinzel",serif;
+    font-size:.7rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    padding:2.5rem 1rem 3.5rem;
+    opacity:.8;
+  }
+
+  @media(max-width:900px){
+    .books-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:580px){
+    .books-grid{grid-template-columns:1fr;gap:16px;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html">Reflections</a>
+  <a href="/old/articles.html">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html" class="current">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+
+<header class="section-header">
+  <p class="section-eyebrow">Hesed Words</p>
+  <h1 class="section-title">The Library</h1>
+  <div class="section-rule"></div>
+  <p class="section-desc">Published works available to read online or download — biblical theology, canonical study, and devotional writing for the road.</p>
+</header>
+
+<hr class="rule-line">
+
+<div class="books-grid">
+
+  <div class="book-card">
+    <div class="book-card-label">Biblical Theology</div>
+    <h2 class="book-card-title">When Mercy and Truth Met</h2>
+    <p class="book-card-subtitle">A Reading of Psalm 85:10&ndash;13</p>
+    <div class="book-card-rule"></div>
+    <p class="book-card-desc">Mercy and truth meet together; righteousness and peace kiss each other. Not a negotiated tension between the attributes of God, but their simultaneous satisfaction — and the glory of it. A close reading of Psalm 85, with Langland's Piers Plowman standing nearby.</p>
+    <a href="/old/books/when-mercy-and-truth-met.html" class="book-card-link">Read online →</a>
+    <a href="/old/books/when-mercy-and-truth-met.pdf" class="book-card-link" target="_blank" rel="noopener">Download PDF →</a>
+  </div>
+
+  <div class="book-card">
+    <div class="book-card-label">Psalms of Ascent</div>
+    <h2 class="book-card-title">Songs for the Road</h2>
+    <p class="book-card-subtitle">Reflections on the Psalms of Ascent</p>
+    <div class="book-card-rule"></div>
+    <p class="book-card-desc">A travel journal walked in the company of the God who made heaven and earth. Fifteen psalms, one pilgrim road, and the love that meets you on the way up.</p>
+    <a href="/old/books/songs-for-the-road.html" class="book-card-link">Read online →</a>
+    <a href="/old/books/songs-for-the-road.pdf" class="book-card-link" target="_blank" rel="noopener">Download PDF →</a>
+  </div>
+
+  <div class="book-card">
+    <div class="book-card-label">Biblical Theology</div>
+    <h2 class="book-card-title">Job 43</h2>
+    <p class="book-card-subtitle">The Unwritten Last Chapter</p>
+    <div class="book-card-rule"></div>
+    <p class="book-card-desc">A literary-theological reading that confronts the profound unfairness of Job's suffering. Unaware of the heavenly council and denied a rational explanation, Job is left in the dark — until an unwritten final chapter returns us to the divine courtroom, transforming cosmic silence into an ultimate, explanatory encounter.</p>
+    <a href="/old/books/job-43.html" class="book-card-link">Read online →</a>
+    <a href="/old/books/job-43.pdf" class="book-card-link" style="margin-left:1.4em;" target="_blank" rel="noopener">Download PDF →</a>
+  </div>
+
+  <div class="book-card">
+    <div class="book-card-label">Story &nbsp;·&nbsp; Written for Teenagers</div>
+    <h2 class="book-card-title">The Man Who Opened His Hand</h2>
+    <p class="book-card-subtitle">The Story of Job</p>
+    <div class="book-card-rule"></div>
+    <p class="book-card-desc">A narrative retelling of the book of Job for curious minds — and the secret kept in one verse at the end. Written for teenagers.</p>
+    <a href="/old/books/the-open-hand.html" class="book-card-link">Read online →</a>
+    <a href="/old/books/the-open-hand.pdf" class="book-card-link" style="margin-left:1.4em;" target="_blank" rel="noopener">Download PDF →</a>
+  </div>
+
+  <div class="book-card">
+    <div class="book-card-label">Narrative Meditation</div>
+    <h2 class="book-card-title">That Day</h2>
+    <p class="book-card-subtitle">A Meditation on Simon of Cyrene and the Cross</p>
+    <div class="book-card-rule"></div>
+    <p class="book-card-desc">A narrative meditation that enters the story of Simon of Cyrene — the man compelled to carry the cross. What did he see? What did it cost him? And what did that day make of him?</p>
+    <a href="/old/books/that-day.html" class="book-card-link">Read online →</a>
+    <a href="/old/books/that-day.pdf" class="book-card-link" target="_blank" rel="noopener">Download PDF →</a>
+  </div>
+
+  <div class="book-card">
+    <div class="book-card-label">Pastoral Writing</div>
+    <h2 class="book-card-title">The Oldest Loneliness</h2>
+    <p class="book-card-subtitle">A devotional book for people in prison, drawn from Job</p>
+    <div class="book-card-rule"></div>
+    <p class="book-card-desc">Written for the men and women who know what it means when the phone stops ringing and the visits stop coming. Eleven short chapters following Job through betrayal, desertion, the long night, and anger — toward a cry that is heard, and a friend who does not leave. Published through The Onesimus Foundation.</p>
+    <a href="/old/books/the-oldest-loneliness.html" class="book-card-link">Read online →</a>
+    <a href="/old/books/the-oldest-loneliness.pdf" class="book-card-link" style="margin-left:1.4em;" target="_blank" rel="noopener">Download PDF →</a>
+  </div>
+
+  <div class="book-card">
+    <div class="book-card-label">Canonical Study</div>
+    <h2 class="book-card-title">He Has Told You&hellip;</h2>
+    <p class="book-card-subtitle">Micah 6:8 — Canon, Christ, and the Charter of the Church</p>
+    <div class="book-card-rule"></div>
+    <p class="book-card-desc">A sustained canonical exploration of Micah 6:8 across three movements: the prior testimony of the whole canon, the Christological embodiment of its three terms, and the ecclesial charter it gives the church. This. Only this. Always this.</p>
+    <a href="/old/books/he-has-told-you.html" class="book-card-link">Read online →</a>
+    <a href="/old/books/he-has-told-you.pdf" class="book-card-link" style="margin-left:1.4em;" target="_blank" rel="noopener">Download PDF →</a>
+  </div>
+
+  <div class="book-card">
+    <div class="book-card-label">Story &nbsp;·&nbsp; Written for Younger Readers</div>
+    <h2 class="book-card-title">Who Would Have Thought</h2>
+    <p class="book-card-subtitle">A story from Psalm 19</p>
+    <div class="book-card-rule"></div>
+    <p class="book-card-desc">A girl, a long week at home, and a verse caught by accident. Jess wasn't looking for Psalm 19. But somewhere between the medicine tablets, her gran's folded hands, and a phone bright in the dark, six old lines found her — and turned her around. A story for younger readers, and for anyone who has read past a truth without knowing it was being offered.</p>
+    <a href="/old/books/who-would-have-thought.html" class="book-card-link">Read online →</a>
+    <a href="/old/books/who-would-have-thought.pdf" class="book-card-link" style="margin-left:1.4em;" target="_blank" rel="noopener">Download PDF →</a>
+  </div>
+
+  <div class="book-card">
+    <div class="book-card-label">Story &nbsp;·&nbsp; Illustrated Edition</div>
+    <h2 class="book-card-title">Who Would Have Thought <span style="font-size:.75em;letter-spacing:.05em;">— Illustrated</span></h2>
+    <p class="book-card-subtitle">The same story, with drawings — for a younger reader to hold</p>
+    <div class="book-card-rule"></div>
+    <p class="book-card-desc">The same story of Jess and Psalm 19, hand-lettered and illustrated — warm paper, soft line drawings, and the light always doing something. Made to be read aloud, or held quietly.</p>
+    <a href="/old/books/who-would-have-thought-illustrated.html" class="book-card-link">Read online →</a>
+    <a href="/old/books/who-would-have-thought-illustrated.pdf" class="book-card-link" style="margin-left:1.4em;" target="_blank" rel="noopener">Download PDF →</a>
+  </div>
+
+</div>
+
+<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+
+</body>
+</html>

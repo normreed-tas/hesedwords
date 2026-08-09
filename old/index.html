@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hesed Words — Written for the Road</title>
+<meta name="description" content="Biblical writing and reflection by Norm Reed. Scripture, justice, and the love that holds." />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Cormorant+SC:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="Hesed Words — Reflections" href="/old/feed.xml" />
+<style>
+  /* ─── Tokens ─────────────────────────────────────────────── */
+  :root {
+    --parchment:      #f6edd6;
+    --parchment-mid:  #eddfc0;
+    --parchment-dark: #e2d0a8;
+    --ink:            #1e1508;
+    --ink-light:      #4a3218;
+    --ink-faint:      #8a6d45;
+    --accent:         #8b3a0f;
+    --accent-light:   #b05230;
+    --gold:           #b8922c;
+    --gold-light:     #d4ac4a;
+    --gold-faint:     rgba(184,146,44,0.15);
+    --border:         #c8a96e;
+    --border-light:   #ddc48a;
+    --shadow:         rgba(30,21,8,0.18);
+  }
+
+  /* ─── Reset ──────────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  /* Subtle grain texture */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      radial-gradient(ellipse at 15% 10%, rgba(184,146,44,0.07) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 90%, rgba(139,58,15,0.05) 0%, transparent 55%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ─── Navigation ─────────────────────────────────────────── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--ink);
+    border-bottom: 1px solid rgba(184,146,44,0.25);
+    padding: 0 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    box-shadow: 0 2px 20px rgba(30,21,8,0.35);
+  }
+
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    color: var(--parchment);
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: 0.92;
+    transition: opacity 0.2s;
+  }
+  .nav-logo:hover { opacity: 1; }
+  .nav-logo span {
+    color: var(--gold-light);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(246,237,214,0.65);
+    text-decoration: none;
+    transition: color 0.2s;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+  }
+  .nav-links a:hover {
+    color: var(--gold-light);
+    border-bottom-color: rgba(212,172,74,0.4);
+  }
+
+  /* ─── Hero ───────────────────────────────────────────────── */
+  .hero {
+    position: relative;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 5vw 36px;
+    overflow: hidden;
+  }
+
+  /* Parchment gradient wash */
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(135deg, rgba(226,208,168,0.6) 0%, transparent 60%),
+      radial-gradient(ellipse at 70% 50%, rgba(139,58,15,0.04) 0%, transparent 60%);
+  }
+
+  /* Large Hebrew watermark */
+  .hero-heb-bg {
+    position: absolute;
+    right: -2vw;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(220px, 28vw, 420px);
+    font-weight: 300;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(184,146,44,0.12);
+    line-height: 1;
+    direction: rtl;
+    user-select: none;
+    pointer-events: none;
+    animation: fadeWatermark 2.4s ease forwards;
+    opacity: 0;
+    letter-spacing: 0.04em;
+  }
+
+  @keyframes fadeWatermark {
+    to { opacity: 1; }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    animation: slideUp 0.9s ease 0.1s both;
+  }
+
+  .hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(20px, 2.8vw, 36px);
+    font-weight: 500;
+    line-height: 1.08;
+    color: var(--ink);
+    letter-spacing: 0.12em;
+    margin-bottom: 14px;
+    animation: slideUp 0.9s ease 0.25s both;
+  }
+
+  .hero-heb-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(64px, 9vw, 120px);
+    font-weight: 300;
+    color: var(--gold);
+    direction: rtl;
+    line-height: 1;
+    margin-bottom: 16px;
+    letter-spacing: 0.06em;
+    animation: slideUp 0.9s ease 0.18s both;
+  }
+
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 2.8vw, 34px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--ink-light);
+    line-height: 1.3;
+    margin-bottom: 36px;
+    animation: slideUp 0.9s ease 0.4s both;
+  }
+
+  .hero-rule {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin-bottom: 28px;
+    animation: slideUp 0.9s ease 0.5s both;
+  }
+
+  .hero-description {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink-light);
+    max-width: 500px;
+    margin-bottom: 44px;
+    animation: slideUp 0.9s ease 0.6s both;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    animation: slideUp 0.9s ease 0.75s both;
+  }
+
+  .hero-author-link {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    text-decoration: none;
+    margin-bottom: 28px;
+    border-bottom: 1px solid rgba(138,109,69,0.3);
+    padding-bottom: 2px;
+    transition: all 0.2s;
+    animation: slideUp 0.9s ease 0.68s both;
+  }
+  .hero-author-link:hover {
+    color: var(--gold);
+    border-bottom-color: rgba(184,146,44,0.4);
+  }
+
+  .btn-primary {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 14px 30px;
+    background: var(--accent);
+    color: var(--parchment);
+    border: 1px solid var(--accent);
+    text-decoration: none;
+    transition: all 0.22s;
+    border-radius: 1px;
+  }
+  .btn-primary:hover {
+    background: var(--accent-light);
+    border-color: var(--accent-light);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(139,58,15,0.25);
+  }
+
+  .btn-secondary {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 14px 30px;
+    background: transparent;
+    color: var(--ink-light);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    transition: all 0.22s;
+    border-radius: 1px;
+  }
+  .btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateY(-1px);
+  }
+
+  /* Scroll indicator */
+  .hero-scroll {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    animation: fadeIn 1.2s ease 1.5s both;
+  }
+  .hero-scroll span {
+    font-family: 'Cinzel', serif;
+    font-size: 7.5px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .hero-scroll-line {
+    width: 1px;
+    height: 36px;
+    background: linear-gradient(180deg, var(--gold), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(0.85); }
+  }
+
+  /* ─── Section base ───────────────────────────────────────── */
+  section {
+    position: relative;
+    z-index: 1;
+    padding: 90px 5vw;
+  }
+
+  .section-header {
+    margin-bottom: 54px;
+  }
+
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 8.5px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(22px, 3vw, 34px);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .section-rule {
+    width: 48px;
+    height: 1px;
+    background: var(--gold);
+    margin-top: 16px;
+    opacity: 0.6;
+  }
+
+  /* ─── Featured Book ──────────────────────────────────────── */
+  .featured {
+    background: var(--ink);
+    padding: 90px 5vw;
+  }
+
+  .featured-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .featured-label {
+    font-family: 'Cinzel', serif;
+    font-size: 8.5px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .featured-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 4vw, 52px);
+    font-weight: 600;
+    color: var(--parchment);
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+  .featured-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(246,237,214,0.6);
+    margin-bottom: 28px;
+    letter-spacing: 0.03em;
+  }
+
+  .featured-rule {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin-bottom: 28px;
+    opacity: 0.7;
+  }
+
+  .featured-description {
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(246,237,214,0.75);
+    margin-bottom: 38px;
+  }
+
+  .featured-link {
+    font-family: 'Cinzel', serif;
+    font-size: 9.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(212,172,74,0.35);
+    padding-bottom: 3px;
+    transition: all 0.2s;
+  }
+  .featured-link:hover {
+    color: var(--parchment);
+    border-bottom-color: rgba(246,237,214,0.5);
+  }
+
+  /* Book spine graphic */
+  .book-spine-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .book-spine {
+    width: 52px;
+    background: var(--parchment-mid);
+    border-radius: 3px 1px 1px 3px;
+    box-shadow:
+      inset -4px 0 8px rgba(30,21,8,0.25),
+      4px 4px 24px rgba(30,21,8,0.5),
+      -2px 0 0 rgba(184,146,44,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .book-spine::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(180deg,
+      rgba(255,255,255,0.08) 0%,
+      rgba(255,255,255,0.03) 40%,
+      rgba(30,21,8,0.08) 100%);
+  }
+  .book-spine-vol1 { height: 340px; }
+  .book-spine-vol2 { height: 300px; background: var(--parchment-dark); }
+
+  .spine-title {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 0.15em;
+    color: var(--ink);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    text-align: center;
+    opacity: 0.85;
+    line-height: 1.4;
+  }
+  .spine-ornament {
+    font-size: 14px;
+    color: var(--gold);
+    opacity: 0.7;
+  }
+  .spine-vol {
+    font-family: 'Cormorant SC', serif;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: var(--ink-faint);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+
+  /* ─── Books grid ─────────────────────────────────────────── */
+  .books {
+    background: var(--parchment-mid);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .books-inner { max-width: 1100px; margin: 0 auto; }
+
+  .books-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .book-card {
+    background: var(--parchment);
+    border: 1px solid var(--border-light);
+    padding: 36px;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .book-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: var(--gold);
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .book-card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px var(--shadow); }
+  .book-card:hover::before { opacity: 1; }
+
+  .book-card-label {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .book-card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.04em;
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+
+  .book-card-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--ink-faint);
+    margin-bottom: 18px;
+    line-height: 1.4;
+  }
+
+  .book-card-rule {
+    width: 32px; height: 1px;
+    background: var(--border);
+    margin-bottom: 18px;
+  }
+
+  .book-card-desc {
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: var(--ink-light);
+    margin-bottom: 24px;
+  }
+
+  .book-card-link {
+    font-family: 'Cinzel', serif;
+    font-size: 8.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(139,58,15,0.25);
+    padding-bottom: 2px;
+    transition: all 0.2s;
+  }
+  .book-card-link:hover { color: var(--accent-light); border-bottom-color: var(--accent-light); }
+
+  /* ─── Articles ───────────────────────────────────────────── */
+  .articles { background: var(--parchment); }
+  .articles-inner { max-width: 1100px; margin: 0 auto; }
+
+  .articles-intro {
+    max-width: 580px;
+    margin-bottom: 52px;
+  }
+  .articles-intro p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--ink-light);
+  }
+
+  .articles-placeholder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .article-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 28px;
+    border: 1px solid var(--border-light);
+    background: var(--parchment-mid);
+    transition: all 0.22s;
+    cursor: pointer;
+  }
+  .article-card:hover {
+    border-color: var(--border);
+    box-shadow: 0 4px 20px var(--shadow);
+    transform: translateY(-2px);
+  }
+  .card-pdf-link {
+    text-align: center;
+    margin: -16px 0 8px;
+  }
+  .card-pdf-link a {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .card-pdf-link a:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  .article-card-ref {
+    font-family: 'Cormorant SC', serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .article-card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.03em;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .article-card-excerpt {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--ink-faint);
+    font-style: italic;
+  }
+
+  .article-card-date {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 0.2em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .articles-cta {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  /* ─── Glossary ───────────────────────────────────────────── */
+  .glossary {
+    background: linear-gradient(135deg, #2a1f0e 0%, #1e1508 100%);
+    padding: 90px 5vw;
+  }
+  .glossary-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .glossary-label {
+    font-family: 'Cinzel', serif;
+    font-size: 8.5px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .glossary-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(26px, 3.5vw, 44px);
+    font-weight: 500;
+    color: var(--parchment);
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+
+  .glossary-desc {
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(246,237,214,0.7);
+    margin-bottom: 36px;
+  }
+
+  .glossary-terms {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid rgba(200,169,110,0.2);
+  }
+
+  .gterm {
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(200,169,110,0.12);
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    transition: background 0.15s;
+  }
+  .gterm:last-child { border-bottom: none; }
+  .gterm:hover { background: rgba(184,146,44,0.07); }
+
+  .gterm-heb {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--parchment);
+    direction: rtl;
+    min-width: 56px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .gterm-tr {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--gold-light);
+    min-width: 80px;
+    flex-shrink: 0;
+  }
+
+  .gterm-gloss {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: rgba(246,237,214,0.55);
+    font-weight: 300;
+  }
+
+  /* ─── About strip ────────────────────────────────────────── */
+  .about {
+    background: var(--parchment-dark);
+    border-top: 1px solid var(--border-light);
+    padding: 80px 5vw;
+  }
+  .about-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .about-ornament {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: var(--gold);
+    opacity: 0.5;
+    letter-spacing: 0.3em;
+    margin-bottom: 28px;
+    direction: rtl;
+  }
+
+  .about-name {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+
+  .about-rule {
+    width: 48px; height: 1px;
+    background: var(--gold);
+    margin: 0 auto 24px;
+    opacity: 0.6;
+  }
+
+  .about-bio {
+    font-size: 17px;
+    line-height: 1.85;
+    color: var(--ink-light);
+    margin-bottom: 32px;
+  }
+
+  .about-link {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(139,58,15,0.3);
+    padding-bottom: 2px;
+    transition: all 0.2s;
+  }
+  .about-link:hover { color: var(--accent-light); }
+
+  /* ─── Personal links (home only) ─────────────────────────── */
+  /* ─── Browse Everything (combined index) ─────────────────── */
+  .browse {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 8px 5vw 72px;
+  }
+  .browse-heading {
+    font-family: 'Cinzel', serif;
+    font-size: 7.5px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    text-align: center;
+    margin: 0 auto 10px;
+  }
+  .browse-intro {
+    text-align: center;
+    font-size: 15px;
+    color: var(--ink-faint);
+    font-style: italic;
+    margin: 0 auto 26px;
+  }
+  .browse-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 14px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .browse-field { display: flex; flex-direction: column; gap: 5px; }
+  .browse-field label {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .browse-field select {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 15px;
+    color: var(--ink);
+    background: var(--parchment-mid);
+    border: 1px solid var(--border-light);
+    border-radius: 2px;
+    padding: 6px 10px;
+    min-width: 118px;
+    cursor: pointer;
+  }
+  .browse-field select:disabled { opacity: 0.42; cursor: default; }
+  .browse-field select:focus { outline: none; border-color: var(--gold); }
+
+  /* Theme combobox — type-to-filter */
+  .browse-combo { position: relative; }
+  .browse-combo input {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 15px;
+    color: var(--ink);
+    background: var(--parchment-mid);
+    border: 1px solid var(--border-light);
+    border-radius: 2px;
+    padding: 6px 44px 6px 10px;
+    min-width: 118px;
+    width: 152px;
+  }
+  .browse-combo input:focus { outline: none; border-color: var(--gold); }
+  .browse-combo input::placeholder { color: var(--ink); opacity: 0.55; }
+  #browse-theme-clear,
+  #browse-theme-toggle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0 4px;
+    line-height: 1;
+    color: var(--ink-faint);
+    cursor: pointer;
+  }
+  #browse-theme-clear { right: 24px; font-size: 17px; }
+  #browse-theme-clear:hover { color: var(--accent); }
+  #browse-theme-toggle { right: 7px; display: flex; align-items: center; }
+  #browse-theme-toggle svg { width: 10px; height: 6px; display: block; }
+  #browse-theme-toggle:hover { color: var(--gold); }
+  .browse-combo.is-open #browse-theme-toggle { color: var(--gold); }
+  .browse-combo.is-open #browse-theme-toggle svg { transform: rotate(180deg); }
+  .browse-combo-list {
+    position: absolute;
+    z-index: 40;
+    top: calc(100% + 3px);
+    left: 0;
+    width: 232px;
+    max-height: 244px;
+    overflow-y: auto;
+    margin: 0;
+    padding: 4px 0;
+    list-style: none;
+    background: var(--parchment);
+    border: 1px solid var(--gold);
+    border-radius: 2px;
+    box-shadow: 0 8px 24px var(--shadow);
+  }
+  .browse-combo-list li {
+    padding: 6px 12px;
+    font-size: 15px;
+    color: var(--ink-light);
+    cursor: pointer;
+  }
+  .browse-combo-list li[aria-selected="true"],
+  .browse-combo-list li:hover {
+    background: var(--parchment-dark);
+    color: var(--ink);
+  }
+  .browse-combo-empty {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--ink-faint);
+  }
+  #browse-reset {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    background: none;
+    border: 1px solid var(--border-light);
+    border-radius: 2px;
+    padding: 9px 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  #browse-reset:hover { color: var(--gold); border-color: var(--gold); }
+  .browse-count {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 20px auto 4px;
+  }
+  .browse-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px 4px;
+    border-bottom: 1px solid var(--border-light);
+    text-decoration: none;
+    color: var(--ink);
+    transition: background 0.18s;
+  }
+  .browse-card:hover { background: var(--parchment-mid); }
+  .browse-card-main { flex: 1; min-width: 0; }
+  .browse-card-date {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 6px;
+  }
+  .browse-card-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.3;
+    margin: 0 0 7px;
+  }
+  .browse-card:hover .browse-card-title { color: var(--gold); }
+  .browse-card-summary {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink-light);
+    margin: 0 0 8px;
+  }
+  .browse-card-ref {
+    font-family: 'Cinzel', serif;
+    font-size: 8.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .browse-badge {
+    flex-shrink: 0;
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--badge);
+    border: 1px solid var(--badge);
+    border-radius: 2px;
+    padding: 4px 9px;
+    margin-top: 2px;
+    opacity: 0.85;
+    white-space: nowrap;
+  }
+  .browse-empty {
+    text-align: center;
+    font-style: italic;
+    color: var(--ink-faint);
+    padding: 32px 0;
+  }
+  .browse-jump {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+    color: var(--ink-faint);
+    opacity: 0.55;
+    transition: opacity 0.2s, color 0.2s;
+  }
+  .browse-jump:hover { opacity: 1; color: var(--gold); }
+  .browse-jump svg { width: 100%; height: 100%; }
+  @media (max-width: 700px) {
+    .browse-filters { gap: 10px; }
+    .browse-field select { min-width: 104px; font-size: 14px; }
+    /* keep the open theme list inside the viewport: hang it off the
+       input's right edge rather than its left */
+    .browse-combo input { width: 148px; min-width: 104px; font-size: 14px; }
+    .browse-combo-list {
+      left: auto;
+      right: 0;
+      width: min(232px, calc(100vw - 36px));
+    }
+    .browse-card { flex-direction: column; gap: 10px; }
+    .browse-badge { order: -1; align-self: flex-start; }
+  }
+
+  .personal-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    padding: 28px 5vw 4px;
+    background: var(--ink);
+  }
+  .pl-name {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(246,237,214,0.9);
+  }
+  .pl-name span { color: var(--gold-light); }
+  .personal-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: rgba(246,237,214,0.4);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .personal-links a:hover { color: var(--gold-light); }
+
+  /* ─── Footer ─────────────────────────────────────────────── */
+  footer {
+    background: var(--ink);
+    padding: 40px 5vw;
+    border-top: 1px solid rgba(184,146,44,0.2);
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .footer-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    color: rgba(246,237,214,0.9);
+    text-transform: uppercase;
+  }
+  .footer-logo span { color: var(--gold-light); }
+  .footer-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(246,237,214,0.45);
+  }
+
+  .footer-right {
+    text-align: right;
+  }
+  .footer-foundation {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(246,237,214,0.35);
+    margin-bottom: 4px;
+  }
+  .footer-location {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-style: italic;
+    color: rgba(246,237,214,0.3);
+  }
+
+  .footer-copy {
+    width: 100%;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 7.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(246,237,214,0.2);
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(184,146,44,0.1);
+  }
+
+  /* ─── Daily Reflection ──────────────────────────────────── */
+  .daily-reflection {
+    padding: 8px 5vw 32px;
+    text-align: center;
+  }
+  .dr-section-heading {
+    font-family: 'Cinzel', serif;
+    font-size: 7.5px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 auto 28px;
+  }
+  .dr-panels {
+    display: flex;
+    align-items: flex-start;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .dr-panel {
+    flex: 1;
+    padding: 0 3vw;
+  }
+  .dr-vdivider {
+    width: 1px;
+    background: var(--gold);
+    opacity: 0.25;
+    align-self: stretch;
+    flex-shrink: 0;
+    min-height: 120px;
+  }
+  .dr-rule {
+    width: 36px; height: 1px;
+    background: var(--gold);
+    opacity: 0.45;
+    margin: 0 auto 20px;
+  }
+  .dr-label {
+    font-family: 'Cinzel', serif;
+    font-size: 7.5px;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 10px;
+  }
+  .dr-headline {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    margin: 0 0 8px;
+  }
+  .dr-ref {
+    font-family: 'Cormorant SC', serif;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .dr-excerpt {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--ink-faint);
+    margin: 0 0 16px;
+  }
+  .dr-link {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(139,58,15,0.22);
+    padding-bottom: 2px;
+    transition: all 0.2s;
+  }
+  .dr-link:hover { color: var(--accent-light); border-bottom-color: var(--accent-light); }
+  .dr-follow {
+    text-align: center;
+    margin-top: 34px;
+  }
+  .dr-follow a {
+    font-family: 'Cinzel', serif;
+    font-size: 7.5px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(138,109,69,0.25);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .dr-follow a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+  /* ─── Hub ────────────────────────────────────────────────── */
+  .hub {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 64px 5vw 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .hub-tile {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--ink);
+    padding: 34px 28px 28px;
+    border: 1px solid var(--border-light);
+    background: var(--parchment-mid);
+    transition: all 0.25s;
+  }
+  .hub-tile:hover {
+    border-color: var(--gold);
+    box-shadow: 0 6px 28px var(--shadow);
+    transform: translateY(-3px);
+  }
+  .hub-tile-num {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  .hub-tile-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: clamp(17px, 2vw, 22px);
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    margin: 0 0 14px;
+    line-height: 1.2;
+  }
+  .hub-tile-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-style: normal;
+    line-height: 1.6;
+    color: var(--ink-faint);
+    flex: 1;
+    margin: 0 0 28px;
+  }
+  .hub-tile-enter {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border-top: 1px solid var(--border-light);
+    padding-top: 14px;
+    display: block;
+    transition: color 0.2s;
+  }
+  .hub-tile:hover .hub-tile-enter { color: var(--accent); }
+
+  @media (max-width: 680px) {
+    .hub { grid-template-columns: 1fr; gap: 16px; padding: 40px 5vw 60px; }
+    .hub-tile { padding: 28px 24px 24px; }
+  }
+
+  /* ─── Animations ─────────────────────────────────────────── */
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* Scroll-reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── Responsive ─────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .featured-inner,
+    .glossary-inner { grid-template-columns: 1fr; gap: 48px; }
+    .books-grid { grid-template-columns: 1fr; }
+    .articles-placeholder { grid-template-columns: 1fr; }
+    .hub { grid-template-columns: 1fr 1fr; max-width: 680px; }
+    .nav-links { gap: 20px; }
+    .book-spine-wrap { display: none; }
+    .footer-inner { flex-direction: column; text-align: center; }
+    .footer-right { text-align: center; }
+  }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 4vw; }
+    .nav-links { gap: 14px; }
+    .nav-links a { font-size: 8px; letter-spacing: 0.15em; }
+    section, .featured, .glossary, .about { padding: 64px 5vw; }
+    .hero { padding: 80px 5vw 60px; min-height: 85vh; }
+    .hero-heb-bg { font-size: 160px; }
+    .dr-panels { flex-direction: column; }
+    .dr-vdivider { width: 36px; height: 1px; min-height: 0; align-self: center; margin: 28px 0; }
+    .dr-panel { padding: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="#" class="nav-logo">Hesed<span>Words</span></a>
+  <ul class="nav-links">
+    <li><a href="/old/reflections.html">Reflections</a></li>
+    <li><a href="/old/articles.html">Articles</a></li>
+    <li><a href="/old/word-studies.html">Word Studies</a></li>
+    <li><a href="/old/books.html">Books</a></li>
+    <li><a href="/old/glossary.html">Glossary</a></li>
+    <li><a href="/old/resources.html">Resources</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-heb-bg">חֶסֶד</div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">hesedwords.com · Norm Reed</div>
+    <div class="hero-heb-title">חֶסֶד</div>
+    <h1 class="hero-title">Hesed Words.</h1>
+    <p class="hero-tagline">Written for the road.</p>
+    <div class="hero-rule"></div>
+    <p class="hero-description">
+      Biblical reflection drawn from a life of early morning reading,
+      justice ministry, and the long walk with God.
+    </p>
+</div>
+</section>
+
+<!-- Jump to the combined index -->
+<a class="browse-jump" href="#browse" aria-label="Browse everything" title="Browse everything">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+    <circle cx="10.5" cy="10.5" r="6.5"></circle>
+    <line x1="15.4" y1="15.4" x2="20.5" y2="20.5"></line>
+  </svg>
+</a>
+
+<!-- Daily Reflections -->
+<div class="daily-reflection reveal">
+  <div class="dr-section-heading">Daily Reflections</div>
+  <div class="dr-panels">
+
+    <!-- Current Reading -->
+    <div class="dr-panel">
+      <div class="dr-rule"></div>
+      <div class="dr-label">Current Reading &nbsp;&middot;&nbsp; 9 August 2026</div>
+      <h2 class="dr-headline">Kept Anyway</h2>
+      <div class="dr-ref">1 Chronicles 4:9&ndash;10</div>
+      <p class="dr-excerpt">A reflection on Jabez, the nine chapters of genealogy nobody reads, and what it means to be remembered before anyone writes it down.</p>
+      <a href="/old/reflections/kept-anyway.html" class="dr-link">Read this reflection &rarr;</a>
+    </div>
+
+    <div class="dr-vdivider"></div>
+
+    <!-- Psalms -->
+    <div class="dr-panel">
+      <div class="dr-rule"></div>
+      <div class="dr-label">Psalms &nbsp;&middot;&nbsp; 8 August 2026</div>
+      <h2 class="dr-headline">God Alone</h2>
+      <div class="dr-ref">Psalm 62</div>
+      <p class="dr-excerpt">A small word runs through this psalm six times &mdash; <em>ak</em>, a fence, admitting nothing else inside. David commands his own soul to be still, is battered, and has to command it again.</p>
+      <a href="/old/reflections/god-alone.html" class="dr-link">Read this reflection &rarr;</a>
+    </div>
+
+  </div>
+
+  <div class="dr-follow">
+    <a href="/old/follow.html">Receive new reflections &mdash; how to follow &rarr;</a>
+  </div>
+</div>
+
+<!-- Hub -->
+<div class="hub">
+  <a href="/old/reflections.html" class="hub-tile reveal">
+    <div class="hub-tile-num">I &nbsp;·&nbsp; Reflections</div>
+    <h2 class="hub-tile-title">Reflections</h2>
+    <p class="hub-tile-desc">The verse that stopped me this morning.</p>
+    <span class="hub-tile-enter">Enter →</span>
+  </a>
+  <a href="/old/articles.html" class="hub-tile reveal">
+    <div class="hub-tile-num">II &nbsp;·&nbsp; Articles</div>
+    <h2 class="hub-tile-title">Articles</h2>
+    <p class="hub-tile-desc">The questions that take longer than a morning.</p>
+    <span class="hub-tile-enter">Enter →</span>
+  </a>
+  <a href="/old/word-studies.html" class="hub-tile reveal">
+    <div class="hub-tile-num">III &nbsp;·&nbsp; Word Studies</div>
+    <h2 class="hub-tile-title">Word Studies</h2>
+    <p class="hub-tile-desc">One word, and what the English lost.</p>
+    <span class="hub-tile-enter">Enter →</span>
+  </a>
+  <a href="/old/books.html" class="hub-tile reveal">
+    <div class="hub-tile-num">IV &nbsp;·&nbsp; Books</div>
+    <h2 class="hub-tile-title">Books</h2>
+    <p class="hub-tile-desc">The long works, to read or carry.</p>
+    <span class="hub-tile-enter">Enter →</span>
+  </a>
+  <a href="/old/glossary.html" class="hub-tile reveal">
+    <div class="hub-tile-num">V &nbsp;·&nbsp; Glossary</div>
+    <h2 class="hub-tile-title">Glossary</h2>
+    <p class="hub-tile-desc">The vocabulary, kept in the mouth.</p>
+    <span class="hub-tile-enter">Enter →</span>
+  </a>
+  <a href="/old/resources.html" class="hub-tile reveal">
+    <div class="hub-tile-num">VI &nbsp;·&nbsp; Resources</div>
+    <h2 class="hub-tile-title">Resources</h2>
+    <p class="hub-tile-desc">Texts worth returning to.</p>
+    <span class="hub-tile-enter">Enter →</span>
+  </a>
+</div>
+
+<!-- Browse Everything (combined index) -->
+<section class="browse" id="browse">
+  <div class="browse-heading">Browse Everything</div>
+  <p class="browse-intro">Every reflection, article, word study and book &mdash; filtered together.</p>
+
+  <div class="browse-filters">
+    <div class="browse-field">
+      <label for="browse-book">Book</label>
+      <select id="browse-book"><option value="">All</option></select>
+    </div>
+    <div class="browse-field">
+      <label for="browse-chapter">Chapter</label>
+      <select id="browse-chapter" disabled><option value="">All</option></select>
+    </div>
+    <div class="browse-field">
+      <label for="browse-verse">Verse</label>
+      <select id="browse-verse" disabled><option value="">All</option></select>
+    </div>
+    <div class="browse-field">
+      <label for="browse-theme-input">Theme</label>
+      <div class="browse-combo">
+        <input type="text" id="browse-theme-input" placeholder="All" autocomplete="off"
+               role="combobox" aria-expanded="false" aria-autocomplete="list"
+               aria-controls="browse-theme-list">
+        <button type="button" id="browse-theme-clear" aria-label="Clear theme filter" hidden>&times;</button>
+        <button type="button" id="browse-theme-toggle" aria-label="Show all themes" tabindex="-1">
+          <svg viewBox="0 0 10 6" aria-hidden="true" focusable="false">
+            <path d="M1 1 L5 5 L9 1" fill="none" stroke="currentColor" stroke-width="1.4"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <ul id="browse-theme-list" class="browse-combo-list" role="listbox" aria-label="Themes" hidden></ul>
+      </div>
+    </div>
+    <div class="browse-field">
+      <label for="browse-type">Type</label>
+      <select id="browse-type"><option value="">All</option></select>
+    </div>
+    <div class="browse-field">
+      <label for="browse-year">Year</label>
+      <select id="browse-year"><option value="">All</option></select>
+    </div>
+    <button type="button" id="browse-reset">Reset</button>
+  </div>
+
+  <div class="browse-count" id="browse-count"></div>
+  <div id="browse-listing"></div>
+</section>
+
+<!-- Personal links -->
+<div class="personal-links">
+  <span class="pl-name">Norm <span>Reed</span></span>
+  <a href="/old/about.html">About</a>
+  <a href="/old/contact.html">Contact</a>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-logo">Hesed<span>Words</span></div>
+      <div class="footer-tagline">Hesed words. Written for the road.</div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-foundation">Onesimus Foundation</div>
+      <div class="footer-location">Hobart, Tasmania, Australia</div>
+    </div>
+    <div class="footer-copy">© Norm Reed · hesedwords.com · All rights reserved</div>
+  </div>
+</footer>
+
+<!-- Combined index: four manifests, then the browse engine -->
+<script src="/old/js/reflections-data.js"></script>
+<script src="/old/js/articles-data.js"></script>
+<script src="/old/js/books-data.js"></script>
+<script src="/old/js/word-studies-data.js"></script>
+<script src="/old/js/browse.js"></script>
+
+<script>
+  // Scroll-reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
+    { threshold: 0.12 }
+  );
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

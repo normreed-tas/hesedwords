@@ -1,0 +1,443 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>God Seeks What Has Been Driven Away — Norm Reed</title>
+  <meta name="description" content="A morning with Ecclesiastes 3 — on time, mortality, and God's pursuit of the driven-away.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       HESEDWORDS.COM — ARTICLE TEMPLATE
+       God Seeks What Has Been Driven Away
+       Norm Reed · June 2026
+       ============================================================ */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --parchment:    #FAF5E8;
+      --ink:          #2A2218;
+      --ink-secondary:#4A3E2C;
+      --ink-muted:    #6B5C45;
+      --gold:         #A67C2E;
+      --gold-light:   #C8B58F;
+      --gold-pale:    #D9C49A;
+      --scripture-bg: #F4EDD6;
+    }
+
+    html {
+      font-size: 18px;
+      background: var(--parchment);
+      color: var(--ink);
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', 'Garamond', Georgia, serif;
+      line-height: 1.75;
+      background: var(--parchment);
+      color: var(--ink);
+    }
+
+    /* --- Page container --- */
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 64px 32px 88px;
+    }
+
+    /* --- Title block --- */
+    .title-block {
+      text-align: center;
+      margin-bottom: 52px;
+      padding-bottom: 44px;
+      border-bottom: 1px solid var(--gold-pale);
+    }
+
+    .eyebrow {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 22px;
+    }
+
+    .article-title {
+      font-family: 'Cinzel', serif;
+      font-weight: 500;
+      font-size: 2.15rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .article-subtitle {
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--ink-secondary);
+      margin-bottom: 26px;
+      line-height: 1.5;
+    }
+
+    .ornament {
+      display: block;
+      color: var(--gold);
+      font-size: 1rem;
+      letter-spacing: 0.55em;
+      margin-bottom: 22px;
+    }
+
+    .byline {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    /* --- Section headings --- */
+    .section-heading {
+      font-family: 'Cinzel', serif;
+      font-weight: 500;
+      font-size: 1.0rem;
+      letter-spacing: 0.1em;
+      color: var(--ink);
+      margin: 60px 0 8px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--gold-pale);
+    }
+
+    /* --- Body text --- */
+    .body-text p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--ink);
+      margin-bottom: 1.4em;
+    }
+
+    .body-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Drop cap — gold Cinzel, first paragraph of each section */
+    .drop-cap::first-letter {
+      font-family: 'Cinzel', serif;
+      font-size: 3.6em;
+      font-weight: 600;
+      color: var(--gold);
+      float: left;
+      line-height: 0.82;
+      margin-right: 0.07em;
+      margin-top: 0.06em;
+    }
+
+    /* --- Scripture block --- */
+    .scripture {
+      margin: 28px 0;
+      padding: 20px 24px 18px 28px;
+      border-left: 3px solid var(--gold);
+      background: var(--scripture-bg);
+      border-radius: 0 2px 2px 0;
+    }
+
+    .scripture p {
+      font-style: italic;
+      font-size: 0.97rem;
+      color: var(--ink-secondary);
+      line-height: 1.75;
+      margin-bottom: 0.4em;
+    }
+
+    .scripture p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .scripture .reference {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-style: normal;
+      font-size: 9px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 12px;
+    }
+
+    /* --- Italic block (the 12-year-old passage) --- */
+    .italic-block {
+      margin: 24px 0 28px;
+      padding: 4px 0 4px 26px;
+      border-left: 2px solid var(--gold-pale);
+    }
+
+    .italic-block p {
+      font-style: italic;
+      font-size: 0.97rem;
+      color: var(--ink-secondary);
+      line-height: 1.85;
+      margin-bottom: 1em;
+    }
+
+    .italic-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* --- Pull quote --- */
+    .pull-quote {
+      margin: 40px 0;
+      padding: 24px 0;
+      border-top: 1px solid var(--gold-pale);
+      border-bottom: 1px solid var(--gold-pale);
+      text-align: center;
+    }
+
+    .pull-quote p {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--ink-secondary);
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+
+    /* --- Ornamental divider --- */
+    .divider {
+      text-align: center;
+      color: var(--gold);
+      letter-spacing: 0.55em;
+      font-size: 0.9rem;
+      margin: 48px 0 44px;
+    }
+
+    /* --- AI acknowledgment --- */
+    .acknowledgment {
+      margin-top: 64px;
+      padding-top: 28px;
+      border-top: 1px solid var(--gold-pale);
+    }
+
+    .acknowledgment p {
+      font-style: italic;
+      font-size: 0.84rem;
+      color: var(--ink-muted);
+      line-height: 1.7;
+      margin-bottom: 0.75em;
+    }
+
+    .acknowledgment p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* --- Site tagline --- */
+    .tagline {
+      text-align: center;
+      margin-top: 52px;
+      padding-top: 28px;
+      border-top: 1px solid var(--gold-pale);
+    }
+
+    .tagline span {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 640px) {
+      .page { padding: 40px 20px 64px; }
+      .article-title { font-size: 1.65rem; }
+      .section-heading { font-size: 0.92rem; margin-top: 48px; }
+      .drop-cap::first-letter { font-size: 3em; }
+      .pull-quote p { font-size: 1.1rem; }
+      .scripture { padding: 16px 18px 14px 22px; }
+    }
+
+    /* --- Print --- */
+    @media print {
+      body { background: white; }
+      .page { max-width: 100%; padding: 0; }
+      .scripture { background: #F4EDD6; -webkit-print-color-adjust: exact; }
+      .pull-quote { page-break-inside: avoid; }
+      .section-heading { page-break-after: avoid; }
+    }
+  nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
+  nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
+  nav.hw-nav a:hover{opacity:1;color:#fff;}
+  nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
+  </style>
+</head>
+<body>
+<nav class="hw-nav">
+  <a href="/old/index.html">Home</a>
+  <a href="/old/reflections.html" class="current">Reflections</a>
+  <a href="/old/articles.html">Articles</a>
+  <a href="/old/word-studies.html">Word Studies</a>
+  <a href="/old/books.html">Books</a>
+  <a href="/old/glossary.html">Glossary</a>
+  <a href="/old/resources.html">Resources</a>
+</nav>
+  <div class="page">
+
+    <!-- ============================================================
+         TITLE BLOCK
+         ============================================================ -->
+    <header class="title-block">
+      <span class="eyebrow">A Hesedwords Reflection</span>
+      <h1 class="article-title">God Seeks What Has Been Driven Away</h1>
+      <p class="article-subtitle">A morning with Ecclesiastes 3</p>
+      <span class="ornament">· · ·</span>
+      <span class="byline">Norm Reed &middot; June 2026</span>
+    </header>
+
+    <!-- ============================================================
+         BODY
+         ============================================================ -->
+    <div class="body-text">
+
+      <!-- Opening -->
+      <p class="drop-cap">There are mornings when a passage of Scripture that you have read many times suddenly opens differently.</p>
+
+      <p>Ecclesiastes 3. A text I know well &mdash; or thought I did. Fourteen pairs of opposites. The famous list. A time for this, a time for that. Familiar enough that I have probably read past it more than I have read it.</p>
+
+      <p>This morning I read it slowly.</p>
+
+      <p>And something that I have been trying to understand for most of my adult life &mdash; what time actually means, not as a concept but as something we live inside &mdash; began, quietly, to take a different shape.</p>
+
+
+      <!-- ============================================================
+           SECTION ONE: A MORNING WITH THE TEACHER
+           ============================================================ -->
+      <h2 class="section-heading">A Morning with the Teacher</h2>
+
+      <p class="drop-cap">I found myself reading the passage again &mdash; this time as I might explain it to a child.</p>
+
+      <div class="italic-block">
+        <p>Have you ever noticed that life has different seasons? Sometimes things are happy. Sometimes things are sad. Sometimes things end, and sometimes things begin.</p>
+
+        <p>The Teacher looks at life and makes a list. There is a time to be born and a time to die. A time to laugh and a time to cry. A time to hold on and a time to let go. He lists fourteen pairs &mdash; all the opposite experiences that make up a human life.</p>
+
+        <p>And here&#8217;s the important thing: none of them are wrong. The sad times are not mistakes. The hard times are not accidents. Every season has its place. Even the difficult ones belong.</p>
+
+        <p>Deep inside every person there is a longing for something bigger than what we can see. A dog doesn&#8217;t lie awake wondering what life is for. But people do. That longing is something God placed inside us on purpose.</p>
+
+        <p>And the last thing &mdash; perhaps the most surprising. God doesn&#8217;t forget what gets lost. People who have been pushed aside, driven away, forgotten &mdash; God goes looking for them. Nothing that matters to God simply disappears.</p>
+      </div>
+
+
+      <!-- ============================================================
+           SECTION TWO: THE LONGING INSIDE
+           ============================================================ -->
+      <h2 class="section-heading">The Longing Inside</h2>
+
+      <p class="drop-cap">As a young man, I never thought I would die.</p>
+
+      <p>I suspect most of us don&#8217;t. Death exists &mdash; we know this the way we know about distant places. Real, but not here. Not today. It belongs to the far end of a very long road, and the road ahead still looks long.</p>
+
+      <p>Then something happens. Someone close to us dies and the distance collapses. Or a doctor uses a particular tone. Or a morning arrives that we did not expect to see.</p>
+
+      <p>For me it was a cardiac arrest. One moment ordinary life. The next, everything I had assumed about the future became suddenly, bodily uncertain. Time, which had always stretched comfortably ahead, revealed itself as finite. Not a concept. A fact about me, personally.</p>
+
+      <p>I think about pets in this connection &mdash; particularly the ones we give to children. A dog. A cat. Creatures whose lives are short by design. I have come to believe this is not incidental. The lifespan of a beloved animal is one of the ways children first learn that things end. That the warmth of a particular creature, once gone, is gone. A gentle classroom for a lesson that has no gentle version.</p>
+
+      <p>But here is what I notice. The reason mortality feels like loss &mdash; genuinely, achingly like loss &mdash; is precisely because of the <em>olam</em> Qoheleth describes. We carry eternity in our hearts, and so when time takes something from us it doesn&#8217;t feel like a natural process. It feels like a wrong. An interruption. Something that should not have the last word.</p>
+
+      <div class="pull-quote">
+        <p>Mortality is the cost of carrying eternity inside you.</p>
+      </div>
+
+      <p>The animal does not experience it this way. But we do. And that ache for something time cannot provide is not a design flaw. It is a clue.</p>
+
+
+      <!-- ============================================================
+           SECTION THREE: DRIVEN AWAY
+           ============================================================ -->
+      <h2 class="section-heading">Driven Away</h2>
+
+      <p class="drop-cap">Verse fifteen is the verse I cannot stop returning to.</p>
+
+      <div class="scripture">
+        <p>That which is, already has been; that which is to be, already is; and God seeks what has been driven away.</p>
+        <span class="reference">Ecclesiastes 3:15</span>
+      </div>
+
+      <p>The first two clauses establish something about time under God&#8217;s sovereignty. Nothing is truly new. Nothing is truly unprecedented. Time, for God, does not move the way it moves for us &mdash; in one direction, carrying things away as it goes.</p>
+
+      <p>And then the third clause lands.</p>
+
+      <div class="scripture">
+        <p>And God seeks what has been driven away.</p>
+      </div>
+
+      <p>The Hebrew word is <em>nirdaf</em> &mdash; from the root <em>radaf</em>, to pursue, to hunt, to chase. It is not a gentle word. It carries force. The <em>nirdaf</em> is the one pushed from their place by something outside themselves. Not someone who wandered. Someone who was driven.</p>
+
+      <p>God seeks that person out.</p>
+
+      <p>This is a statement about the character of God &mdash; what he does, where his attention goes. And it runs as a thread through the whole of Scripture.</p>
+
+      <p>In Ezekiel 34, God indicts the shepherds of Israel who scattered the flock and drove away the weak and wounded, and declares:</p>
+
+      <div class="scripture">
+        <p>I myself will search for my sheep.</p>
+        <span class="reference">Ezekiel 34:11</span>
+      </div>
+
+      <p>In Luke 15, Jesus answers the Pharisees who grumble that he eats with sinners &mdash; with three stories about going after what is lost. The sheep. The coin. The son. In John 9, he gives sight to a man born blind, and the religious authorities throw the man out. Drive him away. Immediately &mdash; the very next chapter &mdash; Jesus responds:</p>
+
+      <div class="scripture">
+        <p>I am the Good Shepherd. I came that they may have life, and have it abundantly.</p>
+        <span class="reference">John 10:11, 10</span>
+      </div>
+
+      <p>The thread is unbroken. From Qoheleth to Ezekiel to Luke to John.</p>
+
+      <p>God seeks the driven-away. The person the system marked and moved on from. The one reduced to a case number. The season of life that felt like pure loss and nothing more.</p>
+
+      <p>This is God&#8217;s current occupation.</p>
+
+      <p>Not managing the comfortable. Not administering the settled. Going after the one pushed from their place.</p>
+
+      <p>God seeks what has been driven away.</p>
+
+
+      <!-- ============================================================
+           CLOSING
+           ============================================================ -->
+      <div class="divider">· · ·</div>
+
+      <p>The question was never really about what time means philosophically. It was about what time does to us. What it takes. What it leaves behind.</p>
+
+      <p>Qoheleth&#8217;s answer, on an ordinary morning, was this: time does not have the last word. The seasons are real &mdash; all fourteen pairs of them. The losses are real. What has been driven away has genuinely gone.</p>
+
+      <p>But God seeks it out.</p>
+
+      <p>Nobody driven away is beyond his reach.</p>
+
+    </div><!-- /body-text -->
+
+
+    <!-- ============================================================
+         AI ACKNOWLEDGMENT
+         ============================================================ -->
+    <div class="acknowledgment">
+      <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+      <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+      <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+    </div>
+
+
+    <!-- ============================================================
+         SITE TAGLINE
+         ============================================================ -->
+    <div class="tagline">
+      <span>Hesed words &middot; Written for the road</span>
+    </div>
+
+  </div><!-- /page -->
+</body>
+</html>
