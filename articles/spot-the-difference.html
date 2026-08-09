@@ -4,165 +4,139 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spot the Difference — Hesed Words</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<meta name="description" content="Psalm 14 and Psalm 53 are almost the same psalm. Two missing lines change everything about how the last verse lands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
 <style>
-:root{
-  --parchment:#e8dfc8;
-  --parchment-page:#f3ecda;
-  --gold:#c9a84c;
-  --gold-deep:#A67C2E;
-  --gold-soft:#D9C49A;
-  --muted:#6B5C45;
-  --rule:#C8B58F;
-  --ink:#2c2417;
-}
-*{box-sizing:border-box;}
-body{margin:0;background:var(--parchment);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:1.16rem;line-height:1.75;}
-
-/* ── Site nav ── */
-nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-nav.hw-nav a:hover{opacity:1;color:#fff;}
-nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-/* ── Footer ── */
-footer.hw-foot{text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;}
-
-.page{max-width:40rem;margin:0 auto;background:var(--parchment-page);padding:3.5rem 3rem 2rem;}
-@media(max-width:640px){.page{padding:2.2rem 1.4rem 1rem;}}
-
-.eyebrow{text-align:center;font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep);}
-.eyebrow::before,.eyebrow::after{content:"";display:block;height:1px;background:var(--rule);margin:.9rem auto;width:4.5rem;}
-h1{font-family:'Cinzel',serif;font-weight:600;font-size:2.05rem;letter-spacing:.05em;text-align:center;margin:.6rem 0 .4rem;}
-.subtitle{text-align:center;font-style:italic;color:var(--muted);font-size:1.1rem;margin:0;}
-.motif{text-align:center;color:var(--gold);letter-spacing:.7em;margin:1.5rem 0 1.1rem;font-size:.8rem;}
-.byline{text-align:center;font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:2.6rem;}
-
-p{margin:0 0 1.1rem;}
-.body>p:first-of-type::first-letter{font-family:'Cinzel',serif;color:var(--gold-deep);font-size:3.1rem;line-height:.85;float:left;padding:.18rem .5rem .1rem 0;}
-
-blockquote.scripture{margin:1.6rem 0;padding:.2rem 0 .2rem 1.4rem;border-left:2px solid var(--gold);font-style:italic;color:#3b3122;}
-blockquote.scripture .ref{display:block;font-style:normal;font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-top:.55rem;}
-
-hr.div{border:0;height:1px;background:var(--rule);margin:2.6rem auto;width:8rem;}
-
-.fn{margin-top:2.8rem;padding-top:1.2rem;border-top:1px solid var(--rule);font-size:.98rem;color:var(--muted);font-style:italic;}
-.fn sup{font-style:normal;color:var(--gold-deep);}
-a.fnref{color:var(--gold-deep);text-decoration:none;}
-
-.ack{margin-top:2.6rem;padding-top:1.2rem;border-top:1px solid var(--rule);font-size:.93rem;font-style:italic;color:var(--muted);}
-.ack .ack-head{font-family:'Cinzel',serif;font-style:normal;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:.7rem;}
-@media print{nav.hw-nav,footer.hw-foot{display:none;}body{background:#fff;}.page{background:#fff;}}
+  .hw-article-body p.first::first-letter {
+    font-family: var(--font-serif); font-weight: 300; font-size: 3.2rem; line-height: 0.8;
+    float: left; margin: 0.3rem 0.5rem 0 0; color: var(--brass);
+  }
+  .hw-article-body hr.div { border: 0; height: 1px; background: var(--hairline); margin: 40px auto; width: 128px; }
+  .hw-article-body .fn { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--hairline); font-size: 15px; color: var(--muted); font-style: italic; }
+  .hw-article-body .fn sup { font-style: normal; color: var(--brass); }
+  .hw-article-body a.fnref { color: var(--brass); text-decoration: none; }
 </style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html">Reflections</a>
-  <a href="/articles.html" class="current">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-
-<div class="page">
-
-  <div class="eyebrow">Article</div>
-  <h1>Spot the Difference</h1>
-  <p class="subtitle">Psalm 14 and Psalm 53</p>
-  <div class="motif">&#8226;&#8226;&#8226;</div>
-  <div class="byline">Norm Reed</div>
-
-  <div class="body">
-
-  <p>You know the puzzle. Two pictures side by side, and they look the same. Same house, same tree, same man walking his dog. Then you look properly and the dog's collar has changed colour, and there's a window that wasn't there before, and once you've seen them you can't unsee them.</p>
-
-  <p>The Bible has a pair like that.</p>
-
-  <p>Psalm 14 and Psalm 53 are almost the same psalm. Same opening — the fool says in his heart, there is no God. Same look down from heaven. Same verdict: nobody does good, not one. And the same last verse, the same ache at the end of both: <em>Oh, that salvation would come out of Zion!</em></p>
-
-  <p>Almost the same. Not quite.</p>
-
-  <hr class="div">
-
-  <p>The difference is in the middle.</p>
-
-  <p>Here is Psalm 14, verses 5 and 6:</p>
-
-  <blockquote class="scripture">
-    There they are, in great terror, for God is with the generation of the righteous. You would shame the plans of the poor, but the LORD is his refuge.
-    <span class="ref">Psalm 14:5&ndash;6 (ESV)</span>
-  </blockquote>
-
-  <p>And here is Psalm 53, verse 5:</p>
-
-  <blockquote class="scripture">
-    There they are, in great terror, where there was no terror! For God scatters the bones of him who encamps against you; you put them to shame, for God has rejected them.
-    <span class="ref">Psalm 53:5 (ESV)</span>
-  </blockquote>
-
-  <p>Both start the same way. <em>There they are, in great terror.</em> Then they go different places.</p>
-
-  <p>Psalm 14 tells you why the terror came. God is with the righteous. Someone tried to trample the poor, and found the LORD standing in the way, and that was the fright — running into God where you did not expect him.</p>
-
-  <p>Psalm 53 does not tell you why. The terror simply arrives, out of nothing, <em>where there was no terror.</em> No righteous company standing there. No refuge for the poor. Just scattered bones and an army that ran.</p>
-
-  <p>Two things have gone missing. Look for them and you will not stop seeing them: the people God is with, and the place the poor could hide.</p>
-
-  <hr class="div">
-
-  <p>Now go back to the ending. Both psalms finish with the same cry:</p>
-
-  <blockquote class="scripture">
-    Oh, that salvation for Israel would come out of Zion! When God restores the fortunes of his people, let Jacob rejoice, let Israel be glad.
-    <span class="ref">Psalm 53:6 (ESV)</span>
-  </blockquote>
-
-  <p>Word for word, near enough. But the two cries are not standing on the same ground.<a class="fnref" href="#fn1" id="fnref1"><sup>1</sup></a></p>
-
-  <p>In Psalm 14 you have already been told that God is with the righteous, and that the poor have somewhere to hide. So when the cry comes, it is asking God to finish something he has started. There is a company to stand with while you wait. The waiting is not lonely.</p>
-
-  <p>In Psalm 53 all of that has been taken out. Between "nobody does good, not one" and the scattered bones there is nothing. No company. No refuge. No hint that anyone anywhere is standing in the right place. And then, into that emptiness, the same cry: <em>Oh, that salvation would come out of Zion.</em></p>
-
-  <p>Same words. Nowhere else to look.</p>
-
-  <hr class="div">
-
-  <p>Here is what neither psalm does. Neither one ends on the fool.</p>
-
-  <p>They could have. Both of them start there — the man who says there is no God, the whole crowd gone rotten, not one person doing good. That is a strong opening and it would make a strong ending too. Close the door on it. That is what people are like, and there it is.</p>
-
-  <p>Neither psalm ends there. Both turn, in the last verse, and look somewhere else entirely.</p>
-
-  <p>And notice where they look. Not at the people. Nobody in either psalm is going to pull this round by trying harder — the psalms have just spent three verses saying that nobody is in any state to try at all. The cry does not go out sideways, to a better sort of person. It goes up, and it goes to one place: <em>out of Zion.</em></p>
-
-  <p>Zion is where God lives. That is the whole point of naming it. Salvation has an address, and the address is not us.</p>
-
-  <p>So the last verse of both psalms is asking for something to travel. To come out from where God is, and reach as far as where we are.</p>
-
-  <hr class="div">
-
-  <p>And in Psalm 53 that is a long way.</p>
-
-  <p>That is not a problem for him. That is what he came out to do.</p>
-
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a href="/reflections.html">Reflections</a>
+      <a class="current" href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
   </div>
+</header>
 
-  <div class="fn" id="fn1">
-    <p><sup>1</sup> A note on how far this goes: the two missing lines are simply there in one psalm and not the other &mdash; anyone can check it. That the ending therefore feels more desperate in Psalm 53 is my reading, not the psalm's own claim. It does not say so. I think it is what the gap does, but you should weigh it.</p>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Article</div>
+      <div>Psalm 14</div>
+      <div>Psalm 53</div>
+      <div class="byline">Norm Reed</div>
+    </div>
+    <div>
+      <h1>Spot the Difference</h1>
+      <div class="hw-article-body">
+        <p class="first">You know the puzzle. Two pictures side by side, and they look the same. Same house, same tree, same man walking his dog. Then you look properly and the dog&rsquo;s collar has changed colour, and there&rsquo;s a window that wasn&rsquo;t there before, and once you&rsquo;ve seen them you can&rsquo;t unsee them.</p>
+
+        <p>The Bible has a pair like that.</p>
+
+        <p>Psalm 14 and Psalm 53 are almost the same psalm. Same opening &mdash; the fool says in his heart, there is no God. Same look down from heaven. Same verdict: nobody does good, not one. And the same last verse, the same ache at the end of both: <em>Oh, that salvation would come out of Zion!</em></p>
+
+        <p>Almost the same. Not quite.</p>
+
+        <hr class="div">
+
+        <p>The difference is in the middle.</p>
+
+        <p>Here is Psalm 14, verses 5 and 6:</p>
+
+        <p class="verse">There they are, in great terror, for God is with the generation of the righteous. You would shame the plans of the poor, but the LORD is his refuge. <em>Psalm 14:5&ndash;6</em></p>
+
+        <p>And here is Psalm 53, verse 5:</p>
+
+        <p class="verse">There they are, in great terror, where there was no terror! For God scatters the bones of him who encamps against you; you put them to shame, for God has rejected them. <em>Psalm 53:5</em></p>
+
+        <p>Both start the same way. <em>There they are, in great terror.</em> Then they go different places.</p>
+
+        <p>Psalm 14 tells you why the terror came. God is with the righteous. Someone tried to trample the poor, and found the LORD standing in the way, and that was the fright &mdash; running into God where you did not expect him.</p>
+
+        <p>Psalm 53 does not tell you why. The terror simply arrives, out of nothing, <em>where there was no terror.</em> No righteous company standing there. No refuge for the poor. Just scattered bones and an army that ran.</p>
+
+        <p>Two things have gone missing. Look for them and you will not stop seeing them: the people God is with, and the place the poor could hide.</p>
+
+        <hr class="div">
+
+        <p>Now go back to the ending. Both psalms finish with the same cry:</p>
+
+        <p class="verse">Oh, that salvation for Israel would come out of Zion! When God restores the fortunes of his people, let Jacob rejoice, let Israel be glad. <em>Psalm 53:6</em></p>
+
+        <p>Word for word, near enough. But the two cries are not standing on the same ground.<a class="fnref" href="#fn1" id="fnref1"><sup>1</sup></a></p>
+
+        <p>In Psalm 14 you have already been told that God is with the righteous, and that the poor have somewhere to hide. So when the cry comes, it is asking God to finish something he has started. There is a company to stand with while you wait. The waiting is not lonely.</p>
+
+        <p>In Psalm 53 all of that has been taken out. Between &ldquo;nobody does good, not one&rdquo; and the scattered bones there is nothing. No company. No refuge. No hint that anyone anywhere is standing in the right place. And then, into that emptiness, the same cry: <em>Oh, that salvation would come out of Zion.</em></p>
+
+        <p class="pull">Same words. Nowhere else to look.</p>
+
+        <hr class="div">
+
+        <p>Here is what neither psalm does. Neither one ends on the fool.</p>
+
+        <p>They could have. Both of them start there &mdash; the man who says there is no God, the whole crowd gone rotten, not one person doing good. That is a strong opening and it would make a strong ending too. Close the door on it. That is what people are like, and there it is.</p>
+
+        <p>Neither psalm ends there. Both turn, in the last verse, and look somewhere else entirely.</p>
+
+        <p>And notice where they look. Not at the people. Nobody in either psalm is going to pull this round by trying harder &mdash; the psalms have just spent three verses saying that nobody is in any state to try at all. The cry does not go out sideways, to a better sort of person. It goes up, and it goes to one place: <em>out of Zion.</em></p>
+
+        <p>Zion is where God lives. That is the whole point of naming it. Salvation has an address, and the address is not us.</p>
+
+        <p>So the last verse of both psalms is asking for something to travel. To come out from where God is, and reach as far as where we are.</p>
+
+        <hr class="div">
+
+        <p>And in Psalm 53 that is a long way.</p>
+
+        <p>That is not a problem for him. That is what he came out to do.</p>
+
+        <div class="fn" id="fn1">
+          <p><sup>1</sup> A note on how far this goes: the two missing lines are simply there in one psalm and not the other &mdash; anyone can check it. That the ending therefore feels more desperate in Psalm 53 is my reading, not the psalm&rsquo;s own claim. It does not say so. I think it is what the gap does, but you should weigh it.</p>
+        </div>
+
+        <div class="hw-disclaimer">
+          <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+          <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+          <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+        </div>
+
+      </div>
+    </div>
   </div>
+</article>
 
-  <div class="ack">
-    <div class="ack-head">A note on the writing</div>
-    <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
-    <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
-    <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
+    </div>
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
   </div>
-
-</div>
-
-<footer class="hw-foot">Hesed Words. Written for the road.</footer>
+</footer>
 
 </body>
 </html>
