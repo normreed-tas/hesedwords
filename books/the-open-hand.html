@@ -1,406 +1,174 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Man Who Opened His Hand — hesedwords.com</title>
-  <meta name="description" content="The story of Job, retold for curious minds. A reflection on Job 42:10 and the open hand that receives restoration." />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --parchment:     #f7f2e8;
-      --parchment-mid: #ede5d4;
-      --ink:           #2c1810;
-      --ink-mid:       #4a3318;
-      --ink-light:     #6b4f28;
-      --gold:          #c9a84c;
-      --gold-mid:      #8b6e41;
-      --gold-light:    rgba(201,168,76,0.15);
-      --nav-bg:        #1e1208;
-      --rule:          rgba(139,110,65,0.30);
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { font-size: 18px; scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      background-color: var(--parchment);
-      color: var(--ink);
-      line-height: 1.75;
-    }
-
-    /* =====================
-       HEADER PLACEHOLDER
-       =====================
-       Claude Code: replace this comment block with the
-       site-wide <header> / <nav> component taken from index.html.
-       Do not alter anything below this comment.
-    -->
-    /* ── Site nav ── */
-    nav.hw-nav{background:#1f1b16;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:center;gap:2.2rem;padding:1.05rem 1rem;flex-wrap:wrap;}
-    nav.hw-nav a{color:#f5edd6;text-decoration:none;opacity:.82;transition:opacity .2s;}
-    nav.hw-nav a:hover{opacity:1;color:#fff;}
-    nav.hw-nav a.current{opacity:1;border-bottom:1px solid #b8922c;padding-bottom:.15rem;}
-
-    /* =====================
-       ARTICLE HERO
-       ===================== */
-    .article-hero {
-      background:
-        radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 60%),
-        linear-gradient(180deg, #ede5d4 0%, var(--parchment) 100%);
-      border-bottom: 1px solid var(--rule);
-      padding: 72px 24px 56px;
-      text-align: center;
-    }
-
-    .article-section-label {
-      font-family: 'Cinzel', serif;
-      font-size: 0.5rem;
-      letter-spacing: 0.28em;
-      color: var(--gold-mid);
-      text-transform: uppercase;
-      margin-bottom: 24px;
-      opacity: 0.8;
-    }
-
-    .article-title {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 600;
-      color: var(--ink);
-      letter-spacing: 0.06em;
-      line-height: 1.2;
-      margin-bottom: 12px;
-    }
-
-    .article-subtitle {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      font-style: italic;
-      font-weight: 300;
-      color: var(--ink-light);
-      letter-spacing: 0.04em;
-      margin-bottom: 28px;
-    }
-
-    .article-rule {
-      width: 60px;
-      height: 1px;
-      background: var(--gold);
-      opacity: 0.5;
-      margin: 0 auto 24px;
-    }
-
-    .article-meta {
-      font-family: 'Cinzel', serif;
-      font-size: 0.5rem;
-      letter-spacing: 0.18em;
-      color: var(--gold-mid);
-      text-transform: uppercase;
-      opacity: 0.70;
-    }
-
-    .btn-download {
-      display: inline-block;
-      margin-top: 24px;
-      font-family: 'Cinzel', serif;
-      font-size: 0.6rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--ink);
-      background: var(--gold-light);
-      border: 1px solid var(--gold);
-      padding: 10px 22px;
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s;
-    }
-    .btn-download:hover {
-      background: var(--gold);
-      color: var(--parchment);
-    }
-
-    /* =====================
-       AI NOTE
-       ===================== */
-    .ai-note {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--rule);
-    }
-    .ai-note h2 {
-      font-family: 'Cinzel', serif;
-      font-size: 0.6rem;
-      letter-spacing: 0.24em;
-      color: var(--gold-mid);
-      text-transform: uppercase;
-      text-align: center;
-      margin-bottom: 1.2rem;
-      opacity: 0.80;
-    }
-    .ai-note p {
-      font-style: italic;
-      font-size: 0.9rem;
-      color: var(--ink-light);
-      line-height: 1.7;
-      margin-bottom: 0.8em;
-    }
-    .ai-note p:last-child { margin-bottom: 0; }
-
-    /* =====================
-       ARTICLE BODY
-       ===================== */
-    .article-body {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 64px 24px 96px;
-    }
-
-    /* Opening pull quote / scripture */
-    .scripture-epigraph {
-      text-align: center;
-      padding: 32px 40px;
-      margin-bottom: 52px;
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid var(--rule);
-      background: var(--gold-light);
-    }
-
-    .scripture-epigraph p {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-style: italic;
-      font-weight: 300;
-      color: var(--ink-mid);
-      line-height: 1.70;
-      margin-bottom: 10px;
-    }
-
-    .scripture-epigraph cite {
-      font-family: 'Cinzel', serif;
-      font-size: 0.5rem;
-      letter-spacing: 0.20em;
-      color: var(--gold-mid);
-      text-transform: uppercase;
-      font-style: normal;
-    }
-
-    /* Body paragraphs */
-    .article-body p {
-      font-size: 1.05rem;
-      font-weight: 400;
-      color: var(--ink);
-      margin-bottom: 1.6em;
-      line-height: 1.82;
-    }
-
-    /* Section breaks */
-    .article-body hr {
-      border: none;
-      width: 40px;
-      height: 1px;
-      background: var(--gold);
-      opacity: 0.40;
-      margin: 44px auto;
-    }
-
-    /* Section headings (used sparingly) */
-    .article-body h2 {
-      font-family: 'Cinzel', serif;
-      font-size: 0.6rem;
-      letter-spacing: 0.24em;
-      color: var(--gold-mid);
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      margin-top: 8px;
-      opacity: 0.80;
-    }
-
-    /* Pull-out line — the key statement */
-    .pull-quote {
-      border-left: 2px solid var(--gold);
-      padding: 4px 0 4px 28px;
-      margin: 40px 0;
-    }
-
-    .pull-quote p {
-      font-size: 1.15rem !important;
-      font-style: italic;
-      font-weight: 300;
-      color: var(--ink-mid) !important;
-      line-height: 1.68 !important;
-      margin-bottom: 0 !important;
-    }
-
-    /* Closing inscription */
-    .closing-inscription {
-      text-align: center;
-      padding-top: 40px;
-      border-top: 1px solid var(--rule);
-      margin-top: 56px;
-    }
-
-    .closing-inscription p {
-      font-family: 'Cinzel', serif;
-      font-size: 0.55rem;
-      letter-spacing: 0.22em;
-      color: var(--gold-mid);
-      text-transform: uppercase;
-      opacity: 0.70;
-      margin-bottom: 0 !important;
-      line-height: 2 !important;
-    }
-
-    /* =====================
-       FOOTER PLACEHOLDER
-       ===================== */
-
-    /* Claude Code: if the site has a global <footer> component,
-       insert it after .article-body and before </body>. */
-
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Man Who Opened His Hand — Hesed Words</title>
+<meta name="description" content="The story of Job, retold for curious minds. A reflection on Job 42:10 and the open hand that receives restoration.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&family=IBM+Plex+Mono:wght@400;500&family=Frank+Ruhl+Libre:wght@300..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/tokens.css" />
+<style>
+  .hw-article-body .break { text-align: center; color: var(--brass); letter-spacing: 0.6em; font-size: 14px; margin: 40px 0; }
+  .hw-article-body .closing-inscription { text-align: center; padding-top: 30px; border-top: 1px solid var(--hairline); margin-top: 40px; }
+  .hw-article-body .closing-inscription p {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em; color: var(--brass); text-transform: uppercase;
+    opacity: 0.85; margin-bottom: 0; line-height: 2;
+  }
+  .hw-article-body .download-bar { text-align: center; margin: 0 0 40px; }
+  .hw-article-body .dl-link {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+    text-decoration: none; border: 1px solid var(--hairline); padding: 9px 22px; display: inline-block;
+  }
+  .hw-article-body .dl-link:hover { background: var(--paper-hover); }
+</style>
 </head>
-<body>
+<body class="hw">
 
-<nav class="hw-nav">
-  <a href="/index.html">Home</a>
-  <a href="/reflections.html">Reflections</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/word-studies.html">Word Studies</a>
-  <a href="/books.html" class="current">Books</a>
-  <a href="/glossary.html">Glossary</a>
-  <a href="/resources.html">Resources</a>
-</nav>
+<header class="hw-nav">
+  <div class="hw-nav-inner">
+    <a href="/index.html" class="hw-wordmark">
+      <span class="name">HesedWords</span>
+      <span class="heb">חֶסֶד</span>
+    </a>
+    <nav>
+      <a href="/reflections.html">Reflections</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/word-studies.html">Word Studies</a>
+      <a class="current" href="/books.html">Books</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/resources.html">Resources</a>
+    </nav>
+  </div>
+</header>
 
-
-  <!-- ARTICLE HERO -->
-  <section class="article-hero">
-    <p class="article-section-label">Books &nbsp;·&nbsp; A Reflection for Curious Minds</p>
-    <h1 class="article-title">The Man Who Opened His Hand</h1>
-    <p class="article-subtitle">The Story of Job</p>
-    <div class="article-rule"></div>
-    <p class="article-meta">Job 42 &nbsp;·&nbsp; 10</p>
-    <a href="/books/the-open-hand.pdf" class="btn-download" target="_blank" rel="noopener">&#8595;&nbsp; Download PDF</a>
-  </section>
-
-
-  <!-- ARTICLE BODY -->
-  <article class="article-body">
-
-    <div class="scripture-epigraph">
-      <p>"The LORD restored the fortunes of Job<br>
-         when he prayed for his friends."</p>
-      <cite>Job 42 · 10</cite>
+<article class="hw-article">
+  <div class="hw-article-grid">
+    <div class="hw-article-meta">
+      <div class="kind">Book</div>
+      <div>Job 42:10</div>
+      <div class="byline">Norm Reed</div>
     </div>
+    <div>
+      <h1>The Man Who Opened His Hand</h1>
+      <div class="hw-article-body">
+        <p class="verse">The Story of Job</p>
 
-    <p>There was once a man named Job who had everything.</p>
+        <div class="download-bar">
+          <a href="/books/the-open-hand.pdf" class="dl-link" target="_blank" rel="noopener">&#8595; Download PDF</a>
+        </div>
 
-    <p>Not everything in a greedy way — in a good way. He had a family he loved and who loved him back. He had enough to eat, enough to share, and a name that people respected. He tried to live well, treated people fairly, and trusted God. By any measure, his life was full.</p>
+        <p class="verse">&ldquo;The LORD restored the fortunes of Job when he prayed for his friends.&rdquo; <em>Job 42 &middot; 10</em></p>
 
-    <p>And then, without warning, it all fell apart.</p>
+        <p>There was once a man named Job who had everything.</p>
 
-    <p>He lost his animals. He lost his wealth. He lost his children. And then his own body turned against him — painful sores that wouldn't heal, that left him sitting in the dust, miserable, wondering what on earth had happened.</p>
+        <p>Not everything in a greedy way &mdash; in a good way. He had a family he loved and who loved him back. He had enough to eat, enough to share, and a name that people respected. He tried to live well, treated people fairly, and trusted God. By any measure, his life was full.</p>
 
-    <p>Three friends came to see him. At first they just sat with him in silence, which was actually the best thing they did. But then they started talking — and that's where things went wrong.</p>
+        <p>And then, without warning, it all fell apart.</p>
 
-    <p>"You must have done something terrible," they said. "God doesn't punish good people. So you must not be as good as you think."</p>
+        <p>He lost his animals. He lost his wealth. He lost his children. And then his own body turned against him &mdash; painful sores that wouldn&rsquo;t heal, that left him sitting in the dust, miserable, wondering what on earth had happened.</p>
 
-    <p>Job knew they were wrong. He hadn't done anything to deserve this. And he said so — loudly, honestly, repeatedly. He didn't pretend to be fine when he wasn't. He didn't say polite things he didn't mean. He cried out to God with everything he had: <em>This isn't fair. I want an answer. I want to know why.</em></p>
+        <p>Three friends came to see him. At first they just sat with him in silence, which was actually the best thing they did. But then they started talking &mdash; and that&rsquo;s where things went wrong.</p>
 
-    <p>His friends kept insisting he was wrong. Job kept insisting he wasn't. The argument went around and around, getting nowhere.</p>
+        <p>&ldquo;You must have done something terrible,&rdquo; they said. &ldquo;God doesn&rsquo;t punish good people. So you must not be as good as you think.&rdquo;</p>
 
-    <hr>
+        <p>Job knew they were wrong. He hadn&rsquo;t done anything to deserve this. And he said so &mdash; loudly, honestly, repeatedly. He didn&rsquo;t pretend to be fine when he wasn&rsquo;t. He didn&rsquo;t say polite things he didn&rsquo;t mean. He cried out to God with everything he had: <em>This isn&rsquo;t fair. I want an answer. I want to know why.</em></p>
 
-    <p>And then God showed up.</p>
+        <p>His friends kept insisting he was wrong. Job kept insisting he wasn&rsquo;t. The argument went around and around, getting nowhere.</p>
 
-    <p>Not with an explanation. Not with an apology. Not even with an answer to Job's question. God showed up with questions of his own — enormous, breathtaking questions about the universe.</p>
+        <div class="break">&middot; &middot; &middot;</div>
 
-    <p><em>Where were you when I laid the foundation of the earth? Have you entered the springs of the sea? Can you bind the chains of the Pleiades? Do you know the laws of the heavens?</em></p>
+        <p>And then God showed up.</p>
 
-    <p>At first this sounds like God is trying to make Job feel small. But that's not quite it. What God was doing was far more interesting. He was saying: <em>You are asking questions about a universe you have barely seen the edges of. I am the one who made it. And I know you — I have seen you — and I have come.</em></p>
+        <p>Not with an explanation. Not with an apology. Not even with an answer to Job&rsquo;s question. God showed up with questions of his own &mdash; enormous, breathtaking questions about the universe.</p>
 
-    <p>Job had spent months demanding that God look at him, take him seriously, address him. And now God had. Not to explain the suffering. But to be present in it.</p>
+        <p><em>Where were you when I laid the foundation of the earth? Have you entered the springs of the sea? Can you bind the chains of the Pleiades? Do you know the laws of the heavens?</em></p>
 
-    <p>Something shifted in Job. He had wanted an argument, and what he received was an encounter. He had wanted a verdict, and what he received was a presence. And the presence was enough — more than enough — to change everything about how he was standing.</p>
+        <p>At first this sounds like God is trying to make Job feel small. But that&rsquo;s not quite it. What God was doing was far more interesting. He was saying: <em>You are asking questions about a universe you have barely seen the edges of. I am the one who made it. And I know you &mdash; I have seen you &mdash; and I have come.</em></p>
 
-    <hr>
+        <p>Job had spent months demanding that God look at him, take him seriously, address him. And now God had. Not to explain the suffering. But to be present in it.</p>
 
-    <p>Here is where the story gets strange. And important.</p>
+        <p>Something shifted in Job. He had wanted an argument, and what he received was an encounter. He had wanted a verdict, and what he received was a presence. And the presence was enough &mdash; more than enough &mdash; to change everything about how he was standing.</p>
 
-    <p>God turned to Job's three friends and said something remarkable: <em>You were wrong. Job was right. And Job is going to pray for you.</em></p>
+        <div class="break">&middot; &middot; &middot;</div>
 
-    <p>The friends who had made everything worse — the ones who had kicked Job while he was down, who had told him his suffering was his own fault — those men needed Job's prayer to make things right with God.</p>
+        <p>Here is where the story gets strange. And important.</p>
 
-    <p>Think about that for a moment.</p>
+        <p>God turned to Job&rsquo;s three friends and said something remarkable: <em>You were wrong. Job was right. And Job is going to pray for you.</em></p>
 
-    <p>Job had every reason to say: <em>Absolutely not. Let them sort it out themselves. I'm the one who suffered. They're the ones who made it worse. I owe them nothing.</em></p>
+        <p>The friends who had made everything worse &mdash; the ones who had kicked Job while he was down, who had told him his suffering was his own fault &mdash; those men needed Job&rsquo;s prayer to make things right with God.</p>
 
-    <p>And he would have been justified. Every word of it would have been true.</p>
+        <p>Think about that for a moment.</p>
 
-    <p>But Job prayed for them anyway.</p>
+        <p>Job had every reason to say: <em>Absolutely not. Let them sort it out themselves. I&rsquo;m the one who suffered. They&rsquo;re the ones who made it worse. I owe them nothing.</em></p>
 
-    <p>Not a polite, arm's-length prayer. The Hebrew word for what Job did — <em>hitpallel</em> — means to throw yourself into prayer on someone else's behalf. To give yourself fully to it. Job didn't send up a quick request and move on. He stood before God and genuinely, wholly, pleaded for the friends who had failed him.</p>
+        <p>And he would have been justified. Every word of it would have been true.</p>
 
-    <hr>
+        <p>But Job prayed for them anyway.</p>
 
-    <p>And then the story says this — and this is the line everything turns on:</p>
+        <p>Not a polite, arm&rsquo;s-length prayer. The Hebrew word for what Job did &mdash; <em>hitpallel</em> &mdash; means to throw yourself into prayer on someone else&rsquo;s behalf. To give yourself fully to it. Job didn&rsquo;t send up a quick request and move on. He stood before God and genuinely, wholly, pleaded for the friends who had failed him.</p>
 
-    <div class="pull-quote">
-      <p>The LORD restored the fortunes of Job when he prayed for his friends.</p>
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <p>And then the story says this &mdash; and this is the line everything turns on:</p>
+
+        <p class="pull">The LORD restored the fortunes of Job when he prayed for his friends.</p>
+
+        <p>Not before. Not separately. <em>When he prayed for his friends.</em></p>
+
+        <p>Now here is what I want you to see. This isn&rsquo;t a deal &mdash; it isn&rsquo;t <em>pray for your friends and you&rsquo;ll get rewarded</em>. That would be too small, and too cold.</p>
+
+        <p>What actually happened was this: throughout all the suffering, Job&rsquo;s hands had been clenched. Not because he was a bad person &mdash; because suffering does that. When things go badly wrong and people hurt you, the most natural thing in the world is to close your fist around the pain. To hold on to it, protect it, carry it. The closed fist says: <em>I&rsquo;m not letting go of this. This happened to me. I am owed something.</em></p>
+
+        <p>But a closed fist can&rsquo;t receive anything new.</p>
+
+        <p>When Job prayed for his friends &mdash; when he threw himself fully into asking for good things on behalf of people who hadn&rsquo;t deserved it from him &mdash; his hand opened. The thing he&rsquo;d been gripping so tightly, he let go of. Not because the wrong wasn&rsquo;t real. Not because his suffering hadn&rsquo;t happened. But because something bigger had taken hold of him: the encounter with God in the whirlwind had changed what he needed to hold on to.</p>
+
+        <p>And the open hand &mdash; the one that had just given something away for people who didn&rsquo;t deserve it &mdash; was exactly the hand that could now receive everything that came next.</p>
+
+        <div class="break">&middot; &middot; &middot;</div>
+
+        <h2>The Take-Home</h2>
+
+        <p>This is a story about what suffering can do to a person &mdash; and what an encounter with God can undo.</p>
+
+        <p>Suffering contracts us. It turns us inward, makes us smaller, makes everything about the pain and the wrong and the question of why. That&rsquo;s not weakness &mdash; it&rsquo;s just what suffering does.</p>
+
+        <p>But Job&rsquo;s story shows us that the contraction isn&rsquo;t permanent. That there is a moment &mdash; not forced, not automatic, not easy &mdash; when the fist can open. When the person who has been wronged becomes the one who prays for the wrongdoer. When the one who needed an intercessor becomes the intercessor.</p>
+
+        <p>That moment is not the reward for goodness. It is the evidence that something has changed inside. That the encounter with God &mdash; the experience of being truly seen, truly held &mdash; has freed the person from having to grip so tightly.</p>
+
+        <p>Job became the man who opened his hand. And in the opening, everything he had lost came back to him &mdash; and more besides.</p>
+
+        <p class="pull">The restoration and the opened hand are the same moment. That is the secret the verse is keeping.</p>
+
+        <div class="closing-inscription">
+          <p>A Reflection on Job 42 &middot; 10</p>
+          <p>Norm Reed &middot; Hesed Words</p>
+        </div>
+
+        <div class="hw-disclaimer">
+          <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
+          <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words in this book emerged through that dialogue.</p>
+          <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+        </div>
+
+      </div>
     </div>
+  </div>
+</article>
 
-    <p>Not before. Not separately. <em>When he prayed for his friends.</em></p>
-
-    <p>Now here is what I want you to see. This isn't a deal — it isn't <em>pray for your friends and you'll get rewarded</em>. That would be too small, and too cold.</p>
-
-    <p>What actually happened was this: throughout all the suffering, Job's hands had been clenched. Not because he was a bad person — because suffering does that. When things go badly wrong and people hurt you, the most natural thing in the world is to close your fist around the pain. To hold on to it, protect it, carry it. The closed fist says: <em>I'm not letting go of this. This happened to me. I am owed something.</em></p>
-
-    <p>But a closed fist can't receive anything new.</p>
-
-    <p>When Job prayed for his friends — when he threw himself fully into asking for good things on behalf of people who hadn't deserved it from him — his hand opened. The thing he'd been gripping so tightly, he let go of. Not because the wrong wasn't real. Not because his suffering hadn't happened. But because something bigger had taken hold of him: the encounter with God in the whirlwind had changed what he needed to hold on to.</p>
-
-    <p>And the open hand — the one that had just given something away for people who didn't deserve it — was exactly the hand that could now receive everything that came next.</p>
-
-    <hr>
-
-    <h2>The Take-Home</h2>
-
-    <p>This is a story about what suffering can do to a person — and what an encounter with God can undo.</p>
-
-    <p>Suffering contracts us. It turns us inward, makes us smaller, makes everything about the pain and the wrong and the question of why. That's not weakness — it's just what suffering does.</p>
-
-    <p>But Job's story shows us that the contraction isn't permanent. That there is a moment — not forced, not automatic, not easy — when the fist can open. When the person who has been wronged becomes the one who prays for the wrongdoer. When the one who needed an intercessor becomes the intercessor.</p>
-
-    <p>That moment is not the reward for goodness. It is the evidence that something has changed inside. That the encounter with God — the experience of being truly seen, truly held — has freed the person from having to grip so tightly.</p>
-
-    <p>Job became the man who opened his hand. And in the opening, everything he had lost came back to him — and more besides.</p>
-
-    <div class="pull-quote">
-      <p>The restoration and the opened hand are the same moment.<br>
-         That is the secret the verse is keeping.</p>
+<footer class="hw-foot">
+  <div class="hw-foot-inner">
+    <div>
+      <div class="hw-foot-word">HesedWords</div>
+      <div class="hw-foot-tag">Hesed words. Written for the road.</div>
     </div>
-
-    <div class="closing-inscription">
-      <p>A Reflection on Job 42 · 10</p>
-      <p>Norm Reed &nbsp;·&nbsp; Hesed Words</p>
-    </div>
-
-    <div class="ai-note">
-      <h2>A Note on the Making of This Book</h2>
-      <p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
-      <p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words in this book emerged through that dialogue.</p>
-      <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
-    </div>
-
-  </article>
-
-
-  <footer style="text-align:center;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#8a6d2b;padding:2.5rem 1rem 3.5rem;opacity:.8;">
-    Hesed Words. Written for the road.
-  </footer>
-
+    <div><a href="/about.html">About</a><br><a href="/contact.html">Contact</a><br><a href="/follow.html">Follow</a></div>
+    <div>Onesimus Foundation<br>Hobart, Tasmania<br>© Norm Reed</div>
+  </div>
+</footer>
 
 </body>
 </html>
