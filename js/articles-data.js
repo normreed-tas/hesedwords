@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "He Named the Gatekeepers",
+    url:      "/articles/he-named-the-gatekeepers.html",
+    date:     "2026-08-10",
+    scripture: ["1 Chronicles 15-17"],
+    themes:   ["genealogy", "names", "Obed-Edom", "Chronicles", "storytelling"],
+    summary:  "Samuel tells the ark's arrival in twelve verses and names four people. Chronicles tells the same story in eighty-six verses and names more than forty. On what the Chronicler chose to expand, what he chose to leave out entirely, and why the lists were never a failure of storytelling."
+  },
+  {
     title:    "Sitting with a Sinner",
     url:      "/articles/sitting-with-a-sinner.html",
     date:     "2026-08-07",
