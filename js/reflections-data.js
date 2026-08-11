@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Parables — You'll See",
+    date:     "2026-08-10",
+    url:      "/reflections/parables-youll-see.html",
+    summary:  "A phrase arrived six months before I could explain it — Lewis's 'weight of glory'. Then a Sunday sermon on the treasure hidden in a field and the pearl of great price, and a morning that came apart until the parable turned out to be about something bigger than the room we'd preached it in.",
+    scripture: ["Matthew 13"],
+    themes:   ["treasure", "pearl of great price", "weight of glory", "C.S. Lewis", "unveiling", "cardiac arrest"]
+  },
+  {
     title:    "Kept Anyway",
     date:     "2026-08-09",
     url:      "/reflections/kept-anyway.html",
