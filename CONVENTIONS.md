@@ -103,7 +103,7 @@ yada, da'at (paired entry, slug #yada), emet, paga, argos, ta'am, nashaq, sava, 
 chokmah, anavah, gibbor, rachash, mashak, eleos, charis, aletheia, agape, rasha, tzaddiq,
 hagioi (paired entry with hagios, filed under the plural since that's the form articles use),
 batach, menuha, yachad, nachalah, qavah, barak, shub (slug for the phrase "shub shebut"),
-yirat (slug for the phrase "yirat Adonai"), neder, gur, ruth (a proper name, not a
+yirat (slug for the phrase "yirat Adonai"), neder, gur, kavod, ruth (a proper name, not a
 transliterated word — scope exception since the whole point of its companion article is
 that "Ruth" is the standing picture of hesed).
 NOTE: this list has previously fallen out of sync with the actual glossary — if a word looks
@@ -129,6 +129,21 @@ NOT host their full text. Instead: a resource-card description, one short attrib
 quote (a sentence, not a paragraph), and a link out to a legitimate third-party page
 about the work (never a URL you can't verify — ask the maintainer for one, don't invent
 it). See resources.html's "The Weight of Glory" (C.S. Lewis) card for the pattern.
+Where a piece is substantively ABOUT a copyrighted work — criticism or review, which is
+stronger ground than illustration — two or three short attributed quotes across the
+article is the ceiling. Choose them deliberately; don't let favourites accumulate.
+
+DELIVER TWO FILES, ALWAYS — the deploy page, and a preview copy.
+  1. The deploy page links /css/tokens.css exactly as above. Opened on its own, outside
+     the site, it renders as unstyled black-on-white text, because the stylesheet lives
+     on the server. That is correct and expected — do not "fix" it by inlining.
+  2. The preview copy has the SAME filename with -PREVIEW appended, and the entire
+     current contents of tokens.css pasted into a <style> block in place of that link.
+     Nothing else differs. This is the only way to see the page as it will actually
+     appear before it is deployed.
+Fetch the current stylesheet from https://hesedwords.com/css/tokens.css each time rather
+than reusing an old copy. NEVER deploy the -PREVIEW file — it goes stale the moment
+tokens.css changes, and it defeats the shared-stylesheet rule.
 
 DO NOT create a card or landing-page/manifest entry yourself — just build the page.
 The card copy and manifest entry are added separately by the maintainer.
@@ -149,6 +164,9 @@ The card copy and manifest entry are added separately by the maintainer.
   rewritten to stay under `/old/`), purely so a human can browse the previous design
   live at hesedwords.com/old/ for comparison. Don't add new content to `/old/` — it's a
   frozen comparison copy, not a second live site.
+- **Preview files:** the `-PREVIEW` copies are throwaway. Don't commit them; they exist
+  only to be looked at before the real page ships. `.gitignore` carries `*-PREVIEW.html`
+  so a stray one can't be published by accident.
 - **Home page panels:** `index.html`'s "Current reading" ledger (`#current-reading`,
   built from `.hw-row` blocks) should have its newest entry updated whenever a new
   reflection is published — add a new `.hw-row` at the top.
@@ -185,22 +203,47 @@ The card copy and manifest entry are added separately by the maintainer.
   suits reprinted historical material. `resources.html` itself (the index/listing page)
   IS Direction A, using `.resource-card`. Do not convert the individual resource reading
   pages to Direction A unless specifically asked.
+- **Pages that legitimately do NOT link `/css/tokens.css`.** The shared-stylesheet rule
+  has a small set of deliberate exceptions. An audit that flags one of these as a stray
+  `-PREVIEW` copy or a broken page is wrong — leave them alone unless asked to convert:
+  - `/old/**` — the frozen previous-design snapshot.
+  - `resources/*.html` — the reprinted classical texts described above.
+  - `books/the-oldest-loneliness.html` — deliberately in **Onesimus Foundation house
+    style** (navy/teal/Arial, not Direction A). It is a pastoral book written for people
+    in prison, presented as Onesimus material rather than as a Hesed Words reading page.
+  - `books/who-would-have-thought-illustrated.html` — a **self-contained illustrated
+    edition** with its own honey/sky/rose palette and five base64-embedded fonts (which
+    is why the file runs to several MB). It is built to survive being printed or passed
+    around offline, so it embeds everything and styles its own `.hw-nav`/`.hw-foot`
+    instead of relying on the server's stylesheet.
+  - `reflections/jonah-2-8-poster.html` — a standalone A4 printable poster, with no site
+    nav or footer at all.
+  - `articles/hesedwords-article-template.html` and `articles/article-card-snippet.html`
+    — not pages; a template (still carrying `{{PLACEHOLDER}}` tokens) and a markup
+    snippet kept for reference.
 
 ## Established patterns for long-form / paired pieces
 
 - **Selah block**: `<div class="hw-selah">` with `.rule` / `.word` / `.rule` children —
   already fully styled by tokens.css, no per-page CSS needed. Use for a personal,
-  reflective pause in a reflection.
+  reflective pause in a reflection. The block is the ornamental divider; the reflective
+  text follows it as ordinary `<p>`.
 - **Pull-quotes**: `<p class="pull">` — already styled (large italic, dark ink). Rules
   of use: maximum two or three per piece; never lifted from a Selah block; never placed
   on the same screen as its own occurrence in the prose — set it further down (or ahead,
   if it foreshadows) so the repetition reads as a bridge, not an echo. Reserve for
-  sentences carrying the piece's actual argument, not for decoration.
+  sentences carrying the piece's actual argument, not for decoration. In a piece under
+  roughly 900 words there is nowhere to put one legitimately — leave them out.
+  At least one pull-quote in any piece should be Norm's own sentence rather than a
+  quoted author's, or the page reads as though it quotes its way to its conclusion.
 - **Scripture quotes**: `<p class="verse">` for a short quoted line inline in prose
   (oxblood left border, italic); `<blockquote>` (page-local CSS, border-left +
   italic + muted color) for a longer quoted passage set off from the text — see
   `reflections/kept-anyway.html` for a worked example of both used together (epigraph
-  as blockquote, single citation line as `.verse`).
+  as blockquote, single citation line as `.verse`). Reserve `.verse` for text the piece
+  is presenting AS scripture at that moment: if a phrase is quoted before the piece
+  reveals it is scripture, the oxblood border gives the reveal away — set it as plain
+  italic until the citation arrives.
 - **Footnotes**: superscript numeral (`sup.fn`, already styled) immediately after
   punctuation in the text; notes collected in `.hw-notes` (already styled) at the foot
   of the article, above the AI disclaimer, numbered per-article from 1.
