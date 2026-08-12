@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Telling David's Census to an Eight-Year-Old",
+    date:     "2026-08-12",
+    url:      "/reflections/telling-davids-census.html",
+    summary:  "Australia counted itself on Monday. In Chronicles a king counts his people and seventy thousand die — not because arithmetic is sinful, but because the one law governing a census sets a flat rate, so the count can tell you nothing about how strong you are. The chapter ends on a verse that reads like a footnote: David was too frightened of God to go to God, so God named a meeting place he could reach.",
+    scripture: ["1 Chronicles 21"],
+    themes:   ["census", "counting", "fear", "threshing floor", "temple", "Moriah", "repentance"]
+  },
+  {
     title:    "Parables — You'll See",
     date:     "2026-08-10",
     url:      "/reflections/parables-youll-see.html",
