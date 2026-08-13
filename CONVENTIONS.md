@@ -262,9 +262,18 @@ The card copy and manifest entry are added separately by the maintainer.
 
 ## PDF companions
 
-Companion PDFs are produced outside this repo's normal edit/preview/deploy loop and
-arrive as a finished file plus the article HTML, both to be uploaded together — the
-maintainer's job is to link them, not generate them. Notes for whoever generates them:
+**Companion PDFs are rendered repo-side, by Claude Code, from the built article** — not
+supplied ready-made by the drafting session. (This reverses the earlier arrangement, where
+they arrived as finished files from a separate Claude session working off the manuscript.)
+The reason is drift: a PDF rendered from the manuscript is a second, independent rendering
+path, so any later edit to the article silently leaves the two saying different things. A
+PDF rendered from `articles/<slug>.html` and the live `css/tokens.css` cannot drift, and can
+be regenerated at any time by re-running the render. It also lets the file and both of its
+links — the in-page block and the card's Download PDF — land in one commit, with no window
+where one exists without the other.
+
+So the drafting session does not need to produce a PDF. Prose final is enough; the render
+happens at build. Notes for the render:
 - Render from a nav/footer-stripped copy of the article, not via `@media print` rules on
   the live page — background suppression and elements like the cross-link box are
   unreliable that way.
@@ -274,3 +283,11 @@ maintainer's job is to link them, not generate them. Notes for whoever generates
   ink.
 - A translation note (e.g. a memory verse quoted in older wording where the rest of the
   piece uses ESV) counts as a footnote — mark the exception at first occurrence.
+- Hide footnote backlinks (`.hw-notes a.back`) and the dotted rule under `a.gloss` — both
+  are screen affordances that do nothing on paper.
+- Rendering is Playwright with `printBackground: true` (the Selah rules and any filled
+  block vanish without it). Playwright is present via the npx cache but not installed as a
+  module, so a render script needs it on `NODE_PATH`:
+  `NODE_PATH="$(ls -d "$LOCALAPPDATA"/npm-cache/_npx/*/node_modules | head -1)" node render.js`
+- Check the result by screenshotting the stripped HTML that produced it — this machine has
+  no PDF rasteriser, so the PDF itself can't be eyeballed from the shell.
