@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Who Are the Enemies of God? — Reading Psalm 68",
+    url:      "/articles/who-are-the-enemies-of-god.html",
+    date:     "2026-08-13",
+    scripture: ["Psalm 68"],
+    themes:   ["sorerim", "enemies", "selah", "dwelling", "love your enemies", "Dead Sea Scrolls"],
+    summary:  "Everyone knows the first line. Almost nobody reads the other thirty-three verses. Psalm 68 never names an enemy — it describes one, four times over, and a description fits whoever fits it. The same word for the rebellious in the parched land is the word for the people God chooses to live among."
+  },
+  {
     title:    "He Named the Gatekeepers",
     url:      "/articles/he-named-the-gatekeepers.html",
     date:     "2026-08-10",

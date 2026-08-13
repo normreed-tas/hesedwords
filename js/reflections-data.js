@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Love Your Enemies — What Psalm 68 Will Not Let You Do",
+    date:     "2026-08-13",
+    url:      "/reflections/love-your-enemies.html",
+    summary:  "A commandant in a wartime detention camp handed back the sermon script and cancelled the service: you don't love us, your enemies. The prisoners searched their own hearts, found he was telling the truth, and prayed to be forgiven. Psalm 68 gives permission to have enemies and no permission at all to deal with them.",
+    scripture: ["Psalm 68", "Matthew 5"],
+    themes:   ["enemies", "forgiveness", "repentance", "occupation", "prison ministry", "second mile"]
+  },
+  {
     title:    "Telling David's Census to an Eight-Year-Old",
     date:     "2026-08-12",
     url:      "/reflections/telling-davids-census.html",
