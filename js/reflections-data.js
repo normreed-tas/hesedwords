@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Succession Planning — Everything Set in Place",
+    date:     "2026-08-15",
+    url:      "/reflections/succession-planning.html",
+    summary:  "David left Solomon everything: the courses, the gatekeepers, the weight of gold for each lampstand, and a charge to serve God with a whole heart. The temple was built exactly as it was drawn. The kingdom lasted one generation. On what a full framework does to the man inside it, and why the plans were never the inheritance.",
+    scripture: ["1 Chronicles 22-29"],
+    themes:   ["lev", "shalem", "succession", "leadership", "handover", "burnout", "wholeheartedness"]
+  },
+  {
     title:    "Love Your Enemies — What Psalm 68 Will Not Let You Do",
     date:     "2026-08-13",
     url:      "/reflections/love-your-enemies.html",
