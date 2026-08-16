@@ -287,7 +287,10 @@ happens at build. Notes for the render:
   are screen affordances that do nothing on paper.
 - Rendering is Playwright with `printBackground: true` (the Selah rules and any filled
   block vanish without it). Playwright is present via the npx cache but not installed as a
-  module, so a render script needs it on `NODE_PATH`:
-  `NODE_PATH="$(ls -d "$LOCALAPPDATA"/npm-cache/_npx/*/node_modules | head -1)" node render.js`
+  module, so a render script needs it on `NODE_PATH`. There are several npx cache dirs and
+  only one has playwright — pick by testing, not by taking the first:
+  `PW=$(for d in "$LOCALAPPDATA"/npm-cache/_npx/*/node_modules; do [ -d "$d/playwright" ] && echo "$d" && break; done)`
+  then `NODE_PATH="$PW" node render.js`. (A `| head -1` glob silently picks the wrong one
+  and fails with "Cannot find module 'playwright'".)
 - Check the result by screenshotting the stripped HTML that produced it — this machine has
   no PDF rasteriser, so the PDF itself can't be eyeballed from the shell.

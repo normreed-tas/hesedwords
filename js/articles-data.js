@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "The Treasure",
+    url:      "/articles/the-treasure.html",
+    date:     "2026-08-16",
+    scripture: ["Matthew 13:44-46", "John 17"],
+    themes:   ["kavod", "hevel", "glory", "treasure", "pearl of great price", "C.S. Lewis", "exchange"],
+    summary:  "Two of the shortest stories Jesus told, read backwards from John 17. The man sells everything and buys the field — not the treasure, the dirt around it. If he is the buyer, what did he count worth everything? On kavod and hevel, the exchange Romans 1 calls a trade, and the one offer he refused."
+  },
+  {
     title:    "Who Are the Enemies of God? — Reading Psalm 68",
     url:      "/articles/who-are-the-enemies-of-god.html",
     date:     "2026-08-13",
