@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Psalm 75 — How Do I Pray This?",
+    url:      "/articles/how-do-i-pray-this.html",
+    date:     "2026-08-18",
+    scripture: ["Psalm 75"],
+    themes:   ["horn", "antiphon", "prayer", "promotion", "pride", "judgement", "thanksgiving"],
+    summary:  "Ten verses read, one verse prayed. Looking up horn recovered the picture — a ram coming up the road with its head back — and the psalm still would not pray. Recovering the picture was not the same as finding the occasion. On counting who is speaking, and what is left when the lines you cannot say are taken off you."
+  },
+  {
     title:    "The Treasure",
     url:      "/articles/the-treasure.html",
     date:     "2026-08-16",
