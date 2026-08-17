@@ -102,7 +102,7 @@ selah, hevel (note: some pieces spell hevel "hebel" — the glossary slug is #he
 yada, da'at (paired entry, slug #yada), emet, paga, argos, ta'am, nashaq, sava, sakal,
 chokmah, anavah, gibbor, rachash, mashak, eleos, charis, aletheia, agape, rasha, tzaddiq,
 hagioi (paired entry with hagios, filed under the plural since that's the form articles use),
-batach, menuha, yachad, nachalah, qavah, barak, shub (slug for the phrase "shub shebut"),
+batach, menuha, yachad, nachalah, qavah, qeren, barak, shub (slug for the phrase "shub shebut"),
 yirat (slug for the phrase "yirat Adonai"), neder, gur, kavod, ruth (a proper name, not a
 transliterated word — scope exception since the whole point of its companion article is
 that "Ruth" is the standing picture of hesed).
