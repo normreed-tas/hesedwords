@@ -9,20 +9,20 @@
    ================================================================ */
 const ARTICLES_META = [
   {
-    title:    "Telling It Wrong",
-    url:      "/articles/telling-it-wrong.html",
-    date:     "2026-08-17",
-    scripture: ["1 Samuel 17:29", "Psalm 74:22"],
-    themes:   ["davar", "riv", "translation", "cause", "preaching", "children's telling"],
-    summary:  "There is no word for cause in either famous verse. David said something nearer to \"I only asked a question\"; Psalm 74 asks God to prosecute a case. The translators did not change — English did. On four places a person can stand in front of a verse, and why the telling that carries the weight is the one that gets the details wrong."
-  },
-  {
     title:    "Psalm 75 — How Do I Pray This?",
     url:      "/articles/how-do-i-pray-this.html",
     date:     "2026-08-18",
     scripture: ["Psalm 75"],
     themes:   ["horn", "antiphon", "prayer", "promotion", "pride", "judgement", "thanksgiving"],
     summary:  "Ten verses read, one verse prayed. Looking up horn recovered the picture — a ram coming up the road with its head back — and the psalm still would not pray. Recovering the picture was not the same as finding the occasion. On counting who is speaking, and what is left when the lines you cannot say are taken off you."
+  },
+  {
+    title:    "Telling It Wrong",
+    url:      "/articles/telling-it-wrong.html",
+    date:     "2026-08-17",
+    scripture: ["1 Samuel 17:29", "Psalm 74:22"],
+    themes:   ["davar", "riv", "translation", "cause", "preaching", "children's telling"],
+    summary:  "There is no word for cause in either famous verse. David said something nearer to \"I only asked a question\"; Psalm 74 asks God to prosecute a case. The translators did not change — English did. On four places a person can stand in front of a verse, and why the telling that carries the weight is the one that gets the details wrong."
   },
   {
     title:    "The Treasure",
