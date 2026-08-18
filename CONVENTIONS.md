@@ -169,7 +169,13 @@ The card copy and manifest entry are added separately by the maintainer.
   so a stray one can't be published by accident.
 - **Home page panels:** `index.html`'s "Current reading" ledger (`#current-reading`,
   built from `.hw-row` blocks) should have its newest entry updated whenever a new
-  reflection is published — add a new `.hw-row` at the top.
+  reflection is published. It holds **exactly two rows, sorted by the piece's own date,
+  newest first** — add the new row and drop the older of the two.
+  Order by the DATE IN THE META BLOCK, not by arrival: pieces are sometimes finished out
+  of sequence and land with a date older than the row already sitting there, in which case
+  the new one goes *second*. Check the two dates after editing rather than assuming the
+  newcomer belongs on top; putting it there by reflex is the recurring mistake. The same
+  applies to the article cards in `articles.html` and every `-data.js` manifest.
 - **Reflections listing** is generated from the `ARTICLES` manifest in
   `js/reflections-data.js` (loaded via `<script src>` by `reflections.html`) — NOT
   inline in the page. Edit that file when adding a reflection, newest first.

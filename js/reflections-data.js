@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "What They Sang",
+    date:     "2026-08-18",
+    url:      "/reflections/what-they-sang.html",
+    summary:  "Judah's singers walked out ahead of the army with one line, and it was not composed for the occasion — it was the sentence they always sang, the refrain of Psalm 136. No petition in it, nothing about the outcome. Six months after his heart stopped, on the word in the middle of the song, and why it is not a battle strategy but a refusal to have one.",
+    scripture: ["2 Chronicles 20"],
+    themes:   ["hesed", "praise", "Jehoshaphat", "fear", "cardiac arrest", "Psalm 136"]
+  },
+  {
     title:    "The Cause I Applied For",
     date:     "2026-08-17",
     url:      "/reflections/the-cause-i-applied-for.html",
