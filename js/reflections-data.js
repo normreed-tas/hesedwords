@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "The Cause I Applied For",
+    date:     "2026-08-17",
+    url:      "/reflections/the-cause-i-applied-for.html",
+    summary:  "A driving academy, a grant knocked back, and two years before the reason arrived. Psalm 74 was written by a man who never finds out — he has lost the building, the prophet, and even the ability to tell how long the losing will go on, and the psalm ends with him still not knowing. Arise, O God, defend your cause. Not our cause. Yours.",
+    scripture: ["Psalm 74"],
+    themes:   ["cause", "unanswered prayer", "signs", "grant", "Risdon", "letting go"]
+  },
+  {
     title:    "Succession Planning — Everything Set in Place",
     date:     "2026-08-15",
     url:      "/reflections/succession-planning.html",

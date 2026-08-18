@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Telling It Wrong",
+    url:      "/articles/telling-it-wrong.html",
+    date:     "2026-08-17",
+    scripture: ["1 Samuel 17:29", "Psalm 74:22"],
+    themes:   ["davar", "riv", "translation", "cause", "preaching", "children's telling"],
+    summary:  "There is no word for cause in either famous verse. David said something nearer to \"I only asked a question\"; Psalm 74 asks God to prosecute a case. The translators did not change — English did. On four places a person can stand in front of a verse, and why the telling that carries the weight is the one that gets the details wrong."
+  },
+  {
     title:    "Psalm 75 — How Do I Pray This?",
     url:      "/articles/how-do-i-pray-this.html",
     date:     "2026-08-18",
