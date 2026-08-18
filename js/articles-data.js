@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Reading the Label",
+    url:      "/articles/reading-the-label.html",
+    date:     "2026-08-19",
+    scripture: ["Psalm 76"],
+    themes:   ["superscriptions", "mizmor", "maskil", "tehillah", "Asaph", "Sennacherib"],
+    summary:  "The line above a psalm is not a filing note — it is the only thing the psalm tells you about itself. Six headings, six reading instructions, and a book named after the label that appears exactly once. Psalm 76 as the worked example: a victory song about a morning nobody in the city fought for, which is why there is nothing in it to ask for."
+  },
+  {
     title:    "Psalm 75 — How Do I Pray This?",
     url:      "/articles/how-do-i-pray-this.html",
     date:     "2026-08-18",

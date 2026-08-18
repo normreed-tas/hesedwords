@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Notes for the Band",
+    date:     "2026-08-19",
+    url:      "/reflections/notes-for-the-band.html",
+    summary:  "Psalm 76 sat flat on the page, so I went looking for a hook and found one above it. A lifetime of reading the superscription as housekeeping — stage directions for the people with the instruments — and it turned out to be a list of kinds, each name saying how to take what follows. The line above the psalm was never notes for the band.",
+    scripture: ["Psalm 76"],
+    themes:   ["superscriptions", "maskil", "tehillah", "reading", "psalms"]
+  },
+  {
     title:    "What They Sang",
     date:     "2026-08-18",
     url:      "/reflections/what-they-sang.html",
