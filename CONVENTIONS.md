@@ -177,6 +177,18 @@ The card copy and manifest entry are added separately by the maintainer.
   the new one goes *second*. Check the two dates after editing rather than assuming the
   newcomer belongs on top; putting it there by reflex is the recurring mistake. The same
   applies to the article cards in `articles.html` and every `-data.js` manifest.
+- **`SITE-INDEX.md` is generated — never hand-edit it.** Rebuild with
+  `node tools/build-site-index.js` from the repo root as the LAST step of any commit
+  that adds or retitles a piece, so it never drifts from the manifests it is built
+  from. It lists every piece with date, scripture, themes and summary, and ends with
+  a theme index mapping each theme to everything carrying it.
+  Its purpose is the drafting session, which has no repo access and cannot hold a
+  114-piece site in mind: before writing, check whether the subject already exists,
+  and check the theme index for a companion. *Blue Blazers* shipped with no companion
+  line because nothing looked like a pair — `reflections/pride.html` was squarely the
+  same subject and already had an article of its own. The theme index would have shown
+  it at once. It is public at `hesedwords.com/SITE-INDEX.md`, so it can be fetched
+  rather than pasted where fetching is available.
 - **Reflections listing** is generated from the `ARTICLES` manifest in
   `js/reflections-data.js` (loaded via `<script src>` by `reflections.html`) — NOT
   inline in the page. Edit that file when adding a reflection, newest first.
