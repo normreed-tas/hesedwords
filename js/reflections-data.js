@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Blue Blazers",
+    date:     "2026-08-20",
+    url:      "/reflections/blue-blazers.html",
+    summary:  "Asa sought God his whole reign and sought physicians at the end of it. Uzziah lasted fifty-two years and was undone by the thing he had built, arriving on schedule. Neither of them changed gods; both of them stopped asking. On pride wearing church clothes, and a Saturday afternoon at a youth meeting.",
+    scripture: ["2 Chronicles 16", "2 Chronicles 26"],
+    themes:   ["pride", "seeking", "Asa", "Uzziah", "self-examination", "church culture"]
+  },
+  {
     title:    "Notes for the Band",
     date:     "2026-08-19",
     url:      "/reflections/notes-for-the-band.html",
