@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Almost the Same in the End",
+    date:     "2026-08-23",
+    url:      "/reflections/almost-the-same-in-the-end.html",
+    summary:  "Reading the Old Testament in Hebrew order means finishing in Chronicles, not Malachi — and the last page is Cyrus, a foreign king giving permission. Malachi leaves you waiting for someone; Chronicles lets you go. Set beside the end of Matthew, the same sentence is being said twice: authority received, and therefore go. Cyrus could give them a site and a permit. He could not go with them.",
+    scripture: ["2 Chronicles 36:23", "Matthew 28"],
+    themes:   ["Hebrew Bible order", "Chronicles", "Cyrus", "Great Commission", "exile", "genealogy", "endings"]
+  },
+  {
     title:    "Blue Blazers",
     date:     "2026-08-20",
     url:      "/reflections/blue-blazers.html",
