@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "The Thursday Psalm",
+    url:      "/articles/the-thursday-psalm.html",
+    date:     "2026-08-24",
+    scripture: ["Psalm 81"],
+    themes:   ["gittith", "superscriptions", "daily psalms", "liturgy", "Jewish tradition", "justice", "reading"],
+    summary:  "Psalm 81 has been said every Thursday since the Temple, and six others hold the rest of the week. Seven psalms out of a hundred and fifty, fixed to the days — three of them about justice, one about God's grief that his people will not listen, and no Psalm 23 among them. Forty-five years of reading, twice through the Psalter a year, and I did not know."
+  },
+  {
     title:    "Reading the Label",
     url:      "/articles/reading-the-label.html",
     date:     "2026-08-19",
