@@ -7,6 +7,18 @@
    ================================================================ */
 const STUDIES = [
   {
+    id:       "ws-tzedaqah",
+    word:     "צְדָקָה",
+    lang:     "hebrew",
+    translit: "tzedaqah",
+    title:    "Tzedaqah / Dikaiosynē",
+    url:      "/word-studies/tzedaqah.html",
+    date:     "2026-08-25",
+    scripture: ["Isaiah 45:21", "Isaiah 46:13", "Amos 5:24", "Matthew 3:15", "Romans 3:26"],
+    themes:   ["tzedaqah", "tzaddiq", "righteousness", "mishpat", "hesed", "emunah", "translation"],
+    summary:  "Tzedaqah is not a moral quality but rightness within a bond — remove the relationship and the word has nothing to describe. Which is why in Isaiah righteousness saves rather than condemns, and why it becomes the ordinary word for almsgiving. On what was lost crossing into Greek, where dikaiosynē was already one of the four cardinal virtues, and why the English has drifted into a score."
+  },
+  {
     id:       "ws-rasha",
     word:     "רָשָׁע",
     lang:     "hebrew",

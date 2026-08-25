@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Fitting",
+    url:      "/articles/fitting.html",
+    date:     "2026-08-25",
+    scripture: ["Matthew 3:15", "Romans 3:21-26"],
+    themes:   ["tzedaqah", "righteousness", "baptism", "John the Baptist", "translation", "dikaiosyne"],
+    summary:  "The first recorded public words of the adult Jesus are not a claim but a concession — let it be so now, for thus it is fitting for us. Not required, not owed. Fitting, and fitting for the two of them together. On what tzedaqah carried into Greek, why righteousness has no units, and a man who stood in a queue of people confessing sins he did not have."
+  },
+  {
     title:    "The Thursday Psalm",
     url:      "/articles/the-thursday-psalm.html",
     date:     "2026-08-24",

@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Being Right With Someone",
+    date:     "2026-08-25",
+    url:      "/reflections/being-right-with-someone.html",
+    summary:  "Righteousness told for an eight-year-old. Two men post the same ten dollars to the same house, and only one of them does a good thing. The word does not mean being right about something — it means being right with someone, and you cannot do it on your own. Then a man joins a queue he has no reason to be in, and stays there.",
+    scripture: ["Matthew 3:15"],
+    themes:   ["tzedaqah", "righteousness", "baptism", "eight-year-old telling", "children"]
+  },
+  {
     title:    "Almost the Same in the End",
     date:     "2026-08-23",
     url:      "/reflections/almost-the-same-in-the-end.html",
