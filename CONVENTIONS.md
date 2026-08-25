@@ -134,17 +134,21 @@ Where a piece is substantively ABOUT a copyrighted work — criticism or review,
 stronger ground than illustration — two or three short attributed quotes across the
 article is the ceiling. Choose them deliberately; don't let favourites accumulate.
 
-DELIVER TWO FILES, ALWAYS — the deploy page, and a preview copy.
-  1. The deploy page links /css/tokens.css exactly as above. Opened on its own, outside
-     the site, it renders as unstyled black-on-white text, because the stylesheet lives
-     on the server. That is correct and expected — do not "fix" it by inlining.
-  2. The preview copy has the SAME filename with -PREVIEW appended, and the entire
-     current contents of tokens.css pasted into a <style> block in place of that link.
-     Nothing else differs. This is the only way to see the page as it will actually
-     appear before it is deployed.
-Fetch the current stylesheet from https://hesedwords.com/css/tokens.css each time rather
-than reusing an old copy. NEVER deploy the -PREVIEW file — it goes stale the moment
-tokens.css changes, and it defeats the shared-stylesheet rule.
+DELIVER ONE FILE — the deploy page, linking /css/tokens.css exactly as above.
+Opened on its own, outside the site, it renders as unstyled black-on-white text,
+because the stylesheet lives on the server. That is correct and expected — do not
+"fix" it by inlining, and do not send a second inlined copy.
+
+(This replaces an earlier two-file rule that asked for a -PREVIEW copy with tokens.css
+pasted in, fetched from hesedwords.com. Drop it: a drafting session generally cannot
+reach the site, and a stylesheet fetched from the deployed site is wrong anyway
+whenever tokens.css has local changes that have not been pushed.)
+
+Previews are built repo-side instead, from the working-tree stylesheet:
+  node tools/build-preview.js reflections/some-piece.html
+which writes some-piece-PREVIEW.html beside it. *-PREVIEW.html is gitignored and must
+never be committed — it goes stale the moment tokens.css changes, and it defeats the
+shared-stylesheet rule.
 
 DO NOT create a card or landing-page/manifest entry yourself — just build the page.
 The card copy and manifest entry are added separately by the maintainer.
@@ -165,9 +169,11 @@ The card copy and manifest entry are added separately by the maintainer.
   rewritten to stay under `/old/`), purely so a human can browse the previous design
   live at hesedwords.com/old/ for comparison. Don't add new content to `/old/` — it's a
   frozen comparison copy, not a second live site.
-- **Preview files:** the `-PREVIEW` copies are throwaway. Don't commit them; they exist
-  only to be looked at before the real page ships. `.gitignore` carries `*-PREVIEW.html`
-  so a stray one can't be published by accident.
+- **Preview files:** the `-PREVIEW` copies are throwaway and built repo-side with
+  `node tools/build-preview.js <path/to/page.html>`, which inlines the working-tree
+  `css/tokens.css`. Don't commit them; they exist only to be looked at before the real
+  page ships. `.gitignore` carries `*-PREVIEW.html` so a stray one can't be published by
+  accident. The drafting session does not supply previews — it sends the deploy page only.
 - **Home page panels:** `index.html`'s "Current reading" ledger (`#current-reading`,
   built from `.hw-row` blocks) should have its newest entry updated whenever a new
   reflection is published. It holds **exactly two rows, sorted by the piece's own date,
