@@ -301,6 +301,10 @@ The card copy and manifest entry are added separately by the maintainer.
 - **Cross-links between companion pieces**: `.hw-companion` (already styled, italic
   muted line with an oxblood link) for a single inline sentence pointing to a paired
   article/reflection. One line may carry two links where a piece has two companions.
+  Mark it up as `<p class="hw-companion">` **inside** `.hw-article-body` — as a `<div>`
+  outside the body it escapes the body's 64ch measure and, at the top of a page, lands
+  above the body's top rule, so it runs wider than the prose and reads as part of the
+  header rather than the piece.
   **Placement is a judgement call, not a rule — top and foot are both correct.**
   Put it at the FOOT by default: it reads as "where to go next".
   Put it at the TOP, directly under the `<h1>`, when the piece ends on something a
