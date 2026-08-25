@@ -214,9 +214,21 @@ The card copy and manifest entry are added separately by the maintainer.
   recent items; drop the oldest when adding.
 - **Feed images:** `images/feed-banner.png` (1200×630) and `images/feed-icon.png`
   (512×512) are reused site-wide in `feed.xml` — don't regenerate per upload.
-- **In-page PDF link:** articles/books with a companion PDF need a download link on the
-  page itself, styled per the page's own palette (see `.hw-disclaimer`-adjacent blocks
-  in converted articles), not just on the listing card.
+- **In-page PDF link.** Any article with a companion PDF needs a download link on the
+  page itself, not just on the listing card. It is now fully styled in `tokens.css`, so
+  **add no page-local CSS for it** — this exact markup and nothing else:
+  ```html
+  <div class="pdf-download">
+    <a href="/articles/pdf/<slug>.pdf" target="_blank" rel="noopener">Download as PDF</a>
+  </div>
+  ```
+  **Placement is fixed:** after `.hw-disclaimer`, before any `.hw-companion` line. So the
+  foot of an article runs `.hw-notes` → `.hw-disclaimer` → `.pdf-download` → `.hw-companion`.
+  It renders as a small centred mono link, deliberately understated. Do NOT build a
+  bordered or tinted box for it — a `.pdf-box` / `.hw-pdf` panel placed above the notes
+  has arrived twice and been normalised twice. Articles predating the shared rule still
+  carry an identical copy of the CSS in their own `<style>`; that is duplication being
+  cleared, not a pattern to copy.
 - **Resource pages** (`resources/*.html`) intentionally keep the OLD Cinzel/parchment
   styling, not Direction A — they're public-domain classical texts, and the older look
   suits reprinted historical material. `resources.html` itself (the index/listing page)
@@ -263,9 +275,20 @@ The card copy and manifest entry are added separately by the maintainer.
   is presenting AS scripture at that moment: if a phrase is quoted before the piece
   reveals it is scripture, the oxblood border gives the reveal away — set it as plain
   italic until the citation arrives.
-- **Footnotes**: superscript numeral (`sup.fn`, already styled) immediately after
-  punctuation in the text; notes collected in `.hw-notes` (already styled) at the foot
-  of the article, above the AI disclaimer, numbered per-article from 1.
+- **Footnotes.** Numbered per-article from 1, `.hw-notes` sitting above the AI
+  disclaimer. Both ends are already styled — add no page-local CSS. Use this exact
+  markup, because the id placement is what makes the round trip work:
+  ```html
+  <!-- marker, immediately after the punctuation -->
+  <sup class="fn" id="fnref1"><a href="#fn1">1</a></sup>
+
+  <!-- note, inside <div class="hw-notes"> -->
+  <p class="n"><span class="num">1</span> Note text. <a class="back" href="#fnref1" id="fn1">&#8617;</a></p>
+  ```
+  The marker's `id` goes on the `<sup>`, not the inner `<a>`; the note's `id` goes on the
+  back-arrow. Both have been got wrong: an `<ol><li>` note list loses the `.n`/`.num`
+  styling, and a note with no `id` at all leaves the back-arrow pointing at nothing.
+  Check both directions resolve before shipping.
 - **Cross-links between companion pieces**: `.hw-companion` (already styled, italic
   muted line with an oxblood link) for a single inline sentence pointing to a paired
   article/reflection.

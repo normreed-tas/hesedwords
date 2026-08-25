@@ -270,6 +270,17 @@ footer.hw-foot a:hover { color: var(--oxblood-on-dark); }
 .hw-disclaimer { font-family: var(--font-mono); font-size: 12px; line-height: 1.85; color: var(--muted); margin-top: 40px; }
 .hw-disclaimer p { margin: 0 0 12px; }
 
+/* In-page "Download as PDF" link. Lives here so a reading page needs NO
+   page-local CSS for it — the markup alone is enough. Articles built before
+   this rule existed still carry an identical copy in their own <style>;
+   harmless duplication, cleared as those pages are next touched. */
+.hw-article-body .pdf-download { text-align: center; margin-top: 32px; }
+.hw-article-body .pdf-download a {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--hairline); padding-bottom: 2px;
+}
+.hw-article-body .pdf-download a:hover { color: var(--brass); border-bottom-color: var(--brass); }
+
 /* ── Browse-everything filter grid + result cards ───────────────
    Class names below are dictated by js/browse.js, which injects
    markup using these exact selectors — do not rename them. */
