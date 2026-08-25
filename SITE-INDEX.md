@@ -9,11 +9,16 @@ before writing: *does something on this already exist?* and *what did it say?*
 The theme index at the foot is the fastest way in — a new piece whose theme
 already appears there probably has a companion waiting.
 
-**119 pieces** — 80 reflections, 26 articles, 9 books, 4 word studies.
+**120 pieces** — 81 reflections, 26 articles, 9 books, 4 word studies.
 
 ---
 
-## Reflections (80)
+## Reflections (81)
+
+**2026-08-26 · You**
+Matthew 5 · `/reflections/blessed-are-you.html`
+*Themes:* Beatitudes, salt, persecution, chapter headings, Vietnam, cost
+Eight Beatitudes say those. Verse eleven says you, and it never goes back. Take out the editors' Salt and Light heading and there is no break — the same you carries straight across, and the line between them puts these people in company with the prophets, who were run out of town. Which means the salt of the earth is not the church at its most comfortable.
 
 **2026-08-25 · Being Right With Someone**
 Matthew 3:15 · `/reflections/being-right-with-someone.html`
@@ -624,7 +629,7 @@ Before it ever means to intercede, it means to fall upon — to strike, to meet 
 
 ---
 
-## Theme index (401 themes)
+## Theme index (406 themes)
 
 Every theme in use, and what carries it. A theme with more than one piece
 against it is a companion candidate.
@@ -653,6 +658,7 @@ against it is a companion candidate.
 - **baptism** — [Being Right With Someone](/reflections/being-right-with-someone.html) (reflection) · [Fitting](/articles/fitting.html) (article) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection)
 - **barak** — [The Last Word of the Road](/reflections/the-last-word-of-the-road.html) (reflection)
 - **batach** — [God Alone](/reflections/god-alone.html) (reflection) · [This I Know](/reflections/this-i-know.html) (reflection) · [I Am Like an Olive Tree](/reflections/i-am-like-an-olive-tree.html) (reflection) · [The Quiet Soul](/reflections/the-quiet-soul.html) (reflection) · [The Mountain That Cannot Be Moved](/reflections/the-mountain-that-cannot-be-moved.html) (reflection)
+- **beatitudes** — [You](/reflections/blessed-are-you.html) (reflection)
 - **being heard** — [The Oldest Loneliness](/books/the-oldest-loneliness.html) (book)
 - **being known** — [See Me Trying](/reflections/see-me-trying.html) (reflection)
 - **belief** — [Unless I Had Believed](/reflections/unless-i-had-believed.html) (reflection)
@@ -674,6 +680,7 @@ against it is a companion candidate.
 - **census** — [Telling David's Census to an Eight-Year-Old](/reflections/telling-davids-census.html) (reflection)
 - **certainty** — [Those Who Know Their God](/reflections/those-who-know-their-god.html) (reflection) · [Reading Daniel Without Arithmetic](/articles/reading-daniel-without-arithmetic.html) (article) · [Deceived](/reflections/deceived.html) (reflection)
 - **chanan** — [Eyes Fixed Upward](/reflections/eyes-fixed-upward.html) (reflection)
+- **chapter headings** — [You](/reflections/blessed-are-you.html) (reflection)
 - **character of god** — [Unless I Had Believed](/reflections/unless-i-had-believed.html) (reflection)
 - **charis** — [Is There No Hesed in John?](/articles/is-there-no-hesed-in-john.html) (article)
 - **charter of the church** — [He Has Told You…](/books/he-has-told-you.html) (book)
@@ -693,6 +700,7 @@ against it is a companion candidate.
 - **contempt** — [Eyes Fixed Upward](/reflections/eyes-fixed-upward.html) (reflection)
 - **conviction** — [We All Need Our Rechabites](/reflections/we-all-need-our-rechabites.html) (reflection)
 - **correction** — [Pride](/reflections/pride.html) (reflection) · [Nobody Left to Say No](/articles/nobody-left-to-say-no.html) (article) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection)
+- **cost** — [You](/reflections/blessed-are-you.html) (reflection)
 - **counting** — [Telling David's Census to an Eight-Year-Old](/reflections/telling-davids-census.html) (reflection) · [What Cannot Be Counted](/reflections/what-cannot-be-counted.html) (reflection)
 - **covenant** — [A Place for Salt](/reflections/a-place-for-salt.html) (reflection) · [The Place Where God Rests](/reflections/the-place-where-god-rests.html) (reflection) · [Called in Righteousness](/reflections/called-in-righteousness.html) (reflection)
 - **covering** — [Blessed Is the Man](/reflections/blessed-is-the-man.html) (reflection)
@@ -866,6 +874,7 @@ against it is a companion candidate.
 - **pearl of great price** — [The Treasure](/articles/the-treasure.html) (article) · [Parables — You'll See](/reflections/parables-youll-see.html) (reflection)
 - **penitential psalms** — [Blessed Is the Man](/reflections/blessed-is-the-man.html) (reflection)
 - **perception** — [Justice Is Not What You Think](/reflections/justice-is-not-what-you-think.html) (reflection)
+- **persecution** — [You](/reflections/blessed-are-you.html) (reflection)
 - **perseverance** — [The Dogs at the Perimeter](/reflections/the-dogs-at-the-perimeter.html) (reflection)
 - **peter** — [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection)
 - **pilgrimage** — [Songs for the Road](/books/songs-for-the-road.html) (book)
@@ -913,7 +922,7 @@ against it is a companion candidate.
 - **sacrifice** — [The Sacrifice of Thanksgiving](/reflections/the-sacrifice-of-thanksgiving.html) (reflection)
 - **saints** — [An Interview with a Saint](/articles/an-interview-with-a-saint.html) (article)
 - **sakal** — [Have They No Knowledge?](/reflections/have-they-no-knowledge.html) (reflection)
-- **salt** — [A Place for Salt](/reflections/a-place-for-salt.html) (reflection)
+- **salt** — [You](/reflections/blessed-are-you.html) (reflection) · [A Place for Salt](/reflections/a-place-for-salt.html) (reflection)
 - **salvation** — [Spot the Difference](/articles/spot-the-difference.html) (article)
 - **satisfaction** — [I Shall Be Satisfied](/reflections/i-shall-be-satisfied.html) (reflection)
 - **sava** — [I Shall Be Satisfied](/reflections/i-shall-be-satisfied.html) (reflection)
@@ -1004,6 +1013,7 @@ against it is a companion candidate.
 - **uzziah** — [Blue Blazers](/reflections/blue-blazers.html) (reflection)
 - **vengeance** — [Learning to Pray by Praying the Psalms — Until We Reach Psalm 83](/articles/until-we-reach-psalm-83.html) (article)
 - **verdict** — [Is "Wicked" a Verdict or a Character?](/word-studies/is-wicked-a-verdict-or-a-character.html) (word study)
+- **vietnam** — [You](/reflections/blessed-are-you.html) (reflection)
 - **vows** — [The Vow?](/reflections/the-vow.html) (reflection) · [The Vow That Is Not a Payment](/articles/vows.html) (article)
 - **vulnerability** — [Blessed Is the Man](/reflections/blessed-is-the-man.html) (reflection)
 - **waiting** — [Selah](/reflections/selah.html) (reflection) · [Unless I Had Believed](/reflections/unless-i-had-believed.html) (reflection) · [Eyes Fixed Upward](/reflections/eyes-fixed-upward.html) (reflection)

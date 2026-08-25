@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "You",
+    date:     "2026-08-26",
+    url:      "/reflections/blessed-are-you.html",
+    summary:  "Eight Beatitudes say those. Verse eleven says you, and it never goes back. Take out the editors' Salt and Light heading and there is no break — the same you carries straight across, and the line between them puts these people in company with the prophets, who were run out of town. Which means the salt of the earth is not the church at its most comfortable.",
+    scripture: ["Matthew 5"],
+    themes:   ["Beatitudes", "salt", "persecution", "chapter headings", "Vietnam", "cost"]
+  },
+  {
     title:    "Being Right With Someone",
     date:     "2026-08-25",
     url:      "/reflections/being-right-with-someone.html",

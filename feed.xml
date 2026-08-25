@@ -15,6 +15,16 @@
   <!-- ── Add new reflections at the TOP of this list, one <item> each ── -->
 
   <item>
+    <title>You</title>
+    <link>https://hesedwords.com/reflections/blessed-are-you.html</link>
+    <guid>https://hesedwords.com/reflections/blessed-are-you.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
+    <pubDate>Wed, 26 Aug 2026 06:00:00 +1000</pubDate>
+    <description>Eight Beatitudes say those. Verse eleven says you, and it never goes back. Take out the editors' heading and the salt of the earth turns out to be the persecuted.</description>
+  </item>
+
+  <item>
     <title>Being Right With Someone</title>
     <link>https://hesedwords.com/reflections/being-right-with-someone.html</link>
     <guid>https://hesedwords.com/reflections/being-right-with-someone.html</guid>
@@ -163,17 +173,6 @@
     <pubDate>Tue, 04 Aug 2026 06:00:00 +1000</pubDate>
     <description>Psalm 61 asks four times for a place, and every shelter in it has an owner. Then a vow appears and the prayer tilts: heard first, performed last, with the shelter sitting in between. Not the shape of a bargain.</description>
   </item>
-
-  <item>
-    <title>What Is Wicked in This Story?</title>
-    <link>https://hesedwords.com/reflections/what-is-wicked-in-this-story.html</link>
-    <guid>https://hesedwords.com/reflections/what-is-wicked-in-this-story.html</guid>
-    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
-    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
-    <pubDate>Mon, 03 Aug 2026 06:00:00 +1000</pubDate>
-    <description>Psalm 58 ends with the righteous bathing their feet in the blood of the wicked — unusable, until verse one turns out to say who it's actually addressed to. Not criminals. The bench.</description>
-  </item>
-
 
 </channel>
 </rss>
