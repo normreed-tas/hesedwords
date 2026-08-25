@@ -222,8 +222,11 @@ The card copy and manifest entry are added separately by the maintainer.
     <a href="/articles/pdf/<slug>.pdf" target="_blank" rel="noopener">Download as PDF</a>
   </div>
   ```
-  **Placement is fixed:** after `.hw-disclaimer`, before any `.hw-companion` line. So the
-  foot of an article runs `.hw-notes` → `.hw-disclaimer` → `.pdf-download` → `.hw-companion`.
+  **Placement:** last of the closing blocks, so the foot of an article runs
+  `.hw-notes` → `.hw-disclaimer` → `.pdf-download`, with a foot-placed `.hw-companion`
+  line after it. This describes the FOOT only — it is not an instruction about where a
+  companion line lives. Plenty of pieces carry theirs at the top instead (see below); on
+  those the chain simply ends at `.pdf-download` and nothing needs moving.
   It renders as a small centred mono link, deliberately understated. Do NOT build a
   bordered or tinted box for it — a `.pdf-box` / `.hw-pdf` panel placed above the notes
   has arrived twice and been normalised twice. Articles predating the shared rule still
@@ -291,7 +294,17 @@ The card copy and manifest entry are added separately by the maintainer.
   Check both directions resolve before shipping.
 - **Cross-links between companion pieces**: `.hw-companion` (already styled, italic
   muted line with an oxblood link) for a single inline sentence pointing to a paired
-  article/reflection.
+  article/reflection. One line may carry two links where a piece has two companions.
+  **Placement is a judgement call, not a rule — top and foot are both correct.**
+  Put it at the FOOT by default: it reads as "where to go next".
+  Put it at the TOP, directly under the `<h1>`, when the piece ends on something a
+  pointer would blunt — a closing `.verse`, or a deliberate final landing. *Love Your
+  Enemies* requires it at the top for exactly this reason: its last line is a `.verse`
+  with nothing after it. Where a set of pieces is published together and none is
+  obviously primary, the top also works as orientation, saying *this is one of three*
+  before the reader starts.
+  Do not move an existing companion line without a reason of this kind — the placement
+  is usually deliberate.
 - **Books / long-form works** — establish a page-local `<style>` for structural
   components as needed (`.toc`, `.chapter-heading`, `.part-divider`, `.callout`,
   `.definition-box`, etc.), built from the shared CSS variables. There is no single
