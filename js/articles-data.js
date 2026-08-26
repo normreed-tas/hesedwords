@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Seeking",
+    url:      "/articles/seeking.html",
+    date:     "2026-08-26",
+    scripture: ["Matthew 5-6", "Matthew 6:33"],
+    themes:   ["tzedaqah", "righteousness", "seeking", "Sermon on the Mount", "Moravians", "prison ministry", "the overlooked"],
+    summary:  "Seek first the kingdom of God and his righteousness. Behind the Greek stands tzedaqah — rightness within a bond, which cannot be accumulated, because a man alone has nobody to be right with. So seeking is not to attain to it but to step into it. On five uses of the word across the Sermon, two Moravians who were refused permission to sell themselves and went anyway, and a church bus in Hobart."
+  },
+  {
     title:    "Fitting",
     url:      "/articles/fitting.html",
     date:     "2026-08-25",

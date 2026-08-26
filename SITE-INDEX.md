@@ -9,7 +9,7 @@ before writing: *does something on this already exist?* and *what did it say?*
 The theme index at the foot is the fastest way in — a new piece whose theme
 already appears there probably has a companion waiting.
 
-**120 pieces** — 81 reflections, 26 articles, 9 books, 4 word studies.
+**121 pieces** — 81 reflections, 27 articles, 9 books, 4 word studies.
 
 ---
 
@@ -422,7 +422,12 @@ Forty years of ministry with the word righteousness — preaching it, building t
 
 ---
 
-## Articles (26)
+## Articles (27)
+
+**2026-08-26 · Seeking**
+Matthew 5-6; Matthew 6:33 · `/articles/seeking.html`
+*Themes:* tzedaqah, righteousness, seeking, Sermon on the Mount, Moravians, prison ministry, the overlooked
+Seek first the kingdom of God and his righteousness. Behind the Greek stands tzedaqah — rightness within a bond, which cannot be accumulated, because a man alone has nobody to be right with. So seeking is not to attain to it but to step into it. On five uses of the word across the Sermon, two Moravians who were refused permission to sell themselves and went anyway, and a church bus in Hobart.
 
 **2026-08-25 · Fitting**
 Matthew 3:15; Romans 3:21-26 · `/articles/fitting.html`
@@ -629,7 +634,7 @@ Before it ever means to intercede, it means to fall upon — to strike, to meet 
 
 ---
 
-## Theme index (406 themes)
+## Theme index (409 themes)
 
 Every theme in use, and what carries it. A theme with more than one piece
 against it is a companion candidate.
@@ -847,6 +852,7 @@ against it is a companion candidate.
 - **mishpat** — [Tzedaqah / Dikaiosynē](/word-studies/tzedaqah.html) (word study) · [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection) · [Star Wars](/reflections/star-wars.html) (reflection) · [My Oath — and What It Really Means](/reflections/my-oath.html) (reflection) · [Justice Is Not What You Think](/reflections/justice-is-not-what-you-think.html) (reflection) · [Our Feet Are Standing](/reflections/our-feet-are-standing.html) (reflection) · [He Has Told You…](/books/he-has-told-you.html) (book)
 - **mission** — [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection) · [Did the Word Become a List?](/reflections/did-the-word-become-a-list.html) (reflection)
 - **mizmor** — [Reading the Label](/articles/reading-the-label.html) (article)
+- **moravians** — [Seeking](/articles/seeking.html) (article)
 - **moriah** — [Telling David's Census to an Eight-Year-Old](/reflections/telling-davids-census.html) (reflection)
 - **morning** — [New Every Morning](/reflections/new-every-morning.html) (reflection)
 - **mortality** — [Understanding?](/reflections/understanding.html) (reflection) · [Selah](/reflections/selah.html) (reflection) · [God Seeks What Has Been Driven Away](/reflections/god-seeks-what-has-been-driven-away.html) (reflection)
@@ -888,7 +894,7 @@ against it is a companion candidate.
 - **preaching** — [Telling It Wrong](/articles/telling-it-wrong.html) (article)
 - **presence** — [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection) · [His Name Is Oil Poured Out](/reflections/let-his-name-be-poured-out.html) (reflection) · [Communion](/reflections/communion.html) (reflection) · [The Keeper on the Road](/reflections/the-keeper-on-the-road.html) (reflection)
 - **pride** — [Blue Blazers](/reflections/blue-blazers.html) (reflection) · [Psalm 75 — How Do I Pray This?](/articles/how-do-i-pray-this.html) (article) · [Pride](/reflections/pride.html) (reflection) · [Nobody Left to Say No](/articles/nobody-left-to-say-no.html) (article)
-- **prison ministry** — [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection) · [Sitting with a Sinner](/articles/sitting-with-a-sinner.html) (article) · [Measured, and Immeasurable](/articles/measured-and-immeasurable.html) (article) · [The Vow?](/reflections/the-vow.html) (reflection) · [What Is Wicked in This Story?](/reflections/what-is-wicked-in-this-story.html) (reflection) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection) · [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection) · [The Oldest Loneliness](/books/the-oldest-loneliness.html) (book) · [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection) · [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection)
+- **prison ministry** — [Seeking](/articles/seeking.html) (article) · [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection) · [Sitting with a Sinner](/articles/sitting-with-a-sinner.html) (article) · [Measured, and Immeasurable](/articles/measured-and-immeasurable.html) (article) · [The Vow?](/reflections/the-vow.html) (reflection) · [What Is Wicked in This Story?](/reflections/what-is-wicked-in-this-story.html) (reflection) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection) · [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection) · [The Oldest Loneliness](/books/the-oldest-loneliness.html) (book) · [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection) · [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection)
 - **promotion** — [Psalm 75 — How Do I Pray This?](/articles/how-do-i-pray-this.html) (article)
 - **prophecy** — [Those Who Know Their God](/reflections/those-who-know-their-god.html) (reflection) · [Reading Daniel Without Arithmetic](/articles/reading-daniel-without-arithmetic.html) (article)
 - **prophet** — [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection)
@@ -915,7 +921,7 @@ against it is a companion candidate.
 - **restoration** — [A Place for Salt](/reflections/a-place-for-salt.html) (reflection) · [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection) · [The Man Who Opened His Hand](/books/the-open-hand.html) (book) · [Like Those Who Dream](/reflections/like-those-who-dream.html) (reflection)
 - **restraint** — [Idle Words](/reflections/idle-words.html) (reflection)
 - **resurrection** — [Into Your Hand](/reflections/into-your-hand.html) (reflection) · [Not Finished Waking](/articles/not-finished-waking.html) (article)
-- **righteousness** — [Being Right With Someone](/reflections/being-right-with-someone.html) (reflection) · [Fitting](/articles/fitting.html) (article) · [Tzedaqah / Dikaiosynē](/word-studies/tzedaqah.html) (word study) · [When Mercy and Truth Met](/books/when-mercy-and-truth-met.html) (book) · [Star Wars](/reflections/star-wars.html) (reflection) · [My Oath — and What It Really Means](/reflections/my-oath.html) (reflection) · [Called in Righteousness](/reflections/called-in-righteousness.html) (reflection)
+- **righteousness** — [Seeking](/articles/seeking.html) (article) · [Being Right With Someone](/reflections/being-right-with-someone.html) (reflection) · [Fitting](/articles/fitting.html) (article) · [Tzedaqah / Dikaiosynē](/word-studies/tzedaqah.html) (word study) · [When Mercy and Truth Met](/books/when-mercy-and-truth-met.html) (book) · [Star Wars](/reflections/star-wars.html) (reflection) · [My Oath — and What It Really Means](/reflections/my-oath.html) (reflection) · [Called in Righteousness](/reflections/called-in-righteousness.html) (reflection)
 - **risdon** — [The Cause I Applied For](/reflections/the-cause-i-applied-for.html) (reflection)
 - **ritual** — [Communion](/reflections/communion.html) (reflection)
 - **riv** — [Telling It Wrong](/articles/telling-it-wrong.html) (article)
@@ -928,12 +934,13 @@ against it is a companion candidate.
 - **sava** — [I Shall Be Satisfied](/reflections/i-shall-be-satisfied.html) (reflection)
 - **second mile** — [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection)
 - **security** — [The Mountain That Cannot Be Moved](/reflections/the-mountain-that-cannot-be-moved.html) (reflection)
-- **seeking** — [Blue Blazers](/reflections/blue-blazers.html) (reflection)
+- **seeking** — [Seeking](/articles/seeking.html) (article) · [Blue Blazers](/reflections/blue-blazers.html) (reflection)
 - **selah** — [Who Are the Enemies of God? — Reading Psalm 68](/articles/who-are-the-enemies-of-god.html) (article) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Selah](/reflections/selah.html) (reflection) · [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection)
 - **self-deception** — [Deceived](/reflections/deceived.html) (reflection) · [Have They No Knowledge?](/reflections/have-they-no-knowledge.html) (reflection) · [What Is Already Yours](/reflections/what-is-already-yours.html) (reflection)
 - **self-examination** — [Blue Blazers](/reflections/blue-blazers.html) (reflection)
 - **selichah** — [Out of the Depths](/reflections/out-of-the-depths.html) (reflection)
 - **sennacherib** — [Reading the Label](/articles/reading-the-label.html) (article)
+- **sermon on the mount** — [Seeking](/articles/seeking.html) (article)
 - **servanthood** — [Jesus as Leader](/articles/jesus-as-leader.html) (article)
 - **shalem** — [Succession Planning — Everything Set in Place](/reflections/succession-planning.html) (reflection) · [The Vow?](/reflections/the-vow.html) (reflection) · [The Vow That Is Not a Payment](/articles/vows.html) (article)
 - **shalom** — [The Mountain That Cannot Be Moved](/reflections/the-mountain-that-cannot-be-moved.html) (reflection) · [Our Feet Are Standing](/reflections/our-feet-are-standing.html) (reflection) · [The Far Country](/reflections/the-far-country.html) (reflection)
@@ -981,6 +988,7 @@ against it is a companion candidate.
 - **the driven-away** — [God Seeks What Has Been Driven Away](/reflections/god-seeks-what-has-been-driven-away.html) (reflection)
 - **the fool** — [Spot the Difference](/articles/spot-the-difference.html) (article)
 - **the olive tree** — [I Am Like an Olive Tree](/reflections/i-am-like-an-olive-tree.html) (reflection)
+- **the overlooked** — [Seeking](/articles/seeking.html) (article)
 - **the people** — [Ezra Had the Scroll](/articles/ezra-had-the-scroll.html) (article)
 - **the poor** — [Spot the Difference](/articles/spot-the-difference.html) (article) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection)
 - **the prophets** — [He Does Not Afflict From His Heart](/articles/he-does-not-afflict-from-his-heart.html) (article)
@@ -1004,7 +1012,7 @@ against it is a companion candidate.
 - **truth** — [When Mercy and Truth Met](/books/when-mercy-and-truth-met.html) (book) · [My Oath — and What It Really Means](/reflections/my-oath.html) (reflection)
 - **tzaddiq** — [Tzedaqah / Dikaiosynē](/word-studies/tzedaqah.html) (word study) · [Is "Wicked" a Verdict or a Character?](/word-studies/is-wicked-a-verdict-or-a-character.html) (word study) · [They Have Not Prevailed](/reflections/they-have-not-prevailed.html) (reflection)
 - **tzedakah** — [Star Wars](/reflections/star-wars.html) (reflection) · [My Oath — and What It Really Means](/reflections/my-oath.html) (reflection) · [Justice Is Not What You Think](/reflections/justice-is-not-what-you-think.html) (reflection) · [Called in Righteousness](/reflections/called-in-righteousness.html) (reflection)
-- **tzedaqah** — [Being Right With Someone](/reflections/being-right-with-someone.html) (reflection) · [Fitting](/articles/fitting.html) (article) · [Tzedaqah / Dikaiosynē](/word-studies/tzedaqah.html) (word study)
+- **tzedaqah** — [Seeking](/articles/seeking.html) (article) · [Being Right With Someone](/reflections/being-right-with-someone.html) (reflection) · [Fitting](/articles/fitting.html) (article) · [Tzedaqah / Dikaiosynē](/word-studies/tzedaqah.html) (word study)
 - **unanswered prayer** — [The Cause I Applied For](/reflections/the-cause-i-applied-for.html) (reflection)
 - **understanding** — [Understanding?](/reflections/understanding.html) (reflection)
 - **unfinished reading** — [The Piece I Keep Picking Up](/reflections/the-piece-i-keep-picking-up.html) (reflection)
