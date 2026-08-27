@@ -15,6 +15,16 @@
   <!-- ── Add new reflections at the TOP of this list, one <item> each ── -->
 
   <item>
+    <title>So I Ask</title>
+    <link>https://hesedwords.com/reflections/so-i-ask.html</link>
+    <guid>https://hesedwords.com/reflections/so-i-ask.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
+    <pubDate>Thu, 27 Aug 2026 06:00:00 +1000</pubDate>
+    <description>Dogs, pigs, pearls — a verse that didn't seem to fit. Then the trampling word turned up in the salt saying two chapters earlier, and it is the only other place in Matthew it appears.</description>
+  </item>
+
+  <item>
     <title>You</title>
     <link>https://hesedwords.com/reflections/blessed-are-you.html</link>
     <guid>https://hesedwords.com/reflections/blessed-are-you.html</guid>
@@ -162,16 +172,6 @@
     <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Wed, 05 Aug 2026 06:00:00 +1000</pubDate>
     <description>A young man in Zechariah's second vision is stopped mid-survey — the cord was not the wrong instrument, just not the last word. A hard man in Papua New Guinea handed over every authority except the one to be merciful.</description>
-  </item>
-
-  <item>
-    <title>The Vow?</title>
-    <link>https://hesedwords.com/reflections/the-vow.html</link>
-    <guid>https://hesedwords.com/reflections/the-vow.html</guid>
-    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
-    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
-    <pubDate>Tue, 04 Aug 2026 06:00:00 +1000</pubDate>
-    <description>Psalm 61 asks four times for a place, and every shelter in it has an owner. Then a vow appears and the prayer tilts: heard first, performed last, with the shelter sitting in between. Not the shape of a bargain.</description>
   </item>
 
 </channel>

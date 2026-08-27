@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Trampled",
+    url:      "/articles/trampled.html",
+    date:     "2026-08-28",
+    scripture: ["Matthew 7:6", "Matthew 8"],
+    themes:   ["hesed", "discernment", "the Sermon on the Mount", "righteousness", "Matthew", "the centurion", "giving", "asking"],
+    summary:  "One word appears twice in Matthew and nowhere else — in the salt saying, and in the warning about pearls. What gets trampled is not something too good for the crowd; it is salt that has stopped being salt. Which changes what the pearl is, and leaves 7:6 giving a real danger and no way to tell who. Then Matthew 8 goes to a leper, a centurion and two men among the tombs."
+  },
+  {
     title:    "Seeking",
     url:      "/articles/seeking.html",
     date:     "2026-08-26",

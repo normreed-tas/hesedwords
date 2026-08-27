@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "So I Ask",
+    date:     "2026-08-27",
+    url:      "/reflections/so-i-ask.html",
+    summary:  "A verse I came across that didn't seem to fit — dogs, pigs, pearls. Take it out and nobody would notice. Then the trampling word turned up in the salt saying two chapters earlier, and it is the only other place in Matthew it appears. Which changes what the pearl is: not me, but what I have become.",
+    scripture: ["Matthew 7:6"],
+    themes:   ["hesed", "discernment", "the Sermon on the Mount", "prison ministry", "salt", "giving", "asking"]
+  },
+  {
     title:    "You",
     date:     "2026-08-26",
     url:      "/reflections/blessed-are-you.html",
