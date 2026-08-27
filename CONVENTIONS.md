@@ -114,13 +114,43 @@ If unsure of a slug, still use the natural transliteration — the glossary matc
 on the transliteration, so close spellings resolve.
 
 AI DISCLAIMER — articles, word studies, and books carry this block near the end of
-the .hw-article-body (reflections usually do not). Reuse verbatim inside a
-<div class="hw-disclaimer">:
-<p>These reflections did not begin with artificial intelligence. They began with years of ministry, reading, prayer, suffering, and conversation.</p>
-<p>During the development of this manuscript, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words that follow emerged through that dialogue.</p>
+the .hw-article-body (reflections usually do not). Three finished variants. There is
+nothing to edit: pick the one matching the page's kind and paste it verbatim inside a
+<div class="hw-disclaimer">.
+
+  Articles AND word studies — a word study takes "This article"; do not invent a
+  fourth variant for it:
+<p>This article did not begin with artificial intelligence. It began with years of ministry, reading, prayer, suffering, and conversation.</p>
+<p>During its development, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words here emerged through that dialogue.</p>
 <p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
-(Adjust "reflections" to "this story" / "this book" etc. where the piece calls for it —
-see books/who-would-have-thought.html for a book-appropriate variant.)
+
+  Books:
+<p>This book did not begin with artificial intelligence. It began with years of ministry, reading, prayer, suffering, and conversation.</p>
+<p>During its development, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words here emerged through that dialogue.</p>
+<p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+
+  Reflections — rare, since reflections usually carry no disclaimer at all:
+<p>This reflection did not begin with artificial intelligence. It began with years of ministry, reading, prayer, suffering, and conversation.</p>
+<p>During its development, AI became a conversation partner. It challenged assumptions, tested arguments, suggested structures, and helped refine expression. Many of the words here emerged through that dialogue.</p>
+<p>The experiences, convictions, interpretations, and conclusions remain my own.</p>
+
+DRIFT NOTE. This replaces an earlier form: one block opening "These reflections did
+not begin…", plus an instruction to adjust the wording where the piece called for it.
+The instruction was not wrong, and it was not ignored through carelessness — but a
+template plus "edit this" reliably produces the template unedited, and the plural
+opening reached six non-reflection pages before it was caught. Finished variants
+remove the chance to get it wrong, so do not reintroduce a single block with an
+adjust-as-needed note.
+Two wording changes carried through every variant, beyond the opening line:
+"the development of this manuscript" became "its development", because no single page
+is a manuscript; and "the words that follow" became "the words here", because the
+block sits at the foot with nothing following it.
+One documented exception: books/who-would-have-thought.html opens "This story",
+which is deliberate and accurate for a narrative written for younger readers. It
+carries the two wording changes above like everything else. Leave it as it is.
+books/when-mercy-and-truth-met.html carries an entirely separate single-paragraph
+acknowledgement naming the Onesimus Foundation — not this block at all, and not to be
+replaced with it.
 
 COPYRIGHT — before hosting or quoting any third-party text (not Norm's own writing),
 check whether the author is public domain. Confirmed public domain sources already on
