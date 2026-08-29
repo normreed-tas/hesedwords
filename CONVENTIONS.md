@@ -1,5 +1,25 @@
 # Hesed Words — Page Conventions (Direction A)
 
+> **AUTHORITATIVE AND COMPLETE.** This is the full conventions file, not an extract.
+> It serves publicly at https://hesedwords.com/CONVENTIONS.md and the repo copy at
+> the root is the same file. Full text current as of 29 August 2026 — if you are
+> holding a paste older than that, check the live file for changes since.
+>
+> **A fetched summary is not a substitute for this file.** Some tools return a
+> paraphrase of a fetched page rather than its text. Nearly everything here only works
+> verbatim: the nav and footer markup, the three finished disclaimer variants, the
+> footnote id placement, the glossary slug list, the PDF-download block. A summary of
+> any of those will produce plausible, wrong HTML with nothing to signal the error. If
+> what you are holding describes this file rather than reproducing it, you do not have
+> it. Obtain the full text before building.
+>
+> Targeted questions against the live URL are reliable where a whole-file fetch may not
+> be — asking for one markup block or one list returns it accurately. Use that to check
+> whether a specific spec has moved; do not use it to load the file.
+>
+> *Maintainer: bump the date above on every substantive edit. An unbumped date is a
+> confident false signal, worse than no date. `node tools/check-doc-dates.js` checks it.*
+
 Give this file (or the fenced block below) to any assistant generating a page for
 the site, so new pages arrive matching the live site and need no nav/footer fixes.
 
@@ -213,6 +233,13 @@ The card copy and manifest entry are added separately by the maintainer.
   the new one goes *second*. Check the two dates after editing rather than assuming the
   newcomer belongs on top; putting it there by reflex is the recurring mistake. The same
   applies to the article cards in `articles.html` and every `-data.js` manifest.
+- **Bump the header date when you edit this file or `COLLABORATION.md`.** Both carry
+  "Full text current as of <date>", which is the only thing telling a drafting session
+  whether its pasted copy is stale. Leaving it unbumped is worse than having no date —
+  it reports current while the content has moved. `node tools/check-doc-dates.js`
+  compares each header against that file's own last commit and exits non-zero when they
+  disagree; run it before committing a change to either. Re-paste the file into the
+  drafting project afterwards, or the bump only records the drift rather than closing it.
 - **`SITE-INDEX.md` is generated — never hand-edit it.** Rebuild with
   `node tools/build-site-index.js` from the repo root as the LAST step of any commit
   that adds or retitles a piece, so it never drifts from the manifests it is built

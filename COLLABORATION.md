@@ -1,5 +1,20 @@
 # COLLABORATION.md
 
+> **AUTHORITATIVE AND COMPLETE.** This is the full working note, not an extract.
+> It serves publicly at https://hesedwords.com/COLLABORATION.md and the repo copy at
+> the root is the same file. Full text current as of 29 August 2026 — if you are
+> holding a paste older than that, check the live file for changes since.
+>
+> **A fetched summary is not a substitute for this file.** Some tools return a
+> paraphrase of a fetched page rather than its text. A paraphrase of this note will
+> read as authoritative while dropping the specific example sentences, which are the
+> part that does the work — the faults here are recognisable by their instances, not
+> by their names. If what you are holding describes this file rather than reproducing
+> it, you do not have it. Obtain the full text before drafting.
+>
+> *Maintainer: bump the date above on every substantive edit. An unbumped date is a
+> confident false signal, worse than no date. `node tools/check-doc-dates.js` checks it.*
+
 ## Working Note for a New Conversation — How This Collaboration Runs
 
 You are working with Norm Reed on hesedwords.com. Read `CONVENTIONS.md` before any build.
