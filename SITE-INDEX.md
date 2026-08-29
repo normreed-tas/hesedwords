@@ -9,11 +9,16 @@ before writing: *does something on this already exist?* and *what did it say?*
 The theme index at the foot is the fastest way in — a new piece whose theme
 already appears there probably has a companion waiting.
 
-**123 pieces** — 82 reflections, 28 articles, 9 books, 4 word studies.
+**124 pieces** — 83 reflections, 28 articles, 9 books, 4 word studies.
 
 ---
 
-## Reflections (82)
+## Reflections (83)
+
+**2026-08-29 · I Know What You Are Thinking**
+Matthew 9:1-8 · `/reflections/i-know-what-you-are-thinking.html`
+*Themes:* pride, self-examination, forgiveness, scribes, prison ministry, seeing yourself
+We read the scribes the way you read a villain in a film, and never once think we might be them. But they were good men, and what they thought was true — only God can forgive sins. Jesus called it evil anyway. The man on the bed went home forgiven and walking; the men standing up had something wrong with them that nobody could see, including them.
 
 **2026-08-27 · So I Ask**
 Matthew 7:6 · `/reflections/so-i-ask.html`
@@ -644,7 +649,7 @@ Before it ever means to intercede, it means to fall upon — to strike, to meet 
 
 ---
 
-## Theme index (413 themes)
+## Theme index (415 themes)
 
 Every theme in use, and what carries it. A theme with more than one piece
 against it is a companion candidate.
@@ -769,7 +774,7 @@ against it is a companion candidate.
 - **fixed point** — [We All Need Our Rechabites](/reflections/we-all-need-our-rechabites.html) (reflection)
 - **following** — [Is There Not a Cause](/reflections/is-there-not-a-cause.html) (reflection)
 - **fool** — [Have They No Knowledge?](/reflections/have-they-no-knowledge.html) (reflection)
-- **forgiveness** — [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection) · [Measured, and Immeasurable](/articles/measured-and-immeasurable.html) (article) · [Blessed Is the Man](/reflections/blessed-is-the-man.html) (reflection) · [The Man Who Opened His Hand](/books/the-open-hand.html) (book) · [Out of the Depths](/reflections/out-of-the-depths.html) (reflection)
+- **forgiveness** — [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection) · [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection) · [Measured, and Immeasurable](/articles/measured-and-immeasurable.html) (article) · [Blessed Is the Man](/reflections/blessed-is-the-man.html) (reflection) · [The Man Who Opened His Hand](/books/the-open-hand.html) (book) · [Out of the Depths](/reflections/out-of-the-depths.html) (reflection)
 - **fruitfulness** — [What Is an Idle Word?](/word-studies/idle.html) (word study)
 - **gatekeeping** — [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection)
 - **genealogy** — [Almost the Same in the End](/reflections/almost-the-same-in-the-end.html) (reflection) · [He Named the Gatekeepers](/articles/he-named-the-gatekeepers.html) (article) · [Kept Anyway](/reflections/kept-anyway.html) (reflection)
@@ -905,8 +910,8 @@ against it is a companion candidate.
 - **praying scripture** — [Learning to Pray by Praying the Psalms — Until We Reach Psalm 83](/articles/until-we-reach-psalm-83.html) (article)
 - **preaching** — [Telling It Wrong](/articles/telling-it-wrong.html) (article)
 - **presence** — [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection) · [His Name Is Oil Poured Out](/reflections/let-his-name-be-poured-out.html) (reflection) · [Communion](/reflections/communion.html) (reflection) · [The Keeper on the Road](/reflections/the-keeper-on-the-road.html) (reflection)
-- **pride** — [Blue Blazers](/reflections/blue-blazers.html) (reflection) · [Psalm 75 — How Do I Pray This?](/articles/how-do-i-pray-this.html) (article) · [Pride](/reflections/pride.html) (reflection) · [Nobody Left to Say No](/articles/nobody-left-to-say-no.html) (article)
-- **prison ministry** — [So I Ask](/reflections/so-i-ask.html) (reflection) · [Seeking](/articles/seeking.html) (article) · [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection) · [Sitting with a Sinner](/articles/sitting-with-a-sinner.html) (article) · [Measured, and Immeasurable](/articles/measured-and-immeasurable.html) (article) · [The Vow?](/reflections/the-vow.html) (reflection) · [What Is Wicked in This Story?](/reflections/what-is-wicked-in-this-story.html) (reflection) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection) · [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection) · [The Oldest Loneliness](/books/the-oldest-loneliness.html) (book) · [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection) · [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection)
+- **pride** — [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection) · [Blue Blazers](/reflections/blue-blazers.html) (reflection) · [Psalm 75 — How Do I Pray This?](/articles/how-do-i-pray-this.html) (article) · [Pride](/reflections/pride.html) (reflection) · [Nobody Left to Say No](/articles/nobody-left-to-say-no.html) (article)
+- **prison ministry** — [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection) · [So I Ask](/reflections/so-i-ask.html) (reflection) · [Seeking](/articles/seeking.html) (article) · [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection) · [Sitting with a Sinner](/articles/sitting-with-a-sinner.html) (article) · [Measured, and Immeasurable](/articles/measured-and-immeasurable.html) (article) · [The Vow?](/reflections/the-vow.html) (reflection) · [What Is Wicked in This Story?](/reflections/what-is-wicked-in-this-story.html) (reflection) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection) · [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection) · [The Oldest Loneliness](/books/the-oldest-loneliness.html) (book) · [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection) · [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection)
 - **promotion** — [Psalm 75 — How Do I Pray This?](/articles/how-do-i-pray-this.html) (article)
 - **prophecy** — [Those Who Know Their God](/reflections/those-who-know-their-god.html) (reflection) · [Reading Daniel Without Arithmetic](/articles/reading-daniel-without-arithmetic.html) (article)
 - **prophet** — [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection)
@@ -944,12 +949,14 @@ against it is a companion candidate.
 - **salvation** — [Spot the Difference](/articles/spot-the-difference.html) (article)
 - **satisfaction** — [I Shall Be Satisfied](/reflections/i-shall-be-satisfied.html) (reflection)
 - **sava** — [I Shall Be Satisfied](/reflections/i-shall-be-satisfied.html) (reflection)
+- **scribes** — [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection)
 - **second mile** — [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection)
 - **security** — [The Mountain That Cannot Be Moved](/reflections/the-mountain-that-cannot-be-moved.html) (reflection)
+- **seeing yourself** — [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection)
 - **seeking** — [Seeking](/articles/seeking.html) (article) · [Blue Blazers](/reflections/blue-blazers.html) (reflection)
 - **selah** — [Who Are the Enemies of God? — Reading Psalm 68](/articles/who-are-the-enemies-of-god.html) (article) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Selah](/reflections/selah.html) (reflection) · [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection)
 - **self-deception** — [Deceived](/reflections/deceived.html) (reflection) · [Have They No Knowledge?](/reflections/have-they-no-knowledge.html) (reflection) · [What Is Already Yours](/reflections/what-is-already-yours.html) (reflection)
-- **self-examination** — [Blue Blazers](/reflections/blue-blazers.html) (reflection)
+- **self-examination** — [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection) · [Blue Blazers](/reflections/blue-blazers.html) (reflection)
 - **selichah** — [Out of the Depths](/reflections/out-of-the-depths.html) (reflection)
 - **sennacherib** — [Reading the Label](/articles/reading-the-label.html) (article)
 - **sermon on the mount** — [Seeking](/articles/seeking.html) (article)

@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "I Know What You Are Thinking",
+    date:     "2026-08-29",
+    url:      "/reflections/i-know-what-you-are-thinking.html",
+    summary:  "We read the scribes the way you read a villain in a film, and never once think we might be them. But they were good men, and what they thought was true — only God can forgive sins. Jesus called it evil anyway. The man on the bed went home forgiven and walking; the men standing up had something wrong with them that nobody could see, including them.",
+    scripture: ["Matthew 9:1-8"],
+    themes:   ["pride", "self-examination", "forgiveness", "scribes", "prison ministry", "seeing yourself"]
+  },
+  {
     title:    "So I Ask",
     date:     "2026-08-27",
     url:      "/reflections/so-i-ask.html",
