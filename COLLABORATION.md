@@ -54,6 +54,30 @@ should replace them, not follow them. Fragment-stacking is the same fault: three
 assent where one does the work. Test: a sentence that lands on an object usually survives; a
 sentence that lands on a concept usually doesn't.
 
+Instances found in review, kept as examples rather than rules:
+
+- **Verdict sentences.** A paragraph that ends by rating the reading it has just given is
+  telling the reader what to think of it ("It is the only reading that accounts for the
+  sparrow"). If the reading is good the reader will reach the verdict unaided; if it isn't,
+  the sentence won't rescue it. Cut the verdict and let the last piece of evidence stand as
+  the last line.
+- **Promised payoffs.** Do not point forward at material the piece has not reached ("That
+  will matter enormously by verse 10, so hold it"). It buys anticipation by spending the
+  surprise, and it turns the reader into someone carrying an assignment. A detail worth
+  recalling later will be recalled if it was concrete enough the first time. Lay it down
+  plainly and trust it.
+- **Methodological asides.** Justifying the paragraph just written is the narrator stepping
+  out to be seen working ("I mention all of this because the honest position is worth more
+  here than a confident one"). Uncertainty belongs in how the claim is phrased, not in a
+  following sentence congratulating the piece for admitting it. Say no occasion is recorded
+  and move on.
+- **Announcing before delivering.** A sentence that advertises the quality of the next one
+  weakens both ("Then the second verb does something the English can only gesture at";
+  "Read it slowly and it is nearly unbearable"). This is the hedging-before-the-best-line
+  fault pointed forward instead of back, and it is the commonest of all in Hebrew work,
+  where the temptation is to frame a good piece of vocabulary rather than simply produce
+  it. Give the word, give what it means, stop.
+
 **Carry generosity in a confession, not a disclaimer.** Where a piece has to be fair to
 someone — a preacher being disagreed with, a source, a position being argued against — "That
 is true. I have said it myself" does the work that "It was a good message, and I want to say
