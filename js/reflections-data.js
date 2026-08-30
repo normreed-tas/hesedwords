@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Why Do You Think Evil",
+    date:     "2026-08-30",
+    url:      "/reflections/why-do-you-think-evil.html",
+    summary:  "Six years of arguing with a friend about where the line is, and neither of us able to answer the other. Then a scheduled reading in Matthew 9, where three assessments are made by serious men, none of them wrong about the facts, and the word evil falls not on the man on the mat or the men at the table but on the ones doing the arithmetic. I have not stopped assessing people. I have stopped trusting the result.",
+    scripture: ["Matthew 9"],
+    themes:   ["judgement", "mercy", "prison ministry", "self-examination", "Hosea", "assessing people"]
+  },
+  {
     title:    "I Know What You Are Thinking",
     date:     "2026-08-29",
     url:      "/reflections/i-know-what-you-are-thinking.html",
