@@ -120,30 +120,58 @@ if (fs.existsSync(regPath)) {
   }
 }
 
-// ---- which context files just changed --------------------------------------
+// ---- context files: what the drafting project is actually holding -----------
 // These four are pasted into the drafting project. The repo copy is authoritative
 // but the session reads the paste, so a commit that changes one is only half done
-// until it is re-uploaded. Name them explicitly rather than leaving it to be
-// inferred from the commit message.
+// until it is re-uploaded.
+//
+// Reporting "changed in the last commit" is not enough: a file that changed three
+// commits ago and was never re-pasted stays stale and silent. SITE-INDEX.md drifted
+// seven pieces that way. So we record which commit each file was last pasted at,
+// and compare against its current last-changed commit.
+//
+//   node tools/check-doc-dates.js            report what is stale
+//   node tools/check-doc-dates.js --pasted   record all four as just uploaded
 
 const CONTEXT = ['CONVENTIONS.md', 'COLLABORATION.md',
                  'notes/FUTURE-ARTICLES.md', 'SITE-INDEX.md'];
+const RECORD = path.join(repo, 'notes', 'context-pasted.json');
 
-// Files in HEAD itself — NOT `git log -1 -- <path>`, which finds the most recent
-// commit touching that path whenever it exists and so matches everything.
-const inHead = new Set(
-  sh('git diff-tree --no-commit-id --name-only -r HEAD').split('\n').filter(Boolean)
-);
+const lastChanged = f => sh(`git log -1 --format=%h -- "${f}"`);
+const isDirty     = f => sh(`git status --porcelain -- "${f}"`) !== '';
 
-const touched = CONTEXT.filter(f =>
-  inHead.has(f) || sh(`git status --porcelain -- "${f}"`) !== ''
-);
+let pasted = {};
+if (fs.existsSync(RECORD)) {
+  try { pasted = JSON.parse(fs.readFileSync(RECORD, 'utf8')); } catch { pasted = {}; }
+}
 
-if (touched.length) {
-  console.log('\nRE-PASTE — these context files changed and the drafting project');
-  console.log('still holds the previous copy:');
-  for (const f of touched) console.log('  ' + f);
-  console.log('The repo copy is authoritative, but the session reads the paste.');
+if (process.argv.includes('--pasted')) {
+  const now = {};
+  for (const f of CONTEXT) now[f] = lastChanged(f);
+  fs.writeFileSync(RECORD, JSON.stringify(now, null, 2) + '\n', 'utf8');
+  console.log('\nRecorded as pasted into the drafting project:');
+  for (const f of CONTEXT) console.log(`  ${f} @ ${now[f]}`);
+  console.log('Commit notes/context-pasted.json so the record survives.');
+  process.exit(0);
+}
+
+const behind = CONTEXT.filter(f => {
+  if (isDirty(f)) return true;                 // uncommitted edits: not pasted yet
+  const cur = lastChanged(f);
+  return !cur ? false : pasted[f] !== cur;
+});
+
+if (behind.length) {
+  console.log('\nRE-PASTE — the drafting project is holding an older copy of:');
+  for (const f of behind) {
+    const cur = lastChanged(f);
+    const had = pasted[f] || 'never recorded';
+    console.log(`  ${f}`);
+    console.log(`      repo @ ${cur}${isDirty(f) ? ' (+ uncommitted edits)' : ''}, project @ ${had}`);
+  }
+  console.log('Upload them, then: node tools/check-doc-dates.js --pasted');
+} else {
+  console.log('\nContext files: drafting project is up to date.');
 }
 
 if (stale) {
