@@ -2,7 +2,7 @@
 
 > **AUTHORITATIVE AND COMPLETE.** This is the full conventions file, not an extract.
 > It serves publicly at https://hesedwords.com/CONVENTIONS.md and the repo copy at
-> the root is the same file. Full text current as of 29 August 2026 — if you are
+> the root is the same file. Full text current as of 1 September 2026 — if you are
 > holding a paste older than that, check the live file for changes since.
 >
 > **A fetched summary is not a substitute for this file.** Some tools return a
@@ -119,7 +119,8 @@ hash-matcher resolves it against the term id (seed_<slug>) or transliteration, s
 hesed, emunah, mishpat, tzedakah (NOTE: spelled with a k, not q), rahamim, tuv,
 shem, derek, torah, lev, chanan, shalom, shuvah, zakar, sod, selichah, shamar,
 selah, hevel (note: some pieces spell hevel "hebel" — the glossary slug is #hevel),
-yada, da'at (paired entry, slug #yada), emet, paga, argos, ta'am, nashaq, sava, sakal,
+yada, da'at (TWO separate entries, not one paired one: #yada and #da'at both resolve —
+see the note below), emet, paga, argos, ta'am, nashaq, sava, sakal,
 chokmah, anavah, gibbor, rachash, mashak, eleos, charis, aletheia, agape, rasha, tzaddiq,
 hagioi (paired entry with hagios, filed under the plural since that's the form articles use),
 batach, menuha, yachad, nachalah, qavah, qeren, barak, shub (slug for the phrase "shub shebut"),
@@ -132,6 +133,12 @@ plausible but isn't listed here, grep glossary.html for its slug before assuming
 seeding.
 If unsure of a slug, still use the natural transliteration — the glossary matches
 on the transliteration, so close spellings resolve.
+DA'AT / YADA — this line previously said "paired entry, slug #yada", which was wrong and
+caused a working link to be reported as broken. There are two entries: seed_daat
+(transliteration "da'at") and seed_yada (transliteration "yada / da'at"). Both resolve, so
+#da'at and #yada are each safe to link. They do overlap, and whether they should merge is
+an open question for the maintainer — until it is settled, link whichever word the piece
+actually uses and do not "correct" one to the other.
 
 AI DISCLAIMER — articles, word studies, and books carry this block near the end of
 the .hw-article-body (reflections usually do not). Three finished variants. There is

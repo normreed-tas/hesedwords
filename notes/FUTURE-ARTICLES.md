@@ -16,6 +16,12 @@ notes record where the thinking stopped, not where it should resume.
 
 **Review cadence:** every six to eight weeks, alongside the protocol review.
 
+**Last reviewed: 1 September 2026.** Bump this line at each review.
+`node tools/check-doc-dates.js` warns once it is more than eight weeks old, so an
+overdue review surfaces on the next commit rather than depending on anyone noticing.
+Re-paste this file into the drafting project whenever an entry is added or struck,
+or the copy in context stops matching the register.
+
 ---
 
 ## Open candidates

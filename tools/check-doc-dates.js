@@ -24,7 +24,16 @@ const MONTHS = ['january','february','march','april','may','june',
 
 // "Full text current as of 29 August 2026"
 function headerDate(text) {
-  const m = text.match(/current as of\s+(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/i);
+  return matchDate(text, /current as of\s+(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/i);
+}
+
+// "Last reviewed: 1 September 2026"
+function reviewDate(text) {
+  return matchDate(text, /Last reviewed:\s*(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/i);
+}
+
+function matchDate(text, re) {
+  const m = text.match(re);
   if (!m) return null;
   const mon = MONTHS.indexOf(m[2].toLowerCase());
   if (mon < 0) return null;
@@ -33,6 +42,14 @@ function headerDate(text) {
 
 function sh(cmd) {
   return execSync(cmd, { cwd: repo, encoding: 'utf8' }).trim();
+}
+
+// Local calendar day, not UTC. The maintainer is UTC+10, so a UTC "today" can be
+// yesterday for him — which had this telling him to bump a date backwards.
+function localDay(dt) {
+  const d = dt || new Date();
+  const p = n => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
 }
 
 let stale = false;
@@ -55,10 +72,10 @@ for (const doc of DOCS) {
   const d = declared.toISOString().slice(0, 10);
 
   // Compare by calendar day: a same-day bump-and-commit is correct.
-  const commitDay = committed ? committed.toISOString().slice(0, 10) : null;
+  const commitDay = committed ? localDay(committed) : null;
 
   if (dirty) {
-    const today = new Date().toISOString().slice(0, 10);
+    const today = localDay();
     if (d < today) {
       console.log(`STALE    ${doc} — uncommitted edits, header still says ${d}`);
       console.log(`         bump it to ${today} before committing`);
@@ -72,6 +89,34 @@ for (const doc of DOCS) {
     stale = true;
   } else {
     console.log(`OK       ${doc} — ${d}`);
+  }
+}
+
+// ---- the register's review cadence -----------------------------------------
+// FUTURE-ARTICLES.md is only useful if the review actually happens. Three entries
+// and no review and it becomes a place ideas go to be forgotten politely. Eight
+// weeks is the outer end of the stated six-to-eight cadence.
+
+const REGISTER = 'notes/FUTURE-ARTICLES.md';
+const WEEKS = 8;
+
+const regPath = path.join(repo, REGISTER);
+if (fs.existsSync(regPath)) {
+  const reviewed = reviewDate(fs.readFileSync(regPath, 'utf8'));
+  if (!reviewed) {
+    console.log(`NO DATE  ${REGISTER} — no "Last reviewed: <date>" line`);
+    stale = true;
+  } else {
+    const days = Math.max(0, Math.floor((Date.now() - reviewed.getTime()) / 86400000));
+    const d = localDay(reviewed);
+    if (days > WEEKS * 7) {
+      console.log(`OVERDUE  ${REGISTER} — last reviewed ${d}, ${days} days ago`);
+      console.log(`         the register only works if the review happens; read it through,`);
+      console.log(`         strike what is no longer a piece, and bump the date`);
+      stale = true;
+    } else {
+      console.log(`OK       ${REGISTER} — reviewed ${d} (${days}d ago, due at ${WEEKS * 7}d)`);
+    }
   }
 }
 
