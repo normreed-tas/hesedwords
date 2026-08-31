@@ -120,6 +120,32 @@ if (fs.existsSync(regPath)) {
   }
 }
 
+// ---- which context files just changed --------------------------------------
+// These four are pasted into the drafting project. The repo copy is authoritative
+// but the session reads the paste, so a commit that changes one is only half done
+// until it is re-uploaded. Name them explicitly rather than leaving it to be
+// inferred from the commit message.
+
+const CONTEXT = ['CONVENTIONS.md', 'COLLABORATION.md',
+                 'notes/FUTURE-ARTICLES.md', 'SITE-INDEX.md'];
+
+// Files in HEAD itself — NOT `git log -1 -- <path>`, which finds the most recent
+// commit touching that path whenever it exists and so matches everything.
+const inHead = new Set(
+  sh('git diff-tree --no-commit-id --name-only -r HEAD').split('\n').filter(Boolean)
+);
+
+const touched = CONTEXT.filter(f =>
+  inHead.has(f) || sh(`git status --porcelain -- "${f}"`) !== ''
+);
+
+if (touched.length) {
+  console.log('\nRE-PASTE — these context files changed and the drafting project');
+  console.log('still holds the previous copy:');
+  for (const f of touched) console.log('  ' + f);
+  console.log('The repo copy is authoritative, but the session reads the paste.');
+}
+
 if (stale) {
   console.log('\nRe-paste the affected file into the drafting project after bumping,');
   console.log('or the date says current while the content is not.');
