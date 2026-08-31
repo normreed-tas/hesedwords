@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Different Work",
+    url:      "/articles/different-work.html",
+    date:     "2026-09-01",
+    scripture: ["Matthew 11:28-30", "Matthew 12:1-8", "Hosea 6:6"],
+    themes:   ["hesed", "da'at", "mercy", "Sabbath", "yoke", "rest", "Hosea", "chapter divisions"],
+    summary:  "Matthew 11 ends with the offer of rest; Matthew 12 begins in a wheat field with hungry men being told off. The chapter number between them was added a thousand years later. He does not say lay down the yoke — he says take mine, and it is light because he is already in it. Behind both stands Hosea 6:6, the only verse Matthew quotes twice: hesed and da'at, set against sacrifice and expertise."
+  },
+  {
     title:    "Trampled",
     url:      "/articles/trampled.html",
     date:     "2026-08-28",
