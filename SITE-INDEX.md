@@ -9,7 +9,7 @@ before writing: *does something on this already exist?* and *what did it say?*
 The theme index at the foot is the fastest way in — a new piece whose theme
 already appears there probably has a companion waiting.
 
-**128 pieces** — 86 reflections, 29 articles, 9 books, 4 word studies.
+**129 pieces** — 86 reflections, 30 articles, 9 books, 4 word studies.
 
 ---
 
@@ -447,7 +447,12 @@ Forty years of ministry with the word righteousness — preaching it, building t
 
 ---
 
-## Articles (29)
+## Articles (30)
+
+**2026-09-03 · Still Counting**
+Matthew 20 · `/articles/still-counting.html`
+*Themes:* grace, wealth, counting, grumbling, vineyard labourers, rich young man, reward
+The labourers in the vineyard, read inside the whole of Matthew 20 — a rich young man before it, Peter's what will we have, and a mother asking for two seats after. Only one group agreed a figure, and they are the only men who end up offended by what they were given. A contract is a limit you can put on someone else's generosity, and it holds.
 
 **2026-09-01 · Different Work**
 Matthew 11:28-30; Matthew 12:1-8; Hosea 6:6 · `/articles/different-work.html`
@@ -669,7 +674,7 @@ Before it ever means to intercede, it means to fall upon — to strike, to meet 
 
 ---
 
-## Theme index (427 themes)
+## Theme index (431 themes)
 
 Every theme in use, and what carries it. A theme with more than one piece
 against it is a companion candidate.
@@ -743,7 +748,7 @@ against it is a companion candidate.
 - **conviction** — [We All Need Our Rechabites](/reflections/we-all-need-our-rechabites.html) (reflection)
 - **correction** — [Pride](/reflections/pride.html) (reflection) · [Nobody Left to Say No](/articles/nobody-left-to-say-no.html) (article) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection)
 - **cost** — [You](/reflections/blessed-are-you.html) (reflection)
-- **counting** — [Telling David's Census to an Eight-Year-Old](/reflections/telling-davids-census.html) (reflection) · [What Cannot Be Counted](/reflections/what-cannot-be-counted.html) (reflection)
+- **counting** — [Still Counting](/articles/still-counting.html) (article) · [Telling David's Census to an Eight-Year-Old](/reflections/telling-davids-census.html) (reflection) · [What Cannot Be Counted](/reflections/what-cannot-be-counted.html) (reflection)
 - **covenant** — [A Place for Salt](/reflections/a-place-for-salt.html) (reflection) · [The Place Where God Rests](/reflections/the-place-where-god-rests.html) (reflection) · [Called in Righteousness](/reflections/called-in-righteousness.html) (reflection)
 - **covering** — [Blessed Is the Man](/reflections/blessed-is-the-man.html) (reflection)
 - **creation** — [Star Wars](/reflections/star-wars.html) (reflection)
@@ -809,7 +814,7 @@ against it is a companion candidate.
 - **goodness** — [Taste and See](/reflections/taste-and-see.html) (reflection)
 - **goodness of god** — [Unless I Had Believed](/reflections/unless-i-had-believed.html) (reflection)
 - **governance** — [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection)
-- **grace** — [Draw Me](/reflections/draw-me.html) (reflection) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection)
+- **grace** — [Still Counting](/articles/still-counting.html) (article) · [Draw Me](/reflections/draw-me.html) (reflection) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection)
 - **grammar** — [The Song Begins in Longing](/articles/the-song-begins-in-longing.html) (article)
 - **grant** — [The Cause I Applied For](/reflections/the-cause-i-applied-for.html) (reflection)
 - **gratitude** — [The Sacrifice of Thanksgiving](/reflections/the-sacrifice-of-thanksgiving.html) (reflection)
@@ -817,6 +822,7 @@ against it is a companion candidate.
 - **great commission** — [Almost the Same in the End](/reflections/almost-the-same-in-the-end.html) (reflection)
 - **grief** — [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection) · [Not Finished Waking](/articles/not-finished-waking.html) (article) · [He Does Not Afflict From His Heart](/articles/he-does-not-afflict-from-his-heart.html) (article)
 - **grievance** — [The Sacrifice of Thanksgiving](/reflections/the-sacrifice-of-thanksgiving.html) (reflection)
+- **grumbling** — [Still Counting](/articles/still-counting.html) (article)
 - **guilt** — [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection)
 - **gur** — [The Far Country](/reflections/the-far-country.html) (reflection)
 - **hagioi** — [An Interview with a Saint](/articles/an-interview-with-a-saint.html) (article)
@@ -966,6 +972,8 @@ against it is a companion candidate.
 - **restoration** — [A Place for Salt](/reflections/a-place-for-salt.html) (reflection) · [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection) · [The Man Who Opened His Hand](/books/the-open-hand.html) (book) · [Like Those Who Dream](/reflections/like-those-who-dream.html) (reflection)
 - **restraint** — [Idle Words](/reflections/idle-words.html) (reflection)
 - **resurrection** — [Into Your Hand](/reflections/into-your-hand.html) (reflection) · [Not Finished Waking](/articles/not-finished-waking.html) (article)
+- **reward** — [Still Counting](/articles/still-counting.html) (article)
+- **rich young man** — [Still Counting](/articles/still-counting.html) (article)
 - **righteousness** — [Trampled](/articles/trampled.html) (article) · [Seeking](/articles/seeking.html) (article) · [Being Right With Someone](/reflections/being-right-with-someone.html) (reflection) · [Fitting](/articles/fitting.html) (article) · [Tzedaqah / Dikaiosynē](/word-studies/tzedaqah.html) (word study) · [When Mercy and Truth Met](/books/when-mercy-and-truth-met.html) (book) · [Star Wars](/reflections/star-wars.html) (reflection) · [My Oath — and What It Really Means](/reflections/my-oath.html) (reflection) · [Called in Righteousness](/reflections/called-in-righteousness.html) (reflection)
 - **risdon** — [The Cause I Applied For](/reflections/the-cause-i-applied-for.html) (reflection)
 - **ritual** — [Communion](/reflections/communion.html) (reflection)
@@ -1074,6 +1082,7 @@ against it is a companion candidate.
 - **vengeance** — [Learning to Pray by Praying the Psalms — Until We Reach Psalm 83](/articles/until-we-reach-psalm-83.html) (article)
 - **verdict** — [Is "Wicked" a Verdict or a Character?](/word-studies/is-wicked-a-verdict-or-a-character.html) (word study)
 - **vietnam** — [You](/reflections/blessed-are-you.html) (reflection)
+- **vineyard labourers** — [Still Counting](/articles/still-counting.html) (article)
 - **vows** — [The Vow?](/reflections/the-vow.html) (reflection) · [The Vow That Is Not a Payment](/articles/vows.html) (article)
 - **vulnerability** — [Blessed Is the Man](/reflections/blessed-is-the-man.html) (reflection)
 - **waiting** — [Selah](/reflections/selah.html) (reflection) · [Unless I Had Believed](/reflections/unless-i-had-believed.html) (reflection) · [Eyes Fixed Upward](/reflections/eyes-fixed-upward.html) (reflection)
@@ -1081,7 +1090,7 @@ against it is a companion candidate.
 - **walking** — [Make Me](/reflections/make-me.html) (reflection)
 - **warning** — [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection)
 - **watchman** — [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection)
-- **wealth** — [Understanding?](/reflections/understanding.html) (reflection)
+- **wealth** — [Still Counting](/articles/still-counting.html) (article) · [Understanding?](/reflections/understanding.html) (reflection)
 - **weight of glory** — [Parables — You'll See](/reflections/parables-youll-see.html) (reflection)
 - **whirlwind** — [Listening for the Score in Job](/reflections/listening-for-the-score.html) (reflection)
 - **wholeheartedness** — [Succession Planning — Everything Set in Place](/reflections/succession-planning.html) (reflection)

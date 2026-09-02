@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Still Counting",
+    url:      "/articles/still-counting.html",
+    date:     "2026-09-03",
+    scripture: ["Matthew 20"],
+    themes:   ["grace", "wealth", "counting", "grumbling", "vineyard labourers", "rich young man", "reward"],
+    summary:  "The labourers in the vineyard, read inside the whole of Matthew 20 — a rich young man before it, Peter's what will we have, and a mother asking for two seats after. Only one group agreed a figure, and they are the only men who end up offended by what they were given. A contract is a limit you can put on someone else's generosity, and it holds."
+  },
+  {
     title:    "Different Work",
     url:      "/articles/different-work.html",
     date:     "2026-09-01",
