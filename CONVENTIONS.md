@@ -2,7 +2,7 @@
 
 > **AUTHORITATIVE AND COMPLETE.** This is the full conventions file, not an extract.
 > It serves publicly at https://hesedwords.com/CONVENTIONS.md and the repo copy at
-> the root is the same file. Full text current as of 1 September 2026 — if you are
+> the root is the same file. Full text current as of 3 September 2026 — if you are
 > holding a paste older than that, check the live file for changes since.
 >
 > **A fetched summary is not a substitute for this file.** Some tools return a
@@ -233,8 +233,14 @@ The card copy and manifest entry are added separately by the maintainer.
   accident. The drafting session does not supply previews — it sends the deploy page only.
 - **Home page panels:** `index.html`'s "Current reading" ledger (`#current-reading`,
   built from `.hw-row` blocks) should have its newest entry updated whenever a new
-  reflection is published. It holds **exactly two rows, sorted by the piece's own date,
-  newest first** — add the new row and drop the older of the two.
+  **reflection OR article** is published. It holds **exactly two rows, sorted by the
+  piece's own date, newest first** — add the new row and drop the older of the two.
+  (Until 3 Sep 2026 this panel carried reflections only, and this entry said so. It now
+  takes whichever two reading pieces are most recent regardless of kind — `Still Counting`
+  was the first article in it. A new article can therefore push out a reflection published
+  the day before, which is intended.)
+  The `.kind` line in each row is the **book**, not the piece type — "Matthew", "Psalms",
+  "Chronicles" — so an article row looks no different from a reflection row.
   Order by the DATE IN THE META BLOCK, not by arrival: pieces are sometimes finished out
   of sequence and land with a date older than the row already sitting there, in which case
   the new one goes *second*. Check the two dates after editing rather than assuming the
