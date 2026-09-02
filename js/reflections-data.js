@@ -5,6 +5,22 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "The Second Morning",
+    date:     "2026-09-02",
+    url:      "/reflections/the-second-morning.html",
+    summary:  "Psalm 90 is the only psalm titled with Moses's name, and one of five labelled tephillah — sorted long ago into the pile marked this one is for praying. Teach us to number our days, read for the first time by a man whose heart had stopped. Moses does not ask for the sentence to be lifted; he asks to be taught by it. The middle of the psalm is grass, and then the same morning is asked to hold hesed instead.",
+    scripture: ["Psalm 90"],
+    themes:   ["tephillah", "hesed", "mortality", "cardiac arrest", "Moses", "numbering our days", "psalm headings"]
+  },
+  {
+    title:    "Have You Not Read",
+    date:     "2026-09-02",
+    url:      "/reflections/have-you-not-read.html",
+    summary:  "A question that cannot be asked out loud where I work, parked overnight, and then Matthew 19 came up as simply the next thing to read. They asked about the grounds for leaving; he answered about the joining. The certificate was never permission to be rid of a woman — it was the paper standing between a dismissed woman and destitution. He did not soften it and he did not chase them.",
+    scripture: ["Matthew 19:1-12"],
+    themes:   ["marriage", "hardness of heart", "prison ministry", "divorce", "Moses", "judgement", "thankfulness"]
+  },
+  {
     title:    "Why Do You Think Evil",
     date:     "2026-08-30",
     url:      "/reflections/why-do-you-think-evil.html",
