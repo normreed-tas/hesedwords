@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Our God-Sponsored Projects",
+    url:      "/articles/our-god-sponsored-projects.html",
+    date:     "2026-09-04",
+    scripture: ["Matthew 7:21-23", "Matthew 25"],
+    themes:   ["giving", "church", "self-promotion", "hiddenness", "sheep and goats", "ministry", "record-keeping"],
+    summary:  "An hour spent reading the giving pages of eleven churches, across five hundred years and two continents. Roofs, boilers, a pipe organ, broadcast equipment, a steeple floodlit and called a light on the hill — all of it legitimate, and not one of the six on any appeal. Everybody in Matthew 25 arrives with an account of themselves except the sheep, who have no record at all. A sheep church is an iceberg; a goat church is the same iceberg turned over."
+  },
+  {
     title:    "Still Counting",
     url:      "/articles/still-counting.html",
     date:     "2026-09-03",

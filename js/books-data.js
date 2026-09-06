@@ -8,6 +8,14 @@
    ================================================================ */
 const BOOKS_META = [
   {
+    title:    "What We Did Without Knowing",
+    url:      "/books/what-we-did-without-knowing.html",
+    date:     "2026-09-06",
+    scripture: ["Matthew 25"],
+    themes:   ["sheep and goats", "talents", "ten virgins", "hiddenness", "prison ministry", "judgement", "being known", "wickedness"],
+    summary:  "Ten women with lamps, three servants with money, and a throne with all the nations in front of it — read straight through as one chapter. Nothing was done: that is the whole charge in both parables. Then a third story where nobody was handed anything at all, and the people who are welcomed cannot remember doing it. Eight chapters, ending on a hill in Hobart with the prison next door."
+  },
+  {
     title:    "When Mercy and Truth Met",
     url:      "/books/when-mercy-and-truth-met.html",
     date:     "2026-07-16",

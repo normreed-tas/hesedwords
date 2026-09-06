@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "If You Are",
+    date:     "2026-09-06",
+    url:      "/reflections/if-you-are.html",
+    summary:  "If you are the Son of God appears three times in Matthew and nowhere else — twice in the desert from the devil, once at the cross from people walking past. Matthew has put the tempter's line in the mouth of the crowd, and the second offer was the better one: they were promising him the thing he had come for. There were angels available. He did not ask. The centurion was standing closer, and he had done it.",
+    scripture: ["Matthew 4:1-11", "Matthew 27:32-54"],
+    themes:   ["temptation", "the cross", "obedience", "sonship", "angels", "the centurion", "Matthew"]
+  },
+  {
     title:    "The Second Morning",
     date:     "2026-09-02",
     url:      "/reflections/the-second-morning.html",
