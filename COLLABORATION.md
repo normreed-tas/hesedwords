@@ -2,7 +2,7 @@
 
 > **AUTHORITATIVE AND COMPLETE.** This is the full working note, not an extract.
 > It serves publicly at https://hesedwords.com/COLLABORATION.md and the repo copy at
-> the root is the same file. Full text current as of 29 August 2026 — if you are
+> the root is the same file. Full text current as of 6 September 2026 — if you are
 > holding a paste older than that, check the live file for changes since.
 >
 > **A fetched summary is not a substitute for this file.** Some tools return a
@@ -109,6 +109,27 @@ plain sentence rather than expanding.
 if it is his biography and he hasn't said it, either ask or leave a marked placeholder and say
 plainly that the detail is invented. Getting the rhythm of a sentence right is not worth
 putting a false thing in his mouth about his own body.
+
+**Absence from the part you read is not absence.** Saying a thing is missing commits you to
+having looked where it would be. `SITE-INDEX.md` runs to hundreds of lines with reflections,
+articles, books and word studies in separate sections, so a read that stops after the header
+and the first section can take in the piece count and the newest reflection and still reach
+none of the articles or books. Reporting "it isn't there" on that basis sends the other side
+to rebuild something already correct. Either read as far as the thing would be, or say what
+was actually checked — "not in the first section, and I haven't read past it" costs one
+clause and is true. This happened on 6 Sep 2026 with the Matthew 25 book and its companion
+article, both of which were present, in order, at the head of their own sections.
+
+**Test the dull explanation before the interesting one.** The same episode produced a second,
+separate error: Code diagnosed the report as a fetched *summary* of SITE-INDEX rather than a
+partial read of it. The two look identical from outside, and the evidence had been there to
+tell them apart — the entries reported missing were the ones hundreds of lines down, and the
+entry not reported missing was the one sitting at the top, which is the signature of a `head`
+and not of a paraphrase. The fixes diverge: a summary is cured by obtaining the real file, a
+partial read by not inferring absence from part of it. So a confident wrong diagnosis sends
+the work off in the wrong direction as surely as the original mistake did. When explaining
+why something went wrong, check whether the plainest account fits before reaching for the
+more interesting one.
 
 **Sequence is fixed.** Theological exploration in chat → beat structure approved →
 section-by-section drafting with approval gates → HTML/PDF only after prose is final →
