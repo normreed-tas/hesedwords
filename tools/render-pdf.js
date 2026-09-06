@@ -35,13 +35,22 @@ const fs = require('fs');
 const path = require('path');
 
 const repo = path.resolve(__dirname, '..');
-const rel = process.argv[2];
-const outArg = process.argv[3];
+const argv = process.argv.slice(2);
+const flags = argv.filter(a => a.startsWith('--'));
+const positional = argv.filter(a => !a.startsWith('--'));
+const rel = positional[0];
+const outArg = positional[1];
 
 if (!rel) {
-  console.error('usage: node tools/render-pdf.js <path/to/page.html> [out.pdf]');
+  console.error('usage: node tools/render-pdf.js <path/to/page.html> [out.pdf] [--numbers|--no-numbers]');
+  console.error('  page numbers default ON for books/, OFF elsewhere');
   process.exit(1);
 }
+
+// Books get a page number; a three-page article does not need one.
+const numbered = flags.includes('--numbers') ? true
+               : flags.includes('--no-numbers') ? false
+               : rel.replace(/\\/g, '/').startsWith('books/');
 
 const src = path.join(repo, rel);
 if (!fs.existsSync(src)) {
@@ -67,8 +76,39 @@ html, body.hw { background: #fff !important; }
 .hw-notes a.back { display: none !important; }
 a.gloss { border-bottom: none !important; text-decoration: none !important; color: inherit !important; }
 .hw-article { padding-top: 0 !important; }
-@page { margin: 18mm 16mm; }
+
+/* ---- pagination ----
+   Without these a chapter spills a line or two onto a page of its own and
+   a chapter numeral can be left stranded at the foot of a page. Chromium
+   honours orphans/widows and the break-* properties when printing. */
+.hw-article-body p, .hw-article-body li { orphans: 2; widows: 2; }
+
+/* Each chapter starts a fresh page. Not the first — it belongs with the
+   title block rather than sitting alone after a page break. */
+.hw-article-body .chapter-open { break-before: page; break-after: avoid; }
+.hw-article-body .chapter-open.first { break-before: auto; }
+
+/* Never strand a heading, or a scripture reference, at a page foot. */
+h1, h2, h3, h4 { break-after: avoid; }
+.hw-article-body .scripture-open .ref { break-before: avoid; }
+
+/* Keep the closing blocks intact rather than split across a break. */
+.hw-disclaimer, .hw-notes p.n, .hw-selah { break-inside: avoid; }
 `;
+
+/* The folio. Chromium renders header/footer templates in their own context:
+   they inherit nothing from the page, web fonts are not available, and a
+   template with no explicit font-size comes out unreadably small. So the
+   styling is inline, with a generic monospace stack standing in for
+   IBM Plex Mono and --muted (#5D6470) written out as a literal.
+   Every page is numbered, the first included — Chromium offers no way to
+   skip it, and @page margin boxes are not supported. */
+const FOOTER = `
+<div style="width:100%;padding:0 16mm;box-sizing:border-box;
+            font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+            font-size:8.5pt;letter-spacing:0.12em;color:#5D6470;text-align:center;">
+  <span class="pageNumber"></span>
+</div>`;
 
 html = html
   .replace(LINK, '<style>\n' + tokens + '\n</style>')
@@ -106,7 +146,15 @@ fs.writeFileSync(printHtml, html, 'utf8');
     path: outPdf,
     format: 'A4',
     printBackground: true,   // without this the Selah rules and every filled block vanish
-    margin: { top: '18mm', bottom: '18mm', left: '16mm', right: '16mm' }
+    displayHeaderFooter: numbered,
+    headerTemplate: '<div></div>',   // required, or Chromium supplies its own
+    footerTemplate: FOOTER,
+    margin: {
+      top: '18mm',
+      bottom: numbered ? '20mm' : '18mm',   // the folio needs room to sit in
+      left: '16mm',
+      right: '16mm'
+    }
   });
   await browser.close();
 

@@ -2,7 +2,7 @@
 
 > **AUTHORITATIVE AND COMPLETE.** This is the full conventions file, not an extract.
 > It serves publicly at https://hesedwords.com/CONVENTIONS.md and the repo copy at
-> the root is the same file. Full text current as of 3 September 2026 — if you are
+> the root is the same file. Full text current as of 6 September 2026 — if you are
 > holding a paste older than that, check the live file for changes since.
 >
 > **A fetched summary is not a substitute for this file.** Some tools return a
@@ -408,24 +408,54 @@ links — the in-page block and the card's Download PDF — land in one commit, 
 where one exists without the other.
 
 So the drafting session does not need to produce a PDF. Prose final is enough; the render
-happens at build. Notes for the render:
-- Render from a nav/footer-stripped copy of the article, not via `@media print` rules on
-  the live page — background suppression and elements like the cross-link box are
-  unreliable that way.
-- Strip from the print copy: site nav, site footer, any `.hw-companion` box, the
-  in-page PDF-download block.
-- White page background, not the site's paper tone — it reads muddy on paper and costs
-  ink.
-- A translation note (e.g. a memory verse quoted in older wording where the rest of the
-  piece uses ESV) counts as a footnote — mark the exception at first occurrence.
-- Hide footnote backlinks (`.hw-notes a.back`) and the dotted rule under `a.gloss` — both
-  are screen affordances that do nothing on paper.
-- Rendering is Playwright with `printBackground: true` (the Selah rules and any filled
-  block vanish without it). Playwright is present via the npx cache but not installed as a
-  module, so a render script needs it on `NODE_PATH`. There are several npx cache dirs and
-  only one has playwright — pick by testing, not by taking the first:
-  `PW=$(for d in "$LOCALAPPDATA"/npm-cache/_npx/*/node_modules; do [ -d "$d/playwright" ] && echo "$d" && break; done)`
-  then `NODE_PATH="$PW" node render.js`. (A `| head -1` glob silently picks the wrong one
-  and fails with "Cannot find module 'playwright'".)
-- Check the result by screenshotting the stripped HTML that produced it — this machine has
-  no PDF rasteriser, so the PDF itself can't be eyeballed from the shell.
+happens at build.
+
+**Use `tools/render-pdf.js`. Do not hand-roll the render.**
+
+```
+PW=$(for d in "$LOCALAPPDATA"/npm-cache/_npx/*/node_modules; do [ -d "$d/playwright" ] && echo "$d" && break; done)
+NODE_PATH="$PW" node tools/render-pdf.js articles/<slug>.html
+NODE_PATH="$PW" node tools/render-pdf.js books/<slug>.html
+```
+
+Output goes to the conventional place for the page's kind without being asked:
+`articles/<slug>.html` → `articles/pdf/<slug>.pdf`, `books/<slug>.html` → `books/<slug>.pdf`.
+
+The script exists because this render was typed out by hand every time, and the same
+three things went wrong every time: the wrong npx cache dir picked for Playwright (a
+`| head -1` glob silently takes one without it and fails with "Cannot find module
+'playwright'"), `printBackground` left off so every Selah rule and filled block vanished,
+and one of the screen-only elements forgotten. Those are settled in the script now. It
+also inlines the working-tree `css/tokens.css` — a `file://` page cannot fetch
+`/css/tokens.css`, and the deployed copy is wrong whenever tokens.css has unpushed changes.
+
+What it handles, so you do not have to: stripping site nav, site footer, any
+`.hw-companion` line and the in-page PDF-download block from a separate print copy (not
+via `@media print` on the live page — background suppression and the cross-link box are
+unreliable that way); a white page background rather than the site's paper tone, which
+reads muddy and costs ink; hiding footnote backlinks and the dotted rule under `a.gloss`,
+both screen affordances that do nothing on paper; and pagination — `orphans`/`widows` so
+a paragraph cannot spill a single line onto the next page, `break-after: avoid` on
+headings, and `break-inside: avoid` on the notes and disclaimer blocks.
+
+**Page numbers** are ON for anything under `books/` and OFF elsewhere; override with
+`--numbers` / `--no-numbers`. A six-page article does not need a folio. Chromium renders
+the footer template in its own context — it inherits nothing from the page and web fonts
+are unavailable there — which is why the folio's styling is inline with a generic
+monospace stack. Every page is numbered including the first; Chromium offers no way to
+skip it and `@page` margin boxes are not supported.
+
+**Chapters start on a new page** — `.chapter-open` carries `break-before: page`, except
+`.first`, which belongs with the title block. This was added after a chapter spilled one
+line onto a page of its own.
+
+A translation note (e.g. a memory verse quoted in older wording where the rest of the
+piece uses ESV) counts as a footnote — mark the exception at first occurrence.
+
+**Checking the result.** `pdftotext` IS available on this machine (`/mingw64/bin/pdftotext`),
+so check the PDF itself rather than a proxy — `pdftotext -layout <file>.pdf out.txt` splits
+pages on `\f`, which verifies page count, what lands at the top of each page, whether the
+folio is present, and that the stripped elements are actually gone. An earlier version of
+this note said the PDF could not be inspected from the shell and to screenshot the stripped
+HTML instead; that was wrong. The script also leaves the print copy beside the PDF as
+`<slug>-PRINT.html` (gitignored) if you do want to look at it rendered.
