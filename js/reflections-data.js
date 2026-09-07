@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Still Talking",
+    date:     "2026-09-07",
+    url:      "/reflections/still-talking.html",
+    summary:  "Psalm 94 never gets fixed. The wicked are still boasting in the last line, the singer is still worried, and nobody stood up when he asked. What holds him is not rescue — it is hesed, love that stays when there is no reason left to. He says his foot is slipping while it is still slipping, and he does not go down. A man fourteen years out of prison, his car and phone stolen by the people he took in, sat and went through the same list.",
+    scripture: ["Psalm 94:16-19"],
+    themes:   ["hesed", "injustice", "unanswered prayer", "perseverance", "prison ministry", "the wicked", "being held up"]
+  },
+  {
     title:    "If You Are",
     date:     "2026-09-06",
     url:      "/reflections/if-you-are.html",
