@@ -2,7 +2,7 @@
 
 > **AUTHORITATIVE AND COMPLETE.** This is the full conventions file, not an extract.
 > It serves publicly at https://hesedwords.com/CONVENTIONS.md and the repo copy at
-> the root is the same file. Full text current as of 6 September 2026 — if you are
+> the root is the same file. Full text current as of 10 September 2026 — if you are
 > holding a paste older than that, check the live file for changes since.
 >
 > **A fetched summary is not a substitute for this file.** Some tools return a
@@ -419,7 +419,18 @@ NODE_PATH="$PW" node tools/render-pdf.js books/<slug>.html
 ```
 
 Output goes to the conventional place for the page's kind without being asked:
-`articles/<slug>.html` → `articles/pdf/<slug>.pdf`, `books/<slug>.html` → `books/<slug>.pdf`.
+
+| page | PDF |
+|---|---|
+| `articles/<slug>.html` | `articles/pdf/<slug>.pdf` |
+| `word-studies/<slug>.html` | `word-studies/pdf/<slug>.pdf` |
+| `books/<slug>.html` | `books/<slug>.pdf` |
+
+Books keep their PDF beside the page because that is where the existing nine already
+live; articles and word studies use a `pdf/` subfolder. The word-studies row was added
+on 10 Sep 2026 with `zakar`, the first word study to carry a PDF at all — before that
+the case was undefined, and a page arrived pointing at `/articles/pdf/zakar.pdf`, which
+would have 404ed. A word study is not an article; do not file its PDF under `articles/`.
 
 The script exists because this render was typed out by hand every time, and the same
 three things went wrong every time: the wrong npx cache dir picked for Playwright (a

@@ -7,6 +7,18 @@
    ================================================================ */
 const STUDIES = [
   {
+    id:       "ws-zakar",
+    word:     "זָכַר",
+    lang:     "hebrew",
+    translit: "zakar",
+    title:    "Zakar",
+    url:      "/word-studies/zakar.html",
+    date:     "2026-09-10",
+    scripture: ["Psalm 98:3", "Genesis 8:1", "Exodus 2:24", "Psalm 25:6-7", "Jeremiah 31:34"],
+    themes:   ["zakar", "hesed", "berit", "remembering", "covenant", "forgiveness", "conduct"],
+    summary:  "English remembering happens in the head and is complete without anything attached. Zakar carries on into conduct — the doing is how you can tell the remembering happened. What God remembers is covenant, more than anything else; twice it is what we are made of; once, in Psalm 98:3, it is his own hesed. And the verb runs backwards too: I will remember their sin no more is not a claim about knowledge but a decision about conduct."
+  },
+  {
     id:       "ws-tzedaqah",
     word:     "צְדָקָה",
     lang:     "hebrew",

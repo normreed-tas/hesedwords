@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "What God Remembers",
+    url:      "/articles/what-god-remembers.html",
+    date:     "2026-09-10",
+    scripture: ["Psalm 98:3"],
+    themes:   ["zakar", "hesed", "berit", "remembering", "covenant", "forgiveness", "conduct"],
+    summary:  "Zakar does not mean recall. It carries on into conduct, and the doing is how you can tell the remembering happened — which is why God remembering Noah is followed by wind over the water. What he remembers is covenant, more than anything else. Psalm 98:3 puts hesed where the formal word usually stands, and it is the only place he is reported as remembering his own. The verb reversed — I will remember their sin no more — is not a claim about knowledge but a decision about conduct."
+  },
+  {
     title:    "Our God-Sponsored Projects",
     url:      "/articles/our-god-sponsored-projects.html",
     date:     "2026-09-04",

@@ -116,8 +116,10 @@ html = html
 
 const slug = path.basename(rel).replace(/\.html$/i, '');
 const dir = path.dirname(rel);
-const defaultOut = dir === 'articles'
-  ? path.join('articles', 'pdf', slug + '.pdf')
+// articles/ and word-studies/ keep their PDFs in a pdf/ subfolder; books/ put
+// theirs beside the page, which is where the existing book PDFs already live.
+const defaultOut = (dir === 'articles' || dir === 'word-studies')
+  ? path.join(dir, 'pdf', slug + '.pdf')
   : path.join(dir, slug + '.pdf');
 const outPdf = path.join(repo, outArg || defaultOut);
 const printHtml = path.join(path.dirname(outPdf), slug + '-PRINT.html');

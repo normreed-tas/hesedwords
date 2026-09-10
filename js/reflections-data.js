@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "The Asking",
+    date:     "2026-09-10",
+    url:      "/reflections/the-asking.html",
+    summary:  "Psalm 98 is nine verses and most of them are instructions to make noise. Verse 3 is the only place where God does something, and it is quiet: he remembered his steadfast love. A women's convention in Port Moresby, airfares from the highlands, and a director who set a condition and then reserved to himself the freedom to break it. You have delegated the responsibility, but not the provision to be merciful — and the asking was the turning point.",
+    scripture: ["Psalm 98"],
+    themes:   ["zakar", "hesed", "mercy", "delegation", "Port Moresby", "remembering", "asking"]
+  },
+  {
     title:    "Still Talking",
     date:     "2026-09-07",
     url:      "/reflections/still-talking.html",
