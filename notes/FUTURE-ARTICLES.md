@@ -19,7 +19,7 @@ notes record where the thinking stopped, not where it should resume.
 
 **Review cadence:** every six to eight weeks, alongside the protocol review.
 
-**Last reviewed: 6 September 2026.** Bump this line at each review.
+**Last reviewed: 10 September 2026.** Bump this line at each review.
 `node tools/check-doc-dates.js` warns once it is more than eight weeks old, so an
 overdue review surfaces on the next commit rather than depending on anyone noticing.
 Re-paste this file into the drafting project whenever an entry is added or struck,
@@ -75,6 +75,58 @@ record of where it stalled.*
   not the cross. The irony may be the point rather than a problem.
 - The Father's appointing then reads as *this is not what you think you're asking for*.
 - **[verify]** Greek of Mark 15:27 against 10:37 before drafting.
+
+### The 96 / 98 doublet
+*Added 10 Sep 2026. Detail: `NOTE-96-98-doublet.md`*
+
+Psalms 96 and 98 are close to the same psalm — new song, salvation declared among the
+nations, creation summoned, and a near-identical closing about coming to judge with
+righteousness and equity. A version of 96 also sits inside David's psalm at 1 Chronicles
+16. The interesting part is not the overlap but that whoever assembled the Psalter kept
+both. Not safe to draft until the wider doublet list is checked (14 // 53, 40:13–17 // 70,
+57 + 60 // 108, 31:1–3 // 71:1–3), because the whole argument rests on how common the
+phenomenon is. May want to merge with the undrafted Psalm 81 material on psalm-selection
+and repetition — same territory, and two thin pieces would make one solid one.
+
+### Creation commanded to praise
+*Added 10 Sep 2026. Detail: `NOTE-creation-commanded.md`*
+
+Past verse 6, Psalm 98's imperatives are addressed to things that cannot obey — the sea,
+the rivers, the hills. Three readings are open (creation already responds and we are the
+slow ones; the imperative is anticipatory; it is figure doing work of scale) and the note
+deliberately picks none. One `[verify]` has since been settled and changed the shape of
+the question: the psalm shifts from true second-person imperatives in v. 4 to third-person
+jussives in vv. 7–8, exactly where the addressee stops being able to obey. That seam is
+now the most concrete thing in the note. The likelier real subject is the second loose
+end — that in both 96 and 98 creation rejoices *because* he comes to judge, which inverts
+the usual reading of judgement.
+
+### Mark 4 — the seed parables and the hiddenness
+*Added 10 Sep 2026. Detail: `NOTE-mark-4-parables.md`*
+
+The Mark 4 parables are grouped by subject rather than delivered in sequence, and the
+hiddenness of the parables and the hiddenness of the seed are the same shape:
+understanding arrives, but not by being watched for. Two candidate pieces identified,
+neither drafted, and the note records why writing a short one now was declined — the live
+question is *why do I teach the way I do rather than the way he did*, which is not yet
+answered, and a short piece would have to close it. Carries an unresolved `[verify]` on
+Targum wording at Isaiah 6:10, and an open question of whether the sower → sleeping
+farmer → mustard seed escalation is in the literature or is Norm's, which matters because
+if it is his it may be the spine.
+
+### Psalm 98's righteousness bracket
+*Added 10 Sep 2026. Held. No note file yet — the bullets below are the whole of it.*
+
+- `tzedaqah` at v. 2, `tzedeq` at v. 9, with `hesed` between them at v. 3. The psalm is
+  bracketed by righteousness and holds loyalty in the middle.
+- Traces the `da'at` → `hesed` → `mishpat`/`tzedakah` architecture across nine verses —
+  the same architecture already developed elsewhere on the site, here in miniature.
+- Developed in conversation on 10 Sep 2026 and deliberately kept out of all three pieces
+  published that day (*The Asking*, *What God Remembers*, the `zakar` study), none of
+  which touches vv. 4–9 except to note that v. 9's judge is v. 3's rememberer.
+- Overlaps `NOTE-creation-commanded.md`, which holds the rest of the same psalm. Decide
+  whether these are one piece or two before drafting either.
+- Existing companions: `word-studies/tzedaqah.html` carries the architecture at length.
 
 ---
 
