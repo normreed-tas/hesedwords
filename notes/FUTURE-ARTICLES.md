@@ -19,7 +19,7 @@ notes record where the thinking stopped, not where it should resume.
 
 **Review cadence:** every six to eight weeks, alongside the protocol review.
 
-**Last reviewed: 10 September 2026.** Bump this line at each review.
+**Last reviewed: 11 September 2026.** Bump this line at each review.
 `node tools/check-doc-dates.js` warns once it is more than eight weeks old, so an
 overdue review surfaces on the next commit rather than depending on anyone noticing.
 Re-paste this file into the drafting project whenever an entry is added or struck,
@@ -127,6 +127,19 @@ if it is his it may be the spine.
 - Overlaps `NOTE-creation-commanded.md`, which holds the rest of the same psalm. Decide
   whether these are one piece or two before drafting either.
 - Existing companions: `word-studies/tzedaqah.html` carries the architecture at length.
+
+### Guidance without clarity — Batemans Bay
+*Added 11 Sep 2026. Detail: `NOTE-batemans-bay.md`*
+
+A personal account recorded so it does not have to be told twice: two days of prayer and
+fasting at Batemans Bay before a pivotal decision, producing a sense rather than an
+answer, and a self-imposed condition that was kept after the thing requiring it had
+fallen through. Offered as the Selah for *What Do You Want Me to Do for You* (Mark 10's
+doubled question) and declined — the account resolves, and that piece cannot end in
+vindication. Two live doors instead: why a rule is kept once nothing holds it up, and what
+being led actually feels like as against how testimony describes it. Not draftable until
+Norm can say which of three reasons kept the rule. Structural rhyme with Mark 9–10 worth
+noting: following precedes seeing, and the disciples are not rebuked for the gap.
 
 ---
 
