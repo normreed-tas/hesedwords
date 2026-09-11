@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "What Do You Want Me to Do for You",
+    date:     "2026-09-11",
+    url:      "/reflections/what-do-you-want-me-to-do-for-you.html",
+    summary:  "Reading Mark 8, 9 and 10 and noticing how much of it is Jesus asking things. Who do you say I am. What were you arguing about on the road. What did Moses command you — asked of the Pharisees, who are not there to learn anything, and who end up telling him the answer themselves. Twice, fifteen verses apart, what do you want me to do for you: James and John want the thrones, Bartimaeus wants his eyes. Ask me what Jesus taught and I can tell you; ask me what he asked people and I would have to stop and think. Then a neighbourhood centre manager in Tasmania who said no three times, and then asked a question.",
+    scripture: ["Mark 8-10"],
+    themes:   ["questions", "Bartimaeus", "James and John", "discipleship", "listening", "prison ministry", "Mark"]
+  },
+  {
     title:    "The Asking",
     date:     "2026-09-10",
     url:      "/reflections/the-asking.html",

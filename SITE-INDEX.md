@@ -9,11 +9,16 @@ before writing: *does something on this already exist?* and *what did it say?*
 The theme index at the foot is the fastest way in — a new piece whose theme
 already appears there probably has a companion waiting.
 
-**136 pieces** — 89 reflections, 32 articles, 10 books, 5 word studies.
+**137 pieces** — 90 reflections, 32 articles, 10 books, 5 word studies.
 
 ---
 
-## Reflections (89)
+## Reflections (90)
+
+**2026-09-11 · What Do You Want Me to Do for You**
+Mark 8-10 · `/reflections/what-do-you-want-me-to-do-for-you.html`
+*Themes:* questions, Bartimaeus, James and John, discipleship, listening, prison ministry, Mark
+Reading Mark 8, 9 and 10 and noticing how much of it is Jesus asking things. Who do you say I am. What were you arguing about on the road. What did Moses command you — asked of the Pharisees, who are not there to learn anything, and who end up telling him the answer themselves. Twice, fifteen verses apart, what do you want me to do for you: James and John want the thrones, Bartimaeus wants his eyes. Ask me what Jesus taught and I can tell you; ask me what he asked people and I would have to stop and think. Then a neighbourhood centre manager in Tasmania who said no three times, and then asked a question.
 
 **2026-09-10 · The Asking**
 Psalm 98 · `/reflections/the-asking.html`
@@ -709,7 +714,7 @@ Before it ever means to intercede, it means to fall upon — to strike, to meet 
 
 ---
 
-## Theme index (446 themes)
+## Theme index (451 themes)
 
 Every theme in use, and what carries it. A theme with more than one piece
 against it is a companion candidate.
@@ -739,6 +744,7 @@ against it is a companion candidate.
 - **authority** — [The One Thing He Wouldn't Delegate](/reflections/the-one-thing-he-wouldnt-delegate.html) (reflection)
 - **baptism** — [Being Right With Someone](/reflections/being-right-with-someone.html) (reflection) · [Fitting](/articles/fitting.html) (article) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection)
 - **barak** — [The Last Word of the Road](/reflections/the-last-word-of-the-road.html) (reflection)
+- **bartimaeus** — [What Do You Want Me to Do for You](/reflections/what-do-you-want-me-to-do-for-you.html) (reflection)
 - **batach** — [God Alone](/reflections/god-alone.html) (reflection) · [This I Know](/reflections/this-i-know.html) (reflection) · [I Am Like an Olive Tree](/reflections/i-am-like-an-olive-tree.html) (reflection) · [The Quiet Soul](/reflections/the-quiet-soul.html) (reflection) · [The Mountain That Cannot Be Moved](/reflections/the-mountain-that-cannot-be-moved.html) (reflection)
 - **beatitudes** — [You](/reflections/blessed-are-you.html) (reflection)
 - **being heard** — [The Oldest Loneliness](/books/the-oldest-loneliness.html) (book)
@@ -810,7 +816,7 @@ against it is a companion candidate.
 - **difficult prayer** — [Learning to Pray by Praying the Psalms — Until We Reach Psalm 83](/articles/until-we-reach-psalm-83.html) (article)
 - **dikaiosyne** — [Fitting](/articles/fitting.html) (article)
 - **discernment** — [Trampled](/articles/trampled.html) (article) · [So I Ask](/reflections/so-i-ask.html) (reflection)
-- **discipleship** — [Is There Not a Cause](/reflections/is-there-not-a-cause.html) (reflection)
+- **discipleship** — [What Do You Want Me to Do for You](/reflections/what-do-you-want-me-to-do-for-you.html) (reflection) · [Is There Not a Cause](/reflections/is-there-not-a-cause.html) (reflection)
 - **discipline** — [Selah](/reflections/selah.html) (reflection)
 - **divine attributes** — [When Mercy and Truth Met](/books/when-mercy-and-truth-met.html) (book)
 - **divine council** — [Job 43](/books/job-43.html) (book)
@@ -897,6 +903,7 @@ against it is a companion candidate.
 - **integrity** — [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection)
 - **intercession** — [Is Jesus an Intercessor?](/word-studies/jesus-intercessor.html) (word study) · [Our Feet Are Standing](/reflections/our-feet-are-standing.html) (reflection)
 - **jabez** — [Kept Anyway](/reflections/kept-anyway.html) (reflection)
+- **james and john** — [What Do You Want Me to Do for You](/reflections/what-do-you-want-me-to-do-for-you.html) (reflection)
 - **jehoshaphat** — [What They Sang](/reflections/what-they-sang.html) (reflection)
 - **jesus** — [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection) · [Into Your Hand](/reflections/into-your-hand.html) (reflection) · [Delivered to What?](/reflections/delivered-to-what.html) (reflection)
 - **jewish tradition** — [The Thursday Psalm](/articles/the-thursday-psalm.html) (article)
@@ -923,11 +930,13 @@ against it is a companion candidate.
 - **lev** — [Succession Planning — Everything Set in Place](/reflections/succession-planning.html) (reflection)
 - **likeness** — [I Shall Be Satisfied](/reflections/i-shall-be-satisfied.html) (reflection)
 - **limits** — [What Cannot Be Counted](/reflections/what-cannot-be-counted.html) (reflection)
+- **listening** — [What Do You Want Me to Do for You](/reflections/what-do-you-want-me-to-do-for-you.html) (reflection)
 - **liturgy** — [The Thursday Psalm](/articles/the-thursday-psalm.html) (article)
 - **longing** — [Draw Me](/reflections/draw-me.html) (reflection) · [His Name Is Oil Poured Out](/reflections/let-his-name-be-poured-out.html) (reflection) · [Let Him Kiss Me](/reflections/let-him-kiss-me.html) (reflection) · [The Song Begins in Longing](/articles/the-song-begins-in-longing.html) (article)
 - **lord's supper** — [Communion](/reflections/communion.html) (reflection)
 - **love your enemies** — [Who Are the Enemies of God? — Reading Psalm 68](/articles/who-are-the-enemies-of-god.html) (article)
 - **make me** — [Make Me](/reflections/make-me.html) (reflection)
+- **mark** — [What Do You Want Me to Do for You](/reflections/what-do-you-want-me-to-do-for-you.html) (reflection)
 - **marriage** — [Have You Not Read](/reflections/have-you-not-read.html) (reflection)
 - **mashak** — [Draw Me](/reflections/draw-me.html) (reflection) · [Draw Me! The Voice Matters](/articles/draw-me-the-voice-matters.html) (article)
 - **maskil** — [Notes for the Band](/reflections/notes-for-the-band.html) (reflection) · [Reading the Label](/articles/reading-the-label.html) (article)
@@ -986,7 +995,7 @@ against it is a companion candidate.
 - **preaching** — [Telling It Wrong](/articles/telling-it-wrong.html) (article)
 - **presence** — [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection) · [His Name Is Oil Poured Out](/reflections/let-his-name-be-poured-out.html) (reflection) · [Communion](/reflections/communion.html) (reflection) · [The Keeper on the Road](/reflections/the-keeper-on-the-road.html) (reflection)
 - **pride** — [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection) · [Blue Blazers](/reflections/blue-blazers.html) (reflection) · [Psalm 75 — How Do I Pray This?](/articles/how-do-i-pray-this.html) (article) · [Pride](/reflections/pride.html) (reflection) · [Nobody Left to Say No](/articles/nobody-left-to-say-no.html) (article)
-- **prison ministry** — [Still Talking](/reflections/still-talking.html) (reflection) · [What We Did Without Knowing](/books/what-we-did-without-knowing.html) (book) · [Have You Not Read](/reflections/have-you-not-read.html) (reflection) · [Why Do You Think Evil](/reflections/why-do-you-think-evil.html) (reflection) · [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection) · [So I Ask](/reflections/so-i-ask.html) (reflection) · [Seeking](/articles/seeking.html) (article) · [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection) · [Sitting with a Sinner](/articles/sitting-with-a-sinner.html) (article) · [Measured, and Immeasurable](/articles/measured-and-immeasurable.html) (article) · [The Vow?](/reflections/the-vow.html) (reflection) · [What Is Wicked in This Story?](/reflections/what-is-wicked-in-this-story.html) (reflection) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection) · [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection) · [The Oldest Loneliness](/books/the-oldest-loneliness.html) (book) · [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection) · [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection)
+- **prison ministry** — [What Do You Want Me to Do for You](/reflections/what-do-you-want-me-to-do-for-you.html) (reflection) · [Still Talking](/reflections/still-talking.html) (reflection) · [What We Did Without Knowing](/books/what-we-did-without-knowing.html) (book) · [Have You Not Read](/reflections/have-you-not-read.html) (reflection) · [Why Do You Think Evil](/reflections/why-do-you-think-evil.html) (reflection) · [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection) · [So I Ask](/reflections/so-i-ask.html) (reflection) · [Seeking](/articles/seeking.html) (article) · [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection) · [Sitting with a Sinner](/articles/sitting-with-a-sinner.html) (article) · [Measured, and Immeasurable](/articles/measured-and-immeasurable.html) (article) · [The Vow?](/reflections/the-vow.html) (reflection) · [What Is Wicked in This Story?](/reflections/what-is-wicked-in-this-story.html) (reflection) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection) · [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection) · [The Oldest Loneliness](/books/the-oldest-loneliness.html) (book) · [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection) · [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection)
 - **promotion** — [Psalm 75 — How Do I Pray This?](/articles/how-do-i-pray-this.html) (article)
 - **prophecy** — [Those Who Know Their God](/reflections/those-who-know-their-god.html) (reflection) · [Reading Daniel Without Arithmetic](/articles/reading-daniel-without-arithmetic.html) (article)
 - **prophet** — [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection)
@@ -998,6 +1007,7 @@ against it is a companion candidate.
 - **public reading** — [Ezra Had the Scroll](/articles/ezra-had-the-scroll.html) (article)
 - **purim** — [Coincidence](/reflections/coincidence.html) (reflection)
 - **qavah** — [Out of the Depths](/reflections/out-of-the-depths.html) (reflection)
+- **questions** — [What Do You Want Me to Do for You](/reflections/what-do-you-want-me-to-do-for-you.html) (reflection)
 - **rachamim** — [Measured, and Immeasurable](/articles/measured-and-immeasurable.html) (article)
 - **rachash** — [Meekness](/articles/psalm-45-meekness.html) (article)
 - **rasha** — [What Is Wicked in This Story?](/reflections/what-is-wicked-in-this-story.html) (reflection) · [What Did Jesus Call Wicked?](/articles/what-did-jesus-call-wicked.html) (article) · [Is "Wicked" a Verdict or a Character?](/word-studies/is-wicked-a-verdict-or-a-character.html) (word study)
