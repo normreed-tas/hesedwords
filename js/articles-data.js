@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "The Same Psalm",
+    url:      "/articles/the-same-psalm.html",
+    date:     "2026-09-12",
+    scripture: ["Psalm 100"],
+    themes:   ["yada", "hesed", "emunah", "todah", "thanksgiving", "doxology", "Old Hundredth", "worship", "ketiv qere"],
+    summary:  "The Old Hundredth sung in a mournful tone at the end of a service, and I will enter His gates with thanksgiving sung years later with hands up — the same psalm, and it took a long time to notice. Five verses and seven orders, every one plural, one of which you cannot watch anybody do. The scribes would not choose between he made us and not we ourselves and he made us and we are his, and handed both down. Todah is not a feeling but a sacrifice that had to be eaten the same day, so it spoiled if you kept it to yourself."
+  },
+  {
     title:    "What God Remembers",
     url:      "/articles/what-god-remembers.html",
     date:     "2026-09-10",

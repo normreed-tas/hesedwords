@@ -86,3 +86,59 @@ out.push('');
 
 fs.writeFileSync(path.join(repo, 'SITE-INDEX.md'), out.join('\n'), 'utf8');
 console.log(`SITE-INDEX.md written — ${total} pieces, ${themes.size} themes.`);
+
+/* ------------------------------------------------------------------
+   LEDGER ORDER CHECK
+
+   The home-page "Current reading" panel holds exactly two rows, newest
+   first. Getting that order wrong is the most repeated mistake in this
+   repo — CONVENTIONS has warned about it in prose for weeks and it kept
+   happening anyway, because the failure mode is dropping a new row into
+   whichever slot the removed one vacated rather than placing it by date.
+   A warning that relies on being remembered is the form that keeps
+   failing, so it is a check now.
+
+   It lives here because build-site-index.js is already the mandatory last
+   step of any commit that adds a piece, so it cannot be skipped without
+   skipping the index rebuild too.
+   ------------------------------------------------------------------ */
+const MONTHS = { Jan:0, Feb:1, Mar:2, Apr:3, May:4, Jun:5,
+                 Jul:6, Aug:7, Sep:8, Oct:9, Nov:10, Dec:11 };
+
+const idxHtml = fs.readFileSync(path.join(repo, 'index.html'), 'utf8');
+const panel = (idxHtml.split('id="current-reading"')[1] || '').split('</section>')[0];
+const ledgerRows = [...panel.matchAll(/<h3>([\s\S]*?)<\/h3>/g)].map(m => m[1].trim());
+const ledgerDates = [...panel.matchAll(/<div>(\d{1,2}) (\w{3}) (\d{4})<\/div>/g)]
+  .map(m => new Date(+m[3], MONTHS[m[2]], +m[1]));
+
+const ledgerProblems = [];
+if (ledgerRows.length !== 2) {
+  ledgerProblems.push(`panel has ${ledgerRows.length} rows; CONVENTIONS says exactly two`);
+}
+if (ledgerDates.length === ledgerRows.length) {
+  for (let i = 1; i < ledgerDates.length; i++) {
+    if (ledgerDates[i] > ledgerDates[i - 1]) {
+      ledgerProblems.push(
+        `row ${i + 1} ("${ledgerRows[i]}") is NEWER than row ${i} ` +
+        `("${ledgerRows[i - 1]}") — the panel must run newest first`);
+    }
+  }
+}
+
+if (ledgerProblems.length) {
+  console.error('\nLEDGER ORDER PROBLEM in index.html #current-reading:');
+  ledgerProblems.forEach(p => console.error('  - ' + p));
+  console.error('Fix the panel before committing.');
+  process.exitCode = 1;
+} else if (ledgerRows.length === 2) {
+  // Local date parts, NOT toISOString(). These Dates are constructed at local
+  // midnight, so at UTC+10 toISOString() reports the previous day and the OK
+  // line confidently states the wrong date. Same bug was fixed once already in
+  // check-doc-dates.js; it came back here because the formatter was rewritten
+  // rather than reused.
+  const fmt = d => `${d.getFullYear()}-` +
+                   `${String(d.getMonth() + 1).padStart(2, '0')}-` +
+                   `${String(d.getDate()).padStart(2, '0')}`;
+  console.log(`Ledger OK — ${fmt(ledgerDates[0])} "${ledgerRows[0]}" ` +
+              `then ${fmt(ledgerDates[1])} "${ledgerRows[1]}".`);
+}

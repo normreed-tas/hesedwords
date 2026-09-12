@@ -2,7 +2,7 @@
 
 > **AUTHORITATIVE AND COMPLETE.** This is the full conventions file, not an extract.
 > It serves publicly at https://hesedwords.com/CONVENTIONS.md and the repo copy at
-> the root is the same file. Full text current as of 10 September 2026 — if you are
+> the root is the same file. Full text current as of 12 September 2026 — if you are
 > holding a paste older than that, check the live file for changes since.
 >
 > **A fetched summary is not a substitute for this file.** Some tools return a
@@ -243,9 +243,16 @@ The card copy and manifest entry are added separately by the maintainer.
   "Chronicles" — so an article row looks no different from a reflection row.
   Order by the DATE IN THE META BLOCK, not by arrival: pieces are sometimes finished out
   of sequence and land with a date older than the row already sitting there, in which case
-  the new one goes *second*. Check the two dates after editing rather than assuming the
-  newcomer belongs on top; putting it there by reflex is the recurring mistake. The same
-  applies to the article cards in `articles.html` and every `-data.js` manifest.
+  the new one goes *second*. The same applies to the article cards in `articles.html` and
+  every `-data.js` manifest.
+  **`node tools/build-site-index.js` now checks this and exits non-zero if the panel is
+  out of order or does not hold exactly two rows.** It was made a check on 12 Sep 2026
+  after the same mistake twice in two days. Both directions have occurred — putting the
+  newcomer on top when its date is older, and (more often) dropping it into whichever slot
+  the removed row vacated. The common cause is editing by POSITION instead of by date, so
+  a prose warning was never going to catch it. The check lives in the index build because
+  that is already the mandatory last step of any commit adding a piece, so it cannot be
+  skipped separately.
 - **Bump the header date when you edit this file or `COLLABORATION.md`.** Both carry
   "Full text current as of <date>", which is the only thing telling a drafting session
   whether its pasted copy is stale. Leaving it unbumped is worse than having no date —
