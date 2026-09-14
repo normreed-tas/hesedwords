@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Profitable",
+    url:      "/articles/profitable.html",
+    date:     "2026-09-14",
+    scripture: ["2 Timothy 3:16"],
+    themes:   ["gratitude", "mentors", "leadership", "CRC", "Papua New Guinea", "correction", "being formed"],
+    summary:  "Thirty years alongside Bill Vasilakis, and the difficulty of saying thank you for something that was not handed to you but done to you. Doctrine, reproof, correction, instruction in righteousness — two of those are gifts you can feel while they are happening and two are not, and the word Paul uses for all four is profitable, a cold and useful word, the sort you would use about a tool. He knew what he was not and staffed for it; it took a long time to understand that being hired for what he lacked was not a lesser thing."
+  },
+  {
     title:    "The Same Psalm",
     url:      "/articles/the-same-psalm.html",
     date:     "2026-09-12",

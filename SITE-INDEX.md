@@ -9,7 +9,7 @@ before writing: *does something on this already exist?* and *what did it say?*
 The theme index at the foot is the fastest way in — a new piece whose theme
 already appears there probably has a companion waiting.
 
-**138 pieces** — 90 reflections, 33 articles, 10 books, 5 word studies.
+**139 pieces** — 90 reflections, 34 articles, 10 books, 5 word studies.
 
 ---
 
@@ -467,7 +467,12 @@ Forty years of ministry with the word righteousness — preaching it, building t
 
 ---
 
-## Articles (33)
+## Articles (34)
+
+**2026-09-14 · Profitable**
+2 Timothy 3:16 · `/articles/profitable.html`
+*Themes:* gratitude, mentors, leadership, CRC, Papua New Guinea, correction, being formed
+Thirty years alongside Bill Vasilakis, and the difficulty of saying thank you for something that was not handed to you but done to you. Doctrine, reproof, correction, instruction in righteousness — two of those are gifts you can feel while they are happening and two are not, and the word Paul uses for all four is profitable, a cold and useful word, the sort you would use about a tool. He knew what he was not and staffed for it; it took a long time to understand that being hired for what he lacked was not a lesser thing.
 
 **2026-09-12 · The Same Psalm**
 Psalm 100 · `/articles/the-same-psalm.html`
@@ -719,7 +724,7 @@ Before it ever means to intercede, it means to fall upon — to strike, to meet 
 
 ---
 
-## Theme index (455 themes)
+## Theme index (458 themes)
 
 Every theme in use, and what carries it. A theme with more than one piece
 against it is a companion candidate.
@@ -752,6 +757,7 @@ against it is a companion candidate.
 - **bartimaeus** — [What Do You Want Me to Do for You](/reflections/what-do-you-want-me-to-do-for-you.html) (reflection)
 - **batach** — [God Alone](/reflections/god-alone.html) (reflection) · [This I Know](/reflections/this-i-know.html) (reflection) · [I Am Like an Olive Tree](/reflections/i-am-like-an-olive-tree.html) (reflection) · [The Quiet Soul](/reflections/the-quiet-soul.html) (reflection) · [The Mountain That Cannot Be Moved](/reflections/the-mountain-that-cannot-be-moved.html) (reflection)
 - **beatitudes** — [You](/reflections/blessed-are-you.html) (reflection)
+- **being formed** — [Profitable](/articles/profitable.html) (article)
 - **being heard** — [The Oldest Loneliness](/books/the-oldest-loneliness.html) (book)
 - **being held up** — [Still Talking](/reflections/still-talking.html) (reflection)
 - **being known** — [What We Did Without Knowing](/books/what-we-did-without-knowing.html) (book) · [See Me Trying](/reflections/see-me-trying.html) (reflection)
@@ -796,11 +802,12 @@ against it is a companion candidate.
 - **confession** — [Blessed Is the Man](/reflections/blessed-is-the-man.html) (reflection)
 - **contempt** — [Eyes Fixed Upward](/reflections/eyes-fixed-upward.html) (reflection)
 - **conviction** — [We All Need Our Rechabites](/reflections/we-all-need-our-rechabites.html) (reflection)
-- **correction** — [Pride](/reflections/pride.html) (reflection) · [Nobody Left to Say No](/articles/nobody-left-to-say-no.html) (article) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection)
+- **correction** — [Profitable](/articles/profitable.html) (article) · [Pride](/reflections/pride.html) (reflection) · [Nobody Left to Say No](/articles/nobody-left-to-say-no.html) (article) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection)
 - **cost** — [You](/reflections/blessed-are-you.html) (reflection)
 - **counting** — [Still Counting](/articles/still-counting.html) (article) · [Telling David's Census to an Eight-Year-Old](/reflections/telling-davids-census.html) (reflection) · [What Cannot Be Counted](/reflections/what-cannot-be-counted.html) (reflection)
 - **covenant** — [What God Remembers](/articles/what-god-remembers.html) (article) · [Zakar](/word-studies/zakar.html) (word study) · [A Place for Salt](/reflections/a-place-for-salt.html) (reflection) · [The Place Where God Rests](/reflections/the-place-where-god-rests.html) (reflection) · [Called in Righteousness](/reflections/called-in-righteousness.html) (reflection)
 - **covering** — [Blessed Is the Man](/reflections/blessed-is-the-man.html) (reflection)
+- **crc** — [Profitable](/articles/profitable.html) (article)
 - **creation** — [Star Wars](/reflections/star-wars.html) (reflection)
 - **cross** — [Into Your Hand](/reflections/into-your-hand.html) (reflection)
 - **crossroads** — [Stand by the Roads](/reflections/stand-by-the-roads.html) (reflection)
@@ -868,7 +875,7 @@ against it is a companion candidate.
 - **grace** — [Still Counting](/articles/still-counting.html) (article) · [Draw Me](/reflections/draw-me.html) (reflection) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection)
 - **grammar** — [The Song Begins in Longing](/articles/the-song-begins-in-longing.html) (article)
 - **grant** — [The Cause I Applied For](/reflections/the-cause-i-applied-for.html) (reflection)
-- **gratitude** — [The Sacrifice of Thanksgiving](/reflections/the-sacrifice-of-thanksgiving.html) (reflection)
+- **gratitude** — [Profitable](/articles/profitable.html) (article) · [The Sacrifice of Thanksgiving](/reflections/the-sacrifice-of-thanksgiving.html) (reflection)
 - **graveside** — [Not Finished Waking](/articles/not-finished-waking.html) (article)
 - **great commission** — [Almost the Same in the End](/reflections/almost-the-same-in-the-end.html) (reflection)
 - **grief** — [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection) · [Not Finished Waking](/articles/not-finished-waking.html) (article) · [He Does Not Afflict From His Heart](/articles/he-does-not-afflict-from-his-heart.html) (article)
@@ -931,7 +938,7 @@ against it is a companion candidate.
 - **labels** — [Sitting with a Sinner](/articles/sitting-with-a-sinner.html) (article)
 - **lament** — [New Every Morning](/reflections/new-every-morning.html) (reflection) · [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection) · [Unless I Had Believed](/reflections/unless-i-had-believed.html) (reflection)
 - **last words** — [Into Your Hand](/reflections/into-your-hand.html) (reflection)
-- **leadership** — [Succession Planning — Everything Set in Place](/reflections/succession-planning.html) (reflection) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection) · [Jesus as Leader](/articles/jesus-as-leader.html) (article)
+- **leadership** — [Profitable](/articles/profitable.html) (article) · [Succession Planning — Everything Set in Place](/reflections/succession-planning.html) (reflection) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection) · [Jesus as Leader](/articles/jesus-as-leader.html) (article)
 - **legacy** — [See Me Trying](/reflections/see-me-trying.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection)
 - **letting go** — [The Cause I Applied For](/reflections/the-cause-i-applied-for.html) (reflection)
 - **lev** — [Succession Planning — Everything Set in Place](/reflections/succession-planning.html) (reflection)
@@ -952,6 +959,7 @@ against it is a companion candidate.
 - **meditation** — [Selah](/reflections/selah.html) (reflection) · [New Every Morning](/reflections/new-every-morning.html) (reflection)
 - **meekness** — [Is There Not a Cause](/reflections/is-there-not-a-cause.html) (reflection) · [Meekness](/articles/psalm-45-meekness.html) (article)
 - **memory** — [New Every Morning](/reflections/new-every-morning.html) (reflection)
+- **mentors** — [Profitable](/articles/profitable.html) (article)
 - **menuha** — [The Place Where God Rests](/reflections/the-place-where-god-rests.html) (reflection) · [The Quiet Soul](/reflections/the-quiet-soul.html) (reflection) · [The House the LORD Builds](/reflections/the-house-the-lord-builds.html) (reflection)
 - **mercy** — [The Asking](/reflections/the-asking.html) (reflection) · [Different Work](/articles/different-work.html) (article) · [Why Do You Think Evil](/reflections/why-do-you-think-evil.html) (reflection) · [The One Thing He Wouldn't Delegate](/reflections/the-one-thing-he-wouldnt-delegate.html) (reflection) · [Measured, and Immeasurable](/articles/measured-and-immeasurable.html) (article) · [What Did Jesus Call Wicked?](/articles/what-did-jesus-call-wicked.html) (article) · [When Mercy and Truth Met](/books/when-mercy-and-truth-met.html) (book) · [The Third That Survived](/reflections/the-third-that-survived.html) (reflection)
 - **ministry** — [Our God-Sponsored Projects](/articles/our-god-sponsored-projects.html) (article) · [Jesus as Leader](/articles/jesus-as-leader.html) (article)
@@ -980,7 +988,7 @@ against it is a companion candidate.
 - **old hundredth** — [The Same Psalm](/articles/the-same-psalm.html) (article)
 - **one thing** — [Let Him Kiss Me](/reflections/let-him-kiss-me.html) (reflection)
 - **paired psalms** — [Spot the Difference](/articles/spot-the-difference.html) (article)
-- **papua new guinea** — [The One Thing He Wouldn't Delegate](/reflections/the-one-thing-he-wouldnt-delegate.html) (reflection)
+- **papua new guinea** — [Profitable](/articles/profitable.html) (article) · [The One Thing He Wouldn't Delegate](/reflections/the-one-thing-he-wouldnt-delegate.html) (reflection)
 - **pastoral formation** — [Jesus as Leader](/articles/jesus-as-leader.html) (article)
 - **paul** — [Star Wars](/reflections/star-wars.html) (reflection) · [Let Him Kiss Me](/reflections/let-him-kiss-me.html) (reflection)
 - **pause** — [Selah](/reflections/selah.html) (reflection)
