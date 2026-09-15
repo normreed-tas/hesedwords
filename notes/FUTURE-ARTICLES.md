@@ -216,23 +216,37 @@ subject with published groundwork on both sides. **But this is reconstruction, n
 recovery.** Nothing confirms it was the intention. Treat it as a good candidate that happens
 to share a title, not as a recovered brief.
 
-**Psalm 33 and the Psalm 31:5 Selah rewrite — unrecoverable.**
-Searched: no document, no memory note, not a stray sentence. Psalm 31:5 does not appear in
-any surviving material, so which piece the Selah belonged to and what was wrong with it are
-both gone. Psalm 33 has no recorded angle at all.
-
-Kept rather than struck, because neither was concluded to be a non-piece — they were simply
-lost with the account. **One distinctive phrase from Norm would recover either**, since the
-old project can search its own documents on a fragment. Until then there is nothing here to
-draft from, and a session should not invent an angle to fill the gap.
-
-A fifth thread listed alongside them, *The Oldest Loneliness* chapters 6–11, is **complete**:
-the published book carries chapters one through eleven. Struck rather than carried.
+Two other threads listed alongside these — **Psalm 33** and the **Psalm 31:5 Selah
+rewrite** — proved unrecoverable and are struck out below. A fifth, *The Oldest Loneliness*
+chapters 6–11, was already complete: the published book carries chapters one through eleven.
 
 
 ---
 
 ## Struck out
 
-*(none yet — record why, when one is struck, so the same idea isn't re-raised)*
-<!-- READ-TOKEN 1317a77e · 237 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+An entry is struck when it becomes a piece, or when a review concludes it was never a piece
+— or, as with these two, when the thinking behind it is gone and cannot be got back. That
+third case was not in the original rule and is recorded so the distinction holds: these
+were not judged. They were lost.
+
+### Psalm 33
+*Struck 16 Sep 2026.* Survived only as the words "Psalm 33" in the devotional project
+instructions. The old account was searched on 16 Sep: no document, no memory note, not a
+stray sentence, no recorded angle of any kind. Nothing here to draft from.
+
+No piece on Psalm 33 exists, so the subject is open — but it is **open ground, not a
+resumed thread**. Start it fresh rather than reconstructing an intention nobody has.
+
+### The Psalm 31:5 Selah rewrite
+*Struck 16 Sep 2026.* An existing Selah was to be redone rather than a new piece written.
+Which piece it belonged to and what was wrong with it are both gone: Psalm 31:5 appears in
+no surviving material and the old account holds nothing. Because the fault was never
+written down, there is no way now to tell whether it has since been fixed, whether the
+piece was retired, or whether it still stands exactly as it was.
+
+**Either could be revived by one distinctive phrase**, since the old project can search its
+own documents on a fragment. If a line comes back to Norm, say so — the search is cheap.
+Absent that, do not invent an angle to fill the gap. A struck entry carrying an invented
+brief is worse than an empty one, because it reads as recovered.
+<!-- READ-TOKEN a2e350ad · 251 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
