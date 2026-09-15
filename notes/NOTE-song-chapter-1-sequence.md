@@ -216,9 +216,10 @@ Recorded so it is not re-raised.
   — resolve there before any page, not here.
 - **Bernard.** *Draw Me! The Voice Matters* credits him with the *to* versus *after*
   distinction. `[verify]` against Sermon XXI itself; I have only the description on our own
-  resource page. Separately, the three editorial flags sitting in
-  `resources/bernard-song-of-songs.html` as HTML comments — Sermons XVIII, XLII, LXXXII —
-  still await a check against a print copy.
+  resource page. Separately, the editorial flags in `resources/bernard-song-of-songs.html`
+  await a check against a print copy. **Corrected 16 Sep 2026 — see the foot of this
+  file: there is one flag, not three, and it is visible page text rather than an HTML
+  comment.**
 - **The spatial framework has no file.** It has only ever lived in chat, and the account
   transition ended that. It is reconstructible from the published prose and the three
   states above are most of it. It needs somewhere to live, and everything in this repo is
@@ -262,5 +263,18 @@ though `#daat` is the tidier form.
 `glossary.html`, all inside another entry's notes, with no `seed_shemen` id. So a
 *shem*/*shemen* piece would need one seeded first.
 
-Still open and genuinely outside the repo: the Spurgeon sermon, the Bernard sermon, the
+
+**Bernard editorial flags — one, not three, and not comments.** Both this note and the
+Song project instructions said three editorial flags sat in `resources/bernard-song-of-songs.html`
+as HTML comments, on Sermons XVIII, XLII and LXXXII. Checked: the file contains three HTML
+comments and they are chapter markers. There is exactly one editorial flag, it is visible
+page text, and it is on **Sermon XVIII** alone:
+
+> Editorial note: the opening sentences of this sermon were disrupted in the OCR source and
+> have been reconstructed from context — worth checking against a print copy.
+
+XLII and LXXXII appear in the file only as ordinary sermon numbers, with nothing flagged.
+So the outstanding check is one sermon against a print copy, not three.
+
+: the Spurgeon sermon, the Bernard sermon, the
 LXX check, and — the one that matters — Norm's own answer on where he now stands.
