@@ -10,8 +10,10 @@ as bullets while it is still short enough to fit — it earns a note file once i
 findings, loose ends, and a record of where it stalled. Do not "tidy" a bulleted entry
 into a paragraph; the bullets are the content.
 
-Nothing here is a commitment. An entry earns removal two ways: it becomes a piece, or a
-review concludes it was never a piece and it is struck out with a line saying why.
+Nothing here is a commitment. An entry earns removal three ways: it becomes a piece; a
+review concludes it was never a piece; or the thinking behind it is lost and cannot be got
+back. Each is struck out below with a line saying which, because "rejected" and "lost" are
+different things and a later reader cannot tell them apart otherwise.
 
 **How to use this in a drafting session:** paste or fetch this file at the start of any
 session about what to write next. Do not treat an entry as approved structure — the
@@ -249,4 +251,4 @@ piece was retired, or whether it still stands exactly as it was.
 own documents on a fragment. If a line comes back to Norm, say so — the search is cheap.
 Absent that, do not invent an angle to fill the gap. A struck entry carrying an invented
 brief is worse than an empty one, because it reads as recovered.
-<!-- READ-TOKEN a2e350ad · 251 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 167672b1 · 253 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
