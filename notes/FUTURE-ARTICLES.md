@@ -22,8 +22,8 @@ notes record where the thinking stopped, not where it should resume.
 **Last reviewed: 16 September 2026.** Bump this line at each review.
 `node tools/check-doc-dates.js` warns once it is more than eight weeks old, so an
 overdue review surfaces on the next commit rather than depending on anyone noticing.
-Re-paste this file into the drafting project whenever an entry is added or struck,
-or the copy in context stops matching the register.
+Drafting projects fetch this file from the repo, so there is nothing to re-upload when
+an entry is added or struck — see `CONTEXT.md`.
 
 ---
 
@@ -186,4 +186,4 @@ though rib is the covenant-lawsuit term the whole of Telling It Wrong turns on.
 ## Struck out
 
 *(none yet — record why, when one is struck, so the same idea isn't re-raised)*
-<!-- READ-TOKEN 7476913d · 188 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 532704c0 · 188 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

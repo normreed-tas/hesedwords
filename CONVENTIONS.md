@@ -264,24 +264,27 @@ The card copy and manifest entry are added separately by the maintainer.
   that is already the mandatory last step of any commit adding a piece, so it cannot be
   skipped separately.
 - **Bump the header date when you edit this file or `COLLABORATION.md`.** Both carry
-  "Full text current as of <date>", which is the only thing telling a drafting session
-  whether its pasted copy is stale. Leaving it unbumped is worse than having no date —
-  it reports current while the content has moved. `node tools/check-doc-dates.js`
-  compares each header against that file's own last commit and exits non-zero when they
-  disagree; run it before committing a change to either. Re-paste the file into the
-  drafting project afterwards, or the bump only records the drift rather than closing it.
+  "Full text current as of <date>". Since 16 Sep 2026 drafting projects fetch these files
+  rather than holding a paste, so the date is no longer a staleness signal — the
+  READ-TOKEN at the foot is what proves which version a session holds. The date remains a
+  human-readable record of when the content last moved, and an unbumped one is still a
+  confident false signal. `node tools/check-doc-dates.js` compares each header against
+  that file's own last commit and exits non-zero when they disagree; run it before
+  committing a change to either. It also verifies the read-token stamps.
 - **`SITE-INDEX.md` is generated — never hand-edit it.** Rebuild with
   `node tools/build-site-index.js` from the repo root as the LAST step of any commit
   that adds or retitles a piece, so it never drifts from the manifests it is built
   from. It lists every piece with date, scripture, themes and summary, and ends with
   a theme index mapping each theme to everything carrying it.
-  Its purpose is the drafting session, which has no repo access and cannot hold a
-  114-piece site in mind: before writing, check whether the subject already exists,
-  and check the theme index for a companion. *Blue Blazers* shipped with no companion
-  line because nothing looked like a pair — `reflections/pride.html` was squarely the
-  same subject and already had an article of its own. The theme index would have shown
-  it at once. It is public at `hesedwords.com/SITE-INDEX.md`, so it can be fetched
-  rather than pasted where fetching is available.
+  Its purpose is the drafting session, which cannot hold a 140-piece site in mind:
+  before writing, check whether the subject already exists, and check the theme index
+  for a companion. *Blue Blazers* shipped with no companion line because nothing looked
+  like a pair — `reflections/pride.html` was squarely the same subject and already had an
+  article of its own. The theme index would have shown it at once.
+  **`SITE-INDEX-BRIEF.md` is generated alongside it** — the same inventory at a tenth the
+  size, one line per piece, small enough to read whole. Use the brief for "does this
+  already exist?" and the full index for themes and companions. Both are fetched from
+  `raw.githubusercontent.com`; see `CONTEXT.md`.
 - **Reflections listing** is generated from the `ARTICLES` manifest in
   `js/reflections-data.js` (loaded via `<script src>` by `reflections.html`) — NOT
   inline in the page. Edit that file when adding a reflection, newest first.
@@ -487,4 +490,4 @@ folio is present, and that the stripped elements are actually gone. An earlier v
 this note said the PDF could not be inspected from the shell and to screenshot the stripped
 HTML instead; that was wrong. The script also leaves the print copy beside the PDF as
 `<slug>-PRINT.html` (gitignored) if you do want to look at it rendered.
-<!-- READ-TOKEN 81d3b85c · 489 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN aadacdcf · 492 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

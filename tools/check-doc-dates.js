@@ -1,8 +1,11 @@
 /* ================================================================
    CHECK THE GOVERNING DOCS' HEADER DATES
    CONVENTIONS.md and COLLABORATION.md each carry "Full text current
-   as of <date>" in their header. That date is what a drafting session
-   uses to tell whether its pasted copy is stale.
+   as of <date>" in their header. Drafting sessions now fetch these
+   files rather than holding a paste, so the date is no longer a
+   staleness signal — it is a human-readable record of when the content
+   last moved, and the read-token stamp is what proves which version a
+   session is holding.
 
    An unbumped date is worse than no date: it is a confident false
    signal. This compares each header date against the file's own last
@@ -120,59 +123,25 @@ if (fs.existsSync(regPath)) {
   }
 }
 
-// ---- context files: what the drafting project is actually holding -----------
-// These four are pasted into the drafting project. The repo copy is authoritative
-// but the session reads the paste, so a commit that changes one is only half done
-// until it is re-uploaded.
+// ---- paste tracking: REMOVED 16 Sep 2026 ------------------------------------
+// This block recorded which commit each context file was last pasted into the
+// drafting project, and reported RE-PASTE when the repo had moved on. It existed
+// because the project read an uploaded copy rather than the repo, so a commit
+// changing a context file was only half done until someone re-uploaded it. It
+// caught real drift — SITE-INDEX.md had gone seven pieces stale and silent.
 //
-// Reporting "changed in the last commit" is not enough: a file that changed three
-// commits ago and was never re-pasted stays stale and silent. SITE-INDEX.md drifted
-// seven pieces that way. So we record which commit each file was last pasted at,
-// and compare against its current last-changed commit.
+// It is gone because the problem is gone. Both drafting projects now fetch the
+// files from raw.githubusercontent.com, so the copy a session reads IS the repo
+// copy and cannot lag it. `--pasted` and notes/context-pasted.json went with it.
 //
-//   node tools/check-doc-dates.js            report what is stale
-//   node tools/check-doc-dates.js --pasted   record all four as just uploaded
-
-const CONTEXT = ['CONVENTIONS.md', 'COLLABORATION.md',
-                 'notes/FUTURE-ARTICLES.md', 'SITE-INDEX.md'];
-const RECORD = path.join(repo, 'notes', 'context-pasted.json');
-
-const lastChanged = f => sh(`git log -1 --format=%h -- "${f}"`);
-const isDirty     = f => sh(`git status --porcelain -- "${f}"`) !== '';
-
-let pasted = {};
-if (fs.existsSync(RECORD)) {
-  try { pasted = JSON.parse(fs.readFileSync(RECORD, 'utf8')); } catch { pasted = {}; }
-}
-
-if (process.argv.includes('--pasted')) {
-  const now = {};
-  for (const f of CONTEXT) now[f] = lastChanged(f);
-  fs.writeFileSync(RECORD, JSON.stringify(now, null, 2) + '\n', 'utf8');
-  console.log('\nRecorded as pasted into the drafting project:');
-  for (const f of CONTEXT) console.log(`  ${f} @ ${now[f]}`);
-  console.log('Commit notes/context-pasted.json so the record survives.');
-  process.exit(0);
-}
-
-const behind = CONTEXT.filter(f => {
-  if (isDirty(f)) return true;                 // uncommitted edits: not pasted yet
-  const cur = lastChanged(f);
-  return !cur ? false : pasted[f] !== cur;
-});
-
-if (behind.length) {
-  console.log('\nRE-PASTE — the drafting project is holding an older copy of:');
-  for (const f of behind) {
-    const cur = lastChanged(f);
-    const had = pasted[f] || 'never recorded';
-    console.log(`  ${f}`);
-    console.log(`      repo @ ${cur}${isDirty(f) ? ' (+ uncommitted edits)' : ''}, project @ ${had}`);
-  }
-  console.log('Upload them, then: node tools/check-doc-dates.js --pasted');
-} else {
-  console.log('\nContext files: drafting project is up to date.');
-}
+// Removed rather than left running, deliberately. A check that reports a
+// condition nobody acts on any more trains the maintainer to skim past this
+// tool's output — and the two checks that remain below, the header dates and the
+// read-token stamps, both matter. A noisy check makes the quiet ones invisible.
+//
+// If a project is ever set up that cannot reach GitHub, the answer is not to
+// restore this: it is CONTEXT.md's rule — say so plainly and ask — because a
+// paste that no one can verify was read is the failure the read-token replaced.
 
 // ---- read-token stamps ------------------------------------------------------
 // Every context file ends with a hash of its own content, so a session can prove
@@ -189,8 +158,8 @@ try {
 }
 
 if (stale) {
-  console.log('\nRe-paste the affected file into the drafting project after bumping,');
-  console.log('or the date says current while the content is not.');
+  console.log('\nBump the date before committing, or the header says current');
+  console.log('while the content has moved.');
   process.exit(1);
 }
 process.exit(0);
