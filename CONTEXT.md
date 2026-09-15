@@ -25,6 +25,19 @@ current because they are the repo itself. No paste, no upload, no stale copy.
 If your sandbox blocks this host, say so plainly and ask — do not work from memory
 of a previous session, and do not guess the markup.
 
+## Which project are you?
+
+The files above are shared and identical for every project. Where a project works
+differently, that difference lives in one overlay file and nowhere else — so the
+shared files never fork.
+
+| Project | Also read | Remit |
+|---|---|---|
+| **Song of Songs** | `notes/PROJECT-SONGS.md` | That book, in depth. Owns all Song of Songs material. Default output is a held note, not a finished page. |
+| **Devotional** | nothing further | Everything else. Defers on Song of Songs — reference the existing pieces, but start no new Song work without checking. |
+
+If you do not know which you are, ask before writing anything.
+
 ## The read-token protocol
 
 Every file above ends with a line like:
@@ -76,4 +89,4 @@ after.
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN 89479f17 · 78 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 0099e088 · 91 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

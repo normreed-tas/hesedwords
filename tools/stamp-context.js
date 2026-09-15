@@ -51,6 +51,7 @@ const FILES = [
   'CONVENTIONS.md',
   'COLLABORATION.md',
   'notes/FUTURE-ARTICLES.md',
+  'notes/PROJECT-SONGS.md',
   'SITE-INDEX.md',
   'SITE-INDEX-BRIEF.md',
 ];
