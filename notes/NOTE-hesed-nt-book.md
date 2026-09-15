@@ -3,9 +3,20 @@
 **Status: live.** Running through the rest of 2026. Purpose: so any session opening this
 project knows the book exists and knows which pieces belong to it.
 
-Established 22 Aug 2026 (conversation *Hesed embodied in Jesus*). Working note with the
-full frame, audit and ledger is `hesed-nt-frame-NOTE.md`. This file is the shorter
-standing version for the context set.
+Established 22 Aug 2026 (conversation *Hesed embodied in Jesus*).
+
+**This is now the only note on the book.** It was written as the shorter standing version
+of a fuller working note, `hesed-nt-frame-NOTE.md`, which held the frame, the audit and the
+ledger. That file is gone — searched for on 16 Sep 2026 across the repo, every branch of
+git history, and the whole user profile, and found nowhere. It lived in the old account's
+project knowledge and did not survive the move to the new one. Do not go looking for it.
+
+What that costs is smaller than it sounds, and is worth stating precisely rather than
+worrying about. The frame, the ledger, the candidate pieces and the verified source
+material are all below — this file carries them, because it was written to. What is lost
+is the **working** of the audit: the three disciplines survive as conclusions, but not the
+reasoning that produced them or whatever else that audit turned up and discarded. If one
+of the three ever needs re-arguing, it will have to be re-argued from scratch.
 
 ## What it is
 
@@ -247,14 +258,19 @@ Matthew 5–6; Matthew 6:33. Retitled and relinked above.
 **All four named pieces are live** — `fitting.html` and `trampled.html` and `so-i-ask.html`
 (all 2026-08-28), `blessed-are-you.html` (2026-08-26).
 
-Two things still missing:
+**`hesed-nt-frame-NOTE.md` — searched for and closed.** Referenced at the head of this file
+as holding the full frame, audit and ledger. Searched on 16 Sep 2026: the repo working
+tree, every branch of git history, and the whole user profile including Downloads and
+Desktop. The only file on the machine that so much as mentions the name is this one. It
+never existed here — it lived in the old account's project knowledge and did not survive
+the move. The header now says so, so nobody searches again.
 
-- **`hesed-nt-frame-NOTE.md`** — referenced at the head of this file as carrying the full
-  frame, audit and ledger. It is not in the repo and never has been. If it exists, it is in
-  project knowledge only and is at the same risk this file was. Find it before clearing
-  anything further.
-- The two Vanessa Goodwin `[verify]` marks are unresolved and need an outside source, so
-  they belong to Claude Code rather than to a drafting session.
+**Still open:** the two Vanessa Goodwin `[verify]` marks need an outside source, so they
+belong to Claude Code rather than to a drafting session — the exact circumstances of her
+death, and the superlative *"single biggest predictor,"* which overstates what the AIC
+paper found. Both are held for the Exodus 34 piece and neither is urgent, but the second
+is the kind of claim that hardens into fact by repetition if it is drafted before it is
+checked.
 
 **On "one project, not two":** still correct and unaffected by the September split. The
 Song of Songs project was separated because that book is a discovery journey in its own
