@@ -8,3 +8,7 @@ books/_audit.py
 *-PREVIEW.html
 *-PRINT.html
 .claude/
+
+# Unprocessed pieces awaiting filing. Never published — see inbox/README.md
+inbox/*
+!inbox/README.md
