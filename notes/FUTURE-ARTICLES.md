@@ -181,9 +181,29 @@ psalm pivots on its own opening word. Either could carry a piece. Also still ope
 session: rib and davar were flagged as strong glossary seeding candidates and never seeded,
 though rib is the covenant-lawsuit term the whole of Telling It Wrong turns on.
 
+### Four threads carried over from the project instructions
+*Added 16 Sep 2026. Held, and thin — these are one-line survivals, not worked ideas.*
+
+Rescued from the devotional project instructions on 16 Sep 2026, where they were listed as
+open threads and existed nowhere else. Recorded here so the instructions field could be
+cleared without losing them. **Each is a title and nothing more — Norm has the content.**
+Ask him before treating any of them as a brief.
+
+- **Canonical tracing of batach** — the trust word. Note it is already a live glossary
+  headword, and reflections/kept-anyway.html and others use it, so check what the site
+  already says before starting.
+- **Psalm 33** — no piece exists. Nothing recorded about the angle.
+- **The Psalm 31:5 Selah rewrite** — an existing Selah to be redone rather than a new
+  piece. Which piece and what was wrong with it is not recorded.
+- **The Stranger at the Gate** — a title with no text attached. Possibly the ger material,
+  which the glossary carries as a headword, but that is a guess and is marked as one.
+
+A fifth thread listed alongside them, *The Oldest Loneliness* chapters 6-11, is **complete**:
+the published book carries chapters one through eleven. Struck rather than carried.
+
 ---
 
 ## Struck out
 
 *(none yet — record why, when one is struck, so the same idea isn't re-raised)*
-<!-- READ-TOKEN 532704c0 · 188 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 6cc4843d · 208 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
