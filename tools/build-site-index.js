@@ -88,6 +88,54 @@ fs.writeFileSync(path.join(repo, 'SITE-INDEX.md'), out.join('\n'), 'utf8');
 console.log(`SITE-INDEX.md written — ${total} pieces, ${themes.size} themes.`);
 
 /* ------------------------------------------------------------------
+   SITE-INDEX-BRIEF.md — the whole inventory, one line per piece.
+
+   SITE-INDEX.md is ~140KB with summaries and a theme index, and that
+   size is itself a failure mode: on 12 Sep 2026 a session read the top
+   of it and reported two pieces missing that were hundreds of lines
+   further down. A file too long to hold produces confident wrong
+   answers about what is in it.
+
+   So this is the same inventory with the summaries and themes stripped:
+   small enough to read whole, which makes "does a piece on X already
+   exist?" answerable without trusting a partial read. The full index
+   stays authoritative for themes, summaries and companion-hunting.
+   ------------------------------------------------------------------ */
+const brief = [];
+brief.push('# Hesed Words — brief index');
+brief.push('');
+brief.push(`**${total} pieces** — ` +
+  sections.map(s => `${s.items.length} ${s.label.toLowerCase()}`).join(', ') + '.');
+brief.push('');
+brief.push('One line per piece: date · title · scripture · url. Deliberately short enough');
+brief.push('to read in full. Use it to answer "does this already exist?" — then read');
+brief.push('SITE-INDEX.md for summaries, themes and companion candidates.');
+brief.push('');
+for (const s of sections) {
+  brief.push(`## ${s.label} (${s.items.length})`);
+  brief.push('');
+  for (const it of [...s.items].sort(byDateDesc)) {
+    const scrip = (it.scripture || []).join('; ') || '—';
+    brief.push(`- ${it.date || 'undated'} · **${it.title}** · ${scrip} · \`${it.url}\``);
+  }
+  brief.push('');
+}
+
+fs.writeFileSync(path.join(repo, 'SITE-INDEX-BRIEF.md'), brief.join('\n'), 'utf8');
+const briefKb = Math.round(Buffer.byteLength(brief.join('\n'), 'utf8') / 1024);
+const fullKb  = Math.round(Buffer.byteLength(out.join('\n'), 'utf8') / 1024);
+console.log(`SITE-INDEX-BRIEF.md written — ${briefKb} KB against the full index's ${fullKb} KB.`);
+
+// Both index files were just rewritten from scratch, which drops their
+// read-tokens. Re-stamp here rather than leaving it as a second command to
+// remember — an unstamped index fails the pre-commit check for no reason, and
+// a check that cries wolf gets ignored.
+require('child_process').execSync(
+  `node "${path.join(__dirname, 'stamp-context.js')}"`,
+  { cwd: repo, stdio: 'pipe' });
+console.log('Read-tokens re-stamped.');
+
+/* ------------------------------------------------------------------
    LEDGER ORDER CHECK
 
    The home-page "Current reading" panel holds exactly two rows, newest

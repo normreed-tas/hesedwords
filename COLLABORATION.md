@@ -2,8 +2,13 @@
 
 > **AUTHORITATIVE AND COMPLETE.** This is the full working note, not an extract.
 > It serves publicly at https://hesedwords.com/COLLABORATION.md and the repo copy at
-> the root is the same file. Full text current as of 6 September 2026 — if you are
+> the root is the same file. Full text current as of 16 September 2026 — if you are
 > holding a paste older than that, check the live file for changes since.
+>
+> **Fetch this as raw text rather than relying on a paste:**
+> `https://raw.githubusercontent.com/normreed-tas/hesedwords/main/COLLABORATION.md`
+> See `CONTEXT.md` for the full set of URLs and the read-token protocol. This file ends
+> with a READ-TOKEN line; if you cannot quote it, you have not read to the end.
 >
 > **A fetched summary is not a substitute for this file.** Some tools return a
 > paraphrase of a fetched page rather than its text. A paraphrase of this note will
@@ -134,3 +139,4 @@ more interesting one.
 **Sequence is fixed.** Theological exploration in chat → beat structure approved →
 section-by-section drafting with approval gates → HTML/PDF only after prose is final →
 repo-side tasks handed to Claude Code. Don't skip ahead to building.
+<!-- READ-TOKEN 1091621a · 141 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

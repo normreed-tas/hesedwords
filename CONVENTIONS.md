@@ -2,8 +2,18 @@
 
 > **AUTHORITATIVE AND COMPLETE.** This is the full conventions file, not an extract.
 > It serves publicly at https://hesedwords.com/CONVENTIONS.md and the repo copy at
-> the root is the same file. Full text current as of 12 September 2026 — if you are
+> the root is the same file. Full text current as of 16 September 2026 — if you are
 > holding a paste older than that, check the live file for changes since.
+>
+> **Fetch this as raw text rather than relying on a paste:**
+> `https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONVENTIONS.md`
+> Always current, and reachable from sandboxes that whitelist GitHub but not arbitrary
+> hosts. `CONTEXT.md` carries the full set of URLs and the working protocol — give a new
+> project that one file and nothing else.
+>
+> **This file ends with a READ-TOKEN line**, a hash of its own content. If you cannot
+> quote it, you have not read to the end: say so rather than reporting any spec as
+> absent. Two sessions quoting different tokens are holding different files.
 >
 > **A fetched summary is not a substitute for this file.** Some tools return a
 > paraphrase of a fetched page rather than its text. Nearly everything here only works
@@ -477,3 +487,4 @@ folio is present, and that the stripped elements are actually gone. An earlier v
 this note said the PDF could not be inspected from the shell and to screenshot the stripped
 HTML instead; that was wrong. The script also leaves the print copy beside the PDF as
 `<slug>-PRINT.html` (gitignored) if you do want to look at it rendered.
+<!-- READ-TOKEN 81d3b85c · 489 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

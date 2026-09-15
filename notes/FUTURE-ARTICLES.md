@@ -146,3 +146,4 @@ noting: following precedes seeing, and the disciples are not rebuked for the gap
 ## Struck out
 
 *(none yet — record why, when one is struck, so the same idea isn't re-raised)*
+<!-- READ-TOKEN 84a39c3e · 148 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

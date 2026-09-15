@@ -174,6 +174,20 @@ if (behind.length) {
   console.log('\nContext files: drafting project is up to date.');
 }
 
+// ---- read-token stamps ------------------------------------------------------
+// Every context file ends with a hash of its own content, so a session can prove
+// to itself whether it read the whole file. A stamp that no longer matches its
+// body is worse than none: it lets a session quote a token for text it did not
+// finish. Verified here so it rides the existing pre-commit pass.
+
+console.log('');
+try {
+  execSync(`node "${path.join(repo, 'tools', 'stamp-context.js')}" --check`,
+           { cwd: repo, stdio: 'inherit' });
+} catch {
+  stale = true;
+}
+
 if (stale) {
   console.log('\nRe-paste the affected file into the drafting project after bumping,');
   console.log('or the date says current while the content is not.');
