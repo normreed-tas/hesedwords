@@ -154,9 +154,25 @@ borrowing on credit), the whole of 1:5–6 (first self-description, first cost),
 superscription, which the numbering quietly skipped. Opening chapter 2 was considered and
 declined until those are done.
 
+### Hesed in the New Testament — the book
+*Added 16 Sep 2026 (established 22 Aug 2026). Detail: `NOTE-hesed-nt-book.md`*
+
+Standing project, not a single candidate. A book built **from** standalone articles rather
+than made **of** them — each piece works for a reader arriving cold, and chapter assembly is
+a later act. Thesis: in the Old Testament the search was for a word, in the New it is for a
+person. *Hesed* has no single Greek equivalent, so the New Testament distributes the freight
+across *eleos*, *charis*, *pistis*, *agape* and *dikaiosynē*. Three pieces are live —
+*Fitting* (Matthew 3), *Seeking* (Matthew 5–6), *Trampled* (Matthew 7:6 and 8) — with
+companion reflections *You* and *So I Ask*. Five candidates named and unwritten, of which
+**Exodus 34 and the third and fourth generation** is likely the centre of gravity because it
+has a Selah attached. Carries verified source material on the Moravians and on Gandhi, both
+of which correct widely repeated legends, and two unresolved `[verify]` marks on the Vanessa
+Goodwin material. The note's third discipline is the one to keep in view: *hesed* is one
+true thing tracked through the New Testament, not the key to it.
+
 ---
 
 ## Struck out
 
 *(none yet — record why, when one is struck, so the same idea isn't re-raised)*
-<!-- READ-TOKEN 8a0cdfc6 · 161 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN dcb9c40b · 177 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
