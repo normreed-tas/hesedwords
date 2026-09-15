@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Somebody Else Was Awake",
+    date:     "2026-09-15",
+    url:      "/reflections/somebody-else-was-awake.html",
+    summary:  "I lie awake; I am like a lonely bird on a housetop — read for years as insomnia. But the word is shaqad, what a sentry does on a wall, the same word as I am watching over my word to perform it. So the man is not lying there empty. He is at his post, and there is nothing in front of him to guard. He asks God not to hide his face and is given something else: God turned. And the psalm says someone else was awake that night, listening for the groans of prisoners — which the man on the roof never finds out. We are told. He is not.",
+    scripture: ["Psalm 102"],
+    themes:   ["shaqad", "loneliness", "unanswered prayer", "watching", "three in the morning", "sparrows", "being heard"]
+  },
+  {
     title:    "What Do You Want Me to Do for You",
     date:     "2026-09-11",
     url:      "/reflections/what-do-you-want-me-to-do-for-you.html",

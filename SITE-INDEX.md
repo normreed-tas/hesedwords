@@ -9,11 +9,16 @@ before writing: *does something on this already exist?* and *what did it say?*
 The theme index at the foot is the fastest way in — a new piece whose theme
 already appears there probably has a companion waiting.
 
-**139 pieces** — 90 reflections, 34 articles, 10 books, 5 word studies.
+**140 pieces** — 91 reflections, 34 articles, 10 books, 5 word studies.
 
 ---
 
-## Reflections (90)
+## Reflections (91)
+
+**2026-09-15 · Somebody Else Was Awake**
+Psalm 102 · `/reflections/somebody-else-was-awake.html`
+*Themes:* shaqad, loneliness, unanswered prayer, watching, three in the morning, sparrows, being heard
+I lie awake; I am like a lonely bird on a housetop — read for years as insomnia. But the word is shaqad, what a sentry does on a wall, the same word as I am watching over my word to perform it. So the man is not lying there empty. He is at his post, and there is nothing in front of him to guard. He asks God not to hide his face and is given something else: God turned. And the psalm says someone else was awake that night, listening for the groans of prisoners — which the man on the roof never finds out. We are told. He is not.
 
 **2026-09-11 · What Do You Want Me to Do for You**
 Mark 8-10 · `/reflections/what-do-you-want-me-to-do-for-you.html`
@@ -724,7 +729,7 @@ Before it ever means to intercede, it means to fall upon — to strike, to meet 
 
 ---
 
-## Theme index (458 themes)
+## Theme index (463 themes)
 
 Every theme in use, and what carries it. A theme with more than one piece
 against it is a companion candidate.
@@ -758,7 +763,7 @@ against it is a companion candidate.
 - **batach** — [God Alone](/reflections/god-alone.html) (reflection) · [This I Know](/reflections/this-i-know.html) (reflection) · [I Am Like an Olive Tree](/reflections/i-am-like-an-olive-tree.html) (reflection) · [The Quiet Soul](/reflections/the-quiet-soul.html) (reflection) · [The Mountain That Cannot Be Moved](/reflections/the-mountain-that-cannot-be-moved.html) (reflection)
 - **beatitudes** — [You](/reflections/blessed-are-you.html) (reflection)
 - **being formed** — [Profitable](/articles/profitable.html) (article)
-- **being heard** — [The Oldest Loneliness](/books/the-oldest-loneliness.html) (book)
+- **being heard** — [Somebody Else Was Awake](/reflections/somebody-else-was-awake.html) (reflection) · [The Oldest Loneliness](/books/the-oldest-loneliness.html) (book)
 - **being held up** — [Still Talking](/reflections/still-talking.html) (reflection)
 - **being known** — [What We Did Without Knowing](/books/what-we-did-without-knowing.html) (book) · [See Me Trying](/reflections/see-me-trying.html) (reflection)
 - **belief** — [Unless I Had Believed](/reflections/unless-i-had-believed.html) (reflection)
@@ -946,6 +951,7 @@ against it is a companion candidate.
 - **limits** — [What Cannot Be Counted](/reflections/what-cannot-be-counted.html) (reflection)
 - **listening** — [What Do You Want Me to Do for You](/reflections/what-do-you-want-me-to-do-for-you.html) (reflection)
 - **liturgy** — [The Thursday Psalm](/articles/the-thursday-psalm.html) (article)
+- **loneliness** — [Somebody Else Was Awake](/reflections/somebody-else-was-awake.html) (reflection)
 - **longing** — [Draw Me](/reflections/draw-me.html) (reflection) · [His Name Is Oil Poured Out](/reflections/let-his-name-be-poured-out.html) (reflection) · [Let Him Kiss Me](/reflections/let-him-kiss-me.html) (reflection) · [The Song Begins in Longing](/articles/the-song-begins-in-longing.html) (article)
 - **lord's supper** — [Communion](/reflections/communion.html) (reflection)
 - **love your enemies** — [Who Are the Enemies of God? — Reading Psalm 68](/articles/who-are-the-enemies-of-god.html) (article)
@@ -1071,6 +1077,7 @@ against it is a companion candidate.
 - **shalem** — [Succession Planning — Everything Set in Place](/reflections/succession-planning.html) (reflection) · [The Vow?](/reflections/the-vow.html) (reflection) · [The Vow That Is Not a Payment](/articles/vows.html) (article)
 - **shalom** — [The Mountain That Cannot Be Moved](/reflections/the-mountain-that-cannot-be-moved.html) (reflection) · [Our Feet Are Standing](/reflections/our-feet-are-standing.html) (reflection) · [The Far Country](/reflections/the-far-country.html) (reflection)
 - **shamar** — [Into Your Hand](/reflections/into-your-hand.html) (reflection) · [The Keeper on the Road](/reflections/the-keeper-on-the-road.html) (reflection)
+- **shaqad** — [Somebody Else Was Awake](/reflections/somebody-else-was-awake.html) (reflection)
 - **sheep** — [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection)
 - **sheep and goats** — [What We Did Without Knowing](/books/what-we-did-without-knowing.html) (book) · [Our God-Sponsored Projects](/articles/our-god-sponsored-projects.html) (article) · [Deceived](/reflections/deceived.html) (reflection)
 - **shelter** — [The Vow?](/reflections/the-vow.html) (reflection)
@@ -1087,6 +1094,7 @@ against it is a companion candidate.
 - **song of songs** — [Draw Me](/reflections/draw-me.html) (reflection)
 - **sonship** — [If You Are](/reflections/if-you-are.html) (reflection)
 - **sorerim** — [Who Are the Enemies of God? — Reading Psalm 68](/articles/who-are-the-enemies-of-god.html) (article)
+- **sparrows** — [Somebody Else Was Awake](/reflections/somebody-else-was-awake.html) (reflection)
 - **speech** — [What Is an Idle Word?](/word-studies/idle.html) (word study) · [Idle Words](/reflections/idle-words.html) (reflection)
 - **spirit** — [Into Your Hand](/reflections/into-your-hand.html) (reflection)
 - **staying** — [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection)
@@ -1137,6 +1145,7 @@ against it is a companion candidate.
 - **the wicked** — [Still Talking](/reflections/still-talking.html) (reflection)
 - **the wronged** — [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection)
 - **theodicy** — [Job 43](/books/job-43.html) (book)
+- **three in the morning** — [Somebody Else Was Awake](/reflections/somebody-else-was-awake.html) (reflection)
 - **threshing floor** — [Telling David's Census to an Eight-Year-Old](/reflections/telling-davids-census.html) (reflection)
 - **time** — [God Seeks What Has Been Driven Away](/reflections/god-seeks-what-has-been-driven-away.html) (reflection) · [The Song Begins in Longing](/articles/the-song-begins-in-longing.html) (article)
 - **todah** — [The Same Psalm](/articles/the-same-psalm.html) (article)
@@ -1149,7 +1158,7 @@ against it is a companion candidate.
 - **tzaddiq** — [Tzedaqah / Dikaiosynē](/word-studies/tzedaqah.html) (word study) · [Is "Wicked" a Verdict or a Character?](/word-studies/is-wicked-a-verdict-or-a-character.html) (word study) · [They Have Not Prevailed](/reflections/they-have-not-prevailed.html) (reflection)
 - **tzedakah** — [Star Wars](/reflections/star-wars.html) (reflection) · [My Oath — and What It Really Means](/reflections/my-oath.html) (reflection) · [Justice Is Not What You Think](/reflections/justice-is-not-what-you-think.html) (reflection) · [Called in Righteousness](/reflections/called-in-righteousness.html) (reflection)
 - **tzedaqah** — [Seeking](/articles/seeking.html) (article) · [Being Right With Someone](/reflections/being-right-with-someone.html) (reflection) · [Fitting](/articles/fitting.html) (article) · [Tzedaqah / Dikaiosynē](/word-studies/tzedaqah.html) (word study)
-- **unanswered prayer** — [Still Talking](/reflections/still-talking.html) (reflection) · [The Cause I Applied For](/reflections/the-cause-i-applied-for.html) (reflection)
+- **unanswered prayer** — [Somebody Else Was Awake](/reflections/somebody-else-was-awake.html) (reflection) · [Still Talking](/reflections/still-talking.html) (reflection) · [The Cause I Applied For](/reflections/the-cause-i-applied-for.html) (reflection)
 - **understanding** — [Understanding?](/reflections/understanding.html) (reflection)
 - **unfinished reading** — [The Piece I Keep Picking Up](/reflections/the-piece-i-keep-picking-up.html) (reflection)
 - **unity** — [Those Who Know Their God](/reflections/those-who-know-their-god.html) (reflection) · [How Good and Pleasant](/reflections/how-good-and-pleasant.html) (reflection)
@@ -1165,6 +1174,7 @@ against it is a companion candidate.
 - **waiting for god** — [Not Finished Waking](/articles/not-finished-waking.html) (article)
 - **walking** — [Make Me](/reflections/make-me.html) (reflection)
 - **warning** — [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection)
+- **watching** — [Somebody Else Was Awake](/reflections/somebody-else-was-awake.html) (reflection)
 - **watchman** — [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection)
 - **wealth** — [Still Counting](/articles/still-counting.html) (article) · [Understanding?](/reflections/understanding.html) (reflection)
 - **weight of glory** — [Parables — You'll See](/reflections/parables-youll-see.html) (reflection)

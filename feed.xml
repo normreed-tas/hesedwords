@@ -15,6 +15,16 @@
   <!-- ── Add new reflections at the TOP of this list, one <item> each ── -->
 
   <item>
+    <title>Somebody Else Was Awake</title>
+    <link>https://hesedwords.com/reflections/somebody-else-was-awake.html</link>
+    <guid>https://hesedwords.com/reflections/somebody-else-was-awake.html</guid>
+    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
+    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
+    <pubDate>Tue, 15 Sep 2026 06:00:00 +1000</pubDate>
+    <description>The watchman with nothing to guard. He never finds out that somebody else was awake that night, listening for exactly the sound he was making. We are told. He is not.</description>
+  </item>
+
+  <item>
     <title>What Do You Want Me to Do for You</title>
     <link>https://hesedwords.com/reflections/what-do-you-want-me-to-do-for-you.html</link>
     <guid>https://hesedwords.com/reflections/what-do-you-want-me-to-do-for-you.html</guid>
@@ -162,16 +172,6 @@
     <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
     <pubDate>Tue, 18 Aug 2026 06:00:00 +1000</pubDate>
     <description>Judah's singers walked out ahead of the army with one line. It asks for nothing, and says nothing about the outcome.</description>
-  </item>
-
-  <item>
-    <title>The Cause I Applied For</title>
-    <link>https://hesedwords.com/reflections/the-cause-i-applied-for.html</link>
-    <guid>https://hesedwords.com/reflections/the-cause-i-applied-for.html</guid>
-    <enclosure url="https://hesedwords.com/images/feed-banner.png" type="image/png" length="293443"/>
-    <media:thumbnail url="https://hesedwords.com/images/feed-banner.png"/>
-    <pubDate>Mon, 17 Aug 2026 06:00:00 +1000</pubDate>
-    <description>A grant knocked back, and two years before the reason arrived. Psalm 74 was written by a man who never finds out.</description>
   </item>
 
 </channel>
