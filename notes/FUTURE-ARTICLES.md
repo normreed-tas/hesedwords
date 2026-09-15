@@ -19,7 +19,7 @@ notes record where the thinking stopped, not where it should resume.
 
 **Review cadence:** every six to eight weeks, alongside the protocol review.
 
-**Last reviewed: 11 September 2026.** Bump this line at each review.
+**Last reviewed: 16 September 2026.** Bump this line at each review.
 `node tools/check-doc-dates.js` warns once it is more than eight weeks old, so an
 overdue review surfaces on the next commit rather than depending on anyone noticing.
 Re-paste this file into the drafting project whenever an entry is added or struck,
@@ -141,9 +141,22 @@ being led actually feels like as against how testimony describes it. Not draftab
 Norm can say which of three reasons kept the rule. Structural rhyme with Mark 9–10 worth
 noting: following precedes seeing, and the disciples are not rebuked for the gap.
 
+### Song of Songs chapter 1 — what the sequence established
+*Added 16 Sep 2026. Detail: `NOTE-song-chapter-1-sequence.md`*
+
+The opening act of the Song of Songs project: a reading of the five published chapter 1
+pieces so both projects hold the same starting position before chapter 2 opens. Establishes
+that the five are one argument about voice — longing spoken into the air, drawn by report
+from outside, petition said to his face — and that distance is already a working framework
+with three named states. Three things in chapter 1 remain unread and are the live
+candidates: the second half of 1:4 (the chamber, which the 1:3 threshold image has been
+borrowing on credit), the whole of 1:5–6 (first self-description, first cost), and the
+superscription, which the numbering quietly skipped. Opening chapter 2 was considered and
+declined until those are done.
+
 ---
 
 ## Struck out
 
 *(none yet — record why, when one is struck, so the same idea isn't re-raised)*
-<!-- READ-TOKEN 84a39c3e · 148 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 8a0cdfc6 · 161 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
