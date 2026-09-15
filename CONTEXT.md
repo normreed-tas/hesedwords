@@ -85,8 +85,28 @@ and to which pieces; which glossary words are used; and any claim that rests on 
 count or a date, flagged `[verify]` so it is checked before publishing rather than
 after.
 
+## Who resolves a `[verify]`
+
+**You do not.** Your sandbox reaches this repo and little else, so you cannot open a
+lexicon, a concordance, a sermon or an LXX text. Flag the claim and hand it on — do not
+soften it into something vague enough to be safe, and do not assert it because it is
+probably right.
+
+Claude Code has the repo, the tagged Hebrew text, and general web access, and resolves
+them in three kinds:
+
+- **Repo facts** — what exists, git history, glossary slugs, which markup dominates.
+- **External checks** — Hebrew and Greek lemmas, occurrence counts, dates, attributions,
+  permissions wording.
+- **Neither** — anything about where Norm stands, what a piece should argue, or whether
+  to revise something published. Those are his, and the honest move is to say so rather
+  than resolve them quietly.
+
+Answers come back written into the note itself, in a marked section, so the resolved
+item stops being re-raised in three months.
+
 ## Anything committed here is public
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN 0099e088 · 91 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 8bf603cd · 111 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
