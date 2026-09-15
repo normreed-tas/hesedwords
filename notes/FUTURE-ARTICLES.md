@@ -181,29 +181,58 @@ psalm pivots on its own opening word. Either could carry a piece. Also still ope
 session: rib and davar were flagged as strong glossary seeding candidates and never seeded,
 though rib is the covenant-lawsuit term the whole of Telling It Wrong turns on.
 
-### Four threads carried over from the project instructions
-*Added 16 Sep 2026. Held, and thin — these are one-line survivals, not worked ideas.*
+### Batach beyond the Ascents, and The Stranger at the Gate
+*Added 16 Sep 2026, rewritten the same day once the old account history was searched.*
 
-Rescued from the devotional project instructions on 16 Sep 2026, where they were listed as
-open threads and existed nowhere else. Recorded here so the instructions field could be
-cleared without losing them. **Each is a title and nothing more — Norm has the content.**
-Ask him before treating any of them as a brief.
+Four threads were rescued from the devotional project instructions, where they were listed
+as open and recorded nowhere else. The old account was then searched. Two survive with real
+content, two do not.
 
-- **Canonical tracing of batach** — the trust word. Note it is already a live glossary
-  headword, and reflections/kept-anyway.html and others use it, so check what the site
-  already says before starting.
-- **Psalm 33** — no piece exists. Nothing recorded about the angle.
-- **The Psalm 31:5 Selah rewrite** — an existing Selah to be redone rather than a new
-  piece. Which piece and what was wrong with it is not recorded.
-- **The Stranger at the Gate** — a title with no text attached. Possibly the ger material,
-  which the glossary carries as a headword, but that is a guess and is marked as one.
+**Batach beyond the Ascents — live, and narrower than the title suggested.**
+The instruction said *canonical tracing of batach*, which sounded like an unwritten word
+study. It is not. The trace already exists and is **published**: introduced at Psalm 125
+(`reflections/the-mountain-that-cannot-be-moved.html`) as leaning your full weight on
+something and resting against a support that will hold, explicitly revisited at Psalm 131
+(`reflections/the-quiet-soul.html`) as *batach arrived at through weaning*, with Psalm 132
+touching the same trust-logic through *gabah* without naming the word. All three run through
+`books/songs-for-the-road.html`, and the word appears across eight published pages.
 
-A fifth thread listed alongside them, *The Oldest Loneliness* chapters 6-11, is **complete**:
+So what is unwritten is only the part the Ascents do not reach: batach outside that
+collection — Proverbs 3:5, Isaiah 26:3, Jeremiah 17:5–8 — and whether the leaning image
+holds across the canon or is particular to the pilgrim psalms. That is a genuine piece, and
+a much better defined one than the original note implied. It is also a word study rather
+than a reflection: the glossary already carries `batach` as a headword.
+
+**The Stranger at the Gate — no recovered text, but two real seams.**
+No title match anywhere in the old account. What exists is two published threads a piece of
+that name would plausibly fuse: the *ger* material, where `gur` is a glossary headword and
+`reflections/the-far-country.html` reads Psalm 120 as the resident alien without full
+belonging; and the gate as the civic justice site, in Psalm 127 at
+`reflections/the-house-the-lord-builds.html` and running through the Micah 6:8 material in
+`books/he-has-told-you.html` — Ruth 4, Amos 5:15, *establish justice in the gate*.
+
+Stranger plus gate is the stranger standing where judgement is given, which is a real
+subject with published groundwork on both sides. **But this is reconstruction, not
+recovery.** Nothing confirms it was the intention. Treat it as a good candidate that happens
+to share a title, not as a recovered brief.
+
+**Psalm 33 and the Psalm 31:5 Selah rewrite — unrecoverable.**
+Searched: no document, no memory note, not a stray sentence. Psalm 31:5 does not appear in
+any surviving material, so which piece the Selah belonged to and what was wrong with it are
+both gone. Psalm 33 has no recorded angle at all.
+
+Kept rather than struck, because neither was concluded to be a non-piece — they were simply
+lost with the account. **One distinctive phrase from Norm would recover either**, since the
+old project can search its own documents on a fragment. Until then there is nothing here to
+draft from, and a session should not invent an angle to fill the gap.
+
+A fifth thread listed alongside them, *The Oldest Loneliness* chapters 6–11, is **complete**:
 the published book carries chapters one through eleven. Struck rather than carried.
+
 
 ---
 
 ## Struck out
 
 *(none yet — record why, when one is struck, so the same idea isn't re-raised)*
-<!-- READ-TOKEN 6cc4843d · 208 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 1317a77e · 237 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
