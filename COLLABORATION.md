@@ -130,6 +130,29 @@ if it is his biography and he hasn't said it, either ask or leave a marked place
 plainly that the detail is invented. Getting the rhythm of a sentence right is not worth
 putting a false thing in his mouth about his own body.
 
+**When a convention and the truth conflict, the convention gives way.** The rule above is the
+special case; this is the general one. A draft for the Psalm 58 reflection invented a young
+man with twenty-five placements who asked after his sister at every visit — fabricated purely
+to satisfy the convention that a reflection closes on a person. Norm: *"Not the right ending
+and it's not true."* The conventions here are real and worth keeping, but every one of them
+describes what the material usually allows, not what it must be made to allow. A piece that
+cannot end on a person ends some other way.
+
+**Norm's discomfort is diagnostic, and arrives before the reason does.** In one production he
+flagged three problems by feel — *it is more you than me*, *not the right ending*, *take it
+out* — and was right about all three before any of them had been articulated. In each case
+the objection turned out to name something specific: register climbing above his own speech;
+a piece resolving on helplessness when its subject was failure to *name*; two hammer-blows in
+consecutive paragraphs. **The job is to work out what is underneath the objection, not to
+defend the draft.** Asking him to justify it wastes the signal; he is reporting an
+observation, not opening a negotiation.
+
+**Material does not migrate between companion pieces.** Where a subject splits into two or
+three pieces, each finding is allocated to one of them and stays there. When the Psalm 58
+word study took *rasha'*, the article's planned lexical beat was cut rather than duplicated —
+and the article was shorter and better for it. Duplication across companions reads as padding
+in whichever piece the reader meets second.
+
 **Absence from the part you read is not absence.** Saying a thing is missing commits you to
 having looked where it would be. `SITE-INDEX.md` runs to hundreds of lines with reflections,
 articles, books and word studies in separate sections, so a read that stops after the header
@@ -154,4 +177,4 @@ more interesting one.
 **Sequence is fixed.** Theological exploration in chat → beat structure approved →
 section-by-section drafting with approval gates → HTML/PDF only after prose is final →
 repo-side tasks handed to Claude Code. Don't skip ahead to building.
-<!-- READ-TOKEN d480b7cb · 156 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 9df4fd95 · 179 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
