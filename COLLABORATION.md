@@ -110,6 +110,21 @@ content calls — name them and let Norm choose. If he says "not my words," act 
 immediately without discussion. If he signals he hasn't followed something, reduce it to one
 plain sentence rather than expanding.
 
+**When a line is contested, offer the plain version and let him finish it.** He improves a
+line handed to him flat more reliably than he accepts a clever one — "came a long way, in
+time and language, to reach you" is his edit of a draft and is better than the draft was.
+Do not produce a second ornamented attempt; produce the plain statement and stop.
+
+**When the register is wrong, strip rather than re-draft.** He says so directly — "too smart
+and not really mine" — and the fault is almost always the writer's image standing in for his
+own speech. Re-drafting at the same pitch reproduces it. Take the ornament out and see what
+is left; usually that was the sentence.
+
+**Hold the line on wordplay in titles for reflections.** He enjoys it and will propose it
+(*The Cause Clause*, *Be-cause!*), and has accepted the argument against it both times. A
+reflection ends quietly, and a punning title promises a register the piece does not keep.
+Articles have more latitude.
+
 **Never invent a fact about Norm's life.** Dates, intervals, medical detail, family, places —
 if it is his biography and he hasn't said it, either ask or leave a marked placeholder and say
 plainly that the detail is invented. Getting the rhythm of a sentence right is not worth
@@ -139,4 +154,4 @@ more interesting one.
 **Sequence is fixed.** Theological exploration in chat → beat structure approved →
 section-by-section drafting with approval gates → HTML/PDF only after prose is final →
 repo-side tasks handed to Claude Code. Don't skip ahead to building.
-<!-- READ-TOKEN 1091621a · 141 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN d480b7cb · 156 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

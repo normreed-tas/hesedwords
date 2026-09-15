@@ -170,9 +170,20 @@ of which correct widely repeated legends, and two unresolved `[verify]` marks on
 Goodwin material. The note's third discipline is the one to keep in view: *hesed* is one
 true thing tracked through the New Testament, not the key to it.
 
+### Psalm 74 — the crushed, and the remembering frame
+*Added 16 Sep 2026 (findings from 18 Aug 2026). Detail: NOTE-psalm-74-and-the-treasure.md*
+
+Two findings from the Psalm 74 work that neither published piece used. **v21 dak**, the
+crushed — where vindication of the Name and restoration of the poor are one verdict, which
+is the da at to hesed to mishpat architecture appearing inside a lament. And the **zakar
+frame**: remember at v2, v18 and v22, with miqqedem in v12 answering qedem in v2, so the
+psalm pivots on its own opening word. Either could carry a piece. Also still open from that
+session: rib and davar were flagged as strong glossary seeding candidates and never seeded,
+though rib is the covenant-lawsuit term the whole of Telling It Wrong turns on.
+
 ---
 
 ## Struck out
 
 *(none yet — record why, when one is struck, so the same idea isn't re-raised)*
-<!-- READ-TOKEN dcb9c40b · 177 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 7476913d · 188 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
