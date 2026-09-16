@@ -398,3 +398,43 @@ done.
 Both `[verify]` marks in the loose ends above are now discharged. The Bernard credit stands
 as written; the Spurgeon reference needs the number corrected and the verse changed wherever
 it is used.
+
+---
+
+## The ahevuka inclusio — checked and confirmed, Claude Code 16 Sep 2026
+
+The addendum's `[verify]` is discharged, and it holds more tightly than it was claimed.
+Checked against STEPBible's lemma-tagged text, not the ESV and not memory.
+
+**Same lemma, same form, both ends.** Song 1:3 closes and Song 1:4 closes on
+**H0157 + 2ms suffix, parsed `Vqp3cp/Sp2ms`** — Qal perfect, third common plural, "they
+love you." Not merely the same verb: the identical inflected form at both ends,
+*ahevuka*. The inclusio is real.
+
+**And the whole cycle is visible in the grammar**, which makes it evidence rather than
+reading:
+
+| | | |
+|---|---|---|
+| 1:3 | they love you | `Vqp3cp/Sp2ms` — third person |
+| 1:4 | draw me | `Vqv2ms/Sp1bs` — imperative to him, **me** |
+| 1:4 | let us run | `Vqc1cp` — first plural |
+| 1:4 | he has brought me | `Vhp3ms/Sp1bs` — **me** again |
+| 1:4 | let us rejoice / let us bring to remembrance | `Vqc1cp`, `Vhc1cp` |
+| 1:4 | they love you | `Vqp3cp/Sp2ms` — third person again |
+
+So the movement is not a single step into the group. It is **me → us → me → us**, bracketed
+by *they* at both ends. She enters and leaves the plural twice inside one verse, and the
+singular returns in the middle at *he has brought me into his chambers* — which is the
+chamber the 1:3 reflection borrowed on credit, and she is in it alone.
+
+That is a firmer basis for the pronoun-cycle reading than the addendum claimed, and it puts
+the fourth spatial state inside 1:4 rather than at 2:9.
+
+**The versification question is settled by the same data.** Song 1:1 is the superscription —
+*the song of the songs which is of Solomon* — and the kiss is at 1:2. ESV numbering matches
+the Hebrew. The project's recommendation stands, and it is not a preference but the text's
+own numbering.
+
+**Still open and still mine:** the LXX check on *halak acharei* / *opisō* at Deuteronomy 13:4
+and 1 Kings 18:21 against Mark 1:17. Not attempted.
