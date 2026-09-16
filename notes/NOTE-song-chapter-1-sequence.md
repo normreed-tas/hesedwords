@@ -336,3 +336,65 @@ Worth keeping as an instance: a partial record contradicting a fuller one, where
 partial one would have won because it was consulted last. The same shape as three Bernard
 editorial flags where the file has one. When a biographical detail is challenged, check the
 published pieces — they carry Norm's own words and outrank any summary of them.
+
+---
+
+## Both source checks done — Claude Code, 16 Sep 2026
+
+Checked against primary texts the repo already hosts, not against the descriptions on our
+own resource pages, which is where both claims originally came from.
+
+### Bernard, Sermon XXI — confirmed, and it is exact
+
+The `to` versus `after` distinction credited to him in
+`articles/draw-me-the-voice-matters.html` is his, explicitly, in section 2 of the sermon.
+Eales translation, `resources/bernard/chapter-1.html#sermon-21`:
+
+> This I should have considered to be her thought, if she had said, "Draw me **to** Thee."
+> But as she says, "**after** Thee," that phrase seems to me rather to make request that she
+> might have grace to follow the footsteps of His life, to be able to emulate His virtue, to
+> hold fast... to attain the perfection of His character.
+
+He states the alternative, rejects it, and gives his reason. Nothing to soften. The sermon's
+own title carries it — *In What Manner the Bride Asks to Be Drawn to Follow Her Spouse*.
+
+### Spurgeon — the reading is real, but the citation was wrong twice over
+
+**Sermon 2794 is the wrong sermon.** It is *A Refreshing Canticle*, preached on Song 1:4,
+"We will remember thy love more than wine." Its plural discussion is about the Hebrew plural
+of *loves* — "Think not, however, that the love of Jesus is divided" — and has nothing to do
+with the virgins. Searched in full: no *virgins*, no *maidens*, no *we will run*.
+
+**The contagion reading is in Sermon 2294**, *The Memory of Christ's Love*, and it is
+unmistakable:
+
+> I like the change in the pronouns... "Lord, draw me; I am the most weighted, the heaviest
+> of all Your children... but draw me, we will run after You. All my brothers and sisters
+> will run at once if You do draw me. If You do draw the most burdened one towards Yourself,
+> all the rest will come to You at a rapid rate."
+
+**But it is a different plural from the one this note was asking about.** Spurgeon is reading
+the *we will run* of 1:4 — the crowd swept along by one soul being drawn. He is not reading
+the *therefore the virgins love thee* of 1:3 at all. Sermon 2469, *The Incomparable
+Bridegroom*, quotes 1:3 in full and then expounds the ointments and the name, saying nothing
+about who the virgins are.
+
+### What that does to the fork
+
+It sharpens it rather than settling it, and in a more interesting direction than expected.
+
+The 1:3 reflection's foil — maidens at the threshold against the Shulammite in the chamber —
+has **no Spurgeon counterweight at all**, because he never reads that plural. So the contrast
+reading is not contested by him; it is simply unexamined by everyone, this project included.
+
+What Spurgeon does supply is a contagion reading of **the very next plural**, one verse
+later. That is arguably a harder challenge than a competing reading of 1:3 would have been:
+the crowd at 1:3 could be a foil and the crowd at 1:4 could still be swept along, but the
+piece would then be asking the reader to hear the same *daughters of Jerusalem* two
+different ways within two verses. Whether that is a real seam in the poem or an artefact of
+reading verse by verse is the live question, and it belongs with the 1:4b work that was never
+done.
+
+Both `[verify]` marks in the loose ends above are now discharged. The Bernard credit stands
+as written; the Spurgeon reference needs the number corrected and the verse changed wherever
+it is used.
