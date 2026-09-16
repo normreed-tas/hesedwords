@@ -438,3 +438,58 @@ own numbering.
 
 **Still open and still mine:** the LXX check on *halak acharei* / *opisō* at Deuteronomy 13:4
 and 1 Kings 18:21 against Mark 1:17. Not attempted.
+
+---
+
+## The LXX check — done, and the claim is established
+
+Discharges the last `[verify]` in the loose ends. The proposed repair is sound: the link is
+the *after* idiom, not *mashak*, and the Greek carries it.
+
+**Hebrew — one preposition across all three.** `achar` (H0310A):
+
+| | |
+|---|---|
+| Deut 13:4 | *after* Yahweh your God *you will walk* — `H0310A` + `H1980I` |
+| 1 Kings 18:21 | *walk after him* (twice) — `H1980N` + `H0310A/Sp3ms` |
+| **Song 1:4** | *after you* — **`H0310A/Sp2ms`** |
+
+Song 1:4 uses the same preposition as the covenant-allegiance texts. That is the load-bearing
+fact, and it was never in doubt once the tagged text was opened.
+
+**LXX — renders all three with ὀπίσω.**
+
+- **Deut 13:4** — ὀπίσω Κυρίου τοῦ θεοῦ ὑμῶν **πορεύεσθε**
+- **3 Kingdoms 18:21** — **πορεύεσθε** ὀπίσω αὐτοῦ
+- **LXX Song 1:4** — **ὀπίσω σου** εἰς ὀσμὴν μύρων σου **δραμοῦμεν**
+
+**Mark 1:17 — Δεῦτε ὀπίσω μου.**
+
+So *draw me after you* and *come after me* do share the construction, in the Greek a reader
+of the Gospels would have had. **Established**, and the article's loose version can be
+replaced with it.
+
+### The precision that makes it work
+
+**It is the preposition that carries the idiom, not the verb.** The verbs differ at every
+point — *walk* at Deuteronomy and Carmel, *run* in the Song, *come* in Mark. What is constant
+is ὀπίσω + genitive, and in the LXX that construction is the standard marker of allegiance:
+whose side you are on, whose back you are walking behind.
+
+This is why the original claim failed and this one holds. *Mashak* and the Gospel verb are
+genuinely different words, and saying "the same word Jesus used" was false. *Achar* / ὀπίσω
+is the same word at every point, and it is doing the same work.
+
+**One find beyond what was asked.** Three verses before the Carmel challenge, at
+3 Kingdoms 18:18, Elijah accuses Ahab in the identical construction — ἐπορεύθης **ὀπίσω** τῶν
+Βααλιμ, *you walked after the Baals*. The same idiom marks the wrong allegiance immediately
+before it is used to demand the right one. That strengthens the reading rather than
+complicating it: ὀπίσω does not mean devotion, it means *behind whom you are walking*, and
+the whole question at Carmel is which back.
+
+### A textual divergence, recorded but not load-bearing
+
+LXX Song 1:4 opens εἵλκυσάν **σε** — *they drew **you*** — third person plural, where the MT
+has the imperative *draw **me***. The Greek has read the consonants differently. It does not
+touch the ὀπίσω point, but any piece quoting the LXX of this verse should know the opening
+clause diverges.
