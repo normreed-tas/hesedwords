@@ -278,3 +278,61 @@ So the outstanding check is one sermon against a print copy, not three.
 
 : the Spurgeon sermon, the Bernard sermon, the
 LXX check, and — the one that matters — Norm's own answer on where he now stands.
+
+---
+
+## Old-account sweep — 16 Sep 2026, and it closes the question
+
+The old Song of Songs project was searched in full, every project, area and topic file.
+Four of five items are gone outright; one survives as a fragment.
+
+**The spatial framework is gone, confirmed from both ends.** This note recorded it as
+having no file and living only in chat. The old project holds three memory files —
+`index.md`, `overview.md`, `ways-of-working.md` — and `overview.md` records only that the
+framework existed: *"A spatial mapping framework tracks character location and proximity
+verse by verse."* No verse-by-verse content, no 1:2 / 1:3 / 1:4 breakdown, nothing to
+recover. Do not search again.
+
+What remains is what this note already reconstructed from the published prose: interior
+nearness at 1:2, the threshold at 1:3, motion behind at 1:4. That is now the framework —
+not a summary of a fuller one, because there is no fuller one. It gets tested at 2:9,
+where he is behind a wall and at the windows, and that test is now the next real work on
+it rather than a check against a lost original.
+
+**No per-piece `-STATE` or `-NOTE` files ever existed** for any of the seven Song pieces.
+The pattern that produced `psalm-74-STATE.md` and `the-treasure-STATE.md` on the devotional
+side was never used here.
+
+**Neither outstanding source check was ever attempted** — Bernard's *to* versus *after* in
+Sermon XXI, and Spurgeon on the chapter 1 plural in Sermon 2794. Both remain open and both
+need a print or primary source, so both belong to Claude Code rather than to a drafting
+session.
+
+**The versification question was never settled.** No file states or decides 1:1 against
+1:2–4. So the inconsistency in the published pieces is drift, not a decision, and the
+recommendation in the loose ends above stands as the first ruling on it rather than a
+revision of one.
+
+### One flag raised by that sweep, checked and rejected
+
+The old account reported that its `profile.md` records justice-sector service rather than
+Navy service, and suggested this note's *"1979, the Navy, Papua New Guinea"* might be
+wrong.
+
+It is not wrong. Two independent attestations:
+
+- `reflections/let-him-kiss-me.html`, in Norm's own published words: *"Since 1979. A life
+  has been shaped by that knowing — the Navy, the years in Papua New Guinea, the long
+  ordinary work of the church."*
+- `notes/NOTE-batemans-bay.md`: he met Cathy in the navy, where she was the nursing sister
+  at the naval college and he was the captain's secretary; and he was one of three navy
+  candidates for ADC to the Governor-General.
+
+The old `profile.md` records the Tasmanian correctional and justice-sector career and
+simply does not mention the earlier naval service. That is incompleteness in one memory
+file, not an error in the record. **Left as written.**
+
+Worth keeping as an instance: a partial record contradicting a fuller one, where the
+partial one would have won because it was consulted last. The same shape as three Bernard
+editorial flags where the file has one. When a biographical detail is challenged, check the
+published pieces — they carry Norm's own words and outrank any summary of them.
