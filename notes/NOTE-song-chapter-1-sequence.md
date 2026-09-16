@@ -493,3 +493,59 @@ LXX Song 1:4 opens εἵλκυσάν **σε** — *they drew **you*** — third 
 has the imperative *draw **me***. The Greek has read the consonants differently. It does not
 touch the ὀπίσω point, but any piece quoting the LXX of this verse should know the opening
 clause diverges.
+
+---
+
+## Norm's answer, 16 Sep 2026 — and it corrects the question
+
+Asked three times and left as a placeholder each time. Given now, in his words:
+
+> Yes I still want that longing — I want to go deeper — but that is always going to be
+> progressive. The closer I get the more I will want it.
+
+**That is not a status report, and the note was wrong to frame it as one.** The question
+assumed threshold and chamber are two ends of a journey, and that the useful thing to know
+was which end he had reached. His answer says the wanting does not resolve into having. It
+deepens with proximity.
+
+So the threshold is not a deficiency waiting to be cured. It is the permanent shape of the
+thing, and *I love him the way the maidens do* was never a confession of being stuck.
+
+### He had already written this, four weeks earlier
+
+This is the part worth recording. `articles/the-song-begins-in-longing.html`, 1 June — the
+first piece of the sequence, on Bernard:
+
+> The kiss of the mouth, he said, is a hidden manna: no one can understand it except the one
+> who has tasted it, and the one who tastes it hungers for it again. It is a sealed fountain
+> — and the one who drinks from it still thirsts to drink again.
+>
+> The taste that does not satisfy the thirst but deepens it. The known love that makes you
+> ache for more of the very thing you already have.
+
+The 1:3 Selah confessing the threshold was written on **30 June**, four weeks *after* that.
+So the framework answering the threshold was already published when the threshold was
+confessed — the sequence had the answer before it asked the question.
+
+*(Observation, not his claim: he has not said the two are connected, and was not asked. But
+the two texts say the same thing and he wrote both.)*
+
+### What this does to 1:4b
+
+It removes the reading that was waiting to be written. *The king has brought me into his
+chambers* is not the threshold resolved, and a piece treating it as arrival would contradict
+both the author's stated position and his own first article.
+
+Which makes the Hebrew finding above sharper rather than merely interesting. The chamber
+clause is **singular** — `Vhp3ms/Sp1bs`, *he has brought me* — sitting between two plurals,
+and the plural closes the verse. She does not stay in it. The pronoun cycle and the
+progressive longing are the same shape: in, and out, and wanting again.
+
+**The Selah for 1:4b, whenever it comes, can say this and be true.** That is what was
+blocked, and it is now unblocked.
+
+### The threshold description is superseded as a resting place, not as a record
+
+*I love him the way the maidens do* stands as written and as dated. Nothing in the published
+piece needs changing. What has changed is what a later piece may assume: not that he is
+still outside, but that outside and inside are not the terms.
