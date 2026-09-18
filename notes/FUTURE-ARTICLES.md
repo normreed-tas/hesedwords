@@ -223,6 +223,32 @@ rewrite** — proved unrecoverable and are struck out below. A fifth, *The Oldes
 chapters 6–11, was already complete: the published book carries chapters one through eleven.
 
 
+### Song 1:5 — "and", not "but"
+*Added 17 Sep 2026. Detail: `NOTE-song-1-5.md`*
+
+The Hebrew of Song 1:5 is שְׁחוֹרָה אֲנִי וְנָאוָה — *black I am and lovely* — joined by a
+plain waw, with no adversative particle and no intensifier. ESV's *very dark, but lovely*
+makes two interpretive decisions in four words, and every English rendering since Tyndale
+has made the first of them. The reading that follows is not that the translations are wrong
+— the waw can carry a concessive sense — but that a choice was made and then stopped being
+visible as a choice, and that the choice turns humility into the gate a person passes
+through rather than the fruit of having been brought in. The order of the poem supports the
+second: she is in the chamber at 1:4 before she describes herself at 1:5, and she calls
+herself נָאוָה ten verses before he does. Norm's phrasing is the thesis — *the Song is not
+that we see him because we have changed; it is that what we see in him changes us.*
+
+**Not ready.** Held deliberately at his request: the finding unsettles something he has
+heard preached and he does not yet know what to do with it. A piece written now would
+publish ahead of its author. The note also carries a second and larger thread — the arc from
+*do not look at me* (1:6) to *that we may look upon you* (6:13), and her unkept vineyard at
+1:6 returning as *my vineyard, the one that's mine, is before me* at 8:12 — which is not a
+piece at all but the frame for reading the rest of the book.
+
+Blocked behind 1:4b, which is now carrying two debts: the 1:3 reflection's borrowed chamber
+image, and this note's reliance on the chamber preceding the self-description. Five external
+`[verify]` items sit with Code, of which the *alamot* / *benot Yerushalayim* question is the
+one that decides the contrast-or-contagion fork in `NOTE-song-chapter-1-sequence.md`.
+
 ---
 
 ## Struck out
@@ -251,4 +277,4 @@ piece was retired, or whether it still stands exactly as it was.
 own documents on a fragment. If a line comes back to Norm, say so — the search is cheap.
 Absent that, do not invent an angle to fill the gap. A struck entry carrying an invented
 brief is worse than an empty one, because it reads as recovered.
-<!-- READ-TOKEN 167672b1 · 253 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 7082b38d · 279 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
