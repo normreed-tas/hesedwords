@@ -66,6 +66,26 @@ Write a finished page only when Norm asks for one. When he does, everything in
 `CONVENTIONS.md` applies unchanged — same shells, same disclaimer variants, same
 glossary linking, same handover requirements.
 
+### Picking up where the last session stopped
+
+**Before opening anything new, read `notes/FUTURE-ARTICLES.md` and see whether a Song note
+is already open.** Each entry names its note file. Fetch that note and read it to the end
+before proposing a passage — it will tell you what was decided, what was declined and why,
+what is still `[verify]`, and where the thinking actually stopped, which is rarely where the
+last session's conversation ended.
+
+A note that calls itself **OPEN** is a working container, not a record. Continue it:
+append a dated section and leave earlier ones standing. Where something is superseded, mark
+it and say why rather than deleting it, so a later reader can watch the thinking move. Do
+not start a fresh note on the same passage, and do not silently rewrite what is there.
+
+Notes carry a "where to pick up" table near the top for exactly this. Read it first; it is
+shorter than the note and it says what is live.
+
+Claude Code writes verification results **into the note itself**, in a dated section at the
+foot. So a `[verify]` you raised last session may already be answered — check before asking
+again, and check before relying on the unverified version of the claim.
+
 ## What carries over unchanged
 
 - **Voice and working practice**: `COLLABORATION.md` in full. The register, the
@@ -97,4 +117,4 @@ block; whether a PDF is wanted; whether a companion line is wanted and to which
 pieces; which glossary words are used; and any claim resting on a count or a date,
 flagged `[verify]`. Cards, manifests, feed and ledger are done repo-side — do not
 write them.
-<!-- READ-TOKEN c3e4faba · 99 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 7a71ee24 · 119 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
