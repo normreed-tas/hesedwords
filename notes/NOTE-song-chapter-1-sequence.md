@@ -549,3 +549,34 @@ blocked, and it is now unblocked.
 *I love him the way the maidens do* stands as written and as dated. Nothing in the published
 piece needs changing. What has changed is what a later piece may assume: not that he is
 still outside, but that outside and inside are not the terms.
+
+---
+
+## The fork was malformed — resolved 18 Sep 2026
+
+Checking item 4 of the `NOTE-song-1-5.md` verify list settled this, and the full working is
+recorded there.
+
+**Chapter 1 does not have one plural. It has three, in three consecutive verses.**
+
+- **1:3 — *alamot*.** Seven occurrences in the whole Old Testament, only two of them in the
+  Song: here and 6:8.
+- **1:4 — an unnamed first-person plural.** *We will run.* No group is named. This is where
+  Spurgeon's contagion reading sits.
+- **1:5 — *benot Yerushalayim*.** Seven occurrences, every one of them in the Song, always
+  vocative. They are whom she addresses, not a group she is measured against.
+
+***alamot* and *benot Yerushalayim* never co-occur.** Not in a single verse of the book.
+
+So the question this note posed — contrast or contagion for "the chapter 1 plural" — had no
+single referent and could not have been answered as put.
+
+**And the 1:3 foil is now vindicated rather than merely uncontested.** This note recorded
+that Spurgeon does not read the 1:3 plural, leaving the threshold reading unexamined. The
+Song reads it itself. The only other *alamot* is 6:8 — *sixty queens and eighty concubines
+and alamot without number* — answered immediately by 6:9: *my dove, my perfect one, is
+**one***. The book sets the *alamot* as the countless undifferentiated many against the
+singular beloved, which is precisely what the 1:3 Selah does with them.
+
+That is an internal warrant, not an external one, and it is better than the external one
+would have been.

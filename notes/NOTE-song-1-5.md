@@ -308,3 +308,104 @@ Item 4 is the one that matters most: it decides a fork left open in
 `NOTE-song-chapter-1-sequence.md` and affects how a published piece reads.
 
 Nothing here asks for a revision to a published page.
+
+---
+
+## The five `[verify]` items — Claude Code, 18 Sep 2026
+
+Checked against STEPBible's lemma-tagged Hebrew for the occurrence work, and against the
+lexica for the etymologies. Four are settled. One half of item 1 is not, and is left open
+rather than guessed.
+
+### 1. קדר and Kedar — established. Jerome still open.
+
+**Kedar (H6938) does derive from qadar (H6937), to be or become dark.** That much is
+standard and uncontested.
+
+The root is more interesting than "dark" alone. Across its 17 occurrences it glosses both
+ways: *they grew dark* (1 Kings 18:45, of the sky), *that are dark* (Job 6:16, of streams),
+and repeatedly *mourning* — Psalm 35:14, 38:6, 42:9, 43:2, Job 30:28. So `qadar` covers
+being dark **and** going about in black, the colour and the conduct of grief in one root.
+A tent of Kedar is not only dark; the word behind it is the word for walking about in
+mourning.
+
+**Whether Jerome is Bernard's source: not established, and I did not find it.** That needs
+Jerome's own commentary and Bernard's text side by side, not a search result. Left open.
+Do not let the first half carry the second — the etymology is sound without it.
+
+### 2. שָׁזַף — established, and much narrower than "to scorch"
+
+**Three occurrences in the entire Old Testament**, all Qal perfect 3fs:
+
+| | |
+|---|---|
+| Job 20:9 | the eye that saw him — *it caught sight of him* |
+| Job 28:7 | the falcon's eye — *it catches sight of it* |
+| **Song 1:6** | *[the sun] has looked on me* |
+
+**In both Job instances the subject is an eye.** This is a verb of catching sight, not of
+burning. So at 1:6 the sun is not scorching her — it is **looking at her**, and the verb
+makes the sun a looker.
+
+Which lands directly on this note's subject. Verse 6 opens *do not look at me* — and then
+gives the reason as another act of looking. Two gazes in one verse: the one she refuses and
+the one she could not. The English *scorched* loses the whole of that.
+
+### 3. כַּרְמִי שֶׁלִּי — established, exactly, and unique
+
+Not merely consonant for consonant. **Identical token sequence and identical grammar tags**
+at both points:
+
+```
+Sng 1:6   my vineyard   H3754/H9020  HNcbsc/Sp1ms   which is mine  H9007/H9005/H9030  HTr/R/Sp1bs
+Sng 8:12  my vineyard   H3754/H9020  HNcbsc/Sp1ms   which is mine  H9007/H9005/H9030  HTr/R/Sp1bs
+```
+
+And it is unique. *Kerem* appears nine times in the Song; **with a first-person singular
+suffix it appears exactly twice** — 1:6 and 8:12, and nowhere else. No other clause in the
+book is reused this way.
+
+The two uses bracket it with opposite outcomes: at 1:6 the clause ends *I have not kept*;
+at 8:12 it opens the verse and ends *is before me*. The arc is real and the phrase carries
+it.
+
+### 4. עֲלָמוֹת and בְּנוֹת יְרוּשָׁלִַם — established, and it reframes the fork
+
+**They never co-occur. Not once.**
+
+- ***alamot*** (H5959) — seven occurrences in the whole Old Testament: Gen 24:43, Exod 2:8,
+  Ps 68:25, Prov 30:19, Isa 7:14, and **twice in the Song: 1:3 and 6:8.**
+- ***benot Yerushalayim*** — seven occurrences, **all of them in the Song**: 1:5, 2:7, 3:5,
+  3:10, 5:8, 5:16, 8:4. Always vocative. They are whom she addresses.
+
+So chapter 1 does not have one plural. It has three different things in three consecutive
+verses: the *alamot* who love him (1:3), an unnamed first-person **we** who run (1:4), and
+the *benot Yerushalayim* she speaks to (1:5) — the verse this note is about.
+
+**And 6:8 settles what the *alamot* are.** The second and only other occurrence reads
+*sixty queens and eighty concubines and alamot without number* — and 6:9 answers it:
+*my dove, my perfect one, is **one***. The Song itself sets the *alamot* as the countless
+undifferentiated many against the singular beloved.
+
+That has a consequence for `NOTE-song-chapter-1-sequence.md`, recorded there as well. The
+contrast-or-contagion fork assumed a single plural to be read one way or the other. It was
+malformed. And the 1:3 reflection's foil — maidens outside, Shulammite within — which that
+note called *uncontested rather than vindicated*, is now **vindicated from inside the
+book**: 6:8 does to the *alamot* exactly what the Selah did.
+
+### 5. שְׁחוֹרָה and שַׁחַר — contested. Do not build on it.
+
+Two separate lexical entries: **H7838** *shachor*, black, the adjective at 1:5; **H7837**
+*shachar*, dawn, the noun at 6:10.
+
+Whether they are one root is **disputed among the lexica themselves**. Strong's links them,
+deriving *shachor* from a verb *shachar* "to turn black" and connecting that in turn to dawn
+"through the idea of the duskiness of early dawn". **Klein separates them**: *shachor* with
+Syriac and Akkadian words for *coal*, *shachar* with Moabite, Aramaic and Arabic words for
+*dawn*. Rabbinic tradition connects them semantically rather than etymologically — the
+blackest part of the night is the part immediately before dawn.
+
+**So this is not an established link.** A piece pairing *black am I* at 1:5 with *looking
+forth like the dawn* at 6:10 is making a poetic and semantic connection, which may well be
+what the poet heard — but it is **reading-within-frame at best, and must be marked as
+such**. It will not carry weight as philology, and a reader with Klein will say so.
