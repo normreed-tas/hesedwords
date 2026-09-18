@@ -2,7 +2,7 @@
 
 > **AUTHORITATIVE AND COMPLETE.** This is the full working note, not an extract.
 > It serves publicly at https://hesedwords.com/COLLABORATION.md and the repo copy at
-> the root is the same file. Full text current as of 16 September 2026 — if you are
+> the root is the same file. Full text current as of 18 September 2026 — if you are
 > holding a paste older than that, check the live file for changes since.
 >
 > **Fetch this as raw text rather than relying on a paste:**
@@ -174,7 +174,33 @@ the work off in the wrong direction as surely as the original mistake did. When 
 why something went wrong, check whether the plainest account fits before reaching for the
 more interesting one.
 
+**An etymology is not a usage, and reporting one as the other is a method fault, not a
+slip.** On 18 September 2026 the drafting session described ἐχορτάσθητε in John 6:26 as the
+word used of livestock fed at a trough, and built a beat on its bluntness. The derivation is
+real — χορτάζω does come from χόρτος, fodder — but by Koine the verb is the ordinary word
+for being satisfied, and Matthew 5:6 uses it of those who hunger for righteousness with no
+animal edge at all. The session named the fault itself, and named it correctly: the animal
+sense made a better sentence, so it was promoted past what warranted it. That is the same
+shape as the "third morning" error the same day, and the same shape as reaching for the
+interesting explanation above — a detail that reads well acquiring a status nothing gave it.
+
+Two things follow, and the second matters more.
+
+The check is cheap: before a word's *flavour* carries a beat, look at where else the author
+uses it, not only where the word came from. Derivation tells you a word's history; usage
+tells you what it meant to the people in the room.
+
+And the replacement was better than the claim, which is the pattern worth expecting. What
+went in instead was John's own doing — χόρτος once at 6:10, the grass they sat on, and
+χορτάζω once at 6:26, and neither anywhere else in the gospel. Sixteen verses apart, in one
+scene. That hands the reader two facts and lets them put it together, instead of telling
+them the word is blunt; and it is the piece's own habit, which the trough line had departed
+from. **When a claim fails, look for the true thing underneath it before softening the
+sentence.** It is usually sharper than what it replaces, because it belongs to the text
+rather than to the lexicon. Three times now the verified version has been stronger than the
+version that had to be withdrawn.
+
 **Sequence is fixed.** Theological exploration in chat → beat structure approved →
 section-by-section drafting with approval gates → HTML/PDF only after prose is final →
 repo-side tasks handed to Claude Code. Don't skip ahead to building.
-<!-- READ-TOKEN 9df4fd95 · 179 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 6825d861 · 205 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
