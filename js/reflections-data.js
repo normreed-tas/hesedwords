@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "You Should!",
+    date:     "2026-09-18",
+    url:      "/reflections/you-should.html",
+    summary:  "A friend who pounces on one phrase every time I use it, and a phone call to the UK where I said it to my grown son. Then the courtyard in John 8: they brought her with everything already decided and her sin said out loud, and Jesus named nobody — not one of the men, and not her. He did not tell her what she had done. He said go, and sin no more. He gave her a road; they had given her a label. And the word that carries the weight, must, he used about himself more than about anyone else.",
+    scripture: ["John 8:1-11"],
+    themes:   ["advice", "judgement", "words", "the woman caught in adultery", "must", "fatherhood", "not naming"]
+  },
+  {
     title:    "Somebody Else Was Awake",
     date:     "2026-09-15",
     url:      "/reflections/somebody-else-was-awake.html",
