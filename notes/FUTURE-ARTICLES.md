@@ -31,6 +31,44 @@ an entry is added or struck — see `CONTEXT.md`.
 
 ## Open candidates
 
+### Eternal life in John
+*Added 18 Sep 2026. Detail: `NOTE-eternal-life-john.md`*
+
+Groundwork for a full article, opened out of the John 6 conversation that produced the
+reflection *Asking for Bread*. The claim under test: *eternal life* has come to mean what
+happens after we die, and John does not use it that way — in John it is a present
+possession, located in a person, and defined at 17:3 as knowing him, which puts it inside
+the site's existing *da'at* architecture rather than beside it. Three registers do the work
+and only converge in chapters 6 and 17: bare ζωή (where the life is), ζωὴ αἰώνιος (what is
+offered), and μένω (what having it looks like over time). All four `[verify]` marks are now
+discharged, and two of them came back stronger than claimed — חַיֵּי עוֹלָם occurs **once**
+in the Hebrew Bible, at Daniel 12:2, and `εἰς ζωὴν αἰώνιον` occurs in the whole Septuagint
+only there (in both Greek Daniels) and in Psalms of Solomon 3:12, which is quoting it. So
+the phrase Jesus moves into the present tense had a single address. Open: whether the
+article covers the gospel or holds to John 6; whether ζωή and αἰώνιος take one glossary
+entry or two, and whether the word study comes before the article or falls out of it.
+Both are Norm's call. John 5:26 is marked in the note as a boundary — the strongest verse
+for the case and the one most likely to pull the piece into christology it cannot carry.
+
+### The Father-Son relation as John's frame
+*Added 18 Sep 2026. Detail: `NOTE-father-son-frame-john.md`*
+
+Deliberately kept separate from the eternal-life note: that one is a word and its thread,
+this is the frame the whole gospel is built inside, and merged it would swallow the other.
+The observation is that John's governing framework is the relation between Jesus and his
+Father, that it is almost never argued but assumed — surfacing in subordinate clauses doing
+other work — and that the gospel's offer is not information about the relation but an
+invitation into it, explicit at 17:20-23. The note's strongest single finding was carried
+as "suggestive, thin" until it was checked on 18 Sep and turned out to be neither: **κόλπος
+occurs in the gospel exactly twice**, at 1:18 (the Son in the Father's bosom) and 13:23 (the
+disciple at Jesus's breast), and nowhere in between. The gospel shows at its table what it
+stated in its prologue. The much-argued 1:18 variant falls on *θεός* / *υἱός* and does not
+touch the prepositional phrase, which is worth saying outright in any piece that uses it.
+Not begun — no draft, no beats, no Selah. Open: whether this is an article, a word study
+(κόλπος, or ἀποστέλλω / πέμπω and whether John distinguishes them), or the spine of
+something longer; and its relation to the existing Johannine pieces, none of which has been
+re-read against the frame.
+
 ### Reading Scripture by chapters
 *Added 1 Sep 2026. Detail: `NOTE-chapter-divisions.md`*
 
@@ -277,4 +315,4 @@ piece was retired, or whether it still stands exactly as it was.
 own documents on a fragment. If a line comes back to Norm, say so — the search is cheap.
 Absent that, do not invent an angle to fill the gap. A struck entry carrying an invented
 brief is worse than an empty one, because it reads as recovered.
-<!-- READ-TOKEN 7082b38d · 279 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 7aa03218 · 317 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

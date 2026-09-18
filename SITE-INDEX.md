@@ -9,11 +9,16 @@ before writing: *does something on this already exist?* and *what did it say?*
 The theme index at the foot is the fastest way in — a new piece whose theme
 already appears there probably has a companion waiting.
 
-**142 pieces** — 92 reflections, 34 articles, 11 books, 5 word studies.
+**143 pieces** — 93 reflections, 34 articles, 11 books, 5 word studies.
 
 ---
 
-## Reflections (92)
+## Reflections (93)
+
+**2026-09-18 · Asking for Bread**
+John 6:22-69 · `/reflections/asking-for-bread.html`
+*Themes:* eternal life, seeking, bread, belief, prayer, Peter, hard sayings, John
+They crossed a lake to find him, and he answered a question they had not asked: you are seeking me not because you saw signs but because you ate your fill. He does not tell them to stop. The seeking stands — he just tells them what is underneath it. Earlier John says there was plenty of grass and they sat down on it, and the word for ate your fill comes from that same word for grass; neither appears anywhere else in the book. Then: what must we do? Works, plural, something to get on with. One thing, he says. They went back and walked with him no more, and Peter, who did not understand it either, said there was nowhere else to go. And a prayer said out of habit before sleep, interrupted.
 
 **2026-09-18 · You Should!**
 John 8:1-11 · `/reflections/you-should.html`
@@ -739,7 +744,7 @@ Before it ever means to intercede, it means to fall upon — to strike, to meet 
 
 ---
 
-## Theme index (476 themes)
+## Theme index (480 themes)
 
 Every theme in use, and what carries it. A theme with more than one piece
 against it is a companion candidate.
@@ -778,13 +783,14 @@ against it is a companion candidate.
 - **being held up** — [Still Talking](/reflections/still-talking.html) (reflection)
 - **being known** — [What We Did Without Knowing](/books/what-we-did-without-knowing.html) (book) · [See Me Trying](/reflections/see-me-trying.html) (reflection)
 - **being useful** — [A Man Who Runs](/books/a-man-who-runs.html) (book)
-- **belief** — [Unless I Had Believed](/reflections/unless-i-had-believed.html) (reflection)
+- **belief** — [Asking for Bread](/reflections/asking-for-bread.html) (reflection) · [Unless I Had Believed](/reflections/unless-i-had-believed.html) (reflection)
 - **belonging** — [The Vow?](/reflections/the-vow.html) (reflection) · [When the Heart Was Awake](/articles/when-the-heart-was-awake.html) (article)
 - **berit** — [What God Remembers](/articles/what-god-remembers.html) (article) · [Zakar](/word-studies/zakar.html) (word study)
 - **betrayal** — [The Oldest Loneliness](/books/the-oldest-loneliness.html) (book)
 - **blessing** — [Blessed Is the Man](/reflections/blessed-is-the-man.html) (reflection) · [Kiss the Son](/reflections/kiss-the-son.html) (reflection) · [The Last Word of the Road](/reflections/the-last-word-of-the-road.html) (reflection) · [How Good and Pleasant](/reflections/how-good-and-pleasant.html) (reflection) · [The Ordinary Blessing](/reflections/the-ordinary-blessing.html) (reflection) · [Songs for the Road](/books/songs-for-the-road.html) (book)
 - **body** — [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection)
 - **body of christ** — [Communion](/reflections/communion.html) (reflection)
+- **bread** — [Asking for Bread](/reflections/asking-for-bread.html) (reflection)
 - **breaking of bread** — [Communion](/reflections/communion.html) (reflection)
 - **breath** — [Selah](/reflections/selah.html) (reflection)
 - **building** — [The House the LORD Builds](/reflections/the-house-the-lord-builds.html) (reflection)
@@ -865,6 +871,7 @@ against it is a companion candidate.
 - **enemies** — [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection) · [Who Are the Enemies of God? — Reading Psalm 68](/articles/who-are-the-enemies-of-god.html) (article) · [Learning to Pray by Praying the Psalms — Until We Reach Psalm 83](/articles/until-we-reach-psalm-83.html) (article)
 - **entrust** — [Into Your Hand](/reflections/into-your-hand.html) (reflection)
 - **eschatology** — [Reading Daniel Without Arithmetic](/articles/reading-daniel-without-arithmetic.html) (article)
+- **eternal life** — [Asking for Bread](/reflections/asking-for-bread.html) (reflection)
 - **everyday sacredness** — [The Piece I Keep Picking Up](/reflections/the-piece-i-keep-picking-up.html) (reflection)
 - **exchange** — [The Treasure](/articles/the-treasure.html) (article)
 - **exclusion** — [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection)
@@ -904,6 +911,7 @@ against it is a companion candidate.
 - **gur** — [The Far Country](/reflections/the-far-country.html) (reflection)
 - **hagioi** — [An Interview with a Saint](/articles/an-interview-with-a-saint.html) (article)
 - **handover** — [Succession Planning — Everything Set in Place](/reflections/succession-planning.html) (reflection)
+- **hard sayings** — [Asking for Bread](/reflections/asking-for-bread.html) (reflection)
 - **hardness of heart** — [Have You Not Read](/reflections/have-you-not-read.html) (reflection)
 - **healing** — [A Place for Salt](/reflections/a-place-for-salt.html) (reflection)
 - **heart** — [Into Your Hand](/reflections/into-your-hand.html) (reflection)
@@ -940,6 +948,7 @@ against it is a companion candidate.
 - **jehoshaphat** — [What They Sang](/reflections/what-they-sang.html) (reflection)
 - **jesus** — [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection) · [Into Your Hand](/reflections/into-your-hand.html) (reflection) · [Delivered to What?](/reflections/delivered-to-what.html) (reflection)
 - **jewish tradition** — [The Thursday Psalm](/articles/the-thursday-psalm.html) (article)
+- **john** — [Asking for Bread](/reflections/asking-for-bread.html) (reflection)
 - **john mark** — [A Man Who Runs](/books/a-man-who-runs.html) (book)
 - **john the baptist** — [Fitting](/articles/fitting.html) (article)
 - **john's gospel** — [Is There No Hesed in John?](/articles/is-there-no-hesed-in-john.html) (article)
@@ -1023,14 +1032,14 @@ against it is a companion candidate.
 - **perception** — [Justice Is Not What You Think](/reflections/justice-is-not-what-you-think.html) (reflection)
 - **persecution** — [You](/reflections/blessed-are-you.html) (reflection)
 - **perseverance** — [Still Talking](/reflections/still-talking.html) (reflection) · [The Dogs at the Perimeter](/reflections/the-dogs-at-the-perimeter.html) (reflection)
-- **peter** — [A Man Who Runs](/books/a-man-who-runs.html) (book) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection)
+- **peter** — [Asking for Bread](/reflections/asking-for-bread.html) (reflection) · [A Man Who Runs](/books/a-man-who-runs.html) (book) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection)
 - **pilgrimage** — [Songs for the Road](/books/songs-for-the-road.html) (book)
 - **plain language** — [Did the Word Become a List?](/reflections/did-the-word-become-a-list.html) (reflection)
 - **poetry** — [The Song Begins in Longing](/articles/the-song-begins-in-longing.html) (article)
 - **port moresby** — [The Asking](/reflections/the-asking.html) (reflection)
 - **power** — [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection) · [Meekness](/articles/psalm-45-meekness.html) (article)
 - **praise** — [What They Sang](/reflections/what-they-sang.html) (reflection)
-- **prayer** — [Psalm 75 — How Do I Pray This?](/articles/how-do-i-pray-this.html) (article) · [Kept Anyway](/reflections/kept-anyway.html) (reflection) · [Draw Me](/reflections/draw-me.html) (reflection) · [See Me Trying](/reflections/see-me-trying.html) (reflection) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection) · [Is Jesus an Intercessor?](/word-studies/jesus-intercessor.html) (word study) · [Into Your Hand](/reflections/into-your-hand.html) (reflection) · [Draw Me! The Voice Matters](/articles/draw-me-the-voice-matters.html) (article) · [Make Me](/reflections/make-me.html) (reflection) · [The Dogs at the Perimeter](/reflections/the-dogs-at-the-perimeter.html) (reflection)
+- **prayer** — [Asking for Bread](/reflections/asking-for-bread.html) (reflection) · [Psalm 75 — How Do I Pray This?](/articles/how-do-i-pray-this.html) (article) · [Kept Anyway](/reflections/kept-anyway.html) (reflection) · [Draw Me](/reflections/draw-me.html) (reflection) · [See Me Trying](/reflections/see-me-trying.html) (reflection) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection) · [Is Jesus an Intercessor?](/word-studies/jesus-intercessor.html) (word study) · [Into Your Hand](/reflections/into-your-hand.html) (reflection) · [Draw Me! The Voice Matters](/articles/draw-me-the-voice-matters.html) (article) · [Make Me](/reflections/make-me.html) (reflection) · [The Dogs at the Perimeter](/reflections/the-dogs-at-the-perimeter.html) (reflection)
 - **prayer meeting** — [Coincidence](/reflections/coincidence.html) (reflection)
 - **praying scripture** — [Learning to Pray by Praying the Psalms — Until We Reach Psalm 83](/articles/until-we-reach-psalm-83.html) (article)
 - **preaching** — [Telling It Wrong](/articles/telling-it-wrong.html) (article)
@@ -1085,7 +1094,7 @@ against it is a companion candidate.
 - **second mile** — [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection)
 - **security** — [The Mountain That Cannot Be Moved](/reflections/the-mountain-that-cannot-be-moved.html) (reflection)
 - **seeing yourself** — [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection)
-- **seeking** — [Seeking](/articles/seeking.html) (article) · [Blue Blazers](/reflections/blue-blazers.html) (reflection)
+- **seeking** — [Asking for Bread](/reflections/asking-for-bread.html) (reflection) · [Seeking](/articles/seeking.html) (article) · [Blue Blazers](/reflections/blue-blazers.html) (reflection)
 - **selah** — [Who Are the Enemies of God? — Reading Psalm 68](/articles/who-are-the-enemies-of-god.html) (article) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Selah](/reflections/selah.html) (reflection) · [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection)
 - **self-deception** — [Deceived](/reflections/deceived.html) (reflection) · [Have They No Knowledge?](/reflections/have-they-no-knowledge.html) (reflection) · [What Is Already Yours](/reflections/what-is-already-yours.html) (reflection)
 - **self-examination** — [Why Do You Think Evil](/reflections/why-do-you-think-evil.html) (reflection) · [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection) · [Blue Blazers](/reflections/blue-blazers.html) (reflection)
@@ -1220,4 +1229,4 @@ against it is a companion candidate.
 - **zakar** — [The Asking](/reflections/the-asking.html) (reflection) · [What God Remembers](/articles/what-god-remembers.html) (article) · [Zakar](/word-studies/zakar.html) (word study) · [Kept Anyway](/reflections/kept-anyway.html) (reflection)
 - **zechariah** — [The Piece I Keep Picking Up](/reflections/the-piece-i-keep-picking-up.html) (reflection)
 - **zion** — [Spot the Difference](/articles/spot-the-difference.html) (article) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection)
-<!-- READ-TOKEN 8e589e7f · 1222 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN b16e3f86 · 1231 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

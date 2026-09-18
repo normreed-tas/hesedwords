@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Asking for Bread",
+    date:     "2026-09-18",
+    url:      "/reflections/asking-for-bread.html",
+    summary:  "They crossed a lake to find him, and he answered a question they had not asked: you are seeking me not because you saw signs but because you ate your fill. He does not tell them to stop. The seeking stands — he just tells them what is underneath it. Earlier John says there was plenty of grass and they sat down on it, and the word for ate your fill comes from that same word for grass; neither appears anywhere else in the book. Then: what must we do? Works, plural, something to get on with. One thing, he says. They went back and walked with him no more, and Peter, who did not understand it either, said there was nowhere else to go. And a prayer said out of habit before sleep, interrupted.",
+    scripture: ["John 6:22-69"],
+    themes:   ["eternal life", "seeking", "bread", "belief", "prayer", "Peter", "hard sayings", "John"]
+  },
+  {
     title:    "You Should!",
     date:     "2026-09-18",
     url:      "/reflections/you-should.html",
