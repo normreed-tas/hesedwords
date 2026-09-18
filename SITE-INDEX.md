@@ -9,7 +9,7 @@ before writing: *does something on this already exist?* and *what did it say?*
 The theme index at the foot is the fastest way in — a new piece whose theme
 already appears there probably has a companion waiting.
 
-**140 pieces** — 91 reflections, 34 articles, 10 books, 5 word studies.
+**141 pieces** — 91 reflections, 34 articles, 11 books, 5 word studies.
 
 ---
 
@@ -646,7 +646,12 @@ The arc of desire in the Song of Songs — from longing into belonging into open
 
 ---
 
-## Books (10)
+## Books (11)
+
+**2026-09-18 · A Man Who Runs**
+Mark 14:51-52; Acts 13:13; Acts 15:37-39; 2 Timothy 4:11 · `/books/a-man-who-runs.html`
+*Themes:* John Mark, Paul, Peter, failure, running away, being useful, the Gospel of Mark, narrative
+A narrative. In a cell under a Roman street in the winter of 66, John Mark reads his unfinished Gospel aloud to Paul — the man who once refused to travel with him. Twenty-five chapters, and the one he has not written is the young man in the garden who left the linen cloth and ran away naked. Peter is dead. Paul is old and chained. Nobody in the room says the word that is between them.
 
 **2026-09-06 · What We Did Without Knowing**
 Matthew 25 · `/books/what-we-did-without-knowing.html`
@@ -729,7 +734,7 @@ Before it ever means to intercede, it means to fall upon — to strike, to meet 
 
 ---
 
-## Theme index (463 themes)
+## Theme index (469 themes)
 
 Every theme in use, and what carries it. A theme with more than one piece
 against it is a companion candidate.
@@ -766,6 +771,7 @@ against it is a companion candidate.
 - **being heard** — [Somebody Else Was Awake](/reflections/somebody-else-was-awake.html) (reflection) · [The Oldest Loneliness](/books/the-oldest-loneliness.html) (book)
 - **being held up** — [Still Talking](/reflections/still-talking.html) (reflection)
 - **being known** — [What We Did Without Knowing](/books/what-we-did-without-knowing.html) (book) · [See Me Trying](/reflections/see-me-trying.html) (reflection)
+- **being useful** — [A Man Who Runs](/books/a-man-who-runs.html) (book)
 - **belief** — [Unless I Had Believed](/reflections/unless-i-had-believed.html) (reflection)
 - **belonging** — [The Vow?](/reflections/the-vow.html) (reflection) · [When the Heart Was Awake](/articles/when-the-heart-was-awake.html) (article)
 - **berit** — [What God Remembers](/articles/what-god-remembers.html) (article) · [Zakar](/word-studies/zakar.html) (word study)
@@ -857,6 +863,7 @@ against it is a companion candidate.
 - **exchange** — [The Treasure](/articles/the-treasure.html) (article)
 - **exclusion** — [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection)
 - **exile** — [Almost the Same in the End](/reflections/almost-the-same-in-the-end.html) (reflection) · [The Third That Survived](/reflections/the-third-that-survived.html) (reflection) · [Songs for the Road](/books/songs-for-the-road.html) (book) · [The Far Country](/reflections/the-far-country.html) (reflection)
+- **failure** — [A Man Who Runs](/books/a-man-who-runs.html) (book)
 - **faith** — [Unless I Had Believed](/reflections/unless-i-had-believed.html) (reflection)
 - **faithfulness** — [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection) · [Star Wars](/reflections/star-wars.html) (reflection) · [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection) · [New Every Morning](/reflections/new-every-morning.html) (reflection)
 - **family** — [Sitting with a Sinner](/articles/sitting-with-a-sinner.html) (article) · [Who Would Have Thought — Illustrated](/books/who-would-have-thought-illustrated.html) (book) · [Who Would Have Thought](/books/who-would-have-thought.html) (book) · [Jesus as Leader](/articles/jesus-as-leader.html) (article) · [The Ordinary Blessing](/reflections/the-ordinary-blessing.html) (reflection)
@@ -925,6 +932,7 @@ against it is a companion candidate.
 - **jehoshaphat** — [What They Sang](/reflections/what-they-sang.html) (reflection)
 - **jesus** — [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection) · [Into Your Hand](/reflections/into-your-hand.html) (reflection) · [Delivered to What?](/reflections/delivered-to-what.html) (reflection)
 - **jewish tradition** — [The Thursday Psalm](/articles/the-thursday-psalm.html) (article)
+- **john mark** — [A Man Who Runs](/books/a-man-who-runs.html) (book)
 - **john the baptist** — [Fitting](/articles/fitting.html) (article)
 - **john's gospel** — [Is There No Hesed in John?](/articles/is-there-no-hesed-in-john.html) (article)
 - **journey** — [Songs for the Road](/books/songs-for-the-road.html) (book)
@@ -981,6 +989,7 @@ against it is a companion candidate.
 - **nachalah** — [The House the LORD Builds](/reflections/the-house-the-lord-builds.html) (reflection)
 - **name of god** — [His Name Is Oil Poured Out](/reflections/let-his-name-be-poured-out.html) (reflection)
 - **names** — [He Named the Gatekeepers](/articles/he-named-the-gatekeepers.html) (article) · [Ezra Had the Scroll](/articles/ezra-had-the-scroll.html) (article)
+- **narrative** — [A Man Who Runs](/books/a-man-who-runs.html) (book)
 - **nashaq** — [Kiss the Son](/reflections/kiss-the-son.html) (reflection)
 - **nebuchadnezzar** — [Pride](/reflections/pride.html) (reflection) · [Nobody Left to Say No](/articles/nobody-left-to-say-no.html) (article)
 - **neder** — [The Vow?](/reflections/the-vow.html) (reflection) · [The Vow That Is Not a Payment](/articles/vows.html) (article)
@@ -996,7 +1005,7 @@ against it is a companion candidate.
 - **paired psalms** — [Spot the Difference](/articles/spot-the-difference.html) (article)
 - **papua new guinea** — [Profitable](/articles/profitable.html) (article) · [The One Thing He Wouldn't Delegate](/reflections/the-one-thing-he-wouldnt-delegate.html) (reflection)
 - **pastoral formation** — [Jesus as Leader](/articles/jesus-as-leader.html) (article)
-- **paul** — [Star Wars](/reflections/star-wars.html) (reflection) · [Let Him Kiss Me](/reflections/let-him-kiss-me.html) (reflection)
+- **paul** — [A Man Who Runs](/books/a-man-who-runs.html) (book) · [Star Wars](/reflections/star-wars.html) (reflection) · [Let Him Kiss Me](/reflections/let-him-kiss-me.html) (reflection)
 - **pause** — [Selah](/reflections/selah.html) (reflection)
 - **peace** — [When Mercy and Truth Met](/books/when-mercy-and-truth-met.html) (book)
 - **pearl of great price** — [The Treasure](/articles/the-treasure.html) (article) · [Parables — You'll See](/reflections/parables-youll-see.html) (reflection)
@@ -1004,7 +1013,7 @@ against it is a companion candidate.
 - **perception** — [Justice Is Not What You Think](/reflections/justice-is-not-what-you-think.html) (reflection)
 - **persecution** — [You](/reflections/blessed-are-you.html) (reflection)
 - **perseverance** — [Still Talking](/reflections/still-talking.html) (reflection) · [The Dogs at the Perimeter](/reflections/the-dogs-at-the-perimeter.html) (reflection)
-- **peter** — [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection)
+- **peter** — [A Man Who Runs](/books/a-man-who-runs.html) (book) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection)
 - **pilgrimage** — [Songs for the Road](/books/songs-for-the-road.html) (book)
 - **plain language** — [Did the Word Become a List?](/reflections/did-the-word-become-a-list.html) (reflection)
 - **poetry** — [The Song Begins in Longing](/articles/the-song-begins-in-longing.html) (article)
@@ -1053,6 +1062,7 @@ against it is a companion candidate.
 - **risdon** — [The Cause I Applied For](/reflections/the-cause-i-applied-for.html) (reflection)
 - **ritual** — [Communion](/reflections/communion.html) (reflection)
 - **riv** — [Telling It Wrong](/articles/telling-it-wrong.html) (article)
+- **running away** — [A Man Who Runs](/books/a-man-who-runs.html) (book)
 - **sabbath** — [Different Work](/articles/different-work.html) (article)
 - **sacrifice** — [The Sacrifice of Thanksgiving](/reflections/the-sacrifice-of-thanksgiving.html) (reflection)
 - **saints** — [An Interview with a Saint](/articles/an-interview-with-a-saint.html) (article)
@@ -1128,6 +1138,7 @@ against it is a companion candidate.
 - **the divided self** — [When the Heart Was Awake](/articles/when-the-heart-was-awake.html) (article)
 - **the driven-away** — [God Seeks What Has Been Driven Away](/reflections/god-seeks-what-has-been-driven-away.html) (reflection)
 - **the fool** — [Spot the Difference](/articles/spot-the-difference.html) (article)
+- **the gospel of mark** — [A Man Who Runs](/books/a-man-who-runs.html) (book)
 - **the olive tree** — [I Am Like an Olive Tree](/reflections/i-am-like-an-olive-tree.html) (reflection)
 - **the overlooked** — [Seeking](/articles/seeking.html) (article)
 - **the people** — [Ezra Had the Scroll](/articles/ezra-had-the-scroll.html) (article)
@@ -1197,4 +1208,4 @@ against it is a companion candidate.
 - **zakar** — [The Asking](/reflections/the-asking.html) (reflection) · [What God Remembers](/articles/what-god-remembers.html) (article) · [Zakar](/word-studies/zakar.html) (word study) · [Kept Anyway](/reflections/kept-anyway.html) (reflection)
 - **zechariah** — [The Piece I Keep Picking Up](/reflections/the-piece-i-keep-picking-up.html) (reflection)
 - **zion** — [Spot the Difference](/articles/spot-the-difference.html) (article) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection)
-<!-- READ-TOKEN a971cb18 · 1199 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 1e80b9ba · 1210 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

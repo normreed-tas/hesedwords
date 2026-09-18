@@ -8,6 +8,14 @@
    ================================================================ */
 const BOOKS_META = [
   {
+    title:    "A Man Who Runs",
+    url:      "/books/a-man-who-runs.html",
+    date:     "2026-09-18",
+    scripture: ["Mark 14:51-52", "Acts 13:13", "Acts 15:37-39", "2 Timothy 4:11"],
+    themes:   ["John Mark", "Paul", "Peter", "failure", "running away", "being useful", "the Gospel of Mark", "narrative"],
+    summary:  "A narrative. In a cell under a Roman street in the winter of 66, John Mark reads his unfinished Gospel aloud to Paul — the man who once refused to travel with him. Twenty-five chapters, and the one he has not written is the young man in the garden who left the linen cloth and ran away naked. Peter is dead. Paul is old and chained. Nobody in the room says the word that is between them."
+  },
+  {
     title:    "What We Did Without Knowing",
     url:      "/books/what-we-did-without-knowing.html",
     date:     "2026-09-06",
