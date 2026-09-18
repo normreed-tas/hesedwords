@@ -12,7 +12,7 @@ const BOOKS_META = [
     url:      "/books/a-man-who-runs.html",
     date:     "2026-09-18",
     scripture: ["Mark 14:51-52", "Acts 13:13", "Acts 15:37-39", "2 Timothy 4:11"],
-    themes:   ["John Mark", "Paul", "Peter", "failure", "running away", "being useful", "the Gospel of Mark", "narrative"],
+    themes:   ["historical fiction", "John Mark", "Paul", "Peter", "failure", "running away", "being useful", "the Gospel of Mark", "narrative"],
     summary:  "A narrative. In a cell under a Roman street in the winter of 66, John Mark reads his unfinished Gospel aloud to Paul — the man who once refused to travel with him. Twenty-five chapters, and the one he has not written is the young man in the garden who left the linen cloth and ran away naked. Peter is dead. Paul is old and chained. Nobody in the room says the word that is between them."
   },
   {
@@ -60,7 +60,7 @@ const BOOKS_META = [
     url:      "/books/that-day.html",
     date:     "2019-04-12",
     scripture: ["Mark 15:21"],
-    themes:   ["Simon of Cyrene", "the cross", "compulsion", "bystander"],
+    themes:   ["historical fiction", "Simon of Cyrene", "the cross", "compulsion", "bystander"],
     summary:  "A narrative meditation that enters the story of Simon of Cyrene — the man compelled to carry the cross. What did he see? What did it cost him? And what did that day make of him?"
   },
   {

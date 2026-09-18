@@ -650,7 +650,7 @@ The arc of desire in the Song of Songs — from longing into belonging into open
 
 **2026-09-18 · A Man Who Runs**
 Mark 14:51-52; Acts 13:13; Acts 15:37-39; 2 Timothy 4:11 · `/books/a-man-who-runs.html`
-*Themes:* John Mark, Paul, Peter, failure, running away, being useful, the Gospel of Mark, narrative
+*Themes:* historical fiction, John Mark, Paul, Peter, failure, running away, being useful, the Gospel of Mark, narrative
 A narrative. In a cell under a Roman street in the winter of 66, John Mark reads his unfinished Gospel aloud to Paul — the man who once refused to travel with him. Twenty-five chapters, and the one he has not written is the young man in the garden who left the linen cloth and ran away naked. Peter is dead. Paul is old and chained. Nobody in the room says the word that is between them.
 
 **2026-09-06 · What We Did Without Knowing**
@@ -700,7 +700,7 @@ A sustained canonical exploration of Micah 6:8 across three movements: the prior
 
 **2019-04-12 · That Day**
 Mark 15:21 · `/books/that-day.html`
-*Themes:* Simon of Cyrene, the cross, compulsion, bystander
+*Themes:* historical fiction, Simon of Cyrene, the cross, compulsion, bystander
 A narrative meditation that enters the story of Simon of Cyrene — the man compelled to carry the cross. What did he see? What did it cost him? And what did that day make of him?
 
 ---
@@ -734,7 +734,7 @@ Before it ever means to intercede, it means to fall upon — to strike, to meet 
 
 ---
 
-## Theme index (469 themes)
+## Theme index (470 themes)
 
 Every theme in use, and what carries it. A theme with more than one piece
 against it is a companion candidate.
@@ -907,6 +907,7 @@ against it is a companion candidate.
 - **hevel** — [The Treasure](/articles/the-treasure.html) (article) · [God Alone](/reflections/god-alone.html) (reflection) · [Selah](/reflections/selah.html) (reflection)
 - **hiddenness** — [What We Did Without Knowing](/books/what-we-did-without-knowing.html) (book) · [Our God-Sponsored Projects](/articles/our-god-sponsored-projects.html) (article)
 - **hiding** — [Blessed Is the Man](/reflections/blessed-is-the-man.html) (reflection)
+- **historical fiction** — [A Man Who Runs](/books/a-man-who-runs.html) (book) · [That Day](/books/that-day.html) (book)
 - **history** — [The Third That Survived](/reflections/the-third-that-survived.html) (reflection)
 - **holiness** — [The Piece I Keep Picking Up](/reflections/the-piece-i-keep-picking-up.html) (reflection)
 - **holocaust** — [The Third That Survived](/reflections/the-third-that-survived.html) (reflection)
@@ -1208,4 +1209,4 @@ against it is a companion candidate.
 - **zakar** — [The Asking](/reflections/the-asking.html) (reflection) · [What God Remembers](/articles/what-god-remembers.html) (article) · [Zakar](/word-studies/zakar.html) (word study) · [Kept Anyway](/reflections/kept-anyway.html) (reflection)
 - **zechariah** — [The Piece I Keep Picking Up](/reflections/the-piece-i-keep-picking-up.html) (reflection)
 - **zion** — [Spot the Difference](/articles/spot-the-difference.html) (article) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection)
-<!-- READ-TOKEN 1e80b9ba · 1210 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 9012eb72 · 1211 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
