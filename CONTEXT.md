@@ -78,6 +78,14 @@ unstyled black-on-white — that is correct. Do not inline the stylesheet.
 **Do not build:** cards, manifest entries, `feed.xml` items, the home-page panel, or
 PDFs. Those are done repo-side and will conflict if you write them.
 
+**Where it goes:** Norm saves every file you produce — pages, notes, anything — into
+`inbox/` and nowhere else. That folder is gitignored, so nothing you hand over can
+publish by accident. **Do not tell him a destination path.** `notes/` and
+`reflections/` are live, tracked directories; a file dropped straight into one is a
+file one `git add` away from being on the public site unreviewed. Say what the file
+*is* — kind, and for a note whether it is working or held — and the filing is done
+repo-side, where the naming conventions and the index live.
+
 **State with the handover**, or it will come back as a question: kind (Reflection /
 Article / Word Study / Book); scripture reference and date exactly as they should
 appear in the meta block; whether a PDF is wanted; whether a companion line is wanted
@@ -109,4 +117,4 @@ item stops being re-raised in three months.
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN 8bf603cd · 111 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 1f73f4fc · 119 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
