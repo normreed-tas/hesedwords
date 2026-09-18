@@ -64,9 +64,12 @@ belonging to the age to come can be had now, and is had by being joined to a per
 list carries Greek for argos, eleos, charis, aletheia, agape and hagioi, and nothing
 for these. `#zoe` and `#aionios` would both be new seeds, probably two separate
 entries rather than one paired, on the da'at / yada precedent. The pairing is also a
-word study in its own right, and would sit under it as its companion. Sequence not
-settled: whether the word study precedes the article or falls out of it is Norm's
-call.
+word study in its own right, and would sit under it as its companion. **Sequence
+settled 18 September 2026: the word study falls out of the article, written during
+it, not before it.** Norm's call. So the article is drafted first and the study is
+lifted from the work already done — which also means the two glossary seeds are
+written once the words have been handled in prose, rather than being defined in
+advance and then written up to.
 
 ## The Old Testament background
 
@@ -224,5 +227,5 @@ construction land in the same clause.
   deliberately does not; an article for a different reader may need to.
 - The βίος question, and whether its absence from the gospel is worth an argument or
   only a footnote.
-- Whether ζωή and αἰώνιος take one glossary entry or two, and whether the word study
-  comes before the article or after it.
+- Whether ζωή and αἰώνιος take one glossary entry or two. *(The sequence half of this
+  is settled — the study falls out of the article. See "Glossary and word study" above.)*

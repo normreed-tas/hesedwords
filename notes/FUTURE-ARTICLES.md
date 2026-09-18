@@ -45,9 +45,10 @@ discharged, and two of them came back stronger than claimed — חַיֵּי ע�
 in the Hebrew Bible, at Daniel 12:2, and `εἰς ζωὴν αἰώνιον` occurs in the whole Septuagint
 only there (in both Greek Daniels) and in Psalms of Solomon 3:12, which is quoting it. So
 the phrase Jesus moves into the present tense had a single address. Open: whether the
-article covers the gospel or holds to John 6; whether ζωή and αἰώνιος take one glossary
-entry or two, and whether the word study comes before the article or falls out of it.
-Both are Norm's call. John 5:26 is marked in the note as a boundary — the strongest verse
+article covers the gospel or holds to John 6, and whether ζωή and αἰώνιος take one
+glossary entry or two — both Norm's call. **The sequence is settled: the word study
+falls out of the article, written during it rather than before it**, so the article is
+the next thing drafted. John 5:26 is marked in the note as a boundary — the strongest verse
 for the case and the one most likely to pull the piece into christology it cannot carry.
 
 ### The Father-Son relation as John's frame
@@ -315,4 +316,4 @@ piece was retired, or whether it still stands exactly as it was.
 own documents on a fragment. If a line comes back to Norm, say so — the search is cheap.
 Absent that, do not invent an angle to fill the gap. A struck entry carrying an invented
 brief is worse than an empty one, because it reads as recovered.
-<!-- READ-TOKEN 7aa03218 · 317 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN e45db7d1 · 318 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
