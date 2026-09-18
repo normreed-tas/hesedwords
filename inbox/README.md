@@ -36,3 +36,18 @@ substantial working notes were found living only in a drafting project's
 uploaded knowledge, with no copy in the repo and no fetch path; deleting those
 uploads would have destroyed them. Anything worth keeping gets committed to
 `notes/`, not left in an ignored folder.
+
+## A multi-file handover may arrive as one zip
+
+On 18 Sep 2026 a drafting session delivered three files and then reported that
+its file cards had "failed twice" and come through blank, and offered to paste
+the HTML into the chat as plain text instead. Nothing had failed: the delivery
+had landed here as a single `files1.zip`, which unzipped to exactly the three
+files described. The session could not see this, because it has no route to
+this machine and no way to confirm what arrived.
+
+So: **look in this folder before accepting a report that delivery failed**, and
+unzip anything that turns up. A drafting project's account of the transport is
+a guess about a thing it cannot observe. That is not a fault in the project —
+it is a limit of where it sits — but it is a guess, and it can be wrong in the
+direction of extra work.
