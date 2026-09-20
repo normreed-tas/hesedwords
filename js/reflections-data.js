@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Who Knows",
+    date:     "2026-09-20",
+    url:      "/reflections/who-knows.html",
+    summary:  "Jonah's sermon is five words long in the Hebrew, and the mercy is left out. He knew the rest — he quotes it back at God in chapter four as a complaint. So a pagan king had to guess at the thing the preacher could have told him: who knows, God may turn and change his mind. And the guess was right. The forty days were real, and they never happened, because telling the city about the disaster is how the city gets saved from it. Then the part I would rather not write: Jonah was right about Nineveh. Everything he said was true. Five words, and not one of them false. Being right is not the same as passing on what you know God is like.",
+    scripture: ["Jonah 3-4", "Matthew 12:38-42"],
+    themes:   ["judgement", "mercy", "Jonah", "Nineveh", "repentance", "being right", "the sign of Jonah", "preaching"]
+  },
+  {
     title:    "Asking for Bread",
     date:     "2026-09-18",
     url:      "/reflections/asking-for-bread.html",
