@@ -8,6 +8,14 @@
    ================================================================ */
 const BOOKS_META = [
   {
+    title:    "The Songs for Every Day",
+    url:      "/books/the-songs-for-every-day.html",
+    date:     "2026-09-20",
+    scripture: ["Psalm 24", "Psalm 48", "Psalm 82", "Psalm 94", "Psalm 81", "Psalm 93", "Psalm 92"],
+    themes:   ["tamid", "psalms", "younger readers", "daily reading", "the Temple", "fairness", "being left out", "safety", "rest", "prayer"],
+    summary:  "The seven psalms the singers sang in the temple, one for each day of the week, retold for younger readers. They called it the tamid — the one that keeps going — and they did it when they were happy and when they were sad, when everything was going well and when everything had gone wrong. Sunday says whose world this is; Tuesday asks who gets left out at your school; Wednesday is for when things are unfair and nobody seems to be doing anything; Saturday puts grass and a cedar tree side by side. Each day has something to wonder about and a prayer you can say. The companion edition to The Tamid Psalms."
+  },
+  {
     title:    "The Tamid Psalms",
     url:      "/books/the-tamid-psalms.html",
     date:     "2026-09-20",
