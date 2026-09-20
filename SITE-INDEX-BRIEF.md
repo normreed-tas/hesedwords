@@ -1,6 +1,6 @@
 # Hesed Words — brief index
 
-**143 pieces** — 93 reflections, 34 articles, 11 books, 5 word studies.
+**144 pieces** — 93 reflections, 34 articles, 12 books, 5 word studies.
 
 One line per piece: date · title · scripture · url. Deliberately short enough
 to read in full. Use it to answer "does this already exist?" — then read
@@ -139,8 +139,9 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2026-06-01 · **Jesus as Leader** · Mark 10:42-45 · `/articles/jesus-as-leader.html`
 - 2026-06-01 · **When the Heart Was Awake** · Song of Songs 5; Romans 7 · `/articles/when-the-heart-was-awake.html`
 
-## Books (11)
+## Books (12)
 
+- 2026-09-20 · **The Tamid Psalms** · Psalm 24; Psalm 48; Psalm 82; Psalm 94; Psalm 81; Psalm 93; Psalm 92 · `/books/the-tamid-psalms.html`
 - 2026-09-18 · **A Man Who Runs** · Mark 14:51-52; Acts 13:13; Acts 15:37-39; 2 Timothy 4:11 · `/books/a-man-who-runs.html`
 - 2026-09-06 · **What We Did Without Knowing** · Matthew 25 · `/books/what-we-did-without-knowing.html`
 - 2026-07-16 · **When Mercy and Truth Met** · Psalm 85:10-13 · `/books/when-mercy-and-truth-met.html`
@@ -160,4 +161,4 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2026-08-03 · **Is "Wicked" a Verdict or a Character?** · Deuteronomy 25:1; 1 Kings 8:32; Exodus 23:7; Psalm 58:1 · `/word-studies/is-wicked-a-verdict-or-a-character.html`
 - 2026-07-11 · **What Is an Idle Word?** · Matthew 12:36; Matthew 20:3; 1 Timothy 5:13; 2 Peter 1:8 · `/word-studies/idle.html`
 - 2026-07-10 · **Is Jesus an Intercessor?** · Isaiah 59:16; Isaiah 53:12; 1 Samuel 22:18; Romans 8:34 · `/word-studies/jesus-intercessor.html`
-<!-- READ-TOKEN 5301827d · 162 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN d0971187 · 163 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

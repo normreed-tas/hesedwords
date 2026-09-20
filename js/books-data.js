@@ -8,6 +8,14 @@
    ================================================================ */
 const BOOKS_META = [
   {
+    title:    "The Tamid Psalms",
+    url:      "/books/the-tamid-psalms.html",
+    date:     "2026-09-20",
+    scripture: ["Psalm 24", "Psalm 48", "Psalm 82", "Psalm 94", "Psalm 81", "Psalm 93", "Psalm 92"],
+    themes:   ["tamid", "continual offering", "psalms", "daily reading", "the Levites", "liturgy", "Mishnah", "Temple", "rhythm", "hevel", "kavod"],
+    summary:  "Twice each day a lamb went up in the Temple — the tamid, the continual offering, which did not depend on anyone feeling anything. While it burned the Levites sang, and the Mishnah records which psalm belonged to which day, the week mapped onto the days of creation. Here are those seven in full, one for each day, each with a short note on why it sat where it did: Sunday's title deed, Monday's held line, Tuesday's question about authority, Wednesday's anger, Thursday's set table, Friday's finished work, and a Sabbath psalm that asks only where you are rooted. Not a programme to complete but a rhythm to return to."
+  },
+  {
     title:    "A Man Who Runs",
     url:      "/books/a-man-who-runs.html",
     date:     "2026-09-18",
