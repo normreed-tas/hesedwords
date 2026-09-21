@@ -206,27 +206,68 @@ if (ledgerProblems.length) {
 // Resolves against the FILE SYSTEM, not HTTP: the point is to fail before the
 // push, and the repo root is the document root on GitHub Pages, so a path that
 // resolves here resolves live.
+//
+// Widened 21 Sep 2026 from the seven listing pages to every page in the repo.
+// Both known failures were on listing cards, so it started there — but a dead
+// companion link inside a reflection is the same failure and was not covered.
+// Measured before widening: 166 pages, 2655 links, 0.28 seconds, nothing
+// broken. At that price there was no argument for checking only some of it.
+//
+// EXCLUDED, deliberately:
+//   old/       the retired design, 125 pages kept for reference. Its links are
+//              not maintained and failing on them would train us to ignore this.
+//   inbox/     gitignored staging; nothing there is published.
+//   *-PREVIEW.html / *-PRINT.html  render scratch, gitignored, never served.
+//
+// resources/ is NOT excluded, though an earlier version of this had it in the
+// list by mistake. It holds six tracked, served pages — the Bernard, Spurgeon
+// and Union and Communion reprints — which are as publishable as anything else.
+// Only resources/Lewis/ is untracked there, and it contains no HTML.
+//
+// KNOWN BLIND SPOT: resolving against disk means a link to a file that exists
+// locally but is NOT COMMITTED passes here and 404s live. resources/Lewis/ is
+// exactly that case — deliberately untracked, possibly in copyright. Nothing
+// links to it today. If anything ever does, this check will not catch it.
 // ---------------------------------------------------------------------------
-const linkPages = ['index.html', 'articles.html', 'reflections.html',
-                   'books.html', 'word-studies.html', 'resources.html',
-                   'glossary.html'];
+const LINK_SKIP_DIRS = new Set(['.git', 'old', 'inbox', 'node_modules']);
+
+function htmlPagesUnder(dir, acc = []) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (LINK_SKIP_DIRS.has(entry.name)) continue;
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) htmlPagesUnder(full, acc);
+    else if (/\.html$/.test(entry.name) && !/-(PREVIEW|PRINT)\.html$/.test(entry.name)) acc.push(full);
+  }
+  return acc;
+}
+
+const linkPages = htmlPagesUnder(repo);
 const linkProblems = [];
 let linksChecked = 0;
 
-for (const page of linkPages) {
-  const abs = path.join(repo, page);
-  if (!fs.existsSync(abs)) continue;
+// One stat() per unique target, not per link: 2655 links resolve to ~236
+// distinct files, and the repeated nav and footer on every page are most of
+// the difference.
+const targetCache = new Map();
+function targetResolves(target) {
+  if (targetCache.has(target)) return targetCache.get(target);
+  const ok = fs.existsSync(target) &&
+             (!fs.statSync(target).isDirectory() ||
+              fs.existsSync(path.join(target, 'index.html')));
+  targetCache.set(target, ok);
+  return ok;
+}
+
+for (const abs of linkPages) {
   const html = fs.readFileSync(abs, 'utf8');
+  const page = path.relative(repo, abs).replace(/\\/g, '/');
   for (const m of html.matchAll(/(?:href|src)="(\/[^"#?]*)/g)) {
     const href = m[1];
     if (href.startsWith('//')) continue;            // protocol-relative, external
-    const target = path.join(repo, decodeURIComponent(href));
     linksChecked++;
-    // A bare directory link is fine if it has an index.html.
-    const ok = fs.existsSync(target) &&
-               (!fs.statSync(target).isDirectory() ||
-                fs.existsSync(path.join(target, 'index.html')));
-    if (!ok) linkProblems.push(`${page} -> ${href}`);
+    if (!targetResolves(path.join(repo, decodeURIComponent(href)))) {
+      linkProblems.push(`${page} -> ${href}`);
+    }
   }
 }
 
@@ -237,5 +278,5 @@ if (linkProblems.length) {
   process.exitCode = 1;
 } else {
   console.log(`Links OK — ${linksChecked} internal links across ` +
-              `${linkPages.filter(p => fs.existsSync(path.join(repo, p))).length} pages.`);
+              `${linkPages.length} pages.`);
 }
