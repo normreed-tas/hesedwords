@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Knowing Where He Came From",
+    url:      "/articles/knowing-where-he-came-from.html",
+    date:     "2026-09-21",
+    scripture: ["John 13:1-17", "Philemon 10-11", "Malachi 4:5-6"],
+    themes:   ["humility", "service", "identity", "fatherhood", "prison ministry", "Onesimus", "footwashing", "shame", "authority"],
+    summary:  "Take John 13:3 out and the footwashing still happens — but the rising has nothing under it. The Greek is a participle, and it leans forward onto he rose in the next verse. Not although he knew what was his and where he had come from and where he was going, but because he did. On the first reading, knowing who you are is the obstacle humility must overcome; on the second, it is what makes service possible at all. A man who is not sure what he is worth can perform the action, but he will need something back for it. Three questions every man answers or fails to, most of the men in prison can answer none of them, and Paul fathered a runaway slave from a cell with no standing and nothing to offer."
+  },
+  {
     title:    "Profitable",
     url:      "/articles/profitable.html",
     date:     "2026-09-14",
