@@ -190,3 +190,52 @@ if (ledgerProblems.length) {
   console.log(`Ledger OK — ${fmt(ledgerDates[0])} "${ledgerRows[0]}" ` +
               `then ${fmt(ledgerDates[1])} "${ledgerRows[1]}".`);
 }
+
+// ---------------------------------------------------------------------------
+// INTERNAL LINK CHECK
+//
+// Added 21 Sep 2026 after the SECOND broken card link of the same shape in one
+// month: books.html pointed at /books/pdf/that-day.pdf (no such directory) and
+// articles.html pointed at /articles/sitting-with-a-sinner.pdf (dropping the
+// /pdf/ segment). Both were live 404s on a deployed site, both sat in a card
+// that had been hand-written next to a correct one, and neither was visible
+// from the page it was on. Two of a shape is a pattern in how cards get
+// written, not bad luck — so it becomes a check rather than a thing to
+// remember.
+//
+// Resolves against the FILE SYSTEM, not HTTP: the point is to fail before the
+// push, and the repo root is the document root on GitHub Pages, so a path that
+// resolves here resolves live.
+// ---------------------------------------------------------------------------
+const linkPages = ['index.html', 'articles.html', 'reflections.html',
+                   'books.html', 'word-studies.html', 'resources.html',
+                   'glossary.html'];
+const linkProblems = [];
+let linksChecked = 0;
+
+for (const page of linkPages) {
+  const abs = path.join(repo, page);
+  if (!fs.existsSync(abs)) continue;
+  const html = fs.readFileSync(abs, 'utf8');
+  for (const m of html.matchAll(/(?:href|src)="(\/[^"#?]*)/g)) {
+    const href = m[1];
+    if (href.startsWith('//')) continue;            // protocol-relative, external
+    const target = path.join(repo, decodeURIComponent(href));
+    linksChecked++;
+    // A bare directory link is fine if it has an index.html.
+    const ok = fs.existsSync(target) &&
+               (!fs.statSync(target).isDirectory() ||
+                fs.existsSync(path.join(target, 'index.html')));
+    if (!ok) linkProblems.push(`${page} -> ${href}`);
+  }
+}
+
+if (linkProblems.length) {
+  console.error('\nBROKEN INTERNAL LINKS — these are 404s once pushed:');
+  [...new Set(linkProblems)].forEach(p => console.error('  - ' + p));
+  console.error('Fix them before committing.');
+  process.exitCode = 1;
+} else {
+  console.log(`Links OK — ${linksChecked} internal links across ` +
+              `${linkPages.filter(p => fs.existsSync(path.join(repo, p))).length} pages.`);
+}

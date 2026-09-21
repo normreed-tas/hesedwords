@@ -31,6 +31,37 @@ an entry is added or struck — see `CONTEXT.md`.
 
 ## Open candidates
 
+### The half Luke drops — Malachi 4:6, Luke 1:17, Sirach 48:10
+*Added 21 Sep 2026. Detail: `NOTE-luke-1-17-and-sirach.md`*
+
+Malachi ends the Old Testament with a turning that goes both ways — fathers to sons and
+sons to fathers. Luke 1:17 keeps the first half verbatim and replaces the second with
+*the disobedient to the wisdom of the just*. Sirach 48:10 had already done the same thing
+two centuries earlier, keeping *turn the heart of the father to the son* and swapping the
+rest for *restore the tribes of Jacob* — and sharing Luke's verb, ἐπιστρέψαι. So the
+fathers-to-children half survives every retelling nearly word for word, and the
+children-to-fathers half survives none of them. The dropped half is the one about knowing
+where you came from, which is exactly what *Knowing Where He Came From* argues a man
+cannot serve without. Whether that is a large thing or an accident of transmission is the
+open question, and the note is careful not to settle it early. One check outstanding
+before drafting: what the LXX of Malachi 4:6 itself reads.
+
+### Philemon — two puns, four verses apart
+*Added 21 Sep 2026. Detail: `NOTE-philemon-wordplay.md`*
+
+Paul plays on Onesimus's name twice and the famous one is not the direct one. Verse 11
+plays on what the name *means* — ἄχρηστον / εὔχρηστον, useless then useful — using a
+different root from the name itself. Verse 20 plays on the name: ἐγώ σου ὀναίμην, from
+ὀνίνημι, which is the root Ὀνήσιμος is built from. Between them sits verse 10, ὃν
+ἐγέννησα, *whom I fathered*, done in chains by a man with nothing to give. The letter
+takes a name meaning *useful*, denies the usefulness, restores it, and then asks the owner
+to become it. The Χριστός echo some hear in ἄχρηστος stays out — the homophony is very
+well attested in antiquity, the authorial intention is not, and Norm settled it on
+21 Sep; the note records the reason so it is not reopened as new. Probably a word study on
+ὀνίνημι, though the letter's shape may be too big for that container. Any Philemon piece
+has to say something about Paul returning a slave, and that is a decision to make out
+loud rather than write around.
+
 ### Eternal life in John
 *Added 18 Sep 2026. Detail: `NOTE-eternal-life-john.md`*
 
@@ -316,4 +347,4 @@ piece was retired, or whether it still stands exactly as it was.
 own documents on a fragment. If a line comes back to Norm, say so — the search is cheap.
 Absent that, do not invent an angle to fill the gap. A struck entry carrying an invented
 brief is worse than an empty one, because it reads as recovered.
-<!-- READ-TOKEN e45db7d1 · 318 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN a6893e22 · 349 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
