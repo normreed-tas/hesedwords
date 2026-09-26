@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "The Man Who Fears the Lord",
+    date:     "2026-09-25",
+    url:      "/reflections/the-man-who-fears-the-lord.html",
+    summary:  "Psalms 111 and 112 sit next to each other, built to the same alphabet, the same length. One is about God, one is about a man, and the same words keep turning up in both — his righteousness stands forever, word for word in each; gracious and merciful, of Yahweh in one and of the man in the other; upheld, at the same letter in the same verse. Both reach for the Exodus 34 self-description and both stop before hesed, which never appears in either psalm. It is never a list of things the man avoids. It is a list of things he does. And then David, whose car you could hear coming up the road, and the day I heard it and hid in the study with the curtains shut.",
+    scripture: ["Psalm 112", "Psalm 111", "Exodus 34:6"],
+    themes:   ["hesed", "fear of the Lord", "acrostic", "righteousness", "WWJD", "prison ministry", "friendship", "self-deception", "being a project"]
+  },
+  {
     title:    "Who Knows",
     date:     "2026-09-20",
     url:      "/reflections/who-knows.html",

@@ -1,13 +1,14 @@
 # Hesed Words — brief index
 
-**147 pieces** — 94 reflections, 35 articles, 13 books, 5 word studies.
+**148 pieces** — 95 reflections, 35 articles, 13 books, 5 word studies.
 
 One line per piece: date · title · scripture · url. Deliberately short enough
 to read in full. Use it to answer "does this already exist?" — then read
 SITE-INDEX.md for summaries, themes and companion candidates.
 
-## Reflections (94)
+## Reflections (95)
 
+- 2026-09-25 · **The Man Who Fears the Lord** · Psalm 112; Psalm 111; Exodus 34:6 · `/reflections/the-man-who-fears-the-lord.html`
 - 2026-09-20 · **Who Knows** · Jonah 3-4; Matthew 12:38-42 · `/reflections/who-knows.html`
 - 2026-09-18 · **Asking for Bread** · John 6:22-69 · `/reflections/asking-for-bread.html`
 - 2026-09-18 · **You Should!** · John 8:1-11 · `/reflections/you-should.html`
@@ -164,4 +165,4 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2026-08-03 · **Is "Wicked" a Verdict or a Character?** · Deuteronomy 25:1; 1 Kings 8:32; Exodus 23:7; Psalm 58:1 · `/word-studies/is-wicked-a-verdict-or-a-character.html`
 - 2026-07-11 · **What Is an Idle Word?** · Matthew 12:36; Matthew 20:3; 1 Timothy 5:13; 2 Peter 1:8 · `/word-studies/idle.html`
 - 2026-07-10 · **Is Jesus an Intercessor?** · Isaiah 59:16; Isaiah 53:12; 1 Samuel 22:18; Romans 8:34 · `/word-studies/jesus-intercessor.html`
-<!-- READ-TOKEN 9d839546 · 166 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN dbc51e21 · 167 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
