@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "A Christian's Wage",
+    url:      "/articles/a-christians-wage.html",
+    date:     "2026-09-27",
+    scripture: ["Luke 6:20-36", "Exodus 34:6"],
+    themes:   ["misthos", "reward", "wages", "hesed", "loving enemies", "mercy", "sonship", "becoming like God", "the woes"],
+    summary:  "Twice in Luke 6 Jesus tells people they will be paid, and the word is misthos — not a prize but a wage, what a hired man is handed at the end of the day. Between the two sit the woes, and the rich have received their consolation: the verb is the one written on a receipt, paid in full, nothing outstanding. The first promise gives the size of the wage and where it is kept, and not what it is. The second says what: sons of the Most High, because he is kind to the ungrateful and the evil. Then be merciful as your Father is merciful — oiktirmon, the word the Greek Old Testament uses when God names himself to Moses. The wage is not something he gives you. It is someone you become."
+  },
+  {
     title:    "Knowing Where He Came From",
     url:      "/articles/knowing-where-he-came-from.html",
     date:     "2026-09-21",

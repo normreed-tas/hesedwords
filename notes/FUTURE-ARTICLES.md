@@ -31,6 +31,25 @@ an entry is added or struck — see `CONTEXT.md`.
 
 ## Open candidates
 
+### μισθός — word study, with a glossary seed
+*Added 27 Sep 2026. No note file yet — the bullets are the whole of it.*
+
+*A Christian's Wage* holds to Luke 6, so the study takes what the article deliberately
+left out. Material does not migrate: findings allocated here stay out of the article.
+
+- The word as ordinary employment language: Luke 10:7, the labourer deserves his wages;
+  James 5:4, withheld wages that cry out.
+- The receipted counterpart ἀπέχω, three times in Matthew 6. The receipt sense is attested
+  usage, not etymology — the papyri use the verb in receipts (Deissmann; Robertson on
+  Luke 6:24 and Matt 6:2), and Paul uses it that way himself at Philippians 4:18.
+- Work tested by fire, 1 Corinthians 3:8–15.
+- The inheritance as wage, Colossians 3:24.
+- *My reward is with me*, Revelation 22:12.
+- Romans 4:4, where Paul uses the same word to fence it out of justification.
+- Luke's own guard at 17:10 belongs to whichever piece takes it, not to both.
+- **Glossary: no `misthos` entry exists** — checked against the live `transliteration`
+  keys on 27 Sep, not the CONVENTIONS slug list. Seed it with the study.
+
 ### The half Luke drops — Malachi 4:6, Luke 1:17, Sirach 48:10
 *Added 21 Sep 2026. Detail: `NOTE-luke-1-17-and-sirach.md`*
 
@@ -347,4 +366,4 @@ piece was retired, or whether it still stands exactly as it was.
 own documents on a fragment. If a line comes back to Norm, say so — the search is cheap.
 Absent that, do not invent an angle to fill the gap. A struck entry carrying an invented
 brief is worse than an empty one, because it reads as recovered.
-<!-- READ-TOKEN a6893e22 · 349 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN cfa0be88 · 368 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
