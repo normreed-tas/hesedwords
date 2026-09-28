@@ -16,7 +16,8 @@ second half of 1:4, which remains unread and still owed.
 | **Whether the 1:5→8:12 arc is a piece or the frame for the book** | Undecided. Currently reads as frame. |
 | **1:4b** | Still unread. This note leans on the chamber preceding the self-description, so 1:4b now carries two debts. |
 | **1:6** | Raided for the *why*, not read properly. |
-| **Five `[verify]` items** | With Code — see the foot of this file. Item 4 (*alamot*) is the one that moves something. |
+| **Five `[verify]` items** | **Answered 18 Sep — read the foot of this file before anything else.** Four settled, half of one open. Item 4 (*alamot*) did not decide the contrast-or-contagion fork: it showed the fork was malformed. Chapter 1 has three different groups in three verses, not one plural. |
+| **Jerome as Bernard's source for *qadar*** | The one genuinely open half of item 1. Needs Jerome's commentary and Bernard side by side. The etymology stands without it. |
 
 ---
 

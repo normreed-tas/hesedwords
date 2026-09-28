@@ -124,6 +124,12 @@ resource page, not from Sermon 2794 itself.
 Contrast or contagion is a real fork, it was settled by implication, and it will come back
 at every plural in the book. Worth deciding on purpose.
 
+> **Superseded 18 Sep 2026 — read "The fork was malformed" at the foot before relying on
+> this paragraph.** The fork assumed one plural in chapter 1. There are three: the *alamot*
+> of 1:3, the unnamed *we* of 1:4, and the *benot Yerushalayim* of 1:5, and the first and
+> last never co-occur anywhere. The `[verify]` above is also discharged, and the sermon
+> number in it is wrong: Spurgeon's contagion reading is Sermon **2294**, not 2794.
+
 **3. 1:5–6 is the unwritten hinge, and it is why chapter 1 is not finished.**
 
 *I am dark and beautiful... do not gaze at me... my mother's sons were angry with me; they
