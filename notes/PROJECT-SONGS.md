@@ -4,8 +4,8 @@ Read this **in addition to** `CONTEXT.md`, `CONVENTIONS.md` and `COLLABORATION.m
 not instead of them. Those three are shared with the devotional project and are
 identical for both. This file is the only thing that differs.
 
-Fetch it raw:
-`https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/PROJECT-SONGS.md`
+Fetch it raw, with today's date on the end (see `CONTEXT.md` for why):
+`https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/PROJECT-SONGS.md?v=YYYY-MM-DD`
 
 ---
 
@@ -117,4 +117,4 @@ block; whether a PDF is wanted; whether a companion line is wanted and to which
 pieces; which glossary words are used; and any claim resting on a count or a date,
 flagged `[verify]`. Cards, manifests, feed and ledger are done repo-side — do not
 write them.
-<!-- READ-TOKEN 7a71ee24 · 119 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 9f00ca7d · 119 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

@@ -3,15 +3,29 @@
 **This is the entry point for any Claude project writing for hesedwords.com.**
 It is deliberately short. Read all of it, then fetch what you need below.
 
-Give a new project this one URL and nothing else:
-`https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONTEXT.md`
+Give a new project this one URL and nothing else, with today's date on the end:
+`https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONTEXT.md?v=YYYY-MM-DD`
 
 ---
 
 ## Fetch the files you need — do not ask for them to be pasted
 
-The repo is public. These are **raw text**, not rendered pages, and they are always
-current because they are the repo itself. No paste, no upload, no stale copy.
+The repo is public. These are **raw text**, not rendered pages, and the repo copy is
+always current. **Your fetch tool's copy may not be.**
+
+**Always put today's date on the end of the URL**, like this:
+
+```
+https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONVENTIONS.md?v=2026-09-29
+```
+
+GitHub ignores the `?v=` and serves the current file. A fetch tool that caches by
+address sees a new address and cannot hand you an old one. On 29 September 2026 a
+session fetched `CONVENTIONS.md` at the plain URL and was given the **July** version —
+the retired Cinzel design, replaced on 9 August — with nothing to say it was old. The
+four other files it fetched came back current. `CONVENTIONS.md` was the only one that
+had existed at that address since July. With the date added, the same session got the
+current file first time.
 
 | File | URL (prefix `https://raw.githubusercontent.com/normreed-tas/hesedwords/main/`) | When |
 |---|---|---|
@@ -62,6 +76,14 @@ outside — a confident session, holding something, wrong about it:
 Neither could be fixed by asking more carefully. The token can be checked.
 
 Two sessions quoting different tokens for the same file are holding different files.
+
+**A missing token is a failed read, not a curiosity.** Every file above has one. If a
+fetch comes back without it, you have either part of the file or the wrong file, and
+you cannot tell which from inside it. Re-fetch with today's date on the URL. If the
+token still does not come back, stop and say so — do not build from what you have.
+The July `CONVENTIONS.md` above arrived with no token, the session noticed and
+mentioned it, and then followed the file verbatim anyway. Noticing was not enough;
+the absence should have stopped the build.
 
 ## What the conventions are for
 
@@ -117,4 +139,4 @@ item stops being re-raised in three months.
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN 1f73f4fc · 119 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 5cfd7559 · 141 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
