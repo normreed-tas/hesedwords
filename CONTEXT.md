@@ -110,7 +110,8 @@ repo-side, where the naming conventions and the index live.
 
 **State with the handover**, or it will come back as a question: kind (Reflection /
 Article / Word Study / Book); scripture reference and date exactly as they should
-appear in the meta block; whether a PDF is wanted; whether a companion line is wanted
+appear in the meta block; for a reflection only, whether a PDF is wanted (every article
+and every book has one — do not ask); whether a companion line is wanted
 and to which pieces; which glossary words are used; and any claim that rests on a
 count or a date, flagged `[verify]` so it is checked before publishing rather than
 after.
@@ -139,4 +140,4 @@ item stops being re-raised in three months.
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN 5cfd7559 · 141 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN b2231141 · 142 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
