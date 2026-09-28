@@ -2,7 +2,7 @@
 
 > **AUTHORITATIVE AND COMPLETE.** This is the full working note, not an extract.
 > It serves publicly at https://hesedwords.com/COLLABORATION.md and the repo copy at
-> the root is the same file. Full text current as of 18 September 2026 — if you are
+> the root is the same file. Full text current as of 29 September 2026 — if you are
 > holding a paste older than that, check the live file for changes since.
 >
 > **Fetch this as raw text rather than relying on a paste:**
@@ -174,6 +174,18 @@ the work off in the wrong direction as surely as the original mistake did. When 
 why something went wrong, check whether the plainest account fits before reaching for the
 more interesting one.
 
+**When a new passage enters a piece, search the index for that passage again.** On
+29 September 2026 an article was planned around Luke 7 and 2 Samuel 12, with the index
+checked at the start. An hour later Psalm 32 came into the argument, and nobody went back.
+*Blessed Is the Man* (6 July, Psalm 32) was already published and already carried three of
+the planned movements — covering and uncovering, the wasted bones, confession as agreement
+rather than performance. The brief index listed it on line 63 the whole time. It was not
+hidden and not stale; it was never looked for. A fresh fetch would not have caught it. A
+search for "Psalm 32" would have, in one step. So: the inventory check is not a gate passed
+once at the start of a piece. It is re-run for each passage the piece takes on, at the
+moment it takes it on — and by the passage reference, not only by theme, because a theme
+search finds what you already expected to find.
+
 **An etymology is not a usage, and reporting one as the other is a method fault, not a
 slip.** On 18 September 2026 the drafting session described ἐχορτάσθητε in John 6:26 as the
 word used of livestock fed at a trough, and built a beat on its bluntness. The derivation is
@@ -203,4 +215,4 @@ version that had to be withdrawn.
 **Sequence is fixed.** Theological exploration in chat → beat structure approved →
 section-by-section drafting with approval gates → HTML/PDF only after prose is final →
 repo-side tasks handed to Claude Code. Don't skip ahead to building.
-<!-- READ-TOKEN 6825d861 · 205 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 556a07bb · 217 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
