@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Nobody Wants Nathan",
+    url:      "/articles/nobody-wants-nathan.html",
+    date:     "2026-09-29",
+    scripture: ["Luke 7:36-50", "2 Samuel 11-12", "Romans 6:1", "1 Timothy 1:15"],
+    themes:   ["repentance", "confession", "grace", "presumption", "Nathan", "David", "Simon the Pharisee", "debt", "being told", "friendship", "seeing yourself"],
+    summary:  "A friend is sitting with a young man who cannot stop sinning, and who has begun to ask whether his repentance is real and whether coming back again has become presumption. Paul answered whether we may continue in sin; nobody asks whether we do. Simon discounts his debt and David puts his away; the young man keeps his open and then tries to pay for it — but the parable has nothing at all between could not pay and cancelled. In every case the seeing arrives from outside, in a story told by somebody who walks in: Nathan's lamb, Jesus' two debtors, a friend in a room. Nobody wants Nathan, and we arrange our lives so he cannot get close. The man lying awake worrying that he is abusing grace is not the man abusing it."
+  },
+  {
     title:    "A Christian's Wage",
     url:      "/articles/a-christians-wage.html",
     date:     "2026-09-27",
