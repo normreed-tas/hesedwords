@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "You Have Judged Rightly",
+    date:     "2026-09-29",
+    url:      "/reflections/you-have-judged-rightly.html",
+    summary:  "A woman every man in the room could name kneels at Jesus' feet and will not stop, and the host says nothing and thinks something: if this man were a prophet he would know what sort of woman this is. Jesus answers the thought. Two debtors, neither able to pay; which will love more? The one, I suppose. You have judged rightly — and Simon takes it as praise, not noticing whose case he has just decided. Do you see this woman? He has looked at her all evening and not seen her once. She never says a word, and Jesus calls it faith. And a sin of my own this week, which I will not name, and the ledger I keep reaching for.",
+    scripture: ["Luke 7:36-50", "Psalm 32:5"],
+    themes:   ["forgiveness", "faith", "judgement", "the sinful woman", "Simon the Pharisee", "debt", "confession", "seeing people", "peace"]
+  },
+  {
     title:    "The Man Who Fears the Lord",
     date:     "2026-09-25",
     url:      "/reflections/the-man-who-fears-the-lord.html",
