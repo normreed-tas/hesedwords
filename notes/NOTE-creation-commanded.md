@@ -99,3 +99,4 @@ Also still unfiled from that morning: the v. 2 / v. 9 righteousness bracket (`tz
 at v. 2, `tzedeq` at v. 9, with `hesed` between them — the da'at → hesed →
 mishpat/tzedakah architecture in nine verses). That belongs in `FUTURE-ARTICLES.md`
 rather than here.
+<!-- READ-TOKEN 2d6ff6ee · 101 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

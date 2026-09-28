@@ -84,3 +84,4 @@ to sons and [the] heart of sons to fathers/their, lest I should come and I will 
 
 Came out of `articles/knowing-where-he-came-from.html`, which cites Malachi 4:5–6 in
 passing and stays as written.
+<!-- READ-TOKEN 56670638 · 86 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

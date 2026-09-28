@@ -276,3 +276,4 @@ checked.
 Song of Songs project was separated because that book is a discovery journey in its own
 right; the New Testament work stays in the devotional project precisely for the reason given
 above — it depends on the Hebrew material and would be blind without it.
+<!-- READ-TOKEN b11600aa · 278 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

@@ -410,3 +410,4 @@ blackest part of the night is the part immediately before dawn.
 forth like the dawn* at 6:10 is making a poetic and semantic connection, which may well be
 what the poet heard — but it is **reading-within-frame at best, and must be marked as
 such**. It will not carry weight as philology, and a reader with Klein will say so.
+<!-- READ-TOKEN ab921eee · 412 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

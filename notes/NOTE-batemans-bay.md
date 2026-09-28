@@ -103,3 +103,4 @@ likelier door — not the marriage, and not the decision.
 - Date range needs pinning if any piece names a year.
 - Cathy's own decision during that visit is hers, and any piece using this material needs
   her agreement on how much of it appears.
+<!-- READ-TOKEN 72717fc8 · 105 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

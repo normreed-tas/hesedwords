@@ -211,3 +211,4 @@ offering the plain option and letting Norm finish the line, stripping rather tha
 re-drafting when the register is wrong, and holding the line on wordplay titles for
 reflections — has been added there, so it applies to every project rather than sitting in
 one archived build record.
+<!-- READ-TOKEN 885daede · 213 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

@@ -88,3 +88,4 @@ All from the morphgnt SBLGNT, lemma-tagged.
 
 Verse 20 in full: ναί, ἀδελφέ, ἐγώ σου ὀναίμην ἐν κυρίῳ· ἀνάπαυσόν μου τὰ σπλάγχνα ἐν
 Χριστῷ.
+<!-- READ-TOKEN 95d92838 · 90 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

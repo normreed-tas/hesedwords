@@ -146,3 +146,4 @@ Which strengthens rather than weakens what this document already says: *it is a 
 an error, it is load-bearing, and it should be made knowingly and not defended in the text.*
 That remains the right instruction. The book does not argue for its date, and should not
 start.
+<!-- READ-TOKEN 0d4824ef · 148 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

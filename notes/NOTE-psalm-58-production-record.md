@@ -180,3 +180,4 @@ footnote is on the article, and the build notes match what is on the pages.
 sitting in one archived record: the author's discomfort as diagnostic; the convention
 yielding to the truth when they conflict; and material not migrating between companion
 pieces. The rest were already covered.
+<!-- READ-TOKEN c907c5b5 · 182 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

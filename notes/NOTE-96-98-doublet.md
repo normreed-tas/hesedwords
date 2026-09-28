@@ -77,3 +77,4 @@ three are about the shape the collection was given rather than the content of an
 piece. If they converge, that is an article on how the Psalter was put together and what
 the assembly is doing — which would be a different register from anything on the site so
 far, and would need the audience question settled first.
+<!-- READ-TOKEN bfae1d12 · 79 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

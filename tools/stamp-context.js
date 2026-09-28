@@ -46,7 +46,7 @@ const crypto = require('crypto');
 
 const repo = path.resolve(__dirname, '..');
 
-const FILES = [
+const CORE = [
   'CONTEXT.md',
   'CONVENTIONS.md',
   'COLLABORATION.md',
@@ -55,6 +55,19 @@ const FILES = [
   'SITE-INDEX.md',
   'SITE-INDEX-BRIEF.md',
 ];
+
+// Every held note, found by pattern rather than listed. Added 29 Sep 2026:
+// the Songs project was told every repo file it fetches carries a token, and
+// stopped - correctly - when two 400-600 line notes arrived without one. Notes
+// are the longest files a project reads end to end and the likeliest to be
+// half-read, so they need the proof more than anything above. A hand-kept list
+// would miss the next new note; the glob cannot.
+const NOTES = fs.readdirSync(path.join(repo, 'notes'))
+  .filter(f => /^NOTE-.+\.md$/.test(f))
+  .sort()
+  .map(f => 'notes/' + f);
+
+const FILES = [...CORE, ...NOTES];
 
 const TOKEN_RE = /\n*<!-- READ-TOKEN [0-9a-f]{8} · \d+ lines[^>]*-->\s*$/;
 

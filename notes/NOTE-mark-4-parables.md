@@ -141,3 +141,4 @@ about the hearer or about himself.
 - Mark 8:17 / 8:21 as the payoff of 4:12 was noted but not worked. Could carry a section.
 - Does the piece need the Greek? *Epelyen* probably earns its place even in a reflection;
   the rest is article material.
+<!-- READ-TOKEN 11b37f97 · 143 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

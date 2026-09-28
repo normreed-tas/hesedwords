@@ -108,3 +108,4 @@ knows about the variant will assume it does.
   re-read against this frame.
 - Whether the invitation-into-the-relation reading needs more than 17:20-23 to carry
   it, and where else it appears.
+<!-- READ-TOKEN 61c6a7df · 110 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

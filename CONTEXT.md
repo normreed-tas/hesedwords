@@ -54,7 +54,12 @@ If you do not know which you are, ask before writing anything.
 
 ## The read-token protocol
 
-Every file above ends with a line like:
+**Which files carry one:** every file in the table above, `notes/PROJECT-SONGS.md`, and
+**every held note** (`notes/NOTE-*.md`). Notes are stamped automatically, so a new note
+carries one from its first commit. Page files (`.html`) and the reference texts under
+`resources/` do not — for those, a missing token means nothing.
+
+Each of those files ends with a line like:
 
 ```
 <!-- READ-TOKEN a1b2c3d4 · 452 lines · … -->
@@ -140,4 +145,4 @@ item stops being re-raised in three months.
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN b2231141 · 142 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN f372e15b · 147 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

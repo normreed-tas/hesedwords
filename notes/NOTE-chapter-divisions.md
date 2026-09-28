@@ -76,3 +76,4 @@ past the candidate list above.
   the date is disputed* — not assert 1205 flat. `articles/different-work.html` note 2
   already says "generally credited to Stephen Langton... in the early thirteenth century",
   which covers the range and needs no change.
+<!-- READ-TOKEN 2e06fedc · 78 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

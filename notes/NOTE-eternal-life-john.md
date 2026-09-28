@@ -229,3 +229,4 @@ construction land in the same clause.
   only a footnote.
 - Whether ζωή and αἰώνιος take one glossary entry or two. *(The sequence half of this
   is settled — the study falls out of the article. See "Glossary and word study" above.)*
+<!-- READ-TOKEN 11fc8e09 · 231 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
