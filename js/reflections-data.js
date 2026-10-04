@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "According to Your Steadfast Love",
+    date:     "2026-10-04",
+    url:      "/reflections/according-to-your-steadfast-love.html",
+    summary:  "Psalm 119 is the law psalm — 176 verses, nearly every one naming God's word in some way. But another word runs through it, only seven times: hesed, and always your hesed, always spoken to God and never about him. It turns up when he asks for something. Four times he names it as the measure God should act by — according to your steadfast love, alongside God's word and God's promise. In your steadfast love give me life, that I may keep your testimonies: the love comes first and the keeping follows. And the longest psalm about God's word ends not with a man standing firm but with a sheep that has wandered off. That is where hesed has been all along.",
+    scripture: ["Psalm 119"],
+    themes:   ["hesed", "Psalm 119", "law", "prayer", "acrostic", "steadfast love", "giving life", "the lost sheep"]
+  },
+  {
     title:    "You Have Judged Rightly",
     date:     "2026-09-29",
     url:      "/reflections/you-have-judged-rightly.html",
