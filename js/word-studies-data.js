@@ -7,6 +7,18 @@
    ================================================================ */
 const STUDIES = [
   {
+    id:       "ws-nikao",
+    word:     "νικάω",
+    lang:     "greek",
+    translit: "nikaō",
+    title:    "Nikaō",
+    url:      "/word-studies/nikao.html",
+    date:     "2026-10-04",
+    scripture: ["Revelation 12:11", "John 16:33", "1 John 5:4", "Revelation 5:5-6", "Romans 8:37", "1 Corinthians 15:54-57"],
+    themes:   ["nikao", "overcoming", "victory", "the Lamb", "martyrdom", "faithfulness", "Revelation", "John"],
+    summary:  "In ordinary Greek nikaō is the word for winning — a battle, a race, a case in court. In the New Testament it belongs to John: twenty-four of its twenty-eight uses. Jesus has overcome the world on the night before the cross, and the Lion who has conquered turns out to be a Lamb standing as though it had been slain. In Revelation the beast conquers the saints by killing them, and they conquer the beast by staying faithful while they are killed — the same verb both ways. Paul says in all these things, not out of them, we are more than conquerors."
+  },
+  {
     id:       "ws-zakar",
     word:     "זָכַר",
     lang:     "hebrew",

@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "The Fellowship of Suffering",
+    url:      "/articles/the-fellowship-of-suffering.html",
+    date:     "2026-10-04",
+    scripture: ["Philippians 2:5-11", "Philippians 3:7-12", "Philippians 4:11-13", "Philippians 1:29"],
+    themes:   ["suffering", "power", "the name of Jesus", "koinonia", "martyrdom", "prosperity", "contentment", "knowing God", "da'at", "Polycarp", "Blandina"],
+    summary:  "A service sang about the power of the name of Jesus and a sermon promised that prayer takes hold of victory over the enemy — and I wondered how the apostles would have heard it. Most of the influential sermons I read said nothing about suffering at all. But the name above every name was given because of the cross, and Paul asks for the power of the resurrection so that he may share Christ's sufferings and be shaped like him in his death. I can do all things is about hunger and plenty. Suffering for him is granted, the same word used for the name God gave Jesus. The martyrs saw power the same way. I still believe what I believed. I don't pray the same way."
+  },
+  {
     title:    "Nobody Wants Nathan",
     url:      "/articles/nobody-wants-nathan.html",
     date:     "2026-09-29",

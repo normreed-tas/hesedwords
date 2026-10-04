@@ -1,6 +1,6 @@
 # Hesed Words — brief index
 
-**151 pieces** — 96 reflections, 37 articles, 13 books, 5 word studies.
+**153 pieces** — 96 reflections, 38 articles, 13 books, 6 word studies.
 
 One line per piece: date · title · scripture · url. Deliberately short enough
 to read in full. Use it to answer "does this already exist?" — then read
@@ -105,8 +105,9 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2026-05-16 · **The Far Country** · Psalm 120 · `/reflections/the-far-country.html`
 - 2026-05-01 · **Called in Righteousness** · Isaiah 42:6 · `/reflections/called-in-righteousness.html`
 
-## Articles (37)
+## Articles (38)
 
+- 2026-10-04 · **The Fellowship of Suffering** · Philippians 2:5-11; Philippians 3:7-12; Philippians 4:11-13; Philippians 1:29 · `/articles/the-fellowship-of-suffering.html`
 - 2026-09-29 · **Nobody Wants Nathan** · Luke 7:36-50; 2 Samuel 11-12; Romans 6:1; 1 Timothy 1:15 · `/articles/nobody-wants-nathan.html`
 - 2026-09-27 · **A Christian's Wage** · Luke 6:20-36; Exodus 34:6 · `/articles/a-christians-wage.html`
 - 2026-09-21 · **Knowing Where He Came From** · John 13:1-17; Philemon 10-11; Malachi 4:5-6 · `/articles/knowing-where-he-came-from.html`
@@ -161,11 +162,12 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2025-05-31 · **He Has Told You…** · Micah 6:8 · `/books/he-has-told-you.html`
 - 2019-04-12 · **That Day** · Mark 15:21 · `/books/that-day.html`
 
-## Word Studies (5)
+## Word Studies (6)
 
+- 2026-10-04 · **Nikaō** · Revelation 12:11; John 16:33; 1 John 5:4; Revelation 5:5-6; Romans 8:37; 1 Corinthians 15:54-57 · `/word-studies/nikao.html`
 - 2026-09-10 · **Zakar** · Psalm 98:3; Genesis 8:1; Exodus 2:24; Psalm 25:6-7; Jeremiah 31:34 · `/word-studies/zakar.html`
 - 2026-08-25 · **Tzedaqah / Dikaiosynē** · Isaiah 45:21; Isaiah 46:13; Amos 5:24; Matthew 3:15; Romans 3:26 · `/word-studies/tzedaqah.html`
 - 2026-08-03 · **Is "Wicked" a Verdict or a Character?** · Deuteronomy 25:1; 1 Kings 8:32; Exodus 23:7; Psalm 58:1 · `/word-studies/is-wicked-a-verdict-or-a-character.html`
 - 2026-07-11 · **What Is an Idle Word?** · Matthew 12:36; Matthew 20:3; 1 Timothy 5:13; 2 Peter 1:8 · `/word-studies/idle.html`
 - 2026-07-10 · **Is Jesus an Intercessor?** · Isaiah 59:16; Isaiah 53:12; 1 Samuel 22:18; Romans 8:34 · `/word-studies/jesus-intercessor.html`
-<!-- READ-TOKEN c1e100ff · 170 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 00ad5311 · 172 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
