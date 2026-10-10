@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "I Arrived Late",
+    date:     "2026-10-10",
+    url:      "/reflections/i-arrived-late.html",
+    summary:  "A man in Lydda eight years in bed, a woman in Joppa who dies, a Roman officer in Caesarea who sends for a man he has never met. I have read them as three stories. They are one, and it has a direction: down from the city of the Temple to the capital of the occupation, every stage somebody else's errand. On a tanner's roof Peter says by no means, Lord, to a voice he calls Lord. In Cornelius's house he calls a rule God never gave him unlawful, and then admits — now, in this room — that God shows no partiality. The Spirit falls before he finishes. Hobart, a church next to a prison, twenty-one prisons: each arrived looking like a step. Perhaps I am still late.",
+    scripture: ["Acts 9:32-10:48"],
+    themes:   ["Peter", "Cornelius", "guidance", "Gentiles", "the Spirit", "custom and law", "partiality", "prison ministry", "being led"]
+  },
+  {
     title:    "According to Your Steadfast Love",
     date:     "2026-10-04",
     url:      "/reflections/according-to-your-steadfast-love.html",
