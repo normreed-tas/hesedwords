@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Feeling Their Way",
+    url:      "/articles/feeling-their-way.html",
+    date:     "2026-10-14",
+    scripture: ["Acts 17:22-31", "Luke 24:39"],
+    themes:   ["Athens", "Areopagus", "seeking God", "psēlaphaō", "groping", "the optative", "natural knowledge of God", "resurrection", "Dionysius", "Damaris"],
+    summary:  "In Athens Paul says God set the nations in their places so that they might seek him and perhaps feel their way towards him and find him. The middle verb, psēlaphaō, belongs in the Greek Old Testament mostly to the blind — Isaac feeling for his son, the groping at noonday — and Paul puts it in the optative, the mood of the thing hoped for and not counted on. Then the sentence turns: yet he is actually not far from each one of us. Nothing in the groping is corrected; the distance was never the problem. Luke uses the word once more, in the locked room: touch me, and see. The reaching is honest, and on its own it does not get there."
+  },
+  {
     title:    "The Fellowship of Suffering",
     url:      "/articles/the-fellowship-of-suffering.html",
     date:     "2026-10-04",

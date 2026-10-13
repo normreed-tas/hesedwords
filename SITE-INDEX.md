@@ -9,7 +9,7 @@ before writing: *does something on this already exist?* and *what did it say?*
 The theme index at the foot is the fastest way in — a new piece whose theme
 already appears there probably has a companion waiting.
 
-**155 pieces** — 98 reflections, 38 articles, 13 books, 6 word studies.
+**156 pieces** — 98 reflections, 39 articles, 13 books, 6 word studies.
 
 ---
 
@@ -507,7 +507,12 @@ Forty years of ministry with the word righteousness — preaching it, building t
 
 ---
 
-## Articles (38)
+## Articles (39)
+
+**2026-10-14 · Feeling Their Way**
+Acts 17:22-31; Luke 24:39 · `/articles/feeling-their-way.html`
+*Themes:* Athens, Areopagus, seeking God, psēlaphaō, groping, the optative, natural knowledge of God, resurrection, Dionysius, Damaris
+In Athens Paul says God set the nations in their places so that they might seek him and perhaps feel their way towards him and find him. The middle verb, psēlaphaō, belongs in the Greek Old Testament mostly to the blind — Isaac feeling for his son, the groping at noonday — and Paul puts it in the optative, the mood of the thing hoped for and not counted on. Then the sentence turns: yet he is actually not far from each one of us. Nothing in the groping is corrected; the distance was never the problem. Luke uses the word once more, in the locked room: touch me, and see. The reaching is honest, and on its own it does not get there.
 
 **2026-10-04 · The Fellowship of Suffering**
 Philippians 2:5-11; Philippians 3:7-12; Philippians 4:11-13; Philippians 1:29 · `/articles/the-fellowship-of-suffering.html`
@@ -804,7 +809,7 @@ Before it ever means to intercede, it means to fall upon — to strike, to meet 
 
 ---
 
-## Theme index (537 themes)
+## Theme index (546 themes)
 
 Every theme in use, and what carries it. A theme with more than one piece
 against it is a companion candidate.
@@ -825,6 +830,7 @@ against it is a companion candidate.
 - **anger** — [The Oldest Loneliness](/books/the-oldest-loneliness.html) (book)
 - **antiphon** — [Psalm 75 — How Do I Pray This?](/articles/how-do-i-pray-this.html) (article)
 - **approach** — [Taste and See](/reflections/taste-and-see.html) (reflection)
+- **areopagus** — [Feeling Their Way](/articles/feeling-their-way.html) (article)
 - **argos** — [Idle Words](/reflections/idle-words.html) (reflection)
 - **arrival** — [The Last Word of the Road](/reflections/the-last-word-of-the-road.html) (reflection) · [Our Feet Are Standing](/reflections/our-feet-are-standing.html) (reflection)
 - **asa** — [Blue Blazers](/reflections/blue-blazers.html) (reflection)
@@ -832,6 +838,7 @@ against it is a companion candidate.
 - **asking** — [The Asking](/reflections/the-asking.html) (reflection) · [Trampled](/articles/trampled.html) (article) · [So I Ask](/reflections/so-i-ask.html) (reflection) · [Draw Me](/reflections/draw-me.html) (reflection) · [Draw Me! The Voice Matters](/articles/draw-me-the-voice-matters.html) (article)
 - **assembly** — [Ezra Had the Scroll](/articles/ezra-had-the-scroll.html) (article)
 - **assessing people** — [Why Do You Think Evil](/reflections/why-do-you-think-evil.html) (reflection)
+- **athens** — [Feeling Their Way](/articles/feeling-their-way.html) (article)
 - **authority** — [Knowing Where He Came From](/articles/knowing-where-he-came-from.html) (article) · [The One Thing He Wouldn't Delegate](/reflections/the-one-thing-he-wouldnt-delegate.html) (reflection)
 - **baptism** — [Being Right With Someone](/reflections/being-right-with-someone.html) (reflection) · [Fitting](/articles/fitting.html) (article) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection)
 - **barak** — [The Last Word of the Road](/reflections/the-last-word-of-the-road.html) (reflection)
@@ -910,6 +917,7 @@ against it is a companion candidate.
 - **da'at** — [The Fellowship of Suffering](/articles/the-fellowship-of-suffering.html) (article) · [Different Work](/articles/different-work.html) (article) · [Understanding?](/reflections/understanding.html) (reflection) · [Let Him Kiss Me](/reflections/let-him-kiss-me.html) (reflection) · [Justice Is Not What You Think](/reflections/justice-is-not-what-you-think.html) (reflection)
 - **daily psalms** — [The Thursday Psalm](/articles/the-thursday-psalm.html) (article)
 - **daily reading** — [The Songs for Every Day](/books/the-songs-for-every-day.html) (book) · [The Tamid Psalms](/books/the-tamid-psalms.html) (book)
+- **damaris** — [Feeling Their Way](/articles/feeling-their-way.html) (article)
 - **daniel** — [Those Who Know Their God](/reflections/those-who-know-their-god.html) (reflection) · [Reading Daniel Without Arithmetic](/articles/reading-daniel-without-arithmetic.html) (article)
 - **davar** — [Telling It Wrong](/articles/telling-it-wrong.html) (article)
 - **david** — [Nobody Wants Nathan](/articles/nobody-wants-nathan.html) (article) · [Is There Not a Cause](/reflections/is-there-not-a-cause.html) (reflection) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection) · [Into Your Hand](/reflections/into-your-hand.html) (reflection) · [Let Him Kiss Me](/reflections/let-him-kiss-me.html) (reflection) · [I Shall Be Satisfied](/reflections/i-shall-be-satisfied.html) (reflection)
@@ -923,6 +931,7 @@ against it is a companion candidate.
 - **desire** — [Draw Me](/reflections/draw-me.html) (reflection) · [Draw Me! The Voice Matters](/articles/draw-me-the-voice-matters.html) (article) · [His Name Is Oil Poured Out](/reflections/let-his-name-be-poured-out.html) (reflection) · [Let Him Kiss Me](/reflections/let-him-kiss-me.html) (reflection) · [The Love That Kindles](/reflections/the-love-that-kindles.html) (reflection) · [The Song Begins in Longing](/articles/the-song-begins-in-longing.html) (article) · [When the Heart Was Awake](/articles/when-the-heart-was-awake.html) (article)
 - **difficult prayer** — [Learning to Pray by Praying the Psalms — Until We Reach Psalm 83](/articles/until-we-reach-psalm-83.html) (article)
 - **dikaiosyne** — [Fitting](/articles/fitting.html) (article)
+- **dionysius** — [Feeling Their Way](/articles/feeling-their-way.html) (article)
 - **discernment** — [Trampled](/articles/trampled.html) (article) · [So I Ask](/reflections/so-i-ask.html) (reflection)
 - **discipleship** — [What Do You Want Me to Do for You](/reflections/what-do-you-want-me-to-do-for-you.html) (reflection) · [Is There Not a Cause](/reflections/is-there-not-a-cause.html) (reflection)
 - **discipline** — [Selah](/reflections/selah.html) (reflection)
@@ -984,6 +993,7 @@ against it is a companion candidate.
 - **great commission** — [Almost the Same in the End](/reflections/almost-the-same-in-the-end.html) (reflection)
 - **grief** — [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection) · [Not Finished Waking](/articles/not-finished-waking.html) (article) · [He Does Not Afflict From His Heart](/articles/he-does-not-afflict-from-his-heart.html) (article)
 - **grievance** — [The Sacrifice of Thanksgiving](/reflections/the-sacrifice-of-thanksgiving.html) (reflection)
+- **groping** — [Feeling Their Way](/articles/feeling-their-way.html) (article)
 - **grumbling** — [Still Counting](/articles/still-counting.html) (article)
 - **guidance** — [I Arrived Late](/reflections/i-arrived-late.html) (reflection)
 - **guilt** — [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection)
@@ -1097,6 +1107,7 @@ against it is a companion candidate.
 - **narrative** — [A Man Who Runs](/books/a-man-who-runs.html) (book)
 - **nashaq** — [Kiss the Son](/reflections/kiss-the-son.html) (reflection)
 - **nathan** — [Nobody Wants Nathan](/articles/nobody-wants-nathan.html) (article)
+- **natural knowledge of god** — [Feeling Their Way](/articles/feeling-their-way.html) (article)
 - **nebuchadnezzar** — [Pride](/reflections/pride.html) (reflection) · [Nobody Left to Say No](/articles/nobody-left-to-say-no.html) (article)
 - **neder** — [The Vow?](/reflections/the-vow.html) (reflection) · [The Vow That Is Not a Payment](/articles/vows.html) (article)
 - **nikao** — [Nikaō](/word-studies/nikao.html) (word study)
@@ -1151,6 +1162,7 @@ against it is a companion candidate.
 - **psalm headings** — [The Second Morning](/reflections/the-second-morning.html) (reflection)
 - **psalms** — [The Songs for Every Day](/books/the-songs-for-every-day.html) (book) · [The Tamid Psalms](/books/the-tamid-psalms.html) (book) · [Notes for the Band](/reflections/notes-for-the-band.html) (reflection)
 - **psalms of ascent** — [The Last Word of the Road](/reflections/the-last-word-of-the-road.html) (reflection) · [How Good and Pleasant](/reflections/how-good-and-pleasant.html) (reflection) · [The Place Where God Rests](/reflections/the-place-where-god-rests.html) (reflection) · [The Quiet Soul](/reflections/the-quiet-soul.html) (reflection) · [Out of the Depths](/reflections/out-of-the-depths.html) (reflection) · [They Have Not Prevailed](/reflections/they-have-not-prevailed.html) (reflection) · [The Ordinary Blessing](/reflections/the-ordinary-blessing.html) (reflection) · [Songs for the Road](/books/songs-for-the-road.html) (book) · [The House the LORD Builds](/reflections/the-house-the-lord-builds.html) (reflection) · [Like Those Who Dream](/reflections/like-those-who-dream.html) (reflection) · [The Mountain That Cannot Be Moved](/reflections/the-mountain-that-cannot-be-moved.html) (reflection) · [Let Israel Say](/reflections/let-israel-say.html) (reflection) · [Eyes Fixed Upward](/reflections/eyes-fixed-upward.html) (reflection) · [Our Feet Are Standing](/reflections/our-feet-are-standing.html) (reflection) · [The Keeper on the Road](/reflections/the-keeper-on-the-road.html) (reflection) · [The Far Country](/reflections/the-far-country.html) (reflection)
+- **psēlaphaō** — [Feeling Their Way](/articles/feeling-their-way.html) (article)
 - **public reading** — [Ezra Had the Scroll](/articles/ezra-had-the-scroll.html) (article)
 - **purim** — [Coincidence](/reflections/coincidence.html) (reflection)
 - **qavah** — [Out of the Depths](/reflections/out-of-the-depths.html) (reflection)
@@ -1171,7 +1183,7 @@ against it is a companion candidate.
 - **rest** — [The Songs for Every Day](/books/the-songs-for-every-day.html) (book) · [Different Work](/articles/different-work.html) (article) · [Stand by the Roads](/reflections/stand-by-the-roads.html) (reflection) · [The Quiet Soul](/reflections/the-quiet-soul.html) (reflection) · [The House the LORD Builds](/reflections/the-house-the-lord-builds.html) (reflection)
 - **restoration** — [A Place for Salt](/reflections/a-place-for-salt.html) (reflection) · [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection) · [The Man Who Opened His Hand](/books/the-open-hand.html) (book) · [Like Those Who Dream](/reflections/like-those-who-dream.html) (reflection)
 - **restraint** — [Idle Words](/reflections/idle-words.html) (reflection)
-- **resurrection** — [Into Your Hand](/reflections/into-your-hand.html) (reflection) · [Not Finished Waking](/articles/not-finished-waking.html) (article)
+- **resurrection** — [Feeling Their Way](/articles/feeling-their-way.html) (article) · [Into Your Hand](/reflections/into-your-hand.html) (reflection) · [Not Finished Waking](/articles/not-finished-waking.html) (article)
 - **revelation** — [Nikaō](/word-studies/nikao.html) (word study)
 - **reward** — [A Christian's Wage](/articles/a-christians-wage.html) (article) · [Still Counting](/articles/still-counting.html) (article)
 - **rhythm** — [The Tamid Psalms](/books/the-tamid-psalms.html) (book)
@@ -1196,6 +1208,7 @@ against it is a companion candidate.
 - **seeing people** — [You Have Judged Rightly](/reflections/you-have-judged-rightly.html) (reflection)
 - **seeing yourself** — [Nobody Wants Nathan](/articles/nobody-wants-nathan.html) (article) · [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection)
 - **seeking** — [Asking for Bread](/reflections/asking-for-bread.html) (reflection) · [Seeking](/articles/seeking.html) (article) · [Blue Blazers](/reflections/blue-blazers.html) (reflection)
+- **seeking god** — [Feeling Their Way](/articles/feeling-their-way.html) (article)
 - **selah** — [Who Are the Enemies of God? — Reading Psalm 68](/articles/who-are-the-enemies-of-god.html) (article) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Selah](/reflections/selah.html) (reflection) · [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection)
 - **self-deception** — [The Man Who Fears the Lord](/reflections/the-man-who-fears-the-lord.html) (reflection) · [Deceived](/reflections/deceived.html) (reflection) · [Have They No Knowledge?](/reflections/have-they-no-knowledge.html) (reflection) · [What Is Already Yours](/reflections/what-is-already-yours.html) (reflection)
 - **self-examination** — [Why Do You Think Evil](/reflections/why-do-you-think-evil.html) (reflection) · [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection) · [Blue Blazers](/reflections/blue-blazers.html) (reflection)
@@ -1269,6 +1282,7 @@ against it is a companion candidate.
 - **the lost sheep** — [According to Your Steadfast Love](/reflections/according-to-your-steadfast-love.html) (reflection)
 - **the name of jesus** — [The Fellowship of Suffering](/articles/the-fellowship-of-suffering.html) (article)
 - **the olive tree** — [I Am Like an Olive Tree](/reflections/i-am-like-an-olive-tree.html) (reflection)
+- **the optative** — [Feeling Their Way](/articles/feeling-their-way.html) (article)
 - **the overlooked** — [Seeking](/articles/seeking.html) (article)
 - **the people** — [Ezra Had the Scroll](/articles/ezra-had-the-scroll.html) (article)
 - **the poor** — [Spot the Difference](/articles/spot-the-difference.html) (article) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection)
@@ -1346,4 +1360,4 @@ against it is a companion candidate.
 - **zakar** — [The Asking](/reflections/the-asking.html) (reflection) · [What God Remembers](/articles/what-god-remembers.html) (article) · [Zakar](/word-studies/zakar.html) (word study) · [Kept Anyway](/reflections/kept-anyway.html) (reflection)
 - **zechariah** — [The Piece I Keep Picking Up](/reflections/the-piece-i-keep-picking-up.html) (reflection)
 - **zion** — [Spot the Difference](/articles/spot-the-difference.html) (article) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection)
-<!-- READ-TOKEN d75a81b1 · 1348 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN c4e74ab0 · 1362 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
