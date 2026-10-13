@@ -17,6 +17,14 @@ const ARTICLES_META = [
     summary:  "In Athens Paul says God set the nations in their places so that they might seek him and perhaps feel their way towards him and find him. The middle verb, psēlaphaō, belongs in the Greek Old Testament mostly to the blind — Isaac feeling for his son, the groping at noonday — and Paul puts it in the optative, the mood of the thing hoped for and not counted on. Then the sentence turns: yet he is actually not far from each one of us. Nothing in the groping is corrected; the distance was never the problem. Luke uses the word once more, in the locked room: touch me, and see. The reaching is honest, and on its own it does not get there."
   },
   {
+    title:    "Men of Cyprus and Cyrene",
+    url:      "/articles/men-of-cyprus-and-cyrene.html",
+    date:     "2026-10-13",
+    scripture: ["Acts 11:19-26", "Acts 13:1-3", "Acts 1:8", "Acts 8:1"],
+    themes:   ["Antioch", "the scattered", "Gentiles", "obedience", "anonymity", "Barnabas", "Manaen", "mission", "the name Christian", "church history"],
+    summary:  "Luke tells the story of the scattering twice. The first time it is a disaster; the second time the scattered have reached Phoenicia, Cyprus and Antioch and are still speaking only to Jews, the instruction a decade old. Then verse 20: some men of Cyprus and Cyrene, in a Greek city, spoke to Greeks. Luke keeps the names of a servant girl and a tanner, and not theirs. Jerusalem sent Barnabas to inspect the work, not the workers. From Antioch came the name Christian, the sending of Paul, and the dispute that took the Gentile question to Jerusalem. What came of it outlasted them by two thousand years and never carried their names."
+  },
+  {
     title:    "The Fellowship of Suffering",
     url:      "/articles/the-fellowship-of-suffering.html",
     date:     "2026-10-04",

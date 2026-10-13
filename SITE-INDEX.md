@@ -9,7 +9,7 @@ before writing: *does something on this already exist?* and *what did it say?*
 The theme index at the foot is the fastest way in — a new piece whose theme
 already appears there probably has a companion waiting.
 
-**156 pieces** — 98 reflections, 39 articles, 13 books, 6 word studies.
+**157 pieces** — 98 reflections, 40 articles, 13 books, 6 word studies.
 
 ---
 
@@ -507,12 +507,17 @@ Forty years of ministry with the word righteousness — preaching it, building t
 
 ---
 
-## Articles (39)
+## Articles (40)
 
 **2026-10-14 · Feeling Their Way**
 Acts 17:22-31; Luke 24:39 · `/articles/feeling-their-way.html`
 *Themes:* Athens, Areopagus, seeking God, psēlaphaō, groping, the optative, natural knowledge of God, resurrection, Dionysius, Damaris
 In Athens Paul says God set the nations in their places so that they might seek him and perhaps feel their way towards him and find him. The middle verb, psēlaphaō, belongs in the Greek Old Testament mostly to the blind — Isaac feeling for his son, the groping at noonday — and Paul puts it in the optative, the mood of the thing hoped for and not counted on. Then the sentence turns: yet he is actually not far from each one of us. Nothing in the groping is corrected; the distance was never the problem. Luke uses the word once more, in the locked room: touch me, and see. The reaching is honest, and on its own it does not get there.
+
+**2026-10-13 · Men of Cyprus and Cyrene**
+Acts 11:19-26; Acts 13:1-3; Acts 1:8; Acts 8:1 · `/articles/men-of-cyprus-and-cyrene.html`
+*Themes:* Antioch, the scattered, Gentiles, obedience, anonymity, Barnabas, Manaen, mission, the name Christian, church history
+Luke tells the story of the scattering twice. The first time it is a disaster; the second time the scattered have reached Phoenicia, Cyprus and Antioch and are still speaking only to Jews, the instruction a decade old. Then verse 20: some men of Cyprus and Cyrene, in a Greek city, spoke to Greeks. Luke keeps the names of a servant girl and a tanner, and not theirs. Jerusalem sent Barnabas to inspect the work, not the workers. From Antioch came the name Christian, the sending of Paul, and the dispute that took the Gentile question to Jerusalem. What came of it outlasted them by two thousand years and never carried their names.
 
 **2026-10-04 · The Fellowship of Suffering**
 Philippians 2:5-11; Philippians 3:7-12; Philippians 4:11-13; Philippians 1:29 · `/articles/the-fellowship-of-suffering.html`
@@ -809,7 +814,7 @@ Before it ever means to intercede, it means to fall upon — to strike, to meet 
 
 ---
 
-## Theme index (546 themes)
+## Theme index (553 themes)
 
 Every theme in use, and what carries it. A theme with more than one piece
 against it is a companion candidate.
@@ -828,6 +833,8 @@ against it is a companion candidate.
 - **ancient paths** — [Stand by the Roads](/reflections/stand-by-the-roads.html) (reflection) · [He Does Not Afflict From His Heart](/articles/he-does-not-afflict-from-his-heart.html) (article)
 - **angels** — [If You Are](/reflections/if-you-are.html) (reflection)
 - **anger** — [The Oldest Loneliness](/books/the-oldest-loneliness.html) (book)
+- **anonymity** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article)
+- **antioch** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article)
 - **antiphon** — [Psalm 75 — How Do I Pray This?](/articles/how-do-i-pray-this.html) (article)
 - **approach** — [Taste and See](/reflections/taste-and-see.html) (reflection)
 - **areopagus** — [Feeling Their Way](/articles/feeling-their-way.html) (article)
@@ -842,6 +849,7 @@ against it is a companion candidate.
 - **authority** — [Knowing Where He Came From](/articles/knowing-where-he-came-from.html) (article) · [The One Thing He Wouldn't Delegate](/reflections/the-one-thing-he-wouldnt-delegate.html) (reflection)
 - **baptism** — [Being Right With Someone](/reflections/being-right-with-someone.html) (reflection) · [Fitting](/articles/fitting.html) (article) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection)
 - **barak** — [The Last Word of the Road](/reflections/the-last-word-of-the-road.html) (reflection)
+- **barnabas** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article)
 - **bartimaeus** — [What Do You Want Me to Do for You](/reflections/what-do-you-want-me-to-do-for-you.html) (reflection)
 - **batach** — [God Alone](/reflections/god-alone.html) (reflection) · [This I Know](/reflections/this-i-know.html) (reflection) · [I Am Like an Olive Tree](/reflections/i-am-like-an-olive-tree.html) (reflection) · [The Quiet Soul](/reflections/the-quiet-soul.html) (reflection) · [The Mountain That Cannot Be Moved](/reflections/the-mountain-that-cannot-be-moved.html) (reflection)
 - **beatitudes** — [You](/reflections/blessed-are-you.html) (reflection)
@@ -889,6 +897,7 @@ against it is a companion candidate.
 - **chronicles** — [Almost the Same in the End](/reflections/almost-the-same-in-the-end.html) (reflection) · [He Named the Gatekeepers](/articles/he-named-the-gatekeepers.html) (article)
 - **church** — [Our God-Sponsored Projects](/articles/our-god-sponsored-projects.html) (article) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection)
 - **church culture** — [Blue Blazers](/reflections/blue-blazers.html) (reflection)
+- **church history** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article)
 - **church leadership** — [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection)
 - **coincidence** — [Coincidence](/reflections/coincidence.html) (reflection)
 - **communal memory** — [Let Israel Say](/reflections/let-israel-say.html) (reflection)
@@ -975,7 +984,7 @@ against it is a companion candidate.
 - **fruitfulness** — [What Is an Idle Word?](/word-studies/idle.html) (word study)
 - **gatekeeping** — [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection)
 - **genealogy** — [Almost the Same in the End](/reflections/almost-the-same-in-the-end.html) (reflection) · [He Named the Gatekeepers](/articles/he-named-the-gatekeepers.html) (article) · [Kept Anyway](/reflections/kept-anyway.html) (reflection)
-- **gentiles** — [I Arrived Late](/reflections/i-arrived-late.html) (reflection)
+- **gentiles** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article) · [I Arrived Late](/reflections/i-arrived-late.html) (reflection)
 - **gibbor** — [Meekness](/articles/psalm-45-meekness.html) (article)
 - **gittith** — [The Thursday Psalm](/articles/the-thursday-psalm.html) (article)
 - **giving** — [Our God-Sponsored Projects](/articles/our-god-sponsored-projects.html) (article) · [Trampled](/articles/trampled.html) (article) · [So I Ask](/reflections/so-i-ask.html) (reflection) · [See Me Trying](/reflections/see-me-trying.html) (reflection)
@@ -1075,6 +1084,7 @@ against it is a companion candidate.
 - **love your enemies** — [Who Are the Enemies of God? — Reading Psalm 68](/articles/who-are-the-enemies-of-god.html) (article)
 - **loving enemies** — [A Christian's Wage](/articles/a-christians-wage.html) (article)
 - **make me** — [Make Me](/reflections/make-me.html) (reflection)
+- **manaen** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article)
 - **mark** — [What Do You Want Me to Do for You](/reflections/what-do-you-want-me-to-do-for-you.html) (reflection)
 - **marriage** — [Have You Not Read](/reflections/have-you-not-read.html) (reflection)
 - **martyrdom** — [The Fellowship of Suffering](/articles/the-fellowship-of-suffering.html) (article) · [Nikaō](/word-studies/nikao.html) (word study)
@@ -1091,7 +1101,7 @@ against it is a companion candidate.
 - **ministry** — [Our God-Sponsored Projects](/articles/our-god-sponsored-projects.html) (article) · [Jesus as Leader](/articles/jesus-as-leader.html) (article)
 - **mishnah** — [The Tamid Psalms](/books/the-tamid-psalms.html) (book)
 - **mishpat** — [Tzedaqah / Dikaiosynē](/word-studies/tzedaqah.html) (word study) · [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection) · [Star Wars](/reflections/star-wars.html) (reflection) · [My Oath — and What It Really Means](/reflections/my-oath.html) (reflection) · [Justice Is Not What You Think](/reflections/justice-is-not-what-you-think.html) (reflection) · [Our Feet Are Standing](/reflections/our-feet-are-standing.html) (reflection) · [He Has Told You…](/books/he-has-told-you.html) (book)
-- **mission** — [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection) · [Did the Word Become a List?](/reflections/did-the-word-become-a-list.html) (reflection)
+- **mission** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article) · [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection) · [Did the Word Become a List?](/reflections/did-the-word-become-a-list.html) (reflection)
 - **misthos** — [A Christian's Wage](/articles/a-christians-wage.html) (article)
 - **mizmor** — [Reading the Label](/articles/reading-the-label.html) (article)
 - **moravians** — [Seeking](/articles/seeking.html) (article)
@@ -1117,7 +1127,7 @@ against it is a companion candidate.
 - **oath** — [My Oath — and What It Really Means](/reflections/my-oath.html) (reflection)
 - **oaths** — [The Vow That Is Not a Payment](/articles/vows.html) (article)
 - **obed-edom** — [He Named the Gatekeepers](/articles/he-named-the-gatekeepers.html) (article)
-- **obedience** — [If You Are](/reflections/if-you-are.html) (reflection) · [Make Me](/reflections/make-me.html) (reflection) · [We All Need Our Rechabites](/reflections/we-all-need-our-rechabites.html) (reflection)
+- **obedience** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article) · [If You Are](/reflections/if-you-are.html) (reflection) · [Make Me](/reflections/make-me.html) (reflection) · [We All Need Our Rechabites](/reflections/we-all-need-our-rechabites.html) (reflection)
 - **obligation** — [The Vow That Is Not a Payment](/articles/vows.html) (article)
 - **occupation** — [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection)
 - **old hundredth** — [The Same Psalm](/articles/the-same-psalm.html) (article)
@@ -1280,6 +1290,7 @@ against it is a companion candidate.
 - **the lamb** — [Nikaō](/word-studies/nikao.html) (word study)
 - **the levites** — [The Tamid Psalms](/books/the-tamid-psalms.html) (book)
 - **the lost sheep** — [According to Your Steadfast Love](/reflections/according-to-your-steadfast-love.html) (reflection)
+- **the name christian** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article)
 - **the name of jesus** — [The Fellowship of Suffering](/articles/the-fellowship-of-suffering.html) (article)
 - **the olive tree** — [I Am Like an Olive Tree](/reflections/i-am-like-an-olive-tree.html) (reflection)
 - **the optative** — [Feeling Their Way](/articles/feeling-their-way.html) (article)
@@ -1288,6 +1299,7 @@ against it is a companion candidate.
 - **the poor** — [Spot the Difference](/articles/spot-the-difference.html) (article) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection)
 - **the prophets** — [He Does Not Afflict From His Heart](/articles/he-does-not-afflict-from-his-heart.html) (article)
 - **the samaritan woman** — [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection)
+- **the scattered** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article)
 - **the scroll** — [Ezra Had the Scroll](/articles/ezra-had-the-scroll.html) (article)
 - **the secret verse** — [The Man Who Opened His Hand](/books/the-open-hand.html) (book)
 - **the sermon on the mount** — [Trampled](/articles/trampled.html) (article) · [So I Ask](/reflections/so-i-ask.html) (reflection)
@@ -1360,4 +1372,4 @@ against it is a companion candidate.
 - **zakar** — [The Asking](/reflections/the-asking.html) (reflection) · [What God Remembers](/articles/what-god-remembers.html) (article) · [Zakar](/word-studies/zakar.html) (word study) · [Kept Anyway](/reflections/kept-anyway.html) (reflection)
 - **zechariah** — [The Piece I Keep Picking Up](/reflections/the-piece-i-keep-picking-up.html) (reflection)
 - **zion** — [Spot the Difference](/articles/spot-the-difference.html) (article) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection)
-<!-- READ-TOKEN c4e74ab0 · 1362 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 31da92c5 · 1374 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
