@@ -96,13 +96,24 @@ Neither could be fixed by asking more carefully. The token can be checked.
 
 Two sessions quoting different tokens for the same file are holding different files.
 
-**A missing token is a failed read, not a curiosity.** Every file above has one. If a
+**A missing token is a failed read, not a curiosity.** Every file listed above as
+carrying one has one. If a
 fetch comes back without it, you have either part of the file or the wrong file, and
 you cannot tell which from inside it. Re-fetch with today's date on the URL. If the
 token still does not come back, stop and say so — do not build from what you have.
 The July `CONVENTIONS.md` above arrived with no token, the session noticed and
 mentioned it, and then followed the file verbatim anyway. Noticing was not enough;
 the absence should have stopped the build.
+
+**A valid token for the wrong version is the other failure, and it looks healthy.** When
+Norm gives you the token to expect and a different, well-formed one comes back, you are
+holding an earlier version of the file. The usual cause is that the file changed in the
+last few minutes: GitHub's raw server keeps its copy for about five minutes after a change,
+and a different `?v=` does not always get past it. **Wait five minutes and fetch again
+before reporting a problem.** If the expected token still does not arrive, stop and say so.
+On 14 October 2026 a session fetched `CONTEXT.md` minutes after a push, got the previous
+version with its own perfectly valid token, and could tell only because it had been told
+which token to expect. It matched on the first retry.
 
 ## What the conventions are for
 
@@ -159,4 +170,4 @@ item stops being re-raised in three months.
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN 70489f65 · 161 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN fd8ece62 · 172 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
