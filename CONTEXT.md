@@ -36,8 +36,20 @@ current file first time.
 | Unwritten pieces | `notes/FUTURE-ARTICLES.md` | When deciding what to write next |
 | Design tokens | `css/tokens.css` | When writing page-local CSS |
 
-If your sandbox blocks this host, say so plainly and ask — do not work from memory
-of a previous session, and do not guess the markup.
+**If you have no fetch tool, try `curl` from bash before concluding you are cut off.**
+On 14 October 2026 a session with no fetch tool assumed it had no access and said so;
+`raw.githubusercontent.com` turned out to be on its container's allow-list all along, and
+this worked first time:
+
+```
+curl -s "https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONVENTIONS.md?v=YYYY-MM-DD"
+```
+
+Same rules as any fetch: date on the URL, read to the end, quote the token. The absence of
+a tool is not the absence of access — test it before reporting it.
+
+If both routes are blocked, say so plainly and ask — do not work from memory of a previous
+session, and do not guess the markup.
 
 ## Which project are you?
 
@@ -54,10 +66,12 @@ If you do not know which you are, ask before writing anything.
 
 ## The read-token protocol
 
-**Which files carry one:** every file in the table above, `notes/PROJECT-SONGS.md`, and
-**every held note** (`notes/NOTE-*.md`). Notes are stamped automatically, so a new note
-carries one from its first commit. Page files (`.html`) and the reference texts under
-`resources/` do not — for those, a missing token means nothing.
+**Which files carry one:** every Markdown file in the table above, `notes/PROJECT-SONGS.md`,
+and **every held note** (`notes/NOTE-*.md`). Notes are stamped automatically, so a new note
+carries one from its first commit. These do **not**, and for them a missing token means
+nothing: `css/tokens.css` (it is a stylesheet, and an HTML comment cannot go in one — an
+earlier version of this paragraph said "every file in the table" and was wrong about it),
+page files (`.html`), and the reference texts under `resources/`.
 
 Each of those files ends with a line like:
 
@@ -145,4 +159,4 @@ item stops being re-raised in three months.
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN f372e15b · 147 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 70489f65 · 161 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
