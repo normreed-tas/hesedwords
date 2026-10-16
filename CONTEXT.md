@@ -42,7 +42,7 @@ Full addresses, so you never have to build one:
 | Full inventory — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/SITE-INDEX.md?v=f2e7d74c | When hunting themes, summaries or a companion |
 | Unwritten pieces — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/FUTURE-ARTICLES.md?v=85050be5 | When deciding what to write next |
 | Design tokens — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/css/tokens.css?v=d1ab02bf | When writing page-local CSS |
-| Song of Songs overlay — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/PROJECT-SONGS.md?v=212b1001 | Song of Songs project only |
+| Song of Songs overlay — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/PROJECT-SONGS.md?v=9cdcc664 | Song of Songs project only |
 | Verification answers — the full address is in Code's report, and Norm pastes it to you | When Norm says Code has answered |
 
 If your fetch tool refuses an address it did not see written out, the ones above are written out.
@@ -113,7 +113,7 @@ Two sessions quoting different tokens for the same file are holding different fi
 **A missing token is a failed read, not a curiosity.** Every file listed above as
 carrying one has one. If a
 fetch comes back without it, you have either part of the file or the wrong file, and
-you cannot tell which from inside it. Re-fetch with today's date on the URL. If the
+you cannot tell which from inside it. Re-fetch from the address in the table, exactly as written. If the
 token still does not come back, stop and say so — do not build from what you have.
 The July `CONVENTIONS.md` above arrived with no token, the session noticed and
 mentioned it, and then followed the file verbatim anyway. Noticing was not enough;
@@ -208,4 +208,4 @@ Answers are kept in the repo so the resolved item stops being re-raised in three
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN f59183d2 · 210 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 900f9158 · 210 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
