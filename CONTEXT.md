@@ -27,14 +27,20 @@ four other files it fetched came back current. `CONVENTIONS.md` was the only one
 had existed at that address since July. With the date added, the same session got the
 current file first time.
 
-| File | URL (prefix `https://raw.githubusercontent.com/normreed-tas/hesedwords/main/`) | When |
-|---|---|---|
-| Page conventions | `CONVENTIONS.md` | **Always**, before building any page |
-| Brief inventory | `SITE-INDEX-BRIEF.md` | **Always**, before proposing a subject |
-| How we work | `COLLABORATION.md` | Always, for voice and working practice |
-| Full inventory | `SITE-INDEX.md` | When hunting themes, summaries or a companion |
-| Unwritten pieces | `notes/FUTURE-ARTICLES.md` | When deciding what to write next |
-| Design tokens | `css/tokens.css` | When writing page-local CSS |
+Full addresses, so you never have to build one. Replace `YYYY-MM-DD` with today.
+
+| File | When |
+|---|---|
+| Page conventions — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONVENTIONS.md?v=YYYY-MM-DD | **Always**, before building any page |
+| Brief inventory — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/SITE-INDEX-BRIEF.md?v=YYYY-MM-DD | **Always**, before proposing a subject |
+| How we work — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/COLLABORATION.md?v=YYYY-MM-DD | Always, for voice and working practice |
+| Full inventory — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/SITE-INDEX.md?v=YYYY-MM-DD | When hunting themes, summaries or a companion |
+| Unwritten pieces — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/FUTURE-ARTICLES.md?v=YYYY-MM-DD | When deciding what to write next |
+| Design tokens — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/css/tokens.css?v=YYYY-MM-DD | When writing page-local CSS |
+| Song of Songs overlay — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/PROJECT-SONGS.md?v=YYYY-MM-DD | Song of Songs project only |
+| Verification answers — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/VERIFY-<slug>.md?v=YYYY-MM-DD | When Norm says Code has answered |
+
+If your fetch tool refuses an address it did not see written out, the ones above are written out.
 
 **If you have no fetch tool, try `curl` from bash before concluding you are cut off.**
 On 14 October 2026 a session with no fetch tool assumed it had no access and said so;
@@ -67,8 +73,9 @@ If you do not know which you are, ask before writing anything.
 ## The read-token protocol
 
 **Which files carry one:** every Markdown file in the table above, `notes/PROJECT-SONGS.md`,
-and **every held note** (`notes/NOTE-*.md`). Notes are stamped automatically, so a new note
-carries one from its first commit. These do **not**, and for them a missing token means
+**every held note** (`notes/NOTE-*.md`) and every verification answer file
+(`notes/VERIFY-*.md`). These are stamped automatically, so a new one carries a token from
+its first commit. These do **not**, and for them a missing token means
 nothing: `css/tokens.css` (it is a stylesheet, and an HTML comment cannot go in one — an
 earlier version of this paragraph said "every file in the table" and was wrong about it),
 page files (`.html`), and the reference texts under `resources/`.
@@ -163,11 +170,35 @@ them in three kinds:
   to revise something published. Those are his, and the honest move is to say so rather
   than resolve them quietly.
 
-Answers come back written into the note itself, in a marked section, so the resolved
-item stops being re-raised in three months.
+**How the questions travel — as files, not pastes.**
+
+- **When the prose locks**, before any HTML: save `<slug>.verify.md` listing every quotation,
+  attribution and page reference, each with the source it claims. Norm drops it in `inbox/`.
+  This is the part that cannot be fixed after publication without someone having read the
+  wrong thing, so it is checked first.
+- **At handover**, the same file, extended with every other `[verify]`, goes in beside the page.
+- **Answers** are written repo-side to `notes/VERIFY-<slug>.md` (or into the held note, where
+  one exists) and pushed. Fetch them from the address in the table above and quote the
+  token. Do not work from Norm's summary of them, and do not ask him to paste them.
+
+**What Code may fix, and what it must hold.**
+
+- **Fidelity — Code fixes and publishes:** Scripture wording, references, counts, and a
+  quotation corrected to match the source it already names.
+- **Editorial — Code holds the piece and asks:** a different source or witness; a claim
+  removed; a change to the argument; anything about Norm's life; and **a claim that survives
+  on different grounds**. If the reason changes, it is editorial, even when the sentence
+  looks the same.
+- **Same day** is Norm's call, made at handover. It means fidelity fixes go in and the piece
+  publishes. It does not let editorial fixes through: a piece that needs one waits for Norm,
+  even if it slips a day. On 16 October 2026 the one editorial change made under same-day
+  pressure — a commentator swapped for another — was the one that should have come to him
+  first.
+
+Answers are kept in the repo so the resolved item stops being re-raised in three months.
 
 ## Anything committed here is public
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN fd8ece62 · 172 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 36147f40 · 203 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

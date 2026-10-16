@@ -63,7 +63,7 @@ const CORE = [
 // half-read, so they need the proof more than anything above. A hand-kept list
 // would miss the next new note; the glob cannot.
 const NOTES = fs.readdirSync(path.join(repo, 'notes'))
-  .filter(f => /^NOTE-.+\.md$/.test(f))
+  .filter(f => /^(NOTE|VERIFY)-.+\.md$/.test(f))
   .sort()
   .map(f => 'notes/' + f);
 

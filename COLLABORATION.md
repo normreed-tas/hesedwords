@@ -45,6 +45,16 @@ you do give a number, show where it came from. If a structural claim comes from 
 secondary literature, say so. Gematria-adjacent claims (7×7, menorah shapes, symmetries) are
 the highest-risk kind: memorable, widely repeated, rarely checked.
 
+**A quotation or attribution is not checked until someone has opened the source.** Not
+searched for it, not found it summarised, not seen it quoted elsewhere: opened the primary
+text and read the words in it. "I searched and it matched" is not that. On 16 October 2026 a
+drafting session attributed a phrase to William Kelly, cleared it twice when asked, and
+built it into an article about fabricated citations. The phrase did not exist, and Kelly
+held the opposite reading. It was caught only because Claude Code opened Kelly's exposition.
+A fluent, well-formed citation looks exactly like a real one at the point of writing; the
+only test is the text. This is a standing instruction, not a workflow step: it applies
+whoever is writing and whatever the deadline.
+
 **Rank connections by what holds, not by what is prettiest.** A shared common noun is not an
 allusion. A shared structure — a purpose clause, a quoted formula with a deliberate change —
 usually is. Lead with the connection that would survive a reader who rejects the
@@ -213,6 +223,7 @@ rather than to the lexicon. Three times now the verified version has been strong
 version that had to be withdrawn.
 
 **Sequence is fixed.** Theological exploration in chat → beat structure approved →
-section-by-section drafting with approval gates → HTML/PDF only after prose is final →
+section-by-section drafting with approval gates → citations to Claude Code when the prose
+locks (see CONTEXT.md) → HTML/PDF only after prose is final →
 repo-side tasks handed to Claude Code. Don't skip ahead to building.
-<!-- READ-TOKEN 556a07bb · 217 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 9c7f9747 · 228 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
