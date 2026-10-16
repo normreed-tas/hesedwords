@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Through the Spirit",
+    url:      "/articles/through-the-spirit.html",
+    date:     "2026-10-16",
+    scripture: ["Acts 21:1-14", "Acts 20:22-24", "Acts 23:11", "Acts 16:10"],
+    themes:   ["Tyre", "Agabus", "prophecy", "guidance", "discernment", "inference", "Calvin", "Chrysostom", "AI", "Papua New Guinea", "disagreement"],
+    summary:  "At Tyre the disciples, through the Spirit, kept telling Paul not to go on to Jerusalem, and he went. Seven verses later Agabus gives a true oracle that contains no instruction at all, and everyone in the house, Luke included, supplies the therefore: bonds are coming, so stay away. Chrysostom, Calvin and Stedman read verse 4 three ways, and each reading gives something up. Two AI assistants invented a tidier Calvin three times over. A pastor in the early eighties who told me not to go back to Papua New Guinea, and I went. Outcomes are not verification."
+  },
+  {
     title:    "Feeling Their Way",
     url:      "/articles/feeling-their-way.html",
     date:     "2026-10-14",

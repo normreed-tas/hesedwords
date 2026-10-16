@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Then We Stopped",
+    date:     "2026-10-16",
+    url:      "/reflections/then-we-stopped.html",
+    summary:  "The argument at Caesarea went on for days, and nobody won it. Since he would not be persuaded, we ceased: Luke uses a word that means they fell quiet. Nobody comes round and nobody withdraws the plea. Luke knows what agreement looks like — it has seemed good to the Holy Spirit and to us; concluding that God had called us — and here there is none, recorded in the same even voice. Then they got ready and went up with him. Let the will of the Lord be done is the last honest sentence when two people who love each other cannot agree about what God is doing. A cardiac arrest, six months, counsel to scale back, and a decision to step up.",
+    scripture: ["Acts 21:14", "Acts 21:12-15", "Acts 15:28", "Acts 16:10"],
+    themes:   ["disagreement", "discernment", "the will of the Lord", "Agabus", "guidance", "counsel", "illness", "calling", "Paul"]
+  },
+  {
     title:    "I Arrived Late",
     date:     "2026-10-10",
     url:      "/reflections/i-arrived-late.html",
