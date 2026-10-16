@@ -67,7 +67,28 @@ const NOTES = fs.readdirSync(path.join(repo, 'notes'))
   .sort()
   .map(f => 'notes/' + f);
 
-const FILES = [...CORE, ...NOTES];
+const FILES = [...CORE.filter(f => f !== 'CONTEXT.md'), ...NOTES, 'CONTEXT.md'];
+
+// Version codes in CONTEXT.md's fetch table. Added 16 Oct 2026. The old rule
+// told sessions to put today's date on the URL; a session whose fetch tool
+// would only open addresses seen verbatim fetched the literal ?v=YYYY-MM-DD,
+// hit its own morning cache, and got a stale CONTEXT.md. Now each table row
+// carries ?v=<hash of that file>, so the address changes exactly when the file
+// does and nobody fills anything in. CONTEXT.md is stamped last so its own
+// token covers the codes written into it.
+const RAW = 'https://raw.githubusercontent.com/normreed-tas/hesedwords/main/';
+function linkCodes(text) {
+  return text.split('\n').map(line => {
+    if (!line.startsWith('| ')) return line;
+    return line.replace(/(https:\/\/raw\.githubusercontent\.com\/normreed-tas\/hesedwords\/main\/)([\w\/.-]+)\?v=[\w-]+/g,
+      (m, pre, rel) => {
+        const p = path.join(repo, rel);
+        if (!fs.existsSync(p)) return m;
+        const code = crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex').slice(0, 8);
+        return pre + rel + '?v=' + code;
+      });
+  }).join('\n');
+}
 
 const TOKEN_RE = /\n*<!-- READ-TOKEN [0-9a-f]{8} · \d+ lines[^>]*-->\s*$/;
 
@@ -102,7 +123,14 @@ for (const rel of FILES) {
     continue;
   }
 
-  const text = fs.readFileSync(full, 'utf8');
+  let text = fs.readFileSync(full, 'utf8');
+  if (rel === 'CONTEXT.md') {
+    const linked = linkCodes(text);
+    if (linked !== text) {
+      if (check) { console.log('UNLINKED  CONTEXT.md — fetch-table codes out of date'); problems++; }
+      else { text = linked; fs.writeFileSync(full, text, 'utf8'); console.log('LINKED    CONTEXT.md — fetch-table codes refreshed'); }
+    }
+  }
   const body = bodyOf(text);
   const want = stampLine(body);
   const have = (text.match(TOKEN_RE) || [''])[0].trim();

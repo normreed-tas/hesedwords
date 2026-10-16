@@ -3,7 +3,8 @@
 **This is the entry point for any Claude project writing for hesedwords.com.**
 It is deliberately short. Read all of it, then fetch what you need below.
 
-Give a new project this one URL and nothing else, with today's date on the end:
+Give a new project this one URL and nothing else, **with today's date typed in by Norm**
+(a session must never fill in the date itself — see below):
 `https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONTEXT.md?v=YYYY-MM-DD`
 
 ---
@@ -13,34 +14,40 @@ Give a new project this one URL and nothing else, with today's date on the end:
 The repo is public. These are **raw text**, not rendered pages, and the repo copy is
 always current. **Your fetch tool's copy may not be.**
 
-**Always put today's date on the end of the URL**, like this:
+**Use the addresses in the table below exactly as written. Do not change them.** Each one
+ends in `?v=` and a code that changes automatically whenever that file changes. GitHub
+ignores the code and serves the current file; a fetch tool that caches by address sees a new
+address whenever there is a new file, and cannot hand you an old one.
 
-```
-https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONVENTIONS.md?v=2026-09-29
-```
+This replaced an earlier rule — "put today's date on the end" — which failed on 16 October
+2026. That session's fetch tool would only open addresses it had seen written out in full,
+so it fetched the placeholder `?v=YYYY-MM-DD` literally, the same address it had fetched that
+morning, and was handed the morning's copy: a 147-line CONTEXT.md with the wrong token. The
+token caught it. The codes below need nothing filled in, so the failure cannot recur.
 
-GitHub ignores the `?v=` and serves the current file. A fetch tool that caches by
-address sees a new address and cannot hand you an old one. On 29 September 2026 a
+The history of why any of this exists: On 29 September 2026 a
 session fetched `CONVENTIONS.md` at the plain URL and was given the **July** version —
 the retired Cinzel design, replaced on 9 August — with nothing to say it was old. The
 four other files it fetched came back current. `CONVENTIONS.md` was the only one that
 had existed at that address since July. With the date added, the same session got the
 current file first time.
 
-Full addresses, so you never have to build one. Replace `YYYY-MM-DD` with today.
+Full addresses, so you never have to build one:
 
 | File | When |
 |---|---|
-| Page conventions — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONVENTIONS.md?v=YYYY-MM-DD | **Always**, before building any page |
-| Brief inventory — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/SITE-INDEX-BRIEF.md?v=YYYY-MM-DD | **Always**, before proposing a subject |
-| How we work — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/COLLABORATION.md?v=YYYY-MM-DD | Always, for voice and working practice |
-| Full inventory — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/SITE-INDEX.md?v=YYYY-MM-DD | When hunting themes, summaries or a companion |
-| Unwritten pieces — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/FUTURE-ARTICLES.md?v=YYYY-MM-DD | When deciding what to write next |
-| Design tokens — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/css/tokens.css?v=YYYY-MM-DD | When writing page-local CSS |
-| Song of Songs overlay — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/PROJECT-SONGS.md?v=YYYY-MM-DD | Song of Songs project only |
-| Verification answers — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/VERIFY-<slug>.md?v=YYYY-MM-DD | When Norm says Code has answered |
+| Page conventions — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONVENTIONS.md?v=473dedb4 | **Always**, before building any page |
+| Brief inventory — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/SITE-INDEX-BRIEF.md?v=04d318c8 | **Always**, before proposing a subject |
+| How we work — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/COLLABORATION.md?v=12bd386b | Always, for voice and working practice |
+| Full inventory — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/SITE-INDEX.md?v=f2e7d74c | When hunting themes, summaries or a companion |
+| Unwritten pieces — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/FUTURE-ARTICLES.md?v=85050be5 | When deciding what to write next |
+| Design tokens — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/css/tokens.css?v=d1ab02bf | When writing page-local CSS |
+| Song of Songs overlay — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/PROJECT-SONGS.md?v=212b1001 | Song of Songs project only |
+| Verification answers — the full address is in Code's report, and Norm pastes it to you | When Norm says Code has answered |
 
 If your fetch tool refuses an address it did not see written out, the ones above are written out.
+If a fetch still returns a token Norm did not expect, the five-minute rule below applies; if
+it persists after that, stop and say so.
 
 **If you have no fetch tool, try `curl` from bash before concluding you are cut off.**
 On 14 October 2026 a session with no fetch tool assumed it had no access and said so;
@@ -48,10 +55,10 @@ On 14 October 2026 a session with no fetch tool assumed it had no access and sai
 this worked first time:
 
 ```
-curl -s "https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONVENTIONS.md?v=YYYY-MM-DD"
+curl -s "<an address from the table, exactly as written>"
 ```
 
-Same rules as any fetch: date on the URL, read to the end, quote the token. The absence of
+Same rules as any fetch: the address as written, read to the end, quote the token. The absence of
 a tool is not the absence of access — test it before reporting it.
 
 If both routes are blocked, say so plainly and ask — do not work from memory of a previous
@@ -178,7 +185,7 @@ them in three kinds:
   wrong thing, so it is checked first.
 - **At handover**, the same file, extended with every other `[verify]`, goes in beside the page.
 - **Answers** are written repo-side to `notes/VERIFY-<slug>.md` (or into the held note, where
-  one exists) and pushed. Fetch them from the address in the table above and quote the
+  one exists) and pushed. Code's report gives the full address; fetch it and quote the
   token. Do not work from Norm's summary of them, and do not ask him to paste them.
 
 **What Code may fix, and what it must hold.**
@@ -201,4 +208,4 @@ Answers are kept in the repo so the resolved item stops being re-raised in three
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN 36147f40 · 203 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN f59183d2 · 210 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
