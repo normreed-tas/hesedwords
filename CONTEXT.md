@@ -3,9 +3,16 @@
 **This is the entry point for any Claude project writing for hesedwords.com.**
 It is deliberately short. Read all of it, then fetch what you need below.
 
-Give a new project this one URL and nothing else, **with today's date typed in by Norm**
-(a session must never fill in the date itself — see below):
-`https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONTEXT.md?v=YYYY-MM-DD`
+**Fetch this file with `curl` from your code tool, every session, before anything else:**
+
+```
+curl -s https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONTEXT.md
+```
+
+Norm should not have to paste a link to start a session. `curl` keeps no copy of what it
+fetched before, so it gets the current file, and it opens any address without needing to
+have seen it first. Fetch every other repo file the same way, from the table below. Only if
+you have no code tool, use your fetch tool and ask Norm for a dated link to this file.
 
 ---
 
@@ -14,7 +21,12 @@ Give a new project this one URL and nothing else, **with today's date typed in b
 The repo is public. These are **raw text**, not rendered pages, and the repo copy is
 always current. **Your fetch tool's copy may not be.**
 
-**Use the addresses in the table below exactly as written. Do not change them.** Each one
+**Why `curl` first.** On 20 October 2026 a session's fetch tool returned a CONTEXT.md from late
+September (`f372e15b`): it had opened that address in an earlier session and handed back its
+stored copy, with nothing to say it was old. It then refused COLLABORATION.md outright,
+because that old copy did not write the address out in full. `curl` has neither problem.
+
+**If you are using the fetch tool, use the addresses in the table below exactly as written. Do not change them.** Each one
 ends in `?v=` and a code that changes automatically whenever that file changes. GitHub
 ignores the code and serves the current file; a fetch tool that caches by address sees a new
 address whenever there is a new file, and cannot hand you an old one.
@@ -49,17 +61,9 @@ If your fetch tool refuses an address it did not see written out, the ones above
 If a fetch still returns a token Norm did not expect, the five-minute rule below applies; if
 it persists after that, stop and say so.
 
-**If you have no fetch tool, try `curl` from bash before concluding you are cut off.**
-On 14 October 2026 a session with no fetch tool assumed it had no access and said so;
-`raw.githubusercontent.com` turned out to be on its container's allow-list all along, and
-this worked first time:
-
-```
-curl -s "<an address from the table, exactly as written>"
-```
-
-Same rules as any fetch: the address as written, read to the end, quote the token. The absence of
-a tool is not the absence of access — test it before reporting it.
+**Do not assume `curl` is blocked — test it.** On 14 October 2026 a session assumed it had no
+access and said so; `raw.githubusercontent.com` turned out to be on its container's
+allow-list all along. Same rules whichever route you use: read to the end, quote the token.
 
 If both routes are blocked, say so plainly and ask — do not work from memory of a previous
 session, and do not guess the markup.
@@ -208,4 +212,4 @@ Answers are kept in the repo so the resolved item stops being re-raised in three
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN 900f9158 · 210 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 0d6ff89b · 214 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
