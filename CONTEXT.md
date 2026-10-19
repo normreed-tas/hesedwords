@@ -11,7 +11,8 @@ curl -s https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONTEXT.m
 
 Norm should not have to paste a link to start a session. `curl` keeps no copy of what it
 fetched before, so it gets the current file, and it opens any address without needing to
-have seen it first. Fetch every other repo file the same way, from the table below. Only if
+have seen it first. **With `curl`, the plain address is correct** — nothing to add, no code
+needed. Fetch every other repo file the same way, from the table below. Only if
 you have no code tool, use your fetch tool and ask Norm for a dated link to this file.
 
 ---
@@ -19,7 +20,8 @@ you have no code tool, use your fetch tool and ask Norm for a dated link to this
 ## Fetch the files you need — do not ask for them to be pasted
 
 The repo is public. These are **raw text**, not rendered pages, and the repo copy is
-always current. **Your fetch tool's copy may not be.**
+always current. **Your fetch tool's copy may not be.** Every stale copy recorded below came
+from the claude.ai web fetch tool, which keeps its own stored copies. None came from `curl`.
 
 **Why `curl` first.** On 20 October 2026 a session's fetch tool returned a CONTEXT.md from late
 September (`f372e15b`): it had opened that address in an earlier session and handed back its
@@ -38,7 +40,7 @@ morning, and was handed the morning's copy: a 147-line CONTEXT.md with the wrong
 token caught it. The codes below need nothing filled in, so the failure cannot recur.
 
 The history of why any of this exists: On 29 September 2026 a
-session fetched `CONVENTIONS.md` at the plain URL and was given the **July** version —
+session fetched `CONVENTIONS.md` **with its web fetch tool** at the plain URL and was given the **July** version —
 the retired Cinzel design, replaced on 9 August — with nothing to say it was old. The
 four other files it fetched came back current. `CONVENTIONS.md` was the only one that
 had existed at that address since July. With the date added, the same session got the
@@ -212,4 +214,4 @@ Answers are kept in the repo so the resolved item stops being re-raised in three
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN 0d6ff89b · 214 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN ba5b6e10 · 216 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
