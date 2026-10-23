@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "The Turning Left Open",
+    url:      "/articles/the-turning-left-open.html",
+    date:     "2026-10-23",
+    scripture: ["Romans 2:1-5", "Romans 3:25-26", "Romans 12:1", "Romans 11:22", "Romans 1:18-32", "Exodus 34:6", "Ezekiel 18"],
+    themes:   ["kindness", "repentance", "forbearance", "patience", "wrath", "Romans", "telling it to a child", "parable", "judging others", "grievance", "witness", "prison ministry"],
+    summary:  "The kindness of God leads you to repentance is usually preached at the warm end of a sermon, to the person at the back. Paul aimed it at the man with the clipboard, who has nodded through the list in chapter 1 as a description of other people: you have mistaken his delay for his indifference. Kindness, forbearance and patience describe space, given when he had every reason not to. Take 2:4 out of Romans and God's passing over of former sins loses its reason, chapter 11's kindness and severity answer a question never asked, chapter 12's therefore floats, and the gospel becomes escape from the Father. Then The Builder's Road, a story for an eight-year-old, and the four places it broke: you cannot build on ground that is still moving; he did not take the turn-off away. Kindness is not the gentle alternative to wrath. It is the harder doctrine, and it removes the one excuse anybody ever had."
+  },
+  {
     title:    "Through the Spirit",
     url:      "/articles/through-the-spirit.html",
     date:     "2026-10-16",
