@@ -8,6 +8,14 @@
    ================================================================ */
 const BOOKS_META = [
   {
+    title:    "Paul's Diagnostic",
+    url:      "/books/pauls-diagnostic.html",
+    date:     "2026-10-25",
+    scripture: ["Romans 12", "Romans 3:23-24", "Romans 5:8", "Romans 11:32"],
+    themes:   ["Romans 12", "younger readers", "teenagers", "daily reading", "grace", "the body", "gifts", "hospitality", "enemies", "revenge", "overcoming evil", "mercy"],
+    summary:  "A seven-day read through Romans 12 for a young teenager. For eleven chapters Paul explains what God has done; chapter twelve begins with therefore, by the mercies of God. Sunday carries the mercy — all have sinned, while we were yet sinners — and is the one day that is not about you. Monday: think reasonably, a hand is not failing at being an eye. Tuesday: whatever you were given is grace, so ask who it is for. Wednesday: love that isn't a performance, and hospitality you chase down. Thursday: the same word for the people who hunt you — bless them. Friday: vengeance belongs to God; feed your enemy. Saturday: don't let evil win by making you like it. A page to write or draw on each day, and a note for the adult reading with them."
+  },
+  {
     title:    "The Songs for Every Day",
     url:      "/books/the-songs-for-every-day.html",
     date:     "2026-09-20",

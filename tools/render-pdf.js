@@ -42,7 +42,8 @@ const rel = positional[0];
 const outArg = positional[1];
 
 if (!rel) {
-  console.error('usage: node tools/render-pdf.js <path/to/page.html> [out.pdf] [--numbers|--no-numbers]');
+  console.error('usage: node tools/render-pdf.js <path/to/page.html> [out.pdf] [--numbers|--no-numbers] [--a5]');
+  console.error('  --a5 renders an A5 page for a print booklet (default A4)');
   console.error('  page numbers default ON for books/, OFF elsewhere');
   process.exit(1);
 }
@@ -51,6 +52,10 @@ if (!rel) {
 const numbered = flags.includes('--numbers') ? true
                : flags.includes('--no-numbers') ? false
                : rel.replace(/\\/g, '/').startsWith('books/');
+
+// A5 for print booklets, added 25 Oct 2026 for Paul's Diagnostic. The A4
+// folding edition is imposed from this A5 render by tools/impose-booklet.js.
+const a5 = flags.includes('--a5');
 
 const src = path.join(repo, rel);
 if (!fs.existsSync(src)) {
@@ -146,16 +151,16 @@ fs.writeFileSync(printHtml, html, 'utf8');
   await page.goto('file:///' + printHtml.replace(/\\/g, '/'), { waitUntil: 'networkidle' });
   await page.pdf({
     path: outPdf,
-    format: 'A4',
+    format: a5 ? 'A5' : 'A4',
     printBackground: true,   // without this the Selah rules and every filled block vanish
     displayHeaderFooter: numbered,
     headerTemplate: '<div></div>',   // required, or Chromium supplies its own
     footerTemplate: FOOTER,
     margin: {
-      top: '18mm',
-      bottom: numbered ? '20mm' : '18mm',   // the folio needs room to sit in
-      left: '16mm',
-      right: '16mm'
+      top: a5 ? '14mm' : '18mm',
+      bottom: numbered ? (a5 ? '16mm' : '20mm') : (a5 ? '14mm' : '18mm'),   // the folio needs room to sit in
+      left: a5 ? '13mm' : '16mm',
+      right: a5 ? '13mm' : '16mm'
     }
   });
   await browser.close();
