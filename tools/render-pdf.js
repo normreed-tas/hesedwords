@@ -53,7 +53,7 @@ const numbered = flags.includes('--numbers') ? true
                : flags.includes('--no-numbers') ? false
                : rel.replace(/\\/g, '/').startsWith('books/');
 
-// A5 for print booklets, added 25 Oct 2026 for Paul's Diagnostic. The A4
+// A5 for print booklets, added 25 Oct 2026 for Therefore. The A4
 // folding edition is imposed from this A5 render by tools/impose-booklet.js.
 const a5 = flags.includes('--a5');
 

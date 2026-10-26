@@ -155,7 +155,7 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 
 ## Books (14)
 
-- 2026-10-25 · **Paul's Diagnostic** · Romans 12; Romans 3:23-24; Romans 5:8; Romans 11:32 · `/books/pauls-diagnostic.html`
+- 2026-10-25 · **Therefore** · Romans 12; Romans 3:23-24; Romans 5:8; Romans 11:32 · `/books/therefore.html`
 - 2026-09-20 · **The Songs for Every Day** · Psalm 24; Psalm 48; Psalm 82; Psalm 94; Psalm 81; Psalm 93; Psalm 92 · `/books/the-songs-for-every-day.html`
 - 2026-09-20 · **The Tamid Psalms** · Psalm 24; Psalm 48; Psalm 82; Psalm 94; Psalm 81; Psalm 93; Psalm 92 · `/books/the-tamid-psalms.html`
 - 2026-09-18 · **A Man Who Runs** · Mark 14:51-52; Acts 13:13; Acts 15:37-39; 2 Timothy 4:11 · `/books/a-man-who-runs.html`
@@ -178,4 +178,4 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2026-08-03 · **Is "Wicked" a Verdict or a Character?** · Deuteronomy 25:1; 1 Kings 8:32; Exodus 23:7; Psalm 58:1 · `/word-studies/is-wicked-a-verdict-or-a-character.html`
 - 2026-07-11 · **What Is an Idle Word?** · Matthew 12:36; Matthew 20:3; 1 Timothy 5:13; 2 Peter 1:8 · `/word-studies/idle.html`
 - 2026-07-10 · **Is Jesus an Intercessor?** · Isaiah 59:16; Isaiah 53:12; 1 Samuel 22:18; Romans 8:34 · `/word-studies/jesus-intercessor.html`
-<!-- READ-TOKEN 6e052480 · 180 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 5532fc00 · 180 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

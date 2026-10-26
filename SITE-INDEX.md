@@ -728,8 +728,8 @@ The arc of desire in the Song of Songs — from longing into belonging into open
 
 ## Books (14)
 
-**2026-10-25 · Paul's Diagnostic**
-Romans 12; Romans 3:23-24; Romans 5:8; Romans 11:32 · `/books/pauls-diagnostic.html`
+**2026-10-25 · Therefore**
+Romans 12; Romans 3:23-24; Romans 5:8; Romans 11:32 · `/books/therefore.html`
 *Themes:* Romans 12, younger readers, teenagers, daily reading, grace, the body, gifts, hospitality, enemies, revenge, overcoming evil, mercy
 A seven-day read through Romans 12 for a young teenager. For eleven chapters Paul explains what God has done; chapter twelve begins with therefore, by the mercies of God. Sunday carries the mercy — all have sinned, while we were yet sinners — and is the one day that is not about you. Monday: think reasonably, a hand is not failing at being an eye. Tuesday: whatever you were given is grace, so ask who it is for. Wednesday: love that isn't a performance, and hospitality you chase down. Thursday: the same word for the people who hunt you — bless them. Friday: vengeance belongs to God; feed your enemy. Saturday: don't let evil win by making you like it. A page to write or draw on each day, and a note for the adult reading with them.
 
@@ -951,7 +951,7 @@ against it is a companion candidate.
 - **cyrus** — [Almost the Same in the End](/reflections/almost-the-same-in-the-end.html) (reflection)
 - **da'at** — [The Fellowship of Suffering](/articles/the-fellowship-of-suffering.html) (article) · [Different Work](/articles/different-work.html) (article) · [Understanding?](/reflections/understanding.html) (reflection) · [Let Him Kiss Me](/reflections/let-him-kiss-me.html) (reflection) · [Justice Is Not What You Think](/reflections/justice-is-not-what-you-think.html) (reflection)
 - **daily psalms** — [The Thursday Psalm](/articles/the-thursday-psalm.html) (article)
-- **daily reading** — [Paul's Diagnostic](/books/pauls-diagnostic.html) (book) · [The Songs for Every Day](/books/the-songs-for-every-day.html) (book) · [The Tamid Psalms](/books/the-tamid-psalms.html) (book)
+- **daily reading** — [Therefore](/books/therefore.html) (book) · [The Songs for Every Day](/books/the-songs-for-every-day.html) (book) · [The Tamid Psalms](/books/the-tamid-psalms.html) (book)
 - **damaris** — [Feeling Their Way](/articles/feeling-their-way.html) (article)
 - **daniel** — [Those Who Know Their God](/reflections/those-who-know-their-god.html) (reflection) · [Reading Daniel Without Arithmetic](/articles/reading-daniel-without-arithmetic.html) (article)
 - **davar** — [Telling It Wrong](/articles/telling-it-wrong.html) (article)
@@ -986,7 +986,7 @@ against it is a companion candidate.
 - **emunah** — [The Same Psalm](/articles/the-same-psalm.html) (article) · [Tzedaqah / Dikaiosynē](/word-studies/tzedaqah.html) (word study) · [Star Wars](/reflections/star-wars.html) (reflection)
 - **endings** — [Almost the Same in the End](/reflections/almost-the-same-in-the-end.html) (reflection)
 - **endurance** — [Reading Daniel Without Arithmetic](/articles/reading-daniel-without-arithmetic.html) (article) · [I Am Like an Olive Tree](/reflections/i-am-like-an-olive-tree.html) (reflection)
-- **enemies** — [Paul's Diagnostic](/books/pauls-diagnostic.html) (book) · [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection) · [Who Are the Enemies of God? — Reading Psalm 68](/articles/who-are-the-enemies-of-god.html) (article) · [Learning to Pray by Praying the Psalms — Until We Reach Psalm 83](/articles/until-we-reach-psalm-83.html) (article)
+- **enemies** — [Therefore](/books/therefore.html) (book) · [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection) · [Who Are the Enemies of God? — Reading Psalm 68](/articles/who-are-the-enemies-of-god.html) (article) · [Learning to Pray by Praying the Psalms — Until We Reach Psalm 83](/articles/until-we-reach-psalm-83.html) (article)
 - **entrust** — [Into Your Hand](/reflections/into-your-hand.html) (reflection)
 - **eschatology** — [Reading Daniel Without Arithmetic](/articles/reading-daniel-without-arithmetic.html) (article)
 - **eternal life** — [Asking for Bread](/reflections/asking-for-bread.html) (reflection)
@@ -1014,7 +1014,7 @@ against it is a companion candidate.
 - **genealogy** — [Almost the Same in the End](/reflections/almost-the-same-in-the-end.html) (reflection) · [He Named the Gatekeepers](/articles/he-named-the-gatekeepers.html) (article) · [Kept Anyway](/reflections/kept-anyway.html) (reflection)
 - **gentiles** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article) · [I Arrived Late](/reflections/i-arrived-late.html) (reflection)
 - **gibbor** — [Meekness](/articles/psalm-45-meekness.html) (article)
-- **gifts** — [Paul's Diagnostic](/books/pauls-diagnostic.html) (book)
+- **gifts** — [Therefore](/books/therefore.html) (book)
 - **gittith** — [The Thursday Psalm](/articles/the-thursday-psalm.html) (article)
 - **giving** — [Our God-Sponsored Projects](/articles/our-god-sponsored-projects.html) (article) · [Trampled](/articles/trampled.html) (article) · [So I Ask](/reflections/so-i-ask.html) (reflection) · [See Me Trying](/reflections/see-me-trying.html) (reflection)
 - **giving life** — [According to Your Steadfast Love](/reflections/according-to-your-steadfast-love.html) (reflection)
@@ -1023,7 +1023,7 @@ against it is a companion candidate.
 - **goodness** — [Taste and See](/reflections/taste-and-see.html) (reflection)
 - **goodness of god** — [Unless I Had Believed](/reflections/unless-i-had-believed.html) (reflection)
 - **governance** — [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection)
-- **grace** — [Paul's Diagnostic](/books/pauls-diagnostic.html) (book) · [Nobody Wants Nathan](/articles/nobody-wants-nathan.html) (article) · [Still Counting](/articles/still-counting.html) (article) · [Draw Me](/reflections/draw-me.html) (reflection) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection)
+- **grace** — [Therefore](/books/therefore.html) (book) · [Nobody Wants Nathan](/articles/nobody-wants-nathan.html) (article) · [Still Counting](/articles/still-counting.html) (article) · [Draw Me](/reflections/draw-me.html) (reflection) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection)
 - **grammar** — [The Song Begins in Longing](/articles/the-song-begins-in-longing.html) (article)
 - **grant** — [The Cause I Applied For](/reflections/the-cause-i-applied-for.html) (reflection)
 - **gratitude** — [Profitable](/articles/profitable.html) (article) · [The Sacrifice of Thanksgiving](/reflections/the-sacrifice-of-thanksgiving.html) (reflection)
@@ -1058,7 +1058,7 @@ against it is a companion candidate.
 - **hope** — [Selah](/reflections/selah.html) (reflection) · [New Every Morning](/reflections/new-every-morning.html) (reflection) · [Not Finished Waking](/articles/not-finished-waking.html) (article)
 - **horn** — [Psalm 75 — How Do I Pray This?](/articles/how-do-i-pray-this.html) (article)
 - **hosea** — [Different Work](/articles/different-work.html) (article) · [Why Do You Think Evil](/reflections/why-do-you-think-evil.html) (reflection)
-- **hospitality** — [Paul's Diagnostic](/books/pauls-diagnostic.html) (book) · [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection)
+- **hospitality** — [Therefore](/books/therefore.html) (book) · [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection)
 - **humility** — [Knowing Where He Came From](/articles/knowing-where-he-came-from.html) (article) · [Pride](/reflections/pride.html) (reflection) · [Nobody Left to Say No](/articles/nobody-left-to-say-no.html) (article) · [The Quiet Soul](/reflections/the-quiet-soul.html) (reflection)
 - **identity** — [Knowing Where He Came From](/articles/knowing-where-he-came-from.html) (article)
 - **idle words** — [What Is an Idle Word?](/word-studies/idle.html) (word study) · [Idle Words](/reflections/idle-words.html) (reflection)
@@ -1129,7 +1129,7 @@ against it is a companion candidate.
 - **memory** — [New Every Morning](/reflections/new-every-morning.html) (reflection)
 - **mentors** — [Profitable](/articles/profitable.html) (article)
 - **menuha** — [The Place Where God Rests](/reflections/the-place-where-god-rests.html) (reflection) · [The Quiet Soul](/reflections/the-quiet-soul.html) (reflection) · [The House the LORD Builds](/reflections/the-house-the-lord-builds.html) (reflection)
-- **mercy** — [Paul's Diagnostic](/books/pauls-diagnostic.html) (book) · [A Christian's Wage](/articles/a-christians-wage.html) (article) · [Who Knows](/reflections/who-knows.html) (reflection) · [The Asking](/reflections/the-asking.html) (reflection) · [Different Work](/articles/different-work.html) (article) · [Why Do You Think Evil](/reflections/why-do-you-think-evil.html) (reflection) · [The One Thing He Wouldn't Delegate](/reflections/the-one-thing-he-wouldnt-delegate.html) (reflection) · [Measured, and Immeasurable](/articles/measured-and-immeasurable.html) (article) · [What Did Jesus Call Wicked?](/articles/what-did-jesus-call-wicked.html) (article) · [When Mercy and Truth Met](/books/when-mercy-and-truth-met.html) (book) · [The Third That Survived](/reflections/the-third-that-survived.html) (reflection)
+- **mercy** — [Therefore](/books/therefore.html) (book) · [A Christian's Wage](/articles/a-christians-wage.html) (article) · [Who Knows](/reflections/who-knows.html) (reflection) · [The Asking](/reflections/the-asking.html) (reflection) · [Different Work](/articles/different-work.html) (article) · [Why Do You Think Evil](/reflections/why-do-you-think-evil.html) (reflection) · [The One Thing He Wouldn't Delegate](/reflections/the-one-thing-he-wouldnt-delegate.html) (reflection) · [Measured, and Immeasurable](/articles/measured-and-immeasurable.html) (article) · [What Did Jesus Call Wicked?](/articles/what-did-jesus-call-wicked.html) (article) · [When Mercy and Truth Met](/books/when-mercy-and-truth-met.html) (book) · [The Third That Survived](/reflections/the-third-that-survived.html) (reflection)
 - **ministry** — [Our God-Sponsored Projects](/articles/our-god-sponsored-projects.html) (article) · [Jesus as Leader](/articles/jesus-as-leader.html) (article)
 - **mishnah** — [The Tamid Psalms](/books/the-tamid-psalms.html) (book)
 - **mishpat** — [Tzedaqah / Dikaiosynē](/word-studies/tzedaqah.html) (word study) · [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection) · [Star Wars](/reflections/star-wars.html) (reflection) · [My Oath — and What It Really Means](/reflections/my-oath.html) (reflection) · [Justice Is Not What You Think](/reflections/justice-is-not-what-you-think.html) (reflection) · [Our Feet Are Standing](/reflections/our-feet-are-standing.html) (reflection) · [He Has Told You…](/books/he-has-told-you.html) (book)
@@ -1166,7 +1166,7 @@ against it is a companion candidate.
 - **one thing** — [Let Him Kiss Me](/reflections/let-him-kiss-me.html) (reflection)
 - **onesimus** — [Knowing Where He Came From](/articles/knowing-where-he-came-from.html) (article)
 - **overcoming** — [Nikaō](/word-studies/nikao.html) (word study)
-- **overcoming evil** — [Paul's Diagnostic](/books/pauls-diagnostic.html) (book)
+- **overcoming evil** — [Therefore](/books/therefore.html) (book)
 - **paired psalms** — [Spot the Difference](/articles/spot-the-difference.html) (article)
 - **papua new guinea** — [Through the Spirit](/articles/through-the-spirit.html) (article) · [Profitable](/articles/profitable.html) (article) · [The One Thing He Wouldn't Delegate](/reflections/the-one-thing-he-wouldnt-delegate.html) (reflection)
 - **parable** — [The Turning Left Open](/articles/the-turning-left-open.html) (article)
@@ -1230,7 +1230,7 @@ against it is a companion candidate.
 - **restraint** — [Idle Words](/reflections/idle-words.html) (reflection)
 - **resurrection** — [Feeling Their Way](/articles/feeling-their-way.html) (article) · [Into Your Hand](/reflections/into-your-hand.html) (reflection) · [Not Finished Waking](/articles/not-finished-waking.html) (article)
 - **revelation** — [Nikaō](/word-studies/nikao.html) (word study)
-- **revenge** — [Paul's Diagnostic](/books/pauls-diagnostic.html) (book)
+- **revenge** — [Therefore](/books/therefore.html) (book)
 - **reward** — [A Christian's Wage](/articles/a-christians-wage.html) (article) · [Still Counting](/articles/still-counting.html) (article)
 - **rhythm** — [The Tamid Psalms](/books/the-tamid-psalms.html) (book)
 - **rich young man** — [Still Counting](/articles/still-counting.html) (article)
@@ -1239,7 +1239,7 @@ against it is a companion candidate.
 - **ritual** — [Communion](/reflections/communion.html) (reflection)
 - **riv** — [Telling It Wrong](/articles/telling-it-wrong.html) (article)
 - **romans** — [The Turning Left Open](/articles/the-turning-left-open.html) (article)
-- **romans 12** — [Paul's Diagnostic](/books/pauls-diagnostic.html) (book)
+- **romans 12** — [Therefore](/books/therefore.html) (book)
 - **running away** — [A Man Who Runs](/books/a-man-who-runs.html) (book)
 - **sabbath** — [Different Work](/articles/different-work.html) (article)
 - **sacrifice** — [The Sacrifice of Thanksgiving](/reflections/the-sacrifice-of-thanksgiving.html) (reflection)
@@ -1307,7 +1307,7 @@ against it is a companion candidate.
 - **tamid** — [The Songs for Every Day](/books/the-songs-for-every-day.html) (book) · [The Tamid Psalms](/books/the-tamid-psalms.html) (book)
 - **taste** — [Taste and See](/reflections/taste-and-see.html) (reflection)
 - **tears** — [This I Know](/reflections/this-i-know.html) (reflection) · [Like Those Who Dream](/reflections/like-those-who-dream.html) (reflection)
-- **teenagers** — [Paul's Diagnostic](/books/pauls-diagnostic.html) (book)
+- **teenagers** — [Therefore](/books/therefore.html) (book)
 - **tehillah** — [Notes for the Band](/reflections/notes-for-the-band.html) (reflection) · [Reading the Label](/articles/reading-the-label.html) (article)
 - **telling it to a child** — [The Turning Left Open](/articles/the-turning-left-open.html) (article)
 - **temple** — [The Tamid Psalms](/books/the-tamid-psalms.html) (book) · [Telling David's Census to an Eight-Year-Old](/reflections/telling-davids-census.html) (reflection) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection) · [Deceived](/reflections/deceived.html) (reflection) · [Delivered to What?](/reflections/delivered-to-what.html) (reflection)
@@ -1319,7 +1319,7 @@ against it is a companion candidate.
 - **thankfulness** — [Have You Not Read](/reflections/have-you-not-read.html) (reflection)
 - **thanksgiving** — [The Same Psalm](/articles/the-same-psalm.html) (article) · [Psalm 75 — How Do I Pray This?](/articles/how-do-i-pray-this.html) (article) · [The Vow That Is Not a Payment](/articles/vows.html) (article) · [The Sacrifice of Thanksgiving](/reflections/the-sacrifice-of-thanksgiving.html) (reflection)
 - **the bench** — [What Is Wicked in This Story?](/reflections/what-is-wicked-in-this-story.html) (reflection) · [What Did Jesus Call Wicked?](/articles/what-did-jesus-call-wicked.html) (article)
-- **the body** — [Paul's Diagnostic](/books/pauls-diagnostic.html) (book)
+- **the body** — [Therefore](/books/therefore.html) (book)
 - **the centurion** — [If You Are](/reflections/if-you-are.html) (reflection) · [Trampled](/articles/trampled.html) (article)
 - **the church** — [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection)
 - **the cross** — [If You Are](/reflections/if-you-are.html) (reflection) · [That Day](/books/that-day.html) (book)
@@ -1412,8 +1412,8 @@ against it is a companion candidate.
 - **yada** — [The Same Psalm](/articles/the-same-psalm.html) (article) · [Deceived](/reflections/deceived.html) (reflection) · [Have They No Knowledge?](/reflections/have-they-no-knowledge.html) (reflection)
 - **yirat adonai** — [The Ordinary Blessing](/reflections/the-ordinary-blessing.html) (reflection)
 - **yoke** — [Different Work](/articles/different-work.html) (article)
-- **younger readers** — [Paul's Diagnostic](/books/pauls-diagnostic.html) (book) · [The Songs for Every Day](/books/the-songs-for-every-day.html) (book) · [Who Would Have Thought — Illustrated](/books/who-would-have-thought-illustrated.html) (book) · [Who Would Have Thought](/books/who-would-have-thought.html) (book)
+- **younger readers** — [Therefore](/books/therefore.html) (book) · [The Songs for Every Day](/books/the-songs-for-every-day.html) (book) · [Who Would Have Thought — Illustrated](/books/who-would-have-thought-illustrated.html) (book) · [Who Would Have Thought](/books/who-would-have-thought.html) (book)
 - **zakar** — [The Asking](/reflections/the-asking.html) (reflection) · [What God Remembers](/articles/what-god-remembers.html) (article) · [Zakar](/word-studies/zakar.html) (word study) · [Kept Anyway](/reflections/kept-anyway.html) (reflection)
 - **zechariah** — [The Piece I Keep Picking Up](/reflections/the-piece-i-keep-picking-up.html) (reflection)
 - **zion** — [Spot the Difference](/articles/spot-the-difference.html) (article) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection)
-<!-- READ-TOKEN 9bdd9db2 · 1418 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 021c828d · 1418 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

@@ -4,7 +4,7 @@
    Run from the repo root:
      NODE_PATH=<dir with pdf-lib> node tools/impose-booklet.js <in-A5.pdf> <out-A4.pdf>
 
-   Added 25 Oct 2026 for Paul's Diagnostic. The Tamid print booklets were
+   Added 25 Oct 2026 for Therefore. The Tamid print booklets were
    imposed in a drafting session and uploaded; this does the same job
    repo-side, so a print booklet travels like every other PDF.
 

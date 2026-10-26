@@ -8,8 +8,8 @@
    ================================================================ */
 const BOOKS_META = [
   {
-    title:    "Paul's Diagnostic",
-    url:      "/books/pauls-diagnostic.html",
+    title:    "Therefore",
+    url:      "/books/therefore.html",
     date:     "2026-10-25",
     scripture: ["Romans 12", "Romans 3:23-24", "Romans 5:8", "Romans 11:32"],
     themes:   ["Romans 12", "younger readers", "teenagers", "daily reading", "grace", "the body", "gifts", "hospitality", "enemies", "revenge", "overcoming evil", "mercy"],
