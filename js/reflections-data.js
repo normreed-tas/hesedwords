@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Maturity?",
+    date:     "2026-10-28",
+    url:      "/reflections/maturity.html",
+    summary:  "Corinth was a new city, rebuilt by Rome a hundred years before and filled with traders and freed slaves, where you got your standing from who you were attached to: I follow Paul, I follow Apollos. Paul thanks God for their speech, their knowledge, their gifts and their waiting, and spends the rest of the letter sorting all four out. To a church that thinks some Christians have graduated to a secret level, he says: there is a secret wisdom, for the mature. Then the secret turns out to be Jesus on a cross, in plain sight, where the rulers of this age looked straight at it and could not read it. The glory they wanted is real — the same word Paul uses for the Lord of glory being killed — but it comes by his road, not around it. And a few lines later he tells them they are still babies.",
+    scripture: ["1 Corinthians 1-2", "1 Corinthians 2:6-8", "1 Corinthians 1:4-12", "1 Corinthians 3:1", "1 Corinthians 4:8"],
+    themes:   ["maturity", "wisdom", "the cross", "glory", "Corinth", "status", "factions", "secret knowledge", "pride", "1 Corinthians read-through"]
+  },
+  {
     title:    "Then We Stopped",
     date:     "2026-10-16",
     url:      "/reflections/then-we-stopped.html",
