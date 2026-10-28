@@ -34,6 +34,19 @@
   .book-card.soon { opacity: 0.55; }
   .book-card.soon .book-card-link { pointer-events: none; color: var(--muted); }
 
+
+  /* Cover thumbnails, added 28 Oct 2026. The cover (words included) is
+     rendered by tools/render-cover.js --thumb into images/books/<slug>-thumb.jpg.
+     A book without one gets a lettered stand-in in the same proportions. */
+  .book-card-cover { display: block; margin: -32px -28px 24px; }
+  .book-card-cover img { display: block; width: 100%; height: auto; aspect-ratio: 148 / 210; object-fit: cover; }
+  .book-card-cover.lettered {
+    aspect-ratio: 148 / 210; background: #121216; color: #fff;
+    padding: 12% 10%; box-sizing: border-box; text-decoration: none;
+    display: flex; flex-direction: column;
+  }
+  .book-card-cover.lettered .t { font-size: 34px; font-weight: 300; line-height: 1.05; letter-spacing: -0.01em; }
+  .book-card-cover.lettered .b { margin-top: auto; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; opacity: .85; }
   @media (max-width: 900px) { .books-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 560px) { .books-grid { grid-template-columns: 1fr; } }
 </style>
@@ -71,6 +84,7 @@
 <div class="books-grid">
 
   <div class="book-card">
+    <a class="book-card-cover" href="/books/therefore.html"><img src="/images/books/therefore-thumb.jpg" alt="Cover of Therefore" loading="lazy" width="671" height="953"></a>
     <div class="book-card-label">For Younger Readers</div>
     <h2 class="book-card-title">Therefore</h2>
     <p class="book-card-subtitle">Romans 12 in seven days, for a young teenager</p>
@@ -82,6 +96,7 @@
   </div>
 
   <div class="book-card">
+    <a class="book-card-cover" href="/books/the-songs-for-every-day.html"><img src="/images/books/the-songs-for-every-day-thumb.jpg" alt="Cover of The Songs for Every Day" loading="lazy" width="671" height="953"></a>
     <div class="book-card-label">For Younger Readers</div>
     <h2 class="book-card-title">The Songs for Every Day</h2>
     <p class="book-card-subtitle">Seven psalms, one for each day of the week</p>
@@ -93,6 +108,7 @@
   </div>
 
   <div class="book-card">
+    <a class="book-card-cover" href="/books/the-tamid-psalms.html"><img src="/images/books/the-tamid-psalms-thumb.jpg" alt="Cover of The Tamid Psalms" loading="lazy" width="671" height="953"></a>
     <div class="book-card-label">For Daily Reading</div>
     <h2 class="book-card-title">The Tamid Psalms</h2>
     <p class="book-card-subtitle">The seven psalms the Levites sang beside the continual offering</p>
@@ -104,6 +120,7 @@
   </div>
 
   <div class="book-card">
+    <a class="book-card-cover" href="/books/a-man-who-runs.html"><img src="/images/books/a-man-who-runs-thumb.jpg" alt="Cover of A Man Who Runs" loading="lazy" width="671" height="953"></a>
     <div class="book-card-label">Historical Fiction</div>
     <h2 class="book-card-title">A Man Who Runs</h2>
     <p class="book-card-subtitle">John Mark, Rome, the winter of 66</p>
@@ -114,6 +131,7 @@
   </div>
 
   <div class="book-card">
+    <a class="book-card-cover lettered" href="/books/what-we-did-without-knowing.html" aria-label="What We Did Without Knowing"><span class="t">What We Did Without Knowing</span><span class="b">Norm Reed</span></a>
     <div class="book-card-label">Gospel Reading</div>
     <h2 class="book-card-title">What We Did Without Knowing</h2>
     <p class="book-card-subtitle">A Reading of Matthew 25</p>
@@ -124,6 +142,7 @@
   </div>
 
   <div class="book-card">
+    <a class="book-card-cover" href="/books/when-mercy-and-truth-met.html"><img src="/images/books/when-mercy-and-truth-met-thumb.jpg" alt="Cover of When Mercy and Truth Met" loading="lazy" width="671" height="953"></a>
     <div class="book-card-label">Biblical Theology</div>
     <h2 class="book-card-title">When Mercy and Truth Met</h2>
     <p class="book-card-subtitle">A Reading of Psalm 85:10&ndash;13</p>
@@ -134,6 +153,7 @@
   </div>
 
   <div class="book-card">
+    <a class="book-card-cover" href="/books/songs-for-the-road.html"><img src="/images/books/songs-for-the-road-thumb.jpg" alt="Cover of Songs for the Road" loading="lazy" width="671" height="953"></a>
     <div class="book-card-label">Psalms of Ascent</div>
     <h2 class="book-card-title">Songs for the Road</h2>
     <p class="book-card-subtitle">Reflections on the Psalms of Ascent</p>
@@ -144,6 +164,7 @@
   </div>
 
   <div class="book-card">
+    <a class="book-card-cover" href="/books/job-43.html"><img src="/images/books/job-43-thumb.jpg" alt="Cover of Job 43" loading="lazy" width="671" height="953"></a>
     <div class="book-card-label">Biblical Theology</div>
     <h2 class="book-card-title">Job 43</h2>
     <p class="book-card-subtitle">The Unwritten Last Chapter</p>
@@ -154,6 +175,7 @@
   </div>
 
   <div class="book-card">
+    <a class="book-card-cover" href="/books/the-open-hand.html"><img src="/images/books/the-open-hand-thumb.jpg" alt="Cover of The Man Who Opened His Hand" loading="lazy" width="671" height="953"></a>
     <div class="book-card-label">Story &nbsp;·&nbsp; Written for Teenagers</div>
     <h2 class="book-card-title">The Man Who Opened His Hand</h2>
     <p class="book-card-subtitle">The Story of Job</p>
@@ -164,6 +186,7 @@
   </div>
 
   <div class="book-card">
+    <a class="book-card-cover" href="/books/that-day.html"><img src="/images/books/that-day-thumb.jpg" alt="Cover of That Day" loading="lazy" width="671" height="953"></a>
     <div class="book-card-label">Historical Fiction &nbsp;&middot;&nbsp; A Meditation</div>
     <h2 class="book-card-title">That Day</h2>
     <p class="book-card-subtitle">A Meditation on Simon of Cyrene and the Cross</p>
@@ -174,6 +197,7 @@
   </div>
 
   <div class="book-card">
+    <a class="book-card-cover" href="/books/the-oldest-loneliness.html"><img src="/images/books/the-oldest-loneliness-thumb.jpg" alt="Cover of The Oldest Loneliness" loading="lazy" width="671" height="953"></a>
     <div class="book-card-label">Pastoral Writing</div>
     <h2 class="book-card-title">The Oldest Loneliness</h2>
     <p class="book-card-subtitle">A devotional book for people in prison, drawn from Job</p>
@@ -184,6 +208,7 @@
   </div>
 
   <div class="book-card">
+    <a class="book-card-cover" href="/books/he-has-told-you.html"><img src="/images/books/he-has-told-you-thumb.jpg" alt="Cover of He Has Told You&hellip;" loading="lazy" width="671" height="953"></a>
     <div class="book-card-label">Canonical Study</div>
     <h2 class="book-card-title">He Has Told You&hellip;</h2>
     <p class="book-card-subtitle">Micah 6:8 — Canon, Christ, and the Charter of the Church</p>
@@ -194,6 +219,7 @@
   </div>
 
   <div class="book-card">
+    <a class="book-card-cover" href="/books/who-would-have-thought.html"><img src="/images/books/who-would-have-thought-thumb.jpg" alt="Cover of Who Would Have Thought" loading="lazy" width="671" height="953"></a>
     <div class="book-card-label">Story &nbsp;·&nbsp; Written for Younger Readers</div>
     <h2 class="book-card-title">Who Would Have Thought</h2>
     <p class="book-card-subtitle">A story from Psalm 19</p>
@@ -204,6 +230,7 @@
   </div>
 
   <div class="book-card">
+    <a class="book-card-cover" href="/books/who-would-have-thought-illustrated.html"><img src="/images/books/who-would-have-thought-illustrated-thumb.jpg" alt="Cover of Who Would Have Thought" loading="lazy" width="671" height="953"></a>
     <div class="book-card-label">Story &nbsp;·&nbsp; Illustrated Edition</div>
     <h2 class="book-card-title">Who Would Have Thought <span style="font-size:.75em;letter-spacing:.05em;">— Illustrated</span></h2>
     <p class="book-card-subtitle">The same story, with drawings — for a younger reader to hold</p>

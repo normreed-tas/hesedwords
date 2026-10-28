@@ -24,7 +24,7 @@ const opt = k => { const i = argv.indexOf('--' + k); return i >= 0 ? argv[i + 1]
 const pos = argv.filter((a, i) => !a.startsWith('--') && !(i > 0 && argv[i - 1].startsWith('--')));
 const [img, bodyPdf, outPdf] = pos;
 if (!img || !bodyPdf || !outPdf) {
-  console.error('usage: node tools/render-cover.js <image> <body-A5.pdf> <out.pdf> --title T --subtitle S --byline B [--blurb text] [--png preview.png]');
+  console.error('usage: node tools/render-cover.js <image> <body-A5.pdf> <out.pdf> --title T --subtitle S --byline B [--blurb text] [--png preview.png] [--thumb cover.jpg]  (body '-' = thumbnail only)');
   process.exit(1);
 }
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
@@ -64,9 +64,12 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   catch (e) { console.error('Needs playwright and pdf-lib on NODE_PATH (see the header).'); process.exit(1); }
 
   const browser = await chromium.launch();
-  const page = await browser.newPage({ viewport: { width: 559, height: 794 } });
+  const page = await browser.newPage({ viewport: { width: 559, height: 794 }, deviceScaleFactor: 1.2 });
   await page.setContent(html, { waitUntil: 'networkidle' });
   if (opt('png')) await page.screenshot({ path: opt('png'), fullPage: true });   // preview, for checking by eye
+  // --thumb writes the finished cover (words included) as a JPG for the books page.
+  if (opt('thumb')) await page.screenshot({ path: opt('thumb'), type: 'jpeg', quality: 82, fullPage: true });
+  if (bodyPdf === '-') { await browser.close(); console.log('wrote ' + opt('thumb')); return; }
   const coverBytes = await page.pdf({ format: 'A5', printBackground: true, margin: { top: 0, right: 0, bottom: 0, left: 0 } });
   await browser.close();
 
