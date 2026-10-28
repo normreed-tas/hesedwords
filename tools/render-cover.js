@@ -24,12 +24,20 @@ const opt = k => { const i = argv.indexOf('--' + k); return i >= 0 ? argv[i + 1]
 const pos = argv.filter((a, i) => !a.startsWith('--') && !(i > 0 && argv[i - 1].startsWith('--')));
 const [img, bodyPdf, outPdf] = pos;
 if (!img || !bodyPdf || !outPdf) {
-  console.error('usage: node tools/render-cover.js <image> <body-A5.pdf> <out.pdf> --title T --subtitle S --byline B [--blurb text] [--png preview.png] [--thumb cover.jpg]  (body '-' = thumbnail only)');
+  console.error('usage: node tools/render-cover.js <image> <body-A5.pdf> <out.pdf> --title T --subtitle S --byline B [--blurb text] [--png preview.png] [--thumb cover.jpg] [--light]  (body '-' = thumbnail only)');
   process.exit(1);
 }
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 const imgData = 'data:image/jpeg;base64,' + fs.readFileSync(img).toString('base64');
 
+// --light, added 28 Oct 2026 for the younger readers' books: dark ink on a
+// pale image, with a soft cream wash instead of the dark shading.
+const LIGHT = `
+  .cover::before { background: linear-gradient(rgba(250,246,238,.7), rgba(250,246,238,0)); }
+  .cover::after { background: linear-gradient(rgba(250,246,238,0), rgba(250,246,238,.75)); }
+  .top, .blurb, .byline { color: #23211d; }
+  .subtitle { color: rgba(35,33,29,.8); }
+`;
 const html = `<!doctype html><html><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;1,6..72,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -51,7 +59,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
            color: rgba(255,255,255,.93); }
   .byline { position: absolute; bottom: 13mm; left: 13mm; z-index: 1; color: rgba(255,255,255,.9);
             font-family: 'IBM Plex Mono', monospace; font-size: 8.5pt; letter-spacing: .18em; text-transform: uppercase; }
-</style></head><body>
+${argv.includes('--light') ? LIGHT : ''}</style></head><body>
 <div class="cover"><img src="${imgData}">
   <div class="top"><p class="title">${esc(opt('title'))}</p><p class="subtitle">${esc(opt('subtitle'))}</p></div>
   ${opt('blurb') ? `<p class="blurb">${esc(opt('blurb'))}</p>` : ''}
