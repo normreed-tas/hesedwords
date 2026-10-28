@@ -83,6 +83,26 @@
   }
   .respond p:last-child { margin-bottom: 0; }
   /* Print only: keep each response box whole, and leave room to write or draw in it. */
+  /* Front-cover copy in print (inside front cover); a standfirst on the web page. */
+  .cover-copy {
+    font-size: 1.22rem;
+    line-height: 1.6;
+    color: var(--muted);
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: 1.6rem;
+    margin: 0 0 2.2rem 0;
+  }
+  /* The cover image on the web page. In print the cover is its own page,
+     rendered separately by tools/render-cover.js and merged in front. */
+  .web-cover { margin: 0 0 2.2rem 0; }
+  .web-cover img { width: 100%; max-width: 420px; height: auto; display: block; }
+  @media print {
+    .web-cover, .hw-article-meta, .hw-article h1 { display: none !important; }
+    .hw-article-body .chapter-open.first { break-before: page !important; }
+    .cover-copy { font-size: 1.05rem; padding-bottom: 1rem; margin-bottom: 1.2rem; }
+    .front-note { break-inside: avoid; }
+  }
+
   /* Each response gets a page of its own in print, so there is room to draw. */
   @media print { .respond { break-before: page; break-inside: avoid; min-height: 16cm; border-bottom: none; } }
 
@@ -125,6 +145,10 @@
       <h1>Therefore</h1>
       <div class="hw-article-body">
 
+        <figure class="web-cover"><img src="/images/books/therefore-cover.jpg" alt="The Colosseum in Rome at sunset" width="1410" height="2250" /></figure>
+
+        <p class="cover-copy">About two thousand years ago a man called Paul wrote a letter to a group of Christians in Rome. He had never met them. He was planning to visit and had not managed it yet, so he wrote instead — and it turned into the longest and most carefully argued letter he ever sent.</p>
+
         <div class="front-note">
           <h2>About the Bible words in this book</h2>
           <p>The Bible text here is the World English Bible, which anyone may copy and share freely.</p>
@@ -136,9 +160,7 @@
           <h2>Before you start</h2>
         </div>
 
-        <p>About two thousand years ago a man called Paul wrote a letter to a group of Christians in Rome. He had never met them. He was planning to visit and had not managed it yet, so he wrote instead — and it turned into the longest and most carefully argued letter he ever sent.</p>
-
-        <p>For eleven chapters he explains what God has done. Then, in chapter twelve, he turns a corner and starts describing what people look like once they have understood it.</p>
+        <p>For eleven chapters Paul explains what God has done. Then, in chapter twelve, he turns a corner and starts describing what people look like once they have understood it.</p>
 
         <p>That chapter is what this book is about. There are seven days in it, Sunday to Saturday.</p>
 
