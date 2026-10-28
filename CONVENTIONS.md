@@ -483,6 +483,110 @@ line onto a page of its own.
 A translation note (e.g. a memory verse quoted in older wording where the rest of the
 piece uses ESV) counts as a footnote — mark the exception at first occurrence.
 
+## Book covers and print booklets
+
+**Every book has a cover**, and it appears in three places: as the card image on
+`books.html`, at the top of the book's own page, and as the first page of its PDF. The
+standard was set on 28 October 2026, when all fourteen books were given one. A new book is
+not finished until it has a cover.
+
+The work is split three ways, and the split matters: the image is Norm's, the words are the
+drafting session's, and the type is set repo-side so that every cover in the series matches.
+
+### What the drafting session supplies
+
+At handover, with the book page, state:
+
+- **The cover words**: the title exactly as it should appear on the cover, a subtitle (one
+  line, sentence case; it is set in capitals), and optionally a short **cover paragraph**
+  (two or three sentences) if the book should carry one on the front, as *Therefore* does.
+- **The reader**: younger readers, teenagers, or adults. This decides the cover's tone.
+- **A one-line image idea** for Norm's Canva brief: a real place or object that belongs to
+  the book, not a symbol of it.
+
+**Do not build cover markup into the page.** No cover image, no `<figure>`, no lettered
+title block. The cover image is inserted repo-side when it exists.
+
+**Do not write words into an image prompt.** The image carries no type at all.
+
+### What Norm makes in Canva
+
+One image per book, **with no words on it**:
+
+- **Size:** 1748 × 2480 px (A5 portrait at print quality), saved as JPG.
+- **Look:** a photograph in low, warm light (early morning or late evening), of a real
+  place or object that belongs to the book. The illustrated edition of *Who Would Have
+  Thought* is the one exception: it matches its own drawings, in watercolour.
+- **Tone by reader:**
+  - **Adults and teenagers: dark covers.** The top third is dark and quiet (sky, shadowed
+    wall, deep water) for the title in white. The foot is dark and plain for the byline.
+  - **Younger readers: light covers.** The top third is pale and quiet (morning sky, cream
+    wall, plain paper) for the title in dark ink. The foot is pale and plain. Keep it soft,
+    with low contrast and gentle colour.
+- **Avoid:** close-up faces, any picture of Jesus, crosses used as a logo, stained glass,
+  praying hands, open Bibles pouring light, doves. These read as stock religious imagery
+  and break the series.
+- **In Canva:** use Magic Media (Text to Image), Photo style, a portrait shape, and end
+  every prompt with *"dark empty sky at the top, dark plain ground at the bottom, no text"*
+  (or *"pale empty sky … soft light plain ground …"* for a light cover).
+
+The file goes into `inbox/`, named `<slug>.jpg` if convenient. A zip of numbered Canva
+exports is fine: match each image to its book by looking at it.
+
+### What Claude Code does
+
+1. **Look at the image before using it.** Confirm which book it is, and check it for a
+   **watermark** or stray lettering. One of the first batch had faint Thai text across the
+   middle and had to be regenerated. Check that the top and foot are quiet enough for type.
+2. **Copy it** to `images/books/<slug>-cover.jpg`.
+3. **Set the words** with `tools/render-cover.js`. It needs both playwright and pdf-lib
+   on `NODE_PATH` (Windows separator `;`); pdf-lib is not a repo dependency, so install
+   it in a scratch directory. The thumbnail for the card and the book page:
+   ```
+   node tools/render-cover.js images/books/<slug>-cover.jpg - - \
+     --title "…" --subtitle "…" --byline "Norm Reed" --thumb images/books/<slug>-thumb.jpg
+   ```
+   Options: `--light` (dark ink and a cream wash, for younger readers' books), `--blurb "…"`
+   (cover paragraph over the foot), `--align top|bottom` (shift an image clear of the
+   words), `--png preview.png` (look at it). **Look at every thumbnail.** Long subtitles can
+   run into the picture; shorten the subtitle or use `--align` rather than shrinking the type.
+4. **The books page card** opens with
+   `<a class="book-card-cover" href="/books/<slug>.html"><img src="/images/books/<slug>-thumb.jpg" …></a>`.
+   Copy an existing card.
+5. **The book page** gets the thumbnail as a `<figure class="web-cover">` at the top of
+   `.hw-article-body`, hidden in print (`@media print { .web-cover { display: none } }`)
+   because the PDF carries the cover as its own first page. Copy the block from any book page.
+6. **The PDF.** Render the body, then put the cover in front of it with the same command,
+   giving a body PDF and an output instead of `- -`:
+   ```
+   NODE_PATH="$PW" node tools/render-pdf.js books/<slug>.html inbox/body.pdf --a5 --numbers
+   node tools/render-cover.js images/books/<slug>-cover.jpg inbox/body.pdf books/<slug>.pdf --title … [--light] [--blurb …]
+   ```
+   The cover is rendered without a page number (Chromium cannot skip the first folio, so it
+   is a separate render merged in front), and is scaled automatically if the body is A4.
+   Render to `inbox/` first when the body comes from `books/<slug>.html` directly; never
+   write the body PDF over the live file.
+7. **A printable booklet**, if the book has one, is imposed from that finished A5 PDF:
+   ```
+   node tools/impose-booklet.js books/<slug>.pdf books/<slug>-print.pdf
+   ```
+   Saddle-stitched, two A5 pages to each side of an A4 sheet: print double-sided, flipping
+   on the **short edge**, fold, staple. Pages are padded with blanks to a multiple of four;
+   aim for a multiple of four (32 is a good length) so there are no blanks. If a booklet
+   was laid out with spreads in mind, add `--inside-blank` when the cover goes on, or every
+   spread shifts by one page.
+
+**For booklets, check the pages, not just the count.** Read each page's text (`pdftotext`,
+or pdfjs) to confirm that each day or chapter starts on a fresh page, that no heading or
+response box is stranded at a page foot, and that the cover carries no folio.
+
+**An uploaded book page is checked against the published one before it is used.** On
+28 October 2026 a drafting session's revision of *Therefore* turned out to be built from an
+older copy, and would have silently undone four fixes Norm had approved three days before.
+Diff the upload against `books/<slug>.html`, and apply only the changes it was meant to make.
+
+## Checking any PDF
+
 **Checking the result.** `pdftotext` IS available on this machine (`/mingw64/bin/pdftotext`),
 so check the PDF itself rather than a proxy — `pdftotext -layout <file>.pdf out.txt` splits
 pages on `\f`, which verifies page count, what lands at the top of each page, whether the
@@ -490,4 +594,4 @@ folio is present, and that the stripped elements are actually gone. An earlier v
 this note said the PDF could not be inspected from the shell and to screenshot the stripped
 HTML instead; that was wrong. The script also leaves the print copy beside the PDF as
 `<slug>-PRINT.html` (gitignored) if you do want to look at it rendered.
-<!-- READ-TOKEN aadacdcf · 492 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN b486d626 · 596 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

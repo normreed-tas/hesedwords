@@ -50,7 +50,7 @@ Full addresses, so you never have to build one:
 
 | File | When |
 |---|---|
-| Page conventions — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONVENTIONS.md?v=473dedb4 | **Always**, before building any page |
+| Page conventions — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONVENTIONS.md?v=214ccb0e | **Always**, before building any page |
 | Brief inventory — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/SITE-INDEX-BRIEF.md?v=5f2fe249 | **Always**, before proposing a subject |
 | How we work — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/COLLABORATION.md?v=12bd386b | Always, for voice and working practice |
 | Full inventory — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/SITE-INDEX.md?v=8d7afb20 | When hunting themes, summaries or a companion |
@@ -162,7 +162,8 @@ repo-side, where the naming conventions and the index live.
 Article / Word Study / Book); scripture reference and date exactly as they should
 appear in the meta block; for a reflection only, whether a PDF is wanted (every article
 and every book has one — do not ask); whether a companion line is wanted
-and to which pieces; which glossary words are used; and any claim that rests on a
+and to which pieces; for a book, the cover words, the reader, and a one-line image idea
+(see "Book covers" in `CONVENTIONS.md`); which glossary words are used; and any claim that rests on a
 count or a date, flagged `[verify]` so it is checked before publishing rather than
 after.
 
@@ -214,4 +215,4 @@ Answers are kept in the repo so the resolved item stops being re-raised in three
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN fd68576d · 216 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 3eee0b9a · 217 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
