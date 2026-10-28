@@ -24,7 +24,7 @@ const opt = k => { const i = argv.indexOf('--' + k); return i >= 0 ? argv[i + 1]
 const pos = argv.filter((a, i) => !a.startsWith('--') && !(i > 0 && argv[i - 1].startsWith('--')));
 const [img, bodyPdf, outPdf] = pos;
 if (!img || !bodyPdf || !outPdf) {
-  console.error('usage: node tools/render-cover.js <image> <body-A5.pdf> <out.pdf> --title T --subtitle S --byline B [--png preview.png]');
+  console.error('usage: node tools/render-cover.js <image> <body-A5.pdf> <out.pdf> --title T --subtitle S --byline B [--blurb text] [--png preview.png]');
   process.exit(1);
 }
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
@@ -40,17 +40,21 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   /* Shade the top and foot so the words read on any image. */
   .cover::before, .cover::after { content: ''; position: absolute; left: 0; right: 0; }
   .cover::before { top: 0; height: 42%; background: linear-gradient(rgba(10,10,14,.72), rgba(10,10,14,0)); }
-  .cover::after { bottom: 0; height: 22%; background: linear-gradient(rgba(10,10,14,0), rgba(10,10,14,.7)); }
+  .cover::after { bottom: 0; height: ${opt('blurb') ? '45%' : '22%'}; background: linear-gradient(rgba(10,10,14,0), rgba(10,10,14,${opt('blurb') ? '.85' : '.7'})); }
   .top { position: absolute; top: 16mm; left: 13mm; right: 13mm; z-index: 1; color: #fff; }
   .title { font-family: 'Newsreader', Georgia, serif; font-weight: 300; font-size: 50pt;
            line-height: 1; letter-spacing: -0.01em; margin: 0; }
   .subtitle { font-family: 'IBM Plex Mono', monospace; font-size: 8.5pt; letter-spacing: .18em;
               text-transform: uppercase; margin: 6mm 0 0; color: rgba(255,255,255,.85); }
+  .blurb { position: absolute; bottom: 24mm; left: 13mm; right: 13mm; z-index: 1; margin: 0;
+           font-family: 'Newsreader', Georgia, serif; font-weight: 300; font-size: 11.5pt; line-height: 1.45;
+           color: rgba(255,255,255,.93); }
   .byline { position: absolute; bottom: 13mm; left: 13mm; z-index: 1; color: rgba(255,255,255,.9);
             font-family: 'IBM Plex Mono', monospace; font-size: 8.5pt; letter-spacing: .18em; text-transform: uppercase; }
 </style></head><body>
 <div class="cover"><img src="${imgData}">
   <div class="top"><p class="title">${esc(opt('title'))}</p><p class="subtitle">${esc(opt('subtitle'))}</p></div>
+  ${opt('blurb') ? `<p class="blurb">${esc(opt('blurb'))}</p>` : ''}
   <div class="byline">${esc(opt('byline'))}</div>
 </div></body></html>`;
 

@@ -83,7 +83,7 @@
   }
   .respond p:last-child { margin-bottom: 0; }
   /* Print only: keep each response box whole, and leave room to write or draw in it. */
-  /* Front-cover copy in print (inside front cover); a standfirst on the web page. */
+  /* Front-cover copy in print (set on the cover by render-cover.js); a standfirst on the web page. */
   .cover-copy {
     font-size: 1.22rem;
     line-height: 1.6;
@@ -98,8 +98,8 @@
   .web-cover img { width: 100%; max-width: 420px; height: auto; display: block; }
   @media print {
     .web-cover, .hw-article-meta, .hw-article h1 { display: none !important; }
-    .hw-article-body .chapter-open.first { break-before: page !important; }
-    .cover-copy { font-size: 1.05rem; padding-bottom: 1rem; margin-bottom: 1.2rem; }
+    /* The cover copy is printed on the front cover itself, so not again inside. */
+    .cover-copy { display: none !important; }
     .front-note { break-inside: avoid; }
   }
 
