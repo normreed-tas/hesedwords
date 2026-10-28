@@ -24,7 +24,7 @@ const opt = k => { const i = argv.indexOf('--' + k); return i >= 0 ? argv[i + 1]
 const pos = argv.filter((a, i) => !a.startsWith('--') && !(i > 0 && argv[i - 1].startsWith('--')));
 const [img, bodyPdf, outPdf] = pos;
 if (!img || !bodyPdf || !outPdf) {
-  console.error('usage: node tools/render-cover.js <image> <body-A5.pdf> <out.pdf> --title T --subtitle S --byline B [--blurb text] [--png preview.png] [--thumb cover.jpg] [--light] [--align top|bottom]  (body '-' = thumbnail only)');
+  console.error('usage: node tools/render-cover.js <image> <body-A5.pdf> <out.pdf> --title T --subtitle S --byline B [--blurb text] [--png preview.png] [--thumb cover.jpg] [--light] [--align top|bottom] [--inside-blank]  (body '-' = thumbnail only)');
   process.exit(1);
 }
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
@@ -84,7 +84,21 @@ ${argv.includes('--light') ? LIGHT : ''}</style></head><body>
   const out = await PDFDocument.create();
   const cover = await PDFDocument.load(coverBytes);
   const body = await PDFDocument.load(fs.readFileSync(bodyPdf));
-  (await out.copyPages(cover, [0])).forEach(p => out.addPage(p));
+  // The cover is rendered at A5. If the book is another size (A4, say), scale
+  // it to the body's page size; the drawing is vector, so it stays sharp.
+  const [bw, bh] = [body.getPage(0).getWidth(), body.getPage(0).getHeight()];
+  const [cw, ch] = [cover.getPage(0).getWidth(), cover.getPage(0).getHeight()];
+  if (Math.abs(bw - cw) < 2 && Math.abs(bh - ch) < 2) {
+    (await out.copyPages(cover, [0])).forEach(p => out.addPage(p));
+  } else {
+    const [emb] = await out.embedPdf(cover, [0]);
+    const k = Math.max(bw / cw, bh / ch);
+    const pg = out.addPage([bw, bh]);
+    pg.drawPage(emb, { x: (bw - cw * k) / 2, y: (bh - ch * k) / 2, width: cw * k, height: ch * k });
+  }
+  // --inside-blank: a blank inside front cover, so a booklet laid out with
+  // right-hand openings keeps them (one cover page alone flips every spread).
+  if (argv.includes('--inside-blank')) out.addPage([bw, bh]);
   (await out.copyPages(body, body.getPageIndices())).forEach(p => out.addPage(p));
   fs.writeFileSync(outPdf, await out.save());
   console.log(`wrote ${outPdf}: cover + ${body.getPageCount()} pages = ${out.getPageCount()}`);

@@ -41,7 +41,13 @@ const A4W = 841.89, A4H = 595.28;   // landscape A4, in points
   const n = src.getPageCount();
   const total = Math.ceil(n / 4) * 4;
   const out = await PDFDocument.create();
-  const embedded = await out.embedPages(src.getPages());
+  // Embed one page at a time: a page with no content stream (a blank some
+  // tools write, e.g. pypdf) cannot be embedded - pdf-lib only fails at save -
+  // so it is checked first and left blank.
+  const embedded = [];
+  for (const p of src.getPages()) {
+    embedded.push(p.node.Contents() ? await out.embedPage(p) : null);
+  }
   const page = i => (i < n ? embedded[i] : null);   // null = blank padding
 
   for (let s = 0; s < total / 2; s++) {
