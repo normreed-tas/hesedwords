@@ -422,6 +422,9 @@ footer.hw-foot a:hover { color: var(--oxblood-on-dark); }
   .hw-room { grid-template-columns: 1fr; gap: 8px; }
   .hw-room .enter { text-align: left; }
   .hw-article-grid { grid-template-columns: 1fr; gap: 24px; }
+  /* A grid column grows to fit its widest content unless told otherwise; a
+     fixed-width embed (a poster, say) then pushes the page off the screen. */
+  .hw-article-grid > * { min-width: 0; }
   .hw-article-meta { display: flex; gap: 16px; flex-wrap: wrap; line-height: 1.5; }
   .hw-article-meta .byline { margin-top: 0; }
   .hw-article h1 { font-size: 42px; max-width: none; }
@@ -435,4 +438,14 @@ footer.hw-foot a:hover { color: var(--oxblood-on-dark); }
   .hw-hero h1 { font-size: 42px; }
   .hw-hero .hw-tagline { font-size: 28px; }
   header.hw-nav nav { gap: 14px; font-size: 10px; }
+  /* Narrow phones: the wordmark and six links cannot share one 68px row, and
+     the links were spilling off the right edge. Stack them, let the links wrap
+     across the full width, and let the bar grow to fit. Not sticky here, so
+     the taller bar does not sit over the reading. */
+  header.hw-nav { position: static; }
+  header.hw-nav .hw-nav-inner {
+    height: auto; flex-direction: column; align-items: flex-start;
+    gap: 10px; padding-top: 14px; padding-bottom: 14px;
+  }
+  header.hw-nav nav { gap: 8px 16px; }
 }
