@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "An Invitation to Strike",
+    date:     "2026-10-29",
+    url:      "/reflections/an-invitation-to-strike.html",
+    summary:  "Psalm 141 opens in a hurry: hear me, and let my prayer be counted as incense. Two verses on, the same man asks to be restrained: set a guard over my mouth. Then verse 5: let a righteous man strike me — it is hesed, the word for what God keeps when his people do not; let him rebuke me — it is oil for my head, the welcome poured on a guest. Let my head not refuse it: a request lodged before the correction comes, about how he will take it. James says we ask wrongly; most of our asking is for what we want, with nobody else in the conversation. Asking to be corrected makes the correction an answer. Two pastor friends in a car, an invitation withdrawn, and the resentment I remember better than the conversation.",
+    scripture: ["Psalm 141", "Psalm 141:5", "James 4:3"],
+    themes:   ["correction asked for", "hesed", "prayer", "being heard", "the righteous friend", "rebuke", "anointing", "asking amiss", "pastoring", "humility"]
+  },
+  {
     title:    "Maturity?",
     date:     "2026-10-28",
     url:      "/reflections/maturity.html",
