@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Struck by Kindness",
+    url:      "/articles/struck-by-kindness.html",
+    date:     "2026-10-30",
+    scripture: ["Psalm 141:5", "Psalm 141:3", "Psalm 139:23-24", "Jeremiah 17:9", "Psalm 51"],
+    themes:   ["correction invited", "hesed", "tzaddiq", "the righteous friend", "leadership", "success", "self-examination", "friendship", "loyalty", "pastoring", "humility"],
+    summary:  "Psalm 141:5 — let a righteous man strike me, it is hesed. An article about correction invited in advance, and about becoming the man who gives it. A good year attaches to the leader and a bad year has causes, and in ministry a full church looks like a verdict, so correction sounds like resistance to God. Search me is the right prayer, but the heart under suspicion is the one conducting the search; so two verses after asking God to guard his mouth, David names a man, a tzaddiq, qualified by what he is rather than his office. The David of Psalm 51 is the David of Psalm 141: struck once, asking for it now. Norm Armstrong, whose years of no criticism made his word count. The test of the friend comes afterwards, in staying. Find the man. Ask him while you are young."
+  },
+  {
     title:    "The Turning Left Open",
     url:      "/articles/the-turning-left-open.html",
     date:     "2026-10-23",
