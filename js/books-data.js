@@ -8,6 +8,14 @@
    ================================================================ */
 const BOOKS_META = [
   {
+    title:    "God Is Searching",
+    url:      "/books/god-is-searching.html",
+    date:     "2026-10-31",
+    scripture: ["2 Chronicles 16:9", "2 Chronicles 14", "2 Chronicles 15", "2 Chronicles 16"],
+    themes:   ["Asa", "seeking God", "darash", "shalem", "waiting", "leadership", "administration", "self-reliance", "correction", "prophets", "Hanani", "Azariah", "decision-making"],
+    summary:  "Lessons from the life of King Asa, 2 Chronicles 14–16. The story happens twice. Zerah comes with a million men; Asa draws up his lines at Zephathah and asks God to handle it, and Azariah tells him his work shall be rewarded. Baasha fortifies Ramah; Asa sends the temple silver and gold to Ben-hadad, the Syrian army takes Ijon, Dan and Abel-maim, and the stones of Ramah build Geba and Mizpah. Hanani tells him he relied on Syria and not the LORD, and from now on he will have wars, and Asa puts him in the stocks. In the end he does not seek the LORD, even in his disease. 16:9: the eyes of the LORD run to and fro to give strong support to those whose heart is shalem, whole, toward him, and the Chronicler has used that word of Asa. Norm on being a man who fixes problems, a leadership team that says wait, the village in Texas he did not build, and the aircraft in Papua New Guinea he did not arrange. Did you leave him anything to do?"
+  },
+  {
     title:    "Therefore",
     url:      "/books/therefore.html",
     date:     "2026-10-25",
