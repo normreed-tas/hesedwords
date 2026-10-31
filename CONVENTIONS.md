@@ -559,9 +559,12 @@ exports is fine: match each image to its book by looking at it.
 6. **The PDF.** Render the body, then put the cover in front of it with the same command,
    giving a body PDF and an output instead of `- -`:
    ```
-   NODE_PATH="$PW" node tools/render-pdf.js books/<slug>.html inbox/body.pdf --a5 --numbers
+   NODE_PATH="$PW" node tools/render-pdf.js books/<slug>.html inbox/body.pdf --numbers
    node tools/render-cover.js images/books/<slug>-cover.jpg inbox/body.pdf books/<slug>.pdf --title … [--light] [--blurb …]
    ```
+   **Books are A4.** Add `--a5` only for a book that is also a printed booklet (the
+   children's and young readers' books, step 7); A5 makes the type read larger on screen,
+   which is right for those and wrong for the adult books.
    The cover is rendered without a page number (Chromium cannot skip the first folio, so it
    is a separate render merged in front), and is scaled automatically if the body is A4.
    Render to `inbox/` first when the body comes from `books/<slug>.html` directly; never
@@ -594,4 +597,4 @@ folio is present, and that the stripped elements are actually gone. An earlier v
 this note said the PDF could not be inspected from the shell and to screenshot the stripped
 HTML instead; that was wrong. The script also leaves the print copy beside the PDF as
 `<slug>-PRINT.html` (gitignored) if you do want to look at it rendered.
-<!-- READ-TOKEN b486d626 · 596 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 752a9dd5 · 599 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

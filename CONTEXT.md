@@ -50,7 +50,7 @@ Full addresses, so you never have to build one:
 
 | File | When |
 |---|---|
-| Page conventions — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONVENTIONS.md?v=214ccb0e | **Always**, before building any page |
+| Page conventions — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONVENTIONS.md?v=deba38b0 | **Always**, before building any page |
 | Brief inventory — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/SITE-INDEX-BRIEF.md?v=74603da9 | **Always**, before proposing a subject |
 | How we work — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/COLLABORATION.md?v=12bd386b | Always, for voice and working practice |
 | Full inventory — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/SITE-INDEX.md?v=e0e92ddd | When hunting themes, summaries or a companion |
@@ -215,4 +215,4 @@ Answers are kept in the repo so the resolved item stops being re-raised in three
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN 34698b8f · 217 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN d0d07526 · 217 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
