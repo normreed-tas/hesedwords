@@ -182,14 +182,17 @@ do not always line up with it. "Every other verse" is the usual case, not the ru
 
 ### The sequence as the Hebrew stands (English verses)
 
+*Corrected 1 Nov 2026: the first version of this table put the dalet row before gimel. The psalm runs bet, gimel, [no dalet], he, in the normal order.*
+
 **Ps 9**
 
 | Verse | Letter | Note |
 |---|---|---|
 | 1–2 | aleph | Both lines |
 | 3 | bet | |
-| — | **dalet: none** | |
+| 4 | (kaf) | *ki*, outside the sequence |
 | 5 | gimel | |
+| — | **dalet: none** | |
 | 6 | he | |
 | 7–10 | vav | Lines open with *vav* throughout |
 | 11 | zayin | |
@@ -289,4 +292,4 @@ checked.** Open a source before it is used.
 Both are acrostic by **half-line**, not by verse. My verse-start check is consistent with that
 but does not confirm it line by line. If chapter 2 counts letters, check the half-lines
 separately.
-<!-- READ-TOKEN aceff77e · 291 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 4f29e4a4 · 294 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

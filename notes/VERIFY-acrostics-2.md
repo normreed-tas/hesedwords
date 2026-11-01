@@ -286,6 +286,8 @@ Comparison by the same count:
 | 119 | 28 | 1067 | 2.6 |
 
 Ps 145 has roughly **double the density of the next-highest** in the sample. It is unusual.
+
+*Corrected 1 Nov 2026, after a count across the whole Psalter: "double" holds only for the sample above. Ps 148 has 10 in 112 words (8.9 per 100), and Ps 117 has 2 in 17. Among psalms of its size, Ps 145 has the most, but not twice the next.*
 - *kol* doubles up in the second half (vv. 13–20): "all who fall", "all who are bowed down",
   "the eyes of all", "every living thing", "all his ways", "all his works", "all who call",
   "all who love him".
@@ -335,4 +337,4 @@ Psalter.
 - Wikipedia, "Ashrei": https://en.wikipedia.org/wiki/Ashrei
 - Wikipedia, "Psalm 145": https://en.wikipedia.org/wiki/Psalm_145
 - Open Scriptures Hebrew Bible (WLC): https://github.com/openscriptures/morphhb
-<!-- READ-TOKEN ba65cf3a · 337 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN f623ff5d · 339 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
