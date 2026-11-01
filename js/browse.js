@@ -121,8 +121,7 @@
   }
 
   /* ── Build the dropdowns ────────────────────────────────────── */
-  var THEMES = [];       // every unique theme, sorted
-  var themeValue = "";   // the currently applied theme ("" = all)
+  var THEMES = [];       // every unique theme, sorted (feeds the content search)
 
   function buildFilters() {
     var themeSet = new Set(), yearSet = new Set(), typeSet = new Set();
@@ -143,20 +142,31 @@
       .map(function (k) { return { value: k, label: TYPES[k].label }; }));
   }
 
-  /* ── Theme combobox (type-to-filter) ────────────────────────── */
+  /* ── Search by content (type-to-suggest) ─────────────────────
+     One box on its own line under the filters. As you type it
+     suggests matching themes, then matching pieces. Choosing a
+     theme filters by it; choosing a piece opens it; Enter with
+     nothing chosen filters by the words typed, across title,
+     summary, themes and scripture. Added 2 Nov 2026, replacing
+     the Theme dropdown. */
+  var search = { kind: "", value: "" };   // kind: "" | "theme" | "text"
   var comboOpen = false, activeIndex = -1, matches = [];
+  var MAX_THEMES = 6, MAX_PIECES = 6;
 
-  function comboInput() { return $("browse-theme-input"); }
-  function comboList()  { return $("browse-theme-list"); }
+  function comboInput() { return $("browse-search-input"); }
+  function comboList()  { return $("browse-search-list"); }
+  function comboWrap()  { var i = comboInput(); return i ? i.parentNode : null; }
 
-  function setTheme(v) {
-    themeValue = v;
-    comboInput().value = v;
-    $("browse-theme-clear").hidden = !v;
-    render();
+  function haystack(a) {
+    return (a.title + " " + a.summary + " " + a.themes.join(" ") + " " + a.scripture.join(" ")).toLowerCase();
   }
 
-  function comboWrap() { var i = comboInput(); return i ? i.parentNode : null; }
+  function applySearch(kind, value) {
+    search = { kind: value ? kind : "", value: value || "" };
+    if (comboInput()) comboInput().value = search.value;
+    if ($("browse-search-clear")) $("browse-search-clear").hidden = !search.value;
+    render();
+  }
 
   function closeCombo() {
     comboOpen = false;
@@ -167,31 +177,64 @@
     if (comboWrap()) comboWrap().classList.remove("is-open");
   }
 
+  function choose(m) {
+    if (m.kind === "piece") { window.location.href = m.url; return; }
+    applySearch("theme", m.value);
+    closeCombo();
+  }
+
   function openCombo(query) {
     var q = (query || "").trim().toLowerCase();
-    matches = q
-      ? THEMES.filter(function (t) { return t.toLowerCase().indexOf(q) !== -1; })
-      : THEMES.slice();
-
     var list = comboList();
     list.innerHTML = "";
+    matches = [];
+    if (q.length < 2) { closeCombo(); return; }
 
-    if (!matches.length) {
-      list.innerHTML = '<li class="browse-combo-empty" role="presentation">No matching theme</li>';
-    } else {
-      matches.forEach(function (t, i) {
-        var li = document.createElement("li");
-        li.setAttribute("role", "option");
-        li.setAttribute("aria-selected", String(i === activeIndex));
-        li.textContent = t;
-        li.addEventListener("mousedown", function (e) {
-          e.preventDefault();          // keep focus, beat the blur handler
-          setTheme(t);
-          closeCombo();
-        });
-        list.appendChild(li);
-      });
+    var themes = THEMES.filter(function (t) { return t.toLowerCase().indexOf(q) !== -1; })
+      .sort(function (a, b) {
+        var sa = a.toLowerCase().indexOf(q) === 0 ? 0 : 1, sb = b.toLowerCase().indexOf(q) === 0 ? 0 : 1;
+        return sa - sb || a.localeCompare(b);
+      }).slice(0, MAX_THEMES);
+    var pieces = ITEMS.filter(function (a) { return haystack(a).indexOf(q) !== -1; })
+      .sort(function (a, b) {
+        var ta = a.title.toLowerCase().indexOf(q) !== -1 ? 0 : 1, tb = b.title.toLowerCase().indexOf(q) !== -1 ? 0 : 1;
+        return ta - tb || b.date.localeCompare(a.date);
+      }).slice(0, MAX_PIECES);
+
+    function group(label) {
+      var li = document.createElement("li");
+      li.className = "browse-combo-group";
+      li.setAttribute("role", "presentation");
+      li.textContent = label;
+      list.appendChild(li);
     }
+    function option(m, text, hint) {
+      var i = matches.length;
+      matches.push(m);
+      var li = document.createElement("li");
+      li.setAttribute("role", "option");
+      li.setAttribute("aria-selected", "false");
+      li.textContent = text;
+      if (hint) { var s = document.createElement("span"); s.className = "browse-combo-hint"; s.textContent = hint; li.appendChild(s); }
+      li.addEventListener("mousedown", function (e) { e.preventDefault(); activeIndex = i; choose(m); });
+      list.appendChild(li);
+    }
+
+    if (themes.length) {
+      group("Themes");
+      themes.forEach(function (t) { option({ kind: "theme", value: t }, t); });
+    }
+    if (pieces.length) {
+      group("Pieces");
+      pieces.forEach(function (a) { option({ kind: "piece", url: a.url }, a.title, TYPES[a.type].label); });
+    }
+    var foot = document.createElement("li");
+    foot.className = "browse-combo-empty";
+    foot.setAttribute("role", "presentation");
+    foot.textContent = matches.length
+      ? "Or press Enter to show everything that mentions “" + query.trim() + "”"
+      : "No suggestions. Press Enter to search for “" + query.trim() + "” anyway.";
+    list.appendChild(foot);
 
     list.hidden = false;
     comboOpen = true;
@@ -200,8 +243,7 @@
   }
 
   function highlight(i) {
-    var list = comboList();
-    var items = list.querySelectorAll('li[role="option"]');
+    var items = comboList().querySelectorAll('li[role="option"]');
     if (!items.length) return;
     if (i < 0) i = items.length - 1;
     if (i >= items.length) i = 0;
@@ -214,11 +256,9 @@
     var input = comboInput();
     if (!input || !comboList()) return;   // markup not present — skip quietly
 
-    input.addEventListener("focus", function () { openCombo(input.value === themeValue ? "" : input.value); });
     input.addEventListener("input", function () {
       activeIndex = -1;
-      // clearing the box clears the filter
-      if (!input.value.trim() && themeValue) { themeValue = ""; $("browse-theme-clear").hidden = true; render(); }
+      if (!input.value.trim() && search.value) { search = { kind: "", value: "" }; $("browse-search-clear").hidden = true; render(); }
       openCombo(input.value);
     });
 
@@ -227,33 +267,23 @@
       else if (e.key === "ArrowUp") { e.preventDefault(); if (comboOpen) highlight(activeIndex - 1); }
       else if (e.key === "Enter") {
         e.preventDefault();
-        if (comboOpen && matches.length) { setTheme(matches[activeIndex >= 0 ? activeIndex : 0]); closeCombo(); }
+        if (comboOpen && activeIndex >= 0 && matches[activeIndex]) choose(matches[activeIndex]);
+        else { applySearch("text", input.value.trim()); closeCombo(); }
       } else if (e.key === "Escape") {
-        input.value = themeValue;   // revert any half-typed text
+        input.value = search.value;   // revert any half-typed text
         closeCombo();
       }
     });
 
     input.addEventListener("blur", function () {
-      input.value = themeValue;     // never leave an unapplied query showing
+      input.value = search.value;     // never leave an unapplied query showing
       closeCombo();
     });
 
-    on("browse-theme-clear", "click", function () {
-      setTheme("");
+    on("browse-search-clear", "click", function () {
+      applySearch("", "");
       input.focus();
     });
-
-    /* Caret toggles the full list. mousedown (not click) so it beats
-       the input's blur handler, same reason as the options. */
-    var toggle = $("browse-theme-toggle");
-    if (toggle) {
-      toggle.addEventListener("mousedown", function (e) {
-        e.preventDefault();
-        if (comboOpen) { closeCombo(); }
-        else { input.focus(); openCombo(""); }
-      });
-    }
   }
 
   function onBookChange() {
@@ -291,7 +321,7 @@
     var bookF    = val("browse-book"),
         chapterF = val("browse-chapter"),
         verseF   = val("browse-verse"),
-        themeF   = themeValue,
+        searchF  = search,
         typeF    = val("browse-type"),
         yearF    = val("browse-year");
 
@@ -303,7 +333,8 @@
         if (verseF && r.verse !== verseF) return false;
         return true;
       })) return false;
-      if (themeF && a.themes.indexOf(themeF) === -1) return false;
+      if (searchF.kind === "theme" && a.themes.indexOf(searchF.value) === -1) return false;
+      if (searchF.kind === "text" && haystack(a).indexOf(searchF.value.toLowerCase()) === -1) return false;
       if (typeF && a.type !== typeF) return false;
       if (yearF && a.date.substring(0, 4) !== yearF) return false;
       return true;
@@ -312,6 +343,14 @@
     var listing = $("browse-listing");
     var count   = $("browse-count");
     listing.innerHTML = "";
+
+    /* The section sits above Current reading (2 Nov 2026), so with no
+       filter set it lists nothing: all of them would bury the morning's
+       reading. Any filter or search brings the list in. */
+    if (!(bookF || typeF || yearF || searchF.value)) {
+      count.textContent = ITEMS.length + " pieces. Choose a filter or search to list them.";
+      return;
+    }
 
     count.textContent = filtered.length === ITEMS.length
       ? "Showing all " + ITEMS.length + " pieces"
@@ -349,9 +388,9 @@
     if ($("browse-book")) $("browse-book").value = "";
     resetSelect("browse-chapter", true);
     resetSelect("browse-verse", true);
-    themeValue = "";
+    search = { kind: "", value: "" };
     if (comboInput()) comboInput().value = "";
-    if ($("browse-theme-clear")) $("browse-theme-clear").hidden = true;
+    if ($("browse-search-clear")) $("browse-search-clear").hidden = true;
     if ($("browse-type")) $("browse-type").value = "";
     if ($("browse-year")) $("browse-year").value = "";
     render();
@@ -362,8 +401,8 @@
     if (!$("browse-listing")) return;
     buildFilters();
 
-    /* Core filters are wired FIRST and unconditionally. The theme
-       combobox is an enhancement on top; if it ever fails to
+    /* Core filters are wired FIRST and unconditionally. The content
+       search is an enhancement on top; if it ever fails to
        initialise it must not stop the Book > Chapter > Verse
        cascade from working. */
     on("browse-book",    "change", onBookChange);
@@ -376,7 +415,7 @@
     try {
       initCombo();
     } catch (e) {
-      if (window.console) console.warn("Theme filter unavailable:", e);
+      if (window.console) console.warn("Content search unavailable:", e);
     }
 
     render();

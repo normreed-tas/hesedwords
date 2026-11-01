@@ -285,7 +285,7 @@ footer.hw-foot a:hover { color: var(--oxblood-on-dark); }
    Class names below are dictated by js/browse.js, which injects
    markup using these exact selectors — do not rename them. */
 .browse-filters {
-  display: grid; grid-template-columns: repeat(7, minmax(0,1fr)); gap: 18px;
+  display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 18px;
   border-top: 1px solid var(--ink); border-bottom: 1px solid var(--hairline);
   padding: 22px 0 24px; margin-bottom: 40px;
 }
@@ -307,20 +307,24 @@ footer.hw-foot a:hover { color: var(--oxblood-on-dark); }
 }
 .browse-combo input:focus { outline: none; border-color: var(--oxblood); }
 .browse-combo input::placeholder { color: var(--ink); opacity: 0.5; }
-#browse-theme-clear, #browse-theme-toggle {
-  position: absolute; top: -2px; transform: none; background: none; border: none; padding: 0 4px;
-  line-height: 1; color: var(--muted); cursor: pointer;
+#browse-search-clear {
+  position: absolute; top: -2px; right: 0; background: none; border: none; padding: 0 4px;
+  line-height: 1; color: var(--muted); cursor: pointer; font-size: 17px;
 }
-#browse-theme-clear { right: 20px; font-size: 17px; }
-#browse-theme-clear:hover { color: var(--oxblood); }
-#browse-theme-toggle { right: 0; display: flex; align-items: center; }
-#browse-theme-toggle svg { width: 10px; height: 6px; display: block; }
-#browse-theme-toggle:hover { color: var(--brass); }
-.browse-combo.is-open #browse-theme-toggle { color: var(--brass); }
-.browse-combo.is-open #browse-theme-toggle svg { transform: rotate(180deg); }
+#browse-search-clear:hover { color: var(--oxblood); }
+/* Search by content: its own full-width line under the dropdowns. */
+.browse-search { grid-column: 1 / -1; margin-top: 8px; }
+.browse-combo-list li.browse-combo-group {
+  padding: 10px 12px 4px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; background: none;
+  text-transform: uppercase; color: #9096A0; cursor: default;
+}
+.browse-combo-hint {
+  margin-left: 10px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--muted);
+}
 .browse-combo-list {
   position: absolute; z-index: 40; top: calc(100% + 6px); left: 0; width: 100%; min-width: 220px;
-  max-height: 244px; overflow-y: auto; margin: 0; padding: 4px 0; list-style: none;
+  max-height: 340px; overflow-y: auto; margin: 0; padding: 4px 0; list-style: none;
   background: var(--paper); border: 1px solid var(--ink);
 }
 .browse-combo-list li { padding: 8px 12px; font-size: 15px; color: var(--ink); cursor: pointer; }

@@ -55,7 +55,7 @@ Full addresses, so you never have to build one:
 | How we work — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/COLLABORATION.md?v=12bd386b | Always, for voice and working practice |
 | Full inventory — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/SITE-INDEX.md?v=07f752fb | When hunting themes, summaries or a companion |
 | Unwritten pieces — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/FUTURE-ARTICLES.md?v=78c6ce96 | When deciding what to write next |
-| Design tokens — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/css/tokens.css?v=12f7cedd | When writing page-local CSS |
+| Design tokens — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/css/tokens.css?v=25b833fe | When writing page-local CSS |
 | Song of Songs overlay — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/PROJECT-SONGS.md?v=9cdcc664 | Song of Songs project only |
 | Verification answers — the full address is in Code's report, and Norm pastes it to you | When Norm says Code has answered |
 
@@ -215,4 +215,4 @@ Answers are kept in the repo so the resolved item stops being re-raised in three
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN ad5be642 · 217 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN cc843f9d · 217 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

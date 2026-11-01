@@ -38,14 +38,59 @@
       </div>
       <h1>Hesed Words.</h1>
       <p class="hw-tagline">Written for the road.</p>
-      <p class="hw-blurb">I get up before light, open the next psalm, and write down the thing that stopped me. Thirty years of justice ministry sits behind every one of these. This is that chair, kept in public.</p>
+      <p class="hw-blurb">I get up before light, open the next psalm, and write down the thing that stopped me. Forty years of ministry, fifteen of them in the justice sector, sit behind every one of these. This is that chair, kept in public.</p>
       <a href="#current-reading" class="hw-cta"><span>Read this morning's</span><span>→</span></a>
     </div>
     <div class="hw-hero-heb">חֶסֶד</div>
   </div>
 </section>
 
-<section class="hw-wrap" id="current-reading" style="padding-top:76px;padding-bottom:40px;">
+<!-- Browse Everything (combined index) -->
+<section class="hw-wrap" id="browse" style="padding-top:76px;padding-bottom:24px;">
+  <div class="hw-section-label-row" style="margin-bottom:8px;">
+    <h2 class="hw-section-label">Browse everything</h2>
+    <span class="hw-section-note">every reflection, article, word study and book, filtered together</span>
+  </div>
+
+  <div class="browse-filters">
+    <div class="browse-field">
+      <label for="browse-book">Book</label>
+      <select id="browse-book"><option value="">All</option></select>
+    </div>
+    <div class="browse-field">
+      <label for="browse-chapter">Chapter</label>
+      <select id="browse-chapter" disabled><option value="">All</option></select>
+    </div>
+    <div class="browse-field">
+      <label for="browse-verse">Verse</label>
+      <select id="browse-verse" disabled><option value="">All</option></select>
+    </div>
+    <div class="browse-field">
+      <label for="browse-type">Type</label>
+      <select id="browse-type"><option value="">All</option></select>
+    </div>
+    <div class="browse-field">
+      <label for="browse-year">Year</label>
+      <select id="browse-year"><option value="">All</option></select>
+    </div>
+    <button type="button" id="browse-reset">Reset</button>
+    <div class="browse-field browse-search">
+      <label for="browse-search-input">Search by content</label>
+      <div class="browse-combo">
+        <input type="text" id="browse-search-input" placeholder="e.g. refuge, prison, Psalm 36" autocomplete="off"
+               role="combobox" aria-expanded="false" aria-autocomplete="list"
+               aria-controls="browse-search-list">
+        <button type="button" id="browse-search-clear" aria-label="Clear search" hidden>&times;</button>
+        <ul id="browse-search-list" class="browse-combo-list" role="listbox" aria-label="Suggestions" hidden></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="browse-count" id="browse-count"></div>
+  <div id="browse-listing"></div>
+</section>
+
+<section class="hw-wrap" id="current-reading" style="padding-top:40px;padding-bottom:40px;">
   <div class="hw-section-label-row">
     <h2 class="hw-section-label">Current reading</h2>
     <span class="hw-section-note">every morning, before light</span>
@@ -119,56 +164,6 @@
   </a>
 </section>
 
-<!-- Browse Everything (combined index) -->
-<section class="hw-wrap" id="browse" style="padding-bottom:72px;">
-  <div class="hw-section-label-row" style="margin-bottom:8px;">
-    <h2 class="hw-section-label">Browse everything</h2>
-    <span class="hw-section-note">every reflection, article, word study and book, filtered together</span>
-  </div>
-
-  <div class="browse-filters">
-    <div class="browse-field">
-      <label for="browse-book">Book</label>
-      <select id="browse-book"><option value="">All</option></select>
-    </div>
-    <div class="browse-field">
-      <label for="browse-chapter">Chapter</label>
-      <select id="browse-chapter" disabled><option value="">All</option></select>
-    </div>
-    <div class="browse-field">
-      <label for="browse-verse">Verse</label>
-      <select id="browse-verse" disabled><option value="">All</option></select>
-    </div>
-    <div class="browse-field">
-      <label for="browse-theme-input">Theme</label>
-      <div class="browse-combo">
-        <input type="text" id="browse-theme-input" placeholder="All" autocomplete="off"
-               role="combobox" aria-expanded="false" aria-autocomplete="list"
-               aria-controls="browse-theme-list">
-        <button type="button" id="browse-theme-clear" aria-label="Clear theme filter" hidden>&times;</button>
-        <button type="button" id="browse-theme-toggle" aria-label="Show all themes" tabindex="-1">
-          <svg viewBox="0 0 10 6" aria-hidden="true" focusable="false">
-            <path d="M1 1 L5 5 L9 1" fill="none" stroke="currentColor" stroke-width="1.4"
-                  stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <ul id="browse-theme-list" class="browse-combo-list" role="listbox" aria-label="Themes" hidden></ul>
-      </div>
-    </div>
-    <div class="browse-field">
-      <label for="browse-type">Type</label>
-      <select id="browse-type"><option value="">All</option></select>
-    </div>
-    <div class="browse-field">
-      <label for="browse-year">Year</label>
-      <select id="browse-year"><option value="">All</option></select>
-    </div>
-    <button type="button" id="browse-reset">Reset</button>
-  </div>
-
-  <div class="browse-count" id="browse-count"></div>
-  <div id="browse-listing"></div>
-</section>
 
 <footer class="hw-foot">
   <div class="hw-foot-inner">
@@ -186,7 +181,7 @@
 <script src="/js/articles-data.js"></script>
 <script src="/js/books-data.js"></script>
 <script src="/js/word-studies-data.js"></script>
-<script src="/js/browse.js"></script>
+<script src="/js/browse.js?v=20261102"></script>
 
 </body>
 </html>
