@@ -1,13 +1,14 @@
 # Hesed Words — brief index
 
-**166 pieces** — 101 reflections, 43 articles, 16 books, 6 word studies.
+**168 pieces** — 102 reflections, 43 articles, 16 books, 7 word studies.
 
 One line per piece: date · title · scripture · url. Deliberately short enough
 to read in full. Use it to answer "does this already exist?" — then read
 SITE-INDEX.md for summaries, themes and companion candidates.
 
-## Reflections (101)
+## Reflections (102)
 
+- 2026-11-02 · **How Precious** · Psalm 36:7; Psalm 36 · `/reflections/how-precious.html`
 - 2026-10-29 · **An Invitation to Strike** · Psalm 141; Psalm 141:5; James 4:3 · `/reflections/an-invitation-to-strike.html`
 - 2026-10-28 · **Maturity?** · 1 Corinthians 1-2; 1 Corinthians 2:6-8; 1 Corinthians 1:4-12; 1 Corinthians 3:1; 1 Corinthians 4:8 · `/reflections/maturity.html`
 - 2026-10-16 · **Then We Stopped** · Acts 21:14; Acts 21:12-15; Acts 15:28; Acts 16:10 · `/reflections/then-we-stopped.html`
@@ -175,12 +176,13 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2025-05-31 · **He Has Told You…** · Micah 6:8 · `/books/he-has-told-you.html`
 - 2019-04-12 · **That Day** · Mark 15:21 · `/books/that-day.html`
 
-## Word Studies (6)
+## Word Studies (7)
 
+- 2026-11-02 · **Yaqar** · Psalm 36:7; Psalm 116:15; Isaiah 43:4; 1 Samuel 3:1; Proverbs 3:15 · `/word-studies/yaqar.html`
 - 2026-10-04 · **Nikaō** · Revelation 12:11; John 16:33; 1 John 5:4; Revelation 5:5-6; Romans 8:37; 1 Corinthians 15:54-57 · `/word-studies/nikao.html`
 - 2026-09-10 · **Zakar** · Psalm 98:3; Genesis 8:1; Exodus 2:24; Psalm 25:6-7; Jeremiah 31:34 · `/word-studies/zakar.html`
 - 2026-08-25 · **Tzedaqah / Dikaiosynē** · Isaiah 45:21; Isaiah 46:13; Amos 5:24; Matthew 3:15; Romans 3:26 · `/word-studies/tzedaqah.html`
 - 2026-08-03 · **Is "Wicked" a Verdict or a Character?** · Deuteronomy 25:1; 1 Kings 8:32; Exodus 23:7; Psalm 58:1 · `/word-studies/is-wicked-a-verdict-or-a-character.html`
 - 2026-07-11 · **What Is an Idle Word?** · Matthew 12:36; Matthew 20:3; 1 Timothy 5:13; 2 Peter 1:8 · `/word-studies/idle.html`
 - 2026-07-10 · **Is Jesus an Intercessor?** · Isaiah 59:16; Isaiah 53:12; 1 Samuel 22:18; Romans 8:34 · `/word-studies/jesus-intercessor.html`
-<!-- READ-TOKEN 9b4443d9 · 185 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 000ee82b · 187 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

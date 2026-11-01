@@ -7,6 +7,18 @@
    ================================================================ */
 const STUDIES = [
   {
+    id:       "ws-yaqar",
+    word:     "יָקָר",
+    lang:     "hebrew",
+    translit: "yaqar",
+    title:    "Yaqar",
+    url:      "/word-studies/yaqar.html",
+    date:     "2026-11-02",
+    scripture: ["Psalm 36:7", "Psalm 116:15", "Isaiah 43:4", "1 Samuel 3:1", "Proverbs 3:15"],
+    themes:   ["yaqar", "precious", "costly", "rare", "value", "who appraises", "hesed", "death of the saints", "Bomana", "Peter Gill"],
+    summary:  "Yaqar is a word from the stone yard: Solomon's costly foundation stones, Isaiah's precious cornerstone, the Queen of Sheba's stones, wisdom worth more than jewels. It also means rare, as the word of the LORD was in Samuel's day. The Psalms use it of a ransom no one can afford, a man in his pomp, splendour that goes up like smoke; twice of God's hesed and God's thoughts. Across the Hebrew Bible a person nearly always holds the glass. Twice God does: precious in my eyes, to the exiles in Isaiah 43, and precious in the sight of the LORD is the death of his saints. Peter Gill flew P2-UIF in Papua New Guinea and was killed in 1992; Psalm 116:15 is on his headstone at Bomana."
+  },
+  {
     id:       "ws-nikao",
     word:     "νικάω",
     lang:     "greek",

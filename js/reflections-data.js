@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "How Precious",
+    date:     "2026-11-02",
+    url:      "/reflections/how-precious.html",
+    summary:  "Psalm 36:7, read aloud as prayer by Ross in church on a Sunday. After the heavens, the clouds, the mountains and the great deep, the psalm comes down to a person under a wing: how precious is your steadfast love. Precious is yaqar, a valuer's word, the word for the precious stones the Queen of Sheba brought Solomon; in the Psalms it is used of a ransom nobody can pay, a man in his pomp, the splendour that vanishes. Then it is used of God's hesed. A word collected since a cardiac arrest, like a nugget that changes how a man looks at ground. Gollum's my precious: the ring let itself be held. Hesed does not; you take refuge under it, not hold of it.",
+    scripture: ["Psalm 36:7", "Psalm 36"],
+    themes:   ["yaqar", "precious", "hesed", "refuge", "the shadow of your wings", "value", "Gollum", "collecting a word", "cardiac arrest", "prayer in church"]
+  },
+  {
     title:    "An Invitation to Strike",
     date:     "2026-10-29",
     url:      "/reflections/an-invitation-to-strike.html",
