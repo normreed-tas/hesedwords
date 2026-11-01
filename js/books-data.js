@@ -8,6 +8,14 @@
    ================================================================ */
 const BOOKS_META = [
   {
+    title:    "Say It Three Times",
+    url:      "/books/say-it-three-times.html",
+    date:     "2026-11-01",
+    scripture: ["Psalm 145", "Psalm 111", "Psalm 112", "Psalm 34", "Psalm 37", "Psalm 25", "Psalm 119", "Psalm 9", "Psalm 10", "Lamentations 1-5"],
+    themes:   ["acrostic", "alphabet psalms", "hesed", "completeness", "lament", "prayer", "writing prayers", "teenagers", "Ashrei", "missing letters", "waiting", "suffering"],
+    summary:  "The alphabet psalms, for teenagers. Psalm 145, which an old Jewish teaching says to say three times every day, and its missing nun line; Psalms 111 and 112, the twins that use the same words of God and of the person he shapes; Psalm 34 and David feigning madness before the king of Gath; Psalm 37 on why cheats do well; Psalm 25, asking, with two holes and a doubled line; Psalm 119, eight lines to every letter, and hesed where the alphabet forced it; Psalms 9 and 10, one poem whose alphabet stops where the suffering is; Lamentations, four alphabets and a fifth poem that lets go. Every chapter ends with an exercise, and the last is an A to Z prayer of the reader's own."
+  },
+  {
     title:    "God Is Searching",
     url:      "/books/god-is-searching.html",
     date:     "2026-10-31",

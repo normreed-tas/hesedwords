@@ -1,6 +1,6 @@
 # Hesed Words — brief index
 
-**165 pieces** — 101 reflections, 43 articles, 15 books, 6 word studies.
+**166 pieces** — 101 reflections, 43 articles, 16 books, 6 word studies.
 
 One line per piece: date · title · scripture · url. Deliberately short enough
 to read in full. Use it to answer "does this already exist?" — then read
@@ -156,8 +156,9 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2026-06-01 · **Jesus as Leader** · Mark 10:42-45 · `/articles/jesus-as-leader.html`
 - 2026-06-01 · **When the Heart Was Awake** · Song of Songs 5; Romans 7 · `/articles/when-the-heart-was-awake.html`
 
-## Books (15)
+## Books (16)
 
+- 2026-11-01 · **Say It Three Times** · Psalm 145; Psalm 111; Psalm 112; Psalm 34; Psalm 37; Psalm 25; Psalm 119; Psalm 9; Psalm 10; Lamentations 1-5 · `/books/say-it-three-times.html`
 - 2026-10-31 · **God Is Searching** · 2 Chronicles 16:9; 2 Chronicles 14; 2 Chronicles 15; 2 Chronicles 16 · `/books/god-is-searching.html`
 - 2026-10-25 · **Therefore** · Romans 12; Romans 3:23-24; Romans 5:8; Romans 11:32 · `/books/therefore.html`
 - 2026-09-20 · **The Songs for Every Day** · Psalm 24; Psalm 48; Psalm 82; Psalm 94; Psalm 81; Psalm 93; Psalm 92 · `/books/the-songs-for-every-day.html`
@@ -182,4 +183,4 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2026-08-03 · **Is "Wicked" a Verdict or a Character?** · Deuteronomy 25:1; 1 Kings 8:32; Exodus 23:7; Psalm 58:1 · `/word-studies/is-wicked-a-verdict-or-a-character.html`
 - 2026-07-11 · **What Is an Idle Word?** · Matthew 12:36; Matthew 20:3; 1 Timothy 5:13; 2 Peter 1:8 · `/word-studies/idle.html`
 - 2026-07-10 · **Is Jesus an Intercessor?** · Isaiah 59:16; Isaiah 53:12; 1 Samuel 22:18; Romans 8:34 · `/word-studies/jesus-intercessor.html`
-<!-- READ-TOKEN 3fa570f4 · 184 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 9b4443d9 · 185 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
