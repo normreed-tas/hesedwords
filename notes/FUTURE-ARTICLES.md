@@ -34,9 +34,10 @@ an entry is added or struck — see `CONTEXT.md`.
 ### Psalm 119 and hesed — what the reflection didn't use
 *Added 4 Oct 2026. Detail: `NOTE-psalm-119-hesed.md`*
 
-Five findings left out of *According to Your Steadfast Love*, all now checked. Hesed is the
-first word of only two verses, 64 and 88, both forced by the acrostic — so test the plain
-explanation before reading meaning into it. Verse 64 shares four words, in order, with Psalm
+Five findings left out of *According to Your Steadfast Love*, all now checked. *Amended 1 Nov
+2026:* the first — hesed is the first word of only two verses, 64 and 88, both forced by the
+acrostic — has been **taken by *Say It Three Times*** (chapter 6) and is no longer available
+here. The other four remain. Verse 64 shares four words, in order, with Psalm
 33:5 ("the earth is full of the hesed of YHWH"), and the one difference is the person: 33:5
 speaks *about* God, 119:64 speaks *to* him, which is the reflection's own observation turning
 up in the shared line. Verses 41 and 77 use the same verb for hesed and for rachamim coming
@@ -380,4 +381,4 @@ piece was retired, or whether it still stands exactly as it was.
 own documents on a fragment. If a line comes back to Norm, say so — the search is cheap.
 Absent that, do not invent an angle to fill the gap. A struck entry carrying an invented
 brief is worse than an empty one, because it reads as recovered.
-<!-- READ-TOKEN 6b1802bc · 382 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 69d136d3 · 383 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

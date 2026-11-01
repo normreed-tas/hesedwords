@@ -359,3 +359,90 @@ I also checked the sense of every printed line against the verse its letter open
 - Sefaria, Lamentations 5:22 with commentary: https://www.sefaria.org/Lamentations.5.22
 - psalms.scriptura.org, "Psalm 34 Poetics": https://psalms.scriptura.org/w/Psalm_34_Poetics
 <!-- READ-TOKEN c597367f · 360 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+
+---
+
+## Addendum, 1 November 2026: the missing-*vav* theory (E5.1), checked further
+
+Norm asked for this to be verified before the book takes it.
+
+### Sources
+
+**Opened.** R. Benun, "Evil and the Disruption of Order: A Structural Analysis of the
+Acrostics in the First Book of Psalms", *Journal of Hebrew Scriptures* 6 (2006), article 5,
+open access, full text read (https://doi.org/10.5508/jhs.2006.v6.a5).
+
+**Not reachable.** Freedman's "Patterns in Psalms 25 and 34" (1992) is not open anywhere I
+could find. Its reprint, *Divine Commitment and Human Obligation*, is held by the Internet
+Archive only as a restricted lending copy. Skehan, Ceresko and Eriksson were not opened.
+
+### What is now CONFIRMED, and by what
+
+1. **The two psalms are designed as a pair.**
+   - *Text, checked.* Both lack *vav*. Both add a final *pe* line built on *padah*, "redeem".
+   - *Benun, opened.* He treats the gaps as intentional and the pair as one unit. Ps 34
+     answers Ps 25 letter for letter: ayin 25:15 / 34:16 ("my eyes" / "the eyes of the
+     LORD"); pe; tsadi; resh; shin; and the final *pe* lines.
+   - *Benun, citing Delitzsch.* Delitzsch noticed the parallel structure in the 19th century.
+   - *Benun, note 447.* The added *pe* line makes up for the missing one, so each poem still
+     has 22 lines.
+2. **The teaching line sits at the centre of Ps 34.**
+   - *Benun, opened, note 41.* The words of 34:12 (Hebrew; 34:11 in English), "Come, children,
+     listen to me; I will teach you the fear of the LORD", are "exactly the center words of
+     Ps 34", testifying to the psalm's purpose as "a didactic statement".
+   - *Checked, by line count.* The lamed line is line 11 of 22.
+3. **The spelling.** Anyone can check this from the text; it does not depend on any scholar.
+   - In **both psalms** the first line begins with **aleph**, the lamed line falls at the
+     centre (Ps 25:11, Ps 34:11 English), and the extra last line begins with **pe**. *Text,
+     checked* (`VERIFY-acrostics.md`).
+   - Aleph, lamed, pe (א־ל־ף) spell ***aleph***, the name of the first letter.
+   - **The same three letters are a Hebrew verb, "to learn / to teach".** I checked all four
+     occurrences in the WLC:
+     - Job 33:33, *va-a'allefkha chokhmah*, "and I will **teach** you wisdom";
+     - Job 15:5;
+     - Job 35:11, "who **teaches** us";
+     - Prov 22:25, "lest you **learn** his ways".
+
+### CORRECTED in my own earlier wording
+
+I wrote that the 22 lines come out with "lamed **exactly** in the middle". By line count
+that is not exact. With 22 lines there is no single middle line. In Ps 34, lamed is line 11,
+with 10 lines before it and 11 after.
+
+The "exact middle" in the literature (Skehan, as reported) is the middle of the **letter
+series** aleph–tav plus *pe*: 23 letters, with lamed the 12th. Benun's "exact centre" is by
+**word count**.
+
+**For the book, say "at the centre" or "in the middle", not "exactly in the middle".**
+
+### Still a theory
+
+The **intention** remains inference: that the poet dropped *vav* and added *pe* *in order to*
+spell *aleph* / "learn". The facts underneath it are not in doubt:
+- the pattern;
+- the spelling;
+- the verb;
+- the teaching line at the centre.
+
+I found no source that rejects it, but I did not see the scholarly debate either.
+
+**Wording that is true as it stands:**
+
+> The poem starts at A. It goes to the end, and then adds one more line on a letter that has
+> already been used. Right in the middle is the line "Come, children, listen to me; I will
+> teach you." Take the first letter, the middle letter and the last one — in Hebrew they are
+> aleph, lamed and pe — and they spell *aleph*: the name of the first letter of the alphabet,
+> and a word that means **learn**. Psalm 25 does exactly the same. Some people think that
+> was the plan all along. Nobody can prove it. But it is there on the page.
+
+**Verdict: CONFIRMED as a pattern in the text, with a scholarly reading behind it (Benun,
+opened; Freedman, Skehan, Ceresko, reported). Safe to use if it is presented as "some people
+think", which the chapter's own manner already does.**
+
+### A practical note for the English scheme
+
+The book's alphabet maps *pe* to **R**. So in the English the extra last line would be an R
+line, or it stays letterless, as now. The spelling only works in Hebrew, so the chapter has to
+say the Hebrew letters out loud. It already teaches *nun*, *vav* and *ayin* by name, so that
+is in keeping.
+<!-- READ-TOKEN c9ce8dff · 447 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
