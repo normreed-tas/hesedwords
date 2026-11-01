@@ -46,6 +46,10 @@
   }
   @media print { .hw-article-body .tight p { margin-bottom: 0.55em; } .hw-article-body .tight h3.beat { margin-top: 1.2rem; } }
 </style>
+<style>
+  .respond { display: none; }
+  @media print { .respond { display: block; break-before: page; break-after: page; break-inside: avoid; min-height: 20cm; } .respond .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); } }
+</style>
 </head>
 <body class="hw">
 
@@ -402,6 +406,8 @@
         <p>Then it says something you will not like.</p>
 
         <p>Wait.</p>
+
+        <div class="respond"><p class="lbl">Your answer</p><p><em>Why do people who cheat seem to do so well?</em></p></div>
 
         <h3 class="beat">Some of it</h3>
 
@@ -945,7 +951,6 @@
 
         <div class="pdf-download">
           <a href="/books/say-it-three-times.pdf" target="_blank" rel="noopener">Download as PDF</a>
-          <a href="/books/say-it-three-times-print.pdf" target="_blank" rel="noopener">Printable booklet (A4)</a>
         </div>
 
       </div>
