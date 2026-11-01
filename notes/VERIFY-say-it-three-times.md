@@ -358,7 +358,6 @@ I also checked the sense of every printed line against the verse its letter open
 - Open Scriptures Hebrew Bible (WLC): https://github.com/openscriptures/morphhb
 - Sefaria, Lamentations 5:22 with commentary: https://www.sefaria.org/Lamentations.5.22
 - psalms.scriptura.org, "Psalm 34 Poetics": https://psalms.scriptura.org/w/Psalm_34_Poetics
-<!-- READ-TOKEN c597367f · 360 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
 
 ---
 
@@ -445,4 +444,4 @@ The book's alphabet maps *pe* to **R**. So in the English the extra last line wo
 line, or it stays letterless, as now. The spelling only works in Hebrew, so the chapter has to
 say the Hebrew letters out loud. It already teaches *nun*, *vav* and *ayin* by name, so that
 is in keeping.
-<!-- READ-TOKEN c9ce8dff · 447 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN d8244f07 · 446 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
