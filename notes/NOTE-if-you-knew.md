@@ -99,3 +99,4 @@ itself or does not. Two things would settle it:
 
 The honest test is whether the material keeps generating under his hands while the article
 is being written. Books that start as *there might be enough here* tend to show it.
+<!-- READ-TOKEN ca1f5d8f · 101 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
