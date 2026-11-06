@@ -1,13 +1,14 @@
 # Hesed Words — brief index
 
-**169 pieces** — 102 reflections, 44 articles, 16 books, 7 word studies.
+**170 pieces** — 103 reflections, 44 articles, 16 books, 7 word studies.
 
 One line per piece: date · title · scripture · url. Deliberately short enough
 to read in full. Use it to answer "does this already exist?" — then read
 SITE-INDEX.md for summaries, themes and companion candidates.
 
-## Reflections (102)
+## Reflections (103)
 
+- 2026-11-05 · **Singing on Their Beds** · Psalm 149; Psalm 149:4-9 · `/reflections/singing-on-their-beds.html`
 - 2026-11-02 · **How Precious** · Psalm 36:7; Psalm 36 · `/reflections/how-precious.html`
 - 2026-10-29 · **An Invitation to Strike** · Psalm 141; Psalm 141:5; James 4:3 · `/reflections/an-invitation-to-strike.html`
 - 2026-10-28 · **Maturity?** · 1 Corinthians 1-2; 1 Corinthians 2:6-8; 1 Corinthians 1:4-12; 1 Corinthians 3:1; 1 Corinthians 4:8 · `/reflections/maturity.html`
@@ -186,4 +187,4 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2026-08-03 · **Is "Wicked" a Verdict or a Character?** · Deuteronomy 25:1; 1 Kings 8:32; Exodus 23:7; Psalm 58:1 · `/word-studies/is-wicked-a-verdict-or-a-character.html`
 - 2026-07-11 · **What Is an Idle Word?** · Matthew 12:36; Matthew 20:3; 1 Timothy 5:13; 2 Peter 1:8 · `/word-studies/idle.html`
 - 2026-07-10 · **Is Jesus an Intercessor?** · Isaiah 59:16; Isaiah 53:12; 1 Samuel 22:18; Romans 8:34 · `/word-studies/jesus-intercessor.html`
-<!-- READ-TOKEN 1bf57565 · 188 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN f8dd16a6 · 189 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

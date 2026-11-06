@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Singing on Their Beds",
+    date:     "2026-11-05",
+    url:      "/reflections/singing-on-their-beds.html",
+    summary:  "Psalm 149 ends with a sword: high praises in the throat, a two-edged sword in the hand, kings bound in chains, the judgment written. But nobody fights back; it is not a battle but an arrest, a sentence that existed before anyone picked the sword up. Pipiyyot, a sword of mouths. Years of praying this psalm as a weapon in prayer meetings from Papua New Guinea on: the application probably right, the stance not; singing in the battle tent. One verse back the godly sing on their beds, and before that the LORD adorns the anavim, the bent-down, with salvation. The closing psalms are said every morning, including the ones when nothing is wrong.",
+    scripture: ["Psalm 149", "Psalm 149:4-9"],
+    themes:   ["praise", "spiritual warfare", "the two-edged sword", "hasidim", "anavim", "rest", "prayer meetings", "Papua New Guinea", "binding and loosing", "the closing psalms", "Pesukei Dezimra"]
+  },
+  {
     title:    "How Precious",
     date:     "2026-11-02",
     url:      "/reflections/how-precious.html",
