@@ -1,6 +1,6 @@
 # Hesed Words — brief index
 
-**168 pieces** — 102 reflections, 43 articles, 16 books, 7 word studies.
+**169 pieces** — 102 reflections, 44 articles, 16 books, 7 word studies.
 
 One line per piece: date · title · scripture · url. Deliberately short enough
 to read in full. Use it to answer "does this already exist?" — then read
@@ -111,8 +111,9 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2026-05-16 · **The Far Country** · Psalm 120 · `/reflections/the-far-country.html`
 - 2026-05-01 · **Called in Righteousness** · Isaiah 42:6 · `/reflections/called-in-righteousness.html`
 
-## Articles (43)
+## Articles (44)
 
+- 2026-11-05 · **Titus** · 2 Corinthians 2:13; 2 Corinthians 7:5-6; Galatians 2:1-5; 2 Corinthians 8:6; 2 Corinthians 12:18; Titus 1:5; 2 Timothy 4:10 · `/articles/titus.html`
 - 2026-10-30 · **Struck by Kindness** · Psalm 141:5; Psalm 141:3; Psalm 139:23-24; Jeremiah 17:9; Psalm 51 · `/articles/struck-by-kindness.html`
 - 2026-10-23 · **The Turning Left Open** · Romans 2:1-5; Romans 3:25-26; Romans 12:1; Romans 11:22; Romans 1:18-32; Exodus 34:6; Ezekiel 18 · `/articles/the-turning-left-open.html`
 - 2026-10-16 · **Through the Spirit** · Acts 21:1-14; Acts 20:22-24; Acts 23:11; Acts 16:10 · `/articles/through-the-spirit.html`
@@ -185,4 +186,4 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2026-08-03 · **Is "Wicked" a Verdict or a Character?** · Deuteronomy 25:1; 1 Kings 8:32; Exodus 23:7; Psalm 58:1 · `/word-studies/is-wicked-a-verdict-or-a-character.html`
 - 2026-07-11 · **What Is an Idle Word?** · Matthew 12:36; Matthew 20:3; 1 Timothy 5:13; 2 Peter 1:8 · `/word-studies/idle.html`
 - 2026-07-10 · **Is Jesus an Intercessor?** · Isaiah 59:16; Isaiah 53:12; 1 Samuel 22:18; Romans 8:34 · `/word-studies/jesus-intercessor.html`
-<!-- READ-TOKEN 000ee82b · 187 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 1bf57565 · 188 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

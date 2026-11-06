@@ -1,8 +1,7 @@
-# VERIFY — *Waiting for Titus* (article on Titus the man)
+# VERIFY — *Titus* (article on Titus the man; working title was Waiting for Titus)
 
 Answers `waiting-for-titus.verify.md` (Devotional project, prose locked 5 November 2026).
-Checked by Claude Code, 5 November 2026. The working title is not settled; rename this file
-when it is.
+Checked by Claude Code, 5 November 2026. Renamed from VERIFY-waiting-for-titus.md when the slug settled as `titus`.
 
 **I did not have the draft prose, only the brief.** Each item is checked against the claim as
 the brief states it.
@@ -230,4 +229,4 @@ Not checked, by design:
 - Bible Hub, ESV and KJV, the verse pages for every reference in section A
 - Eusebius, *Church History* 3: https://www.newadvent.org/fathers/250103.htm
 - Jerome, *De Viris Illustribus*: https://www.newadvent.org/fathers/2708.htm
-<!-- READ-TOKEN 2012bab3 · 232 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 39a5a767 · 231 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

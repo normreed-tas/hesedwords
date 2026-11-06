@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Titus",
+    url:      "/articles/titus.html",
+    date:     "2026-11-05",
+    scripture: ["2 Corinthians 2:13", "2 Corinthians 7:5-6", "Galatians 2:1-5", "2 Corinthians 8:6", "2 Corinthians 12:18", "Titus 1:5", "2 Timothy 4:10"],
+    themes:   ["Titus", "Paul", "Corinth", "the severe letter", "open door", "comfort", "sent ones", "unrecorded work", "Crete", "leadership", "church conflict"],
+    summary:  "At Troas a door was opened to Paul by the Lord, and he left it standing open because Titus was not there; nearly five chapters later he picks up the sentence: no rest, until God comforted him by the coming of Titus. Titus first appears as the Greek at Jerusalem nobody asked. Corinth had met Timothy, about whom Paul had to write let no one despise him; he does not write that about Titus. Titus carried the severe letter and brought their answer back. He is named nine times in 2 Corinthians and not once in Acts. Left in Crete to set things in order, he is remembered there, by Eusebius, three centuries on. Bill, Broken Hill, and coming home to nobody writing it down."
+  },
+  {
     title:    "Struck by Kindness",
     url:      "/articles/struck-by-kindness.html",
     date:     "2026-10-30",
