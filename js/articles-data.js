@@ -17,6 +17,14 @@ const ARTICLES_META = [
     summary:  "We treat the glory of God like the Crown Jewels, behind glass at a safe distance. Paul puts it in a face: the light of the knowledge of the glory of God in the face of Jesus Christ, the veil of Moses gone. Hans Urs von Balthasar's theological aesthetics: glory is a form to be seen, and the form is a person. Then verse 7: the treasure is carried in jars of clay, the throwaway crockery nobody mended, so that the surpassing power belongs to God and not to us. In justice work the temptation is to paint the pot gold with programmes and strategies; Paul's name for the gold paint is tampering with God's word. When a respected peer pushes back, they are tapping on the pot. We are not the source. We are the crockery."
   },
   {
+    title:    "Death in Us, Life in You",
+    url:      "/articles/death-in-us-life-in-you.html",
+    date:     "2026-11-08",
+    scripture: ["2 Corinthians 4:10-12", "2 Corinthians 4:12", "2 Corinthians 4:11"],
+    themes:   ["suffering in ministry", "leadership", "brokenness", "Watchman Nee", "the outer man", "presence", "justice work", "rehabilitation", "programmes and presence", "jars of clay"],
+    summary:  "Taking the hit so someone else can breathe. We expect leaders to be a source of energy, and assume an exhausted one has failed. Paul's arithmetic is different: always carrying in the body the death of Jesus, so death is at work in us, but life in you. His dying is the mechanism for their living, and verse 11 keeps it from being a theory: for Jesus' sake, in our mortal flesh. Watchman Nee: ministry is the release of life, and life is not released until the outer man is broken. In the justice system a programme has office hours and lets you go home intact; presence costs you your margins. Death in us. Life in you."
+  },
+  {
     title:    "Titus",
     url:      "/articles/titus.html",
     date:     "2026-11-05",
