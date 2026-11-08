@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Jars of Clay",
+    url:      "/articles/jars-of-clay.html",
+    date:     "2026-11-08",
+    scripture: ["2 Corinthians 4:1-7", "2 Corinthians 4:6", "2 Corinthians 4:7", "2 Corinthians 3:7-18", "Exodus 34:29-35"],
+    themes:   ["glory", "the face of Christ", "jars of clay", "beauty", "Balthasar", "theological aesthetics", "justice work", "programmes and presence", "ego", "correction", "humility"],
+    summary:  "We treat the glory of God like the Crown Jewels, behind glass at a safe distance. Paul puts it in a face: the light of the knowledge of the glory of God in the face of Jesus Christ, the veil of Moses gone. Hans Urs von Balthasar's theological aesthetics: glory is a form to be seen, and the form is a person. Then verse 7: the treasure is carried in jars of clay, the throwaway crockery nobody mended, so that the surpassing power belongs to God and not to us. In justice work the temptation is to paint the pot gold with programmes and strategies; Paul's name for the gold paint is tampering with God's word. When a respected peer pushes back, they are tapping on the pot. We are not the source. We are the crockery."
+  },
+  {
     title:    "Titus",
     url:      "/articles/titus.html",
     date:     "2026-11-05",

@@ -51,9 +51,9 @@ Full addresses, so you never have to build one:
 | File | When |
 |---|---|
 | Page conventions — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/CONVENTIONS.md?v=deba38b0 | **Always**, before building any page |
-| Brief inventory — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/SITE-INDEX-BRIEF.md?v=43d2c085 | **Always**, before proposing a subject |
+| Brief inventory — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/SITE-INDEX-BRIEF.md?v=cd4ff4ce | **Always**, before proposing a subject |
 | How we work — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/COLLABORATION.md?v=12bd386b | Always, for voice and working practice |
-| Full inventory — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/SITE-INDEX.md?v=1a1cec06 | When hunting themes, summaries or a companion |
+| Full inventory — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/SITE-INDEX.md?v=a152014f | When hunting themes, summaries or a companion |
 | Unwritten pieces — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/FUTURE-ARTICLES.md?v=78c6ce96 | When deciding what to write next |
 | Design tokens — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/css/tokens.css?v=25b833fe | When writing page-local CSS |
 | Song of Songs overlay — https://raw.githubusercontent.com/normreed-tas/hesedwords/main/notes/PROJECT-SONGS.md?v=9cdcc664 | Song of Songs project only |
@@ -215,4 +215,4 @@ Answers are kept in the repo so the resolved item stops being re-raised in three
 
 The site serves from the repo root. That includes `/notes/`. Nothing in this repo is
 private, so write notes on that footing.
-<!-- READ-TOKEN e8c7f5ce · 217 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN e06f25c9 · 217 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
