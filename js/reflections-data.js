@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "I Know You're Busy, But…",
+    date:     "2026-11-10",
+    url:      "/reflections/i-know-youre-busy.html",
+    summary:  "In 2 Corinthians 11-13 Paul defends himself against the super-apostles, hyperlian apostoloi: men with pedigree, letters of recommendation, payment and presence, preferred not because the Corinthians were gullible but because they were more attractive. Apostolos is simply a sent one; the same letter calls the collection-carriers apostles of the churches. Paul's credentials do not transfer: lashes, rods, shipwreck, and the daily pressure of concern for all the churches. Amateur comes from amator, a lover. Burnout as Executive Pastor of a large church; flying Adelaide to Hobart once a month; Eugene Peterson on busy as a word that should sound like adulterous. The requests that began I know you're busy, but. The measure has no column for the effective and unwell. The basket through the wall, and the thorn. The diagnostic is what people have learned to expect before they ask.",
+    scripture: ["2 Corinthians 11", "2 Corinthians 12", "2 Corinthians 10:10", "2 Corinthians 11:23-28", "2 Corinthians 12:7-9", "2 Corinthians 8:23", "Philippians 3:5-6"],
+    themes:   ["busyness", "burnout", "professionalism", "super-apostles", "apostolos", "the sent one", "amateur", "pastoral ministry", "Eugene Peterson", "John Piper", "clergy wellbeing", "weakness", "Hobart", "Adelaide"]
+  },
+  {
     title:    "Singing on Their Beds",
     date:     "2026-11-05",
     url:      "/reflections/singing-on-their-beds.html",

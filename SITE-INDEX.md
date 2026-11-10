@@ -9,11 +9,16 @@ before writing: *does something on this already exist?* and *what did it say?*
 The theme index at the foot is the fastest way in — a new piece whose theme
 already appears there probably has a companion waiting.
 
-**172 pieces** — 103 reflections, 46 articles, 16 books, 7 word studies.
+**173 pieces** — 104 reflections, 46 articles, 16 books, 7 word studies.
 
 ---
 
-## Reflections (103)
+## Reflections (104)
+
+**2026-11-10 · I Know You're Busy, But…**
+2 Corinthians 11; 2 Corinthians 12; 2 Corinthians 10:10; 2 Corinthians 11:23-28; 2 Corinthians 12:7-9; 2 Corinthians 8:23; Philippians 3:5-6 · `/reflections/i-know-youre-busy.html`
+*Themes:* busyness, burnout, professionalism, super-apostles, apostolos, the sent one, amateur, pastoral ministry, Eugene Peterson, John Piper, clergy wellbeing, weakness, Hobart, Adelaide
+In 2 Corinthians 11-13 Paul defends himself against the super-apostles, hyperlian apostoloi: men with pedigree, letters of recommendation, payment and presence, preferred not because the Corinthians were gullible but because they were more attractive. Apostolos is simply a sent one; the same letter calls the collection-carriers apostles of the churches. Paul's credentials do not transfer: lashes, rods, shipwreck, and the daily pressure of concern for all the churches. Amateur comes from amator, a lover. Burnout as Executive Pastor of a large church; flying Adelaide to Hobart once a month; Eugene Peterson on busy as a word that should sound like adulterous. The requests that began I know you're busy, but. The measure has no column for the effective and unwell. The basket through the wall, and the thorn. The diagnostic is what people have learned to expect before they ask.
 
 **2026-11-05 · Singing on Their Beds**
 Psalm 149; Psalm 149:4-9 · `/reflections/singing-on-their-beds.html`
@@ -889,7 +894,7 @@ Before it ever means to intercede, it means to fall upon — to strike, to meet 
 
 ---
 
-## Theme index (646 themes)
+## Theme index (659 themes)
 
 Every theme in use, and what carries it. A theme with more than one piece
 against it is a companion candidate.
@@ -898,6 +903,7 @@ against it is a companion candidate.
 - **abraham** — [What Cannot Be Counted](/reflections/what-cannot-be-counted.html) (reflection)
 - **achievement** — [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection)
 - **acrostic** — [Say It Three Times](/books/say-it-three-times.html) (book) · [According to Your Steadfast Love](/reflections/according-to-your-steadfast-love.html) (reflection) · [The Man Who Fears the Lord](/reflections/the-man-who-fears-the-lord.html) (reflection) · [New Every Morning](/reflections/new-every-morning.html) (reflection) · [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection)
+- **adelaide** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection)
 - **administration** — [God Is Searching](/books/god-is-searching.html) (book)
 - **advice** — [You Should!](/reflections/you-should.html) (reflection)
 - **affliction** — [They Have Not Prevailed](/reflections/they-have-not-prevailed.html) (reflection)
@@ -909,6 +915,7 @@ against it is a companion candidate.
 - **ak** — [God Alone](/reflections/god-alone.html) (reflection)
 - **aletheia** — [Is There No Hesed in John?](/articles/is-there-no-hesed-in-john.html) (article)
 - **alphabet psalms** — [Say It Three Times](/books/say-it-three-times.html) (book)
+- **amateur** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection)
 - **anavah** — [Meekness](/articles/psalm-45-meekness.html) (article)
 - **anavim** — [Singing on Their Beds](/reflections/singing-on-their-beds.html) (reflection)
 - **ancient paths** — [Stand by the Roads](/reflections/stand-by-the-roads.html) (reflection) · [He Does Not Afflict From His Heart](/articles/he-does-not-afflict-from-his-heart.html) (article)
@@ -918,6 +925,7 @@ against it is a companion candidate.
 - **anonymity** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article)
 - **antioch** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article)
 - **antiphon** — [Psalm 75 — How Do I Pray This?](/articles/how-do-i-pray-this.html) (article)
+- **apostolos** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection)
 - **approach** — [Taste and See](/reflections/taste-and-see.html) (reflection)
 - **areopagus** — [Feeling Their Way](/articles/feeling-their-way.html) (article)
 - **argos** — [Idle Words](/reflections/idle-words.html) (reflection)
@@ -966,7 +974,8 @@ against it is a companion candidate.
 - **breath** — [Selah](/reflections/selah.html) (reflection)
 - **brokenness** — [Death in Us, Life in You](/articles/death-in-us-life-in-you.html) (article)
 - **building** — [The House the LORD Builds](/reflections/the-house-the-lord-builds.html) (reflection)
-- **burnout** — [Succession Planning — Everything Set in Place](/reflections/succession-planning.html) (reflection)
+- **burnout** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection) · [Succession Planning — Everything Set in Place](/reflections/succession-planning.html) (reflection)
+- **busyness** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection)
 - **bystander** — [That Day](/books/that-day.html) (book)
 - **c.s. lewis** — [The Treasure](/articles/the-treasure.html) (article) · [Parables — You'll See](/reflections/parables-youll-see.html) (reflection)
 - **calling** — [Then We Stopped](/reflections/then-we-stopped.html) (reflection)
@@ -993,6 +1002,7 @@ against it is a companion candidate.
 - **church culture** — [Blue Blazers](/reflections/blue-blazers.html) (reflection)
 - **church history** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article)
 - **church leadership** — [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection)
+- **clergy wellbeing** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection)
 - **coincidence** — [Coincidence](/reflections/coincidence.html) (reflection)
 - **collecting a word** — [How Precious](/reflections/how-precious.html) (reflection)
 - **comfort** — [Titus](/articles/titus.html) (article)
@@ -1071,6 +1081,7 @@ against it is a companion candidate.
 - **entrust** — [Into Your Hand](/reflections/into-your-hand.html) (reflection)
 - **eschatology** — [Reading Daniel Without Arithmetic](/articles/reading-daniel-without-arithmetic.html) (article)
 - **eternal life** — [Asking for Bread](/reflections/asking-for-bread.html) (reflection)
+- **eugene peterson** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection)
 - **everyday sacredness** — [The Piece I Keep Picking Up](/reflections/the-piece-i-keep-picking-up.html) (reflection)
 - **exchange** — [The Treasure](/articles/the-treasure.html) (article)
 - **exclusion** — [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection)
@@ -1136,6 +1147,7 @@ against it is a companion candidate.
 - **hiding** — [Blessed Is the Man](/reflections/blessed-is-the-man.html) (reflection)
 - **historical fiction** — [A Man Who Runs](/books/a-man-who-runs.html) (book) · [That Day](/books/that-day.html) (book)
 - **history** — [The Third That Survived](/reflections/the-third-that-survived.html) (reflection)
+- **hobart** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection)
 - **holiness** — [The Piece I Keep Picking Up](/reflections/the-piece-i-keep-picking-up.html) (reflection)
 - **holocaust** — [The Third That Survived](/reflections/the-third-that-survived.html) (reflection)
 - **homelessness** — [Taste and See](/reflections/taste-and-see.html) (reflection)
@@ -1165,6 +1177,7 @@ against it is a companion candidate.
 - **jewish tradition** — [The Thursday Psalm](/articles/the-thursday-psalm.html) (article)
 - **john** — [Nikaō](/word-studies/nikao.html) (word study) · [Asking for Bread](/reflections/asking-for-bread.html) (reflection)
 - **john mark** — [A Man Who Runs](/books/a-man-who-runs.html) (book)
+- **john piper** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection)
 - **john the baptist** — [Fitting](/articles/fitting.html) (article)
 - **john's gospel** — [Is There No Hesed in John?](/articles/is-there-no-hesed-in-john.html) (article)
 - **jonah** — [Who Knows](/reflections/who-knows.html) (reflection)
@@ -1263,6 +1276,7 @@ against it is a companion candidate.
 - **parable** — [The Turning Left Open](/articles/the-turning-left-open.html) (article)
 - **partiality** — [I Arrived Late](/reflections/i-arrived-late.html) (reflection)
 - **pastoral formation** — [Jesus as Leader](/articles/jesus-as-leader.html) (article)
+- **pastoral ministry** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection)
 - **pastoring** — [Struck by Kindness](/articles/struck-by-kindness.html) (article) · [An Invitation to Strike](/reflections/an-invitation-to-strike.html) (reflection)
 - **patience** — [The Turning Left Open](/articles/the-turning-left-open.html) (article)
 - **paul** — [Titus](/articles/titus.html) (article) · [Then We Stopped](/reflections/then-we-stopped.html) (reflection) · [A Man Who Runs](/books/a-man-who-runs.html) (book) · [Star Wars](/reflections/star-wars.html) (reflection) · [Let Him Kiss Me](/reflections/let-him-kiss-me.html) (reflection)
@@ -1294,6 +1308,7 @@ against it is a companion candidate.
 - **presumption** — [Nobody Wants Nathan](/articles/nobody-wants-nathan.html) (article)
 - **pride** — [Maturity?](/reflections/maturity.html) (reflection) · [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection) · [Blue Blazers](/reflections/blue-blazers.html) (reflection) · [Psalm 75 — How Do I Pray This?](/articles/how-do-i-pray-this.html) (article) · [Pride](/reflections/pride.html) (reflection) · [Nobody Left to Say No](/articles/nobody-left-to-say-no.html) (article)
 - **prison ministry** — [The Turning Left Open](/articles/the-turning-left-open.html) (article) · [I Arrived Late](/reflections/i-arrived-late.html) (reflection) · [The Man Who Fears the Lord](/reflections/the-man-who-fears-the-lord.html) (reflection) · [Knowing Where He Came From](/articles/knowing-where-he-came-from.html) (article) · [What Do You Want Me to Do for You](/reflections/what-do-you-want-me-to-do-for-you.html) (reflection) · [Still Talking](/reflections/still-talking.html) (reflection) · [What We Did Without Knowing](/books/what-we-did-without-knowing.html) (book) · [Have You Not Read](/reflections/have-you-not-read.html) (reflection) · [Why Do You Think Evil](/reflections/why-do-you-think-evil.html) (reflection) · [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection) · [So I Ask](/reflections/so-i-ask.html) (reflection) · [Seeking](/articles/seeking.html) (article) · [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection) · [Sitting with a Sinner](/articles/sitting-with-a-sinner.html) (article) · [Measured, and Immeasurable](/articles/measured-and-immeasurable.html) (article) · [The Vow?](/reflections/the-vow.html) (reflection) · [What Is Wicked in This Story?](/reflections/what-is-wicked-in-this-story.html) (reflection) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection) · [Church Leadership — Marching Orders](/reflections/church-leadership-marching-orders.html) (reflection) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection) · [The Oldest Loneliness](/books/the-oldest-loneliness.html) (book) · [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection) · [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection)
+- **professionalism** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection)
 - **programmes and presence** — [Jars of Clay](/articles/jars-of-clay.html) (article) · [Death in Us, Life in You](/articles/death-in-us-life-in-you.html) (article)
 - **promotion** — [Psalm 75 — How Do I Pray This?](/articles/how-do-i-pray-this.html) (article)
 - **prophecy** — [Through the Spirit](/articles/through-the-spirit.html) (article) · [Those Who Know Their God](/reflections/those-who-know-their-god.html) (reflection) · [Reading Daniel Without Arithmetic](/articles/reading-daniel-without-arithmetic.html) (article)
@@ -1409,6 +1424,7 @@ against it is a companion candidate.
 - **succession** — [Succession Planning — Everything Set in Place](/reflections/succession-planning.html) (reflection)
 - **suffering** — [Say It Three Times](/books/say-it-three-times.html) (book) · [The Fellowship of Suffering](/articles/the-fellowship-of-suffering.html) (article) · [Is Jesus an Intercessor?](/word-studies/jesus-intercessor.html) (word study) · [The Man Who Opened His Hand](/books/the-open-hand.html) (book) · [Job 43](/books/job-43.html) (book)
 - **suffering in ministry** — [Death in Us, Life in You](/articles/death-in-us-life-in-you.html) (article)
+- **super-apostles** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection)
 - **superscriptions** — [The Thursday Psalm](/articles/the-thursday-psalm.html) (article) · [Notes for the Band](/reflections/notes-for-the-band.html) (reflection) · [Reading the Label](/articles/reading-the-label.html) (article)
 - **survival** — [The Third That Survived](/reflections/the-third-that-survived.html) (reflection)
 - **ta'am** — [Taste and See](/reflections/taste-and-see.html) (reflection)
@@ -1456,6 +1472,7 @@ against it is a companion candidate.
 - **the scattered** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article)
 - **the scroll** — [Ezra Had the Scroll](/articles/ezra-had-the-scroll.html) (article)
 - **the secret verse** — [The Man Who Opened His Hand](/books/the-open-hand.html) (book)
+- **the sent one** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection)
 - **the sermon on the mount** — [Trampled](/articles/trampled.html) (article) · [So I Ask](/reflections/so-i-ask.html) (reflection)
 - **the servant** — [Is There Not a Cause](/reflections/is-there-not-a-cause.html) (reflection) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection) · [Is Jesus an Intercessor?](/word-studies/jesus-intercessor.html) (word study) · [Justice Is Not What You Think](/reflections/justice-is-not-what-you-think.html) (reflection) · [Called in Righteousness](/reflections/called-in-righteousness.html) (reflection)
 - **the severe letter** — [Titus](/articles/titus.html) (article)
@@ -1513,6 +1530,7 @@ against it is a companion candidate.
 - **watching** — [Somebody Else Was Awake](/reflections/somebody-else-was-awake.html) (reflection)
 - **watchman** — [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection)
 - **watchman nee** — [Death in Us, Life in You](/articles/death-in-us-life-in-you.html) (article)
+- **weakness** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection)
 - **wealth** — [Still Counting](/articles/still-counting.html) (article) · [Understanding?](/reflections/understanding.html) (reflection)
 - **weight of glory** — [Parables — You'll See](/reflections/parables-youll-see.html) (reflection)
 - **whirlwind** — [Listening for the Score in Job](/reflections/listening-for-the-score.html) (reflection)
@@ -1540,4 +1558,4 @@ against it is a companion candidate.
 - **zakar** — [The Asking](/reflections/the-asking.html) (reflection) · [What God Remembers](/articles/what-god-remembers.html) (article) · [Zakar](/word-studies/zakar.html) (word study) · [Kept Anyway](/reflections/kept-anyway.html) (reflection)
 - **zechariah** — [The Piece I Keep Picking Up](/reflections/the-piece-i-keep-picking-up.html) (reflection)
 - **zion** — [Spot the Difference](/articles/spot-the-difference.html) (article) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection)
-<!-- READ-TOKEN 1b5b5553 · 1542 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN a37ab1f0 · 1560 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
