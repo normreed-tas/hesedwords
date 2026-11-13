@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Father Abraham Had One Son",
+    date:     "2026-11-12",
+    url:      "/reflections/father-abraham-had-one-son.html",
+    summary:  "A chorus with actions, a hundred people stomping and singing that they were Father Abraham's many sons. Galatians 3:16: the promises were spoken to Abraham and to his offspring, not seeds but seed, which is Christ. Genesis 15: the animals cut in half, Abram asleep, and God passing between the pieces alone. Micah 7:20, hesed sworn to Abraham. If you are Christ's, then you are Abraham's offspring: the order matters. The older brother in Luke 15 says this son of yours; the father says this brother of yours. Father Abraham had one Son, and the rest of us are in the family because we are in him.",
+    scripture: ["Galatians 3:16", "Galatians 3:19", "Galatians 3:28", "Galatians 3:29", "Genesis 15", "Micah 7:20", "Luke 15:29-32"],
+    themes:   ["the promise to Abraham", "seed", "Christ the offspring", "covenant", "hesed", "belonging", "the older brother", "choruses", "teenagers", "in Christ"]
+  },
+  {
     title:    "I Know You're Busy, But…",
     date:     "2026-11-10",
     url:      "/reflections/i-know-youre-busy.html",
