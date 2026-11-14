@@ -9,6 +9,22 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Church",
+    url:      "/articles/church.html",
+    date:     "2026-11-15",
+    scripture: ["Ephesians 1","Ephesians 1:3","Ephesians 1:18-23","Ephesians 1:10","Ephesians 4:1","Deuteronomy 32:9","Psalm 110:1","Psalm 8:6"],
+    themes:   ["church","ekklesia","assembly","blessing","glory","kavod","inheritance in the saints","authority","prison","Risdon Vale","Onesimus Foundation","calling"],
+    summary:  "The church at Risdon Vale sits so close to the prison you could spit over the fence. What do we think we are doing on a Sunday morning? Ephesians 1 begins not with us but with blessing: every spiritual blessing in the heavenly places, one long Greek sentence ending three times on the praise of his glory. Paul prays for eyes to see: the hope of his calling, his inheritance in the saints, the power that raised Christ and seated him far above all rule and authority, including the one over the fence. Christ is given to the assembly, the ekklesia, as head; the church is the body through which the head acts. Prisoner in the Lord, Paul tells the church to walk."
+  },
+  {
+    title:    "For Your Hesed’s Sake",
+    url:      "/articles/for-your-hesed-sake.html",
+    date:     "2026-11-15",
+    scripture: ["Psalm 6","Psalm 6:4","Lamentations 5:21","Jeremiah 31:18","Exodus 34:6","Matthew 4:17","Psalm 143:12"],
+    themes:   ["repentance","hesed","shuv","turn","penitential psalms","Luther","Ninety-five Theses","Timothy Keller","grace","tears","prayer"],
+    summary:  "We assume our repentance is what moves God, and so repentance becomes a payment. In Psalm 6, sick and weeping, David gives one reason for God to help him, and it is not his sorrow: turn, O LORD, save me for the sake of your hesed. Shuv, the word for repentance, is asked of God; in Lamentations and Jeremiah God turns first and then the people turn. Poenitentiam agite and late-medieval penance; Luther's first book in 1517 was on the seven penitential psalms, and his first thesis made all of life repentance. Keller: in religion we try to earn our forgiveness with our repentance. The LORD has heard the sound of my weeping. The seven psalms open and close on hesed."
+  },
+  {
     title:    "Jars of Clay",
     url:      "/articles/jars-of-clay.html",
     date:     "2026-11-08",
