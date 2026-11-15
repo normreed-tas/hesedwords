@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Rich",
+    url:      "/articles/rich.html",
+    date:     "2026-11-16",
+    scripture: ["Ephesians 2:1-9", "Ephesians 3:14-19", "Ephesians 3:8", "Ephesians 4:32", "Psalm 89:14", "Matthew 25:24-25", "Luke 16:1-8", "Romans 11:33"],
+    themes:   ["mercy", "grace", "kindness", "hesed", "eleos", "riches", "stewardship", "the unjust steward", "Kenneth Bailey", "prison", "forgiveness", "the church"],
+    summary:  "Paul tells the church what they were, dead in transgressions, before he tells them who God is: but God, being rich in mercy. Three riches, mercy (eleos, the LXX word for hesed), grace and kindness, and a God who wants to be known in the ages to come for his grace in kindness. Australia is rich in ore, oil and gas and trades on them; the church's stock in trade is what God is rich in. Two stewards: the servant who read his master as hard and buried the talent, and the manager of Luke 16 who, as Kenneth Bailey reads it, staked everything on his master's generosity. Paul is a steward of grace, oikonomia. The prison fence is where most people's grace runs out. The unsearchable, unfathomable riches of Christ; the well is deep."
+  },
+  {
     title:    "Church",
     url:      "/articles/church.html",
     date:     "2026-11-15",
