@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Peace",
+    url:      "/articles/peace.html",
+    date:     "2026-11-17",
+    scripture: ["Ephesians 2:11-22", "Ephesians 2:14", "Ephesians 2:15", "Ephesians 6:15", "Ephesians 6:20", "Acts 21:29-32", "Acts 28:16"],
+    themes:   ["peace", "the dividing wall", "hostility", "Jew and Gentile", "Pax Romana", "the temple barrier", "dogmata", "rules and signs", "factions", "forgiveness", "Hobart", "the church"],
+    summary:  "The first readers of Ephesians lived under the Pax Romana, peace won by a sword and guarded by soldiers; Paul wrote as an ambassador in chains. The temple in Jerusalem had a barrier with notices in Greek and Latin warning foreigners off on pain of death, and Paul was arrested over Trophimus the Ephesian and that wall. You who were far off are made near in the blood of Christ. He is our peace: he broke down the middle wall, abolished the dogmata, made one new man of the two, and killed the hostility through the cross. A small divided church in Hobart with signs on every wall, factions, forgiveness, and the signs taken down one at a time. He did not put up a notice; he came and preached peace. Shoes fitted with the Good News of peace."
+  },
+  {
     title:    "Rich",
     url:      "/articles/rich.html",
     date:     "2026-11-16",

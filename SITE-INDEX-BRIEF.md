@@ -1,6 +1,6 @@
 # Hesed Words — brief index
 
-**177 pieces** — 105 reflections, 49 articles, 16 books, 7 word studies.
+**178 pieces** — 105 reflections, 50 articles, 16 books, 7 word studies.
 
 One line per piece: date · title · scripture · url. Deliberately short enough
 to read in full. Use it to answer "does this already exist?" — then read
@@ -114,8 +114,9 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2026-05-16 · **The Far Country** · Psalm 120 · `/reflections/the-far-country.html`
 - 2026-05-01 · **Called in Righteousness** · Isaiah 42:6 · `/reflections/called-in-righteousness.html`
 
-## Articles (49)
+## Articles (50)
 
+- 2026-11-17 · **Peace** · Ephesians 2:11-22; Ephesians 2:14; Ephesians 2:15; Ephesians 6:15; Ephesians 6:20; Acts 21:29-32; Acts 28:16 · `/articles/peace.html`
 - 2026-11-16 · **Rich** · Ephesians 2:1-9; Ephesians 3:14-19; Ephesians 3:8; Ephesians 4:32; Psalm 89:14; Matthew 25:24-25; Luke 16:1-8; Romans 11:33 · `/articles/rich.html`
 - 2026-11-15 · **Church** · Ephesians 1; Ephesians 1:3; Ephesians 1:18-23; Ephesians 1:10; Ephesians 4:1; Deuteronomy 32:9; Psalm 110:1; Psalm 8:6 · `/articles/church.html`
 - 2026-11-15 · **For Your Hesed’s Sake** · Psalm 6; Psalm 6:4; Lamentations 5:21; Jeremiah 31:18; Exodus 34:6; Matthew 4:17; Psalm 143:12 · `/articles/for-your-hesed-sake.html`
@@ -194,4 +195,4 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2026-08-03 · **Is "Wicked" a Verdict or a Character?** · Deuteronomy 25:1; 1 Kings 8:32; Exodus 23:7; Psalm 58:1 · `/word-studies/is-wicked-a-verdict-or-a-character.html`
 - 2026-07-11 · **What Is an Idle Word?** · Matthew 12:36; Matthew 20:3; 1 Timothy 5:13; 2 Peter 1:8 · `/word-studies/idle.html`
 - 2026-07-10 · **Is Jesus an Intercessor?** · Isaiah 59:16; Isaiah 53:12; 1 Samuel 22:18; Romans 8:34 · `/word-studies/jesus-intercessor.html`
-<!-- READ-TOKEN 56fca964 · 196 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN f7ea58c5 · 197 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
