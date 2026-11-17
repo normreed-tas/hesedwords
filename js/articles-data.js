@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Hidden",
+    url:      "/articles/hidden.html",
+    date:     "2026-11-18",
+    scripture: ["Ephesians 3:1-13", "Ephesians 3:6", "Ephesians 3:10", "Ephesians 1:9", "1 Corinthians 2:7-8", "1 Peter 1:12", "Job 1:6-8", "Ephesians 6:11-14", "Proverbs 25:2"],
+    themes:   ["mystery", "mysterion", "God's hidden plan", "revelation", "stewardship", "Jew and Gentile", "the heavenly places", "principalities and powers", "angels", "the church", "Hobart", "spiritual warfare"],
+    summary:  "Asked to rename the church in Hobart, Norm found a 1970s brochure in a cupboard: the founding pastor's vision, under the very name he was about to give it. You're not naming the church; it has always had a name. Paul's word for such a plan is mysterion, a king's secret counsel (Judith 2:2), made known by revelation to the very least of all saints, a steward of God's mysteries. Why hidden? Strategy (had the rulers known, they would not have crucified the Lord of glory; Lewis's Deeper Magic), timing, and because it was in the Scriptures all along. Hidden for us, not from us. The secret is people: fellow heirs, one body, sharers together. Through the church the manifold, many-coloured wisdom of God is made known to the powers in the heavenly places; Job's heavenly court; a spectacle to angels. The devil has schemes, God has an eternal purpose: stand."
+  },
+  {
     title:    "Peace",
     url:      "/articles/peace.html",
     date:     "2026-11-17",
