@@ -273,4 +273,128 @@ only as search results unless marked.
 power in believers, individuals included (so Calvin: "what we feel within ourselves"). The
 plural is certain (A1). "Corporate, **not** personal" goes further than the commentators I
 saw. "Plural, and for the church's glory" is what the text supports.
-<!-- READ-TOKEN fd7af37f · 275 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+
+---
+
+# PART C — Follow-up
+
+Added 19 November 2026. Parts A and B are unchanged.
+
+| # | Item | Result |
+|---|---|---|
+| C1 | Canberra Times, "Prayer Calms / Stills Parliament" | **NOT FOUND** in the Trove searches run |
+| C2 | Eastman, *No Easy Road* | **CONFIRMED** (Baker, 1971); the audio course is **not confirmed** |
+| C3 | *Cromwell* (1970) line | **FOUND** as a film line; not attributed to the historical Cromwell |
+| C4 | NIVAC author | **CONFIRMED**: Klyne Snodgrass, Zondervan, 1996; **page not found** |
+
+## C1. The Canberra Times article — NOT FOUND
+
+I searched Trove's digitised *Canberra Times* through the Trove website's advanced search.
+**Nothing matching Norm's memory turned up**: no headline like "Prayer Calms Parliament" or
+"Prayer Stills Parliament", and no article saying the prayer brought calm, peace or unity
+to a sitting.
+
+### Searches run
+
+All were limited to *The Canberra Times*, 1980–1989. Trove's decade filter was the one that
+worked reliably; the 1979–1984 date-range filter did not apply.
+
+| Search | Results | Anything relevant |
+|---|---|---|
+| Phrase "prayer stills" | 3 | No. One is a 1988 gallery column where the Lord's Prayer is "still echoing" |
+| Phrase "prayer calms" | 1 | No (a 1986 feature on Paraguay) |
+| All of: prayer, Parliament, calm | 6 | No (Iran reports and advertisements) |
+| All of: prayer, Parliament, Speaker, calm, peace | 2 | No |
+| All of: prayers, Parliament; any of: calmed, calms, calming, stills, stilled, hush, hushed, quietens, soothes | 220 | I read the first 17 by relevance. None matches; three are related (below) |
+
+An earlier set of searches used a date filter that Trove ignored, so they are not counted.
+They were "prayer calms" and "prayer calms parliament" (no results), and "prayer stills
+parliament" (378 results across all years, with nothing relevant in the first dozen).
+
+### Limits
+
+- **Not exhaustive.** Only the first 17 of 220 results were read on the broadest search.
+- **Trove matches exact word forms.** A headline using a word I did not try ("quiets",
+  "settles", "pacifies", "tames") would be missed.
+- **Scanned text has errors**, so a damaged headline may not match.
+- **Other papers were not searched.** The article may have been in another paper (*The Age*,
+  *The Sydney Morning Herald*, *The Australian*) or a church paper. None of those is
+  digitised on Trove for the 1980s.
+- **1979 is outside the decade filter** and was not searched.
+
+### Related coverage found (the Canberra Times)
+
+- **29 Feb 1984, p. 17**, "'Life is only froth and bubble' | A reminder to start the new
+  session", Ian Warden's "Warden in the Gallery" column.
+  https://trove.nla.gov.au/newspaper/article/116392676
+  - It opens by noting Speaker Harry Jenkins gave "an especially heartfelt rendition" of the
+    Lord's Prayer at the opening of the new session.
+  - It is a wry sketch of the day. It does **not** say the prayer calmed the House; it goes on
+    to describe heckling. This is the nearest thing found, and it is not the article
+    remembered.
+- **9 Oct 1983, p. 2**, "Paspalum Place: No place for Almighty at stone laying".
+  https://trove.nla.gov.au/newspaper/article/116411083
+  - A column remarking that the foundation-stone ceremony for the new Parliament House had no
+    religious element, although Parliament's proceedings begin with prayer. Read as a search
+    snippet only, not in full.
+- **23 Feb 1988, p. 9**, "Warden in the Gallery". The Lord's Prayer "still echoing about the
+  chamber" after Madam Speaker read it. Outside the date range; snippet only.
+- **19 Feb 1986, p. 2**, "President without a prayer". About a South Australian presiding
+  officer and the reading of prayers. It concerns state Parliament, not federal; snippet only.
+
+### Background
+
+- **House of Representatives.** The Speaker reads Prayers at the start of each sitting. The
+  House's own Votes and Proceedings (aph.gov.au, seen in search results) record "Mr Speaker
+  (the Right Honourable Sir Billy Snedden) took the Chair, and read Prayers" in 1981–82, and
+  Dr H. A. Jenkins as Speaker in 1983.
+- **Senate.** The President reads the prayers there. I did not open a source for the names in
+  1980–83.
+- **Controversy in 1980–83.** I found none in these searches. The 1983 column above is a
+  complaint about a ceremony, not a dispute over the parliamentary prayer.
+
+### Suggested next steps
+
+Norm could try Trove himself with other words. A librarian at the National Library or the
+Parliamentary Library could also search the undigitised papers. The Parliamentary Christian
+Fellowship or the Speaker's office of the time may be another route.
+
+## C2. Dick Eastman, *No Easy Road*
+
+- **Title and subtitle:** *No Easy Road: Inspirational Thoughts on Prayer*.
+- **Publisher and year:** Baker Book House, Grand Rapids, **1971**. Library catalogue records
+  in search results agree; a bookseller record gives ISBN 0801032598.
+- **Later edition:** Chosen Books (Baker Publishing Group), 2003, retitled *No Easy Road:
+  Discover the Extraordinary Power of Personal Prayer*, with a foreword by Bill Bright.
+- **Audio or group course: NOT CONFIRMED.** Nothing in the search results names a cassette
+  course tied to *No Easy Road*. Eastman is known for the "Change the World School of
+  Prayer" seminar (from general knowledge, mid-1970s onward). I found no source connecting it
+  to this book or giving a date. Treat it as a lead.
+
+These are catalogue and bookseller records seen as search results. I did not open the book.
+
+## C3. *Cromwell* (1970)
+
+- **The line**, as given by IMDb's quotes page (seen in search results). It has two sentences;
+  the first says every man who wages war believes God is on his side. The second: "I'll
+  warrant God should often wonder who is on his."
+- **Speaker:** Oliver Cromwell (played by Richard Harris).
+- **To whom:** Ireton, in an early scene before the war, according to the search summary. I
+  did not watch the scene or open a script, so treat the addressee as probable.
+- **Variant:** TV Tropes gives "thinks" for "believes" and "I warrant" for "I'll warrant".
+- **Norm's recollection** ("more wars are fought in the name of God…") is a paraphrase. The
+  film line does not say that.
+- **Attribution:** it is the film's line, written by the screenwriter and director Ken Hughes.
+  I found nothing attributing it to the historical Cromwell. Cite it as *Cromwell* (1970),
+  not as Cromwell.
+
+## C4. NIVAC author
+
+- **Confirmed:** Klyne Snodgrass, *Ephesians*, The NIV Application Commentary (Grand Rapids:
+  Zondervan, 1996). Publisher listings on Logos and Barnes & Noble agree; the latter gives 25
+  June 1996.
+- **The sentence** ("No other passage mentions the church explicitly in a doxology…") was read
+  on the Bible Gateway sample page (Part A, item 6), under the heading "The Doxology
+  (3:20–21)".
+- **Page number: not found.** It needs the printed book.
+<!-- READ-TOKEN abb11278 · 399 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
