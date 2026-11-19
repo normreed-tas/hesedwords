@@ -23,6 +23,17 @@
     display: block; margin-top: 10px; font-family: var(--font-mono); font-size: 11px;
     letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
   }
+  .hw-article-body .toc { margin: 40px 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); padding: 26px 0; }
+  .hw-article-body .toc h2 {
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass);
+    text-align: center; margin: 0 0 20px; border: none; padding: 0;
+  }
+  .hw-article-body .toc ol { list-style: none; margin: 0; padding: 0; }
+  .hw-article-body .toc li { margin: 8px 0; }
+  .hw-article-body .toc .t-main a { color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--hairline); }
+  .hw-article-body .toc .t-main a:hover { color: var(--oxblood); }
+  .hw-article-body .toc .t-num { font-family: var(--font-mono); font-size: 12px; color: var(--brass); display: inline-block; width: 1.6em; }
+  .hw-article-body .toc .t-sub { font-style: italic; color: var(--muted); font-size: 15px; padding-left: 1.6em; display: block; margin-top: 2px; }
   .hw-article-body h3.beat { font-family: var(--font-serif); font-size: 1.12rem; font-weight: 600; margin: 2.2rem 0 0.8rem; }
   .hw-article-body h3.exercise {
     font-family: var(--font-mono); font-size: 11px; font-weight: 400; letter-spacing: 0.18em;
@@ -91,7 +102,55 @@
 
         <p class="verse">The alphabet psalms, and how to write one &middot; for teenagers</p>
 
-        <div class="chapter-open first"><span class="title">Before you start</span></div>
+        <nav class="toc">
+          <h2>Contents</h2>
+          <ol>
+            <li>
+              <div class="t-main"><span class="t-num"></span><a href="#start">Before you start</a></div>
+            </li>
+            <li>
+              <div class="t-main"><span class="t-num">1</span><a href="#ch1">The psalm with a letter missing</a></div>
+              <span class="t-sub">Psalm 145</span>
+            </li>
+            <li>
+              <div class="t-main"><span class="t-num">2</span><a href="#ch2">The twins</a></div>
+              <span class="t-sub">Psalms 111 and 112</span>
+            </li>
+            <li>
+              <div class="t-main"><span class="t-num">3</span><a href="#ch3">The one with a story attached</a></div>
+              <span class="t-sub">Psalm 34</span>
+            </li>
+            <li>
+              <div class="t-main"><span class="t-num">4</span><a href="#ch4">The slow one</a></div>
+              <span class="t-sub">Psalm 37</span>
+            </li>
+            <li>
+              <div class="t-main"><span class="t-num">5</span><a href="#ch5">The one that asks</a></div>
+              <span class="t-sub">Psalm 25</span>
+            </li>
+            <li>
+              <div class="t-main"><span class="t-num">6</span><a href="#ch6">The enormous one</a></div>
+              <span class="t-sub">Psalm 119</span>
+            </li>
+            <li>
+              <div class="t-main"><span class="t-num">7</span><a href="#ch7">The one that falls apart</a></div>
+              <span class="t-sub">Psalms 9 and 10</span>
+            </li>
+            <li>
+              <div class="t-main"><span class="t-num">8</span><a href="#ch8">When the alphabet is all you have</a></div>
+              <span class="t-sub">Lamentations</span>
+            </li>
+            <li>
+              <div class="t-main"><span class="t-num">9</span><a href="#ch9">A to Z</a></div>
+              <span class="t-sub">Writing your own</span>
+            </li>
+            <li>
+              <div class="t-main"><span class="t-num"></span><a href="#more">Other books for teenagers and younger readers</a></div>
+            </li>
+          </ol>
+        </nav>
+
+        <div id="start" class="chapter-open first"><span class="title">Before you start</span></div>
 
         <p>A psalm is a song.</p>
 
@@ -103,7 +162,7 @@
 
         <p>This book is about nine of them, and about one other part of the Bible that was built the same way.</p>
 
-        <div class="chapter-open"><span class="num">1</span><span class="title">The psalm with a letter missing</span></div>
+        <div id="ch1" class="chapter-open"><span class="num">1</span><span class="title">The psalm with a letter missing</span></div>
 
         <p>There is one psalm that an old Jewish teaching tells you to say three times every day.</p>
 
@@ -122,6 +181,8 @@
         <p>Go back and look at the first letter of each line.</p>
 
         <p>The psalm was written in Hebrew, which has twenty-two letters, and it runs through all of them in order. A, B, C, and on to the end. I have used our alphabet here so you can see what the first readers saw. Your Bible will say it differently, because it is translating the words rather than the letters, and you cannot usually do both at once.</p>
+
+        <p>Not every alphabet poem does it the same way. In this one, each letter starts one verse. In some of the others, a letter starts a small group of verses, and the line you read in this book stands for the whole group. So if you count the verses in your Bible and get more than the letters, nothing has gone missing.</p>
 
         <p>There are eight more like this in the book of Psalms, and one more somewhere else. This book is about all of them.</p>
 
@@ -213,7 +274,7 @@
 
         <ol><li>Say it out loud before you write it down. This is a song, not an essay.</li><li>It does not have to be good.</li><li>If one of them will not come, put a bracket. You are allowed. The psalm did.</li></ol>
 
-        <div class="chapter-open"><span class="num">2</span><span class="title">The twins</span></div>
+        <div id="ch2" class="chapter-open"><span class="num">2</span><span class="title">The twins</span></div>
 
         <p>Turn two pages of the Bible and you find two poems sitting next to each other that are exactly the same size.</p>
 
@@ -293,7 +354,7 @@
 
         <p>The second line is harder than the first. That is not you getting it wrong. It is harder for everybody, and if it will not come, put a bracket there and leave it.</p>
 
-        <div class="chapter-open"><span class="num">3</span><span class="title">The one with a story attached</span></div>
+        <div id="ch3" class="chapter-open"><span class="num">3</span><span class="title">The one with a story attached</span></div>
 
         <p>Most psalms do not tell you when they were written. This one does.</p>
 
@@ -387,7 +448,7 @@
 
         <p>One warning. You will be tempted to make it sound tidier than it actually was. Leave the ugly parts in. Going A to Z is how you get the whole thing said, and the whole thing is what you are after.</p>
 
-        <div class="chapter-open"><span class="num">4</span><span class="title">The slow one</span></div>
+        <div id="ch4" class="chapter-open"><span class="num">4</span><span class="title">The slow one</span></div>
 
         <p>Here is a question you have probably already asked.</p>
 
@@ -465,7 +526,7 @@
 
         <p><strong>You may well still be angry on day seven.</strong> Say so, if you are. The psalm is not asking you to pretend. But look again at line E — it warns you that the anger itself will take you somewhere worse. That is the thing to watch.</p>
 
-        <div class="chapter-open"><span class="num">5</span><span class="title">The one that asks</span></div>
+        <div id="ch5" class="chapter-open"><span class="num">5</span><span class="title">The one that asks</span></div>
 
         <p>Every psalm you have met so far has been telling God he is good.</p>
 
@@ -559,7 +620,7 @@
 
         <p>And this one you do not have to show them.</p>
 
-        <div class="chapter-open"><span class="num">6</span><span class="title">The enormous one</span></div>
+        <div id="ch6" class="chapter-open"><span class="num">6</span><span class="title">The enormous one</span></div>
 
         <p>Psalm 119 is the longest chapter in the Bible.</p>
 
@@ -643,7 +704,7 @@
 
         <p>Sometimes they are. Sometimes they are the best ones on the page.</p>
 
-        <div class="chapter-open"><span class="num">7</span><span class="title">The one that falls apart</span></div>
+        <div id="ch7" class="chapter-open"><span class="num">7</span><span class="title">The one that falls apart</span></div>
 
         <p>In your Bible these are two psalms with two numbers.</p>
 
@@ -668,6 +729,8 @@
         <blockquote class="acrostic"><p><strong>A</strong> — All my heart, that is what I am thanking you with. I will tell everybody what you did.</p><p><strong>B</strong> — Back they turned, the ones chasing me. They fell over in front of you.</p><p><strong>C</strong> — Countries you have told off. Cruel people you have finished.</p><p><strong>D</strong> — <span class="gap">⟨&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⟩</span></p><p><strong>E</strong> — Enemies: gone. Even the memory of them is gone.</p><p><strong>F</strong> — For ever, though, God is on the throne. He set it up for judging.</p><p><strong>G</strong> — Give him a song. Tell everybody what he has done.</p><p><strong>H</strong> — Have a look at what they are doing to me. Lift me up out of this.</p><p><strong>I</strong> — Into the hole they dug, the nations have fallen.</p><p><strong>J</strong> — Judgement catches up with cruel people in the end.</p><p><strong>K</strong> — Keep this in mind: he does not forget poor people. Their hope does not run out.</p></blockquote>
 
         <p>That is Psalm 9. One letter missing, and otherwise it holds.</p>
+
+        <p>If you have your Bible open, you will count twenty verses, not eleven. The letters come about every second verse here, so most of the lines above stand for two.</p>
 
         <p>Now Psalm 10 starts.</p>
 
@@ -739,7 +802,7 @@
 
         <p><strong>You can ask the question at L.</strong> It is already in there. Somebody got it into the Bible before you were born, and nobody has ever taken it out.</p>
 
-        <div class="chapter-open"><span class="num">8</span><span class="title">When the alphabet is all you have</span></div>
+        <div id="ch8" class="chapter-open"><span class="num">8</span><span class="title">When the alphabet is all you have</span></div>
 
         <p>This chapter is not about a psalm.</p>
 
@@ -833,7 +896,7 @@
 
         <p>Read the two back together. One of them will have been easier to write, and it may not be the one you expect. That is the difference between Lamentations 4 and Lamentations 5, and the man who wrote them did both.</p>
 
-        <div class="chapter-open"><span class="num">9</span><span class="title">A to Z</span></div>
+        <div id="ch9" class="chapter-open"><span class="num">9</span><span class="title">A to Z</span></div>
 
         <p>Count up what you have written.</p>
 
@@ -929,7 +992,7 @@
         <p>They are all still there. Nobody has tidied those either.</p>
         </div>
 
-        <div class="chapter-open back"><span class="title">Other books for teenagers and younger readers</span></div>
+        <div id="more" class="chapter-open back"><span class="title">Other books for teenagers and younger readers</span></div>
 
         <h4 class="back-group">For younger readers</h4>
 

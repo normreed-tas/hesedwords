@@ -444,4 +444,14 @@ The book's alphabet maps *pe* to **R**. So in the English the extra last line wo
 line, or it stays letterless, as now. The spelling only works in Hebrew, so the chapter has to
 say the Hebrew letters out loud. It already teaches *nun*, *vav* and *ayin* by name, so that
 is in keeping.
-<!-- READ-TOKEN d8244f07 · 446 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+
+---
+
+# Revision of 20 November 2026 (Contents list, two new paragraphs)
+
+- **Diff against the published page:** only the intended changes (Contents list and its CSS, `id` anchors on the eleven chapter openings, one new paragraph in chapter 1, one in chapter 7). Nothing held.
+- **Chapter 7, "you will count twenty verses, not eleven":** **CONFIRMED.** Psalm 9 has 21 verses in Hebrew (OSHB), where the title is verse 1, so 20 in English. The page shows eleven lettered lines (A to K).
+- **Contents links:** all eleven land on a matching `id`.
+- **PDF:** A4, 58 pages (cover, blank inside cover, 56 numbered). Each chapter opens on a fresh page, no heading at a page foot, no folio on the cover. The Contents list splits: its last entry falls at the top of the next page.
+- **Not done, waiting on Norm:** the A5 render and imposed booklet. He dropped the A5 booklet for this book on 1 November (type too large; he prints the A4 PDF with the printer's booklet setting). An A5 trial runs to 98 pages.
+<!-- READ-TOKEN eba76f00 · 456 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
