@@ -59,6 +59,23 @@
 </style>
 <style>
   .respond { display: none; }
+  /* PRINT FRONT AND BACK MATTER (20 Nov 2026). In the PDF only: a title page with the
+     cover blurb, a blank reverse, Contents on its own page, and the other-books list
+     set small enough to sit on one page (the inside back cover). With the cover and
+     --inside-blank this makes 59 pages; one blank is added for the outside back cover
+     (60). The folios on the title page and its blank reverse are masked afterwards. */
+  .print-only { display: none; }
+  @media print {
+    .print-only { display: block; }
+    .title-intro { margin-top: 5cm; break-after: page; }
+    .title-intro p { font-size: 1.1rem; line-height: 1.7; max-width: 30em; }
+    .blank-page { break-after: page; }
+    .hw-article-body .toc { break-after: page; break-inside: avoid; border: none; margin-top: 0; }
+    #more ~ .back-entry { font-size: 0.86rem; line-height: 1.45; margin-bottom: 0.7rem; }
+    #more ~ h4.back-group { margin: 1.1rem 0 0.4rem; }
+    #more ~ .hw-disclaimer { margin-top: 1.2rem; padding-top: 0.8rem; }
+    #more ~ .hw-disclaimer p { font-size: 0.8rem; line-height: 1.4; margin-bottom: 0.4em; }
+  }
   @media print { .respond { display: block; break-before: page; break-after: page; break-inside: avoid; min-height: 20cm; } .respond .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); } }
 </style>
 </head>
@@ -101,6 +118,11 @@
 <figure class="web-cover"><img src="/images/books/say-it-three-times-thumb.jpg" alt="Cover of Say It Three Times" width="671" height="953" /></figure>
 
         <p class="verse">The alphabet psalms, and how to write one &middot; for teenagers</p>
+
+        <div class="print-only title-intro">
+          <p>Nine psalms in the Bible are built on the alphabet, from A all the way to Z. Six of them have letters missing, and nobody ever went back and fixed them. This is a book about why anybody would write that way — and how to write one yourself.</p>
+        </div>
+        <div class="print-only blank-page">&nbsp;</div>
 
         <nav class="toc">
           <h2>Contents</h2>

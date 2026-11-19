@@ -454,4 +454,8 @@ is in keeping.
 - **Contents links:** all eleven land on a matching `id`.
 - **PDF:** A4, 58 pages (cover, blank inside cover, 56 numbered). Each chapter opens on a fresh page, no heading at a page foot, no folio on the cover. The Contents list splits: its last entry falls at the top of the next page.
 - **Not done, waiting on Norm:** the A5 render and imposed booklet. He dropped the A5 booklet for this book on 1 November (type too large; he prints the A4 PDF with the printer's booklet setting). An A5 trial runs to 98 pages.
-<!-- READ-TOKEN eba76f00 · 456 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+
+## Later on 20 November: print front and back matter (Norm's layout)
+
+The A4 PDF is now **60 pages**, a multiple of four with no padding: cover; blank inside cover; title page (title, subtitle, and the cover blurb as the introductory words); blank reverse; Contents on its own page; "Before you start"; chapters 1–9; the other-books list on one page (inside back cover); blank outside back cover. All of this is print-only CSS in the page; the web page is unchanged. To rebuild: render the body with `--numbers`, add the cover with `--inside-blank`, then mask the folios on PDF pages 3 and 4 and append one blank page (pdf-lib). A5 was not used.
+<!-- READ-TOKEN 04bcaf11 · 460 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
