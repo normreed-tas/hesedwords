@@ -397,4 +397,18 @@ These are catalogue and bookseller records seen as search results. I did not ope
   on the Bible Gateway sample page (Part A, item 6), under the heading "The Doxology
   (3:20–21)".
 - **Page number: not found.** It needs the printed book.
-<!-- READ-TOKEN abb11278 · 399 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+
+---
+
+# PART D — Page checks at publication
+
+Added 19 November 2026 for `articles/we.html` (answers `we.verify.md`).
+
+| Item | Result |
+|---|---|
+| NKJV wording: Eph 3:20–21, 3:14, 3:18–19, Matt 18:19, Eph 2:22, Acts 4:24 | **CONFIRMED**, all word for word (NKJV on Bible Hub). The NKJV credit line (© 1982 Thomas Nelson) was added to footnote 1. |
+| Chrysostom "in the fourth century" | **Holds.** He lived 347–407, and the Ephesians homilies are usually placed in his Antioch years (before 398). The Antioch dating was not opened. |
+| Maclaren, "the Manchester preacher… over a century ago" | **CONFIRMED.** Pastor of Union Chapel, Manchester, 1858–1903; died 1910 (Wikipedia). |
+| Eph 2:19 allusions | No check needed. |
+| The Canberra prayer group and the "Prayer Calms Parliament" clipping | Told as Norm's memory by his decision. Not verified (see C1) and not changed. |
+<!-- READ-TOKEN 589eaecf · 413 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

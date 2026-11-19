@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "We",
+    url:      "/articles/we.html",
+    date:     "2026-11-19",
+    scripture: ["Ephesians 3:20-21", "Ephesians 3:14-19", "Matthew 18:19", "Ephesians 2:22", "Acts 4:24-31"],
+    themes:   ["corporate prayer", "the church", "doxology", "we not I", "praying together", "agreement", "symphony", "reconciliation", "Canberra", "Parliament", "Maclaren", "Calvin", "Chrysostom"],
+    summary:  "Ephesians 3:20 learned as a memory verse and claimed as a personal promise, in the season of Dick Eastman's No Easy Road and prayer in Canberra lounge rooms. But we ask, we think, in us: every word is plural, and verse 21, the line left off the mugs, puts the glory in the church, the only New Testament doxology to name it. The verse is the Amen to Paul's prayer that the church would grasp, with all the saints, the love of Christ; Maclaren: more than we ask, when we ask this. Calvin on faith of a proper kind. An orchestra, and symphoneo in Matthew 18:19: agreement that grows out of reconciliation. A prayer group building a prayer for Parliament like a wall, one brick at a time, and a Canberra Times clipping the next week. Chrysostom: neither did we ever ask these things. The far more was more of us."
+  },
+  {
     title:    "Hidden",
     url:      "/articles/hidden.html",
     date:     "2026-11-18",

@@ -9,7 +9,7 @@ before writing: *does something on this already exist?* and *what did it say?*
 The theme index at the foot is the fastest way in — a new piece whose theme
 already appears there probably has a companion waiting.
 
-**179 pieces** — 105 reflections, 51 articles, 16 books, 7 word studies.
+**180 pieces** — 105 reflections, 52 articles, 16 books, 7 word studies.
 
 ---
 
@@ -542,7 +542,12 @@ Forty years of ministry with the word righteousness — preaching it, building t
 
 ---
 
-## Articles (51)
+## Articles (52)
+
+**2026-11-19 · We**
+Ephesians 3:20-21; Ephesians 3:14-19; Matthew 18:19; Ephesians 2:22; Acts 4:24-31 · `/articles/we.html`
+*Themes:* corporate prayer, the church, doxology, we not I, praying together, agreement, symphony, reconciliation, Canberra, Parliament, Maclaren, Calvin, Chrysostom
+Ephesians 3:20 learned as a memory verse and claimed as a personal promise, in the season of Dick Eastman's No Easy Road and prayer in Canberra lounge rooms. But we ask, we think, in us: every word is plural, and verse 21, the line left off the mugs, puts the glory in the church, the only New Testament doxology to name it. The verse is the Amen to Paul's prayer that the church would grasp, with all the saints, the love of Christ; Maclaren: more than we ask, when we ask this. Calvin on faith of a proper kind. An orchestra, and symphoneo in Matthew 18:19: agreement that grows out of reconciliation. A prayer group building a prayer for Parliament like a wall, one brick at a time, and a Canberra Times clipping the next week. Chrysostom: neither did we ever ask these things. The far more was more of us.
 
 **2026-11-18 · Hidden**
 Ephesians 3:1-13; Ephesians 3:6; Ephesians 3:10; Ephesians 1:9; 1 Corinthians 2:7-8; 1 Peter 1:12; Job 1:6-8; Ephesians 6:11-14; Proverbs 25:2 · `/articles/hidden.html`
@@ -924,7 +929,7 @@ Before it ever means to intercede, it means to fall upon — to strike, to meet 
 
 ---
 
-## Theme index (690 themes)
+## Theme index (699 themes)
 
 Every theme in use, and what carries it. A theme with more than one piece
 against it is a companion candidate.
@@ -940,6 +945,7 @@ against it is a companion candidate.
 - **afqid** — [Into Your Hand](/reflections/into-your-hand.html) (reflection)
 - **agabus** — [Then We Stopped](/reflections/then-we-stopped.html) (reflection) · [Through the Spirit](/articles/through-the-spirit.html) (article)
 - **agape** — [Is There No Hesed in John?](/articles/is-there-no-hesed-in-john.html) (article)
+- **agreement** — [We](/articles/we.html) (article)
 - **ai** — [Through the Spirit](/articles/through-the-spirit.html) (article)
 - **aids ministry** — [An Interview with a Saint](/articles/an-interview-with-a-saint.html) (article)
 - **ak** — [God Alone](/reflections/god-alone.html) (reflection)
@@ -1009,7 +1015,8 @@ against it is a companion candidate.
 - **bystander** — [That Day](/books/that-day.html) (book)
 - **c.s. lewis** — [The Treasure](/articles/the-treasure.html) (article) · [Parables — You'll See](/reflections/parables-youll-see.html) (reflection)
 - **calling** — [Church](/articles/church.html) (article) · [Then We Stopped](/reflections/then-we-stopped.html) (reflection)
-- **calvin** — [Through the Spirit](/articles/through-the-spirit.html) (article)
+- **calvin** — [We](/articles/we.html) (article) · [Through the Spirit](/articles/through-the-spirit.html) (article)
+- **canberra** — [We](/articles/we.html) (article)
 - **canon** — [He Has Told You…](/books/he-has-told-you.html) (book)
 - **cardiac arrest** — [How Precious](/reflections/how-precious.html) (reflection) · [The Second Morning](/reflections/the-second-morning.html) (reflection) · [What They Sang](/reflections/what-they-sang.html) (reflection) · [Parables — You'll See](/reflections/parables-youll-see.html) (reflection) · [God Alone](/reflections/god-alone.html) (reflection) · [Coincidence](/reflections/coincidence.html) (reflection)
 - **care** — [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection)
@@ -1028,7 +1035,7 @@ against it is a companion candidate.
 - **choruses** — [Father Abraham Had One Son](/reflections/father-abraham-had-one-son.html) (reflection)
 - **christ the offspring** — [Father Abraham Had One Son](/reflections/father-abraham-had-one-son.html) (reflection)
 - **chronicles** — [Almost the Same in the End](/reflections/almost-the-same-in-the-end.html) (reflection) · [He Named the Gatekeepers](/articles/he-named-the-gatekeepers.html) (article)
-- **chrysostom** — [Through the Spirit](/articles/through-the-spirit.html) (article)
+- **chrysostom** — [We](/articles/we.html) (article) · [Through the Spirit](/articles/through-the-spirit.html) (article)
 - **church** — [Church](/articles/church.html) (article) · [Our God-Sponsored Projects](/articles/our-god-sponsored-projects.html) (article) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection)
 - **church conflict** — [Titus](/articles/titus.html) (article)
 - **church culture** — [Blue Blazers](/reflections/blue-blazers.html) (reflection)
@@ -1051,6 +1058,7 @@ against it is a companion candidate.
 - **conviction** — [We All Need Our Rechabites](/reflections/we-all-need-our-rechabites.html) (reflection)
 - **corinth** — [Titus](/articles/titus.html) (article) · [Maturity?](/reflections/maturity.html) (reflection)
 - **cornelius** — [I Arrived Late](/reflections/i-arrived-late.html) (reflection)
+- **corporate prayer** — [We](/articles/we.html) (article)
 - **correction** — [Jars of Clay](/articles/jars-of-clay.html) (article) · [God Is Searching](/books/god-is-searching.html) (book) · [Profitable](/articles/profitable.html) (article) · [Pride](/reflections/pride.html) (reflection) · [Nobody Left to Say No](/articles/nobody-left-to-say-no.html) (article) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection)
 - **correction asked for** — [An Invitation to Strike](/reflections/an-invitation-to-strike.html) (reflection)
 - **correction invited** — [Struck by Kindness](/articles/struck-by-kindness.html) (article)
@@ -1098,7 +1106,7 @@ against it is a companion candidate.
 - **divorce** — [Have You Not Read](/reflections/have-you-not-read.html) (reflection)
 - **doeg** — [I Am Like an Olive Tree](/reflections/i-am-like-an-olive-tree.html) (reflection)
 - **dogmata** — [Peace](/articles/peace.html) (article)
-- **doxology** — [The Same Psalm](/articles/the-same-psalm.html) (article)
+- **doxology** — [We](/articles/we.html) (article) · [The Same Psalm](/articles/the-same-psalm.html) (article)
 - **drift** — [We All Need Our Rechabites](/reflections/we-all-need-our-rechabites.html) (reflection)
 - **dwelling** — [Who Are the Enemies of God? — Reading Psalm 68](/articles/who-are-the-enemies-of-god.html) (article) · [The Place Where God Rests](/reflections/the-place-where-god-rests.html) (reflection)
 - **ecclesiology** — [He Has Told You…](/books/he-has-told-you.html) (book)
@@ -1257,6 +1265,7 @@ against it is a companion candidate.
 - **loving enemies** — [A Christian's Wage](/articles/a-christians-wage.html) (article)
 - **loyalty** — [Struck by Kindness](/articles/struck-by-kindness.html) (article)
 - **luther** — [For Your Hesed’s Sake](/articles/for-your-hesed-sake.html) (article)
+- **maclaren** — [We](/articles/we.html) (article)
 - **make me** — [Make Me](/reflections/make-me.html) (reflection)
 - **manaen** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article)
 - **mark** — [What Do You Want Me to Do for You](/reflections/what-do-you-want-me-to-do-for-you.html) (reflection)
@@ -1319,6 +1328,7 @@ against it is a companion candidate.
 - **paired psalms** — [Spot the Difference](/articles/spot-the-difference.html) (article)
 - **papua new guinea** — [Singing on Their Beds](/reflections/singing-on-their-beds.html) (reflection) · [Through the Spirit](/articles/through-the-spirit.html) (article) · [Profitable](/articles/profitable.html) (article) · [The One Thing He Wouldn't Delegate](/reflections/the-one-thing-he-wouldnt-delegate.html) (reflection)
 - **parable** — [The Turning Left Open](/articles/the-turning-left-open.html) (article)
+- **parliament** — [We](/articles/we.html) (article)
 - **partiality** — [I Arrived Late](/reflections/i-arrived-late.html) (reflection)
 - **pastoral formation** — [Jesus as Leader](/articles/jesus-as-leader.html) (article)
 - **pastoral ministry** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection)
@@ -1348,6 +1358,7 @@ against it is a companion candidate.
 - **prayer meeting** — [Coincidence](/reflections/coincidence.html) (reflection)
 - **prayer meetings** — [Singing on Their Beds](/reflections/singing-on-their-beds.html) (reflection)
 - **praying scripture** — [Learning to Pray by Praying the Psalms — Until We Reach Psalm 83](/articles/until-we-reach-psalm-83.html) (article)
+- **praying together** — [We](/articles/we.html) (article)
 - **preaching** — [Who Knows](/reflections/who-knows.html) (reflection) · [Telling It Wrong](/articles/telling-it-wrong.html) (article)
 - **precious** — [How Precious](/reflections/how-precious.html) (reflection) · [Yaqar](/word-studies/yaqar.html) (word study)
 - **presence** — [Death in Us, Life in You](/articles/death-in-us-life-in-you.html) (article) · [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection) · [His Name Is Oil Poured Out](/reflections/let-his-name-be-poured-out.html) (reflection) · [Communion](/reflections/communion.html) (reflection) · [The Keeper on the Road](/reflections/the-keeper-on-the-road.html) (reflection)
@@ -1382,6 +1393,7 @@ against it is a companion candidate.
 - **rebuke** — [An Invitation to Strike](/reflections/an-invitation-to-strike.html) (reflection)
 - **recall** — [New Every Morning](/reflections/new-every-morning.html) (reflection)
 - **rechabites** — [We All Need Our Rechabites](/reflections/we-all-need-our-rechabites.html) (reflection)
+- **reconciliation** — [We](/articles/we.html) (article)
 - **record-keeping** — [Our God-Sponsored Projects](/articles/our-god-sponsored-projects.html) (article)
 - **refuge** — [How Precious](/reflections/how-precious.html) (reflection) · [Spot the Difference](/articles/spot-the-difference.html) (article) · [Taste and See](/reflections/taste-and-see.html) (reflection) · [Kiss the Son](/reflections/kiss-the-son.html) (reflection)
 - **rehabilitation** — [Death in Us, Life in You](/articles/death-in-us-life-in-you.html) (article)
@@ -1480,6 +1492,7 @@ against it is a companion candidate.
 - **super-apostles** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection)
 - **superscriptions** — [The Thursday Psalm](/articles/the-thursday-psalm.html) (article) · [Notes for the Band](/reflections/notes-for-the-band.html) (reflection) · [Reading the Label](/articles/reading-the-label.html) (article)
 - **survival** — [The Third That Survived](/reflections/the-third-that-survived.html) (reflection)
+- **symphony** — [We](/articles/we.html) (article)
 - **ta'am** — [Taste and See](/reflections/taste-and-see.html) (reflection)
 - **talents** — [What We Did Without Knowing](/books/what-we-did-without-knowing.html) (book)
 - **tamid** — [The Songs for Every Day](/books/the-songs-for-every-day.html) (book) · [The Tamid Psalms](/books/the-tamid-psalms.html) (book)
@@ -1499,7 +1512,7 @@ against it is a companion candidate.
 - **the bench** — [What Is Wicked in This Story?](/reflections/what-is-wicked-in-this-story.html) (reflection) · [What Did Jesus Call Wicked?](/articles/what-did-jesus-call-wicked.html) (article)
 - **the body** — [Therefore](/books/therefore.html) (book)
 - **the centurion** — [If You Are](/reflections/if-you-are.html) (reflection) · [Trampled](/articles/trampled.html) (article)
-- **the church** — [Hidden](/articles/hidden.html) (article) · [Peace](/articles/peace.html) (article) · [Rich](/articles/rich.html) (article) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection)
+- **the church** — [We](/articles/we.html) (article) · [Hidden](/articles/hidden.html) (article) · [Peace](/articles/peace.html) (article) · [Rich](/articles/rich.html) (article) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection)
 - **the closing psalms** — [Singing on Their Beds](/reflections/singing-on-their-beds.html) (reflection)
 - **the cross** — [Maturity?](/reflections/maturity.html) (reflection) · [If You Are](/reflections/if-you-are.html) (reflection) · [That Day](/books/that-day.html) (book)
 - **the dead sea** — [A Place for Salt](/reflections/a-place-for-salt.html) (reflection)
@@ -1591,6 +1604,7 @@ against it is a companion candidate.
 - **watching** — [Somebody Else Was Awake](/reflections/somebody-else-was-awake.html) (reflection)
 - **watchman** — [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection)
 - **watchman nee** — [Death in Us, Life in You](/articles/death-in-us-life-in-you.html) (article)
+- **we not i** — [We](/articles/we.html) (article)
 - **weakness** — [I Know You're Busy, But…](/reflections/i-know-youre-busy.html) (reflection)
 - **wealth** — [Still Counting](/articles/still-counting.html) (article) · [Understanding?](/reflections/understanding.html) (reflection)
 - **weight of glory** — [Parables — You'll See](/reflections/parables-youll-see.html) (reflection)
@@ -1619,4 +1633,4 @@ against it is a companion candidate.
 - **zakar** — [The Asking](/reflections/the-asking.html) (reflection) · [What God Remembers](/articles/what-god-remembers.html) (article) · [Zakar](/word-studies/zakar.html) (word study) · [Kept Anyway](/reflections/kept-anyway.html) (reflection)
 - **zechariah** — [The Piece I Keep Picking Up](/reflections/the-piece-i-keep-picking-up.html) (reflection)
 - **zion** — [Spot the Difference](/articles/spot-the-difference.html) (article) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection)
-<!-- READ-TOKEN a5691933 · 1621 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN d4d3f19a · 1635 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
