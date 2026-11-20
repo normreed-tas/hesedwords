@@ -57,4 +57,10 @@ The preview shows only parts of these pages, so the book's list may be longer th
 
 - **Companions:** *Church* (`/articles/church.html`) and *We* (`/articles/we.html`) are both published. *Church* has the 1:18 → 4:1 link in the form the brief describes.
 - **Glossary:** *hevel* is in the glossary, slug `#hevel`. Pieces that spell it "hebel" still link to `#hevel`.
-<!-- READ-TOKEN 4a08e838 · 59 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+
+---
+
+## At publication, 21 November 2026
+
+The finished page (`articles/called.html`) was read against this note. The Ephesians 4:2–3 comma is in. The list attributed to Groeschel has been removed ("He went through a list of things it might be"), so item 12 is closed. Footnote 2 cites the preface without a page number. Published unchanged.
+<!-- READ-TOKEN e124ebc9 · 65 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

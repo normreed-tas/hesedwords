@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Called",
+    url:      "/articles/called.html",
+    date:     "2026-11-21",
+    scripture: ["Ephesians 4:1-4", "Ephesians 4:1", "Ephesians 4:2-3", "Ephesians 4:4", "Ephesians 2:10", "Ephesians 1:18", "Ephesians 4:17", "Philippians 1:27", "Ecclesiastes 1:2"],
+    themes:   ["calling", "vocation", "the church", "walk worthily", "we not I", "vision statements", "unity", "humility", "patience", "futility", "hevel", "Craig Groeschel"],
+    summary:  "As a boy Norm wanted to be a teacher or a missionary, and looking back the thread is clear: we are his workmanship, created for good works prepared beforehand. That is how we hear calling, one person and one life. But in Ephesians 4:1 both yous are plural: Paul tells a church it already has a calling, said twice in 4:1 and twice again in 4:4, the hope of his calling from 1:18. Craig Groeschel's 'it', which he will not name; Norm thinks it is calling. You cannot fake it, like an accent. Vocation, from the Latin for a calling, is spoken over a church from outside; a vision statement is what a church writes about itself. Walk worthily: lowliness, patience, bearing with one another, keeping the unity of the Spirit, all of it between people. The other walk is in futility, the Septuagint's word for hevel in Ecclesiastes. What would a stranger sense at the door before anyone said a word?"
+  },
+  {
     title:    "We",
     url:      "/articles/we.html",
     date:     "2026-11-19",
