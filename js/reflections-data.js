@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Gates",
+    date:     "2026-11-21",
+    url:      "/reflections/gates.html",
+    summary:  "Read on a forty-fifth wedding anniversary, nine months after Norm's heart stopped. Psalm 9:13-14: O you who lift me up from the gates of death. In the Old Testament death has gates (Job 38:17; Hezekiah in Isaiah 38:10), and nobody comes back out through them. Every day since has been an extra day: six months without driving, a granddaughter born in England, a grandson's first birthday in Cairns. But the verse goes on to a second gate, the gates of the daughter of Zion, the town gate where the elders sat and Boaz went for Ruth, where the whole town heard. He lifts me up that I may recount, that I may rejoice. The word for salvation is yeshu'ah, the root of Jesus' name. Salvation is meant to be celebrated where people meet.",
+    scripture: ["Psalm 9:13-14", "Job 38:17", "Isaiah 38:10", "Ruth 4:1"],
+    themes:   ["the gates of death", "the gates of Zion", "thanksgiving", "testimony", "salvation", "yeshu'ah", "extra days", "cardiac arrest", "wedding anniversary", "public praise"]
+  },
+  {
     title:    "Father Abraham Had One Son",
     date:     "2026-11-12",
     url:      "/reflections/father-abraham-had-one-son.html",
