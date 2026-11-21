@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "One",
+    url:      "/articles/one.html",
+    date:     "2026-11-22",
+    scripture: ["Ephesians 4:4-7", "Ephesians 4:4-6", "Ephesians 4:3", "Ephesians 4:7", "Ephesians 4:13", "Deuteronomy 6:4", "1 Corinthians 8:6", "Ephesians 3:14-15", "Ephesians 1:5", "Ephesians 2:12-17"],
+    themes:   ["unity", "one", "the Shema", "keeping unity", "the Father of all", "family", "adoption", "welcome", "the difficult person", "vision statements", "everyone is important", "each one", "Hobart", "Adelaide"],
+    summary:  "A church's one-line description can be a hope or a test. At the turning point of Ephesians Paul writes a list with hardly a verb: one body, one Spirit, one hope, one Lord, one faith, one baptism, one God and Father of all. Seven ones, in all three Greek forms (heis, mia, hen). It grows out of the Shema, the Lord is one, with Jesus placed inside it as in 1 Corinthians 8:6. So the church's oneness comes from God's, and the verb in 4:3 is keep (tereo), not make. The list ends with Father: a family, not an organisation; pater and patria from 3:14-15. Who are the all? Father of all by creation, children by adoption. The difficult person at the door; the church does not own the door. Adelaide's line, a church for all people, and Hobart's, a church where everyone is important. Father of all, then grace to each one (4:7)."
+  },
+  {
     title:    "Called",
     url:      "/articles/called.html",
     date:     "2026-11-21",
