@@ -31,7 +31,7 @@ Responds to `body.verify.md` (prose locked 24 November 2026). Checked by Claude 
 
 The other tradition is **confirmed** too. The Targum reads "You ascended to the firmament, Moses the prophet… gave gifts to humans" (Aramaic יְהַבְתָּא). The Peshitta in English: "you have given gifts to the children of men" (Bauscher); "thou hast blessed men with gifts" (Lamsa). The Syriac itself was not opened. Note that the Targum applies the verse to Moses.
 
-**EDITORIAL, for Norm:** whether to add a sentence saying Paul was not alone in reading "gave". Not added.
+**EDITORIAL, settled by Norm on 24 November:** a sentence was added saying Paul was not alone in reading "gave", with footnote 2 naming the Targum and the Peshitta and noting that the Targum applies the verse to Moses.
 
 **2. The summary of Psalm 68.** **Fair.** 68:16 "the mountain where God chooses to reign"; 68:17 the chariots, "from Sinai, into the sanctuary"; 68:18 "You have ascended on high. You have led away captives." "A long line of captives" and "the way a king came home from war" are the page's picture, and a reasonable one.
 
@@ -42,4 +42,4 @@ The other tradition is **confirmed** too. The Targum reads "You ascended to the 
 ## C and D
 
 Norm's own account of the church, the houses and Ruth: not checked, not changed. The companion links (`/articles/one.html`, `/articles/sitting-with-a-sinner.html`) both exist. No glossary words.
-<!-- READ-TOKEN 76430646 · 44 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN d96f5d22 · 44 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
