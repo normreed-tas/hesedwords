@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "Body",
+    url:      "/articles/body.html",
+    date:     "2026-11-24",
+    scripture: ["Ephesians 4:7-16", "Ephesians 4:4", "Ephesians 4:7", "Ephesians 4:8-10", "Ephesians 4:11-12", "Ephesians 4:13-14", "Ephesians 4:15-16", "Ephesians 1:23", "Psalm 68:18", "Genesis 2:7", "James 2:26", "Mark 1:19", "Matthew 5:14"],
+    themes:   ["the body of Christ", "body and Spirit", "organisation and life", "gifts", "equipping the saints", "every member ministry", "maturity", "measure", "prison ministry", "the church on the hill", "Hobart", "Ruth", "a city on a hill"],
+    summary:  "The church Norm pastors sits on a hill above a prison. In 2008 it was known for what had gone wrong: eight houses, a building, a roster, and no life. A body laid out on a table has every part in place. Paul pairs body and Spirit (4:4), as Genesis 2:7 and James 2:26 do: a body without breath is a corpse, and an organisation chart makes nothing alive. To each one grace is given by the measure of Christ's gift; Psalm 68, where the king receives gifts, quoted with the gifts going the other way. The gifts are people, given for the perfecting of the saints, the word family used of mending nets, so that the saints do the serving. The houses filled with people who paid rent and ministered; Ruth arrived in a caravan and stayed; a birthday-card group became lunch and a Bible study. A grown body, not a child in a small boat. Every joint supplies; measure three times (4:7, 4:13, 4:16). A light on the hill to the prison it overlooks."
+  },
+  {
     title:    "One",
     url:      "/articles/one.html",
     date:     "2026-11-22",
