@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "There It Is Again",
+    date:     "2026-11-25",
+    url:      "/reflections/there-it-is-again.html",
+    summary:  "Psalm 21 is a king's psalm: for six verses David tells God what he asked for and was given, his heart's desire, a crown of fine gold, life. Then verse 7: the king trusts in the LORD, and through the steadfast love of the Most High he shall not be moved. Not the crown, not the long life. The word underneath is hesed, learned this year like the name of a bird heard outside the window all your life: there it is again. On the thirteenth of February Norm's heart stopped, and the one answer to why he is still alive is God's steadfast love. A man he takes communion to wants him to move his money into gold or silver; his security does not rest there. Hesed is the only thing of value.",
+    scripture: ["Psalm 21:7", "Psalm 21:1-6", "Psalm 21"],
+    themes:   ["hesed", "steadfast love", "security", "not moved", "gold", "money", "learning a word", "cardiac arrest", "gratitude", "trust"]
+  },
+  {
     title:    "Gates",
     date:     "2026-11-21",
     url:      "/reflections/gates.html",

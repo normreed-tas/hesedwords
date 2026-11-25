@@ -1,13 +1,14 @@
 # Hesed Words — brief index
 
-**184 pieces** — 106 reflections, 55 articles, 16 books, 7 word studies.
+**185 pieces** — 107 reflections, 55 articles, 16 books, 7 word studies.
 
 One line per piece: date · title · scripture · url. Deliberately short enough
 to read in full. Use it to answer "does this already exist?" — then read
 SITE-INDEX.md for summaries, themes and companion candidates.
 
-## Reflections (106)
+## Reflections (107)
 
+- 2026-11-25 · **There It Is Again** · Psalm 21:7; Psalm 21:1-6; Psalm 21 · `/reflections/there-it-is-again.html`
 - 2026-11-21 · **Gates** · Psalm 9:13-14; Job 38:17; Isaiah 38:10; Ruth 4:1 · `/reflections/gates.html`
 - 2026-11-12 · **Father Abraham Had One Son** · Galatians 3:16; Galatians 3:19; Galatians 3:28; Galatians 3:29; Genesis 15; Micah 7:20; Luke 15:29-32 · `/reflections/father-abraham-had-one-son.html`
 - 2026-11-10 · **I Know You're Busy, But…** · 2 Corinthians 11; 2 Corinthians 12; 2 Corinthians 10:10; 2 Corinthians 11:23-28; 2 Corinthians 12:7-9; 2 Corinthians 8:23; Philippians 3:5-6 · `/reflections/i-know-youre-busy.html`
@@ -201,4 +202,4 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2026-08-03 · **Is "Wicked" a Verdict or a Character?** · Deuteronomy 25:1; 1 Kings 8:32; Exodus 23:7; Psalm 58:1 · `/word-studies/is-wicked-a-verdict-or-a-character.html`
 - 2026-07-11 · **What Is an Idle Word?** · Matthew 12:36; Matthew 20:3; 1 Timothy 5:13; 2 Peter 1:8 · `/word-studies/idle.html`
 - 2026-07-10 · **Is Jesus an Intercessor?** · Isaiah 59:16; Isaiah 53:12; 1 Samuel 22:18; Romans 8:34 · `/word-studies/jesus-intercessor.html`
-<!-- READ-TOKEN 31fab6b0 · 203 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 6fa54b50 · 204 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

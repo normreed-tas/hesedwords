@@ -9,11 +9,16 @@ before writing: *does something on this already exist?* and *what did it say?*
 The theme index at the foot is the fastest way in — a new piece whose theme
 already appears there probably has a companion waiting.
 
-**184 pieces** — 106 reflections, 55 articles, 16 books, 7 word studies.
+**185 pieces** — 107 reflections, 55 articles, 16 books, 7 word studies.
 
 ---
 
-## Reflections (106)
+## Reflections (107)
+
+**2026-11-25 · There It Is Again**
+Psalm 21:7; Psalm 21:1-6; Psalm 21 · `/reflections/there-it-is-again.html`
+*Themes:* hesed, steadfast love, security, not moved, gold, money, learning a word, cardiac arrest, gratitude, trust
+Psalm 21 is a king's psalm: for six verses David tells God what he asked for and was given, his heart's desire, a crown of fine gold, life. Then verse 7: the king trusts in the LORD, and through the steadfast love of the Most High he shall not be moved. Not the crown, not the long life. The word underneath is hesed, learned this year like the name of a bird heard outside the window all your life: there it is again. On the thirteenth of February Norm's heart stopped, and the one answer to why he is still alive is God's steadfast love. A man he takes communion to wants him to move his money into gold or silver; his security does not rest there. Hesed is the only thing of value.
 
 **2026-11-21 · Gates**
 Psalm 9:13-14; Job 38:17; Isaiah 38:10; Ruth 4:1 · `/reflections/gates.html`
@@ -949,7 +954,7 @@ Before it ever means to intercede, it means to fall upon — to strike, to meet 
 
 ---
 
-## Theme index (727 themes)
+## Theme index (731 themes)
 
 Every theme in use, and what carries it. A theme with more than one piece
 against it is a companion candidate.
@@ -1041,7 +1046,7 @@ against it is a companion candidate.
 - **calvin** — [We](/articles/we.html) (article) · [Through the Spirit](/articles/through-the-spirit.html) (article)
 - **canberra** — [We](/articles/we.html) (article)
 - **canon** — [He Has Told You…](/books/he-has-told-you.html) (book)
-- **cardiac arrest** — [Gates](/reflections/gates.html) (reflection) · [How Precious](/reflections/how-precious.html) (reflection) · [The Second Morning](/reflections/the-second-morning.html) (reflection) · [What They Sang](/reflections/what-they-sang.html) (reflection) · [Parables — You'll See](/reflections/parables-youll-see.html) (reflection) · [God Alone](/reflections/god-alone.html) (reflection) · [Coincidence](/reflections/coincidence.html) (reflection)
+- **cardiac arrest** — [There It Is Again](/reflections/there-it-is-again.html) (reflection) · [Gates](/reflections/gates.html) (reflection) · [How Precious](/reflections/how-precious.html) (reflection) · [The Second Morning](/reflections/the-second-morning.html) (reflection) · [What They Sang](/reflections/what-they-sang.html) (reflection) · [Parables — You'll See](/reflections/parables-youll-see.html) (reflection) · [God Alone](/reflections/god-alone.html) (reflection) · [Coincidence](/reflections/coincidence.html) (reflection)
 - **care** — [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection)
 - **cause** — [The Cause I Applied For](/reflections/the-cause-i-applied-for.html) (reflection) · [Telling It Wrong](/articles/telling-it-wrong.html) (article) · [Is There Not a Cause](/reflections/is-there-not-a-cause.html) (reflection)
 - **census** — [Telling David's Census to an Eight-Year-Old](/reflections/telling-davids-census.html) (reflection)
@@ -1186,6 +1191,7 @@ against it is a companion candidate.
 - **glory** — [Church](/articles/church.html) (article) · [Jars of Clay](/articles/jars-of-clay.html) (article) · [Maturity?](/reflections/maturity.html) (reflection) · [The Treasure](/articles/the-treasure.html) (article) · [The Sacrifice of Thanksgiving](/reflections/the-sacrifice-of-thanksgiving.html) (reflection)
 - **god's hidden plan** — [Hidden](/articles/hidden.html) (article)
 - **god's reluctance** — [He Does Not Afflict From His Heart](/articles/he-does-not-afflict-from-his-heart.html) (article)
+- **gold** — [There It Is Again](/reflections/there-it-is-again.html) (reflection)
 - **gollum** — [How Precious](/reflections/how-precious.html) (reflection)
 - **goodness** — [Taste and See](/reflections/taste-and-see.html) (reflection)
 - **goodness of god** — [Unless I Had Believed](/reflections/unless-i-had-believed.html) (reflection)
@@ -1193,7 +1199,7 @@ against it is a companion candidate.
 - **grace** — [Rich](/articles/rich.html) (article) · [For Your Hesed’s Sake](/articles/for-your-hesed-sake.html) (article) · [Therefore](/books/therefore.html) (book) · [Nobody Wants Nathan](/articles/nobody-wants-nathan.html) (article) · [Still Counting](/articles/still-counting.html) (article) · [Draw Me](/reflections/draw-me.html) (reflection) · [I Cannot Pray This](/reflections/i-cannot-pray-this.html) (reflection)
 - **grammar** — [The Song Begins in Longing](/articles/the-song-begins-in-longing.html) (article)
 - **grant** — [The Cause I Applied For](/reflections/the-cause-i-applied-for.html) (reflection)
-- **gratitude** — [Profitable](/articles/profitable.html) (article) · [The Sacrifice of Thanksgiving](/reflections/the-sacrifice-of-thanksgiving.html) (reflection)
+- **gratitude** — [There It Is Again](/reflections/there-it-is-again.html) (reflection) · [Profitable](/articles/profitable.html) (article) · [The Sacrifice of Thanksgiving](/reflections/the-sacrifice-of-thanksgiving.html) (reflection)
 - **graveside** — [Not Finished Waking](/articles/not-finished-waking.html) (article)
 - **great commission** — [Almost the Same in the End](/reflections/almost-the-same-in-the-end.html) (reflection)
 - **grief** — [My Stomach Churns](/reflections/my-stomach-churns.html) (reflection) · [Not Finished Waking](/articles/not-finished-waking.html) (article) · [He Does Not Afflict From His Heart](/articles/he-does-not-afflict-from-his-heart.html) (article)
@@ -1213,7 +1219,7 @@ against it is a companion candidate.
 - **heart** — [Into Your Hand](/reflections/into-your-hand.html) (reflection)
 - **hebrew** — [Unless I Had Believed](/reflections/unless-i-had-believed.html) (reflection) · [Make Me](/reflections/make-me.html) (reflection)
 - **hebrew bible order** — [Almost the Same in the End](/reflections/almost-the-same-in-the-end.html) (reflection)
-- **hesed** — [Rich](/articles/rich.html) (article) · [For Your Hesed’s Sake](/articles/for-your-hesed-sake.html) (article) · [Father Abraham Had One Son](/reflections/father-abraham-had-one-son.html) (reflection) · [How Precious](/reflections/how-precious.html) (reflection) · [Yaqar](/word-studies/yaqar.html) (word study) · [Say It Three Times](/books/say-it-three-times.html) (book) · [Struck by Kindness](/articles/struck-by-kindness.html) (article) · [An Invitation to Strike](/reflections/an-invitation-to-strike.html) (reflection) · [According to Your Steadfast Love](/reflections/according-to-your-steadfast-love.html) (reflection) · [A Christian's Wage](/articles/a-christians-wage.html) (article) · [The Man Who Fears the Lord](/reflections/the-man-who-fears-the-lord.html) (reflection) · [The Same Psalm](/articles/the-same-psalm.html) (article) · [The Asking](/reflections/the-asking.html) (reflection) · [What God Remembers](/articles/what-god-remembers.html) (article) · [Zakar](/word-studies/zakar.html) (word study) · [Still Talking](/reflections/still-talking.html) (reflection) · [The Second Morning](/reflections/the-second-morning.html) (reflection) · [Different Work](/articles/different-work.html) (article) · [Trampled](/articles/trampled.html) (article) · [So I Ask](/reflections/so-i-ask.html) (reflection) · [Tzedaqah / Dikaiosynē](/word-studies/tzedaqah.html) (word study) · [What They Sang](/reflections/what-they-sang.html) (reflection) · [God Alone](/reflections/god-alone.html) (reflection) · [Sitting with a Sinner](/articles/sitting-with-a-sinner.html) (article) · [Is There No Hesed in John?](/articles/is-there-no-hesed-in-john.html) (article) · [I Am Like an Olive Tree](/reflections/i-am-like-an-olive-tree.html) (reflection) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Understanding?](/reflections/understanding.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection) · [Star Wars](/reflections/star-wars.html) (reflection) · [The Third That Survived](/reflections/the-third-that-survived.html) (reflection) · [New Every Morning](/reflections/new-every-morning.html) (reflection) · [Draw Me! The Voice Matters](/articles/draw-me-the-voice-matters.html) (article) · [The Love That Kindles](/reflections/the-love-that-kindles.html) (reflection) · [Kiss the Son](/reflections/kiss-the-son.html) (reflection) · [When the Heart Was Awake](/articles/when-the-heart-was-awake.html) (article) · [What Is Already Yours](/reflections/what-is-already-yours.html) (reflection) · [He Has Told You…](/books/he-has-told-you.html) (book)
+- **hesed** — [There It Is Again](/reflections/there-it-is-again.html) (reflection) · [Rich](/articles/rich.html) (article) · [For Your Hesed’s Sake](/articles/for-your-hesed-sake.html) (article) · [Father Abraham Had One Son](/reflections/father-abraham-had-one-son.html) (reflection) · [How Precious](/reflections/how-precious.html) (reflection) · [Yaqar](/word-studies/yaqar.html) (word study) · [Say It Three Times](/books/say-it-three-times.html) (book) · [Struck by Kindness](/articles/struck-by-kindness.html) (article) · [An Invitation to Strike](/reflections/an-invitation-to-strike.html) (reflection) · [According to Your Steadfast Love](/reflections/according-to-your-steadfast-love.html) (reflection) · [A Christian's Wage](/articles/a-christians-wage.html) (article) · [The Man Who Fears the Lord](/reflections/the-man-who-fears-the-lord.html) (reflection) · [The Same Psalm](/articles/the-same-psalm.html) (article) · [The Asking](/reflections/the-asking.html) (reflection) · [What God Remembers](/articles/what-god-remembers.html) (article) · [Zakar](/word-studies/zakar.html) (word study) · [Still Talking](/reflections/still-talking.html) (reflection) · [The Second Morning](/reflections/the-second-morning.html) (reflection) · [Different Work](/articles/different-work.html) (article) · [Trampled](/articles/trampled.html) (article) · [So I Ask](/reflections/so-i-ask.html) (reflection) · [Tzedaqah / Dikaiosynē](/word-studies/tzedaqah.html) (word study) · [What They Sang](/reflections/what-they-sang.html) (reflection) · [God Alone](/reflections/god-alone.html) (reflection) · [Sitting with a Sinner](/articles/sitting-with-a-sinner.html) (article) · [Is There No Hesed in John?](/articles/is-there-no-hesed-in-john.html) (article) · [I Am Like an Olive Tree](/reflections/i-am-like-an-olive-tree.html) (reflection) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection) · [Understanding?](/reflections/understanding.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection) · [Star Wars](/reflections/star-wars.html) (reflection) · [The Third That Survived](/reflections/the-third-that-survived.html) (reflection) · [New Every Morning](/reflections/new-every-morning.html) (reflection) · [Draw Me! The Voice Matters](/articles/draw-me-the-voice-matters.html) (article) · [The Love That Kindles](/reflections/the-love-that-kindles.html) (reflection) · [Kiss the Son](/reflections/kiss-the-son.html) (reflection) · [When the Heart Was Awake](/articles/when-the-heart-was-awake.html) (article) · [What Is Already Yours](/reflections/what-is-already-yours.html) (reflection) · [He Has Told You…](/books/he-has-told-you.html) (book)
 - **hesed withheld** — [What Is Wicked in This Story?](/reflections/what-is-wicked-in-this-story.html) (reflection)
 - **hevel** — [Called](/articles/called.html) (article) · [The Tamid Psalms](/books/the-tamid-psalms.html) (book) · [The Treasure](/articles/the-treasure.html) (article) · [God Alone](/reflections/god-alone.html) (reflection) · [Selah](/reflections/selah.html) (reflection)
 - **hiddenness** — [What We Did Without Knowing](/books/what-we-did-without-knowing.html) (book) · [Our God-Sponsored Projects](/articles/our-god-sponsored-projects.html) (article)
@@ -1282,6 +1288,7 @@ against it is a companion candidate.
 - **last words** — [Into Your Hand](/reflections/into-your-hand.html) (reflection)
 - **law** — [According to Your Steadfast Love](/reflections/according-to-your-steadfast-love.html) (reflection)
 - **leadership** — [Death in Us, Life in You](/articles/death-in-us-life-in-you.html) (article) · [Titus](/articles/titus.html) (article) · [God Is Searching](/books/god-is-searching.html) (book) · [Struck by Kindness](/articles/struck-by-kindness.html) (article) · [Profitable](/articles/profitable.html) (article) · [Succession Planning — Everything Set in Place](/reflections/succession-planning.html) (reflection) · [A Shepherd Is What a Shepherd Does](/reflections/a-shepherd-is-what-a-shepherd-does.html) (reflection) · [Jesus as Leader](/articles/jesus-as-leader.html) (article)
+- **learning a word** — [There It Is Again](/reflections/there-it-is-again.html) (reflection)
 - **legacy** — [See Me Trying](/reflections/see-me-trying.html) (reflection) · [Our God-Sponsored Projects](/reflections/our-god-sponsored-projects.html) (reflection)
 - **letting go** — [The Cause I Applied For](/reflections/the-cause-i-applied-for.html) (reflection)
 - **lev** — [Succession Planning — Everything Set in Place](/reflections/succession-planning.html) (reflection)
@@ -1320,6 +1327,7 @@ against it is a companion candidate.
 - **mission** — [Men of Cyprus and Cyrene](/articles/men-of-cyprus-and-cyrene.html) (article) · [Not the Lesson I First Thought](/reflections/not-the-lesson-i-first-thought.html) (reflection) · [Did the Word Become a List?](/reflections/did-the-word-become-a-list.html) (reflection)
 - **misthos** — [A Christian's Wage](/articles/a-christians-wage.html) (article)
 - **mizmor** — [Reading the Label](/articles/reading-the-label.html) (article)
+- **money** — [There It Is Again](/reflections/there-it-is-again.html) (reflection)
 - **moravians** — [Seeking](/articles/seeking.html) (article)
 - **moriah** — [Telling David's Census to an Eight-Year-Old](/reflections/telling-davids-census.html) (reflection)
 - **morning** — [New Every Morning](/reflections/new-every-morning.html) (reflection)
@@ -1341,6 +1349,7 @@ against it is a companion candidate.
 - **nikao** — [Nikaō](/word-studies/nikao.html) (word study)
 - **ninety-five theses** — [For Your Hesed’s Sake](/articles/for-your-hesed-sake.html) (article)
 - **nineveh** — [Who Knows](/reflections/who-knows.html) (reflection)
+- **not moved** — [There It Is Again](/reflections/there-it-is-again.html) (reflection)
 - **not naming** — [You Should!](/reflections/you-should.html) (reflection)
 - **numbering our days** — [The Second Morning](/reflections/the-second-morning.html) (reflection)
 - **oath** — [My Oath — and What It Really Means](/reflections/my-oath.html) (reflection)
@@ -1468,7 +1477,7 @@ against it is a companion candidate.
 - **scribes** — [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection)
 - **second mile** — [Love Your Enemies — What Psalm 68 Will Not Let You Do](/reflections/love-your-enemies.html) (reflection)
 - **secret knowledge** — [Maturity?](/reflections/maturity.html) (reflection)
-- **security** — [The Mountain That Cannot Be Moved](/reflections/the-mountain-that-cannot-be-moved.html) (reflection)
+- **security** — [There It Is Again](/reflections/there-it-is-again.html) (reflection) · [The Mountain That Cannot Be Moved](/reflections/the-mountain-that-cannot-be-moved.html) (reflection)
 - **seed** — [Father Abraham Had One Son](/reflections/father-abraham-had-one-son.html) (reflection)
 - **seeing people** — [You Have Judged Rightly](/reflections/you-have-judged-rightly.html) (reflection)
 - **seeing yourself** — [Nobody Wants Nathan](/articles/nobody-wants-nathan.html) (article) · [I Know What You Are Thinking](/reflections/i-know-what-you-are-thinking.html) (reflection)
@@ -1514,7 +1523,7 @@ against it is a companion candidate.
 - **spiritual warfare** — [Hidden](/articles/hidden.html) (article) · [Singing on Their Beds](/reflections/singing-on-their-beds.html) (reflection)
 - **status** — [Maturity?](/reflections/maturity.html) (reflection)
 - **staying** — [The Watchman at the Railing](/reflections/the-watchman-at-the-railing.html) (reflection)
-- **steadfast love** — [According to Your Steadfast Love](/reflections/according-to-your-steadfast-love.html) (reflection)
+- **steadfast love** — [There It Is Again](/reflections/there-it-is-again.html) (reflection) · [According to Your Steadfast Love](/reflections/according-to-your-steadfast-love.html) (reflection)
 - **stewardship** — [Hidden](/articles/hidden.html) (article) · [Rich](/articles/rich.html) (article) · [See Me Trying](/reflections/see-me-trying.html) (reflection)
 - **stillness** — [God Alone](/reflections/god-alone.html) (reflection) · [Stand by the Roads](/reflections/stand-by-the-roads.html) (reflection)
 - **story** — [Who Would Have Thought — Illustrated](/books/who-would-have-thought-illustrated.html) (book) · [Who Would Have Thought](/books/who-would-have-thought.html) (book) · [The Man Who Opened His Hand](/books/the-open-hand.html) (book)
@@ -1616,7 +1625,7 @@ against it is a companion candidate.
 - **torah** — [Did the Word Become a List?](/reflections/did-the-word-become-a-list.html) (reflection)
 - **translation** — [Fitting](/articles/fitting.html) (article) · [Tzedaqah / Dikaiosynē](/word-studies/tzedaqah.html) (word study) · [Telling It Wrong](/articles/telling-it-wrong.html) (article) · [Did the Word Become a List?](/reflections/did-the-word-become-a-list.html) (reflection)
 - **treasure** — [The Treasure](/articles/the-treasure.html) (article) · [Parables — You'll See](/reflections/parables-youll-see.html) (reflection)
-- **trust** — [God Alone](/reflections/god-alone.html) (reflection) · [This I Know](/reflections/this-i-know.html) (reflection) · [I Am Like an Olive Tree](/reflections/i-am-like-an-olive-tree.html) (reflection) · [Blessed Is the Man](/reflections/blessed-is-the-man.html) (reflection) · [Into Your Hand](/reflections/into-your-hand.html) (reflection) · [The Dogs at the Perimeter](/reflections/the-dogs-at-the-perimeter.html) (reflection)
+- **trust** — [There It Is Again](/reflections/there-it-is-again.html) (reflection) · [God Alone](/reflections/god-alone.html) (reflection) · [This I Know](/reflections/this-i-know.html) (reflection) · [I Am Like an Olive Tree](/reflections/i-am-like-an-olive-tree.html) (reflection) · [Blessed Is the Man](/reflections/blessed-is-the-man.html) (reflection) · [Into Your Hand](/reflections/into-your-hand.html) (reflection) · [The Dogs at the Perimeter](/reflections/the-dogs-at-the-perimeter.html) (reflection)
 - **truth** — [When Mercy and Truth Met](/books/when-mercy-and-truth-met.html) (book) · [My Oath — and What It Really Means](/reflections/my-oath.html) (reflection)
 - **turn** — [For Your Hesed’s Sake](/articles/for-your-hesed-sake.html) (article)
 - **tyre** — [Through the Spirit](/articles/through-the-spirit.html) (article)
@@ -1681,4 +1690,4 @@ against it is a companion candidate.
 - **zakar** — [The Asking](/reflections/the-asking.html) (reflection) · [What God Remembers](/articles/what-god-remembers.html) (article) · [Zakar](/word-studies/zakar.html) (word study) · [Kept Anyway](/reflections/kept-anyway.html) (reflection)
 - **zechariah** — [The Piece I Keep Picking Up](/reflections/the-piece-i-keep-picking-up.html) (reflection)
 - **zion** — [Spot the Difference](/articles/spot-the-difference.html) (article) · [In the Midst of the Temple](/reflections/in-the-midst-of-the-temple.html) (reflection)
-<!-- READ-TOKEN 9b6a815a · 1683 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 316243c5 · 1692 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
