@@ -1,6 +1,6 @@
 # Hesed Words — brief index
 
-**185 pieces** — 107 reflections, 55 articles, 16 books, 7 word studies.
+**186 pieces** — 107 reflections, 56 articles, 16 books, 7 word studies.
 
 One line per piece: date · title · scripture · url. Deliberately short enough
 to read in full. Use it to answer "does this already exist?" — then read
@@ -116,8 +116,9 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2026-05-16 · **The Far Country** · Psalm 120 · `/reflections/the-far-country.html`
 - 2026-05-01 · **Called in Righteousness** · Isaiah 42:6 · `/reflections/called-in-righteousness.html`
 
-## Articles (55)
+## Articles (56)
 
+- 2026-11-26 · **What God Cannot Do** · 2 Timothy 2:11-13; Matthew 10:33; Luke 22:31-32; Luke 22:54-62; John 21:15-19; Exodus 34:6; Deuteronomy 7:9; 2 Timothy 4:16-18; 2 Timothy 4:6; 2 Timothy 1:12 · `/articles/what-god-cannot-do.html`
 - 2026-11-24 · **Body** · Ephesians 4:7-16; Ephesians 4:4; Ephesians 4:7; Ephesians 4:8-10; Ephesians 4:11-12; Ephesians 4:13-14; Ephesians 4:15-16; Ephesians 1:23; Psalm 68:18; Genesis 2:7; James 2:26; Mark 1:19; Matthew 5:14 · `/articles/body.html`
 - 2026-11-22 · **One** · Ephesians 4:4-7; Ephesians 4:4-6; Ephesians 4:3; Ephesians 4:7; Ephesians 4:13; Deuteronomy 6:4; 1 Corinthians 8:6; Ephesians 3:14-15; Ephesians 1:5; Ephesians 2:12-17 · `/articles/one.html`
 - 2026-11-21 · **Called** · Ephesians 4:1-4; Ephesians 4:1; Ephesians 4:2-3; Ephesians 4:4; Ephesians 2:10; Ephesians 1:18; Ephesians 4:17; Philippians 1:27; Ecclesiastes 1:2 · `/articles/called.html`
@@ -202,4 +203,4 @@ SITE-INDEX.md for summaries, themes and companion candidates.
 - 2026-08-03 · **Is "Wicked" a Verdict or a Character?** · Deuteronomy 25:1; 1 Kings 8:32; Exodus 23:7; Psalm 58:1 · `/word-studies/is-wicked-a-verdict-or-a-character.html`
 - 2026-07-11 · **What Is an Idle Word?** · Matthew 12:36; Matthew 20:3; 1 Timothy 5:13; 2 Peter 1:8 · `/word-studies/idle.html`
 - 2026-07-10 · **Is Jesus an Intercessor?** · Isaiah 59:16; Isaiah 53:12; 1 Samuel 22:18; Romans 8:34 · `/word-studies/jesus-intercessor.html`
-<!-- READ-TOKEN 6fa54b50 · 204 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+<!-- READ-TOKEN 00198da7 · 205 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

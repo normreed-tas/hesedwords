@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "What God Cannot Do",
+    url:      "/articles/what-god-cannot-do.html",
+    date:     "2026-11-26",
+    scripture: ["2 Timothy 2:11-13", "Matthew 10:33", "Luke 22:31-32", "Luke 22:54-62", "John 21:15-19", "Exodus 34:6", "Deuteronomy 7:9", "2 Timothy 4:16-18", "2 Timothy 4:6", "2 Timothy 1:12"],
+    themes:   ["the faithfulness of God", "denial", "faithlessness", "he cannot deny himself", "Peter's denial", "restoration", "persecution", "Nero", "hesed", "emet", "emunah", "Paul's trial", "assurance", "trustworthy sayings"],
+    summary:  "The trustworthy saying of 2 Timothy 2:11-13: three lines where what we do, he answers in kind, and a fourth that breaks the pattern. If we deny him, he also will deny us: Jesus' own words (Matthew 10:33), arneomai, to disown; Nero's persecution in Tacitus, and Pliny's test of cursing Christ. Lewis: the doors of hell are locked on the inside. If we are faithless (apistoumen), he remains faithful: pistos on either side of our failure, and menei, he stays. Peter denied him by a charcoal fire and was restored by another; Jesus had prayed that his faith would not fail. He cannot deny himself: Exodus 34:6, hesed and emet; Deuteronomy 7:9, the faithful God. Emet will not pretend, hesed will not let go. Paul at his first defence: all deserted me, may it not be charged against them, but the Lord stood by me. Not optimism but a character reference: I know whom I have believed."
+  },
+  {
     title:    "Body",
     url:      "/articles/body.html",
     date:     "2026-11-24",
