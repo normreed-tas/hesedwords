@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "After the Drawing",
+    url:      "/articles/after-the-drawing.html",
+    date:     "2026-11-26",
+    scripture: ["Song of Songs 1:4", "Song of Songs 7:11-12", "Psalm 119:32", "Isaiah 40:31", "Matthew 25:31-46", "Matthew 7:22-23", "Revelation 2:2-4", "Jeremiah 2:2", "Jeremiah 2:5", "Mark 1:17", "2 Samuel 18:19-23"],
+    themes:   ["draw me", "following", "running", "calling", "the list", "sheep and goats", "first love", "hesed", "hevel", "longing", "busyness", "Song of Songs", "Spurgeon", "C. S. Lewis", "Chariots of Fire"],
+    summary:  "Song of Songs 1:4: draw me after you; let us run. An old chorus began with the rejoicing, but in the verse the joy comes last, after the asking. After, not to: the Bible's language for following (walk after the Lord; Elijah on Carmel; come after me). Let us run is one Hebrew word, narutsah, the verb of Ahimaaz sprinting with news, of Psalm 119:32 and Isaiah 40:31. Draw me, let us run, he has brought me, we will rejoice: her running sits between two things he does. Spurgeon on the us. Augustine's restless heart, Lewis's longing, and Chariots of Fire: she does not say I was made for this, she says draw me. The sheep of Matthew 25 kept no list; those of Matthew 7 had one; Ephesus left its first love; Jeremiah 2, the hesed of your youth, your going after me, and going after hevel. A calling comes from a person, a list comes from us. Song 7:11-12: side by side at last."
+  },
+  {
     title:    "What God Cannot Do",
     url:      "/articles/what-god-cannot-do.html",
     date:     "2026-11-26",

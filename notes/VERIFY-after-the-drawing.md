@@ -52,4 +52,16 @@ Responds to `after-the-drawing.verify.md`. Checked by Claude Code, 26 November 2
 - **"His pleasure"**: lower case would match *The Treasure*. A footnote like its footnote 3 would cover the attribution.
 - **`NOTE-song-1-4b.md`** is named as the working note but is not in the repo.
 - Companion pages both exist: `/articles/draw-me-the-voice-matters.html` and `/articles/our-god-sponsored-projects.html`. Glossary: `#hesed` and `#hevel` both resolve.
-<!-- READ-TOKEN b62c1bae · 54 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+
+---
+
+## At publication, 27 November 2026
+
+Published as `articles/after-the-drawing.html`, dated 26 November 2026 at Norm's instruction. Built from the markdown draft with these changes, all on Norm's word of 27 November:
+
+- The placeholder "[NORM: your sentence here]" was removed, and with it the lead-in "This is personal for me."
+- "His pleasure" became "his pleasure", with a footnote on the screenplay, matching *The Treasure*.
+- Companion line to *Draw Me! The Voice Matters* and *Our God-Sponsored Projects*.
+
+Added at the build: footnotes naming Spurgeon, Augustine and Lewis (sources as given in the brief); the ESV credit line; glossary links on the first *hesed* and *hevel*; two pull-quotes, both Norm's sentences ("Being drawn does not leave her sitting still. It gets her running." and "A calling comes from a person. A list comes from us.").
+<!-- READ-TOKEN be41ae43 · 66 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
