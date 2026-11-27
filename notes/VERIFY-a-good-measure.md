@@ -48,4 +48,18 @@ Citation for the footnote: Julian, Letter 22, "To Arsacius, High-priest of Galat
 **The earlier article.** *Our God-Sponsored Projects* does speak of sheep churches and goat churches, and of the list. But the draft's summary is sharper than the article on one point. The draft says of a goat church: "It's all on the website." The article says: "The website is not the problem", and "A sheep church might well list the food van and the prison visits, because to a sheep church that is not an achievement". Its test is the minister who can produce the list. **For Norm:** the opening paragraph, and the later paragraph on a church starting a website "so people will notice", may read as going further than the earlier piece did.
 
 **Companions.** `/articles/titus.html` and `/articles/our-god-sponsored-projects.html` exist. *What We Did Without Knowing* is a book, at `/books/what-we-did-without-knowing.html`.
-<!-- READ-TOKEN 9ce2c6d1 · 50 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+
+---
+
+## At publication, 28 November 2026
+
+Published as `articles/a-good-measure.html`, dated 28 November 2026, on Norm's "go ahead". Changes from the draft:
+
+- **Acts 14:27** now quoted as two fragments: they "gathered the church together" and "declared all that God had done with them".
+- The `[verify]` marks were removed; every one had been confirmed above.
+- Footnote 1 added for Julian's letter. ESV credit line added. "Saviour" and "practising" kept (anglicised ESV).
+
+Left as written, as they are Norm's to decide: "An elder must not be" (ESV "overseer"); "putting something first and taking charge of it"; and the description of the earlier article ("It's all on the website").
+
+Added at the build: the companion line (*Titus*, *Our God-Sponsored Projects*, and the book *What We Did Without Knowing*); two pull-quotes, both Norm's sentences ("Mercy first. Works after." and "The works are the same. What changes is who gets the glory.").
+<!-- READ-TOKEN 7fd3b504 · 64 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->

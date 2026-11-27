@@ -5,6 +5,14 @@
    ================================================================ */
 const ARTICLES = [
   {
+    title:    "Chasing Me",
+    date:     "2026-11-28",
+    url:      "/reflections/chasing-me.html",
+    summary:  "Surely goodness and mercy shall follow me. Norm always pictured them coming along behind like sheep behind a shepherd. But the Hebrew verb is radaph: to pursue, to chase, the word for Pharaoh's chariots and for Saul hunting David (Why does my lord pursue after his servant?). David chose that word for goodness and mercy. On the thirteenth of February Norm's heart stopped in the church cafe, and the people who would keep him alive were already in the room. Goodness: it happened where it could be survived. Mercy: hesed, all of God and none of him. The psalm says they pursue; that morning the pursuit closed. You are with me: in Hebrew no verb, only you, with me. All the days of my life.",
+    scripture: ["Psalm 23:6", "Psalm 23:4", "Psalm 23", "1 Samuel 26:18", "Exodus 14:9"],
+    themes:   ["goodness and mercy", "pursued by God", "radaph", "hesed", "Psalm 23", "cardiac arrest", "you are with me", "David and Saul", "providence", "all the days of my life"]
+  },
+  {
     title:    "There It Is Again",
     date:     "2026-11-25",
     url:      "/reflections/there-it-is-again.html",

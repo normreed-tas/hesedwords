@@ -9,6 +9,14 @@
    ================================================================ */
 const ARTICLES_META = [
   {
+    title:    "A Good Measure",
+    url:      "/articles/a-good-measure.html",
+    date:     "2026-11-28",
+    scripture: ["Titus 1:16", "Titus 2:7", "Titus 2:14", "Titus 3:1", "Titus 3:8", "Titus 3:14", "Titus 1:5-12", "Titus 2:11-12", "Titus 3:5", "Matthew 5:16", "Matthew 6:1-3", "Acts 14:27", "Matthew 25:31-46"],
+    themes:   ["good works", "Titus", "motive", "character", "leadership", "grace and works", "promotion", "mission drift", "sheep and goats", "readiness", "adorning the doctrine", "Julian", "church websites"],
+    summary:  "A follow-up to the sheep churches and goat churches of Our God-Sponsored Projects: the safest church is not the one that does very little. In Titus, forty-six verses, good works comes up six times, each time as a measure: the false teachers are unfit for any good work (1:16), Titus is to be a model of good works (2:7), and the redeemed are zealous for, ready for and devoted to good works (2:14; 3:1, 8, 14). The busy teachers of Crete, weighed and found to be about gain; elders described by character. The leader measured first. Grace trains; a people for his own possession; mercy first, works after. Works seen so that the doctrine is adorned, by slaves; Matthew 5:16 beside Matthew 6:1-3; Acts 14:27; Julian's complaint that the Galilaeans fed the pagans' poor. How a good work drifts into an organisation, funding and promotion. Ready, like a fire crew; learn; urgent need; not unfruitful."
+  },
+  {
     title:    "After the Drawing",
     url:      "/articles/after-the-drawing.html",
     date:     "2026-11-26",

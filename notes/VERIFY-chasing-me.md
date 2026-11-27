@@ -51,4 +51,10 @@ Responds to `chasing-me.verify.md`. Checked by Claude Code, 28 November 2026, ag
 ## For Norm at the lock
 
 The date; whether a PDF is wanted; the companion lines (*Coincidence*, and *God Seeks What Has Been Driven Away* if wanted).
-<!-- READ-TOKEN feddaad2 · 53 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
+
+---
+
+## At publication, 28 November 2026
+
+Published as `reflections/chasing-me.html`, dated 28 November 2026, on Norm's "go ahead". Prose unchanged from the draft. Added at the build: an inline link on *Coincidence*; a companion line to *Coincidence* and *God Seeks What Has Been Driven Away*; the glossary link on the first *hesed*; the ESV credit line. No PDF.
+<!-- READ-TOKEN 4f96ed43 · 59 lines · if you cannot quote this line, you have not read this file to the end: say so rather than reporting anything as absent -->
